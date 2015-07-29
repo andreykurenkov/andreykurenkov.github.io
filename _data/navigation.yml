@@ -3,8 +3,14 @@
 - title: About
   url: /about/
 
-- title: Sample Posts
-  url: /posts/
+- title: Work
+  url: /work/
+
+- title: Writing
+  url: /writing/
+
+- title: Photography
+  url: https://500px.com/andreykname
 
 - title: Theme Setup
   url: /theme-setup/
