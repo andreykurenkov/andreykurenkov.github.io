@@ -23,6 +23,9 @@ kramdown:
   toc_levels: 1..6
   use_coderay: false
 
+collections:
+  work:
+    output: true
 
 # Site owner
 owner:
@@ -41,5 +44,5 @@ owner:
   github: andreykurenkov
   linkedin: andreykurenkov
 
-include: [".htaccess"]
+include: [".htaccess",'_pages','writing/tag']
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]

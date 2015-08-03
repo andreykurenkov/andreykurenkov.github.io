@@ -1,6 +1,5 @@
 ---
 layout: post-index
 title: All Posts
-permalink: "/writing/"
 excerpt: "A List of Posts"
 ---
