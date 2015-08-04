@@ -2,10 +2,34 @@
    Page layout
    ========================================================================== */
 
+html{
+	height:100%;
+}
+
 body {
 	background-color: $bodycolor;
 	font-family: $base-font;
 	color: $text-color;
+  height:100%;
+}
+
+#wrap {
+ height: 100%;
+  /* equal to footer height */
+  margin-bottom: -25px; 
+
+}
+#wrap:after {
+  content: "";
+  display: block;
+}
+
+footer {
+	position: relative;
+	margin-top: -25px; /* negative value of footer height */
+	height: 25px;
+	clear:both;
+	text-align:center;
 }
 
 /* 
@@ -14,12 +38,56 @@ body {
 
 .navigation-wrapper {
 	@include container;
-	padding: 2em 0 1em;
+	/*padding: 2em 0 1em;*/
 	font-family: $heading-font;
 	font-weight: 700;
 	text-transform: uppercase;
 	@include clearfix;
 }
+
+#logo{
+	  margin: 0; 
+    height: auto;
+    width: 175px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+	
+nav ul { 
+	margin: 0; 
+	padding: 5px; /* Set margin and padding for cross browser consistency. */ 
+	list-style-type: none; /* Needed to eliminate list item marker */ 
+	text-align: center; /* Centers navigation bar */ 
+	background-color: #000; /* Set as desired */ 
+} 
+
+nav ul li { 
+	display: inline; /* Needed to create horizontal effect */ 
+} 
+
+nav ul li a { 
+	text-decoration: none; /* The setting of "none" allows the link to not be underlined. This is up to user preference. */ 
+	padding: .2em 1em; /* Gives the link space inside it's individual block. */ 
+	color: #fff; /* Set as desired */ 
+	background-color: #000; /* Set as desired */ 
+  &:visited { 
+		color: #fff; 
+	}
+	&:hover { 
+		color: #000; 
+	  background-color: #fff; 
+	}
+	&:focus { 
+		outline: thin dotted; 
+		color: $linkcolorfocus;
+	}
+	&:hover, 
+	&:active { 
+		outline: 0; 
+	}
+} 
+
 
 /* Site name */
 .site-name {
@@ -42,7 +110,7 @@ body {
 	}
 }
 
-/* Top navigation links */
+/* Top navigation links 
 .top-navigation {
 	@include grid(12,10);
 	@include prefix(12,1);
@@ -92,7 +160,7 @@ body {
 		}
 	}
 }
-
+*/
 /* Animated lines for mobile nav button */
 $button-size: 1.5rem;
 @mixin navicon-line() {
@@ -290,7 +358,7 @@ $button-size: 1.5rem;
   text-align: center;
 	@include clearfix;
 	img {
-		width: 85%;
+		width: 100%;
 		height: auto;
 		-ms-interpolation-mode: bicubic;
 	}
