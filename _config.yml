@@ -33,16 +33,11 @@ owner:
   avatar: Andrey.jpg
   bio: "Not yet a robot."
   email: andreyvkurenkov@gmail.com
+  disqus-shortname: eclecticcreations.disqus.com
   twitter: NoSleepMusings
   facebook: andreykurenkov
-  google:
-    plus: #username
-    analytics: 
-    verify: 
-    ad-client: 
-    ad-slot: 
   github: andreykurenkov
   linkedin: andreykurenkov
 
-include: [".htaccess",'_pages','writing/tag']
+include: [".htaccess",'_pages']
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]

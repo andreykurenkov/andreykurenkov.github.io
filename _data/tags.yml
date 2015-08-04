@@ -1,11 +1,33 @@
-- slug: food
-  name: Food
+art:
+  name: Art
 
-- slug: philosophy
+criticism:
+  name: Criticism
+
+quasi-essay:
+  name: Quasi Essay
+
+thoughts:
+  name: Thoughts
+
+philosophy:
   name: Philosophy
 
-- slug: quasi-essay
-  name: quasi-essay
+food:
+  name: Food
 
-- slug: videogames
-  name: Video games
+videogames:
+  name: Videogames
+
+film:
+  name: Film
+
+culture:
+  name: Culture
+
+meta:
+  name: Meta
+
+life:
+  name: Life
+
