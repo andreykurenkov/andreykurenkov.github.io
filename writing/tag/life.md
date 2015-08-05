@@ -1,6 +1,6 @@
 ---
-layout: page
+layout: post-index
+title: Posts For Tag life
 tag: life
 permalink: /writing/tag/life/
 ---
-{% include _posts_by_tag.html %}

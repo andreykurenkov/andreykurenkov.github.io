@@ -1,6 +1,6 @@
 ---
-layout: page
+layout: post-index
+title: Posts For Tag meta
 tag: meta
 permalink: /writing/tag/meta/
 ---
-{% include _posts_by_tag.html %}

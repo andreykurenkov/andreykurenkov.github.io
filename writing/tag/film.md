@@ -1,6 +1,6 @@
 ---
-layout: page
+layout: post-index
+title: Posts For Tag film
 tag: film
 permalink: /writing/tag/film/
 ---
-{% include _posts_by_tag.html %}

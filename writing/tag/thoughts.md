@@ -1,6 +1,6 @@
 ---
-layout: page
+layout: post-index
+title: Posts For Tag thoughts
 tag: thoughts
 permalink: /writing/tag/thoughts/
 ---
-{% include _posts_by_tag.html %}

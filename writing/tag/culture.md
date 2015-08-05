@@ -1,6 +1,6 @@
 ---
-layout: page
+layout: post-index
+title: Posts For Tag culture
 tag: culture
 permalink: /writing/tag/culture/
 ---
-{% include _posts_by_tag.html %}

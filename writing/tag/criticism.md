@@ -1,6 +1,6 @@
 ---
-layout: page
+layout: post-index
+title: Posts For Tag criticism
 tag: criticism
 permalink: /writing/tag/criticism/
 ---
-{% include _posts_by_tag.html %}

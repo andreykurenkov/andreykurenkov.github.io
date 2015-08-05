@@ -1,6 +1,6 @@
 ---
-layout: page
+layout: post-index
+title: Posts For Tag food
 tag: food
 permalink: /writing/tag/food/
 ---
-{% include _posts_by_tag.html %}

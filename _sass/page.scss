@@ -293,7 +293,18 @@ $button-size: 1.5rem;
 	clear: both;
 	margin-top: 2em;
 	h1 {
+    padding-bottom: .5em;
+    @include font-rem(28);
+    border-bottom: 1px solid lighten($black,10);
 		margin-top: 0;
+		margin-bottom: 0;
+    text-align: left;
+	}
+	h5 {
+    margin-bottom: 0;
+		margin-top: 0;
+		padding-top: 0;
+    text-align: right;
 	}
 	.post,
 	.page {
@@ -377,6 +388,7 @@ $button-size: 1.5rem;
 		h1, h2 {
 			color: $white;
 			@include text-shadow(0 1px 2px rgba(0,0,0,.25));
+      margin: 0;
 		}
 	}
 }

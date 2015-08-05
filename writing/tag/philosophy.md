@@ -1,6 +1,6 @@
 ---
-layout: page
+layout: post-index
+title: Posts For Tag philosophy
 tag: philosophy
 permalink: /writing/tag/philosophy/
 ---
-{% include _posts_by_tag.html %}

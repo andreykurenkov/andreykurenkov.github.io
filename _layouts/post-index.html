@@ -8,73 +8,71 @@
 <head>
 {% include _head.html %}
 </head>
-
 <body class="post-index">
+  <div id="wrap">
+  {% include _browser-upgrade.html %}
 
-{% include _browser-upgrade.html %}
+  {% include _navigation.html %}
 
-{% include _navigation.html %}
-
-{% if page.image.feature %}
-  <div class="image-wrap">
-  <img src=
-    {% if page.image.feature contains 'http' %}
-      "{{ page.image.feature }}"
-    {% else %}
-      "{{ site.url }}/images/{{ page.image.feature }}"
-    {% endif %}
-  alt="{{ page.title }} feature image">
-  {% if page.image.credit %}
-    <span class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>
-  {% endif %}
-  </div><!-- /.image-wrap -->
-{% endif %}
-
-<div id="main" role="main">
-  <div class="article-author-side">
-    {% include _author-bio.html %}
-    </br>
-    <h2>Tags</h2>
-    <ul id="taglist">
-      {% for tag in sorted_tags %}
-        {% assign tag_name = {{tag | first}} %}
-        {% assign data_tag = site.data.tags[tag_name] %}
-        {% if data_tag %} 
-          <li><a href="{{ site.url }}/writing/tag/{{ post_tag }}/">{{ data_tag.name }} ({{site.tags[tag_name] | size}})</a></li>
-        {% endif %}
-      {% endfor %}
-      {% assign count = nil %}
-    </ul>
-  </div>
-  <div id="index">
-    <h1>{{ page.title }}</h1>
-    {% for post in site.posts %}  
-    {% unless post.next %}
-      <h3>{{ post.date | date: '%Y' }}</h3>
+  {% if page.image.feature %}
+    <div class="image-wrap">
+    <img src=
+      {% if page.image.feature contains 'http' %}
+        "{{ page.image.feature }}"
       {% else %}
-        {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-        {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-        {% if year != nyear %}
-          <h3>{{ post.date | date: '%Y' }}</h3>
-        {% endif %}
-      {% endunless %}
-      <article>
-        {% if post.link %}
-          <h2 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></a></h2>
-        {% else %}
-          <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
-          <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
-        {% endif %}
-      </article>
-    {% endfor %}
-  </div><!-- /#index -->
-</div><!-- /#main -->
+        "{{ site.url }}/images/{{ page.image.feature }}"
+      {% endif %}
+    alt="{{ page.title }} feature image">
+    {% if page.image.credit %}
+      <span class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>
+    {% endif %}
+    </div><!-- /.image-wrap -->
+  {% endif %}
 
-<div class="footer-wrap">
-  <footer>
-    {% include _footer.html %}
-  </footer>
-</div><!-- /.footer-wrap -->
+  <div id="main" role="main">
+    <div class="article-author-side">
+      {% include _author-bio.html %}
+      </br>
+      <h2>Tags</h2>
+      <ul id="taglist">
+        {% for tag in sorted_tags %}
+          {% assign tag_name = {{tag | first}} %}
+          {% assign data_tag = site.data.tags[tag_name] %}
+          {% if data_tag %} 
+            <li><a href="{{ site.url }}/writing/tag/{{ tag_name }}/">{{ data_tag.name }} ({{site.tags[tag_name] | size}})</a></li>
+          {% endif %}
+        {% endfor %}
+        {% assign count = nil %}
+      </ul>
+    </div>
+    <div id="index">
+      <h1>{{ page.title }}</h1>
+      {% capture written_year %}'None'{% endcapture %}
+      {% for post in site.posts %}  
+        {% if page.tag == "all" or post.tags contains page.tag %}
+          {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+          {% if year != written_year %}
+            <h3>{{ year }}</h3>
+          {% endif %}
+          {% capture written_year %}{{ year }}{% endcapture %}
+        <article>
+          {% if post.link %}
+            <h2 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></a></h2>
+          {% else %}
+            <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+            <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+          {% endif %}
+        {% endif %}
+        </article>
+      {% endfor %}
+    </div><!-- /#index -->
+  </div><!-- /#main -->
+</div>
+
+<footer>
+  {% include _footer.html %}
+</footer>
+
 
 {% include _scripts.html %}
   
