@@ -284,6 +284,7 @@ $button-size: 1.5rem;
 	transition: max-height .4s;
 }
 
+
 /* Main content */
 #main {
 	counter-reset: captions;
@@ -424,7 +425,7 @@ $button-size: 1.5rem;
 	display: none;
 	.bio-photo {
 		max-width: 110px;
-		@include rounded(150px);
+		@include rounded(100px);
 	}
 	@media #{$small} {
 		display: block;
