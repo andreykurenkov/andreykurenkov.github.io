@@ -1,6 +1,6 @@
 ---
 layout: post-index
-title: Posts For Tag culture
+title: Posts For Tag 'Culture'
 tag: culture
 permalink: /writing/tag/culture/
 ---

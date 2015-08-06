@@ -14,7 +14,10 @@ comments: true
 author: andrey_kurenkov
 excerpt: A short treatise on why I think haters of Soylent are wrong
 ---
-<a href="https://lifeofandrey.files.wordpress.com/2015/07/soylentpour1.jpg"><img src="{{ site.url }}/images/soylentpour1.jpg" alt="What this is all about" caption="What this is all about" width="599" height="476" align="middle"/></a>
+<figure>
+    <a href="https://lifeofandrey.files.wordpress.com/2015/07/soylentpour1.jpg"><img src="{{ site.url }}/images/soylentpour1.jpg" alt="What this is all about" caption="What this is all about" width="599" height="476" align="middle"/></a>
+</figure>
+
 
 For a week now, I've been consuming half my calories in the form of [Soylent](https://en.wikipedia.org/wiki/Soylent_(drink)). Instead of eating a normal breakfast and lunch, I drink the liquidy non-food and perhaps have a coffee to spice things up. This is peculiar, admittedly, but to my surprise very few people I talk to have seemed to agree with the benefits of this regime; more often, they expressed little but disdain and mockery towards it. I don't mind, but think their dismissal of it implies a lack of understanding, which of course is a most common and unfortunate condition for us humans. So, I will clarify - this is why I consume Soylent:
 

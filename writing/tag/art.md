@@ -1,6 +1,6 @@
 ---
 layout: post-index
-title: Posts For Tag art
+title: Posts For Tag 'Art'
 tag: art
 permalink: /writing/tag/art/
 ---

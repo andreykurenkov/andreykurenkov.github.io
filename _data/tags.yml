@@ -42,3 +42,7 @@ life:
   name: Life
   slug: life
 
+work:
+  name: Work
+  slug: work
+
