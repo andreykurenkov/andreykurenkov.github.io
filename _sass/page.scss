@@ -528,6 +528,15 @@ figure figcaption {
 	}
 }
 
+.contentinfo{
+    border-top: 1px solid lighten($black,10);
+}
+
+
+#postnav {
+  text-align: center;
+}
+
 /* Table of contents */
 .toc {
 	font-size: 95%;

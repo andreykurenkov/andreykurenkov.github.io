@@ -23,6 +23,7 @@
 
 <body class="post">
   <div id="wrap">
+
     {% include _browser-upgrade.html %}
 
     {% include _navigation.html %}
@@ -41,7 +42,6 @@
       {% endif %}
       </div><!-- /.image-wrap -->
     {% endif %}
-
     <div id="main" role="main">
       <div class="article-author-side">
         {% include _author-bio.html %}
@@ -49,7 +49,7 @@
       <article class="post">
         <div class="headline-wrap">
           {% if page.link %}
-            <h1><a href="{{ page.link }}">{{ page.title }}</a></h1><h5><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>{% if page.modified %} and last modified on <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time>{% endif %}</h5>
+            <h1><a href="{{ page.link }}">{{ page.title }}</a></h1><h5><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>{% if page.modified %}, modified on <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time>{% endif %}</h5>
           {% else %}
             <h1><a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{ page.title }}">{{ page.title }}</a></h1><h5><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>{% if page.modified %} and last modified on <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time>{% endif %}</h5>
           {% endif %}
@@ -57,7 +57,10 @@
         </hr>
         <div class="article-wrap">
           {{ content }}
-          <div role="contentinfo">
+
+          <div class="contentinfo">           
+            <h4 id="postnav">{% if post.previous %}<a href="{{ site.url }}{{ post.previous.url }}">Previous Post</a>{% endif %} 
+                           {% if post.next %} | <a href="{{ site.url }}{{ post.next.url }}">Next Post</a>{% endif %}</h4>
             {% if page.share != false %}{% include _social-share.html %}{% endif %}
             <p id="post-meta">{{ tags_content }}</p>
             {% if site.owner.disqus-shortname and page.comments == true %}

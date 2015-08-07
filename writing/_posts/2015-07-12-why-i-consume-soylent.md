@@ -15,7 +15,7 @@ author: andrey_kurenkov
 excerpt: A short treatise on why I think haters of Soylent are wrong
 ---
 <figure>
-    <a href="https://lifeofandrey.files.wordpress.com/2015/07/soylentpour1.jpg"><img src="{{ site.url }}/images/soylentpour1.jpg" alt="What this is all about" caption="What this is all about" width="599" height="476" align="middle"/></a>
+    <a href="https://lifeofandrey.files.wordpress.com/2015/07/soylentpour1.jpg"><img src="{{ site.url }}/images/soylentpour1.jpg" alt="What this is all about" caption="What this is all about" class="postimage"/></a>
 </figure>
 
 
