@@ -1,2 +1,2 @@
-Andrey Kurenkov's Web World
-My personal portfolio/blog/anything else, based on Jekyll and the Minimal Mistakes theme.
+# andreykurenkov.github.io
+My Jekyll site hosting repo
