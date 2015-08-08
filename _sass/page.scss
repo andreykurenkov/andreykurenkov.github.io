@@ -55,7 +55,8 @@ footer {
 }
 	
 nav ul { 
-	margin: 0; 
+  margin: 0;
+	padding-top: 1px; 
 	padding: 5px; /* Set margin and padding for cross browser consistency. */ 
 	list-style-type: none; /* Needed to eliminate list item marker */ 
 	text-align: center; /* Centers navigation bar */ 
