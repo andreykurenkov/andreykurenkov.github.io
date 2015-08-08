@@ -1,6 +1,6 @@
 ---
 layout: home
-excerpt: "A minimal Jekyll theme for your blog by designer Michael Rose."
+excerpt: "The blog and soon to be portfolio and photo gallery of Andrey Kurenkov"
 tags: [blog]
 image:
   feature: main-page.jpg
