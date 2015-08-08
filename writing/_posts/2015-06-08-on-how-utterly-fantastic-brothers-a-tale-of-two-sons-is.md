@@ -31,5 +31,5 @@ However, Brothers does employ game mechanics in a very important way. It frustra
 There are so many other things that are good in this game, and that are finally becoming more common in video games since the ongoing indie surge that has been happening at least since Braid and Limbo . Cutscenes are used sparingly, and correctly. The game as whole is short, which is to say the right length so no mechanics are tired out or pointless nonsense repetetive gamepaly is introduced. It is not sentimental, or childish, or simplistic (though whatever puzzles are in it are very intentionally simple). Forget specifics, the game as a whole is just uniquelly beutiful. Play it, as soon as you can.
 
 <figure>
-    <a href="https://lifeofandrey.files.wordpress.com/2015/06/brothers02_06_big.jpg"><img class="postimage" src="/images/writing/2015-06-08-on-how-utterly-fantastic-brothers-a-tale-of-two-sons-is/brothers02_06_big.jpg alt="http://www.brothersthegame.com/downloads"/></a>
+    <a href="https://lifeofandrey.files.wordpress.com/2015/06/brothers02_06_big.jpg"><img class="postimage" src="/images/writing/2015-06-08-on-how-utterly-fantastic-brothers-a-tale-of-two-sons-is/brothers02_06_big.jpg" alt="http://www.brothersthegame.com/downloads"/></a>
 </figure>
