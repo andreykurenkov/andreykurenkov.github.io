@@ -70,6 +70,9 @@ nav ul li a {
 	padding: .2em 1em; /* Gives the link space inside it's individual block. */ 
 	color: #fff; /* Set as desired */ 
 	background-color: #000; /* Set as desired */ 
+	@media #{$small} {
+		font-size: 0.8em;
+	}
   &:visited { 
 		color: #fff; 
 	}
