@@ -33,6 +33,8 @@ owner:
   avatar: Andrey.jpg
   bio: "An intellectual eclectic engineer endlessly interested in art, side-projects, and the many simple subtleties of life."
   email: andreyvkurenkov@gmail.com
+  google:
+    analytics: UA-54402578-2
   disqus-shortname: eclecticcreations
   twitter: NoSleepMusings
   facebook: andreykurenkov
