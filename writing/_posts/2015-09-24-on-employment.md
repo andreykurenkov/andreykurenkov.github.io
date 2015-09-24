@@ -2,7 +2,7 @@
 layout: post
 title: On Employment
 date: 2015-09-24 22:30:00.000000000 -07:00
-tags: [work,qusi-essay]
+tags: [work,quasi-essay,philosophy]
 status: published
 type: post
 published: true
