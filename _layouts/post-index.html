@@ -47,6 +47,8 @@
     </div>
     <div id="index">
       <h1>{{ page.title }}</h1>
+
+      {% include _mailchimp-sign-up.html %}
       {% capture written_year %}'None'{% endcapture %}
       {% for post in site.posts %}  
         {% if page.tag == "all" or post.tags contains page.tag %}

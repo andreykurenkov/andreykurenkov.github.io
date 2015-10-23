@@ -1,7 +1,7 @@
 ---
 layout: post-index
-title: All Posts
+title: Writing
 permalink: "/writing/"
 tag: all
-excerpt: "A List of Posts"
+excerpt: "Quasi-essays on an assortment of topics"
 ---

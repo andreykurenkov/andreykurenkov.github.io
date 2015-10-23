@@ -56,12 +56,15 @@
         </div><!--/ .headline-wrap -->
         </hr>
         <div class="article-wrap">
+
           {{ content }}
 
           <div class="contentinfo">           
             <h4 id="postnav">{% if post.previous %}<a href="{{ site.url }}{{ post.previous.url }}">Previous Post</a>{% endif %} 
                            {% if post.next %} | <a href="{{ site.url }}{{ post.next.url }}">Next Post</a>{% endif %}</h4>
+
             {% if page.share != false %}{% include _social-share.html %}{% endif %}
+            {% include _mailchimp-sign-up.html %}
             <p id="post-meta">{{ tags_content }}</p>
             {% if site.owner.disqus-shortname and page.comments == true %}
               <section id="disqus_thread"></section><!-- /#disqus_thread -->
