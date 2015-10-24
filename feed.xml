@@ -1,6 +1,6 @@
 ---
 sitemap: false
-permalink: /writing/feed.xml
+permalink: /writing/feed.xml/
 ---
 
 <?xml version="1.0" encoding="utf-8"?>
