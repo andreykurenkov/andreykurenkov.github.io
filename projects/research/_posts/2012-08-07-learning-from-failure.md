@@ -1,0 +1,33 @@
+---
+layout: post
+title: On Work
+date: 2015-07-24 02:26:22.000000000 -07:00
+tags: [philosophy,life,quasi-essay]
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '44769023'
+  geo_public: '0'
+  _rest_api_published: '1'
+  _rest_api_client_id: '-1'
+  _publicize_job_id: '13033401663'
+  _publicize_done_11876230: '1'
+  _wpas_done_11923979: '1'
+comments: true
+author: andrey_kurenkov
+excerpt: Reflections on having worked myself to the brink of burning out
+---
+Or, why I relish work.
+
+A few months ago, completely overloaded with work in the lead up to my graduation (TAing, research, senior design, 4 or so other classes, working on a solar car, various projects...), I started writing a blog post: "This time I've really done it. After years of walking ever closer to the edge of too-much-work by simultaneously increasing my number of commitments and their difficulty, I came close to falling over that edge and stared down the spiraling flaming abyss of burn out. And I still am looking down at that abyss, overly brazen despite having just figured out my precarious position."  
+
+That was all I ever wrote of that blog post. I did not end up falling into that spiraling pit, with some difficulty and a few failures, and enjoyed the expected post graduation period of slovenly laziness. I even took a proper, if short, vacation. And then I boarded my flight to the Bay Area and spent the next month tediously completing my move here. And now I am back in what could be called a routine, and again feel as I did a few months ago: relentlessly restless to do things. In the excess of free time I now have working full time, I feel eager to: socialize more, read more, watch more, write more (score!), exercise more, photograph more, cook more, hack more, and learn much much more (Chinese, driving, data science, etc.). The items on the list are somewhat different, but the drive is the same: to do a lot, to use my time productively.
+
+Why? Why this drive for doing a lot. Simple: because I feel like it. Because I want to do these things. I wanted to get two majors, so I did. I wanted to TA, to do research, to work on a solar car, to compete in hackathons, so I did. I wanted, and want, to do these things because I find them challenging, rewarding, interesting. I want to do these things because they allow me to affect the world, to grow, to be creative, to express myself and to better understand what I want to express. And now I want to write, to photograph, to appreciate art, to meet new people and spend time with old friends, to exercise, to keep working on technical projects in my free time - all for roughly the same reasons.
+
+Which is great, and all, but not to say I don't enjoy completely unproductive activities so hugely enabled by the internet - browsing reddit, for instance. Work requires energy and time (and so does socializing, and appreciating art), and this energy needs to be replenished. So overindulging in work, as with anything, is unhealthy; the term workaholic has a negative connotation, and rightfully so. When I wrote the quote above, I was acutely aware that I had gone too far, taken on too much, and my life was out of balance. Even given my proclivity for taking on a lot, the period was tiring and stressful, and acknowledging that was in part what drove to start writing this blog post those few months ago. Questioning this habit of mine, whether it is overkill, is wise; should I be more relaxed, less eager - different?
+
+No, not really. I am not a workaholic, in the sense that doing work is not the basis for my self worth, and I never was. Prudent though it was to consider the notion, as of writing this I find the truth to still simply be that I take great joy in being eclectic, and doing many things, even if it is not easy, perhaps especially because it is not easy.
+
+But, what of work-work? The office work, the job work. Well, that's new. And that is also what drove me to revive this blog post so long past its inception. But, my time is spent, so for now I leave you with the promise of a soon to be follow-up post tentatively titled <strong>On Employment</strong>.
