@@ -1,5 +1,5 @@
 ---
-layout: post-index
+layout: writing-page
 title: Writing
 permalink: "/writing/"
 tag: all

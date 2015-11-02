@@ -12,6 +12,7 @@ sitemap: false
 */
 
 // Partials
+@import "bigfoot-default";
 @import "variables";
 @import "grid";
 @import "mixins";
@@ -25,4 +26,8 @@ sitemap: false
 @import "page";
 @import "vendor/font-awesome/font-awesome";
 @import "vendor/magnific-popup/magnific-popup";
+@import "vendor/bourbon/bourbon";
+@import "vendor/neat/neat";
+@import "project-grid";
+@import "tiles";
 //@import "vendor/google/fonts";

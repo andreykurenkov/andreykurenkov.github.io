@@ -17,6 +17,8 @@ Foreword &raquo;
 <blockquote class="aside"><p id="foreword" class="collapse" style="height: 0px;">
 As with most things I write about, this has been rolling about in my head for many years. 
 It is the sort of thing I keep hitting up against and wondering at, and eventually crystallize some notion of that calls for itself to be solidified in text. In starting to solidify this into text, I realized that it will be short, and comes from a place particularly likely to call upon the typical impactful literary techniques I use whose names I do not remember. So, I figured, if I am to write a short essay with impassioned sections, why not go all the way and give it the form of a poem. I may not be a poet, but by posting these digital pages of text I do inevitably claim the identity of a writer, of some sort. So, here's an essay poem.
+
+PS shout out, similar thoughts were echoed well in <a href="http://colorfulcortex.co/2015/10/24/the-youre-not-as-cool-in-person-phenomenon/">'The “You’re Not as Cool in Person” Phenomenon'</a>.
 </p></blockquote>
 
 I have seen the shine of exceptional people,  
@@ -56,4 +58,4 @@ the impossibility of escaping difficulty dealing with all of life's damned dimen
 Such a typically tepid truth - us mere mortals incapable of that heroic Herculean halo,  
 and left to grow to see humans do not live in fairly tales, as I did with those around me.  
 
-And the punchline (the funny thing) - in time I liked them all the more for it.
+But you know, funny thing - in time I liked them all the more for it.

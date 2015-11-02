@@ -11,7 +11,7 @@ with open('../_data/tags.yml','w') as tag_data:
         
         with open('../writing/tag/%s.md'%tag,'w') as tag_page:
             tag_page.write('---\n')
-            tag_page.write('layout: post-index\n')
+            tag_page.write('layout: writing-page\n')
             tag_page.write('title: Posts For Tag \'%s\'\n'%tag_name)
             tag_page.write('tag: %s\n'%tag)
             tag_page.write('permalink: /writing/tag/%s/\n'%tag)
