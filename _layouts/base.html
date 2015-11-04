@@ -17,7 +17,7 @@
     {% include _navigation.html %}
 
     {% if page.image.feature %}
-      <div class="image-wrap">
+      <div class="image-wrap" {% if page.image.id %} id="{{ page.image.id }}" {% endif %}>
       <img src=
         {% if page.image.feature contains 'http' %}
           "{{ page.image.feature }}"

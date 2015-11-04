@@ -1,0 +1,51 @@
+---
+layout: base
+---
+{% assign project = page %}
+
+<div id="main" role="main">
+  <div class="article-author-side" id="article-author-side-projects">
+    {% include _author-bio.html %}
+  </div>
+  <article class="project-post">
+    <div class="headline-wrap">
+        <h1 id="project-title"><a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{ page.title }}">{{ page.title }}</a></h1>
+    </div><!--/ .headline-wrap -->
+    </hr>
+    <div class="article-wrap">
+      <table id="projecttext">
+		      <col/>
+		      <tr>
+			      <td valign="top"><h3>WHAT</h3></td>
+			      <td><h4>{{ project.what }}</h4></td>
+		      </tr>
+		      <tr>
+			      <td valign="top"><h3>WHERE</h3></td>
+			      <td><h4>{{ project.where }}</h2></td>
+		      </tr>
+		      <tr>
+			      <td valign="top"><h3>WHEN</h3></td>
+			      <td><h4>{{ project.when }}</h4></td>
+		      </tr>
+		      <tr>
+			      <td valign="top"><h3>HOW</h3></td>
+			      <td><h4>{{ content }}</h4></td>
+		      </tr>
+      </table>
+      
+
+      <div class="contentinfo">           
+        <h4 id="postnav">{% if post.previous_in_category %}<a href="{{ site.url }}{{ post.previous_in_category.url }}">Previous Post</a>{% endif %} 
+                       {% if post.next_in_category %} | <a href="{{ site.url }}{{ post.next_in_category.url }}">Next Post</a>{% endif %}</h4>
+
+        {% if page.share != false %}{% include _social-share.html %}{% endif %}
+        {% include _mailchimp-sign-up.html %}
+        <p id="post-meta">{{ tags_content }}</p>
+        {% if site.owner.disqus-shortname and page.comments == true %}
+          <section id="disqus_thread"></section><!-- /#disqus_thread -->
+        {% endif %}
+      </div>
+    </div><!-- /.article-wrap -->
+  </article>
+</div><!-- /#main -->
+</br>

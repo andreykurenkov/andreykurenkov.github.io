@@ -33,8 +33,8 @@ layout: base
       {{ content }}
 
       <div class="contentinfo">           
-        <h4 id="postnav">{% if post.previous %}<a href="{{ site.url }}{{ post.previous_in_category.url }}">Previous Post</a>{% endif %} 
-                       {% if post.next %} | <a href="{{ site.url }}{{ post.next_in_category.url }}">Next Post</a>{% endif %}</h4>
+        <h4 id="postnav">{% if post.previous_in_category %}<a href="{{ site.url }}{{ post.previous_in_category.url }}">Previous Post</a>{% endif %} 
+                       {% if post.next_in_category %} | <a href="{{ site.url }}{{ post.next_in_category.url }}">Next Post</a>{% endif %}</h4>
 
         {% if page.share != false %}{% include _social-share.html %}{% endif %}
         {% include _mailchimp-sign-up.html %}

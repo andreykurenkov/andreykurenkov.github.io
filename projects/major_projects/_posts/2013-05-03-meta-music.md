@@ -1,22 +1,19 @@
 ---
-layout: post
-title: On Work
-date: 2015-07-24 02:26:22.000000000 -07:00
-tags: [philosophy,life,quasi-essay]
+layout: project-post
+title: MetaMusic
+date: 2015-05-03 02:26:22.000000000 -07:00
+tags: [visualization,music,data,app]
 status: publish
 type: post
 published: true
-meta:
-  _edit_last: '44769023'
-  geo_public: '0'
-  _rest_api_published: '1'
-  _rest_api_client_id: '-1'
-  _publicize_job_id: '13033401663'
-  _publicize_done_11876230: '1'
-  _wpas_done_11923979: '1'
 comments: true
 author: andrey_kurenkov
-excerpt: Reflections on having worked myself to the brink of burning out
+what: A sweet little app to visualize music metadata on a smartphone
+where: Georgia Tech
+when: April 2013-May 2013
+image:
+  feature: projects/metamusic/metamusic3.jpg
+  id: project-image
 ---
 Should be studying for test, messing with this. Reuploded slightly bigger.
 Quick and dirty pie chart of meta-data from google-music. Did not realize it would such - may try to integrate allmusic or wikipedia genre classification.

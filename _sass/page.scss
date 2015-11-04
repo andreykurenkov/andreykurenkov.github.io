@@ -106,7 +106,7 @@ nav ul li a {
 	h1 {
     padding-bottom: .5em;
     @include font-rem(28);
-    border-bottom: 1px solid lighten($black,10);
+    border-bottom: 2px solid lighten($black,10);
 		margin-top: 0;
 		margin-bottom: 0;
     text-align: left;
@@ -130,7 +130,7 @@ nav ul li a {
 			@include suffix(12,0);
 		}
 		@media #{$x-large} {
-			@include grid(12,4.5);
+			@include grid(12,5);
 		}
 	}
 }
@@ -266,7 +266,6 @@ figure figcaption {
 	display: none;
 	.bio-photo {
 		max-width: 110px;
-		@include rounded(100px);
 	}
 	@media #{$small} {
 		display: block;
@@ -300,9 +299,10 @@ figure figcaption {
 	}
 	@media #{$x-large} {
 		@include grid(12,1.5);
-		@include prefix(12,2);
+		@include prefix(12,1.5);
 	}
 }
+
 
 /* Author module - mobile only */
 .article-author-bottom {
