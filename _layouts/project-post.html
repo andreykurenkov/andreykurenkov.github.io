@@ -2,7 +2,7 @@
 layout: base
 ---
 {% assign project = page %}
-
+{% include _feature_image.html %}
 <div id="main" role="main">
   <div class="article-author-side" id="article-author-side-projects">
     {% include _author-bio.html %}
@@ -20,19 +20,45 @@ layout: base
 			      <td><h4>{{ project.what }}</h4></td>
 		      </tr>
 		      <tr>
+			      <td valign="top"><h3>WHEN</h3></td>
+			      <td><h4>{{ project.when }}</h4></td>
+		      </tr>
+		      <tr>
+			      <td valign="top"><h3>WHO</h3></td>
+			      <td><h4>{{ project.when }}</h4></td>
+		      </tr>
+		      <tr>
 			      <td valign="top"><h3>WHERE</h3></td>
 			      <td><h4>{{ project.where }}</h2></td>
 		      </tr>
 		      <tr>
-			      <td valign="top"><h3>WHEN</h3></td>
-			      <td><h4>{{ project.when }}</h4></td>
+			      <td valign="top"><h3>WHY</h3></td>
+			      <td><h4>{{ project.why }}</h4></td>
 		      </tr>
 		      <tr>
 			      <td valign="top"><h3>HOW</h3></td>
 			      <td><h4>{{ content }}</h4></td>
 		      </tr>
+		      {% if project.projectimages %}
+		      <tr>
+			      <td valign="top"><h3>PICS</h3></td>
+			      <td>
+				      <div id="projectimages">
+				          <ul>
+				              {%for image in project.projectimages%}
+				              <li><figure><img src={{image.image}} alt={{image.alt}}>
+							      {%if image.caption%}
+							      <figcaption>{{image.caption}}</figcaption>
+								  {%endif%}
+							   </figure></li>
+							   {%endfor%}
+							</ul>
+						</div>
+
+			      </td>
+		      </tr>
+		      {% endif %}
       </table>
-      
 
       <div class="contentinfo">           
         <h4 id="postnav">{% if post.previous_in_category %}<a href="{{ site.url }}{{ post.previous_in_category.url }}">Previous Post</a>{% endif %} 

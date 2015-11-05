@@ -2,7 +2,7 @@
 layout: project-post
 title: MetaMusic
 date: 2015-05-03 02:26:22.000000000 -07:00
-tags: [visualization,music,data,app]
+tags: [visualization,music,data,app,android]
 status: publish
 type: post
 published: true
