@@ -6,13 +6,12 @@
 }
 
 #project-image {
-
   img {
 		  width: 100%;
       margin-top: 32px;
 	    @media #{$x-large} {
-		    @include grid(12,9.75);
-		    @include prefix(12,1.25);
+		    @include grid(12,6);
+		    @include prefix(12,3);
 	    }
 	  }
 }
@@ -54,23 +53,57 @@
 }
 
 #projectimages{
-    direction:ltr;
+		@media #{$x-large} {
+			height: 900px;
+		}
 	list-style-type: none; /* Needed to eliminate list item marker */ 
-	float:left;
+	border-left: 2px solid #000;
 }
 
 #projectimages ul{
+  overflow-x:auto;
+  overflow-y: hidden;
+  white-space: nowrap;
 	list-style-type: none; /* Needed to eliminate list item marker */ 
 }
 
-#projectimages ul img{
+#projectimages li{
+  max-width: none;
+  display:inline-block
+}
+
+#projectimages img{
 	padding-left:5%;
 	padding-right:5%;
 	padding-top:5%;
-	width:90%;
+	height: auto;
+  max-width:100%;
 }
 
-#projectimages ul figcaption{
+#projectimages figcaption{
 	text-align:center;
-	padding: 0 0 .5em .5em;
 }
+
+::-webkit-scrollbar{
+    width: 10px;
+    padding-top: 40px;
+}
+
+::-webkit-scrollbar-track{
+    border: 1px solid black;
+    background: rgb(41,41,41);
+
+}
+::-webkit-scrollbar-thumb{
+    height: 20px;
+    width: 8px;
+    border: 1px solid black;
+    background: rgb(111,111,111);
+    -webkit-box-shadow: 0 1px 1px rgb(0,0,0);
+    background: -webkit-linear-gradient(rgb(200,200,200), rgb(150,150,150));
+}
+
+::-webkit-scrollbar-track-piece {
+    height: 30px;
+}
+

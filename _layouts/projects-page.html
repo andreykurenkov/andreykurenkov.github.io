@@ -19,6 +19,13 @@ layout: base
     </ul>
   </div>
   <div id="index">
+    <h1 style="display: block;">Research</h1>
+
+    <div class="tiles">
+      {% for post in site.categories.research %}
+        {% include _project-grid.html %}
+      {% endfor %}
+    </div><!-- /.tiles -->
 
     <h1 style="display: block;">Major Projects</h1>
 
@@ -27,7 +34,7 @@ layout: base
         {% include _project-grid.html %}
       {% endfor %}
     </div><!-- /.tiles -->
-<br>
+
     <h1 style="display: block;">Big Team Projects</h1>
 
     <div class="tiles">-
@@ -35,7 +42,7 @@ layout: base
         {% include _project-grid.html %}
       {% endfor %}
     </div><!-- /.tiles -->
-<br>
+
     <h1 style="display: block;">Hacks and small projects</h1>
 
     <div class="tiles">

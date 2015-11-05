@@ -15,9 +15,13 @@
   .entry-date {
     @include fancy-font-size(16,no);
     color: lighten($text-color,25);
+    line-height: 1;
+    text-align: center;
   }
   .post-title {
     @include fancy-font-size(18,no);
+    line-height: 1;
+    text-align: center;
   }
   .post-excerpt {
     @include fancy-font-size(16);
@@ -25,6 +29,11 @@
   .post-teaser {
     position: relative;
     display: block;
+    .proj-img{
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
     &:after {
       content: '';
       position: absolute;

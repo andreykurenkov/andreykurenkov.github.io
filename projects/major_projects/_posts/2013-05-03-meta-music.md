@@ -8,12 +8,29 @@ type: post
 published: true
 comments: true
 author: andrey_kurenkov
+excerpt: A sweet little app to visualize music metadata on a smartphone
 what: A sweet little app to visualize music metadata on a smartphone
-where: Georgia Tech
-when: April 2013-May 2013
+who: Me and two other guys
+why: I liked the idea of pie graphs of genre, bar charts for plays, etc... I still think this should exist in other apps.
+where: Georgia Tech (hackathon, then a few weeks of solo work)
+when: April 2013-May 2013 
 image:
+  teaser: projects/metamusic/icon.png
   feature: projects/metamusic/metamusic3.jpg
   id: project-image
+projectimages:
+  - name: first
+    path: projects/metamusic/metamusic1.jpg
+    caption: An image
+    alt: an alt
+  - name: first
+    path: projects/metamusic/metamusic2.jpg
+    caption: An image
+    alt: an alt
+  - name: first
+    path: projects/metamusic/metamusic4.jpg
+    caption: An image
+    alt: an alt
 ---
 Should be studying for test, messing with this. Reuploded slightly bigger.
 Quick and dirty pie chart of meta-data from google-music. Did not realize it would such - may try to integrate allmusic or wikipedia genre classification.

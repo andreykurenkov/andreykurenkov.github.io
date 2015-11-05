@@ -25,7 +25,7 @@ layout: base
 		      </tr>
 		      <tr>
 			      <td valign="top"><h3>WHO</h3></td>
-			      <td><h4>{{ project.when }}</h4></td>
+			      <td><h4>{{ project.who }}</h4></td>
 		      </tr>
 		      <tr>
 			      <td valign="top"><h3>WHERE</h3></td>
@@ -45,13 +45,13 @@ layout: base
 			      <td>
 				      <div id="projectimages">
 				          <ul>
-				              {%for image in project.projectimages%}
-				              <li><figure><img src={{image.image}} alt={{image.alt}}>
-							      {%if image.caption%}
-							      <figcaption>{{image.caption}}</figcaption>
-								  {%endif%}
-							   </figure></li>
-							   {%endfor%}
+				              {% for img in project.projectimages %}
+				              <li><figure><img src="{{ site.url }}/images/{{ img.path }}" alt="{{ img.alt }}">
+							         {% if img.caption %}
+							            <figcaption>{{ img.caption }}</figcaption>
+								       {% endif %}
+							        </figure></li>
+							       {% endfor %}
 							</ul>
 						</div>
 
