@@ -14,9 +14,12 @@ who: Me and two other guys
 why: I liked the idea of pie graphs of genre, bar charts for plays, etc... I still think this should exist in other apps.
 where: Georgia Tech (hackathon, then a few weeks of solo work)
 when: April 2013-May 2013 
+links:
+  - name: GitHub Repo
+    url: https://github.com/abettadapur/MetaMusic
 image:
   teaser: projects/metamusic/icon.png
-  feature: projects/metamusic/metamusic3.jpg
+  feature: projects/metamusic/metamusic10.jpg
   id: project-image
 projectimages:
   - name: first
@@ -28,7 +31,43 @@ projectimages:
     caption: An image
     alt: an alt
   - name: first
+    path: projects/metamusic/metamusic3.jpg
+    caption: An image
+    alt: an alt
+  - name: first
     path: projects/metamusic/metamusic4.jpg
+    caption: An image
+    alt: an alt
+  - name: first
+    path: projects/metamusic/metamusic5.jpg
+    caption: An image
+    alt: an alt
+  - name: first
+    path: projects/metamusic/metamusic6.jpg
+    caption: An image
+    alt: an alt
+  - name: first
+    path: projects/metamusic/metamusic7.jpg
+    caption: An image
+    alt: an alt
+  - name: first
+    path: projects/metamusic/metamusic8.jpg
+    caption: An image
+    alt: an alt
+  - name: first
+    path: projects/metamusic/metamusic9.jpg
+    caption: An image
+    alt: an alt
+  - name: first
+    path: projects/metamusic/metamusic10.jpg
+    caption: An image
+    alt: an alt
+  - name: first
+    path: projects/metamusic/metamusic11.jpg
+    caption: An image
+    alt: an alt
+  - name: first
+    path: projects/metamusic/metamusic12.jpg
     caption: An image
     alt: an alt
 ---

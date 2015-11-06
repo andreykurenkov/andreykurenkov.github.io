@@ -13,7 +13,7 @@ layout: base
     </div><!--/ .headline-wrap -->
     </hr>
     <div class="article-wrap">
-      <table id="projecttext">
+      <table class="classytable">
 		      <col/>
 		      <tr>
 			      <td valign="top"><h3>WHAT</h3></td>
@@ -39,23 +39,31 @@ layout: base
 			      <td valign="top"><h3>HOW</h3></td>
 			      <td><h4>{{ content }}</h4></td>
 		      </tr>
+
+		      {% if project.links %}
+		      <tr>
+			      <td valign="top"><h3>LINKS</h3></td>
+			      <td><ul class="linkslist">
+				       {% for link in project.links %}
+                      <h4>
+                         <a href="{{ link.url }}" title="{{ like.name }}">{{ link.name }}</a>
+                         <a href="{{ link.url }}" target="_blank" title="{{ like.name }}"><i class="fa fa-link"></i></a>
+                      </h4>
+							  {% endfor %}
+						 </ul></div></td>
+		      </tr>
+		      {% endif %}
+
 		      {% if project.projectimages %}
 		      <tr>
 			      <td valign="top"><h3>PICS</h3></td>
-			      <td>
-				      <div id="projectimages">
-				          <ul>
-				              {% for img in project.projectimages %}
-				              <li><figure><img src="{{ site.url }}/images/{{ img.path }}" alt="{{ img.alt }}">
-							         {% if img.caption %}
-							            <figcaption>{{ img.caption }}</figcaption>
-								       {% endif %}
-							        </figure></li>
+			      <td><ul class="imageslist" id="projectimages">
+				       {% for img in project.projectimages %}
+				         <li><figure><img src="{{ site.url }}/images/{{ img.path }}" alt="{{ img.alt }}">
+							     {% if img.caption %} <figcaption>{{ img.caption }}</figcaption>{% endif %}
+							   </figure></li>
 							       {% endfor %}
-							</ul>
-						</div>
-
-			      </td>
+						 </ul></td>
 		      </tr>
 		      {% endif %}
       </table>
