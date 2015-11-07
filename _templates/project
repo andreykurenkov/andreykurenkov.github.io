@@ -1,0 +1,32 @@
+---
+layout: project-post
+title: {}
+date: 2015-05-03
+tags: []
+status: publish
+type: post
+published: true
+comments: true
+author: andrey_kurenkov
+projcategory: {}
+projname: {}
+excerpt: {}
+image:
+  feature: {}
+  featureid: project-image
+  featurelink: true
+  teaser: {}
+what: {}
+who: {}
+why: {}
+where: {}
+when: {}
+links:
+  - name: {}
+    url: {}
+images:
+  - name: {}
+    file: {}
+    caption: {}
+    alt: {}
+---

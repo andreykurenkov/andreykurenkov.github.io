@@ -58,14 +58,30 @@ layout: base
 		      <tr>
 			      <td valign="top"><h3>PICS</h3></td>
 			      <td><ul class="imageslist" id="projectimages">
-				       {% for img in project.projectimages %}
-				         <li><figure><img src="{{ site.url }}/images/{{ img.path }}" alt="{{ img.alt }}">
+				       {% for img in project.images %}
+				         <li><figure><img src="{{ site.url }}/projects/{{ project.projcategory }}/images/{{ project.projname }}/{{ img.file }}" alt="{{ img.alt }}">
 							     {% if img.caption %} <figcaption>{{ img.caption }}</figcaption>{% endif %}
 							   </figure></li>
 							       {% endfor %}
 						 </ul></td>
 		      </tr>
 		      {% endif %}
+
+		      {% if project.videos %}
+		      <tr>
+			      <td valign="top"><h3>VIDS</h3></td>
+			      <td><ul class="videolist" id="projectvideos">
+				       {% for vid in project.videos %}
+				         <li><iframe src="{{ vid.src }}"  width="560" height="315" frameborder="0" allowfullscreen></iframe>
+    				         {% if img.caption %} <figcaption>{{ vid.caption }}</figcaption>{% endif %}
+                         </figure></li>
+					   {% endfor %}
+						 </ul></td>
+		      </tr>
+		      {% endif %}
+
+
+
       </table>
 
       <div class="contentinfo">           

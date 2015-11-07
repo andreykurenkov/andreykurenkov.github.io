@@ -6,16 +6,12 @@ tags: [food,philosophy,quasi-essay]
 status: publish
 type: post
 published: true
-meta:
-  _rest_api_published: '1'
-  _rest_api_client_id: '-1'
-  _publicize_job_id: '12645014624'
 comments: true
 author: andrey_kurenkov
 excerpt: A short treatise on why I think haters of Soylent are wrong
 ---
 <figure>
-    <a href="https://lifeofandrey.files.wordpress.com/2015/07/soylentpour1.jpg"><img src="{{ site.url }}/images/soylentpour1.jpg" alt="What this is all about" caption="What this is all about" class="postimage"/></a>
+    <a href="https://lifeofandrey.files.wordpress.com/2015/07/soylentpour1.jpg"><img src="{{ site.url }}/writing/images/2015-07-12-why-i-consume-soylent/soylentpour1.jpg" alt="What this is all about" caption="What this is all about" class="postimage"/></a>
 </figure>
 
 

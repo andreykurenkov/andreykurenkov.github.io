@@ -8,66 +8,68 @@ type: post
 published: true
 comments: true
 author: andrey_kurenkov
+projcategory: major_projects
+projname: metamusic
 excerpt: A sweet little app to visualize music metadata on a smartphone
+image:
+  feature: projects/major_projects/images/metamusic/metamusic10.jpg
+  featureid: project-image
+  teaser: icon.png
 what: A sweet little app to visualize music metadata on a smartphone
-who: Me and two other guys
+who: Me, Alex Bettadapur, and another guy
 why: I liked the idea of pie graphs of genre, bar charts for plays, etc... I still think this should exist in other apps.
-where: Georgia Tech (hackathon, then a few weeks of solo work)
+where: Georgia Tech - GitMad hackathon, then a few weeks of solo work before my internship
 when: April 2013-May 2013 
 links:
   - name: GitHub Repo
     url: https://github.com/abettadapur/MetaMusic
-image:
-  teaser: projects/metamusic/icon.png
-  feature: projects/metamusic/metamusic10.jpg
-  id: project-image
-projectimages:
+images:
   - name: first
-    path: projects/metamusic/metamusic1.jpg
+    file: metamusic1.jpg
     caption: An image
     alt: an alt
   - name: first
-    path: projects/metamusic/metamusic2.jpg
+    file: metamusic2.jpg
     caption: An image
     alt: an alt
   - name: first
-    path: projects/metamusic/metamusic3.jpg
+    file: metamusic3.jpg
     caption: An image
     alt: an alt
   - name: first
-    path: projects/metamusic/metamusic4.jpg
+    file: metamusic4.jpg
     caption: An image
     alt: an alt
   - name: first
-    path: projects/metamusic/metamusic5.jpg
+    file: metamusic5.jpg
     caption: An image
     alt: an alt
   - name: first
-    path: projects/metamusic/metamusic6.jpg
+    file: metamusic6.jpg
     caption: An image
     alt: an alt
   - name: first
-    path: projects/metamusic/metamusic7.jpg
+    file: metamusic7.jpg
     caption: An image
     alt: an alt
   - name: first
-    path: projects/metamusic/metamusic8.jpg
+    file: metamusic8.jpg
     caption: An image
     alt: an alt
   - name: first
-    path: projects/metamusic/metamusic9.jpg
+    file: metamusic9.jpg
     caption: An image
     alt: an alt
   - name: first
-    path: projects/metamusic/metamusic10.jpg
+    file: metamusic10.jpg
     caption: An image
     alt: an alt
   - name: first
-    path: projects/metamusic/metamusic11.jpg
+    file: metamusic11.jpg
     caption: An image
     alt: an alt
   - name: first
-    path: projects/metamusic/metamusic12.jpg
+    file: metamusic12.jpg
     caption: An image
     alt: an alt
 ---

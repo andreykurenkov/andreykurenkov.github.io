@@ -19,7 +19,7 @@ Fair warning: I will not hold back on any plot details in this.
 The first season of Telltale's adaptation of The Walking Dead is among the most praised video games of the past decade. Its focus on character relationships in a ruined world, and dialogue meant chiefly to develop those relationships, earned it acclaim despite it otherwise basically being another episodic Telltale adventure game. Though it has its flaws, it succeeds where so many games fail: having a narrative core that is emotionally rich and deeply human.
 
 <figure>
-    <a href="http://ecx.images-amazon.com/images/I/91iAqB4pB5L.png"><img class="postimage" src="/images/writing/2014-11-18-on-the-walking-dead-and-artistic-coherence/91iAqB4pB5L.png" alt=""></a> 
+    <a href="http://ecx.images-amazon.com/images/I/91iAqB4pB5L.png"><img class="postimage" src="/writing/images/2014-11-18-on-the-walking-dead-and-artistic-coherence/91iAqB4pB5L.png" alt=""></a> 
     <figcaption>An illustrative wallpaper for The Walking Dead Season 1</figcaption>
 </figure>
 
@@ -28,21 +28,21 @@ Rather than focusing on the tired trope of "humans are the real monsters," it in
 The second season looked to continue from where the last one ended, with Lee dead and the player the role of Clementine. This seemed like a natural choice: to continue with one of the core characters from the last season, with all the improved graphics and fine-tuned gameplay mechanics one can expect in a sequel. So, why is the prevailing response to it so much less positive than for the first season? I'd say, more than anything, it was the second's lack of coherence.
 
 <figure>
-    <a href="https://gamerwg.org/wp-content/uploads/2014/10/The-Walking-Dead-Season-2.jpg"><img class="postimage" src="/images/writing/2014-11-18-on-the-walking-dead-and-artistic-coherence/The-Walking-Dead-Season-2.jpg" alt=""/></a> 
+    <a href="https://gamerwg.org/wp-content/uploads/2014/10/The-Walking-Dead-Season-2.jpg"><img class="postimage" src="/writing/images/2014-11-18-on-the-walking-dead-and-artistic-coherence/The-Walking-Dead-Season-2.jpg" alt=""/></a> 
     <figcaption>Same  of Wallpaper, different season</figcaption>
 </figure>
 
 With Lee unambiguously dead, Season 2 needed a new narrative element to match the first season's focus on fatherhood and the larger elements of humanity that stood for. That, after all, is what made the whole of Season 1 and especially its ending so impressive. And this is where Season 2 fails. It still has the character drama to underscore the 'in survival, no one is the good guy', the mundane character interactions to make the experience grounded, the swift action sequences with split-second choices to leave you stunned as the credits roll  - but in the end, the game ends up being about not much of anything besides petty character conflicts and the increasingly tiresome challenges the main character has to face (as a 12 year old, surrounded by adults, in a zombie apocalypse).
 
 <figure>
-    <a href="http://videogamewriters.com/wp-content/uploads/2014/11/walkingdeadseason2.png"><img class="postimage" src="/images/writing/2014-11-18-on-the-walking-dead-and-artistic-coherence/walkingdeadseason2.png" alt=""/></a> 
+    <a href="http://videogamewriters.com/wp-content/uploads/2014/11/walkingdeadseason2.png"><img class="postimage" src="/writing/images/2014-11-18-on-the-walking-dead-and-artistic-coherence/walkingdeadseason2.png" alt=""/></a> 
     <figcaption>Seasons 2 is darker than Season 1. Sadly, it is also dafter.</figcaption>
 </figure>
 
 It was not supposed to be that way. Like any good mainstream release, the game's marketing told you what it was supposed to be about, with the mandatory hashtag properly attached: "Your choices will decide Clem's fate. Who will YOU become? <a class="_58cn" href="https://www.facebook.com/hashtag/myclementine">#MyClementine</a>." The comfortable, ever so easy video game "Who will YOU become" question - will you become a basically normal person with superhuman survival/killing skills or a ruthless stone-cold killer with superhuman survival/killing skills? Except, it is not even about that much. Spots here and there seem to think it is about that, sure, but other spots veer into being about brutish patriarchal masculinity and yet others are about dealing with the loss of loves one. Mostly though, it is about characters arguing for silly reasons and zombies coming out of nowhere so there is conflict. Its disparate notes don’t come together to be about anything bigger – it is not coherent.
 
 <figure>
-    <a href="http://bloximages.chicago2.vip.townnews.com/tdn.com/content/tncms/images/v3/editorial/0/02/002528fa-df11-11e3-aa53-0019bb2963f4/53798e07da7d8.preview-620.jpg"><img class="postimage" src="/images/writing/2014-11-18-on-the-  walking-dead-and-artistic-coherence/53798e07da7d8.jpg" /></a> 
+    <a href="http://bloximages.chicago2.vip.townnews.com/tdn.com/content/tncms/images/v3/editorial/0/02/002528fa-df11-11e3-aa53-0019bb2963f4/53798e07da7d8.preview-620.jpg"><img class="postimage" src="/writing/images/2014-11-18-on-the-  walking-dead-and-artistic-coherence/53798e07da7d8.jpg" /></a> 
     <figcaption>If you manage to save this character, be assured that really does not matter...</figcaption>
 </figure>
 

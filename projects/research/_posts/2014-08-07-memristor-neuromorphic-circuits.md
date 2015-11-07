@@ -1,21 +1,21 @@
 ---
 layout: project-post
-title: Learning from Failure
-date: 2013-08-07
-tags: [robotics,learning]
+title: Memristor Brains
+date: 2014-08-08
+tags: [learning,hardware]
 status: publish
 type: post
 published: true
 comments: true
 author: andrey_kurenkov
 projcategory: research
-projname: prl
-excerpt: Improved robot planning by learning from prior mistakes
+projname: lsm
+excerpt: Exploring the feasibility of implementing hardware neural nets using memristors
 image:
   feature: /projects/research/prl/images/poster.png
   featureid: project-image
   featurelink: true
-  teaser: herb.jpg
+  teaser: memristor.png
 what: Improved robot planning by learning from prior mistakes
 who: Me, Trony O'Neil, and Matthew O'Shaughnessy; advised by Xiao Yu of the Parallel and Distributed Computing Lab
 why: MapReduce is huge, and configuration is complicated. 
@@ -26,9 +26,4 @@ images:
     file: {}
     caption: {}
     alt: {}
-videos:
-  - name: first
-    src: https://www.youtube.com/watch?v=iq4DzPFGHpM
-    caption: An image
-    alt: an alt
 ---

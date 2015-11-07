@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     blankslate (2.1.2.4)
-    celluloid (0.16.1)
+    celluloid (0.16.0)
       timers (~> 4.0.0)
     classifier-reborn (2.0.3)
       fast-stemmer (~> 1.0)
@@ -16,8 +16,8 @@ GEM
     ffi (1.9.10)
     ffi (1.9.10-x64-mingw32)
     ffi (1.9.10-x86-mingw32)
-    hitimes (1.2.2)
-    hitimes (1.2.2-x86-mingw32)
+    hitimes (1.2.3)
+    hitimes (1.2.3-x86-mingw32)
     jekyll (2.5.3)
       classifier-reborn (~> 2.0)
       colorator (~> 0.1)
@@ -75,7 +75,7 @@ GEM
     redcarpet (3.3.2)
     safe_yaml (1.0.4)
     sass (3.4.16)
-    timers (4.0.1)
+    timers (4.0.4)
       hitimes
     titlecase (0.1.1)
     toml (0.1.2)
@@ -93,4 +93,4 @@ DEPENDENCIES
   octopress (~> 3.0.0.rc.12)
 
 BUNDLED WITH
-   1.10.5
+   1.10.6

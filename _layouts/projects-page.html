@@ -5,24 +5,20 @@ layout: base
 <div id="main" role="main">
   <div class="article-author-side">
     {% include _author-bio.html %}
-    </br>
-    <h2>Tags</h2>
-    <ul id="taglist">
-      {% for tag in sorted_tags %}
-        {% assign tag_name = {{tag | first}} %}
-        {% assign data_tag = site.data.tags[tag_name] %}
-        {% if data_tag %} 
-          <li><a href="{{ site.url }}/writing/tag/{{ tag_name }}/">{{ data_tag.name }} ({{site.tags[tag_name] | size}})</a></li>
-        {% endif %}
-      {% endfor %}
-      {% assign count = nil %}
-    </ul>
   </div>
   <div id="index">
     <h1 style="display: block;">Research</h1>
 
     <div class="tiles">
       {% for post in site.categories.research %}
+        {% include _project-grid.html %}
+      {% endfor %}
+    </div><!-- /.tiles -->
+
+    <h1 style="display: block;">Big Team Projects</h1>
+
+    <div class="tiles">
+      {% for post in site.categories.team_projects %}
         {% include _project-grid.html %}
       {% endfor %}
     </div><!-- /.tiles -->
@@ -35,13 +31,6 @@ layout: base
       {% endfor %}
     </div><!-- /.tiles -->
 
-    <h1 style="display: block;">Big Team Projects</h1>
-
-    <div class="tiles">-
-      {% for post in site.categories.team_projects %}
-        {% include _project-grid.html %}
-      {% endfor %}
-    </div><!-- /.tiles -->
 
     <h1 style="display: block;">Hacks and small projects</h1>
 

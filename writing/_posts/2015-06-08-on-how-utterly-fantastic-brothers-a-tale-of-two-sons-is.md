@@ -15,7 +15,7 @@ author: andrey_kurenkov
 excerpt: Or, what this game has that most do not
 ---
 <figure>
-    <img class="postimage" src="/images/writing/2015-06-08-on-how-utterly-fantastic-brothers-a-tale-of-two-sons-is/brothers_gameinformer_01_big.jpg" alt="http://www.brothersthegame.com/downloads"/>     
+    <img class="postimage" src="/writing/images/2015-06-08-on-how-utterly-fantastic-brothers-a-tale-of-two-sons-is/brothers_gameinformer_01_big.jpg" alt="http://www.brothersthegame.com/downloads"/>     
 </figure>
 
 Brothers is a game made by a movie director - Josef Fares . It's nonconformity, courage, and beauty all derive significantly in part because of this esoteric source of creativity, as <a href="http://www.polygon.com/features/2013/10/27/4864230/brothers-starbreeze-josef-fares">the Polygon has greatly covered</a>. Go read about it - the piece is well written, interesting, and makes playing the game all the more enjoyable. Josef Fares and Starbreeze have done something truly impressive, and should be commended for realizing a vision without regard for stale video game traditions. As is said in the article, '"If you want to make something that stands out and is memorable, you can't do what everyone else is doing," Engdal says. "It may seem obvious when stated like that, but still — most companies these days do the same thing over and over again because of some perceived sense of safety."'
@@ -31,5 +31,5 @@ However, Brothers does employ game mechanics in a very important way. It frustra
 There are so many other things that are good in this game, and that are finally becoming more common in video games since the ongoing indie surge that has been happening at least since Braid and Limbo . Cutscenes are used sparingly, and correctly. The game as whole is short, which is to say the right length so no mechanics are tired out or pointless nonsense repetetive gamepaly is introduced. It is not sentimental, or childish, or simplistic (though whatever puzzles are in it are very intentionally simple). Forget specifics, the game as a whole is just uniquely beautiful. Play it, as soon as you can.
 
 <figure>
-    <a href="https://lifeofandrey.files.wordpress.com/2015/06/brothers02_06_big.jpg"><img class="postimage" src="/images/writing/2015-06-08-on-how-utterly-fantastic-brothers-a-tale-of-two-sons-is/brothers02_06_big.jpg" alt="http://www.brothersthegame.com/downloads"/></a>
+    <a href="https://lifeofandrey.files.wordpress.com/2015/06/brothers02_06_big.jpg"><img class="postimage" src="/writing/images/2015-06-08-on-how-utterly-fantastic-brothers-a-tale-of-two-sons-is/brothers02_06_big.jpg" alt="http://www.brothersthegame.com/downloads"/></a>
 </figure>
