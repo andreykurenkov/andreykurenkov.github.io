@@ -8,11 +8,24 @@ type: post
 published: true
 comments: true
 author: andrey_kurenkov
-what: An open source Java grading to aid with grading for coding classes
-where: Georgia Tech
-when: Fall 2015
+projcategory: major_projects
+projname: gradeseer
+excerpt: Open sourced autograding, plagiarism detection, and structured GUI-grading tools.
 image:
-  feature: projects/metamusic/metamusic3.jpg
-  id: project-image
+  feature: projects/images/flipswitch/poster.png
+  featureid: project-image
+  teaser: logo.png
+what: Open sourced autograding, plagiarism detection, and structured GUI-grading tools
+why: This was all stuff I developed for myself/others while TAing, and gradually made nicer
+where: Georgia Tech 
+when: August 2013-April 2015
+who: Me
+links:
+  - name: GitHub Repo
+    url: https://github.com/andreykurenkov/Grade-Seer
+images:
+  loop: true
+  basename: seer
+  ext: png
+  num: 3
 ---
-

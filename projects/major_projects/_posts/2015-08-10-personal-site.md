@@ -1,18 +1,24 @@
 ---
 layout: project-post
-title: andreykurenkov.com
-date: 2015-03-26 02:26:22.000000000 -07:00
+title: Personal Site
+date: 2015-08-10
 tags: [web]
 status: publish
 type: post
 published: true
 comments: true
 author: andrey_kurenkov
-what: An open source Java grading to aid with grading for coding classes
-where: Georgia Tech
-when: Fall 2015
+projcategory: major_projects
+projname: personalsite
+excerpt: Meta! This site was quite the project, yeah.
 image:
-  feature: projects/metamusic/metamusic3.jpg
-  id: project-image
+  feature: /projects/team_projects/images/agribot/poster.png
+  featureid: project-image
+  featurelink: true
+  teaser: logo.png
+what: A robotic rover for autonomously mapping and spraying fields of plants
+who: Me
+why: I am vain and want to share my writing and catalogue my projects
+where: The internet
+when: July-November 2015
 ---
-

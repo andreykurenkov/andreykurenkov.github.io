@@ -1,34 +1,24 @@
 ---
 layout: project-post
-title: Learning from Failure
-date: 2013-08-07
-tags: [robotics,learning]
+title: AgriBot
+date: 2015-05-02
+tags: [robotics,cv,hardware,ee]
 status: publish
 type: post
 published: true
 comments: true
 author: andrey_kurenkov
-projcategory: research
-projname: prl
-excerpt: Improved robot planning by learning from prior mistakes
+projcategory: team_projects
+projname: agribot
+excerpt: A robotic rover for autonomously mapping and spraying fields of plants
 image:
-  feature: /projects/research/prl/images/poster.png
+  feature: /projects/team_projects/images/agribot/poster.png
   featureid: project-image
   featurelink: true
-  teaser: herb.jpg
-what: Improved robot planning by learning from prior mistakes
-who: Me, Trony O'Neil, and Matthew O'Shaughnessy; advised by Xiao Yu of the Parallel and Distributed Computing Lab
-why: MapReduce is huge, and configuration is complicated. 
-where: Georgia Tech, with the EE Opportunity Research Scholars (ORS) program
-when: August 2012-May 2013
-images:
-  - name: {}
-    file: {}
-    caption: {}
-    alt: {}
-videos:
-  - name: first
-    src: https://www.youtube.com/watch?v=iq4DzPFGHpM
-    caption: An image
-    alt: an alt
+  teaser: robot.png
+what: A robotic rover for autonomously mapping and spraying fields of plants
+who: Me, Trony O'Neil, Pavel Komarov, 
+why: Irrigation is massively wasteful, and a more precise system would be useful. The SLAM part is honestly more exciting.
+where: Georgia Tech, senior design for the EE degree
+when: August 2014-April 2015
 ---

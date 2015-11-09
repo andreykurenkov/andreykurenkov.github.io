@@ -2,7 +2,11 @@
 layout: base
 ---
 {% assign project = page %}
-{% include _feature_image.html %}
+  <div class="image-wrap" id="project-image">
+     <a href="{{ site.url }}/projects/{{ project.projcategory }}/images/{{ project.projname }}/{{ page.image.feature }}" target="_blank"> 
+     <img src="{{ site.url }}/projects/{{ project.projcategory }}/images/{{ project.projname }}/{{ page.image.feature }}">
+     </a>
+  </div><!-- /.image-wrap -->
 <div id="main" role="main">
   <div class="article-author-side" id="article-author-side-projects">
     {% include _author-bio.html %}
@@ -45,25 +49,45 @@ layout: base
 			      <td valign="top"><h3>LINKS</h3></td>
 			      <td><ul class="linkslist">
 				       {% for link in project.links %}
+		               {% if link.isfile %}
                       <h4>
-                         <a href="{{ link.url }}" title="{{ like.name }}">{{ link.name }}</a>
+                         <a href="{{ site.url }}/projects/{{ project.projcategory }}/files/{{ project.projname }}/{{ link.file }}" target="_blank">{{ link.name }}</a>
+                         <a href="{{ site.url }}/projects/{{ project.projcategory }}/files/{{ project.projname }}/{{ link.file }}" target="_blank" title="{{ like.name }}"><i class="fa fa-link"></i></a>
+                      </h4>
+		      		     {% else %}
+                      <h4>
+                         <a href="{{ link.url }}" title="{{ like.name }}" target="_blank">{{ link.name }}</a>
                          <a href="{{ link.url }}" target="_blank" title="{{ like.name }}"><i class="fa fa-link"></i></a>
                       </h4>
+		      		     {% endif %}
 							  {% endfor %}
 						 </ul></div></td>
 		      </tr>
 		      {% endif %}
 
-		      {% if project.projectimages %}
+		      {% if project.images %}
 		      <tr>
 			      <td valign="top"><h3>PICS</h3></td>
 			      <td><ul class="imageslist" id="projectimages">
+               {% if project.images.loop %}
+                  {% for i in (1..project.images.num) %}
+				             <li><figure>
+                            <a href="{{ site.url }}/projects/{{ project.projcategory }}/images/{{ project.projname }}/{{ project.images.basename }}{{ forloop.index }}.{{ project.images.ext }}" target="_blank">  
+                               <img src="{{ site.url }}/projects/{{ project.projcategory }}/images/{{ project.projname }}/{{ project.images.basename }}{{ forloop.index }}.{{ project.images.ext }}" alt="{{ img.alt }}">
+                            </a>
+							       </figure></li>
+							    {% endfor %}
+		           {% else %}
 				       {% for img in project.images %}
-				         <li><figure><img src="{{ site.url }}/projects/{{ project.projcategory }}/images/{{ project.projname }}/{{ img.file }}" alt="{{ img.alt }}">
-							     {% if img.caption %} <figcaption>{{ img.caption }}</figcaption>{% endif %}
-							   </figure></li>
-							       {% endfor %}
-						 </ul></td>
+				             <li><figure>
+                            <a href="{{ site.url }}/projects/{{ project.projcategory }}/images/{{ project.projname }}/{{ img.file }}" target="_blank">  
+                               <img src="{{ site.url }}/projects/{{ project.projcategory }}/images/{{ project.projname }}/{{ img.file }}" alt="{{ img.alt }}">
+                            </a>
+							              {% if img.caption %} <figcaption>{{ img.caption }}</figcaption>{% endif %}
+							       </figure></li>
+							    {% endfor %}
+                {% endif %}
+						</ul></td>
 		      </tr>
 		      {% endif %}
 
@@ -73,7 +97,7 @@ layout: base
 			      <td><ul class="videolist" id="projectvideos">
 				       {% for vid in project.videos %}
 				         <li><iframe src="{{ vid.src }}"  width="560" height="315" frameborder="0" allowfullscreen></iframe>
-    				         {% if img.caption %} <figcaption>{{ vid.caption }}</figcaption>{% endif %}
+    				         {% if vid.caption %} <figcaption>{{ vid.caption }}</figcaption>{% endif %}
                          </figure></li>
 					   {% endfor %}
 						 </ul></td>

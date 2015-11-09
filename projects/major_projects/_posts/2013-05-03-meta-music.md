@@ -1,7 +1,7 @@
 ---
 layout: project-post
 title: MetaMusic
-date: 2015-05-03 02:26:22.000000000 -07:00
+date: 2013-05-03 
 tags: [visualization,music,data,app,android]
 status: publish
 type: post
@@ -14,6 +14,7 @@ excerpt: A sweet little app to visualize music metadata on a smartphone
 image:
   feature: projects/major_projects/images/metamusic/metamusic10.jpg
   featureid: project-image
+  featurelink: true
   teaser: icon.png
 what: A sweet little app to visualize music metadata on a smartphone
 who: Me, Alex Bettadapur, and another guy
@@ -24,54 +25,10 @@ links:
   - name: GitHub Repo
     url: https://github.com/abettadapur/MetaMusic
 images:
-  - name: first
-    file: metamusic1.jpg
-    caption: An image
-    alt: an alt
-  - name: first
-    file: metamusic2.jpg
-    caption: An image
-    alt: an alt
-  - name: first
-    file: metamusic3.jpg
-    caption: An image
-    alt: an alt
-  - name: first
-    file: metamusic4.jpg
-    caption: An image
-    alt: an alt
-  - name: first
-    file: metamusic5.jpg
-    caption: An image
-    alt: an alt
-  - name: first
-    file: metamusic6.jpg
-    caption: An image
-    alt: an alt
-  - name: first
-    file: metamusic7.jpg
-    caption: An image
-    alt: an alt
-  - name: first
-    file: metamusic8.jpg
-    caption: An image
-    alt: an alt
-  - name: first
-    file: metamusic9.jpg
-    caption: An image
-    alt: an alt
-  - name: first
-    file: metamusic10.jpg
-    caption: An image
-    alt: an alt
-  - name: first
-    file: metamusic11.jpg
-    caption: An image
-    alt: an alt
-  - name: first
-    file: metamusic12.jpg
-    caption: An image
-    alt: an alt
+  loop: true
+  basename: metamusic
+  ext: jpg
+  num: 12
 ---
 Should be studying for test, messing with this. Reuploded slightly bigger.
 Quick and dirty pie chart of meta-data from google-music. Did not realize it would such - may try to integrate allmusic or wikipedia genre classification.

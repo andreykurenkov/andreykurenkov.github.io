@@ -1,6 +1,6 @@
 ---
 layout: project-post
-title: Teaching Skill Constraints
+title: Teaching Robots Skill Constraints
 date: 2015-05-01
 tags: [robotics,learning]
 status: publish

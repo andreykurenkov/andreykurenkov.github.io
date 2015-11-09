@@ -1,6 +1,6 @@
 {% if page.image.feature %}
   <div class="image-wrap" {% if page.image.featureid %} id="{{ page.image.featureid }}" {% endif %}>
-     {% if page.image.featurelink %}<a href="{{ site.url }}/{{ page.image.feature }}">  {% endif %}
+     {% if page.image.featurelink %}<a href="{{ site.url }}/{{ page.image.feature }}" target="_blank">  {% endif %}
      <img src=
      {% if page.image.feature contains 'http' %}
         "{{ page.image.feature }}"

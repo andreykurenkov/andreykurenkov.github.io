@@ -64,7 +64,7 @@
 
 #projectimages{
 	@media #{$x-large} {
-		height: 900px;
+     max-height:900px;
   }
   list-style-type: none; /* Needed to eliminate list item marker */ 
 }
@@ -93,6 +93,11 @@
 }
 
 .imageslist figcaption{
+	text-align:center;
+}
+
+.videolist{
+  align:middle;
 	text-align:center;
 }
 

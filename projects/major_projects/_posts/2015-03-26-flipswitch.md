@@ -1,7 +1,7 @@
 ---
 layout: project-post
 title: FlipSwitch
-date: 2015-03-26 02:26:22.000000000 -07:00
+date: 2015-03-26 
 tags: [open-source,education,embedded,iot]
 status: publish
 type: post
@@ -12,8 +12,9 @@ projcategory: major_projects
 projname: flipswitch
 excerpt: Low investment home automation with small BLE modules that have actuators and can physically control light switches and various other home electronics.
 image:
-  feature: projects/images/flipswitch/poster.png
+  feature: projects/major_projecects/images/flipswitch/poster.png
   featureid: project-image
+  featurelink: true
   teaser: logo.png
 what: Low investment home automation with small BLE modules that have actuators and can physically control light switches and various other home electronics.
 why: I got the idea from wanting to switch my lights from my desk, since I switched between lamps and 
