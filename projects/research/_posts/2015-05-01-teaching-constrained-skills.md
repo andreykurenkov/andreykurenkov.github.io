@@ -17,15 +17,15 @@ image:
   featurelink: true
   teaser: simon-small.png
 what: Improved robot planning by learning from prior mistakes
-who: Me, Trony O'Neil, and Matthew O'Shaughnessy; advised by Xiao Yu of the Parallel and Distributed Computing Lab
+who: Me, worked with direction from Pras Velagapudi and Sidd Srinivasa
 why: MapReduce is huge, and configuration is complicated. 
 where: Georgia Tech, with the EE Opportunity Research Scholars (ORS) program
 when: August 2014-May 2015
 images:
-  - name: {}
-    file: {}
-    caption: {}
-    alt: {}
+  loop: true
+  basename: sr
+  ext: JPG
+  num: 18
 videos:
   - name: first
     src: https://www.youtube.com/embed/yHFCXSP4TIE

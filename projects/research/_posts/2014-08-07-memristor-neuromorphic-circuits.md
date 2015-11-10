@@ -12,18 +12,24 @@ projcategory: research
 projname: lsm
 excerpt: Exploring the feasibility of implementing hardware neural nets using memristors
 image:
-  feature: /projects/research/prl/images/poster.png
-  featureid: project-image
-  featurelink: true
-  teaser: memristor.png
-what: Improved robot planning by learning from prior mistakes
-who: Me, Trony O'Neil, and Matthew O'Shaughnessy; advised by Xiao Yu of the Parallel and Distributed Computing Lab
-why: MapReduce is huge, and configuration is complicated. 
-where: Georgia Tech, with the EE Opportunity Research Scholars (ORS) program
+  feature: feature.png
+  teaser: mead.png
+links:
+  - name: Summary
+    isfile: true
+    file: report.pdf
+  - name: Memristor Overview
+    isfile: true
+    file: memristors.pdf
+what: Exploring the feasibility of implementing hardware neural nets using memristors
+who: Me and Nicolas Merlinge, supervised by Davide Sachetto and the professor
+why: The microelectronic circuit world is super excited by memristors
+where: EPFL, as part of an international research internship program
 when: August 2012-May 2013
 images:
-  - name: {}
-    file: {}
-    caption: {}
-    alt: {}
+  loop: true
+  basename: rr
+  ext: png
+  num: 14
 ---
+Can you believe I was payed to work on research concerning hardware neural nets?! Yeah, pretty weird considering I am largely a CS guy. Still, I have a EE degree in addition to a CS one, and undeniably had some VLSI experience, so worked on it I did. The problem was very loosely defined at first, and it was very interesting to converge on a goal of trying to replicate the results another group got through a software simulation with a simulation of the actual hardware that the software was emulating (very loosely, too). The details of how this was all done are in the attached summary, but suffice it to say my low-level VLSI skills were significalty tested and expanded over the summer. 
