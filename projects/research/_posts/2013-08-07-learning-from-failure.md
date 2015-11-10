@@ -13,7 +13,7 @@ projname: prl
 excerpt: Improved robot planning by learning from prior mistakes
 image:
   feature: poster.png
-  teaser: herb.jpg
+  teaser: prl5.png
 links:
   - name: Presentation
     isfile: true
@@ -27,7 +27,7 @@ images:
   loop: true
   basename: prl
   ext: png
-  num: 5
+  num: 6
 videos:
   - name: Plan Execution
     src: https://www.youtube.com/watch?v=iq4DzPFGHpM

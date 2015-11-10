@@ -10,15 +10,13 @@ comments: true
 author: andrey_kurenkov
 projcategory: major_projects
 projname: transittimes
-excerpt: Beacon-based instant info about when the bus or train will get to your stop via an app, smartwatch, or website.
+excerpt: Beacon-based notifications about when the bus or train will get to your stop
 image:
-  feature: projects/major_projects/images/transittimes/poster.png
-  featureid: project-image
-  featurelink: true
+  feature: poster.png
   teaser: logo.png
-what: Beacon-based instant info about when the bus or train will get to your stop via an app, smartwatch, or website.
-why:  cayse
-where: Bay Area - done for the hackmyride2 DevPost challenge sponsored by VTA
+what: Beacon-based instant info about when the bus or train will get to your stop via an app, smartwatch, or website
+why: I ride the VTA
+where: Bay Area - done for the hackmyride2 DevPost challenge sponsored by the VTA
 when: Fall 2015
 who: Me and Alex Bettadapur
 links:
@@ -27,14 +25,14 @@ links:
   - name: DevPost Submission
     url: http://devpost.com/software/transittimes-7bloyn
 images:
-  - name: first
-    path: flipswitch/logo
-    caption: An image
-    alt: an alt
+  loop: true
+  basename: tt
+  ext: jpg
+  num: 11
 videos:
-  - name: first
+  - name: Presentation
     src: https://www.youtube.com/embed/zzAFS25KNq8
-    caption: An image
-    alt: an alt
+    caption: Presentation
+    alt: Presentation
 ---
-text text text
+We completed the vast majority of the project in about a month. Not bad, considering we have an Android app, a Django-based website (with significant frontends and backends), and a Pebble app. We did not get top three, but getting 1.5k for the best beacon award is not bad. 

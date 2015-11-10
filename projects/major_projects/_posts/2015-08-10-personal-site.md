@@ -12,9 +12,7 @@ projcategory: major_projects
 projname: personalsite
 excerpt: Meta! This site was quite the project, yeah.
 image:
-  feature: /projects/team_projects/images/agribot/poster.png
-  featureid: project-image
-  featurelink: true
+  feature: poster.png
   teaser: logo.png
 what: A robotic rover for autonomously mapping and spraying fields of plants
 who: Me
