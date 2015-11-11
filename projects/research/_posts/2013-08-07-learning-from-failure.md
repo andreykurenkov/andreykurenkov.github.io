@@ -2,7 +2,7 @@
 layout: project-post
 title: Learning from Failure
 date: 2013-08-07
-tags: [robotics,learning]
+tags: [robotics,ml]
 status: publish
 type: post
 published: true

@@ -2,7 +2,7 @@
 layout: project-post
 title: FlipSwitch
 date: 2015-03-26 
-tags: [ee,hardware,embedded,iot]
+tags: [ee,embedded,iot,competition,team]
 status: publish
 type: post
 published: true
@@ -28,3 +28,4 @@ images:
   ext: jpg
   num: 3
 ---
+Oh IOT, will you ever be useful. Being a hackathon fan

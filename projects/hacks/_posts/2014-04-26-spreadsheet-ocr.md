@@ -2,7 +2,7 @@
 layout: project-post
 title: SpreadSheet-OCR
 date: 2014-04-26 
-tags: [visualization,cv,ml]
+tags: [visualization,cv,ml,team]
 status: publish
 type: post
 published: true

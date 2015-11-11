@@ -2,7 +2,7 @@
 layout: project-post
 title: AgriBot
 date: 2015-05-02
-tags: [robotics,cv,hardware,ee]
+tags: [competition,robotics,cv,ee,embedded,team]
 status: publish
 type: post
 published: true
@@ -42,4 +42,4 @@ videos:
 ---
 Wow, what a senior design project. Getting a roughly 30k robot rover and being tasked with putting roughy 5k of electronics and sensors on top of it. And the software! To make a self driving, autonomous mapping robot that precisely sprayed plants and gathered data with the possibility of remote control and monitoring. Seriously, what a project.
 
-What a project - a serious enough one to the point of not being able to finish, apparently. A lot was working on that Jetson TK1, intense ROS-based SLAM code with Kinect 2 and SLAM input, navigation of the robot, and so much more - but as happens so often we did not pull it all together in time. Still, what an awesome project - be sure to check out the docs if its your sort of thing.
+What a project - a serious enough one to the point of not being able to finish, apparently. A lot was working on that Jetson TK1, intense ROS-based SLAM code with Kinect 2 and SLAM input, navigation of the robot, and so much more (the technical docs and presentation have all the juicy details) - but as happens so often we did not pull it all together in time. Still, we were close, and for a project of such ambition that means something.

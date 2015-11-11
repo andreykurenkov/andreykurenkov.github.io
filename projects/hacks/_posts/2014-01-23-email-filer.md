@@ -2,7 +2,7 @@
 layout: project-post
 title: EmailFiler
 date: 2014-01-23 
-tags: [ml]
+tags: [ml,data]
 status: publish
 type: post
 published: true

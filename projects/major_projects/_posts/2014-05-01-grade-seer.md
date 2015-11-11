@@ -2,7 +2,7 @@
 layout: project-post
 title: GradeSeer
 date: 2014-05-01 02:26:22.000000000 -07:00
-tags: [open-source,education,java]
+tags: [open-source,teaching,java,open-source]
 status: publish
 type: post
 published: true

@@ -46,3 +46,53 @@ work:
   name: Work
   slug: work
 
+
+
+ml:
+  name: Machine Learning
+  slug: ml
+
+cv:
+  name: Computer Vision
+  slug: cv
+
+data:
+  name: Data Crunch
+  slug: data
+
+ee:
+  name: Electrical Engineering
+  slug: ee
+
+robotics:
+  name: Robotics
+  slug: robotics
+
+android:
+  name: Android
+  slug: android
+
+web:
+  name: Web
+  slug: web
+
+embedded:
+  name: Embedded Dev
+  slug: embedded
+
+teaching:
+  name: Teaching
+  slug: teaching
+
+open-source:
+  name: Open Source
+  slug: open-source
+
+competition:
+  name: Competitions
+  slug: competition
+
+team:
+  name: Team
+  slug: team
+

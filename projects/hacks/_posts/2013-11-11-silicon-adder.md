@@ -2,7 +2,7 @@
 layout: project-post
 title: Silicon 32 Bit Adder
 date: 2013-11-11 
-tags: [ee,circuits]
+tags: [ee,hardware]
 status: publish
 type: post
 published: true

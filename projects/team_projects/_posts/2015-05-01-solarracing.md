@@ -2,7 +2,7 @@
 layout: project-post
 title: GT Solar Racing
 date: 2015-05-01
-tags: [hardware,embedded,ee,electronics]
+tags: [competition,embedded,ee,team]
 status: publish
 type: post
 published: true
@@ -42,4 +42,4 @@ videos:
     caption: This is how most work was actually done
     alt: More Wifi work
 ---
-To work on the same team for four years, all during school, can you imagine? So many late nights, team dinners, missed deadlines. My involvement went up and down, I ended up being software lead, but we did end up with a (very suboptimal) solar racing car. How did we get there? Very messily, and having made many mistakes. But, there is no doubt some of the most valuable experience I got at Tech was from working on the team - how do engineers learn to actually do anything if they don't participate in such things in schools? Who knows.
+To work on the same team for four years, all during school, can you imagine? So many late nights, team dinners, missed deadlines. My involvement went up and down, and was varied - helping out the MechE people, debugging circuits, discussing design - but for the most part I did embedded programming, and ended up being software lead for two years (more or less). No one on the team can claim to have been great at meeting deadlines or not overcomplicating things, but in the end we did built a (very suboptimal) solar racing car. How did we get there? Very messily, and having made many mistakes. But, there is no doubt some of the most valuable experience I got at Tech was from working on the team - how do engineers learn to actually do anything if they don't participate in such things in schools? Who knows.

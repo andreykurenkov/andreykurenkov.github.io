@@ -2,7 +2,7 @@
 layout: project-post
 title: MetaMusic
 date: 2013-05-03 
-tags: [visualization,music,data,app,android]
+tags: [visualization,data,team,android,competition]
 status: publish
 type: post
 published: true

@@ -2,7 +2,7 @@
 layout: project-post
 title: MiniRoboMe
 date: 2015-04-23 
-tags: [robotics,embedded,app]
+tags: [robotics,embedded,android]
 status: publish
 type: post
 published: true

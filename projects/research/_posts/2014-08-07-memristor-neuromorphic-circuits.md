@@ -2,7 +2,7 @@
 layout: project-post
 title: Memristor Brains
 date: 2014-08-08
-tags: [learning,hardware]
+tags: [hardware,ai,ml,ee]
 status: publish
 type: post
 published: true

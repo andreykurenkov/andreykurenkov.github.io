@@ -2,7 +2,7 @@
 layout: project-post
 title: SLAMeval
 date: 2013-04-25 
-tags: [robotics,cv,slam]
+tags: [cv,hardware,team]
 status: publish
 type: post
 published: true

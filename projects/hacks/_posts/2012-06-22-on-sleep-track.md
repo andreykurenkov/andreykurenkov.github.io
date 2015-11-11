@@ -2,7 +2,7 @@
 layout: project-post
 title: SleepNighmare
 date: 2012-06-22 
-tags: [visualization,app]
+tags: [visualization,data]
 status: publish
 type: post
 published: true

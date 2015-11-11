@@ -2,7 +2,7 @@
 layout: project-post
 title: MagicTouch
 date: 2013-10-23 
-tags: [visualization,cv,ml]
+tags: [cv,android,competition]
 status: publish
 type: post
 published: true
