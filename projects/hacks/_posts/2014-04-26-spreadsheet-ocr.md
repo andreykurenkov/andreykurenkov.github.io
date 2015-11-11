@@ -36,4 +36,4 @@ videos:
     caption: Our class presentation
     alt: Presentation
 ---
-blah blag blah
+Liking that diagram? Yes, we implemented all of that, even the custom OCR - that used Extreme Neural Nets that took much too long to debug. In the end, we did get a whole working pipeline (as yuo can see in the images below), and so I was fairly happy with the results. Now, just need to reimplement all of it in Java and port it to Android...

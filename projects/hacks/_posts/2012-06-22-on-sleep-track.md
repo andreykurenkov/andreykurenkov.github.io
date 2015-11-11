@@ -10,14 +10,14 @@ comments: true
 author: andrey_kurenkov
 projcategory: hacks
 projname: sleeptrack
-excerpt: Entirely custom implementation of OCR to extract spreadsheets
+excerpt: Horrifying sleep pattern visualization
 image:
   feature: sleeptrack.jpg
   teaser: logo.jpg
-what: Entirely custom implementation of OCR to extract spreadsheets
-who: Me, Pavel Komarov, Ricky Liou, Hank McCord, Miguel Serrano
-why: I had to write many tables in lab and manually transfer those to my computer, which struck me as silly
-where: Georgia Tech - done for ECE 4580 class project
+what: Horrifying sleep pattern visualization
+who: Me
+why: My sleep patterns were never that good, so it seemed fun to visualize the damage
+where: Georgia Tech 
 when: July 2012 
 ---
-blah blag blah
+A very intentionally horrifying looking visualization of sleep patterns. I think I used some custom txt format for recording sleep, and still used JApplets at that point. Ah, my younger days...

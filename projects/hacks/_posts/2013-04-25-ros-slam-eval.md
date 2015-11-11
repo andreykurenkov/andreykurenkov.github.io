@@ -15,8 +15,8 @@ image:
   feature: slam.png
   teaser: logo.png
 what: Entirely custom implementation of OCR to extract spreadsheets
-who: Me, Pavel Komarov, Ricky Liou, Hank McCord, Miguel Serrano
-why: I had to write many tables in lab and manually transfer those to my computer, which struck me as silly
+who: Me with a couple of guys
+why: Because getting to play with a Kinect for a final project is awesome
 where: Georgia Tech - done for CS 3630 class project
 when: April 2013 
 images:
@@ -29,4 +29,4 @@ links:
     isfile: true
     file: final.pdf
 ---
-blah blag blah
+My final project for Robotics and Perception, and decidedly a cool one. All we really did was install a few ROS RGBD SLAM packages and see how well they worked, but as my first exposure to ROS and the Kinect it was certainly fun. It would be far from my last...

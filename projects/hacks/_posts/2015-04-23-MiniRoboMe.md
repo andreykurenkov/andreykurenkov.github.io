@@ -10,18 +10,18 @@ comments: true
 author: andrey_kurenkov
 projcategory: hacks
 projname: minirobome
-excerpt: Entirely custom implementation of OCR to extract spreadsheets
+excerpt: A little teleoperated robot based on Android
 image:
   feature: diagram.png
   teaser: logo.png
-what: Entirely custom implementation of OCR to extract spreadsheets
-who: Me, Pavel Komarov, Ricky Liou, Hank McCord, Miguel Serrano
-why: I had to write many tables in lab and manually transfer those to my computer, which struck me as silly
-where: Georgia Tech - done for ECE 4580 class project
+what: A little teleoperated robot based on Android
+who: Me
+why: I had to choose a project for CS 3651, Intelligent Devices, and this struck me as a fun project
+where: Georgia Tech - done for ECE CS 3651 class project
 when: March-April 2015 
 links:
   - name: Report
     isfile: true
     file: final.pdf
 ---
-blah blag blah
+By senior year of college, I had a Pololu 3Pi robot I had won at a Robotics and Perception class and an Android to Arduino bridge I had won at a hackathon. I was itching to use them both, and the idea was obvious - make the robot remotely controllable with an Android device using the Arduino ADK. And that's exactly what I did, despite the massive levels of overwork that research and senior design in concert with TAin and multiple over classes brought to me. The details are all in the report, though sadly no video evidence of this working exists - soon, though. In the meantime, i'll leave you with some wisdom: never forget to connect your grounds!

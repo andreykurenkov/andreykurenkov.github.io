@@ -10,14 +10,14 @@ comments: true
 author: andrey_kurenkov
 projcategory: hacks
 projname: emailfiler
-excerpt: A sweet little app to visualize music metadata on a smartphone
+excerpt: A project to categorize emails into categories based on my gmail archives
 image:
   feature: graphs.png
   teaser: heatmap.jpg
-what: A sweet little app to visualize music metadata on a smartphone
-who: Me, Alex Bettadapur, and another guy
-why: I liked the idea of pie graphs of genre, bar charts for plays, etc... I still think this should exist in other apps.
-where: Georgia Tech - GitMad hackathon, then a few weeks of solo work before my internship
+what: A project to categorize emails into categories based on my gmail archives
+who: Me
+why: We got the option to work with a custom dataset for our ML project, and I did not hesitate to do this awesome project
+where: Georgia Tech - for CS 4650, Machine Learning
 when: January 2014
 links:
   - name: GitHub Repo
@@ -26,3 +26,4 @@ links:
     isfile: true
     file: analysis.pdf
 ---
+What can I say that the analysis pdf does not include? Not much, except that I was a little dissapointed I could not get the accuracy above something like 75%. One day, I shall try to do this with some Deep Learning in the mix...

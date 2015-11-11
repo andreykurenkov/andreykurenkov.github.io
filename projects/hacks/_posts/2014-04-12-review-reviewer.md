@@ -14,10 +14,10 @@ excerpt: Machine-learned prediction of review helpfulness score
 image:
   feature: lengthgraph.png
   teaser: graph.png
-what: Entirely custom implementation of OCR to extract spreadsheets
+what: Machine-learned prediction of review helpfulness score
 who: Me, Stefano Fenu, Charles Wang
-why: I had to write many tables in lab and manually transfer those to my computer, which struck me as silly
-where: Georgia Tech - done for ECE 4580 class project
+why: We were told to do an NLP-based project, and predicting review helpfulness with a massive dataset was an awesome idea for that
+where: Georgia Tech - done for CS 4650 class project
 when: April 2014
 links:
   - name: Project Report
@@ -35,4 +35,4 @@ images:
     caption: We had fancy semantic features, but could not run it on enough data to get good results
     alt: Table
 ---
-blah blag blah
+The report covers the gruesome details, but really nothing too fancy - an online PassiveAggressive classifier that used word counts as features and got trained on massive amounts of data using online batch training. I was very impressed that simply feeding in more data led it to gradually get to 90% accuracy, but dissapointed no other features seemed to help. This project also reinforced for me how awesome Python's SciPy is - truly a great package.

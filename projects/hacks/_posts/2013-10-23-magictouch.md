@@ -10,17 +10,17 @@ comments: true
 author: andrey_kurenkov
 projcategory: hacks
 projname: magictouch
-excerpt: Entirely custom implementation of OCR to extract spreadsheets
+excerpt: A library for hand tracking on Android
 image:
   feature: track.jpg
   teaser: logo.jpg
-what: Entirely custom implementation of OCR to extract spreadsheets
-who: Me, Pavel Komarov, Ricky Liou, Hank McCord, Miguel Serrano
-why: I had to write many tables in lab and manually transfer those to my computer, which struck me as silly
+what: A library for hand tracking on Android
+who: Me and Stefano Fenu
+why: Why sleep when one can try, and fail, to implement full hand tracking on Android to run on top of any app?
 where: Georgia Tech - done for ECE 4580 class project
 when: Oct 23, 2013 
 links:
   - name: GitHub Repo
     url: https://github.com/andreykurenkov/camera-touch-emulation
 ---
-blah blag blah
+Another failed over-ambitious darling. Sketchit3D did not sufficiently humble me, and I got the idea of full on palm tracking instead of the quite lame alternative of colored blobs. And, you know what? We actually did get it to work. Not to work well, no, but we got Hough Cascade Classifiers to run in an Android app and detect whether my hand was closed or open. But, it did not work that well - we would need some nice initialization in a known location, regularization for lighting conditions, something like particle filters - much more than could be done in a night, in short. But, still, it ran.

@@ -10,14 +10,14 @@ comments: true
 author: andrey_kurenkov
 projcategory: hacks
 projname: adder
-excerpt: Entirely custom implementation of OCR to extract spreadsheets
+excerpt: A silicon-level VLSP implementation of a 32-bit adder
 image:
   feature: adder.jpg
   teaser: logo.png
-what: Entirely custom implementation of OCR to extract spreadsheets
-who: Me, Pavel Komarov, Ricky Liou, Hank McCord, Miguel Serrano
-why: I had to write many tables in lab and manually transfer those to my computer, which struck me as silly
-where: Georgia Tech - done for CS 3630 class project
+what: A silicon-level VLSP implementation of a 32-bit adder
+who: Me
+why: Done for a class, no real choice here
+where: Georgia Tech - done for ECE 3060 class project
 when: Nov 2013 
 images:
   loop: true
@@ -29,4 +29,4 @@ links:
     isfile: true
     file: final.pdf
 ---
-blah blag blah
+The old fashioned way - clicking and dragging and rule checking until it finally all worked, after many frustrating evenings. Despite being much more into programming and AI than the low levels of EE, somehow I quite enjoyed the practice of VLSI. If nothing else, the sheer difficulty and scope of this project reminded me how easy most CS classes were, and how I wish they pushed me to do larger and cooler things.  

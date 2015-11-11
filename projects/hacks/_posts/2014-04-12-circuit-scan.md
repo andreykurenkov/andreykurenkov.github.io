@@ -10,26 +10,25 @@ comments: true
 author: andrey_kurenkov
 projcategory: hacks
 projname: circuitscan
-excerpt: A sweet little app to visualize music metadata on a smartphone
+excerpt: A project to extract digital circuit schematics from circuits
 image:
-  feature: projects/hacks/images/metamusic/metamusic10.jpg
+  feature: circuitscan1.jpg
   teaser: logo.jpg
-what: A sweet little app to visualize music metadata on a smartphone
-who: Me, Alex Bettadapur, and another guy
-why: I liked the idea of pie graphs of genre, bar charts for plays, etc... I still think this should exist in other apps.
-where: Georgia Tech - GitMad hackathon, then a few weeks of solo work before my internship
+what: A project to extract digital circuit schematics from circuits
+who: Me, Aashish Patel, and anothe guy
+why: I sketched circuits for homework every week and had to manually convert them to netlists, which got me thinking this would be fun to try
+where: Emory Hackathon
 when: April 12, 2014 
 links:
   - name: GitHub Repo
     url: https://github.com/andreykurenkov/sketchit3d
   - name: GitHub Repo
     url: http://devpost.com/software/sketch3d
-
 images:
   loop: true
-  basename: metamusic
+  basename: circuitscan
   ext: jpg
-  num: 12
+  num: 2
 ---
 "Another Hackathon, another overly ambitious idea involving OpenCV (and OCR this time!) that is only finished in the sense that it is not finished but it has been shown that the idea is possible via a halfway working prototype of the idea. Extracting electronic circuit netlists/schematic from photos of paper sketches, how can that not be simple? Seriously, this is the third time I did this in a row. On the bright side, I probably could have finished this one had I the will/stupidity to keep working at Emory until the deadline tomorrow. Lessons of the day:
 -Haar cascade classifiers take a LONG time to train, so do not plan on just training one up on the spot.
