@@ -12,9 +12,9 @@ projcategory: major_projects
 projname: personalsite
 excerpt: Meta! This site was quite the project, why not tell you all about it while you're here
 image:
-  feature: poster.png
+  feature: website.png
   teaser: logo.png
-what: A robotic rover for autonomously mapping and spraying fields of plants
+what: This very site!
 who: Me
 why: I am vain and want to share my writing and catalogue my projects
 where: The internet

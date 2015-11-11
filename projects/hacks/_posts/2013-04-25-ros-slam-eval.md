@@ -10,11 +10,11 @@ comments: true
 author: andrey_kurenkov
 projcategory: hacks
 projname: slameval
-excerpt: Entirely custom implementation of OCR to extract spreadsheets
+excerpt: A little project to evaluate ROS SLAM packages with a Kinect
 image:
   feature: slam.png
   teaser: logo.png
-what: Entirely custom implementation of OCR to extract spreadsheets
+what: A little project to evaluate ROS SLAM packages with a Kinect
 who: Me with a couple of guys
 why: Because getting to play with a Kinect for a final project is awesome
 where: Georgia Tech - done for CS 3630 class project
