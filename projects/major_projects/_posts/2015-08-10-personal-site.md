@@ -24,6 +24,6 @@ I may have to do a complete write up on this later, but suffice it to say this s
 
 1. The site was based on the [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) theme with some customization, and I ended up plundering the same designer's [Skinny Bones](https://mmistakes.github.io/skinny-bones-jekyll/) theme for the project page layout - thanks! I also plundered my old Django site design for each project's layout - never throw out unfinished projects folks.
 2. Introducing a whole new category to the site complicated things, and forced me to bite the bullet and [start using plugins](http://charliepark.org/jekyll-with-plugins/ ). And by using plugins, I mean heavily borrowing from others for things I needed, such as [category based navigation](http://ajclarkson.co.uk/blog/jekyll-category-post-navigation/ ) and [plugin-based tag pages](http://charliepark.org/tags-in-jekyll/ ).
-3. Finally, having bitten that bullet I needed to say to having GitHub build my site from source - plugins are just too dangerous. But, with a [bit of guidance](http://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/) that switch was pretty easy.
+3. Finally, having bitten that bullet I needed to say to having GitHub build my site from source - plugins are just too dangerous. But, with a [bit of guidance](http://davidensinger.com/2013/04/deploying-jekyll-to-github-pages/) that switch was pretty easy.
 
 Next up, custom photo gallery! I highly recommend using this framework for your personal site, the design of it is simply fantastic.

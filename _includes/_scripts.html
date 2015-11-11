@@ -4,8 +4,8 @@
 <script src="{{ site.url }}/assets/js/scripts.min.js"></script>
 <script src="{{ site.url }}/assets/js/scripts.min.js"></script>
 <script src="{{ site.url }}/assets/js/bigfoot.min.js"></script>
-<!--{% if site.owner.google.analytics %}
- Asynchronous Google Analytics snippet 
+{% if site.owner.google.analytics %}
+<!-- Asynchronous Google Analytics snippet -->
 <script>
   var _gaq = _gaq || [];
   var pluginUrl = 
@@ -20,7 +20,7 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
-{% endif %}-->
+{% endif %}
 {% if page.comments %}
   {% include _disqus_comments.html %}
 {% endif %}
