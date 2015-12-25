@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>/writing/a-brief-history-of-neural-nets-and-deep-learning-part-4/</loc>
+    <lastmod>2015-12-24T18:19:34-08:00</lastmod>
+  </url>
+  <url>
+    <loc>/writing/a-brief-history-of-neural-nets-and-deep-learning-part-3/</loc>
+    <lastmod>2015-12-24T17:19:34-08:00</lastmod>
+  </url>
+  <url>
+    <loc>/writing/a-brief-history-of-neural-nets-and-deep-learning-part-2/</loc>
+    <lastmod>2015-12-24T16:19:34-08:00</lastmod>
+  </url>
+  <url>
+    <loc>/writing/a-brief-history-of-neural-nets-and-deep-learning/</loc>
+    <lastmod>2015-12-24T15:19:34-08:00</lastmod>
+  </url>
+  <url>
     <loc>/writing/movie-recommendations-for-the-aspiring-eclectic-intellectual/</loc>
     <lastmod>2015-10-22T16:19:34-07:00</lastmod>
   </url>
@@ -173,6 +189,18 @@
     <loc>/writing/</loc>
   </url>
   <url>
+    <loc>/writing/tag/ML/</loc>
+  </url>
+  <url>
+    <loc>/writing/tag/NN/</loc>
+  </url>
+  <url>
+    <loc>/writing/tag/technical/</loc>
+  </url>
+  <url>
+    <loc>/writing/tag/software/</loc>
+  </url>
+  <url>
     <loc>/writing/tag/art/</loc>
   </url>
   <url>
@@ -270,5 +298,37 @@
   </url>
   <url>
     <loc>/projects/tag/simulation/</loc>
+  </url>
+  <url>
+    <loc>/writing/tag/ML/index.html</loc>
+    <lastmod>2015-12-24T19:25:24-08:00</lastmod>
+  </url>
+  <url>
+    <loc>/writing/tag/technical/index.html</loc>
+    <lastmod>2015-12-24T19:25:24-08:00</lastmod>
+  </url>
+  <url>
+    <loc>/writing/tag/NN/index.html</loc>
+    <lastmod>2015-12-24T19:25:24-08:00</lastmod>
+  </url>
+  <url>
+    <loc>/writing/tag/software/index.html</loc>
+    <lastmod>2015-12-24T19:25:24-08:00</lastmod>
+  </url>
+  <url>
+    <loc>/writing/a-brief-history-of-neural-nets-and-deep-learning/index.html</loc>
+    <lastmod>2015-12-24T19:25:24-08:00</lastmod>
+  </url>
+  <url>
+    <loc>/writing/a-brief-history-of-neural-nets-and-deep-learning-part-4/index.html</loc>
+    <lastmod>2015-12-24T19:25:24-08:00</lastmod>
+  </url>
+  <url>
+    <loc>/writing/a-brief-history-of-neural-nets-and-deep-learning-part-2/index.html</loc>
+    <lastmod>2015-12-24T19:25:24-08:00</lastmod>
+  </url>
+  <url>
+    <loc>/writing/a-brief-history-of-neural-nets-and-deep-learning-part-3/index.html</loc>
+    <lastmod>2015-12-24T19:25:24-08:00</lastmod>
   </url>
 </urlset>

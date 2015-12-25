@@ -4,13 +4,868 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2015-11-11T14:44:52-08:00</updated>
+<updated>2015-12-24T19:37:59-08:00</updated>
 <id>/</id>
 <author>
   <name>Andrey Kurenkov</name>
   <uri>/</uri>
   <email>andreyvkurenkov@gmail.com</email>
 </author>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[A 'Brief' History of Neural Nets and Deep Learning, Part 4]]></title>
+  <link rel="alternate" type="text/html" href="/writing/a-brief-history-of-neural-nets-and-deep-learning-part-4/" />
+  <id>/writing/a-brief-history-of-neural-nets-and-deep-learning-part-4</id>
+  <published>2015-12-24T18:19:34-08:00</published>
+  <updated>2015-12-24T18:19:34-08:00</updated>
+  <author>
+    <name></name>
+    <uri></uri>
+    <email>andreyvkurenkov@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;This is the fourth part in ‘A Brief History of Neural Nets and Deep Learning’. Parts 1-3 &lt;a href=&quot;www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning&quot;&gt;here&lt;/a&gt;, &lt;a href=&quot;www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning-part-2&quot;&gt;here&lt;/a&gt;, and &lt;a href=&quot;www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning-part-3&quot;&gt;here&lt;/a&gt;. In this part, we will get to the end of our story and see how Deep Learning emerged from the slump neural nets found themselves in by the late 90s, and the amazing state of the art results it has achieved since.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Ask anyone in machine learning what kept neural network research alive and they will probably mention one or all of these three names: Geoffrey Hinton, fellow Canadian Yoshua Bengio and Yann LeCun, of Facebook and New York University.”&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;the-deep-learning-conspiracy&quot;&gt;The Deep Learning Conspiracy&lt;/h1&gt;
+
+&lt;p&gt;When you want a revolution, start with a conspiracy. With the ascent of Support Vector Machines and the failure of backpropagation, the early 2000s were a dark time for neural net research. LeCun and Hinton variously mention how in this period their papers or the papers of their students were routinely rejected from publication due to their subject being Neural Nets. Still, they persevered. And they found a strong ally outside the research realm: The Canadian government. Funding from the Canadian Institute for Advanced Research (CIFAR), which encourages basic research without direct application, first encouraged Hinton to move to Canada in 1987, and funded his work until the mid 90s. … Rather than relenting and switching his focus, Hinton fought to continue work on neural nets, and managed to secure more funding from CIFAR as told well in &lt;a href=&quot;http://www.thestar.com/news/world/2015/04/17/how-a-toronto-professors-research-revolutionized-artificial-intelligence.html&quot;&gt;this exemplary piece&lt;/a&gt;&lt;sup id=&quot;fnref:1:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“But in 2004, Hinton asked to lead a new program on neural computation. The mainstream machine learning community could not have been less interested in neural nets.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“It was the worst possible time,” says Bengio, a professor at the Université de Montréal and co-director of the CIFAR program since it was renewed last year. “Everyone else was doing something different. Somehow, Geoff convinced them.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“We should give (CIFAR) a lot of credit for making that gamble.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;CIFAR “had a huge impact in forming a community around deep learning,” adds LeCun, the CIFAR program’s other co-director. “We were outcast a little bit in the broader machine learning community: we couldn’t get our papers published. This gave us a place where we could exchange ideas.””&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The funding was modest, but sufficient to enable a small group of researchers to keep working on the topic. And with this group, Hinton hatched a conspiracy: “rebrand” the frowned-upon filed of neural nets with the moniker “Deep Learning”. Then, what every researcher must dream of actually happened: Hinton, Simon Osindero, and Yee-Whye Teh published a paper in 2006 that was seen as a breakthrough, a breakthrough significant enough to rekindle interest in neural nets: &lt;a href=&quot;https://www.cs.toronto.edu/~hinton/absps/fastnc.pdf&quot;&gt;&lt;strong&gt;A fast learning algorithm for deep belief nets&lt;/strong&gt;&lt;/a&gt;&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. Though, as we’ll see, the ideas involved were all quite old, the movement that is ‘Deep Learning’ can very persuasively be said to have started precisely with this paper. But, more important than the name was the idea - that neural networks with many layers really could be trained well, if the weights are initialized in a clever way rather than randomly. Hinton &lt;a href=&quot;https://youtu.be/vShMxxqtDDs?t=6m59s&quot;&gt;once expressed&lt;/a&gt; the need for such an advance at the time:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Historically, this was very important in overcoming the belief that these deep neural networks were no good and could never be trained. And that was a very strong belief. A friend of mine sent a paper to ICML [International Conference on Machine Learning], not that long ago, and the referee said it should not accepted by ICML, because it was about neural networks and it was not appropriate for ICML. In fact if you look at ICML last year, there were no papers with ‘neural’ in the title accepted, so ICML should not accept papers about neural networks. That was only a few years ago. And one of the IEEE journals actually had an official policy of [not accepting your papers]. So, it was a strong belief.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/34953?token=zHc69el3bU7qKD0PwPBDHVLSVQsc0nyufUrpCEm9164_1Alk9kBBHkl5ymeS-6xNRoN3bPMo-J1VV5llJxc5k3M&quot; alt=&quot;RBM&quot; /&gt; 
+    &lt;figcaption&gt;A Restricted Boltzmann Machine. &lt;a href=&quot;http://deeplearning.net/tutorial/rbm.html&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;p&gt;So what was the clever way of initializing weights? Well, the basic idea is to train each layer one by one with unsupervised training, which starts off the weights much better than just giving them random values, and then finishing with a round of supervised learning just as is normal for neural nets. Each layer starts out as a Restricted Boltzmann Machine (RBM), which is just a Boltzmann Machine without connections between hidden and visible units as illustrated above (really the same as in a Helmholtz machines), and is taught a generative model of data in an unsupervised fashion. It turns out that this form of Boltzmann machine can be trained in an efficient manner introduced by Hinton in the 2002 &lt;a href=&quot;http://www.cs.toronto.edu/~fritz/absps/tr00-004.pdf&quot;&gt;“Training Products of Experts by Minimizing Contrastive Divergence”&lt;/a&gt;&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;. Basically, this algorithm maximizes something other than the probability of the units generating the training data, which allows for a nice approximation and turns out to still work well. So, using this method, the algorithm is as such:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Train an RBM on the training data using contrastive-divergence. This is the first layer of the belief net.&lt;/li&gt;
+  &lt;li&gt;Generate the hidden values of the trained RBM for the data, and train another RBM using model those hidden values. This is the second layer - ‘stack’ it on top of the first and keep weights in just one direction to form a belief net.&lt;/li&gt;
+  &lt;li&gt;Keep doing step 2 for as many layers as are desired for the belief net.&lt;/li&gt;
+  &lt;li&gt;If classification is desired, add a small set of hidden units that correspond to the classification labels and do a variation on the wake-sleep algorithm to ‘fine-tune’ the weights. Such combinations of unsupervised and supervised learning are often called &lt;strong&gt;semi-supervised&lt;/strong&gt; learning.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/34836?token=eme-iIQe7-0La4-L2TE4ho9Fmj3Hlx4z8dP0khGimjihi31RDYtsPPjHTB5TpCYPlH-I8xFqce5jrbln-lMwokE&quot; alt=&quot;From http://www.iro.umontreal.ca/~lisa/twiki/bin/view.cgi/Public/DeepVsShallowComparisonICML2007&quot; /&gt; 
+    &lt;figcaption&gt;The layerwise pre-training that Hinton introduced. &lt;a href=&quot;http://deeplearning.net/tutorial/rbm.html&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;p&gt;The paper concluded by showing that deep belief networks (DBNs) had state of the art performance on the standard MNIST character recognition dataset, significantly outperforming normal neural nets with only a few layers. Yoshua Bengio et al. followed up on this work in 2007 with &lt;a href=&quot;http://papers.nips.cc/paper/3048-greedy-layer-wise-training-of-deep-networks.pdf&quot;&gt;“Greedy Layer-Wise Training of Deep Networks”&lt;/a&gt;&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;, in which they present a strong argument that deep machine learning methods (that is, methods with many processing steps, or equivalently with hierarchical feature representations of the data) are more efficient for difficult problems than shallow methods (which two-layer ANNs or support vector machines are examples of).&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/34966?token=ylFbLB-4cILErX48_1I24s32Oz1uTA-Kr0HzMcF4MKvfhfTS-IG4ybsb8PGouGYxE5uZvVRoHjG_3W2AHs6xMWI&quot; alt=&quot;Autoencoder pre-supverised traning&quot; /&gt; 
+    &lt;figcaption&gt;Another view of unsupervised pre-training, using autoencoders instead of RBMs. &lt;a href=&quot;https://commons.wikimedia.org/wiki/File:Stacked_Autoencoders.png?uselang=ru&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;p&gt;They also present reasons for why the addition of unsupervised pre-training works, and conclude that this not only initializes the weights in a more optimal way, but perhaps more importantly leads to more useful learned representations of the data that enable the algorithm to end up with a more generalized model. In fact, using RBMs is not that important - unsupervised pre-training of normal neural net layers using backpropagation with plain Autoencoders layers proved to also work well. Likewise, at the same time another approach called Sparse Coding also showed that unsupervised feature learning was a powerful approach for improving supervised learning performance.&lt;/p&gt;
+
+&lt;p&gt;So, the key really was having many layers of representation so that good high-level representation of data could be learned - in complete disagreement with the traditional approach of hand-designing some nice feature extraction steps and only then doing machine learning with the extracted features. Hinton and Bengio’s work had empirically demonstrated that fact, but more importantly, showed the premise that deep neural nets could not be trained well to be false. This, LeCun had already demonstrated with CNNs throughout the 90s, yet the research community largely refused to accept. Bengio, in collaboration with Yann LeCun, reiterated this on &lt;a href=&quot;http://yann.lecun.com/exdb/publis/pdf/bengio-lecun-07.pdf&quot;&gt;“Scaling Algorithms Towards AI”&lt;/a&gt;&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Until recently, many believed that training deep architectures was too difficult an optimization problem. However, at least two different approaches have worked well in training such architectures: simple gradient descent applied to convolutional networks [LeCun et al., 1989, LeCun et al., 1998] (for signals and images), and more recently, layer-by-layer unsupervised learning followed by gradient descent [Hinton et al., 2006, Bengio et al., 2007, Ranzato et al., 2006]. Research on deep architectures is in its infancy, and better learning algorithms for deep architectures remain to be discovered. Taking a larger perspective on the objective of discovering learning principles that can lead to AI has been a guiding perspective of this work. We hope to have helped inspire others to seek a solution to the problem of scaling machine learning towards AI.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;And inspire they did. Or at least, they started; though deep learning had not yet gained the tsumani momentum that it has today, the wave had unmistakably begun. Still, the results at that point were not that impressive - most of the demonstrated performance in the papers up to this point was for the MNIST dataset, a classic machine learning task that had been the standard benchmark for algorithms for about a decade. Hinton’s 2006 publication demonstrated a very impressive error rate of only 1.25% on the test set, but SVMs had already gotten an error rate of 1.4%, and even simple algorithms could get error rates in the low single digits. And, as was pointed out in the paper, Yann LeCun already demonstrated error rates of 0.95% in 1998 using CNNs.&lt;/p&gt;
+
+&lt;p&gt;So, doing well on MNIST was not necessarily that big a deal. Aware of this and confident that it was time for Deep Learning to take the stage, Hinton and two of his graduate students, Abdel-rahman Mohamed and George Dahl, demonstrated their effectiveness at a far more challenging AI task: &lt;a href=&quot;http://www.cs.toronto.edu/~gdahl/papers/dbnPhoneRec.pdf&quot;&gt;Speech Recognition&lt;/a&gt;&lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;. Using DBNs, the two students and Hinton managed to improve on a decade-old performance record on a standard speech recognition dataset. This was an impressive achievement, but in retrospect seems like only a hint at what was coming - in short, many more broken records.&lt;/p&gt;
+
+&lt;h1 id=&quot;the-importance-of-brute-force&quot;&gt;The Importance of Brute Force&lt;/h1&gt;
+
+&lt;p&gt;The algorithmic advances described above were undoubtedly important to the emergence of deep learning, but there was another essential component that had emerged in the decade since the 1990s: pure computational speed. Following Moore’s law, computers got dozens of times faster since the slow days of the 90s, making learning with large datasets and many layers much more tractable. But even this was not enough - CPUs were starting to hit a ceiling in terms of speed growth, and computer power was starting to increase mainly through  weakly parallel computations by using several CPUs. To learn the millions of weights typical in deep models, the limitations of weak CPU parallelism had to be left behind and replaced with the massively parallel computing powers of GPUs. Realizing this is, in part, how Abdel-rahman Mohamed, George Dahl, and Geoff Hinton accomplished their record breaking speech recognition performance&lt;sup id=&quot;fnref:7&quot;&gt;&lt;a href=&quot;#fn:7&quot; class=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Inspired by one of Hinton’s lectures on deep neural networks, Mohamed began applying them to speech - but deep neural networks required too much computing power for conventional computers – so Hinton and Mohamed enlisted Dahl. A student in Hinton’s lab, Dahl had discovered how to train and simulate neural networks efficiently using the same high-end graphics cards which make vivid computer games feasible on personal computers.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;They applied the same method to the problem of recognizing fragments of phonemes in very short windows of speech,” said Hinton. “They got significantly better results than previous methods on a standard three-hour benchmark.””&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It’s hard to say just how much faster using GPUs over CPUs was in this case, but the paper &lt;a href=&quot;http://www.machinelearning.org/archive/icml2009/papers/218.pdf&quot;&gt;“Large-scale Deep Unsupervised Learning using Graphics Processors”&lt;/a&gt;&lt;sup id=&quot;fnref:8&quot;&gt;&lt;a href=&quot;#fn:8&quot; class=&quot;footnote&quot;&gt;8&lt;/a&gt;&lt;/sup&gt; of the same year suggests a number: 70 times faster. Yes, 70 times - reducing weeks of work into days, even a single day. The authors, who had previously developed Sparse Coding, included the prolific Machine Learning researcher Andrew Ng, who increasingly realized that making use of a lots of training data and of fast computation had been greatly undervalued by researchers in favor of incremental changes in learning algorithms. This idea was strongly supported by 2010’s &lt;a href=&quot;http://arxiv.org/pdf/1003.0358.pdf&quot;&gt;“Deep Big Simple Neural Nets Excel on Handwritten Digit Recognition”&lt;/a&gt;&lt;sup id=&quot;fnref:9&quot;&gt;&lt;a href=&quot;#fn:9&quot; class=&quot;footnote&quot;&gt;9&lt;/a&gt;&lt;/sup&gt; (notably co-written by J. Schmidhuber, one of the inventors of the recurrent LTSM networks), which showed a whopping %0.35 error rate could be achieved on the MNIST dataset without anything more special than really big neural nets, a lot of variations on the input, and efficient GPU implementations of backpropagation. These ideas had existed for decades, so although it could not be said that algorithmic advancements did not matter, this result did strongly support the notion that the brute force approach of big training sets and fast palatalized computations were also crucial.&lt;/p&gt;
+
+&lt;p&gt;Dahl and Mohamed’s use of a GPU to improve get record breaking results was an early and relatively modest success, but it was sufficient to incite excitement and for the two to be invited to intern at Microsoft Research&lt;sup id=&quot;fnref:1:2&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. Here, the two would have the benefit from another trend in computing that had emerged by then: Big Data. That loosest of terms, which in the context of machine learning is easy to understand - lots of training data. And lots of training data is important, because without it neural nets still did not do great - they tended to overfit (perfectly work on the training data, but not generalize to new test data). This makes sense - the complexity of what large neural nets can compute is such that a lot of data is needed to avoid them learning every little unimportant aspect of the training set - but was a major challenge for researchers in the past. So now, the computing and data gathering powers of large companies proved invaluable. The two students handily proved the power of deep learning during their three month internship, and Microsoft Research has been at the forefront of deep learning speech recognition ever since.&lt;/p&gt;
+
+&lt;p&gt;Microsoft was not the only BigCompany to recognize the power of deep learning (though it was handily the first). Navdeep Jaitly, another student of Hinton’s, went off to a summer internship at Google in 2011. There, he worked on Google’s speech recognition, and showed their existing setup could be much improved by incorporating deep learning. The revised approach soon powered Android’s speech recognition, replacing much of Google’s carefully crafted prior solution &lt;sup id=&quot;fnref:1:3&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;Besides the impressive effects of humble PhD interns on these gigantic companies’ products, what is notable here is that both companies were making use of the same ideas - ideas that were out in the open for anyone to work with. And in fact, the work by Microsoft and Google, as well as IBM and Hinton’s lab, resulted in the impressively titled &lt;a href=&quot;http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/38131.pdf&quot;&gt;“Deep Neural Networks for Acoustic Modeling in Speech Recognition: The Shared Views of Four Research Groups”&lt;/a&gt;&lt;sup id=&quot;fnref:10&quot;&gt;&lt;a href=&quot;#fn:10&quot; class=&quot;footnote&quot;&gt;10&lt;/a&gt;&lt;/sup&gt; in 2012. Four research groups - three from companies that could certainly benefit from a briefcase full of patents on the emerging wonder technology of deep learning, and the university research group that popularized that technology - working together and publishing their results to the broader research community. If there was ever an ideal scenario for industry adopting an idea from research, this seems like it.&lt;/p&gt;
+
+&lt;p&gt;Not to say the companies were doing this for charity. This was the beginning of all of them exploring how to commercialize the technology, and most of all Google. But it was perhaps not Hinton, but Andrew Ng who incited the company to become likely the world’s biggest commercial adopter and proponent of the technology. In 2011, Ng incidentally met with the legendary Googler Jeff Dean while visiting the company, and chatted about his efforts to train neural nets with Google’s fantastic computational resources. This intrigued Dean, and together with Ng they formed Google Brain - an effort to build truly giant neural nets and explore what they could do&lt;sup id=&quot;fnref:10:1&quot;&gt;&lt;a href=&quot;#fn:10&quot; class=&quot;footnote&quot;&gt;10&lt;/a&gt;&lt;/sup&gt;. The work resulted in unsupervised neural net learning of an unprecedented scale - 16,000 CPU cores powering the learning of a whopping 1 billion weights (for comparison, Hinton’s breakthrough 2006 DBN had about 1 million weights). The neural net was trained on Youtube videos, entirely without labels, and learned to recognize the most common objects in those videos - leading of course to the internet’s collective glee over the net’s discovery of cats:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/34978?token=5YYsfXB4l7NfgnQSV-PHB3ctZ5NVQU0oc5W8MnG1LIDiO6wBW_f9C_hUixutvqV7N4fRH_P0W3ALuOdZbIGf_L4&quot; alt=&quot;cat&quot; /&gt; 
+    &lt;figcaption&gt;Google's famous neural-net learned cat. This is the optimal input to one of the neurons. &lt;a href=&quot;https://googleblog.blogspot.com/2012/06/using-large-scale-brain-simulations-for.html&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;p&gt;Cute as that was, it was also useful. As they reported in a regularly published paper, the features learned by the model could be used for record setting performance on a standard computer vision benchmark&lt;sup id=&quot;fnref:11&quot;&gt;&lt;a href=&quot;#fn:11&quot; class=&quot;footnote&quot;&gt;11&lt;/a&gt;&lt;/sup&gt;. With that, Google’s internal tools for training massive neural nets were born, and they have only continued to evolve since. The wave of Deep Learning research that began in 2006 had now undeniably made it into industry.&lt;/p&gt;
+
+&lt;h1 id=&quot;the-ascendance-of-deep-learning&quot;&gt;The Ascendance of Deep Learning&lt;/h1&gt;
+
+&lt;p&gt;While deep learning was making it into industry, the research community was hardly keeping still. The discovery that efficient use of GPUs and computing power in general was so important made people examine long-held assumptions and ask questions that should have perhaps been asked long ago - namely, why exactly does backpropagation not work well? The insight to ask why the old approaches did not work, rather than why the new approaches did, led Xavier Glort and Yoshua Bengio to write &lt;a href=&quot;http://jmlr.org/proceedings/papers/v9/glorot10a/glorot10a.pdf&quot;&gt;“Understanding the difficulty of training deep feedforward neural networks”&lt;/a&gt; in 2010&lt;sup id=&quot;fnref:12&quot;&gt;&lt;a href=&quot;#fn:12&quot; class=&quot;footnote&quot;&gt;12&lt;/a&gt;&lt;/sup&gt;. In it, they discussed two incredibly meaningful findings:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The particular non-linear activation function chosen for neurons in a neural net makes a big impact on performance, and the one often used by default is not a good choice.&lt;/li&gt;
+  &lt;li&gt;It was not so much choosing random weights that was problematic, as choosing random weights without consideration for which layer the weights are for. The old vanishing gradient problem happens, basically, because backpropagation involves a sequence of multiplications that invariably result in smaller derivatives for earlier layers. That is, unless weights are chosen with difference scales according to the layer they are in - making this simple change results in significant&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/34990?token=EsjkMeAXQXbIbaniAeVd0nqCOnwpl2PLo2SLnmkePeWbCSSBB0CG1lTOu_JDP2aDIqCWbB_rfGPuUm_A7MXj2wg&quot; alt=&quot;ReLU&quot; /&gt; 
+    &lt;figcaption&gt;Different activation functions. The ReLU is the **rectified linear unit**. &lt;a href=&quot;https://imiloainf.wordpress.com/2013/11/06/rectifier-nonlinearities/&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;p&gt;The second point is quite clear as to the conclusion, but the first opens the question: ‘what, then, is the best activation function’? Three different groups explored the question (a group with LeCun, with &lt;a href=&quot;http://yann.lecun.com/exdb/publis/pdf/jarrett-iccv-09.pdf&quot;&gt;“What is the best multi-stage architecture for object recognition?”&lt;/a&gt;&lt;sup id=&quot;fnref:13&quot;&gt;&lt;a href=&quot;#fn:13&quot; class=&quot;footnote&quot;&gt;13&lt;/a&gt;&lt;/sup&gt;, a group with Hinton, in &lt;a href=&quot;http://www.cs.toronto.edu/~fritz/absps/reluICML.pdf&quot;&gt;“Rectified linear units improve restricted boltzmann machines”&lt;/a&gt;&lt;sup id=&quot;fnref:14&quot;&gt;&lt;a href=&quot;#fn:14&quot; class=&quot;footnote&quot;&gt;14&lt;/a&gt;&lt;/sup&gt;, and a group with Bengio -&lt;a href=&quot;https://www.utc.fr/~bordesan/dokuwiki/_media/en/glorot10nipsworkshop.pdf&quot;&gt;“Deep Sparse Rectifier Neural Networks”&lt;/a&gt;&lt;sup id=&quot;fnref:15&quot;&gt;&lt;a href=&quot;#fn:15&quot; class=&quot;footnote&quot;&gt;15&lt;/a&gt;&lt;/sup&gt;), and they all found the same surprising answer: the very much non-differentiable and very simple function f(x)=max(0,x) tends to be the best. Surprising, because the function is kind of weird - it is not strictly differentiable, or rather is not differentiable precisely at zero, so on paper as far as math goes it looks pretty ugly. But, clearly the zero case is a pretty small mathemtical quibble - a bigger question is why such a simple functions, with constant derivatives on either side of 0, is so good. The answer is not precisely known, but a few ideas seem pretty well established:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Rectified activation leads to &lt;strong&gt;sparse&lt;/strong&gt; representations, meaning not that many neurons actually end up needing to output non-zero values for any given input. In the years leading up to this point sparsity was shown to be beneficial for deep learning, both because it represents information in a more robust manner and because it leads to significant computational efficiency (if most of your neurons are outputting zero, you can in effect ignore most of them and compute things much faster). Incidentally, researchers in computational neuroscience first introduced the importance of sparse computation in the context of the brain’s visual system, a decade before it was explored in the context of machine learning.&lt;/li&gt;
+  &lt;li&gt;The simplicity of the function, and its derivatives, makes it much faster to work with than the exponential sigmoid or the trigonometric tanh. As with the use of GPUs, this turns out to not just be a small boost but really important for being able to scale neural nets to the point where they perform well on challenging problems.&lt;/li&gt;
+  &lt;li&gt;A later analysis titled &lt;a href=&quot;http://ai.stanford.edu/~amaas/papers/relu_hybrid_icml2013_final.pdf&quot;&gt;“Rectifier Nonlinearities Improve Neural Network Acoustic Models”&lt;/a&gt;&lt;sup id=&quot;fnref:16&quot;&gt;&lt;a href=&quot;#fn:16&quot; class=&quot;footnote&quot;&gt;16&lt;/a&gt;&lt;/sup&gt;, co-written by Andrew Ng, also showed the constant 0 or 1 derivative of the ReLU not to detrimental to learning. In fact, it helps avoid the vanishing gradient problem that was the bane of backpropagation. Furthermore, beside producing more sparse representations, and it also produces more distributed representations - meaning is derived from the combination of multiple values of different neurons, rather than being localized to individual neurons.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;At this point, with all these discoveries since 2006, it had become clear that unsupervised pre-traning is not essential to deep learning. It was helpful, no doubt, but it was also shown that in some cases well done purely supervised training  (with the correct starting weight scales and activation function) could outperform training that included the unsupervised step. So, why indeed, did purely supervised learning with backpropagation not work well in the past? Geoffrey Hinton &lt;a href=&quot;https://youtu.be/IcOMKXAw5VA?t=21m29s&quot;&gt;summarized the finding up to today in these four points&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Our labeled datasets were thousands of times too small.&lt;/li&gt;
+  &lt;li&gt;Our computers were millions of times too slow.&lt;/li&gt;
+  &lt;li&gt;We initialized the weights in a stupid way.&lt;/li&gt;
+  &lt;li&gt;We used the wrong type of non-linearity.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;So here we are. Deep learning. The culmination of decades of research, all leading to this:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Deep Learning =  Lots of training data + Parallel Computation + Scalable, smart algorithms&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/34968?token=mNMoQEOZRbbIXdXVDFZry4exMhFX-S9L8PH5MM1ADWxHdSgOcgwn-zp89AaoIoAT3_BqeE4V2XiXD7haXwqklP8&quot; alt=&quot;Equation&quot; /&gt; 
+    &lt;figcaption&gt;I wish I was first to come up with this delightful equation, but it seems others came up with it before me. &lt;a href=&quot;http://www.computervisionblog.com/2015/05/deep-learning-vs-big-data-who-owns-what.html&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;p&gt;Not to say that all that there was to figure out was figured out by this point. Far from it. What had been figured out is exactly the opposite: that people’s intuition was often wrong, and in particular unquestioned decisions and assumptions were often very unfounded. Asking simple questions, trying simple things - these had the power to greatly improve state of the art techniques. And precisely that has been happening, with many more ideas and approaches being explored and shared in deep learning since. An example: &lt;a href=&quot;http://arxiv.org/pdf/1207.0580.pdf&quot;&gt;“Improving neural networks by preventing co-adaptation of feature detectors”&lt;/a&gt;&lt;sup id=&quot;fnref:17&quot;&gt;&lt;a href=&quot;#fn:17&quot; class=&quot;footnote&quot;&gt;17&lt;/a&gt;&lt;/sup&gt; by G. E. Hinton et al. The idea is very simple: to prevent overfitting, randomly pretend some neurons are not there while training. Although incredibly simple, this idea - called &lt;strong&gt;Dropout&lt;/strong&gt; - is a very efficient means of implementing the hugely powerful approach of ensemble learning, which just means learning in many different ways from the training data. Random Forests, a dominating technique in machine learning to this day, is chiefly effective due to this ensemble learning. Training many different neural nets is possible but is far too computationally expensive, yet this very simple idea in essence achieves the same thing and indeed significantly improves performance.&lt;/p&gt;
+
+&lt;p&gt;Still, having all these research discoveries since 2006 is not what made the computer vision or other research communities again respect neural nets. What did do it was something somewhat less noble: completely destroying non-deep learning methods on a modern competitive benchmark. Geoffrey Hinton enlisted two of his Dropout co-writers, Alex Krizhevsky and Ilya Sutskever, to apply the ideas discovered to create an entry to the ILSVRC-2012 computer vision competition. To me, it is very striking to now understand that their work, described in &lt;a href=&quot;&quot;&gt;“ImageNet Classification with deep convolutional neural networks”&lt;/a&gt;&lt;sup id=&quot;fnref:18&quot;&gt;&lt;a href=&quot;#fn:18&quot; class=&quot;footnote&quot;&gt;18&lt;/a&gt;&lt;/sup&gt;, is the combination of very old concepts (a CNN with pooling and convolution layers, variations on the input data) with several new key insight (very efficient GPU implementation, ReLU neurons, dropout), and that this, precisely this, is what modern deep learning is. So, how did they do? Far, far better than the next closest entry: their error rate was %15.3, whereas the second closest was %26.2. This, the first and only CNN entry in that competition, was an undisputed sign that CNNs, and deep learning in general, had to be taken seriously for computer vision. Now, almost all entries to the competition are CNNs - a neural net model Yann LeCun was working with since 1989. And, remember LTSM recurrent neural nets, devised in the 90s by by Sepp Hochreiter and Jürgen Schmidhuber to solve the backpropagation problem? Those, too, are now state of the art for sequential tasks such as speech processing.&lt;/p&gt;
+
+&lt;p&gt;This was the turning point. A mounting wave of excitement about possible progress has culminated in undeniable achievements, that far surpassed what other known techniques could manage. The tsunami metaphor that we started with in part 1, this is where it began, and it has been growing and intensifying to this day. Deep learning is here, and no winter is in sight.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/34991?token=qzrUAAJqtenu9pNK9CtttT7LRBHwKlOr7udYaUSBRoKNhJjnTJJhUYBGmkUcZVqVvm_D3UwK23d-yTj1ni-clhU&quot; alt=&quot;From Google Scholar&quot; /&gt; 
+    &lt;figcaption&gt;The citation counts for some of the key people we have seen develop deep learning. I believe I don't need to point out the exponential trends since 2012. From Google Scholar. &lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;h1 id=&quot;epilogue-state-of-the-art&quot;&gt;Epilogue: state of the art&lt;/h1&gt;
+
+&lt;p&gt;If this were a movie, the 2012 ImageNet competition would likely have been the climax, and now we would have a progression of text describing ‘where are they now’. Yann Lecun - Facebook. Geoffrey Hinton - Google. Andrew Ng - Coursera, Google, Baidu. Bengio, actually still in academia - but with many more grad students (though not the millions the others are presumably making) &lt;sup id=&quot;fnref:19&quot;&gt;&lt;a href=&quot;#fn:19&quot; class=&quot;footnote&quot;&gt;19&lt;/a&gt;&lt;/sup&gt;.  Though the ideas and achievements of deep learning are definitely exciting, while writing this I was inevitably also moved that these people, who worked in this field for decades and even as most abandoned it, are now rich, successful, and most of all better situated to do research than ever. All these peoples’ ideas are still very much out in the open, and in fact basically all these companies are open sourcing their deep learning frameworks, like some sort of utopian vision of industry-led research. What a story.&lt;/p&gt;
+
+&lt;p&gt;I was foolish enough to hope I could fit a summary of the most impressive results of the past several years in this part, but at this point it is clear I will not have the space to do so. Perhaps one day there will be a part five of this that can finish out the tale by describing these things, but for now let me provide a brief list:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The resurgence of LTSM RNNs + representing ‘ideas’ with &lt;a href=&quot;http://machinelearning.wustl.edu/mlpapers/paper_files/BengioDVJ03.pdf&quot;&gt;distributed representations&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/34992?token=BfZWKt2mBMH5H3j82QmADSH7i1sKJemavojs6daR5fbgqsxTIpTXn47ji7ChiCqCrkp8jJS7nPpRZhRKlNh9L2E&quot; alt=&quot;From Google, taken at https://gigaom.com/2014/11/18/google-stanford-build-hybrid-neural-networks-that-can-explain-photos/&quot; /&gt; 
+    &lt;figcaption&gt;A result from last year. Just look at that! &lt;a href=&quot;https://gigaom.com/2014/11/18/google-stanford-build-hybrid-neural-networks-that-can-explain-photos/&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blogs.microsoft.com/blog/2014/05/27/microsoft-demos-breakthrough-in-real-time-translated-conversations/&quot;&gt;Skype real time translation&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Using deep learning for reinforcement learning (again, but better)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure&gt;
+&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/V1eYniJ0Rnk&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blogs.microsoft.com/blog/2014/05/27/microsoft-demos-breakthrough-in-real-time-translated-conversations/&quot;&gt;Chess playing!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Adding external memory writable and readable to by the neural net&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/U_Wgc1JOsBk&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/figure&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Kate Allen. How a Toronto professor’s research revolutionized artificial intelligence Science and Technology reporter, Apr 17 2015 http://www.thestar.com/news/world/2015/04/17/how-a-toronto-professors-research-revolutionized-artificial-intelligence.html &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:1:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; &lt;a href=&quot;#fnref:1:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; &lt;a href=&quot;#fnref:1:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;Hinton, G. E., Osindero, S., &amp;amp; Teh, Y. W. (2006). A fast learning algorithm for deep belief nets. Neural computation, 18(7), 1527-1554. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;Hinton, G. E. (2002). Training products of experts by minimizing contrastive divergence. Neural computation, 14(8), 1771-1800. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot;&gt;
+      &lt;p&gt;Bengio, Y., Lamblin, P., Popovici, D., &amp;amp; Larochelle, H. (2007). Greedy layer-wise training of deep networks. Advances in neural information processing systems, 19, 153. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5&quot;&gt;
+      &lt;p&gt;Bengio, Y., &amp;amp; LeCun, Y. (2007). Scaling learning algorithms towards AI. Large-scale kernel machines, 34(5). &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:6&quot;&gt;
+      &lt;p&gt;Mohamed, A. R., Sainath, T. N., Dahl, G., Ramabhadran, B., Hinton, G. E., &amp;amp; Picheny, M. (2011, May). Deep belief networks using discriminative features for phone recognition. In Acoustics, Speech and Signal Processing (ICASSP), 2011 IEEE International Conference on (pp. 5060-5063). IEEE. &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:7&quot;&gt;
+      &lt;p&gt;November 26, 2012. Leading breakthroughs in speech recognition software at Microsoft, Google, IBM  Source: http://news.utoronto.ca/leading-breakthroughs-speech-recognition-software-microsoft-google-ibm &lt;a href=&quot;#fnref:7&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:8&quot;&gt;
+      &lt;p&gt;Raina, R., Madhavan, A., &amp;amp; Ng, A. Y. (2009, June). Large-scale deep unsupervised learning using graphics processors. In Proceedings of the 26th annual international conference on machine learning (pp. 873-880). ACM. &lt;a href=&quot;#fnref:8&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:9&quot;&gt;
+      &lt;p&gt;Claudiu Ciresan, D., Meier, U., Gambardella, L. M., &amp;amp; Schmidhuber, J. (2010). Deep big simple neural nets excel on handwritten digit recognition. arXiv preprint arXiv:1003.0358. &lt;a href=&quot;#fnref:9&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:10&quot;&gt;
+      &lt;p&gt;https://medium.com/backchannel/google-search-will-be-your-next-brain-5207c26e4523#.b3x9b7ods &lt;a href=&quot;#fnref:10&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:10:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:11&quot;&gt;
+      &lt;p&gt;Le, Q. V. (2013, May). Building high-level features using large scale unsupervised learning. In Acoustics, Speech and Signal Processing (ICASSP), 2013 IEEE International Conference on (pp. 8595-8598). IEEE. &lt;a href=&quot;#fnref:11&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:12&quot;&gt;
+      &lt;p&gt;Glorot, X., &amp;amp; Bengio, Y. (2010). Understanding the difficulty of training deep feedforward neural networks. In International conference on artificial intelligence and statistics (pp. 249-256). &lt;a href=&quot;#fnref:12&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:13&quot;&gt;
+      &lt;p&gt;Jarrett, K., Kavukcuoglu, K., Ranzato, M. A., &amp;amp; LeCun, Y. (2009, September). What is the best multi-stage architecture for object recognition?. In Computer Vision, 2009 IEEE 12th International Conference on (pp. 2146-2153). IEEE. &lt;a href=&quot;#fnref:13&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:14&quot;&gt;
+      &lt;p&gt;Nair, V., &amp;amp; Hinton, G. E. (2010). Rectified linear units improve restricted boltzmann machines. In Proceedings of the 27th International Conference on Machine Learning (ICML-10) (pp. 807-814). &lt;a href=&quot;#fnref:14&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:15&quot;&gt;
+      &lt;p&gt;Glorot, X., Bordes, A., &amp;amp; Bengio, Y. (2011). Deep sparse rectifier neural networks. In International Conference on Artificial Intelligence and Statistics (pp. 315-323). &lt;a href=&quot;#fnref:15&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:16&quot;&gt;
+      &lt;p&gt;Maas, A. L., Hannun, A. Y., &amp;amp; Ng, A. Y. (2013, June). Rectifier nonlinearities improve neural network acoustic models. In Proc. ICML (Vol. 30). &lt;a href=&quot;#fnref:16&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:17&quot;&gt;
+      &lt;p&gt;Hinton, G. E., Srivastava, N., Krizhevsky, A., Sutskever, I., &amp;amp; Salakhutdinov, R. R. (2012). Improving neural networks by preventing co-adaptation of feature detectors. arXiv preprint arXiv:1207.0580. &lt;a href=&quot;#fnref:17&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:18&quot;&gt;
+      &lt;p&gt;Krizhevsky, A., Sutskever, I., &amp;amp; Hinton, G. E. (2012). Imagenet classification with deep convolutional neural networks. In Advances in neural information processing systems (pp. 1097-1105). &lt;a href=&quot;#fnref:18&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:19&quot;&gt;
+      &lt;p&gt;http://www.technologyreview.com/news/524026/is-google-cornering-the-market-on-deep-learning/ &lt;a href=&quot;#fnref:19&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/writing/a-brief-history-of-neural-nets-and-deep-learning-part-4/&quot;&gt;A 'Brief' History of Neural Nets and Deep Learning, Part 4&lt;/a&gt; was originally published by Andrey Kurenkov at &lt;a href=&quot;&quot;&gt;Andrey Kurenkov's Web World&lt;/a&gt; on December 24, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[A 'Brief' History of Neural Nets and Deep Learning, Part 3]]></title>
+  <link rel="alternate" type="text/html" href="/writing/a-brief-history-of-neural-nets-and-deep-learning-part-3/" />
+  <id>/writing/a-brief-history-of-neural-nets-and-deep-learning-part-3</id>
+  <published>2015-12-24T17:19:34-08:00</published>
+  <updated>2015-12-24T17:19:34-08:00</updated>
+  <author>
+    <name></name>
+    <uri></uri>
+    <email>andreyvkurenkov@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;This is the third part of ‘A Brief History of Neural Nets and Deep Learning’. Parts 1 and 2 are &lt;a href=&quot;www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning-part-2&quot;&gt;here&lt;/a&gt;, and part 4 is &lt;a href=&quot;www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning-part-4&quot;&gt;here&lt;/a&gt;. In this part, we will continue to see the swift pace of research in the 90s, and see why neural nets ultimately lost favor much as they did in the late 60s.&lt;/p&gt;
+
+&lt;h1 id=&quot;neural-nets-make-decisions&quot;&gt;Neural Nets Make Decisions&lt;/h1&gt;
+
+&lt;p&gt;Having discovered the application of neural nets to unsupervised learning, let us also quickly see how they were used in the third branch of machine learning: &lt;strong&gt;reinforcement learning&lt;/strong&gt;. This one requires the most mathy notation to explain formally, but also has a goal that is very easy to describe informally: learn to make good decisions. Given some theoretical agent (a little software program, for instance), the idea is to make that agent able to decide on an &lt;strong&gt;action&lt;/strong&gt; based on its current &lt;strong&gt;state&lt;/strong&gt;, with the reception of some &lt;strong&gt;reward&lt;/strong&gt; for each action and the intent of getting the maximum &lt;strong&gt;utility&lt;/strong&gt; in the long term. So, whereas supervised learning tells the learning algorithm exactly what it should learn to output, reinforcement learning provides ‘rewards’ as a by-product of making good decisions over time, and does not directly tell the algorithm the correct decisions to choose.  From the outset it was a very abstracted decision making model - there was a finite number of states, and a known set of actions with known rewards for each state. This made it easy to write very elegant equations for finding the optimal set of actions, but hard to apply to real problems -  problems with continuous states or hard to define reward.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/34985?token=8S98i7brY2iTusq7B68-OHsvSS-ND9Kc5F_-XnppdoNFt6hyAbhhxRZ5W4ipFEaF-N4XX9yjAMyDdKx0QKL4--Q&quot; alt=&quot;RL&quot; /&gt; 
+    &lt;figcaption&gt;Reinforcement learning. &lt;a href=&quot;http://www2.hawaii.edu/~chenx/ics699rl/grid/rl.html&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;p&gt;This is where neural nets come in. Machine learning in general, and neural nets in particular, are good at dealing with messy continuous data or dealing with hard to define functions by learning them from examples. Although classification is the bread and butter of neural nets, they are general enough to be useful for many types of problems - the descendants of Bernard Widrow’s and Ted Hoff’s Adaline were used for adaptive filters in the context of electrical circuits, for instance. And so, following the resurgence of research caused by backpropagation people soon devised ways of leveraging the power of neural nets to perform reinforcement learning. One of the early examples of this was solving a simple yet classic problem: the balancing of a stick on a moving platform, known to students in control classes everywhere as the inverted pendulum problem &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/34982?token=k1WhSbXvaWX6oxEe7C_ChtP_n-ypQHY9JsSZc1Q8gwFlTKGjUaW0wuou46Um2KbDryXEKXnZqcThjIJX2MyDXmY&quot; alt=&quot;pendulum &quot; /&gt; 
+    &lt;figcaption&gt;The double pendulum control problem - a step up from the single pendulum version, which is a classic control and reinforcement learning task. &lt;a href=&quot;hhttp://www.pdx.edu/biomedical-signal-processing-lab/inverted-double-pendulum&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;p&gt;As with adaptive filtering, this research was strongly relevant to the field of Electrical Engineering, where the control theory had been a major subfield for many decades prior to neural nets’ arrival. Though the field had devised ways to deal with many problems through direct analysis, having a means to deal with more complex situations through learning proved useful - as evidenced by the hefty 7000 (!) citations of the 1990 “Identification and control of dynamical systems using neural networks”&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. Perhaps predictably, there was another field separate from Machine Learning where neural nets were useful - robotics. And, perhaps predictably, a major research initiative in the field was having robots learn to solve various problems rather than being manually programmed to do so, as exemplified by the 1993 PhD thesis &lt;a href=&quot;http://www.dtic.mil/dtic/tr/fulltext/u2/a261434.pdf&quot;&gt;“Reinforcement learning for robots using neural networks”&lt;/a&gt;&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;. The thesis showed that robots could be taught behaviors such as wall following and door passing in reasonable amounts of time, which was a good thing considering the prior inverted pendulum work requires impractical lengths of training.&lt;/p&gt;
+
+&lt;p&gt;These disparate applications in other fields are certainly cool, but of course the most research on reinforcement learning and neural nets was happening within AI and Machine Learning. And here, one of the most significant results in the history of reinforcement learning was achieved: a neural net that learned to be a world class backgammon player.  Dubbed &lt;a href=&quot;http://courses.cs.washington.edu/courses/cse590hk/01sp/Readings/tesauro95cacm.pdf&quot;&gt;TD-Gammon&lt;/a&gt;, , the neural net was trained using a standard reinforcement learning algorithm and was one of the first demonstrations of reinforcement learning being able to outperform humans on relatively complicated tasks &lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;. And it was specifically a reinforcement learning approach that worked here, as the same research showed&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/34983?token=iTl1pbpNKoeqgLWOC7YNBJYTYokPCrYeH8WhMh6Pn7a2Ie9y3zigQjMDiD55r_ZQLzmxgaf_NxWmls9cNMkAw50&quot; alt=&quot;TDGammon&quot; /&gt; 
+    &lt;figcaption&gt;The neural net that learned to play expert-level Backgammon. &lt;a href=&quot;https://webdocs.cs.ualberta.ca/~sutton/book/ebook/node108.html&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;p&gt;But, as we have seen happen before and will see happen again in AI, research hit a dead end. The predictable next problem to tackle using the TD-Gammon approach was investigated by Sebastian Thrun in the 1995 &lt;a href=&quot;http://www-preview.ri.cmu.edu/pub_files/pub1/thrun_sebastian_1995_8/thrun_sebastian_1995_8.pdf&quot;&gt;“Learning To Play the Game of Chess”&lt;/a&gt;, and the results were not good &lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;. Though the neural net learned decent play, certainly better than a complete novice at the game, it was still far worse than a standard computer program (GNU-Chess) implemented long before. The same was true for the other perennial challenge of AI, Go &lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;. See, TD-Gammon sort of cheated - it learned to evaluate positions quite well, and so could get away with not doing any ‘search’ over multiple future moves and instead just picking what the one that led to the best next position. But the same is simply not possible in chess or Go, games which are a challenge to AI precisely because of needing to look many moves ahead and having so many possible move combinations. Besides, even if the algorithm was smarter, the hardware of the time just was not up to the task - Thrun reported that “NeuroChess does a poor job, because it spends most of its time computing board evaluations. Computing a large neural network function takes two orders of magnitude longer than evaluating an optimized linear evaluation function (like that of GNU-Chess).” The weakness of computers of the time relative to the needs of the neural nets was a very real issue, and as we shall see not the only one…&lt;/p&gt;
+
+&lt;h1 id=&quot;neural-nets-get-loopy&quot;&gt;Neural Nets Get Loopy&lt;/h1&gt;
+
+&lt;p&gt;As neat as unsupervised and reinforcement learning are, I think supervised learning is still my favorite use case for neural nets. Sure, learning probabilistic models of data is cool, but it’s simply much easier to get excited for the sorts of concrete problems solved by backpropagation. We already saw how Yann Lecun achieved quite good recognition of handwritten text (a technology which went on to be nationally deployed for check-reading, and much more a while later…), but there was another obvious and greatly important task being worked on at the same time: understanding human speech.&lt;/p&gt;
+
+&lt;p&gt;As with writing, understanding human speech is quite difficult due to the practically infinite variation in how the same word can be spoken. But, here there is an extra challenge: long sequences of input. See, for images it’s fairly simple to crop out a single letter from an image and have a neural net tell you what letter that is, input-&amp;gt;output style. But with audio it’s not so simple - separating out speech into characters is completely impractical, and even  finding individual words within speech is less simple. Plus, if you think about human speech, generally hearing words in context makes them easier to understand than being separated. While this structure works quite well for processing things such as images one at a time, input-&amp;gt;output style, it is not at all well suited to long streams of information such as audio or text. The neural net has no ‘memory’ with which an input can affect another input processed afterward, but this is precisely how we humans process audio or text - a string of word or sound inputs, rather than a single large input. Point being: to tackle the problem of understanding speech, researchers sought to modify neural nets to process input as a stream of input as in speech rather than one batch as with an image.&lt;/p&gt;
+
+&lt;p&gt;One approach to this, by Alexander Waibel et. al  (including Hinton), was introduced in the 1989 &lt;a href=&quot;http://www.cs.toronto.edu/~fritz/absps/waibelTDNN.pdf&quot;&gt;“Phoneme recognition using &lt;strong&gt;time-delay neural networks&lt;/strong&gt;”&lt;/a&gt;&lt;sup id=&quot;fnref:7&quot;&gt;&lt;a href=&quot;#fn:7&quot; class=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;. These time-delay neural networks (TDNN) were very similar to normal neural networks, except each neuron processed only a subset of the input and had several sets of weights for different delays of the input data. In other words, for a sequence of audio input, a ‘moving window’ of the audio is input into the network and as the window moves the same bits of audio are processed by each neuron with different sets of weights based on where in the window the bit of audio is. This is best understood with a quick illustration:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/34902?token=I-gRSza-SJchfi0jbeWtZxR7YaGXvDHCdJ7YyQx6h_hFxJotY8-jgChVwcwbP9hGCl-YKm36PUgvsCtS9pDhDZI&quot; alt=&quot;TDNN&quot; /&gt; 
+    &lt;figcaption&gt;Time delay neural networks. &lt;a href=&quot;https://electroviees.wordpress.com/tag/chacha/&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;p&gt;In a sense, this is quite similar to what CNNs do - instead of looking at the whole input at once, each unit looks at just a subset of the input at a time and does the same computation for each small subset. The main difference here is that there is no idea of time in a CNN, and the ‘window’ of input for each neuron is always moved across the whole input image to compute a result, whereas in a TDNN there actually is sequential input and output of data. Fun fact: &lt;a href=&quot;https://youtu.be/vShMxxqtDDs?t=26m4s&quot;&gt;according to Hinton&lt;/a&gt;, the idea of TDNNs is what inspired LeCun to develop convolutional neural nets. But, funnily enough CNNs became essential for image processing, whereas in speech recognition TDNNs have been surpassed to another approach - &lt;strong&gt;recurrent neural nets&lt;/strong&gt; (RNNs). See, all the networks that have been discussed so far have been &lt;strong&gt;feedforward&lt;/strong&gt; networks, meaning that the output of neurons in a given layer acts as input to only neuron in a next layer. But, it does not have to be so - there is nothing prohibiting us brave computer scientists from connecting output of the last layer act as an input to the first layer, or just connecting the output of a neuron to itself. By having the output of the network ‘loop’ back into the network, the problem of giving the network memory as to past inputs is solved so elegantly!&lt;/p&gt;
+
+&lt;div&gt;&lt;button class=&quot;btn&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#rnnvs&quot;&gt;
+Aside: more on RNNs vs TDNNs &amp;raquo;
+&lt;/button&gt;&lt;/div&gt;
+&lt;blockquote class=&quot;aside&quot;&gt;&lt;p id=&quot;rnnvs&quot; class=&quot;boltzmann&quot; style=&quot;height: 0px;&quot;&gt;
+Again, those seeking greater insight into the distinctions between different neural nets would do well to just go back to the actual papers. Here is a nice summation of why RNNs are cooler than TDNNs for sequential data:
+&quot;A recurrent network has cycles in its graph that allow it to store
+information about past inputs for an amount of time that is not fixed a priori but rather depends on its weights and on the input data. The type of recurrent networks considered here can be used either for sequence recognition production or prediction units are not clamped and we are not interested in convergence to a fixed point. Instead the recurrent network
+is used to transform an input sequence eg speech spectra into an output sequence eg degrees of evidence for phonemes. The main advantage of such recurrent networks is that the relevant past context can be represented in the activity of the hidden units and then used to produce to compute the output at each time step. In theory the network can learn how
+to extract the relevant context information from the input sequence In contrast in network with time delays such as TDNNs the designer of the network must decide a priori by the choice of delay connections which part of the past input sequence should be used to predict the next output. According to the terminology introduced in the memory is static in the case of TDNNs but it is adaptive in the case of recurrent networks.&quot;
+&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/34568?token=osHGQ5vZmlKI8wvUQDodyNnTzHvIIucFK6U0Z1ynSkEKrMZy1FEdoBrizZ7fujKpEWiYaC1-1fm8lMLh7GKKVuc&quot; alt=&quot;RNN&quot; /&gt; 
+    &lt;figcaption&gt;Diagram of a Recurrent Neural Net. Recall Boltzmann Machines from before? Surprise! Those were recurrent neural nets. &lt;a href=&quot;http://www.wolframalpha.com/docs/timeline/computable-knowledge-history-6.html&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;p&gt;Well, it’s not quite so simple. Notice the problem - if backpropagation relies on ‘propagating’ the error from the output layer backward, how do things work if the first layer connects back to the output layer? The error would go ahead and propagate from the first layer back to the output layer, and could just keep looping through the network, infinitely. The solution, independently derived by multiple groups, is &lt;strong&gt;backpropagation through time&lt;/strong&gt;. Basically, the idea is to ‘unroll’ the recurrent neural network by treating each loop through the neural network as an input to another neural network, and looping only a limited number of times.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/35004?token=GxHCevxXTmakxvF9U8WazhEAPyVJK-uWNzaDfqra756dhTkvCVM2ElBUQNhmf6pL7U4_9boMOFGQ58mZRmm_jCo&quot; alt=&quot;The wonders of public domain images from Wikipedia!&quot; /&gt; 
+    &lt;figcaption&gt;The wonderfully intuitive backpropagation through time concept. &lt;a href=&quot;https://upload.wikimedia.org/wikipedia/en/e/ee/Unfold_through_time.png&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;p&gt;This fairly simple idea actually worked - it was possible to train recurrent neural nets. And indeed, multiple people explored the application of RNNs to speech recognition. But, here is a twist you should now be able to predict: this approach did not work very well. To find out why, let’s meet another modern giant of Deep Learning: Yoshua Bengio. Starting work on speech recognition with neural nets around 1986, he co-wrote many papers on using ANNs and RNNs for speech recognition, and ended up working at the AT&amp;amp;T Bell Labs on the problem just as Yann LeCun was working with CNNs there. In fact, in 1995 they co-wrote the summary paper &lt;a href=&quot;http://yann.lecun.com/exdb/publis/pdf/lecun-bengio-95a.pdf&quot;&gt;“Convolutional Networks for Images, Speech, and Time-Series”&lt;/a&gt;&lt;sup id=&quot;fnref:8&quot;&gt;&lt;a href=&quot;#fn:8&quot; class=&quot;footnote&quot;&gt;8&lt;/a&gt;&lt;/sup&gt;, the first of many collaborations among them. But, before then Bengio wrote the 1993 &lt;a href=&quot;http://www.iro.umontreal.ca/~lisa/publications2/index.php/attachments/single/161&quot;&gt;“A Connectionist Approach to Speech Recognition”&lt;/a&gt;&lt;sup id=&quot;fnref:9&quot;&gt;&lt;a href=&quot;#fn:9&quot; class=&quot;footnote&quot;&gt;9&lt;/a&gt;&lt;/sup&gt;.  Here, he summarized the general failure of effectively teaching RNNs:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Although recurrent networks can in many instances outperform static networks, they appear more difficult to train optimally. Our experiments tended to indicate that their parameters settle in a suboptimal solution which takes into account short term dependencies but not long term dependencies. For example in experiments described in we found that simple duration constraints on phonemes had not at all been captured by the recurrent network. 
+…
+Although this is a negative result, a better understanding of this problem could help in designing alternative systems for learning to map input sequences to output sequences with
+long term dependencies eg for learning finite state machines, grammars, and other language related tasks. Since gradient based methods appear inadequate for this kind of problem we want to consider alternative optimization methods that give acceptable results even when the criterion function is not smooth.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;a-new-winter-dawns&quot;&gt;A New Winter Dawns&lt;/h1&gt;
+
+&lt;p&gt;So, there was a problem. A big problem. And the problem, basically, was what so recently was a huge advance: backpropagation. See, convolutional neural nets were important in part because backpropagation just did not work well normal neural nets with many layers. And that’s the real key to deep-learning - having many layers, in today’s systems as many as 20 or more. But already by the late 1980’s, it was known that deep neural nets trained with backpropagation just did not work very well, and particularly did not work as well as nets with fewer layers. The reason, in basic terms, is that backpropagation relies on finding the error at the output layer and successively splitting up blame for it for prior layers. Well, with many layers this calculus-based splitting of blame ends up with either huge or tiny numbers and the resulting neural net just does not work very well - the ‘vanishing or exploding gradient problem’. Jurgen Schmidhuber, another Deep Learning luminary, summarizes the more formal explanation well&lt;sup id=&quot;fnref:10&quot;&gt;&lt;a href=&quot;#fn:10&quot; class=&quot;footnote&quot;&gt;10&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“A diploma thesis (Hochreiter, 1991) represented a milestone of explicit DL research. As mentioned in Sec. 5.6, by the late 1980s, experiments had indicated that traditional deep feedforward or recurrent networks are hard to train by backpropagation (BP) (Sec. 5.5). Hochreiter’s work formally identified a major reason: Typical deep NNs suffer from the now famous problem of vanishing or exploding gradients. With standard activation functions (Sec. 1), cumulative backpropagated error signals (Sec. 5.5.1) either shrink rapidly, or grow out of bounds. In fact, they decay exponentially in the number of layers or CAP depth (Sec. 3), or they explode. “&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Backpropagation through time is essentially equivalent to a neural net with a whole lot of layers, so RNNs were particularly difficult to train with Backpropagation. Both Bengio and Schmidhuber published papers on the inability of learning long-term information due to limitations of backpropagation &lt;sup id=&quot;fnref:10:1&quot;&gt;&lt;a href=&quot;#fn:10&quot; class=&quot;footnote&quot;&gt;10&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&quot;fnref:11&quot;&gt;&lt;a href=&quot;#fn:11&quot; class=&quot;footnote&quot;&gt;11&lt;/a&gt;&lt;/sup&gt;. The analysis of the problem did reveal a solution - Schmidhuber and Hochreiter introduced a very important concept in 1997 that essentially solved the problem of how to train recurrent neural nets, much as CNNs did for feedforward neural nets - &lt;a href=&quot;http://deeplearning.cs.cmu.edu/pdfs/Hochreiter97_lstm.pdf&quot;&gt;&lt;strong&gt;Long Short Term Memory&lt;/strong&gt;&lt;/a&gt; (LTSM)&lt;sup id=&quot;fnref:12&quot;&gt;&lt;a href=&quot;#fn:12&quot; class=&quot;footnote&quot;&gt;12&lt;/a&gt;&lt;/sup&gt;. In simple terms, as with CNNs the LTSM breakthrough ended up being a small alteration to the normal neural net model &lt;sup id=&quot;fnref:10:2&quot;&gt;&lt;a href=&quot;#fn:10&quot; class=&quot;footnote&quot;&gt;10&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“The basic LSTM idea is very simple. Some of the units are called Constant Error Carousels
+(CECs). Each CEC uses as an activation function f, the identity function, and has a connection to itself with ﬁxed weight of 1.0. Due to f’s constant derivative of 1.0, errors backpropagated through a CEC cannot vanish or explode (Sec. 5.9) but stay as they are (unless they “ﬂow out” of the CEC to other, typically adaptive parts of the NN). CECs are connected to several nonlinear adaptive units (some with multiplicative activation functions) needed for learning nonlinear behavior. Weight changes of these units often proﬁt from error signals propagated far back in time through CECs. CECs are the main reason why LSTM nets can learn to discover the importance of (and memorize) events that happened thousands of discrete time steps ago, while previous RNNs already failed in case of minimal time lags of 10 steps.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;But, this did little to fix the larger perception problem that neural nets were janky and did not work very well. They were seen as a hassle to work with - the computers were not fast enough, the algorithms were not smart enough, and people were not happy. So, around the mid 90s, a new AI Winter for neural nets began to emerge - the community once again lost faith in them. A new method called Support Vector Machines, which in the very simplest terms could be described as a mathematically optimal way of training an equivalent to a two layer neural net, was developed and started to be seen as superior to the difficult to work with neural nets. In fact, the 1995 &lt;a href=&quot;http://yann.lecun.com/exdb/publis/pdf/lecun-95b.pdf&quot;&gt;“Comparison of Learning Algorithms For Handwritten Digit Recognition”&lt;/a&gt;&lt;sup id=&quot;fnref:13&quot;&gt;&lt;a href=&quot;#fn:13&quot; class=&quot;footnote&quot;&gt;13&lt;/a&gt;&lt;/sup&gt; by Lecun et al. found that this new approach worked better or the same as all but the best designed neural nets:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“The [support vector machine] classifier has excellent accuracy, which is most remarkable, because unlike the other high performance classifiers, it does not include &lt;em&gt;a priori&lt;/em&gt; knowledge about the problem. In fact, this classifier would do just as well if the image pixels were permuted with a fixed mapping. It is still much slower and memory hungry than the convolutional nets. However, improvements are expected as the technique is relatively new.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Other new methods, notably Random Forests, also proved to be very effective and with lovely mathematical theory behind them. So, despite the fact that CNNs consistently had state of the art performance, enthusiasm for neural nets dissipated and the machine learning community at large once again disavowed them. Winter was back. In &lt;a href=&quot;www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning-part-4&quot;&gt;part 4&lt;/a&gt;, we shall see how a small group of researchers persevered in this research climate and ultimately&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Anderson, C. W. (1989). Learning to control an inverted pendulum using neural networks. Control Systems Magazine, IEEE, 9(3), 31-37. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;Narendra, K. S., &amp;amp; Parthasarathy, K. (1990). Identification and control of dynamical systems using neural networks. Neural Networks, IEEE Transactions on, 1(1), 4-27. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;Lin, L. J. (1993). Reinforcement learning for robots using neural networks (No. CMU-CS-93-103). Carnegie-Mellon Univ Pittsburgh PA School of Computer Science. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot;&gt;
+      &lt;p&gt;Tesauro, G. (1995). Temporal difference learning and TD-Gammon. Communications of the ACM, 38(3), 58-68. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5&quot;&gt;
+      &lt;p&gt;Thrun, S. (1995). Learning to play the game of chess. Advances in neural information processing systems, 7. &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:6&quot;&gt;
+      &lt;p&gt;Schraudolph, N. N., Dayan, P., &amp;amp; Sejnowski, T. J. (1994). Temporal difference learning of position evaluation in the game of Go. Advances in Neural Information Processing Systems, 817-817. &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:7&quot;&gt;
+      &lt;p&gt;Waibel, A., Hanazawa, T., Hinton, G., Shikano, K., &amp;amp; Lang, K. J. (1989). Phoneme recognition using time-delay neural networks. Acoustics, Speech and Signal Processing, IEEE Transactions on, 37(3), 328-339. &lt;a href=&quot;#fnref:7&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:8&quot;&gt;
+      &lt;p&gt;Yann LeCun and Yoshua Bengio. 1998. Convolutional networks for images, speech, and time series. In The handbook of brain theory and neural networks, Michael A. Arbib (E()d.). MIT Press, Cambridge, MA, USA 255-258. &lt;a href=&quot;#fnref:8&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:9&quot;&gt;
+      &lt;p&gt;Yoshua Bengio, A Connectionist Approach To Speech Recognition Int. J. Patt. Recogn. Artif. Intell., 07, 647 (1993). &lt;a href=&quot;#fnref:9&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:10&quot;&gt;
+      &lt;p&gt;J. Schmidhuber. “Deep Learning in Neural Networks: An Overview”. “Neural Networks”, “61”, “85-117”. http://arxiv.org/abs/1404.7828 &lt;a href=&quot;#fnref:10&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:10:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; &lt;a href=&quot;#fnref:10:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:11&quot;&gt;
+      &lt;p&gt;Bengio, Y.; Simard, P.; Frasconi, P., “Learning long-term dependencies with gradient descent is difficult,” in Neural Networks, IEEE Transactions on , vol.5, no.2, pp.157-166, Mar 1994 &lt;a href=&quot;#fnref:11&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:12&quot;&gt;
+      &lt;p&gt;Sepp Hochreiter and Jürgen Schmidhuber. 1997. Long Short-Term Memory. Neural Comput. 9, 8 (November 1997), 1735-1780. DOI=http://dx.doi.org/10.1162/neco.1997.9.8.1735. &lt;a href=&quot;#fnref:12&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:13&quot;&gt;
+      &lt;p&gt;Y. LeCun, L. D. Jackel, L. Bottou, A. Brunot, C. Cortes, J. S. Denker, H. Drucker, I. Guyon, U. A. Muller, E. Sackinger, P. Simard and V. Vapnik: Comparison of learning algorithms for handwritten digit recognition, in Fogelman, F. and Gallinari, P. (Eds), International Conference on Artificial Neural Networks, 53-60, EC2 &amp;amp; Cie, Paris, 1995 &lt;a href=&quot;#fnref:13&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/writing/a-brief-history-of-neural-nets-and-deep-learning-part-3/&quot;&gt;A 'Brief' History of Neural Nets and Deep Learning, Part 3&lt;/a&gt; was originally published by Andrey Kurenkov at &lt;a href=&quot;&quot;&gt;Andrey Kurenkov's Web World&lt;/a&gt; on December 24, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[A 'Brief' History of Neural Nets and Deep Learning, Part 2]]></title>
+  <link rel="alternate" type="text/html" href="/writing/a-brief-history-of-neural-nets-and-deep-learning-part-2/" />
+  <id>/writing/a-brief-history-of-neural-nets-and-deep-learning-part-2</id>
+  <published>2015-12-24T16:19:34-08:00</published>
+  <updated>2015-12-24T16:19:34-08:00</updated>
+  <author>
+    <name></name>
+    <uri></uri>
+    <email>andreyvkurenkov@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;This is the second part of ‘A Brief History of Neural Nets and Deep Learning’. Part 1 is &lt;a href=&quot;www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning&quot;&gt;here&lt;/a&gt;, and Parts 3 and 4 are &lt;a href=&quot;www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning-part-3&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning-part-4&quot;&gt;here&lt;/a&gt;. In this part, we will look into several strains of research that made rapid progress following the development of backpropagation and until the late 90s, which we shall see later are the essential foundations of Deep Learning.&lt;/p&gt;
+
+&lt;h1 id=&quot;neural-nets-gain-vision&quot;&gt;Neural Nets Gain Vision&lt;/h1&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;http://yann.lecun.com/exdb/lenet/gifs/asamples.gif&quot; alt=&quot;LeNet&quot; /&gt; 
+    &lt;figcaption&gt;Yann LeCun's LeNet demonstrated.&lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;p&gt;With the secret to training multilayer neural nets uncovered, the topic was once again ember-hot and the lofty ambitions of Rosenblatt seemed to perhaps be in reach. It took only until 1989 for another key finding now universally cited in textbooks and lectures to be &lt;a href=&quot;http://www.sciencedirect.com/science/article/pii/0893608089900208&quot;&gt;published&lt;/a&gt;&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;: “Multilayer feedforward networks are universal approximators”. Essentially, it mathematically proved that multiple layers allow neural nets to theoretically implement any function, and certainly XOR.&lt;/p&gt;
+
+&lt;p&gt;But, this is mathematics, where you could imagine having endless memory and computation power should it be needed - did backpropagation allow neural nets to be used for anything in the real world? Oh yes. Also in 1989, Yann LeCunn et al. at the AT&amp;amp;T Bell Labs demonstrated a very significant real-world application of backpropagation in &lt;a href=&quot;http://yann.lecun.com/exdb/publis/pdf/lecun-89e.pdf&quot;&gt;&quot;”Backpropagation Applied to Handwritten Zip Code Recognition”&lt;/a&gt; &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. You may think it fairly unimpressive for a computer to be able to correctly understand handwritten digits, and nowdays it is indeed quite quaint, but prior to the publication the messy and inconsistent scrawls of us humans proved a major challenge to the much more tidy minds of computers. The publication, working with a large dataset from the US Postal Service, showed neural nets were entirely capable of this task. And much more importantly, it was first to highlight the practical need for a key modifications of neural nets beyond plain backpropagation toward modern deep learning:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Classical work in visual pattern recognition has demonstrated the advantage of extracting local features and combining them to form higher order features. Such knowledge can be easily built into the network by forcing the hidden units to combine only local sources of information. Distinctive features of an object can appear at various location on the input image. Therefore it seems judicious to have a set of feature detectors that can detect a particular instance of a feature anywhere on the input place. Since the &lt;em&gt;precise&lt;/em&gt; location of a feature is not relevant to the classification, we can afford to lose some position information in the process. Nevertheless, &lt;em&gt;approximate&lt;/em&gt; position information must be preserved, to allow the next levels to detect higher order, more complex features (Fukushima 1980; Mozer 1987).”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/35003?token=pRZiRNO5tZB3uHSXV0bjIdzsP2tAUr9jpXUUChNI20Dwk0Y9JOMcGwtmmlgHGVzgJRGhXsr998Ogpxbl3K1Vn_8&quot; alt=&quot;CNN&quot; /&gt; 
+    &lt;figcaption&gt;A visualization of how this neural net works. &lt;a href=&quot;http://image.slidesharecdn.com/bp2slides-090922011749-phpapp02/95/the-back-propagation-learning-algorithm-10-728.jpg?cb=1253582278&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;p&gt;Or, more concretely: the first hidden layer of the neural net was &lt;strong&gt;convolutional&lt;/strong&gt; - instead of having each neuron have a different weight for each pixel of the input image (40x60=2400 weights), the neurons only had a small set of weights (5x5=25) that were applied a whole bunch of small subsets of the image of the same size. So, for instance instead of having 4 different neurons learn to detect 45 degree lines in each of the 4 corners of the input image, a single neuron could learn to detect 45 degree lines on subsets of the image and do that everywhere within it. Layers past the first work in a similar way, but take in the ‘local’ features locations found in the previous hidden layer rather than pixel images, and so ‘see’ successively larger portions of the image since they are combining information about increasingly larger subsets of the image. Finally, the last two layers are just plain normal neural net layers that use the higher-order larger features generated by the convolutional layers to determine which digit the input image corresponds to. The method proposed in this 1989 paper went on to be the basis of nationally deployed check-reading systems, as demonstrated by LeCun in this gem of a video:&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/FwFduRA_L6Q&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The reason for why this is helpful is intuitively if not mathematically clear: without such constraints the network would have to learn the same simple things (such as detecting 45 degree lines, small circles, etc) a whole bunch of times for each portion of the image. But with the constraint there, only one neuron would need to learn each simple feature - and with far fewer weights overall, it could do so much faster! Moreover, since the pixel-exact location of such features does not matter it could basically skip neighboring subsets of the image - &lt;strong&gt;subsampling&lt;/strong&gt;, now known as a type of &lt;strong&gt;pooling&lt;/strong&gt; - when applying the weights, further reducing the training time. The addition of these two types of layers - convolutional and pooling layers - are the primary distinctions of &lt;strong&gt;Convolutional Neural Nets&lt;/strong&gt; (&lt;strong&gt;CNNs/ConvNets&lt;/strong&gt;) from plain old neural nets.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/34967?token=cmXwbZkJ53nKUhEFA3zCrtdFDF1cVgfhGFBv1lD8Z7TPCqZpKRwR0Ht-vE-894hZyaWbYxUX8wak0QjMXvNq8P4&quot; alt=&quot;CNN 2&quot; /&gt; 
+    &lt;figcaption&gt;A nice visualization of CNN operation &lt;a href=&quot;https://sites.google.com/site/5kk73gpu2013/assignment/cnn&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;p&gt;At that time, the convolution idea was called ‘weight sharing’, and it was actually discussed in the 1986 extended analysis of backpropagation by Rumelhart, Hinton, and Williams&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;. Remarkably, Minsky and Papert’s 1969 analysis of Perceptrons was thorough enough to pose a problem that motivated this idea. But, as before, others have also independently explored the concept - namely, Kunihiko Fukushima in 1980 with his notion of the &lt;a href=&quot;http://www.cs.princeton.edu/courses/archive/spr08/cos598B/Readings/Fukushima1980.pdf&quot;&gt;Neurocognitron&lt;/a&gt;&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;. And, as before, the ideas behind it drew inspiration from studies of the brain:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“According to the hierarchy model by Hubel and Wiesel, the neural network in the visual cortex has a hierarchy structure: LGB (lateral geniculate body)-&amp;gt;simple cells-&amp;gt;complex cells-&amp;gt;lower order hypercomplex cells-&amp;gt;higher order hypercomplex cells. It is also suggested that the neural network between lower order hypercomplex cells and higher order hypercomplex cells has a structure similar to the network between simple cells and complex cells. In this hierarchy, a cell in a higher stage generally has a tendency to respond selectively to a more complicated feature of the stimulus pattern, and, at the same time, has a larger receptive field, and is more insensitive to the shift in position of the stimulus pattern. 
+… Hence, a structure similar to the hierarchy model is introduced in our model.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;LeCun continued to be a major proponent of CNNs at Bell Labs, and his work on them resulted in major commercial use for check-reading in the mid 90s - his talks and interviews often include &lt;a href=&quot;http://www.kdnuggets.com/2014/02/exclusive-yann-lecun-deep-learning-facebook-ai-lab.html&quot;&gt;the fact that&lt;/a&gt; “At some point in the late 1990s, one of these systems was reading 10 to 20% of all the checks in the US.”&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;neural-nets-go-unsupervised&quot;&gt;Neural Nets Go Unsupervised&lt;/h1&gt;
+
+&lt;p&gt;Automating the rote and utterly uninteresting task of reading checks is a great instance of what Machine Learning can be used for. Perhaps a less predictable application? Compression. Meaning, of course, finding a smaller representation of some data from which the original data can be reconstructed. Learned compression may very well outperform stock compression schemes, in the case the learning algorithm can find features within the data stock methods would miss. And it is very easy to do - just train a neural net with a small hidden layer to just output the input:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/34875?token=N8kgwOTY2SLYiUmyWgp6q_SUr2lq1VZRCsqjuEcUzhSyxukW8SaukGh2U-PdFABd3WIkZlgtOr9pbVX_kGGUfnM&quot; alt=&quot;Autoencode&quot; /&gt; 
+    &lt;figcaption&gt;An autoencoder neural net. &lt;a href=&quot;http://research.chtsai.org/papers/iml-bkp.html&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;p&gt;This is an &lt;strong&gt;autoencoder&lt;/strong&gt; neural net, and is a method for learning compression - efficiently translating (encoding) data to a compact format and back to itself (auto). See, the output layer computes its outputs using only the hidden layer’s outputs, and that output is the same as the input. Since the hidden layer has fewer outputs than does the input layer, the output of the hidden layer is the compressed representation of the input data, which can be reconstructed with the output layer.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/34939?token=mIbhFk3rVIyx-Byzt6TXV1hGzMH7_w5sjy5OzeYM0qex33WDiI1PhspANLICVpp53PZyysX8yR9YahhXtBVkV6M&quot; alt=&quot;RBM&quot; /&gt; 
+    &lt;figcaption&gt;A more explicit view of an autoencoder compression. &lt;a href=&quot;http://stats.stackexchange.com/questions/114385/what-is-the-difference-between-convolutional-neural-networks-restricted-boltzma&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;p&gt;Notice a neat thing here: the only thing we need for training is some input data. This is in contrast to the requirement of supervised machine learning, which needs a training set of input-output pairs (&lt;strong&gt;labeled data&lt;/strong&gt;) in order to approximate a function that generalizes can compute such outputs from such inputs. And indeed, autoencoders are not a form of supervised learning; they are a form of &lt;strong&gt;unsupervised learning&lt;/strong&gt;, which only needs a set of input data (&lt;strong&gt;unlabeled data&lt;/strong&gt;) in order to find some hidden structure within that data. In other words, unsupervised learning does not approximate a function so much as it derives one from the input data to another useful representation of that data. In this case, this representation is just a smaller one from which the original data can still be reconstructed, but it can also be used for finding groups of similar data (&lt;strong&gt;clustering&lt;/strong&gt;) or other inference of &lt;strong&gt;latent variables&lt;/strong&gt; (some aspect that is known to exist for the data but the value of which is not known).&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/34886?token=iEm6_7c5iGDJPTSNZ-amHkQyb3_f4G3657WBTHcyJJL87dQx8xTMxiJES68Mj0YhbbLx5YWkkaOR4QDkJHiG3-0&quot; alt=&quot;Clustering, from good ol' public domain wikipedia&quot; /&gt; 
+    &lt;figcaption&gt;Clustering, a very common unsupervised learning application. &lt;a href=&quot;https://en.wikipedia.org/wiki/K-means_clustering&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;p&gt;There were other unsupervised applications of neural networks explored prior to and after the discovery of backpropagation, most notably Self Organizing Maps &lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;, which produce a low-dimensional representation of data good for visualization, and Adapative Resonance Theory&lt;sup id=&quot;fnref:7&quot;&gt;&lt;a href=&quot;#fn:7&quot; class=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;, which can learn to classify arbitrary input data without being told correct classifications. If you think about it, it is intuitive that quite a lot can be learned from unlabeled data. Say you have a dataset of a bunch of images of handwritten digits, without labels of which digit each image corresponds to. Well, an image with some digit in that dataset most likely looks most like all the other images with that same digit, and so though a computer may not know which digit all those images correspond to, it should still be able to find that they all correspond to the same one. This, &lt;strong&gt;pattern recognition&lt;/strong&gt;, is really what most of machine learning is all about, and arguably also is the basis for the great powers of the human brain. But, let us not digress from our exciting deep learning journey, and get back to autoencoders.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/34887?token=rWIBfCstMS8Y3OsonIyWAOPNHnc9NZIGHs5JesWlo01UCpYKKcMbhJOCj-AvZuDS8VeENeNo35Z1BxQhkOexbHM&quot; alt=&quot;SOM&quot; /&gt; 
+    &lt;figcaption&gt;Self Organizing Maps - mapping a large vector of inputs into a grid of neuron outputs, where each output is a cluster. Nearby neurons represent similar clusters. &lt;a href=&quot;http://lcdm.astro.illinois.edu/static/code/mlz/MLZ-1.0/doc/html/somz.html&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;p&gt;As with weight-sharing, the idea of autoencoders was first discussed in the aforementioned extensive 1986 analysis of backpropagation &lt;sup id=&quot;fnref:3:1&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;, and as with weight-sharing it resurfaced in more research in the following years&lt;sup id=&quot;fnref:8&quot;&gt;&lt;a href=&quot;#fn:8&quot; class=&quot;footnote&quot;&gt;8&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&quot;fnref:9&quot;&gt;&lt;a href=&quot;#fn:9&quot; class=&quot;footnote&quot;&gt;9&lt;/a&gt;&lt;/sup&gt;, including by Hinton himself &lt;sup id=&quot;fnref:10&quot;&gt;&lt;a href=&quot;#fn:10&quot; class=&quot;footnote&quot;&gt;10&lt;/a&gt;&lt;/sup&gt;. This paper, with the fun title &lt;a href=&quot;http://www.cs.toronto.edu/~fritz/absps/cvq.pdf&quot;&gt;“Autoencoders, Minimum Description Length, and Helmholts Free Energy”&lt;/a&gt;, posits that “A natural approach to unsupervised learning is to use a model that defines probability distribution over observable vectors” and uses a neural net to learn such a model. So here’s another neat thing you can do with neural nets: approximate probability distributions.&lt;/p&gt;
+
+&lt;h1 id=&quot;neural-nets-gain-beliefs&quot;&gt;Neural Nets Gain Beliefs&lt;/h1&gt;
+
+&lt;p&gt;In fact, before being co-author of the seminal 1986 paper on backpropagation learning algorithm, Hinton worked on a neural-net approach for learning probability distributions in the 1985 &lt;a href=&quot;http://www.cs.toronto.edu/~fritz/absps/cogscibm.pdf&quot;&gt;“A Learning Algorithm for Boltzmann Machines”&lt;/a&gt; [ ^11]. Boltzmann Machines are networks just like neural nets and have units that are very similar to Perceptrons, but instead of computing an output based on inputs and weights, each unit in the network can compute a probability of it having a value of 1 or 0 given the values of connected units and weights. The units are therefore &lt;strong&gt;stochastic&lt;/strong&gt; - they behave according to a probability distribution, rather than in a known deterministic way. The Boltzmann part refers to a distribution from physics that is part of the definition of these networks - .&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/34928?token=uZt9tR3PMJ7XcI0pscNEF0hgpiGBmAWdxlT-mXi88-6jI1VKnv5eRXDeX2soiwQ2MJJuq1QeKvSOb1JiviyiZl8&quot; alt=&quot;Public domain from wikipedia&quot; /&gt; 
+    &lt;figcaption&gt;A simple belief, or bayesian, network - a Boltzmann machine is basically this but with undirected/symmetric connections and trainable weights to learn the probabilities in a particular fashion. &lt;a href=&quot;https://commons.wikimedia.org/wiki/File:SimpleBayesNet.svg&quot;&gt;(Source)&lt;/a&gt; 
+     &lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;p&gt;When such units are put together into a network, they form a graph, and so are a &lt;strong&gt;graphical model&lt;/strong&gt; of data. Essentially, they can do something very similar to normal neural nets: some &lt;strong&gt;hidden units&lt;/strong&gt; compute the probability of some &lt;strong&gt;hidden variables&lt;/strong&gt; (the outputs - classifications or features for data) given known values of &lt;strong&gt;visible units&lt;/strong&gt; that represent &lt;strong&gt;visible variables&lt;/strong&gt; (the inputs - pixels of images, characters in text, etc.). In the nice known example of classifying images of digits, the hidden variables are the actual digit values, and the visible variables are the pixels of the image; given an image of the digit ‘1’ as input, the value of visible units is known and the hidden unit modeling the probability of the image representing a ‘1’ should have a high output probability.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/34944?token=wt8jYAmcmFL7nUvwusO-SYCwcXyM0_jECFgyhTNKc5OI7gyImufruQFh98267EgUTNKXFRmZqqPP9ia4OdaOhrQ&quot; alt=&quot;BM&quot; /&gt; 
+    &lt;figcaption&gt;An example Boltzmann machine. Each line has an associated weight, as with a neural net. Notice there are no layers here - everything can sort of be connected to everything. We'll talk about this variation on neural net in a little bit... &lt;a href=&quot;https://en.wikipedia.org/wiki/File:Boltzmannexamplev1.png&quot;&gt;(Source)&lt;/a&gt;
+     &lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;p&gt;So, for the classification task, there is now a nice way of computing the probability of each category. This is very analogous to actually computing the output values of a normal classification neural net, but these nets have another neat trick: they can generate plausible looking input data. This follows from the probability equations involved - not only does the net learn the probabilities of values for the hidden variables given known values for the visible variables, but it also the inverse of that - visible probabilities given known hidden values. So, if we want to generate a ‘1’ digit image, the units corresponding to the pixel variables have known probabilities of outputting a 1 and an image can be probabilistically generated - these networks are &lt;strong&gt;generative graphical models&lt;/strong&gt;. Though it is possible to do supervised learning with very similar goals as normal neural nets, the unsupervised learning task of learning a good generative model - probabilistically learning the hidden structure of some data - is commonly what these nets are used for. Most of this was not really that novel, but the learning algorithm presented and the particular formulation that enabled it were, as stated in the paper itself:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Perhaps the most interesting aspect of the Boltzmann Machine formulation is that it leads to a domain-independent learning algorithm that modifies the connection strengths between units in such a way that the whole network develops an internal model which captures the underlying structure of its environment. There has been a long history of failure in the search for such algorithms (Newell, 1982), and many people (particularly in Artificial Intelligence)
+now believe that no such algorithms exist.”
+&amp;lt;/br&amp;gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;&lt;button class=&quot;btn&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#boltzmann&quot;&gt;
+Aside: more explanation of Boltzmann Machines &amp;raquo;
+&lt;/button&gt;&lt;/div&gt;
+&lt;blockquote class=&quot;aside&quot;&gt;&lt;p id=&quot;boltzmann&quot; class=&quot;aside&quot; style=&quot;height: 0px;&quot;&gt;
+Having learned the classical neural net models first, it took me a while to understand the notion behind these probabilistic nets. To elaborate, let me present a quote from the paper itself that restates all that I have said above quite well:
+&quot;The network modifies the strengths of its connections so as to construct an internal generative model that produces examples with the same probability distribution as the examples it is shown. Then, when shown any particular example, the network can “interpret” it by finding values of the variables in the internal model that would generate the example.&quot;
+...
+The machine is composed of primitive computing elements called units that are connected to each other by bidirectional links. A unit is always in one of two states, on or off, and it adopts these states as a probabilistic function of the states of its neighboring units and the weights on its links to them. The weights can take on real values of either sign. A unit being on or
+off is taken to mean that the system currently accepts or rejects some elemental hypothesis about the domain. The weight on a link represents a weak pairwise constraint between two hypotheses. A positive weight indicates that the two hypotheses tend to support one another; if one is currently accepted, accepting the other should be more likely. Conversely, a negative
+weight suggests, other things being equal, that the two hypotheses should not both be accepted. Link weights are symmetric, having the same strength in both directions (Hinton &amp;amp; Sejnowski, 1983).&quot;
+&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Without delving into the full details of the algorithm, here are some highlights: it is a variant on &lt;strong&gt;maximum-likelihood&lt;/strong&gt; algorithms, which simply means that it seeks to maximize the probability of the net’s visible unit values matching with their known correct values. Computing the actual most likely value for each unit turns all at the same time out to be much too computationally expensive, so in training &lt;strong&gt;Gibbs Sampling&lt;/strong&gt; - starting the net with random unit values and iteratively reassigning values to units given their connections’ values - is used to give some actual known values. When learning using a training set, the visible units are just set to have the value of the current training example, so sampling is done to get values for the hidden units. Once some ‘real’ values are sampled, we can do something similar to backpropagation - take a derivative for each weight to see how we can change so as to increase the probability of the net doing the right thing.&lt;/p&gt;
+
+&lt;p&gt;As with neural net, the algorithm can be done both in a supervised fashion (with known values for the hidden units) or in an unsupervised fashion. Though the algorithm was demonstrated to work (notably, with the same ‘encoding’ problem that autoencoder neural nets solve), it was soon apparent that it just did not work very well - Redford M. Neal’s 1992 &lt;a href=&quot;http://www.zabaras.com/Courses/BayesianComputing/Papers/1-s2.0-0004370292900656-main.pdf&quot;&gt;“Connectionist learning of belief networks”&lt;/a&gt;&lt;sup id=&quot;fnref:12&quot;&gt;&lt;a href=&quot;#fn:12&quot; class=&quot;footnote&quot;&gt;11&lt;/a&gt;&lt;/sup&gt; justified a need for a faster approach by stating that: “These capabilities would make the Boltzmann machine attractive in many applications, were it not that its learning procedure is generally seen as being painfully slow”. And so Neal introduced a similar idea in the &lt;strong&gt;belief net&lt;/strong&gt;, which is essentially like a Boltzmann machine with directed, forward connections (so that there are again layers, as with the the neural nets we have seen before, and unlike the Boltzmann machine image above). Without getting into mucky probability math, this change allowed the nets to be trained with a faster learning algorithm. We actually saw a ‘belief net’ just above with the sprinkler and rain variables, and the term was chosen precisely because this sort of probability-based modeling has a close relationship to idea from the mathematical field of probability, in addition to its link to the field of Machine Learning.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/34893?token=vvO-2350CpV8LNjOLn8Tmcd2EFeZYCmgNj1GsYxzisrm0tqe2AF_FfynWcppZQdQ9823HTw9E2i8SC7XposnH0w&quot; alt=&quot;belief nets&quot; /&gt; 
+    &lt;figcaption&gt;An explanation of belief nets. &lt;a href=&quot;http://www.slideserve.com/Leo/restricted-boltzmann-machines-and-deep-belief-networks&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;p&gt;Though this approach was an advance upon Boltzmann machines, it was still just too slow - the math for correctly deriving probabilistic relations between variables is such that a ton of computation is typically required without some simplifying tricks. And so Hinton, along with Neal and two other co-authors, soon came up with extra tricks in the 1995 &lt;a href=&quot;http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.82.804&amp;amp;rep=rep1&amp;amp;type=pdf&quot;&gt;“The &lt;strong&gt;wake-sleep algorithm&lt;/strong&gt; for unsupervised neural networks”&lt;/a&gt;&lt;sup id=&quot;fnref:13&quot;&gt;&lt;a href=&quot;#fn:13&quot; class=&quot;footnote&quot;&gt;12&lt;/a&gt;&lt;/sup&gt;. These tricks were such that they once again such that they called for a slightly different belief net setup, which was now deemed &lt;a href=&quot;http://www.gatsby.ucl.ac.uk/~dayan/papers/hm95.pdf&quot;&gt;“The Helmholtz Machine”&lt;/a&gt;&lt;sup id=&quot;fnref:14&quot;&gt;&lt;a href=&quot;#fn:14&quot; class=&quot;footnote&quot;&gt;13&lt;/a&gt;&lt;/sup&gt;. Skirting the details once again, the key idea was to have separate sets of weights for inferring hidden variables from visible variables (&lt;strong&gt;recognition weights&lt;/strong&gt;) and for vice versa (&lt;strong&gt;generative weights&lt;/strong&gt;), and to keep the directed aspect of Neal’s belief nets. This allows the training to be done much faster, while being applicable to the same unsupervised and supervised learning problems of Boltzmann Machines.&lt;/p&gt;
+
+&lt;div&gt;&lt;button class=&quot;btn&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#boltzmann&quot;&gt;
+Aside: the gross simplifying assumption of the wake-sleep algorithm &amp;raquo;
+&lt;/button&gt;&lt;/div&gt;
+&lt;blockquote class=&quot;aside&quot;&gt;&lt;p id=&quot;nonlinearwhy&quot; class=&quot;boltzmann&quot; style=&quot;height: 0px;&quot;&gt;
+When Hinton talks of the Wake Sleep algorithm, he often notes how gross the simplfying assumption being made is, and that despite that the algorithm just works. The paper itself explains the assumption well:
+&quot;The key simplifying assumption is that the recognition distribution for a particular example  d, Q is factorial (separable) in each layer. If there are h stochastic binary units in a layer B, the portion of the distribution P(B,d) due to that layer is determined by 2^(h - 1) probabilities. However, Q makes the assumption that the actual activity of any one unit in layer P is independent of the activities of all the other units in that layer, given the activities of all the units in the lower layer, l - 1, so the recognition model needs only specify h probabilities rather than 2&quot; - 1. The independence assumption allows F(d; 8.4) to be evaluated efficiently, but this computational tractability is bought at a price, since the true posterior is unlikely to be factorial ... 
+The generative model is taken to be factorial in the same way, although one should note that factorial generative models rarely have recognition distributions that are themselves exactly factorial.&quot;
+
+Note the Neal's belief nets also implicitly made the probabilities factorize by having layers of units with only forward-facing directed connections.
+&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Finally, belief nets could be trained somewhat fast! Though not quite as influential, this algorithmic advance was a significant enough forward step for unsupervised training of belief nets that it could be seen as a companion to the now almost decade-old breakthrough that was backpropagation. But, by this point new machine learning methods had begun to also emerge, and people were again beginning to be skeptical of neural nets since so much of their ideas seemed intuition-based and since computers were still barely able to meet their computational needs. As we’ll see in &lt;a href=&quot;www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning-part-3&quot;&gt;part 3&lt;/a&gt;, a new AI Winter for neural nets began just a few years later…&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Kurt Hornik, Maxwell Stinchcombe, Halbert White, Multilayer feedforward networks are universal approximators, Neural Networks, Volume 2, Issue 5, 1989, Pages 359-366, ISSN 0893-6080, http://dx.doi.org/10.1016/0893-6080(89)90020-8. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;LeCun, Y; Boser, B; Denker, J; Henderson, D; Howard, R; Hubbard, W; Jackel, L, “Backpropagation Applied to Handwritten Zip Code Recognition,” in Neural Computation , vol.1, no.4, pp.541-551, Dec. 1989 89 &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;D. E. Rumelhart, G. E. Hinton, and R. J. Williams. 1986. Learning internal representations by error propagation. In Parallel distributed processing: explorations in the microstructure of cognition, vol. 1, David E. Rumelhart, James L. McClelland, and CORPORATE PDP Research Group (Eds.). MIT Press, Cambridge, MA, USA 318-362 &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:3:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot;&gt;
+      &lt;p&gt;Fukushima, K. (1980), ‘Neocognitron: A Self-Organizing Neural Network Model for a Mechanism of Pattern Recognition Unaffected by Shift in Position’, Biological Cybernetics 36 , 193–202 . &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5&quot;&gt;
+      &lt;p&gt;Gregory Piatetsky, ‘KDnuggets Exclusive: Interview with Yann LeCun, Deep Learning Expert, Director of Facebook AI Lab’ Feb 20, 2014. http://www.kdnuggets.com/2014/02/exclusive-yann-lecun-deep-learning-facebook-ai-lab.html &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:6&quot;&gt;
+      &lt;p&gt;Teuvo Kohonen. 1988. Self-organized formation of topologically correct feature maps. In Neurocomputing: foundations of research, James A. Anderson and Edward Rosenfeld (Eds.). MIT Press, Cambridge, MA, USA 509-521. &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:7&quot;&gt;
+      &lt;p&gt;Gail A. Carpenter and Stephen Grossberg. 1988. The ART of Adaptive Pattern Recognition by a Self-Organizing Neural Network. Computer 21, 3 (March 1988), 77-88. &lt;a href=&quot;#fnref:7&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:8&quot;&gt;
+      &lt;p&gt;H. Bourlard and Y. Kamp. 1988. Auto-association by multilayer perceptrons and singular value decomposition. Biol. Cybern. 59, 4-5 (September 1988), 291-294. &lt;a href=&quot;#fnref:8&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:9&quot;&gt;
+      &lt;p&gt;P. Baldi and K. Hornik. 1989. Neural networks and principal component analysis: learning from examples without local minima. Neural Netw. 2, 1 (January 1989), 53-58. &lt;a href=&quot;#fnref:9&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:10&quot;&gt;
+      &lt;p&gt;Hinton, G. E. &amp;amp; Zemel, R. S. (1993), Autoencoders, Minimum Description Length and Helmholtz Free Energy., in Jack D. Cowan; Gerald Tesauro &amp;amp; Joshua Alspector, ed., ‘NIPS’ , Morgan Kaufmann, , pp. 3-10 . &lt;a href=&quot;#fnref:10&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:12&quot;&gt;
+      &lt;p&gt;Neal, R. M. (1992). Connectionist learning of belief networks. Artificial intelligence, 56(1), 71-113. &lt;a href=&quot;#fnref:12&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:13&quot;&gt;
+      &lt;p&gt;Hinton, G. E., Dayan, P., Frey, B. J., &amp;amp; Neal, R. M. (1995). The” wake-sleep” algorithm for unsupervised neural networks. Science, 268(5214), 1158-1161. &lt;a href=&quot;#fnref:13&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:14&quot;&gt;
+      &lt;p&gt;Dayan, P., Hinton, G. E., Neal, R. M., &amp;amp; Zemel, R. S. (1995). The helmholtz machine. Neural computation, 7(5), 889-904. &lt;a href=&quot;#fnref:14&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/writing/a-brief-history-of-neural-nets-and-deep-learning-part-2/&quot;&gt;A 'Brief' History of Neural Nets and Deep Learning, Part 2&lt;/a&gt; was originally published by Andrey Kurenkov at &lt;a href=&quot;&quot;&gt;Andrey Kurenkov's Web World&lt;/a&gt; on December 24, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[A 'Brief' History of Neural Nets and Deep Learning, Part 1]]></title>
+  <link rel="alternate" type="text/html" href="/writing/a-brief-history-of-neural-nets-and-deep-learning/" />
+  <id>/writing/a-brief-history-of-neural-nets-and-deep-learning</id>
+  <published>2015-12-24T15:19:34-08:00</published>
+  <updated>2015-12-24T15:19:34-08:00</updated>
+  <author>
+    <name></name>
+    <uri></uri>
+    <email>andreyvkurenkov@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;blockquote&gt;
+  &lt;p&gt;“Deep Learning waves have lapped at the shores of computational linguistics for several years now, but 2015 seems like the year when the full force of the tsunami hit the major Natural Language Processing (NLP) conferences.” -&lt;a href=&quot;http://www.mitpressjournals.org/doi/pdf/10.1162/COLI_a_00239&quot;&gt;Christopher D. Manning, Nov 2015&lt;/a&gt; &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This may sound hyperbolic - to say the established methods of an entire field of research are quickly being superseded by a new discovery, as if hit by a research ‘tsunami’. But, this catastrophic language is appropriate for describing the meteoric rise of Deep Learning over the last several years - a rise characterized by drastic improvements over reigning approaches towards the hardest problems in AI, massive investments from industry giants such as Google, and exponential growth in research publications (and Machine Learning graduate students). Having taken several classes on Machine Learning, and even used it in undergraduate research, I could not help but wonder if this new ‘Deep Learning’ was anything fancy or just a scaled up version of the ‘artificial neural nets’ that were already developed by the late 80s. And let me tell you, the answer is quite a story - the story of not just neural nets, not just of a sequence of research breakthroughs that make Deep Learning somewhat more interesting than ‘big neural nets’  (that I will attempt to explain in a way that just about anyone can understand), but most of all of how a few key unyielding researchers made it through dark decades of banishment to finally redeem neural nets and achieve the dream of Deep Learning.&lt;/p&gt;
+
+&lt;div&gt;&lt;button class=&quot;btn&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#sources&quot;&gt;
+Disclaimer: not an expert, sources &amp;raquo;
+&lt;/button&gt;&lt;/div&gt;
+&lt;blockquote class=&quot;aside&quot;&gt;&lt;p id=&quot;sources&quot; class=&quot;collapse&quot; style=&quot;height: 0px;&quot;&gt;
+I am in no capacity an expert on this topic. Fantastic in depth technical overviews with good lists of references written by those who actually made the field what it is can be found &lt;a href=&quot;http://www.iro.umontreal.ca/~lisa/pointeurs/TR1312.pdf&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;http://arxiv.org/pdf/1404.7828v4.pdf&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;http://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf&quot;&gt;here&lt;/a&gt;. I am also most certainly not a professional writer, and will cop to there being &lt;a href=&quot;http://chronicle.com/article/The-Believers/190147&quot;&gt;several&lt;/a&gt; &lt;a href=&quot;http://www.nytimes.com/2012/11/24/science/scientists-see-advances-in-deep-learning-a-part-of-artificial-intelligence.html&quot;&gt;excellent&lt;/a&gt; &lt;a href=&quot;http://www.newyorker.com/news/news-desk/is-deep-learning-a-revolution-in-artificial-intelligence&quot;&gt;overview&lt;/a&gt; pieces written by professionals already. I also will stay away from getting too technical here, but there is a plethora of tutorials on the internet on all the major topics covered in brief by me.
+&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;prologue-machine-learning---what-is-it-exactly&quot;&gt;Prologue: Machine Learning - What Is It, Exactly?&lt;/h1&gt;
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/3/3a/Linear_regression.svg&quot; alt=&quot;Linear Regression&quot; /&gt;     
+    &lt;figcaption&gt;Linear regression &lt;a href=&quot;ttps://upload.wikimedia.org/wikipedia/commons/3/3a/Linear_regression.svg&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Take some points on a 2D graph, and draw a line that fits them as well as possible. What you have just done is generalized from a few example of pairs of input values (x) and output values (y) to a general function that can map any input value to an output value. This is known as linear regression, and it is a wonderful little &lt;a href=&quot;http://www.amstat.org/publications/jse/v9n3/stanton.html&quot;&gt;century-old&lt;/a&gt; technique for extrapolating a general function from some set of input-output pairs. And here’s why having such a technique is wonderful: there is an incalculable number of functions that are hard to develop equations for directly, but are easy to collect examples of input and output pairs for in the real world - for instance, the function mapping an input of recorded audio of a spoken word to an output of what that spoken word is.&lt;/p&gt;
+
+&lt;p&gt;Linear regression is a bit too wimpy a technique to solve the problem of speech recognition, but what it does is essentially what &lt;strong&gt;supervised Machine Learning&lt;/strong&gt; is all about: ‘learning’ a function given a &lt;strong&gt;training set&lt;/strong&gt; of &lt;strong&gt;examples&lt;/strong&gt;, where each example is a pair of an input and output from the function. In particular, machine learning methods should derive a function that can generalize well to inputs not in the training set, since then we can actually apply it to inputs for which we do not have an output. For instance, Google’s current speech recognition technology is powered by Machine Learning with a massive training set, but not nearly as big a training set as all the possible speech inputs you might task your phone with understanding.&lt;/p&gt;
+
+&lt;p&gt;This generalization principle is so important that there is almost always a &lt;strong&gt;test set&lt;/strong&gt; of data (more examples of inputs and outputs) that is not part of the training set. The separate set can be used to evaluate the effectiveness of the machine learning technique by seeing how many of the examples the method correctly computes outputs for given the inputs. The nemesis of generalization is &lt;strong&gt;overfitting&lt;/strong&gt; - learning a function that works really well for the training set but badly on the test set. Since machine learning researchers needed means to compare the effectiveness of their methods, over time there appeared standard &lt;strong&gt;datasets&lt;/strong&gt; of training and testing sets that could be used to evaluate machine learning algorithms.&lt;/p&gt;
+
+&lt;p&gt;Okay okay, enough definitions. Point is - our line drawing exercise is a very simple example of supervised machine learning: the points are the training set (X is input and Y is output), the line is the approximated function, and we can use the line to find Y values for X values that don’t match any of the points we started with. Don’t worry, the rest of this history will not be nearly so dry as all this. Here we go.&lt;/p&gt;
+
+&lt;h1 id=&quot;the-folly-of-false-promises&quot;&gt;The Folly of False Promises&lt;/h1&gt;
+
+&lt;p&gt;Why have all this prologue with linear regression, since the topic here is ostensibly neural nets? Well, in fact linear regression bears some resemblance to the first idea conceived specifically as a method to make machines learn: &lt;a href=&quot;http://psycnet.apa.org/index.cfm?fa=buy.optionToBuy&amp;amp;id=1959-09865-001
+morehttps://www.pearsonhighered.com/assets/hip/us/hip_us_pearsonhighered/samplechapter/0131471392.pdf&quot;&gt;Frank Rosenblatt’s &lt;strong&gt;Perceptron&lt;/strong&gt;&lt;/a&gt;&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/34998?token=eP9x7J-SbQvC30KjZ23yt38XOWoU6_d0JVo72rZF-EHtWcLW-zNPyZU2ZYJu4VPm7Fxs20Gd7mPoRylRtNFigXs&quot; alt=&quot;Perceptron&quot; /&gt;     
+   &lt;figcaption&gt;A diagram showing how the Perceptron works. &lt;a href=&quot;http://cse-wiki.unl.edu/wiki/images/0/0f/Perceptron.jpg&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;p&gt;A psychologist, Rosenblatt conceived of the Percetron as a simplified mathematical model of how the neurons in our brains operate: it takes a set of binary inputs (nearby neurons), multiplies each input by a continuous valued weight (the synapse strength to each nearby neuron), and thresholds the sum of these weighted inputs to output a 1 if the sum is big enough and otherwise a 0 (in the same way neurons either fire or do not). Most of the inputs to a Perceptron are either some data or the output of another Perceptron, but an extra detail is that Perceptrons also have one special ‘bias’ input, which just has a value of 1 and basically ensures the more functions are computable with the same input by being able to offset the summed value. This model of the neuron built on the work of Warren McCulloch and Walter Pitts &lt;a href=&quot;http://www.minicomplexity.org/pubs/1943-mcculloch-pitts-bmb.pdf&quot;&gt;Mcculoch-Pitts&lt;/a&gt;&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;, who showed that a neuron model that sums binary inputs and outputs a 1 if the sum exceeds a certain threshold value, and otherwise outputs a 0, can model the basic OR/AND/NOT functions. This, in the early days of AI, was a big deal - the predominant thought at the time was that making computers able to do formal logical reasoning would essentially solve AI.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/34832?token=vQiHNdPnUSPiPJcJcgobMGedDJRvgguccVapCN76gZnxqVQIKczfq4BqUQ06bWdVXnabb3tScv_04nigKqMZjS4&quot; alt=&quot;Perceptron 2&quot; /&gt; 
+    &lt;figcaption&gt;Another diagram, showing the biological inspiration. The &lt;b&gt;activation function&lt;/b&gt; is what people nowdays call the non-linear function applied to the weighted input sum to produce the output of the artificla neuron - in the case of Rosenblatt's Perceptron, the function was just output a thresholding operation.  &lt;a href=&quot;http://cs231n.github.io/neural-networks-1/&quot;&gt;(Source)&lt;/a&gt; &lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;p&gt;However, the Mcculoch-Pitts model lacked a mechanism for learning, which was crucial for it to be usable for AI. This is where the Perceptron excelled - Rosenblatt came up with a way to make such artificial neurons learn, inspired by the &lt;a href=&quot;http://onlinelibrary.wiley.com/doi/10.1002/cne.900930310/abstract&quot;&gt;foundational work&lt;/a&gt;&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; of Donald Hebb. Hebb put forth the unexpected and hugely influential idea that knowledge and learning occurs in the brain primarily through the formation and change of synapses between neurons - concisely stated as Hebb’s Rule:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“When an axon of cell A is near enough to excite a cell B and repeatedly or persistently takes part in firing it, some growth process or metabolic change takes place in one or both cells such that A’s efficiency, as one of the cells firing B, is increased.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The Perceptron did not follow this idea exactly, but having weights on the inputs allowed for a very simple and intuitive learning scheme: given a &lt;strong&gt;training set&lt;/strong&gt; of input-output examples the Perceptron should ‘learn’ to a function for, for each example increase the weights if the Perceptron output for that example’s input is too low compared to the example, and decrease the weights if the output is too high. Stated ever so slightly more formally, the algorithm is as follows:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Start off with a Perceptron having random weights and a training set&lt;/li&gt;
+  &lt;li&gt;For the inputs of an example in the training set, compute the Perceptron’s output&lt;/li&gt;
+  &lt;li&gt;If the output of the Perceptron does not match the output that is known to be correct for the example:
+    &lt;ul&gt;
+      &lt;li&gt;If the output should have been 0 but was 1, decrease the weights that had an input of 1.&lt;/li&gt;
+      &lt;li&gt;If the output should have been 1 but was 0, increase the weights that had an input of 1.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Go to the next example in the training set and repeat steps 2-4 until the Perceptron makes no more mistakes&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;This procedure is simple, and produces a simple result: an input linear function (the weighted sum), just as with linear regression, ‘squashed’ by a non-linear &lt;strong&gt;activation function&lt;/strong&gt; (the thresholding of the sum). It’s fine to threshold the sum when when the function can only a finite set of outputs values (as with logical functions, in which case there are only two - True/1 and False/0) and so the problem is not so much to generate an continuous-numbered output for any set of inputs - regression - as to categorize the inputs with a correct label - &lt;strong&gt;classification&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://upload.wikimedia.org/wikipedia/en/5/52/Mark_I_perceptron.jpeg&quot; alt=&quot;.&quot; /&gt; 
+    &lt;figcaption&gt;'Mark I Perceptron at the Cornell Aeronautical Laboratory', hardware implementation of the first Perceptron (Source: Wikipedia / Cornell Library)&lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;p&gt;Rosenblatt implemented the idea of the Perceptron in custom hardware (this being before fancy programming languages were in common use), and showed it could be used to learn to classify simple shapes correctly with 20x20 pixel-like inputs. And so, machine learning was born - a computer was built that could approximate a function given known input and output pairs from it. In this case it learned a little toy function, but it was not difficult to envision useful applications such as converting the mess that is human handwriting into machine-readable text.&lt;/p&gt;
+
+&lt;p&gt;Indeed, this approach would also work for functions with multiple output values, or classifications tasks with many categories. This is impossible for one Perceptron, since it has only one output, but functions with multiple outputs can be learned by having multiple Perceptrons in a &lt;strong&gt;layer&lt;/strong&gt;, such that all these Perceptrons receive the same input and each one is responsible for one output of the function. Indeed, neural nets (or, formally, ‘Artificial Neural Networks’ - ANNs) are nothing more than layers of Perceptrons - or neurons, as they are usually called today - and at this stage there was just one layer - the &lt;strong&gt;output layer&lt;/strong&gt;. So, a prototypical example of neural net use is to classify an image of a handwritten digit. The inputs are the pixels of the image , and there are 10 output neurons with each one corresponding to one of the 10 possible digit values. In this case only one of the 10 neurons output 1, the highest weighted sum is taken to be the correct output, and the rest output 0.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/34466?token=YFsmpDuQfD3DDylinRD8F4sLOgjCFm4Aow1gIWoCY5KED3bnQKs17RaTja95OIQQWdr25dqS2fxq_6mDwwdcs9Y&quot; alt=&quot;Neural net with an output layer.&quot; /&gt; 
+    &lt;figcaption&gt;A neural net with multiple outputs.&lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;p&gt;It is also possible to conceive of neural nets with artificial neurons different from the Perceptron. For instance, the thresholding activation function is not strictly necessary; Bernard Widrow and Tedd Hoff soon explored the option of just outputting the weight input in 1960 with &lt;a href=&quot;http://www-isl.stanford.edu/~widrow/papers/t1960anadaptive.pdf&quot;&gt;“An adaptive “ADALINE” neuron using chemical “memistors”&lt;/a&gt;&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;, and showed how these ‘Adaptive Linear Neurons’ could be incorporated into electrical circuits with ‘memistors’ - resistors with memory. They also showed that not having the threshold activation function is mathematically nice, because the neuron’s learning mechanism can be formally based on minimizing the error through good ol’ calculus. See, with the neuron’s function not being made weird by this sharp thresholding jump from 0 to 1, a measure of how much the error changes when each weight is changed (the derivative) can be used to drive the error down and find the optimal weight values. As we shall see, finding the right weights using the derivatives of the training error with respect to each weight - &lt;strong&gt;stochastic gradient descent&lt;/strong&gt; - is exactly how neural nets are typically trained.&lt;/p&gt;
+
+&lt;div&gt;&lt;button class=&quot;btn&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#maths&quot;&gt;
+Aside: a bit more on the math &amp;raquo;
+&lt;/button&gt;&lt;/div&gt;
+&lt;blockquote class=&quot;aside&quot;&gt;&lt;p id=&quot;maths&quot; class=&quot;collapse&quot; style=&quot;height: 0px;&quot;&gt;
+In short a function is differentiable if it is a nice smooth line - Rosenblatt's Perceptron computed the output in such a way that the output abruptly jumped from 0 to 1 if the input exceeded some number, whereas Adaline simply output the input which was a nice non-jumpy line. For a much more in depth explanation of all this math you can read &lt;a href=&quot;http://sebastianraschka.com/Articles/2015_singlelayer_neurons.html&quot;&gt;this tutorial&lt;/a&gt;, or any resource from Google - let us focus on the fun high-level concepts and story here.
+&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;IF we think about ADALINE a bit more we will come up with a further insight: finding a set of weights for a number of inputs is really just a form of linear regression. And again, as with linear regression, this would not be enough to solve the complex AI problems of Speech Recognition or Computer Vision. What McCullough and Pitts and Rosenblatt were really excited about is the broad idea of Connectionism: that networks of such simple computational units can be vastly more powerful and solve the hard problems of AI. And, Rosenblatt said as much, as in this frankly ridiculous New York Times quote &lt;a href=&quot;http://query.nytimes.com/gst/abstract.html?res=9D01E4D8173DE53BBC4053DFB1668383649EDE&quot;&gt;from the time&lt;/a&gt;&lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“The Navy revealed the embryo of an electronic computer today hat it expects will be able to walk, talk, see, write, reproduce itself an be conscious of its existence … Dr. Frank Rosenblatt, a research psychologist at the Cornell Aeronautical Laboratory, Buffalo, said Perceptrons might be fired to the planets as mechanical space explorers”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This sort of talk no doubt irked other researchers in AI, many of whom were focusing on approaches based on manipulation of symbols with concrete rules that followed from the mathematical laws of logic. Marvin Minsky, founder of the MIT AI Lab, and Seymour Paper were some of the researchers who were skeptical of the hype and in 1969 published their skepticism in the form of rigorous analysis on of the limitations of Perceptrons in a seminal book aptly named &lt;a href=&quot;https://mitpress.mit.edu/books/perceptrons&quot;&gt;Perceptrons&lt;/a&gt;&lt;sup id=&quot;fnref:7&quot;&gt;&lt;a href=&quot;#fn:7&quot; class=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;. The most widely discussed element of their analysis is the elucidation of the limits of a Perceptron - they could not, for instance, learn the simple boolean function XOR because it is not &lt;strong&gt;linearly separable&lt;/strong&gt;. Though the history here is vague, this publication is widely believed to have helped usher in the first of the &lt;strong&gt;AI Winters&lt;/strong&gt; - a period following a massive wave of hype for AI characterized by disillusionment that causes a freeze to funding and publications.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/35002?token=NfMQ9LV1TFNi0v0QmbwfNTxYgbYjG7kjHqR9DaATySwhqdIE8Xc3Lfrcwa6JA2CAwSvQFYQL7fj_fwFT6o_Zelw&quot; /&gt; 
+    &lt;figcaption&gt;Visualization of the limitations of Perceptrons. Finding a linear function on the inputs X,Y to correctly ouput + or - is equivalent to drawing a line on this 2D graph separating all + cases from - cases; clearly, for the third case this is impossible. &lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;h1 id=&quot;the-thaw-of-the-ai-winter&quot;&gt;The Thaw of the AI Winter&lt;/h1&gt;
+
+&lt;p&gt;So, things were not good for neural nets. But why? The idea, after all, was to combine a bunch of simple mathematical neurons to do complicated things, not to use a single one. In other terms, instead of just having one &lt;strong&gt;output layer&lt;/strong&gt;, to send an input to arbitrarily many neurons which are called a &lt;strong&gt;hidden layer&lt;/strong&gt; because their output acts as input to another hidden layer or the output layer of neurons. Only the output layer’s output is ‘seen’ - it is the answer of the neural net - but all the intermediate computations done by the hidden layer(s) can tackle vastly more complicated problems than just a single layer.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/34833?token=w5fXrfJQKt_CECpofd0YJUaAvNZEe2Qc0hgwlCj-x-48i8Bs5CtQDe52yns49AzIgK3NnSCwJvcmqQ1kp5mVwB0&quot; alt=&quot;Hidden layers&quot; /&gt; 
+    &lt;figcaption&gt;Neural net with two hidden layers &amp;lt;a href=http://cs231n.github.io/neural-networks-1/&amp;gt;(Excellent Source)&lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;p&gt;The reason hidden layers are good, in basic terms, is that the hidden layers can find &lt;strong&gt;features&lt;/strong&gt; within the data and allow following layers to operate on those features rather than the noisy and large raw data. For example, in the very common neural net task of finding human faces in an image, the first hidden layer could take in the raw pixel values and find lines, circles, ovals, and so on within the image. The next layer would receive the position of these lines, circles, ovals, and so on within the image and use those to the location of human faces - much easier! And people, basically, understood this. In fact, until recently machine learning techniques were commonly not applied directly to raw data inputs such as images or audio. Instead, machine learning was done on data after it had passed through &lt;strong&gt;feature extraction&lt;/strong&gt; - that is, to make learning easier machine learning was done on preprocessed data from which more useful features such as angles or shapes had been already extracted.&lt;/p&gt;
+
+&lt;div&gt;&lt;button class=&quot;btn&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#nonlinearwhy&quot;&gt;
+Aside: why have non-linear activation functions &amp;raquo;
+&lt;/button&gt;&lt;/div&gt;
+&lt;blockquote class=&quot;aside&quot;&gt;&lt;p id=&quot;nonlinearwhy&quot; class=&quot;collapse&quot; style=&quot;height: 0px;&quot;&gt;
+Earlier, we saw that the weighted sum computed by the Perceptron is usually put through a non-linear activation function. Now we can get around to fully answering an implicit question: why bother? Two reasons: 
+1. Without the activation function, the learned functions could only be linear, and most 'interesting' functions are not linear (for instance, logic functions that only output 1 or 0 or classification functions that output the category).
+2. Several layers of linear Perceptrons can always be collapsed into only one layer due to the linearity of all the computations - the same cannot be done with non-linear activation functions. So, in intuitive speak a network can massage the data better with activation functions than without.
+&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/35001?token=qG2LYkSR81r2DESqTceIWvJdDBoXVK-PRShf3s-57FZbvr81A9xC9-4x46XNiD33WgEy9Kh3A95i09dYQnHdDrE&quot; alt=&quot;Feature extraction&quot; /&gt; 
+    &lt;figcaption&gt;Visualization of traditional handcrafted feature extraction. &lt;a href=&quot;ttp://lear.inrialpes.fr/people/vandeweijer/color_descriptors.html&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;p&gt;So, it is important to note Minsky and Paper’s analysis of Perceptrons did not merely show the impossibility of computing XOR with a single Perceptron, but specifically argued that it had to be done with multiple layers of Perceptrons - what we now call multilayer neural nets - and that Rosenblatt’s learning algorithm did not work for multiple layers. And that was the real problem: the simple learning rule previously outlined for the Perceptron does not work for multiple layers. To see why, let’s reiterate how a single layer of Perceptrons would learn compute some function:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;A number of Perceptrons equal to the number of the function’s outputs would be started off with small initial weights (which are just multiples for the function’s inputs)&lt;/li&gt;
+  &lt;li&gt;For the inputs of an example in the training set, compute the Perceptrons’ output&lt;/li&gt;
+  &lt;li&gt;For each Perceptron, if the output does not match the example’s output, adjust the weights accordingly&lt;/li&gt;
+  &lt;li&gt;Go to the next example in the training set and repeat steps 2-4 until the Perceptrons no longer make mistakes&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The reason why this does not work for multiple layers should be intuitively clear: the example only specifies the correct output for the final output layer, so how in the world should we know how to adjust the weights of Perceptrons in layers before that? The answer, despite taking some time to derive, proved to be once again based on age-old Calculus: the chain rule. The key realization was that if the neural net neurons were not quite Perceptrons, but were made to compute the output with an activation function that was still non-linear but also differentiable, as with Adaline, not only could the derivative be used to adjust the weight to minimize error, but the chain rule could also be used to compute the derivative for all the neurons in a prior layer and thus the way to adjust their weights would also be known. Or, more simply: we can use calculus to assign some of the blame for any training set mistakes in the output layer to each neuron in the previous hidden layer, and then we can further split up blame if there is another hidden layer, and so on - we &lt;strong&gt;backpropagate&lt;/strong&gt; the error.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/34948?token=LF6pwbG4bKjYLDLj4GDemUWKiFy8SQC5tluQgSGnxKxiaoFUlJ9FaYoC_Syh6t4fvzOT8rwz1fnBQ0xInJ_tuO0&quot; alt=&quot;Backprop&quot; /&gt; 
+    &lt;figcaption&gt;The basic idea of backpropagation. &lt;a href=&quot;http://devblogs.nvidia.com/parallelforall/inference-next-step-gpu-accelerated-deep-learning/&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;p&gt;It’s impossible to pin down a single person that deserves recognition for figuring it out first, but Paul Werbos was among the first to analyze it in depth in his 1974 PhD Thesis&lt;sup id=&quot;fnref:8&quot;&gt;&lt;a href=&quot;#fn:8&quot; class=&quot;footnote&quot;&gt;8&lt;/a&gt;&lt;/sup&gt;. Interestingly, as with Perceptrons he was loosely inspired by work modeling the human mind, in this case the psychological theories of Freud  as &lt;a href=&quot;http://www.die.uchile.cl/ieee-cis/evic2005/files/AD2004Werbosv2.pdf&quot;&gt;he himself recounts&lt;/a&gt;&lt;sup id=&quot;fnref:9&quot;&gt;&lt;a href=&quot;#fn:9&quot; class=&quot;footnote&quot;&gt;9&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“In 1968, I proposed that we somehow imitate Freud’s concept of a backwards flow of credit assignment, flowing back from neuron to neuron … I explained the reverse calculations using a combination of intuition and examples and the ordinary chainrule, though it was also exactly a translation into mathematics of things that Freud had previously proposed in his theory of psychodynamics!”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Despite solving the question of how multilayer neural nets could be trained, Werbos did not explore that application of until 1982 due to the chilling effects of the AI Winter. In fact, Werbos thought the approach would make sense for solving the problems pointed out by Minsky, but the community at large lost any faith in tackling those problem:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Minsky’s book was best known for arguing that (1) we need to use MLPs [multilayer neural nets] even to represent simple nonlinear functions such as the XOR mapping; and (2) no one on earth had found a viable way to &lt;em&gt;train&lt;/em&gt; MLPs good enough to learn such simple functions. Minsky’s book convinced most of the world that neural networks were a discredited dead-end – the worst kind of heresy. Widrow has stressed that this pessimism, which squashed the early “perceptron” school of AI, should not really be blamed on Minsky. Minsky was merely summarizing the experience of hundreds of sincere researchers who had tried to find good ways to train MLPs, to no avail. There had been islands of hope, such as the algorithm which Rosenblatt called “backpropagation” (not at all the same as what we now call backpropagation!), and Amari’s brief suggestion that we might consider least squares [what is often used in linear regression] as a way to train neural networks (without discussion of how to get the derivatives, and with a warning that he did not expect much from the approach). But the pessimism at that time became terminal. 
+In the early 1970s, I did in fact visit Minsky at MIT. I proposed that we do a joint paper showing that MLPs can in fact overcome the earlier problems … But Minsky was not interested [14]. In fact, no one at MIT or Harvard or any place I could find was interested at the time.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Because of this lack of academic interest, it was not until more than a decade later, in 1986, that this approach was popularized in &lt;a href=&quot;http://www.iro.umontreal.ca/~vincentp/ift3395/lectures/backprop_old.pdf&quot;&gt;“Learning representations by back-propagating errors”&lt;/a&gt; by David Rumelhart, Geoffrey Hinton, and Ronald Williams &lt;sup id=&quot;fnref:10&quot;&gt;&lt;a href=&quot;#fn:10&quot; class=&quot;footnote&quot;&gt;10&lt;/a&gt;&lt;/sup&gt;. Despite the numerous discoveries of the method (the paper even explicitly mentions David Parker and Yann LeCun as two people who discovered it beforehand) the 1986 publication stands out for how concisely and clearly the idea is stated. In fact, as a student of Machine Learning it is easy to see that the description in their paper is essentially identical to the way the concept is still explained in textbooks and AI classes. A &lt;a href=&quot;http://www-isl.stanford.edu/~widrow/papers/j199030years.pdf&quot;&gt;retrospective in IEEE&lt;/a&gt;&lt;sup id=&quot;fnref:11&quot;&gt;&lt;a href=&quot;#fn:11&quot; class=&quot;footnote&quot;&gt;11&lt;/a&gt;&lt;/sup&gt; echoes this notion:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Unfortunately, Werbos’s work remained almost unknown in the scientific community. In 1982, Parker rediscovered the technique [39] and in 1985, published a report on it at M.I.T. [40]. Not long after Parker published his findings, Rumelhart, Hinton, and Williams [41], [42] also rediscovered the techniques and, largely as a result of the clear framework within which they presented their ideas, they finally succeeded in making it widely known.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;But the three authors went much further than just present this new learning algorithm. In the same year they published the much more in-depth &lt;a href=&quot;ttp://psych.stanford.edu/~jlm/papers/PDP/Volume%201/Chap8_PDP86.pdf&quot;&gt;“Learning internal representations by error propagation”&lt;/a&gt;&lt;sup id=&quot;fnref:12&quot;&gt;&lt;a href=&quot;#fn:12&quot; class=&quot;footnote&quot;&gt;12&lt;/a&gt;&lt;/sup&gt;, which specifically addressed the problems discussed by Minsky in &lt;em&gt;Perceptrons&lt;/em&gt;. Though the idea was conceived by people in the past, it was precisely this formulation in 1986 that made it widely understood how multilayer neural nets could be trained to tackle complex learning problems. And so, neural nets were back! In &lt;a href=&quot;www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning-part-2&quot;&gt;part 2&lt;/a&gt;, we shall see how just a few years later backpropagation and some other tricks discussed in “Learning internal representations by error propagation” were applied to a very significant problem: enabling computers to read human handwriting.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Manning, Christopher D. 2015. Last Words. Computational Linguistics, uncorrected proof. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;F. Rosenblatt. The perceptron, a perceiving and recognizing automaton Project Para. Cornell Aeronautical Laboratory, 1957. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;W. S. McCulloch and W. Pitts. A logical calculus of the ideas immanent in nervous activity. The bulletin of mathematical biophysics, 5(4):115–133, 1943. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot;&gt;
+      &lt;p&gt;The organization of behavior: A neuropsychological theory. D. O. Hebb. John Wiley And Sons, Inc., New York, 1949 &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5&quot;&gt;
+      &lt;p&gt;B. Widrow et al. Adaptive ”Adaline” neuron using chemical ”memistors”. Number Technical Report 1553-2. Stanford Electron. Labs., Stanford, CA, October 1960. &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:6&quot;&gt;
+      &lt;p&gt;“New Navy Device Learns By Doing”, New York Times, July 8, 1958. &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:7&quot;&gt;
+      &lt;p&gt;Perceptrons. An Introduction to Computational Geometry. MARVIN MINSKY and SEYMOUR PAPERT. M.I.T. Press, Cambridge, Mass., 1969. &lt;a href=&quot;#fnref:7&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:8&quot;&gt;
+      &lt;p&gt;P. Werbos. Beyond Regression: New Tools for Prediction and Analysis in the Behavioral Sciences. PhD thesis, Harvard University, Cambridge, MA, 1974. &lt;a href=&quot;#fnref:8&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:9&quot;&gt;
+      &lt;p&gt;Werbos, P.J. (2006). Backwards differentiation in AD and neural nets: Past links and new opportunities. In &lt;em&gt;Automatic Differentiation: Applications, Theory, and Implementations,&lt;/em&gt; pages 15-34. Springer. &lt;a href=&quot;#fnref:9&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:10&quot;&gt;
+      &lt;p&gt;Rumelhart, D. E., Hinton, G. E., and Williams, R. J. (1986) Learning representations by back-propagating errors. Nature, 323, 533–536. &lt;a href=&quot;#fnref:10&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:11&quot;&gt;
+      &lt;p&gt;Widrow, B., &amp;amp; Lehr, M. (1990). 30 years of adaptive neural networks: perceptron, madaline, and backpropagation. Proceedings of the IEEE, 78(9), 1415-1442. &lt;a href=&quot;#fnref:11&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:12&quot;&gt;
+      &lt;p&gt;D. E. Rumelhart, G. E. Hinton, and R. J. Williams. 1986. Learning internal representations by error propagation. In Parallel distributed processing: explorations in the microstructure of cognition, vol. 1, David E. Rumelhart, James L. McClelland, and CORPORATE PDP Research Group (Eds.). MIT Press, Cambridge, MA, USA 318-362 &lt;a href=&quot;#fnref:12&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/writing/a-brief-history-of-neural-nets-and-deep-learning/&quot;&gt;A 'Brief' History of Neural Nets and Deep Learning, Part 1&lt;/a&gt; was originally published by Andrey Kurenkov at &lt;a href=&quot;&quot;&gt;Andrey Kurenkov's Web World&lt;/a&gt; on December 24, 2015.&lt;/p&gt;
+  </content>
+</entry>
 
 
   
@@ -812,290 +1667,6 @@ So just do it.&lt;/p&gt;
 &lt;p&gt;The most significant impact I made on the class has got to be helping to implement several new projects: Constraint Satisfaction Problems, Decision Trees, and Neural Nets. Though it may seem easy, writing good projects takes a lot of effort - the directions need to be clear, the autograder needs to work, the overall structure needs to make sense, and so much more. In fact, each of our projects was slightly broken when first released! But over time, we really polished them, and in retrospect I still feel pretty good about the work we did.&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;/projects/team_projects/ai-ta/&quot;&gt;AI Projects&lt;/a&gt; was originally published by Andrey Kurenkov at &lt;a href=&quot;&quot;&gt;Andrey Kurenkov's Web World&lt;/a&gt; on April 01, 2015.&lt;/p&gt;
-  </content>
-</entry>
-
-
-  
-
-<entry>
-  <title type="html"><![CDATA[FlipSwitch]]></title>
-  <link rel="alternate" type="text/html" href="/projects/major_projects/flipswitch/" />
-  <id>/projects/major_projects/flipswitch</id>
-  <published>2015-03-26T00:00:00-07:00</published>
-  <updated>2015-03-26T00:00:00-07:00</updated>
-  <author>
-    <name></name>
-    <uri></uri>
-    <email>andreyvkurenkov@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;Oh IOT, will you ever be useful. Being a hackathon fan, I wanted to be part of the GT Inventure prize for years, and finally assembled a team for it my senior year. The idea - to make ‘dumb’ lightswitches smart with a little stick-on lever you could control from your phone - was just silly/awesome enough to perhaps work. We first tried it at the GTHacks hackathon. It was mostly a bust, largely due to the awfulness of the then new Intel Edison, but we pressed on and got 200$ in school funding for parts for the Inventure prize.&lt;/p&gt;
-
-&lt;p&gt;The plan was ambitious - to design custom small-scale PCBs that would have the TI CC2451 chips, which could be housed in an efficiently sized light-swtiching mechanism and pair with an Android app for control. As happens so often, it was too ambitious - we only managed to get a dev kit to control a servo via a simple BLE message, and even that did not work perfectly. Still, we made it to the second round ofthe competition before being knocked out due to a poor presentation and lack of a solid prototype.&lt;/p&gt;
-
-&lt;p&gt;We did not succeed, but the fact our idea later emerged in &lt;a href=&quot;http://myswitchmate.com/&quot;&gt;multiple&lt;/a&gt; &lt;a href=&quot;http://www.engadget.com/2015/11/04/robotic-iot-fingers-make-your-dumb-appliances-smarter/&quot;&gt;different&lt;/a&gt; products does suggest we were right to try it. The truth is, we were all busy and only put in 10% of what we could have had we really dedicated to the competition, and with that in mind we really did quite that.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/projects/major_projects/flipswitch/&quot;&gt;FlipSwitch&lt;/a&gt; was originally published by Andrey Kurenkov at &lt;a href=&quot;&quot;&gt;Andrey Kurenkov's Web World&lt;/a&gt; on March 26, 2015.&lt;/p&gt;
-  </content>
-</entry>
-
-
-  
-
-<entry>
-  <title type="html"><![CDATA[In My Head: Music Videos]]></title>
-  <link rel="alternate" type="text/html" href="/writing/in-my-head-music-videos-i-dont-forget/" />
-  <id>/writing/in-my-head-music-videos-i-dont-forget</id>
-  <published>2015-03-10T08:01:01-07:00</published>
-  <updated>2015-03-10T08:01:01-07:00</updated>
-  <author>
-    <name></name>
-    <uri></uri>
-    <email>andreyvkurenkov@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;It is so easy to churn out numbered lists of things that the form has become one of the internet’s junk foods. And yet, my head is full of them, all those memories and facts, and if this blog has any purpose it is to vocalize the contents of that place. So, a compromise: I present a list, but keep the words to single sentences that avoid the necessary obvious elaboration so easy to produce.&lt;/p&gt;
-
-&lt;h2 id=&quot;bjork&quot;&gt;Bjork&lt;/h2&gt;
-&lt;figure&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/4P5xSntVWQE&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-    &lt;figcaption&gt;My favorite music video of all time - the energy and dissonance of the music brilliantly and simply captured in physical reality.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;figure&gt;
-    &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/j1Q9ppPPHjU&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-    &lt;figcaption&gt;Tribal, psychedelic, beautiful, simple, silly - brilliant.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;figure&gt;
-  &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/AjI2J2SQ528&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-    &lt;figcaption&gt;&quot;It's like Karma Sutra meets Industrial Robotics&quot; - unnervingly clean and dirty, perhaps too simple but clearly memorable.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h2 id=&quot;lcd-soundsystem&quot;&gt;LCD Soundsystem&lt;/h2&gt;
-
-&lt;figure&gt;
-    &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/M5gQidrzojU&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-    &lt;figcaption&gt;Music videos have the potential to be short films that capture the spirit of the artist and the song, and this does both fantastically.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;figure&gt;
-    &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/qdRaf3-OEh4&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-    &lt;figcaption&gt;The choreographed moves of OK Go are fun, but how often have you seen choreographed chaos?&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h2 id=&quot;radiohead&quot;&gt;Radiohead&lt;/h2&gt;
-
-&lt;figure&gt;
-    &lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/CJ1iMQA0egc&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-    &lt;figcaption&gt;Probably my favorite work by Michael Gondry and one of my favorite uses of a single take -mind and reality and memories and the present and the future all at once like in nothing else.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;figure&gt;
-    &lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/lstDdzedgcE&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-    &lt;figcaption&gt;The earliest music video I can remember going back to over and over and over again; it does the song justice, no easy feat.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;figure&gt;
-    &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/cfOa1a8hYP8&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-    &lt;figcaption&gt;Presumably because of the lighting, this being black and white just feels so purely right.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;(House of Cards, Karma Police, Paranoid Android, Just, Wolf At the Door…)&lt;/p&gt;
-
-&lt;h2 id=&quot;arcade-fire&quot;&gt;Arcade Fire&lt;/h2&gt;
-
-&lt;figure&gt;
-    &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/5Euj9f3gdyM&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-    &lt;figcaption&gt;Courtesy of Spike Jonze, another perfect music-video-short-film; just like the song, it manages to hit the same depths every time.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;figure&gt;
-    &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/EcKinnMXuKg&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-    &lt;figcaption&gt;The best music-video-short-film I have seen, and the most emotionally resonant on this list.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h2 id=&quot;david-lynch&quot;&gt;David Lynch&lt;/h2&gt;
-
-&lt;figure&gt;
-    &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/3SpG7C4vHZQ&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-    &lt;figcaption&gt;For those who can find themselves utterly absorbed in the images of a projector when sitting in a dark room, unaware of the existence of the room or even themselves.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;figure&gt;
-    &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/IugOfDBWcGc&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-    &lt;figcaption&gt;Not directed by Lynch but perfectly captures his wonderful strange-yet-clear surrealism.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h2 id=&quot;robyn&quot;&gt;Robyn&lt;/h2&gt;
-
-&lt;figure&gt;
-    &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/F6ImxY6hnfA&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-    &lt;figcaption&gt;A lot of videos have fantastic dancing, but what they lack is this video's level of lighting and cinematography.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;figure&gt;
-    &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/3ChPOCmaK8g&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-    &lt;figcaption&gt;Need I say anything?&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;Сплин&lt;/h2&gt;
-
-&lt;figure&gt;
-    &lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/CIt5twRnT_0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-    &lt;figcaption&gt;A guy sitting cross-legged playing an acousting guitar surrounded by people in a gray room as it rains outside.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h2 id=&quot;section-1&quot;&gt;Высоцкий&lt;/h2&gt;
-
-&lt;figure&gt;
-    &lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/oXl5ixBtjpY&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-    &lt;figcaption&gt;Regardless of whether a different music video was possible, the plain minimalism is perfect for this song and artist.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h2 id=&quot;section-2&quot;&gt;원더걸스&lt;/h2&gt;
-
-&lt;figure&gt;
-    &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/7EZTUYwjWBs&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-    &lt;figcaption&gt;Seriously, what a great concept for a music video.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h2 id=&quot;the-shoes&quot;&gt;The Shoes&lt;/h2&gt;
-
-&lt;figure&gt;
-    &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/pt9wnawn7xQ&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-    &lt;figcaption&gt;Well done video, fantastic juxtaposition.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h2 id=&quot;the-chemical-brothers&quot;&gt;The Chemical Brothers&lt;/h2&gt;
-
-&lt;figure&gt;
-    &lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/0S43IwBF0uM&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-    &lt;figcaption&gt;Mesmerizing.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/writing/in-my-head-music-videos-i-dont-forget/&quot;&gt;In My Head: Music Videos&lt;/a&gt; was originally published by Andrey Kurenkov at &lt;a href=&quot;&quot;&gt;Andrey Kurenkov's Web World&lt;/a&gt; on March 10, 2015.&lt;/p&gt;
-  </content>
-</entry>
-
-
-  
-
-<entry>
-  <title type="html"><![CDATA[Some Thoughts on Being]]></title>
-  <link rel="alternate" type="text/html" href="/writing/some-thoughts-on-being/" />
-  <id>/writing/some-thoughts-on-being</id>
-  <published>2015-02-15T01:39:50-08:00</published>
-  <updated>2015-02-15T01:39:50-08:00</updated>
-  <author>
-    <name></name>
-    <uri></uri>
-    <email>andreyvkurenkov@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;Or, some principles I have grown to try to abide by.&lt;/p&gt;
-
-&lt;p&gt;All things to strive for, some realistic and some less so.&lt;/p&gt;
-
-&lt;h2 id=&quot;bedecision-driven&quot;&gt;Be Decision Driven&lt;/h2&gt;
-
-&lt;p&gt;As in, don’t rely on motivation or external pressure to do things. There are things you want to do, there are things you need to do, there are things you merely should do. Some of these things you are afraid to do, some of them you are apathetic about, some will take years to do. So many of these things - productive things, good-for-you things, kind things - are hard to do. But they are worth doing, much more so than being paralyzed into numb time wasting as is so easy in our age of the Internet.&lt;/p&gt;
-
-&lt;p&gt;So, force yourself to get past the easy life and do the hard things. Control yourself, feel you have a will by which to steer yourself into action. Think about what to do. Start with goals, motivations, feelings, principles, realities, but end with duties, with responsibilities, with decisions which you will follow whether you have motivation or feel like it or not. This is less unpleasant than it sounds - you will decide not only to throw yourself into work, but also to take naps, to eat snacks, to enjoy life. And, be capable of much more.&lt;/p&gt;
-
-&lt;p&gt;By the way, it seems to be basically what a guy named Immanuel Kant argued for, and he is kind of a big deal.&lt;/p&gt;
-
-&lt;p&gt;&lt;a title=&quot;Kantian ethics&quot; href=&quot;http://en.wikipedia.org/wiki/Kantian_ethics&quot;&gt;Kantian ethics&lt;/a&gt; are &lt;a class=&quot;mw-redirect&quot; title=&quot;Deontological&quot; href=&quot;http://en.wikipedia.org/wiki/Deontological&quot;&gt;deontological&lt;/a&gt;, revolving entirely around duty rather than emotions or end goals. All actions are performed in accordance with some underlying &lt;a title=&quot;Maxim (philosophy)&quot; href=&quot;http://en.wikipedia.org/wiki/Maxim_(philosophy)&quot;&gt;maxim&lt;/a&gt; or principle, which are deeply different from each other; it is according to this that the moral worth of any action is judged.”&lt;/p&gt;
-
-&lt;h2 id=&quot;be-careful-with-feelings&quot;&gt;Be Careful With Feelings&lt;/h2&gt;
-
-&lt;p&gt;As in, don’t accept feelings as inherently true. As in, don’t let yourself worry excessively. Feelings can be nice. But they are too often foolish, ignorant, or unreasonable. Don’t trust them. Question them, scrutinize them, check them. You may not be able to control what you feel, but  you have a choice with how to respond to those feelings - to embrace the feeling or reject it. Too many seem to embrace their feelings without thought.&lt;/p&gt;
-
-&lt;p&gt;Rejecting a feeling will not make it go away, true, but it will then allow you to choose to act against the feeling rather than for it. It will allow you to notice thoughts that are untrue, that are just part of a negative feedback cycle in which an unreasonable bad feeling feeds into unreasonable bad thoughts and the whole thing amplifies itself senselessly.It will allow you to choose to do things that counteract the feeling, even if you may not feel like doing that. Likewise it can help you start a positive feedback cycle - to tell yourself you can do it, that it will be fine, that everything is fine. It’s good to teach yourself to be confident, to forsake worry and push through.  In short, it will allow you to decide what to do.&lt;/p&gt;
-
-&lt;h2 id=&quot;be-yourself&quot;&gt;Be Yourself &lt;/h2&gt;
-
-&lt;p&gt;As in, haters gonna hate.  This is a basic one. Fuck wanting to fit in, fuck social norms, fuck letting other people set your standard or opinions or views.  No one’s opinion, morals, ideas, or desires should matter more to you than your own. Don’t compare yourself to the genius or model next to you - only compare yourself against your own personal standard. Be a punk, be a rebel, be cool by your own standard - or be none of those things and fit in just fine but don’t do so because anyone told you to.&lt;/p&gt;
-
-&lt;p&gt;But don’t confuse this with radical individualism or relativism. It is incredibly foolish, selfish, and generally morally bad to be entirely egocentric and unwilling to consider the perspective or needs of society and those around you. This just means think, question, ponder, wonder, appreciate, discover, consider, talk - all as you see fit, meaning in some ways as others see fit too.&lt;/p&gt;
-
-&lt;h2 id=&quot;be-ambitious-orbe-interesting&quot;&gt;Be Ambitious, Or Be Interesting&lt;/h2&gt;
-
-&lt;p&gt;As in, try to be alright with fear. As in, don’t do nothing, unless it’s for rest. Strive to think things, say things, build things, make things, create things, share things, criticize things, gift things. Things you’ll remember, things you’ll be proud of, things you were scared to do but knew you should, things that were difficult but worth it, things other have not done, things you have not done, things you are curious about, things others don’t appreciate, things you did not think you could do, things that make your life worth living.&lt;/p&gt;
-
-&lt;h2 id=&quot;be-wary-of-excuses&quot;&gt;Be Wary Of Excuses&lt;/h2&gt;
-
-&lt;p&gt;As in, it’s your fault even when it is not. As in, life is unfair, deal with it. As in, explanations are good, excuses are not. It does not matter if things are stacked against you, it does not matter if the world or people or circumstance is not cooperating or not being fair, it does not matter if something was an accident. Work within reality as it is, not as it ought to be, and don’t use the discrepancy to avoid the work.&lt;/p&gt;
-
-&lt;h2 id=&quot;behealthy&quot;&gt;Be Healthy&lt;/h2&gt;
-
-&lt;p&gt;As in, accept that you are your body. You are inherently Human, a strange quasi-rational living body. You have no idea how any of it works. Yet for some reason you have a conscience and a feeling of free will to decide what to do, that is not just inside of this strange biological machine but emerges from it. So be well, physically. It helps.&lt;/p&gt;
-
-&lt;h2 id=&quot;we-are-all-doomed-toeternal-nonexistence-afterdeath-and-the-only-point-of-it-all-is-creating-meaning-where-there-is-none&quot;&gt;We Are All Doomed to Eternal Nonexistence After Death, And The Only Point of It all Is Creating Meaning Where There is None&lt;/h2&gt;
-
-&lt;p&gt;As in, the universe is a cold machine and our pale blue dot is the only thing that gives it any meaning (as far as we know). Worse yet, we are a bunch of biological machines with built in expiration dates. But, we are the ones here to care, and that’s what matters.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/writing/some-thoughts-on-being/&quot;&gt;Some Thoughts on Being&lt;/a&gt; was originally published by Andrey Kurenkov at &lt;a href=&quot;&quot;&gt;Andrey Kurenkov's Web World&lt;/a&gt; on February 15, 2015.&lt;/p&gt;
-  </content>
-</entry>
-
-
-  
-
-<entry>
-  <title type="html"><![CDATA[On The Walking Dead and Artistic Coherence]]></title>
-  <link rel="alternate" type="text/html" href="/writing/on-the-walking-dead-and-artistic-coherence/" />
-  <id>/writing/on-the-walking-dead-and-artistic-coherence</id>
-  <published>2014-11-18T01:18:13-08:00</published>
-  <updated>2014-11-18T01:18:13-08:00</updated>
-  <author>
-    <name></name>
-    <uri></uri>
-    <email>andreyvkurenkov@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;Fair warning: I will not hold back on any plot details in this.&lt;/p&gt;
-
-&lt;p&gt;“The differences are staggering in retrospect. Telltale’s first season of The Walking Dead felt like a desperately needed breath of fresh air. &lt;em&gt;The Walking Dead Season 2 Finale&lt;/em&gt; treads tepid, zombie-infested water. Even in its most meaningful moments, it’s a mere approximation of what Telltale has proven itself capable of.” &lt;span style=&quot;line-height:1.5;&quot;&gt;-&lt;/span&gt;&lt;a style=&quot;line-height:1.5;&quot; href=&quot;http://www.polygon.com/2014/8/26/6064039/the-walking-dead-season-2-episode-5-review-no-going-back&quot;&gt;Polygon review of the finale of The Walking Dead, Season 2&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The first season of Telltale’s adaptation of The Walking Dead is among the most praised video games of the past decade. Its focus on character relationships in a ruined world, and dialogue meant chiefly to develop those relationships, earned it acclaim despite it otherwise basically being another episodic Telltale adventure game. Though it has its flaws, it succeeds where so many games fail: having a narrative core that is emotionally rich and deeply human.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;a href=&quot;http://ecx.images-amazon.com/images/I/91iAqB4pB5L.png&quot;&gt;&lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2014-11-18-on-the-walking-dead-and-artistic-coherence/91iAqB4pB5L.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt; 
-    &lt;figcaption&gt;An illustrative wallpaper for The Walking Dead Season 1&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Rather than focusing on the tired trope of “humans are the real monsters,” it instead focuses on humans’ capacity to be good despite having done wrong and having been wronged. More importantly, it does this &lt;strong&gt;very damn well&lt;/strong&gt;, by having a clear and consistent focus on the paternal bond that forms between the two main characters, Lee and Clementine. For once, the larger  naturally from the human story at its core.&lt;/p&gt;
-
-&lt;p&gt;The second season looked to continue from where the last one ended, with Lee dead and the player the role of Clementine. This seemed like a natural choice: to continue with one of the core characters from the last season, with all the improved graphics and fine-tuned gameplay mechanics one can expect in a sequel. So, why is the prevailing response to it so much less positive than for the first season? I’d say, more than anything, it was the second’s lack of coherence.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;a href=&quot;https://gamerwg.org/wp-content/uploads/2014/10/The-Walking-Dead-Season-2.jpg&quot;&gt;&lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2014-11-18-on-the-walking-dead-and-artistic-coherence/The-Walking-Dead-Season-2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt; 
-    &lt;figcaption&gt;Same  of Wallpaper, different season&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;With Lee unambiguously dead, Season 2 needed a new narrative element to match the first season’s focus on fatherhood and the larger elements of humanity that stood for. That, after all, is what made the whole of Season 1 and especially its ending so impressive. And this is where Season 2 fails. It still has the character drama to underscore the ’in survival, no one is the good guy’, the mundane character interactions to make the experience grounded, the swift action sequences with split-second choices to leave you stunned as the credits roll  - but in the end, the game ends up being about not much of anything besides petty character conflicts and the increasingly tiresome challenges the main character has to face (as a 12 year old, surrounded by adults, in a zombie apocalypse).&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;a href=&quot;http://videogamewriters.com/wp-content/uploads/2014/11/walkingdeadseason2.png&quot;&gt;&lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2014-11-18-on-the-walking-dead-and-artistic-coherence/walkingdeadseason2.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt; 
-    &lt;figcaption&gt;Seasons 2 is darker than Season 1. Sadly, it is also dafter.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;It was not supposed to be that way. Like any good mainstream release, the game’s marketing told you what it was supposed to be about, with the mandatory hashtag properly attached: “Your choices will decide Clem’s fate. Who will YOU become? &lt;a class=&quot;_58cn&quot; href=&quot;https://www.facebook.com/hashtag/myclementine&quot;&gt;#MyClementine&lt;/a&gt;.” The comfortable, ever so easy video game “Who will YOU become” question - will you become a basically normal person with superhuman survival/killing skills or a ruthless stone-cold killer with superhuman survival/killing skills? Except, it is not even about that much. Spots here and there seem to think it is about that, sure, but other spots veer into being about brutish patriarchal masculinity and yet others are about dealing with the loss of loves one. Mostly though, it is about characters arguing for silly reasons and zombies coming out of nowhere so there is conflict. Its disparate notes don’t come together to be about anything bigger – it is not coherent.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;a href=&quot;http://bloximages.chicago2.vip.townnews.com/tdn.com/content/tncms/images/v3/editorial/0/02/002528fa-df11-11e3-aa53-0019bb2963f4/53798e07da7d8.preview-620.jpg&quot;&gt;&lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2014-11-18-on-the-  walking-dead-and-artistic-coherence/53798e07da7d8.jpg&quot; /&gt;&lt;/a&gt; 
-    &lt;figcaption&gt;If you manage to save this character, be assured that really does not matter...&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;A personal anecdote: at the mid-point of the season, I was excited – I thought, wow, there are multiple weak characters in this game interactions with whom may subtly show my true attitude to “the strong deserve to survive” philosophy of the season’s main antagonist (my stated attitude being disagreement). Nope. One character gets a weak redemptive-death ending that weakly points to the game being about masculinity and patriarchy, and the other gets an even more unceremonious death that robs her existence of any meaning. That’s the case with a lot of the season, really – drama for the sake of drama or action for the sake of action, meaning nothing for any larger arc or theme. The ending is at least appropriate; it, too, has no meaningful connection to any overarching theme of the season and instead is just dramatic and loud and violent and contrived.&lt;/p&gt;
-
-&lt;p&gt;The term ludonarrative dissonance, meaning a game’s mechanics conveying a separate message from its narrative, has become quite popular in writing about games. As well it should have, it being an important idea for the medium. But, I feel that most games still suffer the more basic and non-medium specific problem of lacking coherence. They exist to give the player some excitement and fun and maybe even a story, but those elements taken together just make a dissonant jagged mess. This often happens even when games desperately try to be about something – see Bioshock Infinite, GTA IV, GTA V (probably), Assassin’s Creed 3, Watch Dogs, and so on.&lt;/p&gt;
-
-&lt;p&gt;Which is understandable, really – mainstream game production has taken after Hollywood, with games being made more often because they are good products than because they are good ideas. But, sometimes a game like The Walking Dead Season 1 comes along, and shows that games can be coherently about something, and be smart, elegant, and heartfelt in doing so. Season 2 failed to do that, and filled that void with the sound and fury so typical of video games. Telltale’s other series, The Wolf Among Us, had significant pacing issues but was at least much more ambitious and interesting in what it strived to be about, and I think that deserved praise.  Until that happens, until more Polygon-style criticism arises and places emphasis on the larger significance and coherence of video games, they will continue to feign ambition in the form of this-is-about-this-cool-thing-except-not-really-it’s-just-a-game.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/writing/on-the-walking-dead-and-artistic-coherence/&quot;&gt;On The Walking Dead and Artistic Coherence&lt;/a&gt; was originally published by Andrey Kurenkov at &lt;a href=&quot;&quot;&gt;Andrey Kurenkov's Web World&lt;/a&gt; on November 18, 2014.&lt;/p&gt;
   </content>
 </entry>
 
