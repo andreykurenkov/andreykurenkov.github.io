@@ -39,7 +39,6 @@ layout: base
                        {% if post.next_in_category %} | <a href="{{ site.url }}{{ post.next_in_category.url }}">Next Post</a>{% endif %}</h4>
 
         {% if page.share != false %}{% include _social-share.html %}{% endif %}
-        {% include _mailchimp-sign-up.html %}
         <p id="post-meta">{{ tags_content }}</p>
         {% if site.owner.disqus-shortname and page.comments == true %}
           <section id="disqus_thread"></section><!-- /#disqus_thread -->

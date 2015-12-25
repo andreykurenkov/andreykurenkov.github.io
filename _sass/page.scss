@@ -10,8 +10,9 @@ body {
 	background-color: $bodycolor;
 	font-family: $base-font;
 	color: $text-color;
-  height:100%;
+    height:100%;
 }
+
 
 #wrap {
  height: 100%;
@@ -19,6 +20,7 @@ body {
   margin-bottom: -25px; 
 
 }
+
 #wrap:after {
   content: "";
   display: block;
@@ -151,6 +153,20 @@ figure figcaption {
 .postimage {
   width: 100%;
   height: auto;
+  margin: auto;
+}
+
+.postimagesmall {
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  height: auto;
+}
+
+iframe {
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 /* Index listing specific styling */
