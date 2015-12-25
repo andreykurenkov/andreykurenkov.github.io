@@ -8,7 +8,7 @@ type: post
 published: true
 comments: true
 author: andrey_kurenkov
-excerpt: "The beggining of a story spanning half a century, about how we learned to make computers learn."
+excerpt: "The beginning of a story spanning half a century, about how we learned to make computers learn."
 ---
 > "Deep Learning waves have lapped at the shores of computational linguistics for several years now, but 2015 seems like the year when the full force of the tsunami hit the major Natural Language Processing (NLP) conferences." -[Christopher D. Manning, Nov 2015](http://www.mitpressjournals.org/doi/pdf/10.1162/COLI_a_00239) [^1]
 

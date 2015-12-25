@@ -8,7 +8,7 @@ type: post
 published: true
 comments: true
 author: andrey_kurenkov
-excerpt: "A continuation from part 3, where we shall see how deep learning ascended to the tsunami it is today."
+excerpt: "About the mid-2000s neural net comeback, and how deep learning ascended to the tsunami it is today."
 ---
 This is the fourth part in 'A Brief History of Neural Nets and Deep Learning'. Parts 1-3 [here](www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning), [here](www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning-part-2), and [here](www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning-part-3). In this part, we will get to the end of our story and see how Deep Learning emerged from the slump neural nets found themselves in by the late 90s, and the amazing state of the art results it has achieved since.
 
@@ -116,7 +116,8 @@ At this point, with all these discoveries since 2006, it had become clear that u
 
 So here we are. Deep learning. The culmination of decades of research, all leading to this:
 
-> **Deep Learning =  Lots of training data + Parallel Computation + Scalable, smart algorithms** 
+> **Deep Learning =  
+>         Lots of training data + Parallel Computation + Scalable, smart algorithms** 
                          
 <figure>
     <img class="postimagesmall" src="https://draftin.com:443/images/34968?token=mNMoQEOZRbbIXdXVDFZry4exMhFX-S9L8PH5MM1ADWxHdSgOcgwn-zp89AaoIoAT3_BqeE4V2XiXD7haXwqklP8" alt="Equation"/> 
