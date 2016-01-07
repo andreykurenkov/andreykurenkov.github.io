@@ -119,15 +119,23 @@
     
     
         
+            
+            
         
     
         
+            
+            
         
     
         
+            
+            
         
     
         
+            
+            
         
     
 
@@ -247,20 +255,19 @@ long term dependencies eg for learning finite state machines, grammars, and othe
   <p>“A diploma thesis (Hochreiter, 1991) represented a milestone of explicit DL research. As mentioned in Sec. 5.6, by the late 1980s, experiments had indicated that traditional deep feedforward or recurrent networks are hard to train by backpropagation (BP) (Sec. 5.5). Hochreiter’s work formally identified a major reason: Typical deep NNs suffer from the now famous problem of vanishing or exploding gradients. With standard activation functions (Sec. 1), cumulative backpropagated error signals (Sec. 5.5.1) either shrink rapidly, or grow out of bounds. In fact, they decay exponentially in the number of layers or CAP depth (Sec. 3), or they explode. “</p>
 </blockquote>
 
-<p>Backpropagation through time is essentially equivalent to a neural net with a whole lot of layers, so RNNs were particularly difficult to train with Backpropagation. Both Bengio and Schmidhuber published papers on the inability of learning long-term information due to limitations of backpropagation <sup id="fnref:10:1"><a href="#fn:10" class="footnote">10</a></sup><sup id="fnref:11"><a href="#fn:11" class="footnote">11</a></sup>. The analysis of the problem did reveal a solution - Schmidhuber and Hochreiter introduced a very important concept in 1997 that essentially solved the problem of how to train recurrent neural nets, much as CNNs did for feedforward neural nets - <a href="http://deeplearning.cs.cmu.edu/pdfs/Hochreiter97_lstm.pdf"><strong>Long Short Term Memory</strong></a> (LTSM)<sup id="fnref:12"><a href="#fn:12" class="footnote">12</a></sup>. In simple terms, as with CNNs the LTSM breakthrough ended up being a small alteration to the normal neural net model <sup id="fnref:10:2"><a href="#fn:10" class="footnote">10</a></sup>:</p>
+<p>Backpropagation through time is essentially equivalent to a neural net with a whole lot of layers, so RNNs were particularly difficult to train with Backpropagation. Both Sepp Hochreiter, advised by Schmidhuber, and Yoshua Bengio published papers on the inability of learning long-term information due to limitations of backpropagation <sup id="fnref:11"><a href="#fn:11" class="footnote">11</a></sup><sup id="fnref:12"><a href="#fn:12" class="footnote">12</a></sup>. The analysis of the problem did reveal a solution - Schmidhuber and Hochreiter introduced a very important concept in 1997 that essentially solved the problem of how to train recurrent neural nets, much as CNNs did for feedforward neural nets - <a href="http://deeplearning.cs.cmu.edu/pdfs/Hochreiter97_lstm.pdf"><strong>Long Short Term Memory</strong></a> (LTSM)<sup id="fnref:13"><a href="#fn:13" class="footnote">13</a></sup>. In simple terms, as with CNNs the LTSM breakthrough ended up being a small alteration to the normal neural net model <sup id="fnref:10:1"><a href="#fn:10" class="footnote">10</a></sup>:</p>
 
 <blockquote>
-  <p>“The basic LSTM idea is very simple. Some of the units are called Constant Error Carousels
-(CECs). Each CEC uses as an activation function f, the identity function, and has a connection to itself with ﬁxed weight of 1.0. Due to f’s constant derivative of 1.0, errors backpropagated through a CEC cannot vanish or explode (Sec. 5.9) but stay as they are (unless they “ﬂow out” of the CEC to other, typically adaptive parts of the NN). CECs are connected to several nonlinear adaptive units (some with multiplicative activation functions) needed for learning nonlinear behavior. Weight changes of these units often proﬁt from error signals propagated far back in time through CECs. CECs are the main reason why LSTM nets can learn to discover the importance of (and memorize) events that happened thousands of discrete time steps ago, while previous RNNs already failed in case of minimal time lags of 10 steps.”</p>
+  <p>“The basic LSTM idea is very simple. Some of the units are called Constant Error Carousels (CECs). Each CEC uses as an activation function f, the identity function, and has a connection to itself with ﬁxed weight of 1.0. Due to f’s constant derivative of 1.0, errors backpropagated through a CEC cannot vanish or explode (Sec. 5.9) but stay as they are (unless they “ﬂow out” of the CEC to other, typically adaptive parts of the NN). CECs are connected to several nonlinear adaptive units (some with multiplicative activation functions) needed for learning nonlinear behavior. Weight changes of these units often proﬁt from error signals propagated far back in time through CECs. CECs are the main reason why LSTM nets can learn to discover the importance of (and memorize) events that happened thousands of discrete time steps ago, while previous RNNs already failed in case of minimal time lags of 10 steps.”</p>
 </blockquote>
 
-<p>But, this did little to fix the larger perception problem that neural nets were janky and did not work very well. They were seen as a hassle to work with - the computers were not fast enough, the algorithms were not smart enough, and people were not happy. So, around the mid 90s, a new AI Winter for neural nets began to emerge - the community once again lost faith in them. A new method called Support Vector Machines, which in the very simplest terms could be described as a mathematically optimal way of training an equivalent to a two layer neural net, was developed and started to be seen as superior to the difficult to work with neural nets. In fact, the 1995 <a href="http://yann.lecun.com/exdb/publis/pdf/lecun-95b.pdf">“Comparison of Learning Algorithms For Handwritten Digit Recognition”</a><sup id="fnref:13"><a href="#fn:13" class="footnote">13</a></sup> by Lecun et al. found that this new approach worked better or the same as all but the best designed neural nets:</p>
+<p>But, this did little to fix the larger perception problem that neural nets were janky and did not work very well. They were seen as a hassle to work with - the computers were not fast enough, the algorithms were not smart enough, and people were not happy. So, around the mid 90s, a new AI Winter for neural nets began to emerge - the community once again lost faith in them. A new method called Support Vector Machines, which in the very simplest terms could be described as a mathematically optimal way of training an equivalent to a two layer neural net, was developed and started to be seen as superior to the difficult to work with neural nets. In fact, the 1995 <a href="http://yann.lecun.com/exdb/publis/pdf/lecun-95b.pdf">“Comparison of Learning Algorithms For Handwritten Digit Recognition”</a><sup id="fnref:14"><a href="#fn:14" class="footnote">14</a></sup> by LeCun et al. found that this new approach worked better or the same as all but the best designed neural nets:</p>
 
 <blockquote>
   <p>“The [support vector machine] classifier has excellent accuracy, which is most remarkable, because unlike the other high performance classifiers, it does not include <em>a priori</em> knowledge about the problem. In fact, this classifier would do just as well if the image pixels were permuted with a fixed mapping. It is still much slower and memory hungry than the convolutional nets. However, improvements are expected as the technique is relatively new.”</p>
 </blockquote>
 
-<p>Other new methods, notably Random Forests, also proved to be very effective and with lovely mathematical theory behind them. So, despite the fact that CNNs consistently had state of the art performance, enthusiasm for neural nets dissipated and the machine learning community at large once again disavowed them. Winter was back. In <a href="http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning-part-4">part 4</a>, we shall see how a small group of researchers persevered in this research climate and ultimately</p>
+<p>Other new methods, notably Random Forests, also proved to be very effective and with lovely mathematical theory behind them. So, despite the fact that CNNs consistently had state of the art performance, enthusiasm for neural nets dissipated and the machine learning community at large once again disavowed them. Winter was back. In <a href="http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning-part-4">part 4</a>, we shall see how a small group of researchers persevered in this research climate and ultimately made Deep Learning what it is today.</p>
 
 <div class="footnotes">
   <ol>
@@ -292,16 +299,19 @@ long term dependencies eg for learning finite state machines, grammars, and othe
       <p>Yoshua Bengio, A Connectionist Approach To Speech Recognition Int. J. Patt. Recogn. Artif. Intell., 07, 647 (1993). <a href="#fnref:9" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:10">
-      <p>J. Schmidhuber. “Deep Learning in Neural Networks: An Overview”. “Neural Networks”, “61”, “85-117”. http://arxiv.org/abs/1404.7828 <a href="#fnref:10" class="reversefootnote">&#8617;</a> <a href="#fnref:10:1" class="reversefootnote">&#8617;<sup>2</sup></a> <a href="#fnref:10:2" class="reversefootnote">&#8617;<sup>3</sup></a></p>
+      <p>J. Schmidhuber. “Deep Learning in Neural Networks: An Overview”. “Neural Networks”, “61”, “85-117”. http://arxiv.org/abs/1404.7828 <a href="#fnref:10" class="reversefootnote">&#8617;</a> <a href="#fnref:10:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
     </li>
     <li id="fn:11">
-      <p>Bengio, Y.; Simard, P.; Frasconi, P., “Learning long-term dependencies with gradient descent is difficult,” in Neural Networks, IEEE Transactions on , vol.5, no.2, pp.157-166, Mar 1994 <a href="#fnref:11" class="reversefootnote">&#8617;</a></p>
+      <p>Hochreiter, S. (1991).  Untersuchungen zu dynamischen neuronalen Netzen. Diploma thesis, Institutfur Informatik, Lehrstuhl Prof. Brauer, Technische Universitat Munchen. Advisor: J. Schmidhuber. <a href="#fnref:11" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:12">
-      <p>Sepp Hochreiter and Jürgen Schmidhuber. 1997. Long Short-Term Memory. Neural Comput. 9, 8 (November 1997), 1735-1780. DOI=http://dx.doi.org/10.1162/neco.1997.9.8.1735. <a href="#fnref:12" class="reversefootnote">&#8617;</a></p>
+      <p>Bengio, Y.; Simard, P.; Frasconi, P., “Learning long-term dependencies with gradient descent is difficult,” in Neural Networks, IEEE Transactions on , vol.5, no.2, pp.157-166, Mar 1994 <a href="#fnref:12" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:13">
-      <p>Y. LeCun, L. D. Jackel, L. Bottou, A. Brunot, C. Cortes, J. S. Denker, H. Drucker, I. Guyon, U. A. Muller, E. Sackinger, P. Simard and V. Vapnik: Comparison of learning algorithms for handwritten digit recognition, in Fogelman, F. and Gallinari, P. (Eds), International Conference on Artificial Neural Networks, 53-60, EC2 &amp; Cie, Paris, 1995 <a href="#fnref:13" class="reversefootnote">&#8617;</a></p>
+      <p>Sepp Hochreiter and Jürgen Schmidhuber. 1997. Long Short-Term Memory. Neural Comput. 9, 8 (November 1997), 1735-1780. DOI=http://dx.doi.org/10.1162/neco.1997.9.8.1735. <a href="#fnref:13" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:14">
+      <p>Y. LeCun, L. D. Jackel, L. Bottou, A. Brunot, C. Cortes, J. S. Denker, H. Drucker, I. Guyon, U. A. Muller, E. Sackinger, P. Simard and V. Vapnik: Comparison of learning algorithms for handwritten digit recognition, in Fogelman, F. and Gallinari, P. (Eds), International Conference on Artificial Neural Networks, 53-60, EC2 &amp; Cie, Paris, 1995 <a href="#fnref:14" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -310,7 +320,21 @@ long term dependencies eg for learning finite state machines, grammars, and othe
       <div class="contentinfo">           
         <h4 id="postnav"><a href="/writing/a-brief-history-of-neural-nets-and-deep-learning-part-2/">Previous Post</a> 
                         | <a href="/writing/a-brief-history-of-neural-nets-and-deep-learning-part-4/">Next Post</a></h4>
+        <div id="mc_embed_signup">
+  <form action="//andreykurenkov.us12.list-manage.com/subscribe/post?u=4fd9f0f18da6483fe39140533&amp;id=ef01796314" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <div id="mc_embed_signup_scroll">
 
+    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      <div style="position: absolute; left: -5000px;"><input type="text" name="b_4fd9f0f18da6483fe39140533_ef01796314" tabindex="-1" value=""></div>
+      <div class="clear"><input type="submit" value="send me your writing" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
+    </div>
+
+  </form>
+</div>
+<!--End mc_embed_signup-->
+
+        <p id="post-meta">Posted with <i class="fa fa-tags"></i>: <a href="/writing/tag/ML/">ML</a>, <a href="/writing/tag/NN/">NN</a>, <a href="/writing/tag/technical/">technical</a>, <a href="/writing/tag/software/">software</a></p>
         <div class="social-share">
   <h4>Share on</h4>
   <ul>
@@ -325,7 +349,6 @@ long term dependencies eg for learning finite state machines, grammars, and othe
     </li>
   </ul>
 </div><!-- /.social-share -->
-        <p id="post-meta">Posted with <i class="fa fa-tags"></i>: </p>
         
           <section id="disqus_thread"></section><!-- /#disqus_thread -->
         
