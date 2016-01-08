@@ -59,7 +59,7 @@ Automating the rote and utterly uninteresting task of reading checks is a great 
     <figcaption>An autoencoder neural net. <a href="http://research.chtsai.org/papers/iml-bkp.html">(Source)</a></figcaption>    
 </figure>
 
-This is an **autoencoder** neural net, and is a method for learning compression - efficiently translating (encoding) data to a compact format and back to itself (auto). See, the output layer computes its outputs using only the hidden layer's outputs, and that output is the same as the input. Since the hidden layer has fewer outputs than does the input layer, the output of the hidden layer is the compressed representation of the input data, which can be reconstructed with the output layer. 
+This is an **autoencoder** neural net, and is a method for learning compression - efficiently translating (encoding) data to a compact format and back to itself (auto). See, the output layer computes its outputs, which ideally are the same as the input to the neural net, using only the hidden layer's outputs. Since the hidden layer has fewer outputs than does the input layer, the output of the hidden layer is the compressed representation of the input data, which can be reconstructed with the output layer. 
 
 <figure>
     <img class="postimagesmall" src="https://draftin.com:443/images/34939?token=mIbhFk3rVIyx-Byzt6TXV1hGzMH7_w5sjy5OzeYM0qex33WDiI1PhspANLICVpp53PZyysX8yR9YahhXtBVkV6M" alt="RBM"/> 
@@ -84,7 +84,19 @@ As with weight-sharing, the idea of autoencoders was first discussed in the afor
 
 # Neural Nets Gain Beliefs
 
-In fact, before being co-author of the seminal 1986 paper on backpropagation learning algorithm, Hinton worked on a neural-net approach for learning probability distributions in the 1985 ["A Learning Algorithm for Boltzmann Machines"](http://www.cs.toronto.edu/~fritz/absps/cogscibm.pdf) [ ^11]. Boltzmann Machines are networks just like neural nets and have units that are very similar to Perceptrons, but instead of computing an output based on inputs and weights, each unit in the network can compute a probability of it having a value of 1 or 0 given the values of connected units and weights. The units are therefore **stochastic** - they behave according to a probability distribution, rather than in a known deterministic way. The Boltzmann part refers to a distribution from physics that is part of the definition of these networks - . 
+In fact, before being co-author of the seminal 1986 paper on backpropagation learning algorithm, Hinton worked on a neural-net approach for learning probability distributions in the 1985 ["A Learning Algorithm for Boltzmann Machines"](http://www.cs.toronto.edu/~fritz/absps/cogscibm.pdf) [^11]. Boltzmann Machines are networks just like neural nets and have units that are very similar to Perceptrons, but instead of computing an output based on inputs and weights, each unit in the network can compute a probability of it having a value of 1 or 0 given the values of connected units and weights. The units are therefore **stochastic** - they behave according to a probability distribution, rather than in a known deterministic way. The Boltzmann part refers [to a probability distribution](https://en.wikipedia.org/wiki/Boltzmann_distribution) that has to do with the states of particles in a system based the particles' energy and on the thermodynamic temperature of that system. This distribution defines not only the mathematics of the Boltzmann machines, but also the interpretation - the units in the network themselves have energies and states, and learning is done by minimizing the energy of the system and with direct inspirartion from thermodynamics. Though a bit unintuitive, this energy-based interpretation is actually just one example of an **energy-based model**, and fits in the **energy-based learning** theoretical framework with which many learning algorithms can be expressed[^ebm]. 
+
+<div><button class="btn" data-toggle="collapse" data-target="#ebm">
+Aside: a bit more Energy Based Models &raquo;
+</button></div>
+<blockquote class="aside"><p id="ebm" class="collapse" style="height: 0px;">
+That there is a common theoretical framework for a bunch of learning methods is not too surprising, since at the end of the day all of learning boils down to optimization. Quoting from the above cited tutorial: 
+<br><br>
+"Training an EBM consists in finding an energy function that produces the best Y for any X ... The architecture of the EBM is the internal structure of the parameterized energy function E(W, Y, X) ... This quality measure is called the loss functional (i.e.  a function of function) and denoted L(E,S). ... In order to find the best energy function [] we need a way to assess the quality of any particular energy function, based solely on two elements: the training set, and our prior knowledge about the task. For simplicity, we often denote it L(W,S) and simply call it the loss function. The learning problem is simply to find the W that minimizes the loss." 
+<br><br>
+So, the key to energy based models is recognizing all these algorithms are essentially different ways to optimize a pair of functions, that can be called the energy function E and loss function L, by finding a set of good values to a bunch of variables that can be denoted W using data denoted X for input and Y for the output. It's really a very broad definition for a framework, but still nicely encapsulates what a lot of algorithms fundamentally do.
+</p></blockquote>
+
 
 <figure>
     <img class="postimagesmall" src="https://draftin.com:443/images/34928?token=uZt9tR3PMJ7XcI0pscNEF0hgpiGBmAWdxlT-mXi88-6jI1VKnv5eRXDeX2soiwQ2MJJuq1QeKvSOb1JiviyiZl8" alt="Public domain from wikipedia"/> 
@@ -92,7 +104,7 @@ In fact, before being co-author of the seminal 1986 paper on backpropagation lea
      </figcaption>    
 </figure>
 
-When such units are put together into a network, they form a graph, and so are a **graphical model** of data. Essentially, they can do something very similar to normal neural nets: some **hidden units** compute the probability of some **hidden variables** (the outputs - classifications or features for data) given known values of **visible units** that represent **visible variables** (the inputs - pixels of images, characters in text, etc.). In the nice known example of classifying images of digits, the hidden variables are the actual digit values, and the visible variables are the pixels of the image; given an image of the digit '1' as input, the value of visible units is known and the hidden unit modeling the probability of the image representing a '1' should have a high output probability.
+Back to Boltzmann Machines. When such units are put together into a network, they form a graph, and so are a **graphical model** of data. Essentially, they can do something very similar to normal neural nets: some **hidden units** compute the probability of some **hidden variables** (the outputs - classifications or features for data) given known values of **visible units** that represent **visible variables** (the inputs - pixels of images, characters in text, etc.). In the nice known example of classifying images of digits, the hidden variables are the actual digit values, and the visible variables are the pixels of the image; given an image of the digit '1' as input, the value of visible units is known and the hidden unit modeling the probability of the image representing a '1' should have a high output probability.
 
 <figure>
     <img class="postimagesmall" src="https://draftin.com:443/images/34944?token=wt8jYAmcmFL7nUvwusO-SYCwcXyM0_jECFgyhTNKc5OI7gyImufruQFh98267EgUTNKXFRmZqqPP9ia4OdaOhrQ" alt="BM"/> 
@@ -104,18 +116,20 @@ So, for the classification task, there is now a nice way of computing the probab
 
 > "Perhaps the most interesting aspect of the Boltzmann Machine formulation is that it leads to a domain-independent learning algorithm that modifies the connection strengths between units in such a way that the whole network develops an internal model which captures the underlying structure of its environment. There has been a long history of failure in the search for such algorithms (Newell, 1982), and many people (particularly in Artificial Intelligence)
 now believe that no such algorithms exist."
-</br>
+
 <div><button class="btn" data-toggle="collapse" data-target="#boltzmann">
 Aside: more explanation of Boltzmann Machines &raquo;
 </button></div>
 <blockquote class="aside"><p id="boltzmann" class="aside" style="height: 0px;">
 Having learned the classical neural net models first, it took me a while to understand the notion behind these probabilistic nets. To elaborate, let me present a quote from the paper itself that restates all that I have said above quite well:
-"The network modifies the strengths of its connections so as to construct an internal generative model that produces examples with the same probability distribution as the examples it is shown. Then, when shown any particular example, the network can “interpret” it by finding values of the variables in the internal model that would generate the example."
+<br><br>
+"The network modifies the strengths of its connections so as to construct an internal generative model that produces examples with the same probability distribution as the examples it is shown. Then, when shown any particular example, the network can “interpret” it by finding values of the variables in the internal model that would generate the example.
+<br>
 ...
+<br>
 The machine is composed of primitive computing elements called units that are connected to each other by bidirectional links. A unit is always in one of two states, on or off, and it adopts these states as a probabilistic function of the states of its neighboring units and the weights on its links to them. The weights can take on real values of either sign. A unit being on or
-off is taken to mean that the system currently accepts or rejects some elemental hypothesis about the domain. The weight on a link represents a weak pairwise constraint between two hypotheses. A positive weight indicates that the two hypotheses tend to support one another; if one is currently accepted, accepting the other should be more likely. Conversely, a negative
-weight suggests, other things being equal, that the two hypotheses should not both be accepted. Link weights are symmetric, having the same strength in both directions (Hinton & Sejnowski, 1983)."
-</p></blockquote>
+off is taken to mean that the system currently accepts or rejects some elemental hypothesis about the domain. The weight on a link represents a weak pairwise constraint between two hypotheses. A positive weight indicates that the two hypotheses tend to support one another; if one is currently accepted, accepting the other should be more likely. Conversely, a negative weight suggests, other things being equal, that the two hypotheses should not both be accepted. Link weights are symmetric, having the same strength in both directions (Hinton & Sejnowski, 1983)."</p>
+</blockquote>
 
 Without delving into the full details of the algorithm, here are some highlights: it is a variant on **maximum-likelihood** algorithms, which simply means that it seeks to maximize the probability of the net's visible unit values matching with their known correct values. Computing the actual most likely value for each unit turns all at the same time out to be much too computationally expensive, so in training **Gibbs Sampling** - starting the net with random unit values and iteratively reassigning values to units given their connections' values - is used to give some actual known values. When learning using a training set, the visible units are just set to have the value of the current training example, so sampling is done to get values for the hidden units. Once some 'real' values are sampled, we can do something similar to backpropagation - take a derivative for each weight to see how we can change so as to increase the probability of the net doing the right thing. 
 
@@ -128,14 +142,18 @@ As with neural net, the algorithm can be done both in a supervised fashion (with
 
 Though this approach was an advance upon Boltzmann machines, it was still just too slow - the math for correctly deriving probabilistic relations between variables is such that a ton of computation is typically required without some simplifying tricks. And so Hinton, along with Neal and two other co-authors, soon came up with extra tricks in the 1995 ["The **wake-sleep algorithm** for unsupervised neural networks"](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.82.804&rep=rep1&type=pdf)[^13]. These tricks were such that they once again such that they called for a slightly different belief net setup, which was now deemed ["The Helmholtz Machine"](http://www.gatsby.ucl.ac.uk/~dayan/papers/hm95.pdf)[^14]. Skirting the details once again, the key idea was to have separate sets of weights for inferring hidden variables from visible variables (**recognition weights**) and for vice versa (**generative weights**), and to keep the directed aspect of Neal's belief nets. This allows the training to be done much faster, while being applicable to the same unsupervised and supervised learning problems of Boltzmann Machines.
 
-<div><button class="btn" data-toggle="collapse" data-target="#boltzmann">
+<div><button class="btn" data-toggle="collapse" data-target="#wakesleep">
 Aside: the gross simplifying assumption of the wake-sleep algorithm &raquo;
 </button></div>
-<blockquote class="aside"><p id="nonlinearwhy" class="boltzmann" style="height: 0px;">
-When Hinton talks of the Wake Sleep algorithm, he often notes how gross the simplfying assumption being made is, and that despite that the algorithm just works. The paper itself explains the assumption well:
-"The key simplifying assumption is that the recognition distribution for a particular example  d, Q is factorial (separable) in each layer. If there are h stochastic binary units in a layer B, the portion of the distribution P(B,d) due to that layer is determined by 2^(h - 1) probabilities. However, Q makes the assumption that the actual activity of any one unit in layer P is independent of the activities of all the other units in that layer, given the activities of all the units in the lower layer, l - 1, so the recognition model needs only specify h probabilities rather than 2" - 1. The independence assumption allows F(d; 8.4) to be evaluated efficiently, but this computational tractability is bought at a price, since the true posterior is unlikely to be factorial ... 
+<blockquote class="aside"><p id="wakesleep" class="aside" style="height: 0px;">
+When Hinton talks of the Wake Sleep algorithm, he often notes how gross the simplifying assumption being made is, and that despite that the algorithm just works. Again I will quote as the paper itself explains the assumption well:
+<br><br>
+"The key simplifying assumption is that the recognition distribution for a particular example  d, Q is factorial (separable) in each layer. If there are h stochastic binary units in a layer B, the portion of the distribution P(B,d) due to that layer is determined by 2^(h - 1) probabilities. However, Q makes the assumption that the actual activity of any one unit in layer P is independent of the activities of all the other units in that layer, given the activities of all the units in the lower layer, l - 1, so the recognition model needs only specify h probabilities rather than 2" - 1. The independence assumption allows F(d; 8.4) to be evaluated efficiently, but this computational tractability is bought at a price, since the true posterior is unlikely to be factorial 
+<br>
+...
+<br> 
 The generative model is taken to be factorial in the same way, although one should note that factorial generative models rarely have recognition distributions that are themselves exactly factorial."
-
+<br><Br>
 Note the Neal's belief nets also implicitly made the probabilities factorize by having layers of units with only forward-facing directed connections.
 </p></blockquote>
 
@@ -153,6 +171,7 @@ Finally, belief nets could be trained somewhat fast! Though not quite as influen
 [^10]: Hinton, G. E. & Zemel, R. S. (1993), Autoencoders, Minimum Description Length and Helmholtz Free Energy., in Jack D. Cowan; Gerald Tesauro & Joshua Alspector, ed., 'NIPS' , Morgan Kaufmann, , pp. 3-10 .
 [^11]: Ackley, D. H., Hinton, G. E., & Sejnowski, T. J. (1985). A learning algorithm for boltzmann machines*. Cognitive science, 9(1), 147-169.
 [^12]: Neal, R. M. (1992). Connectionist learning of belief networks. Artificial intelligence, 56(1), 71-113.
+[^ebm]: LeCun, Y., Chopra, S., Hadsell, R., Ranzato, M., & Huang, F. (2006). A tutorial on energy-based learning. Predicting structured data, 1, 0.
 [^13]: Hinton, G. E., Dayan, P., Frey, B. J., & Neal, R. M. (1995). The" wake-sleep" algorithm for unsupervised neural networks. Science, 268(5214), 1158-1161.
 [^14]: Dayan, P., Hinton, G. E., Neal, R. M., & Zemel, R. S. (1995). The helmholtz machine. Neural computation, 7(5), 889-904.
 [^15]: Anderson, C. W. (1989). Learning to control an inverted pendulum using neural networks. Control Systems Magazine, IEEE, 9(3), 31-37.
