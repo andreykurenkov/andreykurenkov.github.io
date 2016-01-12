@@ -8,7 +8,7 @@ type: post
 published: true
 comments: true
 author: andrey_kurenkov
-excerpt: "About the mid-2000s neural net comeback, and how deep learning ascended to the tsunami it is today."
+excerpt: "About the mid-2000s neural net comeback, and how deep learning ascended to the tsunami it is today"
 ---
 This is the fourth part in 'A Brief History of Neural Nets and Deep Learning'. Parts 1-3 [here](http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning), [here](http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning-part-2), and [here](http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning-part-3). In this part, we will get to the end of our story and see how Deep Learning emerged from the slump neural nets found themselves in by the late 90s, and the amazing state of the art results it has achieved since.
 

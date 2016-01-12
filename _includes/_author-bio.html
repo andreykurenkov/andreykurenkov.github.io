@@ -12,10 +12,13 @@
 
   <!--<h3 itemprop="name">{{ author.name }}</h3>-->
   <p>{{ author.bio }}</p>
+
   {% if author.email %}<a href="mailto:{{ author.email }}" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>{% endif %}
   {% if author.twitter %}<a href="http://twitter.com/{{ author.twitter }}" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a>{% endif %}
   {% if author.facebook %}<a href="http://facebook.com/{{ author.facebook }}" class="author-social" target="_blank"><i class="fa fa-fw fa-facebook-square"></i> Facebook</a>{% endif %}
   {% if author.linkedin %}<a href="http://linkedin.com/in/{{ author.linkedin }}" class="author-social" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i> LinkedIn</a>{% endif %}
   {% if author.github %}<a href="http://github.com/{{ author.github }}" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i> Github</a>{% endif %}
-  <a href="/writing/feed.xml/"><i class="fa fa-rss" style="display:inline;"> RSS Link</i></a>
+  <a href="/files/resume.pdf/" class="author-social" target="_blank"><i class="fa fa-fw fa-file"></i> Resume</a>
+  <a href="/writing/feed.xml/" class="author-social" target="_blank"><i class="fa fa-fw fa-rss"></i> RSS</a>
+
 </div>

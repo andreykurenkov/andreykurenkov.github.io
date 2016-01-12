@@ -24,6 +24,9 @@ images:
   basename: sr
   ext: JPG
   num: 18
+links:
+  - name: Open Source dev suite
+    url: https://github.com/gtsolarracing/TI-C2000-dev-suite
 videos:
   - name: Test
     src: https://www.youtube.com/embed/qTevuf9y4Ws

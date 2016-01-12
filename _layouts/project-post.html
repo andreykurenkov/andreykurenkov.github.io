@@ -2,11 +2,13 @@
 layout: base
 ---
 {% assign project = page %}
+  {% if page.image.feature %}
   <div class="image-wrap" id="project-image">
      <a href="{{ site.url }}/projects/{{ project.projcategory }}/images/{{ project.projname }}/{{ page.image.feature }}" target="_blank"> 
      <img src="{{ site.url }}/projects/{{ project.projcategory }}/images/{{ project.projname }}/{{ page.image.feature }}">
      </a>
   </div><!-- /.image-wrap -->
+  {% endif %}
 <div id="main" role="main">
   <div class="article-author-side" id="article-author-side-projects">
     {% include _author-bio.html %}

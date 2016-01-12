@@ -10,7 +10,7 @@ comments: true
 author: andrey_kurenkov
 projcategory: research
 projname: sim
-excerpt: Published project evaluating how to teach robots skill constraints
+excerpt: Published research evaluating how to teach robots skill constraints
 image:
   feature: poster.png
   teaser: sim.png

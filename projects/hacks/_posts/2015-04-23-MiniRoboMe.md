@@ -12,7 +12,6 @@ projcategory: hacks
 projname: minirobome
 excerpt: A little teleoperated robot based on Android
 image:
-  feature: diagram.png
   teaser: logo.png
 what: A little teleoperated robot based on Android
 who: Me

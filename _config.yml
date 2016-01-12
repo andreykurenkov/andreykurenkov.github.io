@@ -31,13 +31,11 @@ collections:
 owner:
   name: Andrey Kurenkov
   avatar: Andrey.jpg
-  bio: "An intellectual eclectic engineer and explorer endlessly interested in AI, art, side-projects, philosophy, and the many simple subtleties of life."
+  bio: "An eclectic engineer and intellectual endlessly interested in AI, art, side-projects, philosophy, and many more things."
   email: andreyvkurenkov@gmail.com
   google:
     analytics: UA-54402578-2
   disqus-shortname: eclecticcreations
-  twitter: NoSleepMusings
-  facebook: akurenkov
   github: andreykurenkov
   linkedin: andreykurenkov
 
