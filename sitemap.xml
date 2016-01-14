@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>/writing/organizing-my-emails-with-a-neural-net/</loc>
+    <lastmod>2016-01-13T18:19:34-08:00</lastmod>
+  </url>
+  <url>
     <loc>/writing/a-brief-history-of-neural-nets-and-deep-learning-part-4/</loc>
     <lastmod>2015-12-24T18:19:34-08:00</lastmod>
   </url>
@@ -183,10 +187,10 @@
     <loc>/projects/</loc>
   </url>
   <url>
-    <loc>/</loc>
+    <loc>/writing/</loc>
   </url>
   <url>
-    <loc>/writing/</loc>
+    <loc>/</loc>
   </url>
   <url>
     <loc>/writing/tag/ML/</loc>
@@ -300,19 +304,19 @@
     <loc>/projects/tag/simulation/</loc>
   </url>
   <url>
-    <loc>/writing/tag/ML/index.html</loc>
-    <lastmod>2016-01-08T14:11:03-08:00</lastmod>
+    <loc>/writing/tag/software/index.html</loc>
+    <lastmod>2016-01-13T23:32:54-08:00</lastmod>
   </url>
   <url>
     <loc>/writing/tag/technical/index.html</loc>
-    <lastmod>2016-01-08T14:11:03-08:00</lastmod>
+    <lastmod>2016-01-13T23:32:54-08:00</lastmod>
   </url>
   <url>
     <loc>/writing/tag/NN/index.html</loc>
-    <lastmod>2016-01-08T14:11:03-08:00</lastmod>
+    <lastmod>2016-01-13T23:32:54-08:00</lastmod>
   </url>
   <url>
-    <loc>/writing/tag/software/index.html</loc>
-    <lastmod>2016-01-08T14:11:03-08:00</lastmod>
+    <loc>/writing/tag/ML/index.html</loc>
+    <lastmod>2016-01-13T23:32:54-08:00</lastmod>
   </url>
 </urlset>
