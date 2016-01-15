@@ -31,7 +31,7 @@ Any corrections would be greatly appreciated, though I will note some ommisions 
 # The Centuries Old Machine Learning Algorithm
 <figure>
     <img class="postimagesmall" src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Linear_regression.svg" alt="Linear Regression"/>     
-    <figcaption>Linear regression <a href="ttps://upload.wikimedia.org/wikipedia/commons/3/3a/Linear_regression.svg">(Source)</a></figcaption>
+    <figcaption>Linear regression <a href="https://upload.wikimedia.org/wikipedia/commons/3/3a/Linear_regression.svg">(Source)</a></figcaption>
 </figure>
 
 Let's start with a brief primer on what Machine Learning is. Take some points on a 2D graph, and draw a line that fits them as well as possible. What you have just done is generalized from a few example of pairs of input values (x) and output values (y) to a general function that can map any input value to an output value. This is known as linear regression, and it is a wonderful little [200 year old](https://en.wikipedia.org/wiki/Linear_regression#cite_note-4) technique for extrapolating a general function from some set of input-output pairs. And here's why having such a technique is wonderful: there is an incalculable number of functions that are hard to develop equations for directly, but are easy to collect examples of input and output pairs for in the real world - for instance, the function mapping an input of recorded audio of a spoken word to an output of what that spoken word is. 
@@ -44,8 +44,7 @@ Okay okay, enough definitions. Point is - our line drawing exercise is a very si
 
 # The Folly of False Promises
 
-Why have all this prologue with linear regression, since the topic here is ostensibly neural nets? Well, in fact linear regression bears some resemblance to the first idea conceived specifically as a method to make machines learn: [Frank Rosenblatt's **Perceptron**](http://psycnet.apa.org/index.cfm?fa=buy.optionToBuy&id=1959-09865-001
-morehttps://www.pearsonhighered.com/assets/hip/us/hip_us_pearsonhighered/samplechapter/0131471392.pdf)[^2]. 
+Why have all this prologue with linear regression, since the topic here is ostensibly neural nets? Well, in fact linear regression bears some resemblance to the first idea conceived specifically as a method to make machines learn: [Frank Rosenblatt's **Perceptron**](http://psycnet.apa.org/index.cfm?fa=buy.optionToBuy&id=1959-09865-001)[^2]. 
 
 <figure>
     <img class="postimagesmall" src="https://draftin.com:443/images/34998?token=eP9x7J-SbQvC30KjZ23yt38XOWoU6_d0JVo72rZF-EHtWcLW-zNPyZU2ZYJu4VPm7Fxs20Gd7mPoRylRtNFigXs" alt="Perceptron"/>     
@@ -131,7 +130,7 @@ Earlier, we saw that the weighted sum computed by the Perceptron is usually put 
 
 <figure>
     <img class="postimagesmall" src="https://draftin.com:443/images/35001?token=qG2LYkSR81r2DESqTceIWvJdDBoXVK-PRShf3s-57FZbvr81A9xC9-4x46XNiD33WgEy9Kh3A95i09dYQnHdDrE" alt="Feature extraction"/> 
-    <figcaption>Visualization of traditional handcrafted feature extraction. <a href="ttp://lear.inrialpes.fr/people/vandeweijer/color_descriptors.html">(Source)</a></figcaption>    
+    <figcaption>Visualization of traditional handcrafted feature extraction. <a href="http://lear.inrialpes.fr/people/vandeweijer/color_descriptors.html">(Source)</a></figcaption>    
 </figure>
 
 So, it is important to note Minsky and Paper's analysis of Perceptrons did not merely show the impossibility of computing XOR with a single Perceptron, but specifically argued that it had to be done with multiple layers of Perceptrons - what we now call multilayer neural nets - and that Rosenblatt's learning algorithm did not work for multiple layers. And that was the real problem: the simple learning rule previously outlined for the Perceptron does not work for multiple layers. To see why, let's reiterate how a single layer of Perceptrons would learn compute some function:
@@ -161,7 +160,7 @@ I certainly cannot say for certain, but it seems that it was because of this lac
 
 > "Unfortunately, Werbos’s work remained almost unknown in the scientific community. In 1982, Parker rediscovered the technique [39] and in 1985, published a report on it at M.I.T. [40]. Not long after Parker published his findings, Rumelhart, Hinton, and Williams [41], [42] also rediscovered the techniques and, largely as a result of the clear framework within which they presented their ideas, they finally succeeded in making it widely known."
 
-But the three authors went much further than just present this new learning algorithm. In the same year they published the much more in-depth ["Learning internal representations by error propagation"](ttp://psych.stanford.edu/~jlm/papers/PDP/Volume%201/Chap8_PDP86.pdf)[^13], which specifically addressed the problems discussed by Minsky in *Perceptrons*. Though the idea was conceived by people in the past, it was precisely this formulation in 1986 that made it widely understood how multilayer neural nets could be trained to tackle complex learning problems. And so, neural nets were back! In [part 2](http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning-part-2), we shall see how just a few years later backpropagation and some other tricks discussed in "Learning internal representations by error propagation" were applied to a very significant problem: enabling computers to read human handwriting.
+But the three authors went much further than just present this new learning algorithm. In the same year they published the much more in-depth ["Learning internal representations by error propagation"](http://psych.stanford.edu/~jlm/papers/PDP/Volume%201/Chap8_PDP86.pdf)[^13], which specifically addressed the problems discussed by Minsky in *Perceptrons*. Though the idea was conceived by people in the past, it was precisely this formulation in 1986 that made it widely understood how multilayer neural nets could be trained to tackle complex learning problems. And so, neural nets were back! In [part 2](http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning-part-2), we shall see how just a few years later backpropagation and some other tricks discussed in "Learning internal representations by error propagation" were applied to a very significant problem: enabling computers to read human handwriting.
 
 [^1]: Christopher D. Manning. (2015). Computational Linguistics and Deep Learning Computational Linguistics, 41(4), 701–707.
 [^2]: F. Rosenblatt. The perceptron, a perceiving and recognizing automaton Project Para. Cornell Aeronautical Laboratory, 1957.
