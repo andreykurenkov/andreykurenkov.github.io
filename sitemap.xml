@@ -184,13 +184,13 @@
     <loc>/about/</loc>
   </url>
   <url>
-    <loc>/writing/</loc>
-  </url>
-  <url>
     <loc>/projects/</loc>
   </url>
   <url>
     <loc>/</loc>
+  </url>
+  <url>
+    <loc>/writing/</loc>
   </url>
   <url>
     <loc>/writing/tag/ML/</loc>
@@ -304,19 +304,19 @@
     <loc>/projects/tag/simulation/</loc>
   </url>
   <url>
-    <loc>/writing/tag/software/index.html</loc>
-    <lastmod>2016-01-14T12:12:38-08:00</lastmod>
+    <loc>/writing/tag/ML/index.html</loc>
+    <lastmod>2016-01-15T13:39:40-08:00</lastmod>
   </url>
   <url>
     <loc>/writing/tag/technical/index.html</loc>
-    <lastmod>2016-01-14T12:12:38-08:00</lastmod>
+    <lastmod>2016-01-15T13:39:40-08:00</lastmod>
   </url>
   <url>
     <loc>/writing/tag/NN/index.html</loc>
-    <lastmod>2016-01-14T12:12:38-08:00</lastmod>
+    <lastmod>2016-01-15T13:39:40-08:00</lastmod>
   </url>
   <url>
-    <loc>/writing/tag/ML/index.html</loc>
-    <lastmod>2016-01-14T12:12:38-08:00</lastmod>
+    <loc>/writing/tag/software/index.html</loc>
+    <lastmod>2016-01-15T13:39:40-08:00</lastmod>
   </url>
 </urlset>
