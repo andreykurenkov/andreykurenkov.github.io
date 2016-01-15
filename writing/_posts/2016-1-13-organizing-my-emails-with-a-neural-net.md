@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Organizing My Emails with a Neural Net
+title: Organizing My Emails With A Neural Net
 date: 2016-1-13lT19:19:34-07:00
 tags: [ML,NN,technical,software]
 status: published
@@ -8,14 +8,14 @@ type: post
 published: true
 comments: true
 author: andrey_kurenkov
-excerpt: "Organizing emails into folders is a worthy effort, but quicky gets old - why not get some help fromA I?"
+excerpt: "Organizing emails into folders is a worthy effort, but quicky gets old - why not get some help from AI?"
 ---
 <figure>
     <img class="postimagesmaller" src="{{ site.url }}/writing/images/2016-1-13-neural-net-categorize-my-email/18-conf_normalized2.png" alt="Conf mat 0"/> 
     <figcaption>Or, how to make this happen with your gmail data. The entirety of the code used for this post <b><a href="https://github.com/andreykurenkov/emailinsight/tree/master/pyScripts">can be found here</a></b>. </figcaption>    
 </figure>
 
-I have always been fond of school projects that actually trust me to have interest in what I am learning. Sadly, most undergraduate school assignments don't, but there are those rare projects that require the student to engage with what they are learning by partially defining the problem they set out to solve.  At least for me, it is a shame that more projects do not do this, since almost invariably such projects results in me caring and learning much more. But, some do. One of my favorite assignments of this kind was part of the Georgia Tech Into to Machine Learning class, and resulted in one of my more fun projects: [EmailFiler](http://www.andreykurenkov.com/projects/hacks/email-filer/).
+I have always been fond of school projects that actually trust me to have interest in what I am learning. Sadly, most undergraduate school assignments don't, but there are those rare projects that require the student to engage with what they are learning by partially defining the problem they set out to solve - tasking the student with being creative! One of my favorite assignments of this kind was the first project of the Georgia Tech Intro to Machine Learning class, and provided me with an excuse to do something I consider very fun: teach a neural net to categoize my emails, as I did with [EmailFiler](http://www.andreykurenkov.com/projects/hacks/email-filer/).
 
 #EmailFiler V1
 Basically, the assignment was to pick some datasets, throw a bunch of supervised learning algorithms at them, and analyze the results. But here's the thing: we could make our own datasets if we so chose. And so choose I did - to export my gmail data and explore the feasibility of machine-learned email categorization. See, I learned long ago that it's often best to keep emails around in case there is randomly some need to refer back to them in the future. But, I also learned that I can't help but strive for the ideal of the empty inbox (hopeless as that may be). So, years ago I started categorizing my emails into about a dozen folders within gmail, and by the point I took the machine learning class I had many thousands of emails spread across these categories. It seemed like a great application of ML to make a classifier that could suggest a single category for each email in the inbox for one-click organizing of it.
@@ -25,7 +25,7 @@ Basically, the assignment was to pick some datasets, throw a bunch of supervised
     <figcaption>The set of categories and email counts I worked with at the time</figcaption>    
 </figure>
 
-Well, you got your input data, the emails, and your labels, the categories, and even a nice button to export all the data in .mbox format - easy right? Not so fast. Though I was not exactly striving for full NLP text comprehension, I still wanted to learn using email text and metadata, and at first did not really know how to convert this data into nice a machine-learnable dataset. The simple answer to this, as any person who has taken NLP can quickly point out, is to use a Bag of Words approach - just finding what the most common 500 or so words in all the emails are, and then creating binary features for each word (features that have a value of 1 for an email if it contained the word, and 0 otherwise). I did the same for the sender of the email - picking out about the top 20, since in some cases the sender should correlate strongly with the category (for example the sender being my research adviser and the category 'research') - and for the domain the email was sent from (since a few like piazza and gatech.edu would be strongly indicative for categories like 'TA' and 'academic'). So, after an hour or so of writing [mbox parsing code](https://github.com/andreykurenkov/emailinsight/blob/master/pyScripts/mboxConvert.py) I ended up with the function that output my actual dataset as a csv; looking over it may clarify how simple these features really were:
+Well, I had my input data, the emails, and my labels, the categories, and even a nice button to export all the data in .mbox format - easy right? Not so fast. Though I was not exactly striving for full NLP text comprehension, I still wanted to learn using email text and metadata, and at first did not really know how to convert this data into nice a machine-learnable dataset. The simple answer to this, as any person who has taken NLP can quickly point out, is to use a Bag of Words approach. This is about as simple an approach as you can take with text classification - just find what the most common N words in all the text instances are, and then create binary features for each word such that a feature has a value of 1 for an instance of text if it contains the word, and a 0 otherwise. I did this for the top 500 words in all my emails, and separately for the top 20 senders of the emails (since in some cases the sender should correlate strongly with the category , such as the sender being my research adviser and the category 'research'), and for the top 5 domains the email was sent from (since a few like piazza and gatech.edu would be strongly indicative for categories like 'TA' and 'academic'). So, after an hour or so of writing [mbox parsing code](https://github.com/andreykurenkov/emailinsight/blob/master/pyScripts/mboxConvert.py) I ended up with the function that output my actual dataset as a csv; looking over it may clarify how simple these features really were:
 
 {% highlight python %}
 #...bunch of parsing code above this
@@ -52,7 +52,7 @@ def mboxToBinaryCSV(folder,csvfile='data.csv',perLabel=False):
             outputFile.write('1, ' if word in email.words else '0,') 
 {% endhighlight %}
 
-So, how well did it work? Well, but not as well as I hoped. At the time I was fond of the Orange Python ML framework, and so as per the assignment tested how well a bunch of algorithms did against my dataset (the code for this [can be found here](https://github.com/andreykurenkov/emailinsight/blob/master/pyScripts/code-learner.py) - apparently I manually implemented cross validation and accuracy evaluation...). The best I got was about 75% accuracy on the test set, with the standouts being decision trees, as the best algorithm, and neural nets, as the worst:
+So, how well did it work? Well, but not as well as I hoped. At the time I was fond of the Orange Python ML framework, and so as per the assignment [tested](https://github.com/andreykurenkov/emailinsight/blob/master/pyScripts/orangeClassify.py) how well a bunch of algorithms did against my dataset. The best I got was about 75% accuracy on the test set, with the standouts being decision trees, as the best algorithm, and neural nets, as the worst:
 
 <figure>
     <img class="postimagesmaller" src="{{ site.url }}/writing/images/2016-1-13-neural-net-categorize-my-email/2-emailsdtree.png" alt="DTrees emails"/> 
@@ -64,19 +64,21 @@ So, how well did it work? Well, but not as well as I hoped. At the time I was fo
     <figcaption>... And now neural nets </figcaption>    
 </figure>
 
-If you take a look at those beautiful OpenOffice Calc plots, you will soon see that the best Decision Trees managed to achieve on the test set is roughly 72%, and that neural nets could only get to a measly 65% - an F! Way better than random, considering there are 11 categories, but far from great. Why the disappointing result? Well, as stated the features created for the dataset are very simple - just selecting the 500 most frequent words will yield a few good indicators, but also many generic terms that just appear a lot in english such as 'that' or 'is'. I understood this at the time and tried a few things - removing 3-character words entirely, and writing some annoying code to select the most frequent words in each category specifically rather than in all the emails - but ultimately did not manage to figure out how to get better results.
+If you take a close look at those beautiful OpenOffice Calc plots, you will see that the best Decision Trees managed to achieve on the test set is roughly 72%, and that neural nets could only get to a measly 65% - an F! Way better than random, considering there are 11 categories, but far from great. Why the disappointing result? Well, as we saw the features created for the dataset are very simple - just selecting the 500 most frequent words will yield a few good indicators, but also many generic terms that just appear a lot in english such as 'that' or 'is'. I understood this at the time and tried a few things - removing 3-character words entirely, and writing some annoying code to select the most frequent words in each category specifically rather than in all the emails - but ultimately did not manage to figure out how to get better results.
 
 #Enter Keras
-So, why am I writing this if I did this years ago and got fairly lame results then (I did get a good grade, though!)? In short, to try again. Having just completed a [giant 4-part history of neural networks and Deep Learning](http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning/), and in so doing learned what fancy modern terms like 'dropout' and 'relu' mean, it seemed only appropriate to dive into a modern machine learning framework and see what I could do. 
+So, why am I writing this, if I did this years ago and got fairly lame results (albeit a good grade!) then? In short, to try again. Having just completed a [giant 4-part history of neural networks and Deep Learning](http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning/), and in so doing learned what fancy modern terms like 'dropout' and 'relu' mean, it seemed only appropriate to dive into a modern machine learning framework and see what I could do. 
 
-But, where to start? By picking the toys, of course! The framework I decided to try working with is [Keras](http://keras.io/), both because it is in Python (which seems to be a favorite for data science and machine learning nowdays, and has the wonderful [numpy](http://www.numpy.org/), [pandas](http://pandas.pydata.org/), and [scikit-learn](http://www.numpy.org/) all playing nice with each other) and because it is backed by the well regarded Theano library. It also just so happenes that Keras also has several easy to copy-paste examples to get started with, including one with a [multi-category text classification problem](https://github.com/fchollet/keras/blob/master/examples/reuters_mlp.py) much as with my email problem. And, here's the interesting thing - the example uses just about the same features as I did for my class project. It finds the 1000 most frequent words in the documents, makes those into binary features, and trains a neural net with one hidden layer to predict the category of input text based solely of those features.
+But, where to start? By picking the toys, of course! The framework I decided to try working with is [Keras](http://keras.io/), both because it is in Python (which seems to be a favorite for data science and machine learning nowdays, and plays nice with the wonderful [numpy](http://www.numpy.org/), [pandas](http://pandas.pydata.org/), and [scikit-learn](http://www.numpy.org/)) and because it is backed by the well regarded Theano library. It also just so happenes that Keras also has several easy to copy-paste examples to get started with, including one with a [multi-category text classification problem](https://github.com/fchollet/keras/blob/master/examples/reuters_mlp.py) that is almost exactly what my email problem. And, here's the interesting thing - the example uses just about the same features as I did for my class project. It finds the 1000 most frequent words in the documents, makes those into binary features, and trains a neural net with one hidden layer and dropout to predict the category of input text based solely of those features.
 
-So, the obvious first thing to try is exactly this, but with my own data - see if doing feature extraction with Keras will work better. My data is not exactly in the Keras data format, but luckily using my mbox parsing code it is easy to write a short function to create an equivalent to the dataset in the example:
+So, the obvious first thing to try is exactly this, but with my own data - see if doing feature extraction with Keras will work better. Luckily, I can still use my old mbox parsing code and so create the word features with Keras is quite easy:
 
 {% highlight python %}
-def get_keras_features(folder,nb_words=None,test_split=0.1):
-    (totalWordsCount,fromCount,domainCount,labels) = getEmailStats(emails)      
-    #...Some boring filtering in between code 
+def get_keras_features(folder,nb_words=1000,test_split=0.1):
+    (totalWordsCount,fromCount,domainCount,labels) = getEmailStats(emails)   
+   
+    #...Some boring filtering in between code and print outs
+
     texts = []                                                                 
     emailLabels = []                                                            
     for email in emails:                                                        
@@ -101,8 +103,9 @@ def get_keras_features(folder,nb_words=None,test_split=0.1):
     return ((X_train,Y_train),(X_test,Y_test))
 {% endhighlight %}
 
-In essence, this is doing exactly what I did to generate my old features, except I letting Keras do the heavy lifting this time.
-This code indeed worked, and even gave me a little update as to the contents of my email:
+This is doing almost exactly what I did to generate my old features, except I am letting Keras do the heavy lifting this time. 
+In fact, I am not even separating the senders or domains from the contents of the email, but rather throwing it all in together as one sequence of text and letting feature extraction do its thing. 
+This code indeed works, and even gives us a little update as to the contents of my email:
 
 	Using Theano backend.
 	Label email count breakdown:
@@ -185,7 +188,7 @@ whole bunch of parameters here, and it's hard to say if they are all correct. Bu
 <br>
 
 Hell yeah 85% test accuracy! That handily beats the measly 65% score of my old neural net. Awesome. Except... why?  
-I mean, my old code was doing basically exactly this - finding the most frequest words, creating a binary matrix of 
+I mean, my old code was doing basically this - finding the most frequent words, creating a binary matrix of 
 features, and training a neural net with one hidden layer to be the classifier. Perhaps, it is because of this fancy new 
 'relu' neuron, and dropout, and using a non-sgd optimizer? Let's find out! Since my old features were indeed binary and in 
 a matrix, it takes very little work to make those be the dataset this neural net is trained with. And so, the  results:
@@ -208,8 +211,8 @@ a matrix, it takes very little work to make those be the dataset this neural net
 
 <br>
 
-Ouch. So yes, my old email-categorizing solution was fairly flawed. I can't say for sure, but I think it is a mix of overcontstraining the features
-(forcing the top senders, domains, and words from each category to be there). The Keras example just throws the top 1000 words into a big matrix without
+Ouch. So yes, my old email-categorizing solution was fairly flawed. I can't say for sure, but I think it is a mix of overconstraining the features
+(forcing the top senders, domains, and words from each category to be there) and having too few words. The Keras example just throws the top 1000 words into a big matrix without
 any more intelligent filtering, and lets the neural net have at it. Not limiting what the features can be lets better ones be discovered, and so the 
 overall accuracy is better. Well, that, or my code just sucks and has mistakes in it - modifying it to be less restrictive still only nets a 70% accuracy. 
 In any case, it's clear that I was able to beat my old result by leveraging a modern Deep Learning library, so the question now clearly is - can I do better?
@@ -217,11 +220,25 @@ In any case, it's clear that I was able to beat my old result by leveraging a mo
 #Doing Better
 
 When I first started looking at the Keras code, I was briefly excited by the mistaken notion that it would use the actual sequence of text (switched to numbers,
-but still in the correct order). It turned out that this was not the case - as we saw that first example just used an example with binary features indicating the 
+but still in the correct order). It turned out that this was not the case - as we saw that first example just uses a matrix with binary features indicating the 
 presence of the word anywhere in the text - but that does not mean that it can't be. Indeed, a very cool recent phenomena in machine learning is the resurgence of 
 recurrent neural nets, which are well suited for dealing with long sequences of data. So, instead of changing the emails into matrices of binary features it's possible to
-just change the words into numbers with the wordss frequency and feed in the entire sequence into a LSTM or GRU neural net. And, guess what? There is also a nice easy to copy-paste example of machine
-learning with these types of neural nets, so it is easy to fire up and see what happens:
+just change the words into numbers using the words' frequency ranking, and feed in the entire numeric sequence into a LSTM or GRU neural net:
+
+{% highlight python %}
+def get_keras_features(folder,nb_words=1000,as_matrix=True):
+    
+    #... All that code we saw before
+
+    if as_matrix:
+        feature_matrix = tokenizer.texts_to_matrix(texts, mode=matrix_type)
+        return feature_matrix,emailLabels,word_list,labels
+    else:
+        sequences = tokenizer.texts_to_sequences(texts)
+        return sequences,emailLabels,word_list,labels
+{% endhighlight %}
+
+I also introduced a bunch more functions at this point for storing the extracted features in CSV files and whatnot, all of which can be found [in the final code](https://github.com/andreykurenkov/emailinsight/blob/master/pyScripts/kerasClassify.py). And, guess what? There is also a nice easy to copy-paste Keras example of machine learning with these types of neural nets, so it is easy to fire up and see what happens:
 
 	Epoch 1/15
 	7264/7264 [===========================] - 1330s - loss: 2.3454 - acc: 0.2411 - val_loss: 2.0348 - val_acc: 0.3594
@@ -239,14 +256,12 @@ learning with these types of neural nets, so it is easy to fire up and see what 
 **Test accuracy: 0.786864931846**
 
 Darn it. Not only did the LSTM take FOREVER, but the results at the end were not that good. Presumably the reason for this is that my emails are just not that much data, 
-and in general sequences are not that useful for categorizing them. Okay, well, what now? Well, remember how I just sort of used the defaults of the example without thinking 
-too hard about it? Let's see if I can figure out a better approach. To start with, it 
+and in general sequences are not that useful for categorizing them. That is, the added complexity of learning on sequences does not overcome the benefit of seeing the text in 
+the correct order, since the sender and individual words in the email are good indicators of which category the email should be in as it is.
 
-
-Sadly, Keras itself does not have much in the way of visualization or inspection tools - but that does not mean we cannot jerry rig some together!
-To start with, of course, I google for what is already out there. And what I promptly find is an [ongoing discussion](https://github.com/fchollet/keras/issues/254) concerning  visualization,
+Okay, well, what now? Well, remember how I just sort of used the defaults of the example without thinking too hard about it? Let's see if I can figure out a better approach. To start with, it would be nice to just explore what is going on and think about what there is to try. Sadly, Keras itself does not have much in the way of visualization or inspection tools - but that does not mean we cannot jerry rig some together! First, of course, I google for what is already out there. And what I promptly find is an [ongoing discussion](https://github.com/fchollet/keras/issues/254) concerning  visualization,
 with no resolution in sight. Bummer, but not entirely - there exists [a fork of Keras](https://github.com/aleju/keras) with at least a nice way to graph the training progress. Not very useful,
-but fun, so let's do it! After hacking it a bit to plot batches instead of epochs, here is our first taste of sweet visuals:
+but fun, so let's do it. After hacking it a bit to plot batches instead of epochs, here is our first taste of sweet visuals:
 
 <figure>
     <img class="postimage" src="{{ site.url }}/writing/images/2016-1-13-neural-net-categorize-my-email/4-graph.png" alt="NN training"/> 
@@ -269,7 +284,7 @@ Again, interesting. The most basic and least information dense feature type, bin
 about the original data. This is not too unexpected, though - most likely more interesting words like 'code' or 'grade' are helpful for categorization, and having a single occurance in
 an email is likely almost as informative as more than one. No doubt the more exact features help somewhat, but also lead to worse performance due to more potential for overfitting. All in all,
 what we see is that the binary feature type is clearly the best one, and that increasing the number of words helps out quite a bit to get accuracies of about 87%-88%. 
-Okay, so I can stick with the binary features, and want to use at least 2500 words since the accuracy seems to plateau around point. 
+Okay, so I can stick with the binary features, and want to use at least 2500 words since the accuracy seems to plateau around that. 
 
 A good question to ask at this point is whether having all these words is actually what's important, and a simpler algorithm could do just fine if I just use these features. To answer, we also have a simple baseline algorithm with the k nearest neighbors ([from scikit](http://scikit-learn.org/stable/modules/neighbors.html)), which clearly performs much worse than the neural net but benefits from the more specific features. Linear regression performed even worse, so it seems my use of neural nets is justified. 
 
@@ -281,46 +296,38 @@ took a hefty amount of time:
     <figcaption>Linear increase in time as word count is increased. Not bad, really; linear regression was far worse</figcaption>    
 </figure>
 
-Okay, so increasing the number of words helps, but I am still not cracking the 90% mark - and I want to get an A here! So the next logical thing is to stick with 2500 words and look at varying the neural net size; 
-the default size of 512 seems more than sufficient for my small dataset, but it's worth seeing if altering this can help. Also, the example Keras model happens to have 50% dropout on the hidden layer and it 
-would be interesting to see if this actually meaningfully helps the performance. So, time to spin up another set of loops and get another pretty graph:
+So, increasing the number of words helps, but I am still not cracking the 90% mark - the coveted A threshold! So the next logical thing is to stick with 2500 words and look at varying the neural net size; 
+the default size of 512 seems more than sufficient for my small dataset, but it's worth seeing if altering this can help. Also, the example Keras model happens to have 50% dropout on the hidden layer and it would be interesting to see if this actually meaningfully helps the performance. So, time to spin up another set of loops and get another pretty graph:
 
 <figure>
     <img class="postimagesmaller" src="{{ site.url }}/writing/images/2016-1-13-neural-net-categorize-my-email/9-hidden_accs_zoomed.png" alt="Hidden accs"/> 
     <figcaption>Zoomed in view of accuracies for different dropouts and hidden layer sizes</figcaption>    
 </figure>
 
-Well, this is somewhat surprising - we don't need very many hidden layer units at all to do well! With lower dropout (less regularization), as few as 64 and 124 hidden neurons can do just about as well as
-the default of 512. These results are averaged across five runs, by the way, so mere variation in the outcomes does not account for the ability of small hidden layer to do well. This suggests that the large 
-word counts are helpful for just including the helpful features, but that there are not really that many helpful features to pick up - otherwise more neurons would be necessary to do better. This is good to know,
-since we can save quite a bit of time by using the smaller hidden layers:
+Well, this is somewhat surprising - we don't need very many hidden layer units at all to do well! With lower dropout (less regularization), as few as 64 and 124 hidden layer units can do just about as well as the default of 512. These results are averaged across five runs, by the way, so mere variation in the outcomes does not account for the ability of small hidden layers to do well. This suggests that the large word counts are good for just including the helpful features, but that there are not really that many helpful features to pick up on - otherwise more neurons would be necessary to do better. This is good to know, since we can save quite a bit of time by using the smaller hidden layers:
 
 <figure>
     <img class="postimagesmaller" src="{{ site.url }}/writing/images/2016-1-13-neural-net-categorize-my-email/10-hidden_times.png" alt="Hidden times"/> 
     <figcaption>Again, linear growth as we increase the hidden layer (as we'd hope since they are independnent of each other) </figcaption>    
 </figure>
 
-
-Well, hmm, that did not get me that coveted 90% test accuracy... Time to try being a little smarter about this. See, the current approach of making features out of the top 2500 frequent words is rather silly, in 
-that it includes common english words such as 'i' or 'that' along with useful category specific words such as 'homework' or 'due'. But, it's tricky to just guess a cutoff of most frequent words, or blacklist some
-number of words - you never know what turns out to be useful for features, since it is possible I happen to use one plain word more in one category than the others (such as 'Personal'). So, let's avoid the guesswork
-and instead rely on good ol' feature selection to pick out features that are actually good and filter out silly ones like 'i'. Again, this is easy using scikit and its [SelectKBest](http://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectKBest.html) class, and is fast enough that it barely takes any time compared to running the neural net. So, does this work? 
+Well, hmm, that did not get me that coveted 90% test accuracy... Time to try being a little smarter about this. See, the current approach of making features out of the top 2500 frequent words is rather silly, in that it includes common english words such as 'i' or 'that' along with useful category specific words such as 'homework' or 'due'. But, it's tricky to just guess a cutoff of most frequent words, or blacklist some number of words - you never know what turns out to be useful for features, since it is possible I happen to use one plain word more in one category than the others (such as the category 'Personal'). So, let's avoid the guesswork and instead rely on good ol' feature selection to pick out features that are actually good and filter out silly ones like 'i'. As with baseline testing, this is easy using scikit and its [SelectKBest](http://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectKBest.html) class, and is fast enough that it barely takes any time compared to running the neural net. So, does this work? 
 
 <figure>
     <img class="postimagesmaller" src="{{ site.url }}/writing/images/2016-1-13-neural-net-categorize-my-email/11-select_accs_zoomed_512.png" alt="Select accs"/> 
-    <figcaption>Yes, it works, 90%! </figcaption>    
+    <figcaption>Yes it works, 90%! </figcaption>    
 </figure>
 
-Very nice! Though there is still variance in the performance, more words to start with is clearly better, but this set of words can be cut down rather heavily with feature selection and still work well. Apparently the neural net has no problem with undefitting if all the words are kept around - probably because as we saw with the small hidden layers there are not really that many features that need to be picked up - but doing feature selection does help out with speed.
+Very nice! Though there is still variance in the performance, more words to start with is clearly better, but this set of words can be cut down rather heavily with feature selection without reducing performance. Apparently the neural net has no problem with undefitting if all the words are kept around - probably because as we saw with the small hidden layers there are not really that many features that need to be picked up on - but doing feature selection does help out with speed.
 
 <figure>
     <img class="postimagesmaller" src="{{ site.url }}/writing/images/2016-1-13-neural-net-categorize-my-email/12-select_accs_zoomed_32.png" alt="Select accs 32"/> 
     <figcaption>The same test with only 32 hidden layer units, with the previous one having 512 - still quite good performance </figcaption>    
 </figure> 
 
-#Final Thoughts
+#Final Tweaks
 
-Having achieved my goal of 90% test set accuracy and been unsuccesful with other ideas (increasing the number of layers, for example), it's about this point that I decide this is good enough and about time for me to start feeiling self satisfied. But, then I get distracted again and do a few more things. Namely, this stuff still takes forever to run in large part because I have yet to make use of the now standard trick of doing machine learning with a GPU. So, following a [very nice tutorial](http://deeplearning.net/software/theano/install_ubuntu.html) I do just that, and smile with satisfaction:
+Having achieved my goal of 90% test set accuracy and been unsuccesful with other ideas (increasing the number of layers, for example), it's about this point that I decide this is good enough and about time for me to start feeling self satisfied with having gotten some nice results. But, then I get distracted again and do a few more things. Namely, this stuff still takes forever to run, in large part because I have yet to make use of the now standard trick of doing machine learning with a GPU. So, following a [very nice tutorial](http://deeplearning.net/software/theano/install_ubuntu.html) I do just that, and smile with satisfaction:
 
 <figure>
     <img class="postimagehalf" src="{{ site.url }}/writing/images/2016-1-13-neural-net-categorize-my-email/13-select_times_512.png" alt="Select times"/> 
@@ -348,9 +355,8 @@ specific words. Another interesting thing to look at is what mistakes the neural
     <figcaption>The confusion matrix for the neural net results</figcaption>    
 </figure>
 
-The visualization here implies the 'Unread' and 'Important' categories are problem makers. But wait! I did not even create those, I don't really care about things working correctly with those, nor with 'Sent'.  Clearly I should take those out and see if the neural net can do a good job specifically with the categories I created for myself. So, let's wrap up with a final experiment in which those irrelevant categories are removed and we use the most features of any run so far - 10000 words with selection of the 4000 best:
+Okay, nice, most of the color is along the diagonal, but there are still some annoying blotches elsewhere. In particular, the visualization implies the 'Unread' and 'Important' categories are problem makers. But wait! I did not even create those, I don't really care about things working correctly with them, nor with 'Sent'. Clearly I should take those out and see if the neural net can do a good job specifically with the categories I created for myself. So, let's wrap up with a final experiment in which those irrelevant categories are removed and we use the most features of any run so far - 10000 words with selection of the 4000 best:
 
-	Epoch 1/5
 	Epoch 1/5
 	5850/5850 [==============================] - 2s - loss: 0.8013 - acc: 0.7879 - val_loss: 0.2976 - val_acc: 0.9369
 	Epoch 2/5
@@ -372,7 +378,7 @@ The visualization here implies the 'Unread' and 'Important' categories are probl
 </figure>
 
 
-How about that! After all that, the neural net can predict categories that are right 94% of the time. I don't know if not many people use categories in gmail, but if it really is this easy to make a classifier that is right most of the time, I would really like it if gmail indeed had such a machine-learned approach to one-click email organizing. But, for now, I can just feel nice knowing I managed to get a 20% improvement over my last attempt at this, and improve neural net performance from the F it got last time I tried to the A it receives now.
+How about that! The neural net can predict categories that are right 94% of the time. I don't know if few people use categories in gmail, but if it really is this easy to make a classifier that is right most of the time, I would really like it if gmail indeed had such a machine-learned approach to suggesting a category for each email for one-click email organizing. But, for now, I can just feel nice knowing I managed to get a 20% improvement over my last attempt at this, and improve neural net performance from the F it got last time I tried to the A it receives now.
 
 
 
