@@ -179,17 +179,19 @@
     <figcaption>Or, how to make this happen with your gmail data. The entirety of the code used for this post <b><a href="https://github.com/andreykurenkov/emailinsight/tree/master/pyScripts">can be found here</a></b>. </figcaption>    
 </figure>
 
-<p>I have always been fond of school projects that actually trust me to have interest in what I am learning. Sadly, most undergraduate school assignments don’t, but there are those rare projects that require the student to engage with what they are learning by partially defining the problem they set out to solve - tasking the student with being creative! One of my favorite assignments of this kind was the first project of the Georgia Tech Intro to Machine Learning class, and provided me with an excuse to do something I consider very fun: teach a neural net to categoize my emails, as I did with <a href="http://www.andreykurenkov.com/projects/hacks/email-filer/">EmailFiler</a>.</p>
-
 <h1 id="emailfiler-v1">EmailFiler V1</h1>
-<p>Basically, the assignment was to pick some datasets, throw a bunch of supervised learning algorithms at them, and analyze the results. But here’s the thing: we could make our own datasets if we so chose. And so choose I did - to export my gmail data and explore the feasibility of machine-learned email categorization. See, I learned long ago that it’s often best to keep emails around in case there is randomly some need to refer back to them in the future. But, I also learned that I can’t help but strive for the ideal of the empty inbox (hopeless as that may be). So, years ago I started categorizing my emails into about a dozen folders within gmail, and by the point I took the machine learning class I had many thousands of emails spread across these categories. It seemed like a great application of ML to make a classifier that could suggest a single category for each email in the inbox for one-click organizing of it.</p>
+<p>One of my favorite small projects, <a href="http://www.andreykurenkov.com/projects/hacks/email-filer/">EmailFiler</a>, was motivated by a school assignment for Georgia Tech’s Intro to Machine Learning class. Basically, the assignment was to pick some datasets, throw a bunch of supervised learning algorithms at them, and analyze the results. But here’s the thing: we could make our own datasets if we so chose. And so choose I did - to export my gmail data and explore the feasibility of machine-learned email categorization.</p>
+
+<p>See, I learned long ago that it’s often best to keep emails around in case there is randomly some need to refer back to them in the future. But, I also learned that I can’t help but strive for the ideal of the empty inbox (hopeless as that may be). So, years ago I started categorizing my emails into about a dozen folders within gmail, and by the point I took the machine learning class I had many thousands of emails spread across these categories. It seemed like a great application of ML to make a classifier that could suggest a single category for each email in the inbox, so there could be a button by each email in the inbox for quickly putting into the correct category.</p>
 
 <figure>
     <img class="postimageactual" src="/writing/images/2016-1-13-neural-net-categorize-my-email/1-emailscategories.png" alt="Emails categories" /> 
     <figcaption>The set of categories and email counts I worked with at the time</figcaption>    
 </figure>
 
-<p>Well, I had my input data, the emails, and my labels, the categories, and even a nice button to export all the data in .mbox format - easy right? Not so fast. Though I was not exactly striving for full NLP text comprehension, I still wanted to learn using email text and metadata, and at first did not really know how to convert this data into nice a machine-learnable dataset. The simple answer to this, as any person who has taken NLP can quickly point out, is to use a Bag of Words approach. This is about as simple an approach as you can take with text classification - just find what the most common N words in all the text instances are, and then create binary features for each word such that a feature has a value of 1 for an instance of text if it contains the word, and a 0 otherwise. I did this for the top 500 words in all my emails, and separately for the top 20 senders of the emails (since in some cases the sender should correlate strongly with the category , such as the sender being my research adviser and the category ‘research’), and for the top 5 domains the email was sent from (since a few like piazza and gatech.edu would be strongly indicative for categories like ‘TA’ and ‘academic’). So, after an hour or so of writing <a href="https://github.com/andreykurenkov/emailinsight/blob/master/pyScripts/mboxConvert.py">mbox parsing code</a> I ended up with the function that output my actual dataset as a csv; looking over it may clarify how simple these features really were:</p>
+<p>Well, I had my inputs, the emails, and my outputs, the categories, and even a nice button to easily export all that data in a nice format - easy right? Not so fast. Though I was not exactly striving for full text comprehension, I still wanted to learn using email text and metadata, and at first did not really know how to convert this data into a nice machine-learnable dataset. As any person who has studied Natural Language Processing can quickly point out, one easy approach is to use Bag of Words features. This is about as simple an approach as you can take with text classification - just find what the most common N words in all the text instances are, and then create binary features for each word (meaning a feature that has a value of 1 for an instance of text if it contains the word, and a 0 otherwise).</p>
+
+<p>I did this for a bunch of words found in all my emails, and also for the top 20 senders of the emails (since in some cases the sender should correlate strongly with the category, such as the sender being my research adviser and the category ‘research’), and for the top 5 domains the email was sent from (since a few domans like @gatech.edu would be strongly indicative for categories like ‘TA’ and ‘academic’). So, after an hour or so of writing <a href="https://github.com/andreykurenkov/emailinsight/blob/master/pyScripts/mboxConvert.py">mbox parsing code</a> I ended up with the function that output my actual dataset as a csv; looking over it may clarify how simple these features really were:</p>
 
 <div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#...bunch of parsing code above this</span>
 <span class="k">def</span> <span class="nf">mboxToBinaryCSV</span><span class="p">(</span><span class="n">folder</span><span class="p">,</span><span class="n">csvfile</span><span class="o">=</span><span class="s">&#39;data.csv&#39;</span><span class="p">,</span><span class="n">perLabel</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>                  
@@ -214,7 +216,7 @@
         <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">topWords</span><span class="p">:</span>                                                   
             <span class="n">outputFile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;1, &#39;</span> <span class="k">if</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">email</span><span class="o">.</span><span class="n">words</span> <span class="k">else</span> <span class="s">&#39;0,&#39;</span><span class="p">)</span></code></pre></div>
 
-<p>So, how well did it work? Well, but not as well as I hoped. At the time I was fond of the Orange Python ML framework, and so as per the assignment <a href="https://github.com/andreykurenkov/emailinsight/blob/master/pyScripts/orangeClassify.py">tested</a> how well a bunch of algorithms did against my dataset. The best I got was about 75% accuracy on the test set, with the standouts being decision trees, as the best algorithm, and neural nets, as the worst:</p>
+<p>So, how well did it work? Well, but not as well as I hoped. At the time I was fond of the Orange Python ML framework, and so as per the assignment <a href="https://github.com/andreykurenkov/emailinsight/blob/master/pyScripts/orangeClassify.py">tested</a> how well a bunch of algorithms did against my dataset. The standouts were decision trees, as the best algorithm, and neural nets, as the worst:</p>
 
 <figure>
     <img class="postimagesmaller" src="/writing/images/2016-1-13-neural-net-categorize-my-email/2-emailsdtree.png" alt="DTrees emails" /> 
@@ -226,16 +228,20 @@
     <figcaption>... And now neural nets </figcaption>    
 </figure>
 
-<p>If you take a close look at those beautiful OpenOffice Calc plots, you will see that the best Decision Trees managed to achieve on the test set is roughly 72%, and that neural nets could only get to a measly 65% - an F! Way better than random, considering there are 11 categories, but far from great. Why the disappointing result? Well, as we saw the features created for the dataset are very simple - just selecting the 500 most frequent words will yield a few good indicators, but also many generic terms that just appear a lot in english such as ‘that’ or ‘is’. I understood this at the time and tried a few things - removing 3-character words entirely, and writing some annoying code to select the most frequent words in each category specifically rather than in all the emails - but ultimately did not manage to figure out how to get better results.</p>
+<p>If you take a close look at those beautiful OpenOffice Calc plots, you will see that the best Decision Trees managed to achieve on the test set is roughly 72%, and that neural nets could only get to a measly 65% - an F! Way better than random, considering there are 11 categories, but far from great.</p>
+
+<p>Why the disappointing result? Well, as we saw the features created for the dataset are very simple - just selecting the 500 most frequent words will yield a few good indicators, but also many generic terms that just appear a lot in english such as ‘that’ or ‘is’. I understood this at the time and tried a few things - removing 3-character words entirely, and writing some annoying code to select the most frequent words in each category specifically rather than in all the emails - but ultimately did not manage to figure out how to get better results.</p>
 
 <h1 id="enter-keras">Enter Keras</h1>
-<p>So, why am I writing this, if I did this years ago and got fairly lame results (albeit a good grade!) then? In short, to try again. Having just completed a <a href="http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning/">giant 4-part history of neural networks and Deep Learning</a>, and in so doing learned what fancy modern terms like ‘dropout’ and ‘relu’ mean, it seemed only appropriate to dive into a modern machine learning framework and see what I could do.</p>
+<p>So, why am I writing this, if I did this years ago and got fairly lame results (albeit a good grade) then? In short, to try again. Having just completed a <a href="http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning/">giant 4-part history of neural networks and Deep Learning</a>, and in so doing learned what fancy modern terms like ‘dropout’ and ‘relu’ mean, it seemed only appropriate to dive into a modern machine learning framework and see what I could do.</p>
 
-<p>But, where to start? By picking the toys, of course! The framework I decided to try working with is <a href="http://keras.io/">Keras</a>, both because it is in Python (which seems to be a favorite for data science and machine learning nowdays, and plays nice with the wonderful <a href="http://www.numpy.org/">numpy</a>, <a href="http://pandas.pydata.org/">pandas</a>, and <a href="http://www.numpy.org/">scikit-learn</a>) and because it is backed by the well regarded Theano library. It also just so happenes that Keras also has several easy to copy-paste examples to get started with, including one with a <a href="https://github.com/fchollet/keras/blob/master/examples/reuters_mlp.py">multi-category text classification problem</a> that is almost exactly what my email problem. And, here’s the interesting thing - the example uses just about the same features as I did for my class project. It finds the 1000 most frequent words in the documents, makes those into binary features, and trains a neural net with one hidden layer and dropout to predict the category of input text based solely of those features.</p>
+<p>But, where to start? By picking the toys, of course! The framework I decided to try is <a href="http://keras.io/">Keras</a>, both because it is in Python (which seems to be a favorite for data science and machine learning nowdays, and plays nice with the wonderful <a href="http://www.numpy.org/">numpy</a>, <a href="http://pandas.pydata.org/">pandas</a>, and <a href="http://www.numpy.org/">scikit-learn</a>) and because it is backed by the well regarded Theano library.</p>
 
-<p>So, the obvious first thing to try is exactly this, but with my own data - see if doing feature extraction with Keras will work better. Luckily, I can still use my old mbox parsing code and so create the word features with Keras is quite easy:</p>
+<p>It also just so happens that Keras has several easy to copy-paste examples to get started with, including one with a <a href="https://github.com/fchollet/keras/blob/master/examples/reuters_mlp.py">multi-category text classification problem</a>. And, here’s the interesting thing - the example uses just about the same features as I did for my class project. It finds the 1000 most frequent words in the documents, makes those into binary features, and trains a neural net with one hidden layer and dropout to predict the category of input text based solely of those features.</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">get_keras_features</span><span class="p">(</span><span class="n">folder</span><span class="p">,</span><span class="n">nb_words</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span><span class="n">test_split</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
+<p>So, the obvious first thing to try is exactly this, but with my own data - see if doing feature extraction with Keras will work better. Luckily, I can still use my old mbox parsing code and so creating the word features with Keras is quite easy using its Tokernizer:</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">get_keras_features</span><span class="p">(</span><span class="n">emails</span><span class="p">,</span><span class="n">nb_words</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span><span class="n">test_split</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
     <span class="p">(</span><span class="n">totalWordsCount</span><span class="p">,</span><span class="n">fromCount</span><span class="p">,</span><span class="n">domainCount</span><span class="p">,</span><span class="n">labels</span><span class="p">)</span> <span class="o">=</span> <span class="n">getEmailStats</span><span class="p">(</span><span class="n">emails</span><span class="p">)</span>   
    
     <span class="c">#...Some boring filtering in between code and print outs</span>
@@ -287,8 +293,8 @@ Total emails: 8023
 </code></pre>
 
 <p>Eight thousand emails - not a giant dataset by any stretch, but nevertheless enough to do some serious machine learning. 
-So, I can generate the data in the correct format, and now it is just a matter of seeing if training a neural net with it works. 
-So, at this point all I have is really a small python file with the above and a basically a copy of the Keras example:</p>
+So, I can convert the data to the correct format, and now it is just a matter of seeing if training a neural net with it works. 
+The Keras example shows how easy it is to take such data and use it to train a small-ish neural net with one hidden layer:</p>
 
 <div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">max_words</span> <span class="o">=</span> <span class="mi">1000</span>
 <span class="n">batch_size</span> <span class="o">=</span> <span class="mi">32</span>
@@ -321,8 +327,7 @@ So, at this point all I have is really a small python file with the above and a 
 <span class="k">print</span><span class="p">(</span><span class="s">&#39;Test score:&#39;</span><span class="p">,</span> <span class="n">score</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="k">print</span><span class="p">(</span><span class="s">&#39;Test accuracy:&#39;</span><span class="p">,</span> <span class="n">score</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span></code></pre></div>
 
-<p>Before long that file will grow to be over 500 lines of code, but let’s not get ahead of ourselves… As you can see, there are a
-whole bunch of parameters here, and it’s hard to say if they are all correct. But let’s just run with it and see what happens:</p>
+<p>As you can see, there are a whole bunch of parameters here, and it’s hard to say if they are all correct. But let’s just run with it and see what happens:</p>
 
 <pre><code>7221 train sequences
 802 test sequences
@@ -344,10 +349,11 @@ Test score: 0.585222780162
 
 <p><strong>Test accuracy: 0.847880299252</strong></p>
 
-<p><br /></p>
+<p>Hell yeah 85% test accuracy! That handily beats the measly 65% score of my old neural net. Awesome.</p>
 
-<p>Hell yeah 85% test accuracy! That handily beats the measly 65% score of my old neural net. Awesome. Except… why?<br />
-I mean, my old code was doing basically this - finding the most frequent words, creating a binary matrix of 
+<p>Except… why?</p>
+
+<p>I mean, my old code was doing basically this - finding the most frequent words, creating a binary matrix of 
 features, and training a neural net with one hidden layer to be the classifier. Perhaps, it is because of this fancy new 
 ‘relu’ neuron, and dropout, and using a non-sgd optimizer? Let’s find out! Since my old features were indeed binary and in 
 a matrix, it takes very little work to make those be the dataset this neural net is trained with. And so, the  results:</p>
@@ -368,13 +374,11 @@ Test score: 1.03195088158
 
 <p><strong>Test accuracy: 0.64603960396</strong></p>
 
-<p><br /></p>
-
 <p>Ouch. So yes, my old email-categorizing solution was fairly flawed. I can’t say for sure, but I think it is a mix of overconstraining the features
 (forcing the top senders, domains, and words from each category to be there) and having too few words. The Keras example just throws the top 1000 words into a big matrix without
 any more intelligent filtering, and lets the neural net have at it. Not limiting what the features can be lets better ones be discovered, and so the 
 overall accuracy is better. Well, that, or my code just sucks and has mistakes in it - modifying it to be less restrictive still only nets a 70% accuracy. 
-In any case, it’s clear that I was able to beat my old result by leveraging a modern Deep Learning library, so the question now clearly is - can I do better?</p>
+In any case, it’s clear that I was able to beat my old result by leveraging a newer ML library, so the question now clearly is - can I do better?</p>
 
 <h1 id="doing-better">Doing Better</h1>
 
@@ -417,7 +421,9 @@ Test score: 0.861739277323
 and in general sequences are not that useful for categorizing them. That is, the added complexity of learning on sequences does not overcome the benefit of seeing the text in 
 the correct order, since the sender and individual words in the email are good indicators of which category the email should be in as it is.</p>
 
-<p>Okay, well, what now? Well, remember how I just sort of used the defaults of the example without thinking too hard about it? Let’s see if I can figure out a better approach. To start with, it would be nice to just explore what is going on and think about what there is to try. Sadly, Keras itself does not have much in the way of visualization or inspection tools - but that does not mean we cannot jerry rig some together! First, of course, I google for what is already out there. And what I promptly find is an <a href="https://github.com/fchollet/keras/issues/254">ongoing discussion</a> concerning  visualization,
+<p>Okay, well, what now? Well, remember how I just sort of used the defaults of the example without thinking too hard about it? Let’s see if I can figure out a better approach. To start with, it would be nice to just explore what is going on and think about what there is to try. Sadly, Keras itself does not have much in the way of visualization or inspection tools - but that does not mean we cannot jerry rig some together!</p>
+
+<p>First, of course, I google for what is already out there. And what I promptly find is an <a href="https://github.com/fchollet/keras/issues/254">ongoing discussion</a> concerning  visualization,
 with no resolution in sight. Bummer, but not entirely - there exists <a href="https://github.com/aleju/keras">a fork of Keras</a> with at least a nice way to graph the training progress. Not very useful,
 but fun, so let’s do it. After hacking it a bit to plot batches instead of epochs, here is our first taste of sweet visuals:</p>
 
@@ -427,7 +433,9 @@ but fun, so let’s do it. After hacking it a bit to plot batches instead of epo
 </figure>
 
 <p>Interesting - the cross validation between epochs results in big jumps in training accuracy, not something I’d expect. But, more pertinently, it’s easy to see the training accuracy
-just about reaches 1.0 and definitely plateaus. Okay, good, but the harder problem is increasing the test accuracy. As before, the first question is whether I can quickly alter the 
+just about reaches 1.0 and definitely plateaus.</p>
+
+<p>Okay, good, but the harder problem is increasing the test accuracy. As before, the first question is whether I can quickly alter the 
 feature representation to help the neural net out. The Keras module that converts the text into matrices has several options besides making a binary matrix: matrices with word counts,
 frequencies, or tfidf values. It is also very easy to alter the amount of words kept in the matrices as features, and so being the amazing programmer that I am I manage to write a few
 loops to evaluate how varying the feature type and word count affects the test accuracy. Not only that, but I even make a pretty plot of the results with python:</p>
@@ -440,8 +448,9 @@ loops to evaluate how varying the feature type and word count affects the test a
 
 <p>Again, interesting. The most basic and least information dense feature type, binary 1s or 0s indicating word presence, is about as good or better than the other features that convey more 
 about the original data. This is not too unexpected, though - most likely more interesting words like ‘code’ or ‘grade’ are helpful for categorization, and having a single occurance in
-an email is likely almost as informative as more than one. No doubt the more exact features help somewhat, but also lead to worse performance due to more potential for overfitting. All in all,
-what we see is that the binary feature type is clearly the best one, and that increasing the number of words helps out quite a bit to get accuracies of about 87%-88%. 
+an email is likely almost as informative as more than one. No doubt the more exact features help somewhat, but also lead to worse performance due to more potential for overfitting.</p>
+
+<p>All in all, what we see is that the binary feature type is clearly the best one, and that increasing the number of words helps out quite a bit to get accuracies of about 87%-88%. 
 Okay, so I can stick with the binary features, and want to use at least 2500 words since the accuracy seems to plateau around that.</p>
 
 <p>A good question to ask at this point is whether having all these words is actually what’s important, and a simpler algorithm could do just fine if I just use these features. To answer, we also have a simple baseline algorithm with the k nearest neighbors (<a href="http://scikit-learn.org/stable/modules/neighbors.html">from scikit</a>), which clearly performs much worse than the neural net but benefits from the more specific features. Linear regression performed even worse, so it seems my use of neural nets is justified.</p>
@@ -536,7 +545,7 @@ Test score: 0.243211859068
     <figcaption>The confusion matrix for the updated neural net results</figcaption>    
 </figure>
 
-<p>How about that! The neural net can predict categories that are right 94% of the time. I don’t know if few people use categories in gmail, but if it really is this easy to make a classifier that is right most of the time, I would really like it if gmail indeed had such a machine-learned approach to suggesting a category for each email for one-click email organizing. But, for now, I can just feel nice knowing I managed to get a 20% improvement over my last attempt at this, and improve neural net performance from the F it got last time I tried to the A it receives now.</p>
+<p>How about that! The neural net can predict categories that are right 94% of the time. Though, most of that is due to the large feature set - a better comparison classifier (scikit-learn’s <a href="http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.PassiveAggressiveClassifier.html#sklearn.linear_model.PassiveAggressiveClassifier.fit">Passive Aggressive classifier</a>) itself gets 91% on the same exact data. I don’t know if few people use categories in gmail, but if it really is this easy to make a classifier that is right most of the time, I would really like it if gmail indeed had such a machine-learned approach to suggesting a category for each email for one-click email organizing. But, for now, I can just feel nice knowing I managed to get a 20% improvement over my last attempt at this, and improve neural net performance from the F it got last time I tried to the A it receives now.</p>
 
 
 
@@ -575,6 +584,7 @@ Test score: 0.243211859068
         
           <section id="disqus_thread"></section><!-- /#disqus_thread -->
         
+         <span><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</span>
       </div>
     </div><!-- /.article-wrap -->
   </article>
