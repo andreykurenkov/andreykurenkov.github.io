@@ -10,12 +10,20 @@ comments: true
 author: andrey_kurenkov
 excerpt: "Criticizing, and rewriting, an old school essay"
 ---
-Part of the reason I keep doing this whole writing thing, aside from it being fun, is that I was never very good at it. Oh, sure, peer review in English class has shown me most everyone is fairly horrendous at it, 
+<figure>
+    <img class="postimagesmaller" src="{{ site.url }}/writing/images/2016-1-22-grading-my-own-scool-essay/fire.jpg" alt="Fire"/> 
+</figure>
 
+#School Essays
+Part of the reason I keep doing this whole writing thing in my free time, aside from enjoying it, is that I was never very good at it. Oh, I was always fond of it, of putting together thoughts and arguments and analyses. But lets just say my worst grades in High School were in classes that involved writing essays. And, truthfully, I am pretty sure those essays deserved the bad grades they got; my writing was dense, overlong, and just dry. 
+
+
+#What This Is
 <del>Text with strikethrough </del>  is from the original essay, removed now.
+
 **Text with emphasis**  was not in the original essay, and I now think it should be there.
 
-#"A Camera’s View of Soviet Society in Man with a Movie Camera"
+#"A Camera’s View of Soviet Society in Man with a Movie Camera" - Revised
 
 Dziga Vertov’s <del>last and most radical film experiment, 1929’s </del> [^1] Man with a Movie Camera**, the greatest documentary of all time as ranked in _Sight & Sound's_ 2014 poll of prominent directors,** begins with a series of intertitles that end with the following: “This experimental work is made with the intention of constructing a genuine international and absolutely visual language of cinema, on the basis of its total separation from the language of theater and literature” (Petric 40) [^2]. <del>The separation of the language of cinema from the languages of other artistic media is central to Vertov’s theory and drive as a Soviet avant-garde filmmaker, and was most impactfully expressed by what follows the intertitles in Man with a Movie Camera.</del> [^3] And, amazingly, that's exactly what the movie is: a radical vision of cinema fully free from the influence of theatre and literature. <del>The movie starts with the opening of a theatre, the entrance of the audience, and then the projection of the movie itself:</del> **** often frantically edited shots of various aspects of daily Soviet experience and the filmmaking process that noticeably lack any actors, sets, additional intertitles, or even a script. [^4] Because of this experimental form, Vertov’s film is at once a commentary on and a part of the histories of both cinematic expression and the Soviet Union. Because it promotes an ambitious argument as to what cinema should fundamentally aspire to be, the film is inextricably linked to the context of the history of cinema at large as well as the history of Soviet experimentation and the “Cinema-Eye” movement specifically. This argumentative intent with regards to cinema history defines the style and content of the film and is reflected in them. However, the style and content were formed not only to express Vertov’s theory of what cinema should be, but also to use this expression of his theory in practice to present a clear and idealized vision of Soviet society and ideology.   
 
@@ -37,7 +45,7 @@ Vertov, Dziga. "The Factory of Facts and Other Writings." October, 7 (1978): 109
 
 [^1]: First, this was not his last film - what was I smoking? Secondly, though it is intriguing to open with the radical claim, the reader may know nothing of the director, so why go with 'most' here? 
 [^2]: Still long, but better - the quote still introduced the substance of the movie and is enticing the reader by telling them they have no clue about the best documentary of all time.
-[^3]: Doesn't this just sound like a school essay? Just jumping in, making points, but making more effort to sound smart than to read well.
+[^3]: Doesn't this just sound like a school essay? Dry, kind of repetetive, making points about Vertov's whole career I won't back up.
 [^4]: The movie starts in a cool way, but I don't really say anything about it - why mention it? What I really want to get to is the second part.
 
 

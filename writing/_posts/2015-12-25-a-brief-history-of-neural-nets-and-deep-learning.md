@@ -101,6 +101,13 @@ If we think about ADALINE a bit more we will come up with a further insight: fin
 
 > "The Navy revealed the embryo of an electronic computer today hat it expects will be able to walk, talk, see, write, reproduce itself an be conscious of its existence ... Dr. Frank Rosenblatt, a research psychologist at the Cornell Aeronautical Laboratory, Buffalo, said Perceptrons might be fired to the planets as mechanical space explorers" 
 
+Or, have a look at this TV segment from the time:
+
+<figure>
+    <iframe width="420" height="315" src="https://www.youtube.com/embed/aygSMgK3BEM" frameborder="0" allowfullscreen></iframe>
+    <figcaption>The stuff promised in this video - still not really around.</figcaption>    
+</figure>  
+
 This sort of talk no doubt irked other researchers in AI, many of whom were focusing on approaches based on manipulation of symbols with concrete rules that followed from the mathematical laws of logic. Marvin Minsky, founder of the MIT AI Lab, and Seymour Papert were some of the researchers who were skeptical of the hype and in 1969 published their skepticism in the form of rigorous analysis on of the limitations of Perceptrons in a seminal book aptly named [Perceptrons](https://mitpress.mit.edu/books/perceptrons)[^7]. The most widely discussed element of their analysis is the elucidation of the limits of a Perceptron - they could not, for instance, learn the simple boolean function XOR because it is not **linearly separable**. Though the history here is vague, this publication is widely believed to have helped usher in the first of the **AI Winters** - a period following a massive wave of hype for AI characterized by disillusionment that causes a freeze to funding and publications. 
 
 <figure>
