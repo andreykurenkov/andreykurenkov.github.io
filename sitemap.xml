@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>/writing/what-brief-hacker-news-fame-looks-like/</loc>
+    <lastmod>2016-01-22T18:19:34-08:00</lastmod>
+  </url>
+  <url>
     <loc>/writing/organizing-my-emails-with-a-neural-net/</loc>
     <lastmod>2016-01-13T18:19:34-08:00</lastmod>
   </url>
@@ -184,13 +188,22 @@
     <loc>/about/</loc>
   </url>
   <url>
-    <loc>/writing/</loc>
-  </url>
-  <url>
     <loc>/projects/</loc>
   </url>
   <url>
     <loc>/</loc>
+  </url>
+  <url>
+    <loc>/writing/</loc>
+  </url>
+  <url>
+    <loc>/writing/tag/writing/</loc>
+  </url>
+  <url>
+    <loc>/writing/tag/life/</loc>
+  </url>
+  <url>
+    <loc>/writing/tag/meta/</loc>
   </url>
   <url>
     <loc>/writing/tag/ML/</loc>
@@ -208,9 +221,6 @@
     <loc>/writing/tag/art/</loc>
   </url>
   <url>
-    <loc>/writing/tag/meta/</loc>
-  </url>
-  <url>
     <loc>/writing/tag/film/</loc>
   </url>
   <url>
@@ -218,9 +228,6 @@
   </url>
   <url>
     <loc>/writing/tag/quasi-essay/</loc>
-  </url>
-  <url>
-    <loc>/writing/tag/life/</loc>
   </url>
   <url>
     <loc>/writing/tag/work/</loc>
@@ -304,19 +311,23 @@
     <loc>/projects/tag/simulation/</loc>
   </url>
   <url>
-    <loc>/writing/tag/software/index.html</loc>
-    <lastmod>2016-01-14T12:22:17-08:00</lastmod>
-  </url>
-  <url>
-    <loc>/writing/tag/technical/index.html</loc>
-    <lastmod>2016-01-14T12:22:17-08:00</lastmod>
-  </url>
-  <url>
-    <loc>/writing/tag/NN/index.html</loc>
-    <lastmod>2016-01-14T12:22:17-08:00</lastmod>
+    <loc>/writing/tag/writing/index.html</loc>
+    <lastmod>2016-01-20T19:18:37-08:00</lastmod>
   </url>
   <url>
     <loc>/writing/tag/ML/index.html</loc>
-    <lastmod>2016-01-14T12:22:17-08:00</lastmod>
+    <lastmod>2016-01-20T19:18:37-08:00</lastmod>
+  </url>
+  <url>
+    <loc>/writing/tag/technical/index.html</loc>
+    <lastmod>2016-01-20T19:18:37-08:00</lastmod>
+  </url>
+  <url>
+    <loc>/writing/tag/NN/index.html</loc>
+    <lastmod>2016-01-20T19:18:37-08:00</lastmod>
+  </url>
+  <url>
+    <loc>/writing/tag/software/index.html</loc>
+    <lastmod>2016-01-20T19:18:37-08:00</lastmod>
   </url>
 </urlset>
