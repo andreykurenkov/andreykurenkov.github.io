@@ -10,7 +10,7 @@ comments: true
 author: andrey_kurenkov
 excerpt: "Some graphs and stats about a post that made it to the Hacker News front page"
 ---
-The most traffic this site has ever received in one hour is precisely 1,814 pageviews, at 11:00 AM on January 15th, 2016, when [A 'Brief' History of Neural Nets and Deep Learning'](http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning/) hit the front page on Hacker News (a site very popular among programmers, researchers and basically all manner of technical people who can slack off at work by browsing the internet). As an extremely humble person (and fan of wry ironic wording), I debated whether to write about this and the ensuing traffic spike to my site for a while due to it perhaps seeming self congratulatory. But there are some fun graphs to share and it would be nice to write something short for a change, so why not.
+The most traffic this site has ever received in one hour is precisely 1,814 pageviews, at 11:00 AM on January 15th, 2016, when [A 'Brief' History of Neural Nets and Deep Learning'](http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning/) hit the front page on Hacker News (a site very popular among programmers, researchers and basically all manner of technical people who can slack off at work by browsing the internet). As an extremely humble person (and fan of wry ironic wording), I debated whether to write about this for a while due to it perhaps seeming self congratulatory. But there are some fun graphs to share and it would be nice to write something short for a change, so why not.
 
 Let's start back when I first released this 'Brief' history writeup. 
 
@@ -18,19 +18,19 @@ Let's start back when I first released this 'Brief' history writeup.
     <img class="postimage" src="{{ site.url }}/writing/images/2016-1-21-what-brief-hacker-news-fame-looks-like/1-traffic.png" alt="Traffic 1"/>     
 </figure>
 
-I finally finished an acceptable draft of the history on December 24th, after roughly a month and half of working on it, just as I was preparing to start my vacation. Being quite ready to be done with this prolonged writing project, I went ahead and posted it, and shared the result on Facebook as I have often done with my posts. As you can see, 7 people actually took a look at it on Christmas, surprisingly. But, as was typical then, the highest session counts per day did not crack the double digits. Fast forward two weeks, and the picture looks quite different.
+I finally finished an acceptable draft of the history on December 24th, after roughly a month and a half of working on it. Being quite ready to be done with this prolonged writing project and go on vacation, I went ahead and posted it, and shared the result on Facebook as I have often done with my posts. As you can see, 7 people actually took a look at it on Christmas, surprisingly. But, as was typical then, the highest session counts per day did not crack the double digits. Fast forward two weeks, and the picture looks quite different.
 
 <figure>
     <img class="postimage" src="{{ site.url }}/writing/images/2016-1-21-what-brief-hacker-news-fame-looks-like/2-traffic.png" alt="Traffic 2"/>   
 </figure>
 
-Then, on January 5th the good people over at /r/machinelearning graced my little history with 13 upvotes and a good deal of traffic, which for me was very exciting. I've never shared the writing outside of Facebook and LinkedIn before, but since this one was by far my largest writing effort I figured it was worth seeing if others would like it. And worth it it was - the sessions were now in the triple digits. Not only that, but I was getting a bit of positive feedback, which was very exciting - I mostly worked on the history for my own gratification, so seeing others read and compliment it felt great. And, well, can you guess what happend next? 
+Then, on January 5th the good people over at /r/machinelearning graced my little history with 13 upvotes and a good deal of traffic, which for me was very exciting. I've never shared the writing outside of Facebook and LinkedIn before, but since this one was by far my largest writing effort I figured it was worth seeing if others would like it. And worth it it was - the sessions were now in the triple digits. Not only that, but I was getting a bit of positive feedback, which was very exciting - I mostly worked on the history for my own gratification, so seeing others read and compliment it felt great. And, well, can you guess what happened next? 
 
 <figure>
     <img class="postimage" src="{{ site.url }}/writing/images/2016-1-21-what-brief-hacker-news-fame-looks-like/3-traffic.png" alt="Traffic 3"/>   
 </figure>
 
-Yep, on Friday, January the 15th, my history made it to the Hacker News front page after I resubmitted it (it having failed to make much of a splash the day before I posted to reddit). Knowing the sort of traffic and submission rate the site receives, I was addmitedly a bit stunned - I even took a screenshot to comemorate the event:
+Yep, on Friday, January the 15th, my history made it to the Hacker News front page after I resubmitted it (it having failed to make much of a splash the day before I posted to reddit). Knowing the sort of traffic and submission rate the site receives, I was addmitedly a bit stunned - I even took a screenshot to commemorate the event:
 
 <figure>
     <img class="postimagesmall" src="{{ site.url }}/writing/images/2016-1-21-what-brief-hacker-news-fame-looks-like/4-famous.png" alt="Traffic 4"/> 
