@@ -1,0 +1,53 @@
+---
+layout: post
+title: What Brief Hacker News Fame Looks Like
+date: 2016-1-22lT19:19:34-07:00
+tags: [writing,life]
+status: published
+type: post
+published: true
+comments: true
+author: andrey_kurenkov
+excerpt: "Some graphs and stats about a post that made it to the Hacker News front page"
+---
+The most traffic this site has ever received in one hour is precisely 1,814 pageviews, at 11:00 AM on January 15th, 2016, when [A 'Brief' History of Neural Nets and Deep Learning'](http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning/) hit the front page on Hacker News (a site very popular among programmers, researchers and basically all manner of technical people who can slack off at work by browsing the internet). As an extremely humble person (and fan of wry ironic wording), I debated whether to write about this and the ensuing traffic spike to my site for a while due to it perhaps seeming self congratulatory. But there are some fun graphs to share and it would be nice to write something short for a change, so why not.
+
+Let's start back when I first released this 'Brief' history writeup. 
+
+<figure>
+    <img class="postimage" src="{{ site.url }}/writing/images/2016-1-21-what-brief-hacker-news-fame-looks-like/1-traffic.png" alt="Traffic 1"/>     
+</figure>
+
+I finally finished an acceptable draft of the history on December 24th, after roughly a month and half of working on it, just as I was preparing to start my vacation. Being quite ready to be done with this prolonged writing project, I went ahead and posted it, and shared the result on Facebook as I have often done with my posts. As you can see, 7 people actually took a look at it on Christmas, surprisingly. But, as was typical then, the highest session counts per day did not crack the double digits. Fast forward two weeks, and the picture looks quite different.
+
+<figure>
+    <img class="postimage" src="{{ site.url }}/writing/images/2016-1-21-what-brief-hacker-news-fame-looks-like/2-traffic.png" alt="Traffic 2"/>   
+</figure>
+
+Then, on January 5th the good people over at /r/machinelearning graced my little history with 13 upvotes and a good deal of traffic, which for me was very exciting. I've never shared the writing outside of Facebook and LinkedIn before, but since this one was by far my largest writing effort I figured it was worth seeing if others would like it. And worth it it was - the sessions were now in the triple digits. Not only that, but I was getting a bit of positive feedback, which was very exciting - I mostly worked on the history for my own gratification, so seeing others read and compliment it felt great. And, well, can you guess what happend next? 
+
+<figure>
+    <img class="postimage" src="{{ site.url }}/writing/images/2016-1-21-what-brief-hacker-news-fame-looks-like/3-traffic.png" alt="Traffic 3"/>   
+</figure>
+
+Yep, on Friday, January the 15th, my history made it to the Hacker News front page after I resubmitted it (it having failed to make much of a splash the day before I posted to reddit). Knowing the sort of traffic and submission rate the site receives, I was addmitedly a bit stunned - I even took a screenshot to comemorate the event:
+
+<figure>
+    <img class="postimagesmall" src="{{ site.url }}/writing/images/2016-1-21-what-brief-hacker-news-fame-looks-like/4-famous.png" alt="Traffic 4"/> 
+    <figcaption>This still sits in my Pictures folder, and is named famous.png</figcaption>
+</figure>
+
+The traffic spike was huge. For a better perspective, have a look at the hourly breakdown of the sessions:
+
+<figure>
+    <img class="postimage" src="{{ site.url }}/writing/images/2016-1-21-what-brief-hacker-news-fame-looks-like/5-traffic.png" alt="Traffic 5"/>   
+    <img class="postimage" src="{{ site.url }}/writing/images/2016-1-21-what-brief-hacker-news-fame-looks-like/6-traffic.png" alt="Traffic 6"/>   
+</figure>
+
+Suffice it to say, I was happy. Predictabely the pageviews diminished very quickly, but not as quickly as I expected - the views to this day exceed my expectations. To be fair, I had to go back and clean up tons of typos and things, but i'd say that's a fair deal. And for once, I actually had some reason to dig into the Google Analytics of the traffic. Espcially neat is the behavior flow graph:
+
+<figure>
+    <img class="postimage" src="{{ site.url }}/writing/images/2016-1-21-what-brief-hacker-news-fame-looks-like/7-traffic.png" alt="Traffic 7"/>   
+</figure>
+
+Predictabely, most people start at Part 1 and drop off there - only 12% make it to part 2. Still, it seems that hundreds if not more than a thousand people have made it all the way through the whole thing - well done! It is a fairly long read at ~15000 words, so its good to see a fair deal of people still enjoy long form content. Who knows if I'll ever write something so ambitious again, or something that will once again garner the interest of so many people. Either way, I expect to keep on writing, and I'll always have famous.png.
