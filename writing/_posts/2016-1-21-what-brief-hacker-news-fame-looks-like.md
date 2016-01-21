@@ -18,19 +18,19 @@ Let's start back when I first released this 'Brief' history writeup.
    <a href="{{ site.url }}/writing/images/2016-1-21-what-brief-hacker-news-fame-looks-like/1-traffic.png"> <img class="postimage" src="{{ site.url }}/writing/images/2016-1-21-what-brief-hacker-news-fame-looks-like/1-traffic.png" alt="Traffic 1"/> </a> 
 </figure>
 
-I finally finished an acceptable draft of the history on December 24th, after roughly a month and a half of working on it. Being quite ready to be done with this prolonged writing project and go on vacation, I went ahead and posted it, and shared the result on Facebook as I have often done with my posts. As you can see, 7 people actually took a look at it on Christmas, surprisingly. But, as was typical then, the highest session counts per day did not crack the double digits. Fast forward two weeks, and the picture looks quite different.
+I finally finished an acceptable draft of the history on December 24th, after roughly a month and a half of working on it. Being quite ready to be done with this prolonged writing project and go on vacation, I went ahead and posted it, and shared the result on Facebook. As you can see, 7 people actually took a look at it on Christmas, surprisingly. But, as was typical then, the highest session counts per day did not crack the double digits. Fast forward two weeks, and the picture looks quite different:
 
 <figure>
     <a href="{{ site.url }}/writing/images/2016-1-21-what-brief-hacker-news-fame-looks-like/2-traffic.png"><img class="postimage" src="{{ site.url }}/writing/images/2016-1-21-what-brief-hacker-news-fame-looks-like/2-traffic.png" alt="Traffic 2"/></a>
 </figure>
 
-Then, on January 5th the good people over at /r/machinelearning graced my little history with 13 upvotes and a good deal of traffic, which for me was very exciting. I've never shared the writing outside of Facebook and LinkedIn before, but since this one was by far my largest writing effort I figured it was worth seeing if others would like it. And worth it it was - the sessions were now in the triple digits. Not only that, but I was getting a bit of positive feedback, which was very exciting - I mostly worked on the history for my own gratification, so seeing others read and compliment it felt great. And, well, can you guess what happened next? 
+The reason for the views uptick? Reddit. On January 5th the good people over at /r/machinelearning graced my little history with 13 upvotes and a good deal of traffic, which for me was very exciting. I've never shared the writing outside of Facebook and LinkedIn before, but since this one was by far my largest writing effort I figured it was worth seeing if others would like it. And worth it it was - the sessions were now in the triple digits. Not only that, but I was getting a bit of positive feedback, which was very exciting - I mostly worked on the history for my own gratification, so seeing others read and compliment it felt great. And, well, can you guess what happened next? 
 
 <figure>
     <a href="{{ site.url }}/writing/images/2016-1-21-what-brief-hacker-news-fame-looks-like/3-traffic.png"><img class="postimage" src="{{ site.url }}/writing/images/2016-1-21-what-brief-hacker-news-fame-looks-like/3-traffic.png" alt="Traffic 3"/></a>
 </figure>
 
-Yep, on Friday, January the 15th, my history made it to the Hacker News front page after I resubmitted it (it having failed to make much of a splash the day before I posted to reddit). Knowing the sort of traffic and submission rate the site receives, I was addmitedly a bit stunned - I even took a screenshot to commemorate the event:
+Yep, on Friday, January the 15th, my history made it to the front page of Hacker News after I resubmitted it (it having failed to make much of a splash on my first submission). Knowing the sort of traffic the site receives, I was admittedly a bit stunned - I even took a screenshot to commemorate the event:
 
 <figure>
     <img class="postimagesmall" src="{{ site.url }}/writing/images/2016-1-21-what-brief-hacker-news-fame-looks-like/4-famous.png" alt="Traffic 4"/>
@@ -50,6 +50,6 @@ Suffice it to say, I was happy. Predictabely the pageviews diminished very quick
      <a href="{{ site.url }}/writing/images/2016-1-21-what-brief-hacker-news-fame-looks-like/7-traffic.png"><img class="postimage" src="{{ site.url }}/writing/images/2016-1-21-what-brief-hacker-news-fame-looks-like/7-traffic.png" alt="Traffic 7"/></a>
 </figure>
 
-Predictabely, most people start at Part 1 and drop off there - only 12% make it to part 2. Still, hundreds if not more than a thousand people have made it all the way through the whole thing - exciting! It is a fairly long read at ~15000 words, so it's good to see a fair deal of people enjoy these sorts of mini-treatises.
+Understandably, most people start at Part 1 and drop off there - only 12% make it to part 2. Still, hundreds if not more than a thousand people have made it all the way through the whole thing - exciting! It is a fairly long read at ~15000 words, so it's good to see a fair deal of people enjoy these sorts of mini-treatises.
 
-Who knows if I'll ever write something so ambitious, or something that will once again garner the interest of so many people, again. Either way, I expect to keep on writing, and I'll always have famous.png.
+Who knows if I'll ever write something so ambitious, or so widely read, again. Either way, I expect to keep on writing, and I'll always have famous.png.
