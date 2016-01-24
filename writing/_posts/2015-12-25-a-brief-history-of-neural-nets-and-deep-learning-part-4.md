@@ -141,7 +141,7 @@ If this were a movie, the 2012 ImageNet competition would likely have been the c
 
 I was foolish enough to hope I could fit a summary of the most impressive results of the past several years in this part, but at this point it is clear I will not have the space to do so. Perhaps one day there will be a part five of this that can finish out the tale by describing these things, but for now let me provide a brief list:
 
-1. The resurgence of LTSM RNNs + representing 'ideas' with [distributed representations](http://machinelearning.wustl.edu/mlpapers/paper_files/BengioDVJ03.pdf)
+1 - The resurgence of LTSM RNNs + representing 'ideas' with [distributed representations](http://machinelearning.wustl.edu/mlpapers/paper_files/BengioDVJ03.pdf)
 
 <figure>
     <img class="postimagesmall" src="https://draftin.com:443/images/34992?token=BfZWKt2mBMH5H3j82QmADSH7i1sKJemavojs6daR5fbgqsxTIpTXn47ji7ChiCqCrkp8jJS7nPpRZhRKlNh9L2E" alt="From Google, taken at https://gigaom.com/2014/11/18/google-stanford-build-hybrid-neural-networks-that-can-explain-photos/"/> 
@@ -150,7 +150,7 @@ I was foolish enough to hope I could fit a summary of the most impressive result
 
 [Skype real time translation](http://blogs.microsoft.com/blog/2014/05/27/microsoft-demos-breakthrough-in-real-time-translated-conversations/)
 
-2. Using deep learning for reinforcement learning (again, but better)
+2 - Using deep learning for reinforcement learning (again, but better)
 
 <figure>
 <iframe width="420" height="315" src="https://www.youtube.com/embed/V1eYniJ0Rnk" frameborder="0" allowfullscreen></iframe>
@@ -158,7 +158,7 @@ I was foolish enough to hope I could fit a summary of the most impressive result
 
 [Chess playing!](Schmidhuber) 
 
-3. Adding external memory writable and readable to by the neural net
+3 - Adding external memory writable and readable to by the neural net
 
 <figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/U_Wgc1JOsBk" frameborder="0" allowfullscreen></iframe>
