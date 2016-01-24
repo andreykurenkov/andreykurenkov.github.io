@@ -8,7 +8,7 @@ type: post
 published: true
 comments: true
 author: andrey_kurenkov
-excerpt: "Organizing emails into folders is a worthy effort, but quicky gets old - why not get some help from AI?"
+excerpt: "Organizing emails into folders is a worthy effort, but quickly gets old - why not get some help from AI?"
 ---
 <figure>
     <img class="postimagesmaller" src="{{ site.url }}/writing/images/2016-1-13-neural-net-categorize-my-email/18-conf_normalized2.png" alt="Conf mat 0"/> 
@@ -18,7 +18,7 @@ excerpt: "Organizing emails into folders is a worthy effort, but quicky gets old
 #EmailFiler V1
 One of my favorite small projects, [EmailFiler](http://www.andreykurenkov.com/projects/hacks/email-filer/), was motivated by a school assignment for Georgia Tech's Intro to Machine Learning class. Basically, the assignment was to pick some datasets, throw a bunch of supervised learning algorithms at them, and analyze the results. But here's the thing: we could make our own datasets if we so chose. And so choose I did - to export my gmail data and explore the feasibility of machine-learned email categorization. 
 
-See, I learned long ago that it's often best to keep emails around in case there is randomly some need to refer back to them in the future. But, I also learned that I can't help but strive for the ideal of the empty inbox (hopeless as that may be). So, years ago I started categorizing my emails into about a dozen folders within gmail, and by the point I took the machine learning class I had many thousands of emails spread across these categories. It seemed like a great application of ML to make a classifier that could suggest a single category for each email in the inbox, so there could be a button by each email in the inbox for quickly putting into the correct category.
+See, I learned long ago that it's often best to keep emails around in case there is randomly some need to refer back to them in the future. But, I also learned that I can't help but strive for the ideal of the empty inbox (hopeless as that may be). So, years ago I started categorizing my emails into about a dozen folders within gmail, and by the point I took the ML class I had many thousands of emails spread across these categories. It seemed like a great project to make a classifier that could suggest a single category for each email in the inbox, so there could be a button by each email in the inbox for quickly putting into the correct category.
 
 <figure>
     <img class="postimageactual" src="{{ site.url }}/writing/images/2016-1-13-neural-net-categorize-my-email/1-emailscategories.png" alt="Emails categories"/> 
@@ -226,15 +226,15 @@ So, let's wrap up with a final experiment in which those irrelevant categories a
     <figcaption>The confusion matrix for the updated neural net results</figcaption>    
 </figure>
 
-How about that! The neural net can predict categories with 94% accuracy. Though, most of that is due to the large feature set - a good comparison classifier (scikit-learn's [Passive Aggressive classifier](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.PassiveAggressiveClassifier.html#sklearn.linear_model.PassiveAggressiveClassifier.fit)) itself gets 91% on the same exact data. In fact following [someone else's suggestion](https://www.reddit.com/r/MachineLearning/comments/41posw/organizing_my_emails_with_a_neural_net/cz45hdg) to train a Support Vector Machine classifier in a particular way also resulted in roughtly 94% accuracy. 
+How about that! The neural net can predict categories with 94% accuracy. Though, most of that is due to the large feature set - a good comparison classifier (scikit-learn's [Passive Aggressive classifier](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.PassiveAggressiveClassifier.html#sklearn.linear_model.PassiveAggressiveClassifier.fit)) itself gets 91% on the same exact data. In fact following [someone else's suggestion](https://www.reddit.com/r/MachineLearning/comments/41posw/organizing_my_emails_with_a_neural_net/cz45hdg) to train a Support Vector Machine classifier (scikits LinearSVC) in a particular way also resulted in roughtly 94% accuracy. 
 
-So, the conclusion is fairly straighforward - the fancier methods of Deep Learning do not seem that useful for a small dataset such as my email, and older approaches such as n-grams + tfifd + SVM can work as well as the most moden neural nets. More generally, just working with a Bag of Words approach works rather well if the data is as small and neatly categorized as my emails. 
+So, the conclusion is fairly straighforward - the fancier methods of Deep Learning do not seem that useful for a small dataset such as my emails, and older approaches such as n-grams + tfifd + SVM can work as well as the most moden neural nets. More generally, just working with a Bag of Words approach works rather well if the data is as small and neatly categorized as this. 
 
-I don't know if few people use categories in gmail, but if it really is this easy to make a classifier that is right most of the time, I would really like it if gmail indeed had such a machine-learned approach to suggesting a category for each email for one-click email organizing. But, for now, I can just feel nice knowing I managed to get a 20% improvement over my last attempt at this, and improve neural net performance from the F it got last time I tried to the A it receives now.
+I don't know if few people use categories in gmail, but if it really is this easy to make a classifier that is right most of the time, I would really like it if gmail indeed had such a machine-learned approach to suggesting a category for each email for one-click email organizing. But, for now, I can just feel nice knowing I managed to get a 20% improvement over my last attempt at this, and played with Keras while I was at it.
 
 <br>
 <br>
-
+<br>
 #Epilogue: Extra Experiments
 
 I did a bunch of other things while working on this, and some are worth highlighting. A problem I had  all this stuff took forever to run, in large part because I have yet to make use of the now standard trick of doing machine learning with a GPU. So, following a [very nice tutorial](http://deeplearning.net/software/theano/install_ubuntu.html) I did just that, and got nice results:
