@@ -6,14 +6,14 @@
 <head>
 <meta charset="utf-8">
 <title>Organizing My Emails With A Neural Net &#8211; Andrey Kurenkov's Web World</title>
-<meta name="description" content="Organizing emails into folders is a worthy effort, but quicky gets old - why not get some help from AI?">
+<meta name="description" content="Organizing emails into folders is a worthy effort, but quickly gets old - why not get some help from AI?">
 <meta name="keywords" content="ML, NN, technical, software">
 
   
 
 <!-- Twitter Cards -->
 <meta name="twitter:title" content="Organizing My Emails With A Neural Net">
-<meta name="twitter:description" content="Organizing emails into folders is a worthy effort, but quicky gets old - why not get some help from AI?">
+<meta name="twitter:description" content="Organizing emails into folders is a worthy effort, but quickly gets old - why not get some help from AI?">
 
 
 
@@ -24,7 +24,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Organizing My Emails With A Neural Net">
-<meta property="og:description" content="Organizing emails into folders is a worthy effort, but quicky gets old - why not get some help from AI?">
+<meta property="og:description" content="Organizing emails into folders is a worthy effort, but quickly gets old - why not get some help from AI?">
 <meta property="og:url" content="/writing/organizing-my-emails-with-a-neural-net/">
 <meta property="og:site_name" content="Andrey Kurenkov's Web World">
 
@@ -182,7 +182,7 @@
 <h1 id="emailfiler-v1">EmailFiler V1</h1>
 <p>One of my favorite small projects, <a href="http://www.andreykurenkov.com/projects/hacks/email-filer/">EmailFiler</a>, was motivated by a school assignment for Georgia Tech’s Intro to Machine Learning class. Basically, the assignment was to pick some datasets, throw a bunch of supervised learning algorithms at them, and analyze the results. But here’s the thing: we could make our own datasets if we so chose. And so choose I did - to export my gmail data and explore the feasibility of machine-learned email categorization.</p>
 
-<p>See, I learned long ago that it’s often best to keep emails around in case there is randomly some need to refer back to them in the future. But, I also learned that I can’t help but strive for the ideal of the empty inbox (hopeless as that may be). So, years ago I started categorizing my emails into about a dozen folders within gmail, and by the point I took the machine learning class I had many thousands of emails spread across these categories. It seemed like a great application of ML to make a classifier that could suggest a single category for each email in the inbox, so there could be a button by each email in the inbox for quickly putting into the correct category.</p>
+<p>See, I learned long ago that it’s often best to keep emails around in case there is randomly some need to refer back to them in the future. But, I also learned that I can’t help but strive for the ideal of the empty inbox (hopeless as that may be). So, years ago I started categorizing my emails into about a dozen folders within gmail, and by the point I took the ML class I had many thousands of emails spread across these categories. It seemed like a great project to make a classifier that could suggest a single category for each email in the inbox, so there could be a button by each email in the inbox for quickly putting into the correct category.</p>
 
 <figure>
     <img class="postimageactual" src="/writing/images/2016-1-13-neural-net-categorize-my-email/1-emailscategories.png" alt="Emails categories" /> 
@@ -395,16 +395,16 @@ Test score: 0.243211859068
     <figcaption>The confusion matrix for the updated neural net results</figcaption>    
 </figure>
 
-<p>How about that! The neural net can predict categories with 94% accuracy. Though, most of that is due to the large feature set - a good comparison classifier (scikit-learn’s <a href="http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.PassiveAggressiveClassifier.html#sklearn.linear_model.PassiveAggressiveClassifier.fit">Passive Aggressive classifier</a>) itself gets 91% on the same exact data. In fact following <a href="https://www.reddit.com/r/MachineLearning/comments/41posw/organizing_my_emails_with_a_neural_net/cz45hdg">someone else’s suggestion</a> to train a Support Vector Machine classifier in a particular way also resulted in roughtly 94% accuracy.</p>
+<p>How about that! The neural net can predict categories with 94% accuracy. Though, most of that is due to the large feature set - a good comparison classifier (scikit-learn’s <a href="http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.PassiveAggressiveClassifier.html#sklearn.linear_model.PassiveAggressiveClassifier.fit">Passive Aggressive classifier</a>) itself gets 91% on the same exact data. In fact following <a href="https://www.reddit.com/r/MachineLearning/comments/41posw/organizing_my_emails_with_a_neural_net/cz45hdg">someone else’s suggestion</a> to train a Support Vector Machine classifier (scikits LinearSVC) in a particular way also resulted in roughtly 94% accuracy.</p>
 
-<p>So, the conclusion is fairly straighforward - the fancier methods of Deep Learning do not seem that useful for a small dataset such as my email, and older approaches such as n-grams + tfifd + SVM can work as well as the most moden neural nets. More generally, just working with a Bag of Words approach works rather well if the data is as small and neatly categorized as my emails.</p>
+<p>So, the conclusion is fairly straighforward - the fancier methods of Deep Learning do not seem that useful for a small dataset such as my emails, and older approaches such as n-grams + tfifd + SVM can work as well as the most moden neural nets. More generally, just working with a Bag of Words approach works rather well if the data is as small and neatly categorized as this.</p>
 
-<p>I don’t know if few people use categories in gmail, but if it really is this easy to make a classifier that is right most of the time, I would really like it if gmail indeed had such a machine-learned approach to suggesting a category for each email for one-click email organizing. But, for now, I can just feel nice knowing I managed to get a 20% improvement over my last attempt at this, and improve neural net performance from the F it got last time I tried to the A it receives now.</p>
+<p>I don’t know if few people use categories in gmail, but if it really is this easy to make a classifier that is right most of the time, I would really like it if gmail indeed had such a machine-learned approach to suggesting a category for each email for one-click email organizing. But, for now, I can just feel nice knowing I managed to get a 20% improvement over my last attempt at this, and played with Keras while I was at it.</p>
 
 <p><br />
-<br /></p>
-
-<h1 id="epilogue-extra-experiments">Epilogue: Extra Experiments</h1>
+<br />
+<br />
+#Epilogue: Extra Experiments</p>
 
 <p>I did a bunch of other things while working on this, and some are worth highlighting. A problem I had  all this stuff took forever to run, in large part because I have yet to make use of the now standard trick of doing machine learning with a GPU. So, following a <a href="http://deeplearning.net/software/theano/install_ubuntu.html">very nice tutorial</a> I did just that, and got nice results:</p>
 
