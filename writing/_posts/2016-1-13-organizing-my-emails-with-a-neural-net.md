@@ -18,7 +18,7 @@ excerpt: "Organizing emails into folders is a worthy effort, but quickly gets ol
 #EmailFiler V1
 One of my favorite small projects, [EmailFiler](http://www.andreykurenkov.com/projects/hacks/email-filer/), was motivated by a school assignment for Georgia Tech's Intro to Machine Learning class. Basically, the assignment was to pick some datasets, throw a bunch of supervised learning algorithms at them, and analyze the results. But here's the thing: we could make our own datasets if we so chose. And so choose I did - to export my gmail data and explore the feasibility of machine-learned email categorization. 
 
-See, I learned long ago that it's often best to keep emails around in case there is randomly some need to refer back to them in the future. But, I also learned that I can't help but strive for the ideal of the empty inbox (hopeless as that may be). So, years ago I started categorizing my emails into about a dozen folders within gmail, and by the point I took the ML class I had many thousands of emails spread across these categories. It seemed like a great project to make a classifier that could suggest a single category for each email in the inbox, so there could be a button by each email in the inbox for quickly putting into the correct category.
+See, I learned long ago that it's often best to keep emails around in case there is randomly some need to refer back to them in the future. But, I also learned that I can't help but strive for the ideal of the empty inbox (hopeless as that may be). So, years ago I started categorizing my emails into about a dozen folders within gmail, and by the point I took the ML class I had many thousands of emails spread across these categories. It seemed like a great project to make a classifier that could suggest a single category for each email in the inbox, so there could be a button by each email in the inbox for quickly putting it into the correct category.
 
 <figure>
     <img class="postimageactual" src="{{ site.url }}/writing/images/2016-1-13-neural-net-categorize-my-email/1-emailscategories.png" alt="Emails categories"/> 
@@ -53,7 +53,7 @@ But, where to start? By picking the tools, of course! The framework I decided to
 
 It also just so happens that Keras has several easy to copy-paste examples to get started with, including one with a [multi-category text classification problem](https://github.com/fchollet/keras/blob/master/examples/reuters_mlp.py). And, here's the interesting thing - the example uses just about the same features as I did for my class project. It finds the 1000 most frequent words in the documents, makes those into binary features, and trains a neural net with one hidden layer and dropout to predict the category of input text based solely of those features.
 
-So, the obvious first thing to try is exactly this, but with my own data - see if doing feature extraction with Keras will work better. Luckily, I can still use my old mbox parsing code, and Keras has a handy Tokernizer class for text feature extraction. So, it is easy to create a dataset in the same format as in the Keras example, and get an update on my current email counts while we're at it:
+So, the obvious first thing to try is exactly this, but with my own data - see if doing feature extraction with Keras will work better. Luckily, I can still use my old mbox parsing code, and Keras has a handy Tokenizer class for text feature extraction. So, it is easy to create a dataset in the same format as in the Keras example, and get an update on my current email counts while we're at it:
 
 	Using Theano backend.
 	Label email count breakdown:
@@ -235,6 +235,7 @@ I don't know if few people use categories in gmail, but if it really is this eas
 <br>
 <br>
 <br>
+
 #Epilogue: Extra Experiments
 
 I did a bunch of other things while working on this, and some are worth highlighting. A problem I had  all this stuff took forever to run, in large part because I have yet to make use of the now standard trick of doing machine learning with a GPU. So, following a [very nice tutorial](http://deeplearning.net/software/theano/install_ubuntu.html) I did just that, and got nice results:
