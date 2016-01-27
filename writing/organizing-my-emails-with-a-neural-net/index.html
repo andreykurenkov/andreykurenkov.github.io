@@ -156,9 +156,10 @@
 
   <a href="mailto:andreyvkurenkov@gmail.com" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
   
-  
   <a href="http://linkedin.com/in/andreykurenkov" class="author-social" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i> LinkedIn</a>
   <a href="http://github.com/andreykurenkov" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i> Github</a>
+  
+  
   <a href="/files/resume.pdf" class="author-social" target="_blank"><i class="fa fa-fw fa-file"></i> Resume</a>
   <a href="/writing/feed.xml/" class="author-social" target="_blank"><i class="fa fa-fw fa-rss"></i> RSS</a>
 
@@ -182,7 +183,7 @@
 <h1 id="emailfiler-v1">EmailFiler V1</h1>
 <p>One of my favorite small projects, <a href="http://www.andreykurenkov.com/projects/hacks/email-filer/">EmailFiler</a>, was motivated by a school assignment for Georgia Tech’s Intro to Machine Learning class. Basically, the assignment was to pick some datasets, throw a bunch of supervised learning algorithms at them, and analyze the results. But here’s the thing: we could make our own datasets if we so chose. And so choose I did - to export my gmail data and explore the feasibility of machine-learned email categorization.</p>
 
-<p>See, I learned long ago that it’s often best to keep emails around in case there is randomly some need to refer back to them in the future. But, I also learned that I can’t help but strive for the ideal of the empty inbox (hopeless as that may be). So, years ago I started categorizing my emails into about a dozen folders within gmail, and by the point I took the ML class I had many thousands of emails spread across these categories. It seemed like a great project to make a classifier that could suggest a single category for each email in the inbox, so there could be a button by each email in the inbox for quickly putting into the correct category.</p>
+<p>See, I learned long ago that it’s often best to keep emails around in case there is randomly some need to refer back to them in the future. But, I also learned that I can’t help but strive for the ideal of the empty inbox (hopeless as that may be). So, years ago I started categorizing my emails into about a dozen folders within gmail, and by the point I took the ML class I had many thousands of emails spread across these categories. It seemed like a great project to make a classifier that could suggest a single category for each email in the inbox, so there could be a button by each email in the inbox for quickly putting it into the correct category.</p>
 
 <figure>
     <img class="postimageactual" src="/writing/images/2016-1-13-neural-net-categorize-my-email/1-emailscategories.png" alt="Emails categories" /> 
@@ -217,7 +218,7 @@
 
 <p>It also just so happens that Keras has several easy to copy-paste examples to get started with, including one with a <a href="https://github.com/fchollet/keras/blob/master/examples/reuters_mlp.py">multi-category text classification problem</a>. And, here’s the interesting thing - the example uses just about the same features as I did for my class project. It finds the 1000 most frequent words in the documents, makes those into binary features, and trains a neural net with one hidden layer and dropout to predict the category of input text based solely of those features.</p>
 
-<p>So, the obvious first thing to try is exactly this, but with my own data - see if doing feature extraction with Keras will work better. Luckily, I can still use my old mbox parsing code, and Keras has a handy Tokernizer class for text feature extraction. So, it is easy to create a dataset in the same format as in the Keras example, and get an update on my current email counts while we’re at it:</p>
+<p>So, the obvious first thing to try is exactly this, but with my own data - see if doing feature extraction with Keras will work better. Luckily, I can still use my old mbox parsing code, and Keras has a handy Tokenizer class for text feature extraction. So, it is easy to create a dataset in the same format as in the Keras example, and get an update on my current email counts while we’re at it:</p>
 
 <pre><code>Using Theano backend.
 Label email count breakdown:
@@ -403,8 +404,9 @@ Test score: 0.243211859068
 
 <p><br />
 <br />
-<br />
-#Epilogue: Extra Experiments</p>
+<br /></p>
+
+<h1 id="epilogue-extra-experiments">Epilogue: Extra Experiments</h1>
 
 <p>I did a bunch of other things while working on this, and some are worth highlighting. A problem I had  all this stuff took forever to run, in large part because I have yet to make use of the now standard trick of doing machine learning with a GPU. So, following a <a href="http://deeplearning.net/software/theano/install_ubuntu.html">very nice tutorial</a> I did just that, and got nice results:</p>
 
