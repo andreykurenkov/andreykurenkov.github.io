@@ -4,13 +4,236 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://www.andreykurenkov.com/feed.xml" />
 <link rel="alternate" type="text/html" href="http://www.andreykurenkov.com" />
-<updated>2016-01-24T03:16:46-08:00</updated>
+<updated>2016-02-11T18:15:58-08:00</updated>
 <id>/</id>
 <author>
   <name>Andrey Kurenkov</name>
   <uri>/</uri>
   <email>andreyvkurenkov@gmail.com</email>
 </author>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[Fun Visualizations of the 2015 StackOverflow Developer Survey]]></title>
+  <link rel="alternate" type="text/html" href="http://www.andreykurenkov.com/writing/fun-visualizations-of-stackoverflow/" />
+  <id>/writing/fun-visualizations-of-stackoverflow</id>
+  <published>2016-02-12T18:19:34-08:00</published>
+  <updated>2016-02-12T18:19:34-08:00</updated>
+  <author>
+    <name></name>
+    <uri>www.andreykurenkov.com</uri>
+    <email>andreyvkurenkov@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;figure&gt;
+    &lt;a href=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/14-occ_lang_rB.png&quot;&gt;
+       &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/14-occ_lang_rB.png&quot; alt=&quot;Langs hmat&quot; /&gt;
+    &lt;/a&gt;
+    &lt;figcaption&gt;Where this post is heading. The entirety of the code used for this post &lt;b&gt;&lt;a href=&quot;https://github.com/andreykurenkov/stackoverflow-R-dataviz&quot;&gt;can be found here&lt;/a&gt;&lt;/b&gt;. &lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;h1 id=&quot;what&quot;&gt;What?&lt;/h1&gt;
+
+&lt;p&gt;What will follow are a selection of what I think are cool visualizations of data from the &lt;a href=&quot;http://stackoverflow.com/research/developer-survey-2015&quot;&gt;StackOverflow 2015 Developer Survey&lt;/a&gt;. The survey asked software developers a bunch of questions concerning their background and work, and got an impressive 26086 responses. Due o there being multiple ‘Select up to’ questions, the data contains 222 observations for every response - lots of data to play with and visualize! The visualizations were made with R, as part of a project for the &lt;a href=&quot;https://www.udacity.com/courses/ud651&quot;&gt;Data Analysis with R&lt;/a&gt; class.&lt;/p&gt;
+
+&lt;h1 id=&quot;fun-with-developers-personalprofessional-metrics&quot;&gt;Fun With Developers’ Personal+Professional Metrics&lt;/h1&gt;
+&lt;p&gt;Having loaded and cleaned up the data, the natural place to start is looking at who responded to the survey:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/1-gender_age.png&quot;&gt;
+      &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/1-gender_age.png&quot; alt=&quot;gender_age&quot; /&gt;
+    &lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Yep, big surprise, most respondents are male and younger than 35. Though, interestingly, females in the 20-24 range outnumber 25-29 range, which is not true for males. Also predictably, the graph shows that people with more experience tend to be older, though there are developers past their 40s with less than 10 years of experience which shows that it is possible to become a developer even at a later age. There is also the strong suggestion some respondents are jokesters, since there exist some people who are not yet 20 but have 11+ years of experience.&lt;/p&gt;
+
+&lt;p&gt;The fact that there is a strong correlation between age and experience (0.6424202, in fact) is hardly surprising, but it begs a question: does the increased experience translate to better compensation? With this huge spreadsheet in hand, that question is easy to answer:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/2-comp_exp.png&quot;&gt;
+      &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/2-comp_exp.png&quot; alt=&quot;comp_exp&quot; /&gt;
+    &lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Yep, the world is (at least to some degree and in this context) just. It is also very unequal, though those who like me who have made it to the US can at least feel good about rather cushy average compensations. Besides being in the US, I also happen to be the sort of person to work on these sorts of blog posts in my free time, so a follow up question that makes sense is whether hours spent programming as a hobby also correlates positively with compensation. Perhaps lots of hobbyist programming indicates a more skilled programmer who might get better positions, or perhaps increased compensation translates to less time for hobby programming. Once again, let’s have a look at the data:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/3-comp_hours.png&quot;&gt;
+      &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/3-comp_hours.png&quot; alt=&quot;comp_hours&quot; /&gt;
+    &lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;It seems the second is correct - more hours programming for fun does not equate to better compensation, though we can of course be optimistic and hope those with bigger compensations and less hobby programming relish their jobs and are in no need for extra projects. In fact, we can go ahead and look at the job satisfaction data and see:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/3-comp_sat.png&quot;&gt;
+      &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/3-comp_sat.png&quot; alt=&quot;comp_sat&quot; /&gt;
+    &lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;So, seems having a higher paid job does somewhat correlate with having a more satisfying job - all those making big cash are not secretly miserable, good to know. Now then, all these line graphs are fun, but not very efficient, so using R magic we can make a graph that communicates quite a bit more about the variables we have been exploring thus far (click for larger version):&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/3-comp_satB.png&quot;&gt;
+      &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/3-comp_satB.png&quot; alt=&quot;comp_satB&quot; /&gt;
+    &lt;/a&gt;
+    &lt;figcaption&gt;R makes it incredibely easy to do stuff like this! (not that you necessarily should make visualizations this packed with variables...)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Fancy graphs, right? The fun is just getting started, trust me, the best is yet ahead…&lt;/p&gt;
+
+&lt;h1 id=&quot;exploring-countries-industries-occupations&quot;&gt;Exploring Countries, Industries, Occupations&lt;/h1&gt;
+&lt;p&gt;Now, the ‘in US’/’not in US’ dichotomy is rather simplistic (and perhaps stereotypically American), so it’d be interesting to see what others countries programmers fare well in:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/4-country_comp.png&quot;&gt;
+      &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/4-country_comp.png&quot; alt=&quot;comp_country&quot; /&gt;
+    &lt;/a&gt;
+	&lt;figcaption&gt;One could argue the use of (logarithmic) coloring is not needed here, but I for one like to know the relative number of instances from which averages are computed.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The results, after filtering to require at least twenty observations per country, are as America and Europe heavy as this posts’ likely readership - no surprise there. It is somewhat surprising that high tech countries such as South Korea and Germany are ranked relatively low in the list, though. But, as we said before money is not everything, so let’s go ahead and see how the countries fare by job satisfaction:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/4-country_sat.png&quot;&gt;
+      &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/4-country_sat.png&quot; alt=&quot;sat_country&quot; /&gt;
+    &lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Quite a different result, though seemingly one with less disparity than compensation averages. The US is merely 20th! It looks like Denmark and Israel really hit the sweet spot in terms of balance on both measures. Alas, I live in the US, and that will not change anytime soon. And as a software developer in the US, the next question for me to ask is what industries and occupations correlate with high compensations here:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/5-occ_comp.png&quot;&gt;
+      &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/5-occ_comp.png&quot; alt=&quot;occ_comp&quot; /&gt;
+    &lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/6-ind_comp.png&quot;&gt;
+      &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/6-ind_comp.png&quot; alt=&quot;ind_comp&quot; /&gt;
+    &lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Again, a few unexpected details here - data scientists are apparently not making as much as I thought they might - but most of this seems plausible. Seems it is a good thing I have no particular desire to work in gaming and non-profit industries or as a mobile dev - but then these are just averages, and money is much less important than job fulfillment anyway. So, once again, let’s have a look at that too:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/5-occ_sat.png&quot;&gt;
+      &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/5-occ_sat.png&quot; alt=&quot;occ_sat&quot; /&gt;
+    &lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/6-ind_sat.png&quot;&gt;
+      &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/6-ind_sat.png&quot; alt=&quot;ind_sat&quot; /&gt;
+    &lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Well, good news for the gaming developer - you may statistically be likely to earn less than most occupations, but also top the charts in terms of job satisfaction. As we saw before, it is possible to display the count and variance of such data fairly nicely with a combination of boxplot and translucent points, so may as well do just that:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/7-occ_comp_exp.png&quot;&gt;
+      &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/7-occ_comp_exp.png&quot; alt=&quot;occ_comp_exp&quot; /&gt;
+    &lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/8-ind_comp_exp.png&quot;&gt;
+      &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/8-ind_comp_exp.png&quot; alt=&quot;ind_comp_exp&quot; /&gt;
+    &lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The data is discrete, but R makes it very easy to introduce jitter to be able to roughtly have a sense of the distributions underling the means we’ve been looking at. There is quite a lot going on these graphs, but on the whole I think they do a good job of combining and conveying all involved information. Let’s skip the whole tradition of doing the same for satisfaction, as I am sure you are getting tired of all this satisfaction and money talk and boring bar graphs, and change things up.&lt;/p&gt;
+
+&lt;h1 id=&quot;turning-up-the-heat&quot;&gt;Turning Up the Heat&lt;/h1&gt;
+&lt;p&gt;Having played this much with occupations and industries, I naturally started to wonder which industries have the most of each occupation. The only sane way I could envision tackling the question is with heatmaps, and so after several fervent hours of massaging the data and plotting I got this:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/9-occ_ind.png&quot;&gt;
+      &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/9-occ_ind.png&quot; alt=&quot;occ_ind&quot; /&gt;
+    &lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;I know, not fun - the full-stack web dev occupation and Software Products industry dwarf all the others in terms of counts and so make most of the heatmap a bland monotonous red. One option is to try to log scale the coloring, but I think that’d be sort of cheating in this case (my mind is built to assume heatmaps are linear), so instead we can produce a heatmap where the coloring is scaled within one row:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/10-occ_ind_r.png&quot;&gt;
+      &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/10-occ_ind_r.png&quot; alt=&quot;ind_comp_exp_r&quot; /&gt;
+    &lt;/a&gt;
+    &lt;figcaption&gt;Notice that this in effect shows the breakdown of industries for each occupation separate from the rest&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Not bad! The intersection of ‘Student’ and ‘I’m a student’ is bright yellow, so this is at least somewhat correct. There are lots of little neat nuggets of info here, such as the amount of mobile devs and designers in consulting or the prevalence of embedded developers in telecommunications. Admittedly, I produced this heatmap only after another one I knew I would want to make from the start - a heatmap showing the technologies developers in different occupations use:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/11-occ_lang.png&quot;&gt;
+      &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/11-occ_lang.png&quot; alt=&quot;occ_lang&quot; /&gt;
+    &lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Again with the huge majority of web devs! Well, no matter, we can do the same thing as before and view the data with per-row scaling:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/12-occ_lang_r.png&quot;&gt;
+      &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/12-occ_lang_r.png&quot; alt=&quot;occ_lang_r&quot; /&gt;
+    &lt;/a&gt;
+    &lt;figcaption&gt;Now then we see the technologies developers in each occupation&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Turns out executives rely mostly on JavaScript and the Cloud, who knew. As these technologies are sorted by overall usage and in fact only the top 20 are shown, I was surprised the niche ones such as LAMP and Redis still have more users than favorites of mine like Django or R. Overall though, this heatmap is nice for simply confirming common sense expectations about technology usage for each occupation. Still, I was not too big a fan of this look, so I also generated the same heatmap with a different:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/13-occ_langB.png&quot;&gt;
+      &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/13-occ_langB.png&quot; alt=&quot;occ_langB&quot; /&gt;
+    &lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/14-occ_lang_rB.png&quot;&gt;
+      &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/14-occ_lang_rB.png&quot; alt=&quot;occ_lang_rB&quot; /&gt;
+    &lt;/a&gt;
+    &lt;figcaption&gt;Oh yeahhh you know those colors represent percentages per row now. I think this may be my favorite result from this project, to be honest.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h1 id=&quot;lastly---how-do-you-become-a-dev-anyway&quot;&gt;Lastly - How Do You Become A Dev Anyway&lt;/h1&gt;
+&lt;p&gt;Let’s finish up by looking at a topic this post is implicitly really about - how people learn. The survey helpfully asked what sort of training (education, online classes, even mentorships) each responder had. And so, again, we can make use of the information-dense wonder of a heatmap:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/15-occ_train.png&quot;&gt;
+      &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/15-occ_train.png&quot; alt=&quot;occ_train&quot; /&gt;
+    &lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;So, most devs get at most a Bachelors degree, learn on the job, or have no formal training at all. However, online classes are also popular, no doubt in addition to these other forms of training. There are also exceptions in the fields of Machine Learning devs and data scientists, which I have some interest in. Just to take a break from all these heatmaps, we can take a closer look at these two with good ol’ bar graphs:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/16-occ_trainB.png&quot;&gt;
+      &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/16-occ_trainB.png&quot; alt=&quot;occ_trainB&quot; /&gt;
+    &lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Based on the low average salary of data scientists and the large numbers of them with non-formal or on the job training, I think it is likely the term has just gotten to be used very loosely to encompass many data-oriented positions. Machine learning developers, on the other hand, are still in a more exclusive club of more educated types who no doubt meddle with more math and algorithms. Regardless, the size of both of these occupations (that were not even really around a decade back) is as good a sign of our times as it gets.&lt;/p&gt;
+
+&lt;p&gt;It would be tiresome to do this sort of visualization for all the jobs types, but why not go ahead and cap off this spade of visuals with something truly over the top:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/17-occ_trainC.png&quot;&gt;
+      &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-2-12-fun-visualizations-of-stackoverflow/17-occ_trainC.png&quot; alt=&quot;occ_trainC&quot; /&gt;
+    &lt;/a&gt;
+    &lt;figcaption&gt;Just because you can do something does not mean you should.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h1 id=&quot;why-do-all-this&quot;&gt;Why Do All This?&lt;/h1&gt;
+&lt;p&gt;For fun! But also, for learning. One of the great things about being a person who writes software for fun (and a living) is the lack of barriers to self-teaching new skills - all one needs is a laptop, an internet connection, and large quantities of time and perseverance to go ahead and learn something new. Though in theory just about anything can be self taught with a textbook and time, learning this way can be very difficult if the knowledge is not applied and tested along the way. Computer Science allows for the best of both worlds here in that there are massive amounts of tutorials and information for free online, and using that information requires no breadboards, no tools, no chemicals - just a computer and a mediocre internet connection.&lt;/p&gt;
+
+&lt;p&gt;What barriers do exist have been further diminished by the rise of online classes in the vein of those on Udacity and Coursera, which are particularly well suited to teaching software skills - there are now dozens of such classes about algorithms, mobile dev, web dev, machine learning, and so on. Having taken and completed several of these classes I think they can very effectively help with learning through briskly paced lessons and high quality assignments. So, when I found out about the &lt;a href=&quot;https://www.udacity.com/course/data-analyst-nanodegree--nd002&quot;&gt;Udacity Data Analyst Nanodegree&lt;/a&gt; I was naturally intrigued given my existing fondness for machine learning and lack of experience with data visualization - intrigued enough to sign up for the program (after confirming my company was willing to foot the bill here).&lt;/p&gt;
+
+&lt;p&gt;‘Data Analysis with R’ is the fourth class in the program so far, and was my introduction to the language (a sort of mix between Python and SQL, known for being good for data analysis and visualization). The final project for the class called for using the R skills so far for self-led exploration of some data, with the option to choose among a few supplied datasets or find your own - precisely the sort of freeform class assignment I can get excited about. It took me some time to settle on a fun dataset to work with, but when I remembered about the StackOverflow survey data results I became sure there had to be many more opportunities for neat data analysis there - and I’d say I was right!&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/writing/fun-visualizations-of-stackoverflow/&quot;&gt;Fun Visualizations of the 2015 StackOverflow Developer Survey&lt;/a&gt; was originally published by Andrey Kurenkov at &lt;a href=&quot;&quot;&gt;Andrey Kurenkov's Web World&lt;/a&gt; on February 12, 2016.&lt;/p&gt;
+  </content>
+</entry>
 
 
   
@@ -98,7 +321,7 @@
 &lt;h1 id=&quot;emailfiler-v1&quot;&gt;EmailFiler V1&lt;/h1&gt;
 &lt;p&gt;One of my favorite small projects, &lt;a href=&quot;http://www.andreykurenkov.com/projects/hacks/email-filer/&quot;&gt;EmailFiler&lt;/a&gt;, was motivated by a school assignment for Georgia Tech’s Intro to Machine Learning class. Basically, the assignment was to pick some datasets, throw a bunch of supervised learning algorithms at them, and analyze the results. But here’s the thing: we could make our own datasets if we so chose. And so choose I did - to export my gmail data and explore the feasibility of machine-learned email categorization.&lt;/p&gt;
 
-&lt;p&gt;See, I learned long ago that it’s often best to keep emails around in case there is randomly some need to refer back to them in the future. But, I also learned that I can’t help but strive for the ideal of the empty inbox (hopeless as that may be). So, years ago I started categorizing my emails into about a dozen folders within gmail, and by the point I took the ML class I had many thousands of emails spread across these categories. It seemed like a great project to make a classifier that could suggest a single category for each email in the inbox, so there could be a button by each email in the inbox for quickly putting into the correct category.&lt;/p&gt;
+&lt;p&gt;See, I learned long ago that it’s often best to keep emails around in case there is randomly some need to refer back to them in the future. But, I also learned that I can’t help but strive for the ideal of the empty inbox (hopeless as that may be). So, years ago I started categorizing my emails into about a dozen folders within gmail, and by the point I took the ML class I had many thousands of emails spread across these categories. It seemed like a great project to make a classifier that could suggest a single category for each email in the inbox, so there could be a button by each email in the inbox for quickly putting it into the correct category.&lt;/p&gt;
 
 &lt;figure&gt;
     &lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2016-1-13-neural-net-categorize-my-email/1-emailscategories.png&quot; alt=&quot;Emails categories&quot; /&gt; 
@@ -133,7 +356,7 @@
 
 &lt;p&gt;It also just so happens that Keras has several easy to copy-paste examples to get started with, including one with a &lt;a href=&quot;https://github.com/fchollet/keras/blob/master/examples/reuters_mlp.py&quot;&gt;multi-category text classification problem&lt;/a&gt;. And, here’s the interesting thing - the example uses just about the same features as I did for my class project. It finds the 1000 most frequent words in the documents, makes those into binary features, and trains a neural net with one hidden layer and dropout to predict the category of input text based solely of those features.&lt;/p&gt;
 
-&lt;p&gt;So, the obvious first thing to try is exactly this, but with my own data - see if doing feature extraction with Keras will work better. Luckily, I can still use my old mbox parsing code, and Keras has a handy Tokernizer class for text feature extraction. So, it is easy to create a dataset in the same format as in the Keras example, and get an update on my current email counts while we’re at it:&lt;/p&gt;
+&lt;p&gt;So, the obvious first thing to try is exactly this, but with my own data - see if doing feature extraction with Keras will work better. Luckily, I can still use my old mbox parsing code, and Keras has a handy Tokenizer class for text feature extraction. So, it is easy to create a dataset in the same format as in the Keras example, and get an update on my current email counts while we’re at it:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;Using Theano backend.
 Label email count breakdown:
@@ -319,8 +542,9 @@ Test score: 0.243211859068
 
 &lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;
-&lt;br /&gt;
-#Epilogue: Extra Experiments&lt;/p&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;epilogue-extra-experiments&quot;&gt;Epilogue: Extra Experiments&lt;/h1&gt;
 
 &lt;p&gt;I did a bunch of other things while working on this, and some are worth highlighting. A problem I had  all this stuff took forever to run, in large part because I have yet to make use of the now standard trick of doing machine learning with a GPU. So, following a &lt;a href=&quot;http://deeplearning.net/software/theano/install_ubuntu.html&quot;&gt;very nice tutorial&lt;/a&gt; I did just that, and got nice results:&lt;/p&gt;
 
@@ -453,7 +677,7 @@ took a hefty amount of time:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Train an RBM on the training data using contrastive-divergence. This is the first layer of the belief net.&lt;/li&gt;
-  &lt;li&gt;Generate the hidden values of the trained RBM for the data, and train another RBM using model those hidden values. This is the second layer - ‘stack’ it on top of the first and keep weights in just one direction to form a belief net.&lt;/li&gt;
+  &lt;li&gt;Generate the hidden values of the trained RBM for the data, and train another RBM using those hidden values. This is the second layer - ‘stack’ it on top of the first and keep weights in just one direction to form a belief net.&lt;/li&gt;
   &lt;li&gt;Keep doing step 2 for as many layers as are desired for the belief net.&lt;/li&gt;
   &lt;li&gt;If classification is desired, add a small set of hidden units that correspond to the classification labels and do a variation on the wake-sleep algorithm to ‘fine-tune’ the weights. Such combinations of unsupervised and supervised learning are often called &lt;strong&gt;semi-supervised&lt;/strong&gt; learning.&lt;/li&gt;
 &lt;/ol&gt;
@@ -494,7 +718,7 @@ took a hefty amount of time:&lt;/p&gt;
   &lt;p&gt;They applied the same method to the problem of recognizing fragments of phonemes in very short windows of speech,” said Hinton. “They got significantly better results than previous methods on a standard three-hour benchmark.””&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;It’s hard to say just how much faster using GPUs over CPUs was in this case, but the paper &lt;a href=&quot;http://www.machinelearning.org/archive/icml2009/papers/218.pdf&quot;&gt;“Large-scale Deep Unsupervised Learning using Graphics Processors”&lt;/a&gt;&lt;sup id=&quot;fnref:8&quot;&gt;&lt;a href=&quot;#fn:8&quot; class=&quot;footnote&quot;&gt;8&lt;/a&gt;&lt;/sup&gt; of the same year suggests a number: 70 times faster. Yes, 70 times - reducing weeks of work into days, even a single day. The authors, who had previously developed Sparse Coding, included the prolific Machine Learning researcher Andrew Ng, who increasingly realized that making use of a lots of training data and of fast computation had been greatly undervalued by researchers in favor of incremental changes in learning algorithms. This idea was strongly supported by 2010’s &lt;a href=&quot;http://arxiv.org/pdf/1003.0358.pdf&quot;&gt;“Deep Big Simple Neural Nets Excel on Handwritten Digit Recognition”&lt;/a&gt;&lt;sup id=&quot;fnref:9&quot;&gt;&lt;a href=&quot;#fn:9&quot; class=&quot;footnote&quot;&gt;9&lt;/a&gt;&lt;/sup&gt; (notably co-written by J. Schmidhuber, one of the inventors of the recurrent LTSM networks), which showed a whopping %0.35 error rate could be achieved on the MNIST dataset without anything more special than really big neural nets, a lot of variations on the input, and efficient GPU implementations of backpropagation. These ideas had existed for decades, so although it could not be said that algorithmic advancements did not matter, this result did strongly support the notion that the brute force approach of big training sets and fast parallelized computations were also crucial.&lt;/p&gt;
+&lt;p&gt;It’s hard to say just how much faster using GPUs over CPUs was in this case, but the paper &lt;a href=&quot;http://www.machinelearning.org/archive/icml2009/papers/218.pdf&quot;&gt;“Large-scale Deep Unsupervised Learning using Graphics Processors”&lt;/a&gt;&lt;sup id=&quot;fnref:8&quot;&gt;&lt;a href=&quot;#fn:8&quot; class=&quot;footnote&quot;&gt;8&lt;/a&gt;&lt;/sup&gt; of the same year suggests a number: 70 times faster. Yes, 70 times - reducing weeks of work into days, even a single day. The authors, who had previously developed Sparse Coding, included the prolific Machine Learning researcher Andrew Ng, who increasingly realized that making use of lots of training data and of fast computation had been greatly undervalued by researchers in favor of incremental changes in learning algorithms. This idea was strongly supported by 2010’s &lt;a href=&quot;http://arxiv.org/pdf/1003.0358.pdf&quot;&gt;“Deep Big Simple Neural Nets Excel on Handwritten Digit Recognition”&lt;/a&gt;&lt;sup id=&quot;fnref:9&quot;&gt;&lt;a href=&quot;#fn:9&quot; class=&quot;footnote&quot;&gt;9&lt;/a&gt;&lt;/sup&gt; (notably co-written by J. Schmidhuber, one of the inventors of the recurrent LTSM networks), which showed a whopping %0.35 error rate could be achieved on the MNIST dataset without anything more special than really big neural nets, a lot of variations on the input, and efficient GPU implementations of backpropagation. These ideas had existed for decades, so although it could not be said that algorithmic advancements did not matter, this result did strongly support the notion that the brute force approach of big training sets and fast parallelized computations were also crucial.&lt;/p&gt;
 
 &lt;p&gt;Dahl and Mohamed’s use of a GPU to get record breaking results was an early and relatively modest success, but it was sufficient to incite excitement and for the two to be invited to intern at Microsoft Research&lt;sup id=&quot;fnref:1:3&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. Here, they would have the benefit from another trend in computing that had emerged by then: Big Data. That loosest of terms, which in the context of machine learning is easy to understand - lots of training data. And lots of training data is important, because without it neural nets still did not do great - they tended to overfit (perfectly work on the training data, but not generalize to new test data). This makes sense - the complexity of what large neural nets can compute is such that a lot of data is needed to avoid them learning every little unimportant aspect of the training set - but was a major challenge for researchers in the past. So now, the computing and data gathering powers of large companies proved invaluable. The two students handily proved the power of deep learning during their three month internship, and Microsoft Research has been at the forefront of deep learning speech recognition ever since.&lt;/p&gt;
 
@@ -517,7 +741,7 @@ took a hefty amount of time:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;The particular non-linear activation function chosen for neurons in a neural net makes a big impact on performance, and the one often used by default is not a good choice.&lt;/li&gt;
-  &lt;li&gt;It was not so much choosing random weights that was problematic, as choosing random weights without consideration for which layer the weights are for. The old vanishing gradient problem happens, basically, because backpropagation involves a sequence of multiplications that invariably result in smaller derivatives for earlier layers. That is, unless weights are chosen with difference scales according to the layer they are in - making this simple change results in significant&lt;/li&gt;
+  &lt;li&gt;It was not so much choosing random weights that was problematic, as choosing random weights without consideration for which layer the weights are for. The old vanishing gradient problem happens, basically, because backpropagation involves a sequence of multiplications that invariably result in smaller derivatives for earlier layers. That is, unless weights are chosen with difference scales according to the layer they are in - making this simple change results in significant improvements.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;figure&gt;
@@ -525,15 +749,15 @@ took a hefty amount of time:&lt;/p&gt;
     &lt;figcaption&gt;Different activation functions. The ReLU is the **rectified linear unit**. &lt;a href=&quot;https://imiloainf.wordpress.com/2013/11/06/rectifier-nonlinearities/&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;    
 &lt;/figure&gt;
 
-&lt;p&gt;The second point is quite clear, but the first opens the question: ‘what, then, is the best activation function’? Three different groups explored the question (a group with LeCun, with &lt;a href=&quot;http://yann.lecun.com/exdb/publis/pdf/jarrett-iccv-09.pdf&quot;&gt;“What is the best multi-stage architecture for object recognition?”&lt;/a&gt;&lt;sup id=&quot;fnref:13&quot;&gt;&lt;a href=&quot;#fn:13&quot; class=&quot;footnote&quot;&gt;13&lt;/a&gt;&lt;/sup&gt;, a group with Hinton, in &lt;a href=&quot;http://www.cs.toronto.edu/~fritz/absps/reluICML.pdf&quot;&gt;“Rectified linear units improve restricted boltzmann machines”&lt;/a&gt;&lt;sup id=&quot;fnref:14&quot;&gt;&lt;a href=&quot;#fn:14&quot; class=&quot;footnote&quot;&gt;14&lt;/a&gt;&lt;/sup&gt;, and a group with Bengio -&lt;a href=&quot;https://www.utc.fr/~bordesan/dokuwiki/_media/en/glorot10nipsworkshop.pdf&quot;&gt;“Deep Sparse Rectifier Neural Networks”&lt;/a&gt;&lt;sup id=&quot;fnref:15&quot;&gt;&lt;a href=&quot;#fn:15&quot; class=&quot;footnote&quot;&gt;15&lt;/a&gt;&lt;/sup&gt;), and they all found the same surprising answer: the very much non-differentiable and very simple function f(x)=max(0,x) tends to be the best. Surprising, because the function is kind of weird - it is not strictly differentiable, or rather is not differentiable precisely at zero, so on paper as far as math goes it looks pretty ugly. But, clearly the zero case is a pretty small mathematical quibble - a bigger question is why such a simple functions, with constant derivatives on either side of 0, is so good. The answer is not precisely known, but a few ideas seem pretty well established:&lt;/p&gt;
+&lt;p&gt;The second point is quite clear, but the first opens the question: ‘what, then, is the best activation function’? Three different groups explored the question (a group with LeCun, with &lt;a href=&quot;http://yann.lecun.com/exdb/publis/pdf/jarrett-iccv-09.pdf&quot;&gt;“What is the best multi-stage architecture for object recognition?”&lt;/a&gt;&lt;sup id=&quot;fnref:13&quot;&gt;&lt;a href=&quot;#fn:13&quot; class=&quot;footnote&quot;&gt;13&lt;/a&gt;&lt;/sup&gt;, a group with Hinton, in &lt;a href=&quot;http://www.cs.toronto.edu/~fritz/absps/reluICML.pdf&quot;&gt;“Rectified linear units improve restricted boltzmann machines”&lt;/a&gt;&lt;sup id=&quot;fnref:14&quot;&gt;&lt;a href=&quot;#fn:14&quot; class=&quot;footnote&quot;&gt;14&lt;/a&gt;&lt;/sup&gt;, and a group with Bengio -&lt;a href=&quot;https://www.utc.fr/~bordesan/dokuwiki/_media/en/glorot10nipsworkshop.pdf&quot;&gt;“Deep Sparse Rectifier Neural Networks”&lt;/a&gt;&lt;sup id=&quot;fnref:15&quot;&gt;&lt;a href=&quot;#fn:15&quot; class=&quot;footnote&quot;&gt;15&lt;/a&gt;&lt;/sup&gt;), and they all found the same surprising answer: the very much non-differentiable and very simple function f(x)=max(0,x) tends to be the best. Surprising, because the function is kind of weird - it is not strictly differentiable, or rather is not differentiable precisely at zero, so on paper as far as math goes it looks pretty ugly. But, clearly the zero case is a pretty small mathematical quibble - a bigger question is why such a simple function, with constant derivatives on either side of 0, is so good. The answer is not precisely known, but a few ideas seem pretty well established:&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;Rectified activation leads to &lt;strong&gt;sparse&lt;/strong&gt; representations, meaning not that many neurons actually end up needing to output non-zero values for any given input. In the years leading up to this point sparsity was shown to be beneficial for deep learning, both because it represents information in a more robust manner and because it leads to significant computational efficiency (if most of your neurons are outputting zero, you can in effect ignore most of them and compute things much faster). Incidentally, researchers in computational neuroscience first introduced the importance of sparse computation in the context of the brain’s visual system, a decade before it was explored in the context of machine learning.&lt;/li&gt;
+  &lt;li&gt;Rectified activation leads to &lt;strong&gt;sparse&lt;/strong&gt; representations, meaning not many neurons actually end up needing to output non-zero values for any given input. In the years leading up to this point sparsity was shown to be beneficial for deep learning, both because it represents information in a more robust manner and because it leads to significant computational efficiency (if most of your neurons are outputting zero, you can in effect ignore most of them and compute things much faster). Incidentally, researchers in computational neuroscience first introduced the importance of sparse computation in the context of the brain’s visual system, a decade before it was explored in the context of machine learning.&lt;/li&gt;
   &lt;li&gt;The simplicity of the function, and its derivatives, makes it much faster to work with than the exponential sigmoid or the trigonometric tanh. As with the use of GPUs, this turns out to not just be a small boost but really important for being able to scale neural nets to the point where they perform well on challenging problems.&lt;/li&gt;
-  &lt;li&gt;A later analysis titled &lt;a href=&quot;http://ai.stanford.edu/~amaas/papers/relu_hybrid_icml2013_final.pdf&quot;&gt;“Rectifier Nonlinearities Improve Neural Network Acoustic Models”&lt;/a&gt;&lt;sup id=&quot;fnref:16&quot;&gt;&lt;a href=&quot;#fn:16&quot; class=&quot;footnote&quot;&gt;16&lt;/a&gt;&lt;/sup&gt;, co-written by Andrew Ng, also showed the constant 0 or 1 derivative of the ReLU not to detrimental to learning. In fact, it helps avoid the vanishing gradient problem that was the bane of backpropagation. Furthermore, beside producing more sparse representations, and it also produces more distributed representations - meaning is derived from the combination of multiple values of different neurons, rather than being localized to individual neurons.&lt;/li&gt;
+  &lt;li&gt;A later analysis titled &lt;a href=&quot;http://ai.stanford.edu/~amaas/papers/relu_hybrid_icml2013_final.pdf&quot;&gt;“Rectifier Nonlinearities Improve Neural Network Acoustic Models”&lt;/a&gt;&lt;sup id=&quot;fnref:16&quot;&gt;&lt;a href=&quot;#fn:16&quot; class=&quot;footnote&quot;&gt;16&lt;/a&gt;&lt;/sup&gt;, co-written by Andrew Ng, also showed the constant 0 or 1 derivative of the ReLU not too detrimental to learning. In fact, it helps avoid the vanishing gradient problem that was the bane of backpropagation. Furthermore, beside producing more sparse representations, it also produces more distributed representations - meaning is derived from the combination of multiple values of different neurons, rather than being localized to individual neurons.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;At this point, with all these discoveries since 2006, it had become clear that unsupervised pre-training is not essential to deep learning. It was helpful, no doubt, but it was also shown that in some cases well done purely supervised training (with the correct starting weight scales and activation function) could outperform training that included the unsupervised step. So, why indeed, did purely supervised learning with backpropagation not work well in the past? Geoffrey Hinton &lt;a href=&quot;https://youtu.be/IcOMKXAw5VA?t=21m29s&quot;&gt;summarized the finding up to today in these four points&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;At this point, with all these discoveries since 2006, it had become clear that unsupervised pre-training is not essential to deep learning. It was helpful, no doubt, but it was also shown that in some cases well-done, purely supervised training (with the correct starting weight scales and activation function) could outperform training that included the unsupervised step. So, why indeed, did purely supervised learning with backpropagation not work well in the past? Geoffrey Hinton &lt;a href=&quot;https://youtu.be/IcOMKXAw5VA?t=21m29s&quot;&gt;summarized the findings up to today in these four points&lt;/a&gt;:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Our labeled datasets were thousands of times too small.&lt;/li&gt;
@@ -554,11 +778,11 @@ took a hefty amount of time:&lt;/p&gt;
     &lt;figcaption&gt;I wish I was first to come up with this delightful equation, but it seems others came up with it before me. &lt;a href=&quot;http://www.computervisionblog.com/2015/05/deep-learning-vs-big-data-who-owns-what.html&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;    
 &lt;/figure&gt;
 
-&lt;p&gt;Not to say that all that there was to figure out was figured out by this point. Far from it. What had been figured out is exactly the opposite: that peoples’ intuition was often wrong, and in particular unquestioned decisions and assumptions were often very unfounded. Asking simple questions, trying simple things - these had the power to greatly improve state of the art techniques. And precisely that has been happening, with many more ideas and approaches being explored and shared in deep learning since. An example: &lt;a href=&quot;http://arxiv.org/pdf/1207.0580.pdf&quot;&gt;“Improving neural networks by preventing co-adaptation of feature detectors”&lt;/a&gt;&lt;sup id=&quot;fnref:17&quot;&gt;&lt;a href=&quot;#fn:17&quot; class=&quot;footnote&quot;&gt;17&lt;/a&gt;&lt;/sup&gt; by G. E. Hinton et al. The idea is very simple: to prevent overfitting, randomly pretend some neurons are not there while training. This straightforward idea - called &lt;strong&gt;Dropout&lt;/strong&gt; - is a very efficient means of implementing the hugely powerful approach of ensemble learning, which just means learning in many different ways from the training data. Random Forests, a dominating technique in machine learning to this day, is chiefly effective due to being a form of ensemble learning. Training many different neural nets is possible but is far too computationally expensive, yet this simple idea in essence achieves the same thing and indeed significantly improves performance.&lt;/p&gt;
+&lt;p&gt;Not to say all there was to figure out was figured out by this point. Far from it. What had been figured out is exactly the opposite: that peoples’ intuition was often wrong, and in particular unquestioned decisions and assumptions were often very unfounded. Asking simple questions, trying simple things - these had the power to greatly improve state of the art techniques. And precisely that has been happening, with many more ideas and approaches being explored and shared in deep learning since. An example: &lt;a href=&quot;http://arxiv.org/pdf/1207.0580.pdf&quot;&gt;“Improving neural networks by preventing co-adaptation of feature detectors”&lt;/a&gt;&lt;sup id=&quot;fnref:17&quot;&gt;&lt;a href=&quot;#fn:17&quot; class=&quot;footnote&quot;&gt;17&lt;/a&gt;&lt;/sup&gt; by G. E. Hinton et al. The idea is very simple: to prevent overfitting, randomly pretend some neurons are not there while training. This straightforward idea - called &lt;strong&gt;Dropout&lt;/strong&gt; - is a very efficient means of implementing the hugely powerful approach of ensemble learning, which just means learning in many different ways from the training data. Random Forests, a dominating technique in machine learning to this day, is chiefly effective due to being a form of ensemble learning. Training many different neural nets is possible but is far too computationally expensive, yet this simple idea in essence achieves the same thing and indeed significantly improves performance.&lt;/p&gt;
 
-&lt;p&gt;Still, having all these research discoveries since 2006 is not what made the computer vision or other research communities again respect neural nets. What did do it was something somewhat less noble: completely destroying non-deep learning methods on a modern competitive benchmark. Geoffrey Hinton enlisted two of his Dropout co-writers, Alex Krizhevsky and Ilya Sutskever, to apply the ideas discovered to create an entry to the ILSVRC-2012 computer vision competition. To me, it is very striking to now understand that their work, described in &lt;a href=&quot;&quot;&gt;“ImageNet Classification with deep convolutional neural networks”&lt;/a&gt;&lt;sup id=&quot;fnref:18&quot;&gt;&lt;a href=&quot;#fn:18&quot; class=&quot;footnote&quot;&gt;18&lt;/a&gt;&lt;/sup&gt;, is the combination of very old concepts (a CNN with pooling and convolution layers, variations on the input data) with several new key insight (very efficient GPU implementation, ReLU neurons, dropout), and that this, precisely this, is what modern deep learning is. So, how did they do? Far, far better than the next closest entry: their error rate was %15.3, whereas the second closest was %26.2. This, the first and only CNN entry in that competition, was an undisputed sign that CNNs, and deep learning in general, had to be taken seriously for computer vision. Now, almost all entries to the competition are CNNs - a neural net model Yann LeCun was working with since 1989. And, remember LTSM recurrent neural nets, devised in the 90s by Sepp Hochreiter and Jürgen Schmidhuber to solve the backpropagation problem? Those, too, are now state of the art for sequential tasks such as speech processing.&lt;/p&gt;
+&lt;p&gt;Still, having all these research discoveries since 2006 is not what made the computer vision or other research communities again respect neural nets. What did do it was something somewhat less noble: completely destroying non-deep learning methods on a modern competitive benchmark. Geoffrey Hinton enlisted two of his Dropout co-writers, Alex Krizhevsky and Ilya Sutskever, to apply the ideas discovered to create an entry to the ILSVRC-2012 computer vision competition. To me, it is very striking to now understand that their work, described in &lt;a href=&quot;&quot;&gt;“ImageNet Classification with deep convolutional neural networks”&lt;/a&gt;&lt;sup id=&quot;fnref:18&quot;&gt;&lt;a href=&quot;#fn:18&quot; class=&quot;footnote&quot;&gt;18&lt;/a&gt;&lt;/sup&gt;, is the combination of very old concepts (a CNN with pooling and convolution layers, variations on the input data) with several new key insight (very efficient GPU implementation, ReLU neurons, dropout), and that this, precisely this, is what modern deep learning is. So, how did they do? Far, far better than the next closest entry: their error rate was %15.3, whereas the second closest was %26.2. This, the first and only CNN entry in that competition, was an undisputed sign that CNNs, and deep learning in general, had to be taken seriously for computer vision. Now, almost all entries to the competition are CNNs - a neural net model Yann LeCun was working with since 1989. And, remember LSTM recurrent neural nets, devised in the 90s by Sepp Hochreiter and Jürgen Schmidhuber to solve the backpropagation problem? Those, too, are now state of the art for sequential tasks such as speech processing.&lt;/p&gt;
 
-&lt;p&gt;This was the turning point. A mounting wave of excitement about possible progress has culminated in undeniable achievements, that far surpassed what other known techniques could manage. The tsunami metaphor that we started with in part 1, this is where it began, and it has been growing and intensifying to this day. Deep learning is here, and no winter is in sight.&lt;/p&gt;
+&lt;p&gt;This was the turning point. A mounting wave of excitement about possible progress has culminated in undeniable achievements that far surpassed what other known techniques could manage. The tsunami metaphor that we started with in part 1, this is where it began, and it has been growing and intensifying to this day. Deep learning is here, and no winter is in sight.&lt;/p&gt;
 
 &lt;figure&gt;
     &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/34991?token=qzrUAAJqtenu9pNK9CtttT7LRBHwKlOr7udYaUSBRoKNhJjnTJJhUYBGmkUcZVqVvm_D3UwK23d-yTj1ni-clhU&quot; alt=&quot;From Google Scholar&quot; /&gt; 
@@ -567,7 +791,7 @@ took a hefty amount of time:&lt;/p&gt;
 
 &lt;h1 id=&quot;epilogue-state-of-the-art&quot;&gt;Epilogue: state of the art&lt;/h1&gt;
 
-&lt;p&gt;If this were a movie, the 2012 ImageNet competition would likely have been the climax, and now we would have a progression of text describing ‘where are they now’. Yann Lecun - Facebook. Geoffrey Hinton - Google. Andrew Ng - Coursera, Google, Baidu. Bengio, Schmidhuber, and Hochreiter actually still in academia - but presumably with many more citations and/or grad students&lt;sup id=&quot;fnref:19&quot;&gt;&lt;a href=&quot;#fn:19&quot; class=&quot;footnote&quot;&gt;19&lt;/a&gt;&lt;/sup&gt;.  Though the ideas and achievements of deep learning are definitely exciting, while writing this I was inevitably also moved that these people, who worked in this field for decades and even as most abandoned it, are now rich, successful, and most of all better situated to do research than ever. All these peoples’ ideas are still very much out in the open, and in fact basically all these companies are open sourcing their deep learning frameworks, like some sort of utopian vision of industry-led research. What a story.&lt;/p&gt;
+&lt;p&gt;If this were a movie, the 2012 ImageNet competition would likely have been the climax, and now we would have a progression of text describing ‘where are they now’. Yann LeCun - Facebook. Geoffrey Hinton - Google. Andrew Ng - Coursera, Google, Baidu. Bengio, Schmidhuber, and Hochreiter actually still in academia - but presumably with many more citations and/or grad students&lt;sup id=&quot;fnref:19&quot;&gt;&lt;a href=&quot;#fn:19&quot; class=&quot;footnote&quot;&gt;19&lt;/a&gt;&lt;/sup&gt;.  Though the ideas and achievements of deep learning are definitely exciting, while writing this I was inevitably also moved that these people, who worked in this field for decades (even as most abandoned it), are now rich, successful, and most of all better situated to do research than ever. All these peoples’ ideas are still very much out in the open, and in fact basically all these companies are open sourcing their deep learning frameworks, like some sort of utopian vision of industry-led research. What a story.&lt;/p&gt;
 
 &lt;p&gt;I was foolish enough to hope I could fit a summary of the most impressive results of the past several years in this part, but at this point it is clear I will not have the space to do so. Perhaps one day there will be a part five of this that can finish out the tale by describing these things, but for now let me provide a brief list:&lt;/p&gt;
 
@@ -679,21 +903,21 @@ took a hefty amount of time:&lt;/p&gt;
 
 &lt;h1 id=&quot;neural-nets-make-decisions&quot;&gt;Neural Nets Make Decisions&lt;/h1&gt;
 
-&lt;p&gt;Having discovered the application of neural nets to unsupervised learning, let us also quickly see how they were used in the third branch of machine learning: &lt;strong&gt;reinforcement learning&lt;/strong&gt;. This one requires the most mathy notation to explain formally, but also has a goal that is very easy to describe informally: learn to make good decisions. Given some theoretical agent (a little software program, for instance), the idea is to make that agent able to decide on an &lt;strong&gt;action&lt;/strong&gt; based on its current &lt;strong&gt;state&lt;/strong&gt;, with the reception of some &lt;strong&gt;reward&lt;/strong&gt; for each action and the intent of getting the maximum &lt;strong&gt;utility&lt;/strong&gt; in the long term. So, whereas supervised learning tells the learning algorithm exactly what it should learn to output, reinforcement learning provides ‘rewards’ as a by-product of making good decisions over time, and does not directly tell the algorithm the correct decisions to choose.  From the outset it was a very abstracted decision making model - there was a finite number of states, and a known set of actions with known rewards for each state. This made it easy to write very elegant equations for finding the optimal set of actions, but hard to apply to real problems -  problems with continuous states or hard to define reward.&lt;/p&gt;
+&lt;p&gt;Having discovered the application of neural nets to unsupervised learning, let us also quickly see how they were used in the third branch of machine learning: &lt;strong&gt;reinforcement learning&lt;/strong&gt;. This one requires the most mathy notation to explain formally, but also has a goal that is very easy to describe informally: learn to make good decisions. Given some theoretical agent (a little software program, for instance), the idea is to make that agent able to decide on an &lt;strong&gt;action&lt;/strong&gt; based on its current &lt;strong&gt;state&lt;/strong&gt;, with the reception of some &lt;strong&gt;reward&lt;/strong&gt; for each action and the intent of getting the maximum &lt;strong&gt;utility&lt;/strong&gt; in the long term. So, whereas supervised learning tells the learning algorithm exactly what it should learn to output, reinforcement learning provides ‘rewards’ as a by-product of making good decisions over time, and does not directly tell the algorithm the correct decisions to choose.  From the outset it was a very abstracted decision making model - there were a finite number of states, and a known set of actions with known rewards for each state. This made it easy to write very elegant equations for finding the optimal set of actions, but hard to apply to real problems -  problems with continuous states or hard-to-define rewards.&lt;/p&gt;
 
 &lt;figure&gt;
     &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/34985?token=8S98i7brY2iTusq7B68-OHsvSS-ND9Kc5F_-XnppdoNFt6hyAbhhxRZ5W4ipFEaF-N4XX9yjAMyDdKx0QKL4--Q&quot; alt=&quot;RL&quot; /&gt; 
     &lt;figcaption&gt;Reinforcement learning. &lt;a href=&quot;http://www2.hawaii.edu/~chenx/ics699rl/grid/rl.html&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;    
 &lt;/figure&gt;
 
-&lt;p&gt;This is where neural nets come in. Machine learning in general, and neural nets in particular, are good at dealing with messy continuous data or dealing with hard to define functions by learning them from examples. Although classification is the bread and butter of neural nets, they are general enough to be useful for many types of problems - the descendants of Bernard Widrow’s and Ted Hoff’s Adaline were used for adaptive filters in the context of electrical circuits, for instance. And so, following the resurgence of research caused by backpropagation people soon devised ways of leveraging the power of neural nets to perform reinforcement learning. One of the early examples of this was solving a simple yet classic problem: the balancing of a stick on a moving platform, known to students in control classes everywhere as the inverted pendulum problem &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;This is where neural nets come in. Machine learning in general, and neural nets in particular, are good at dealing with messy continuous data or dealing with hard to define functions by learning them from examples. Although classification is the bread and butter of neural nets, they are general enough to be useful for many types of problems - the descendants of Bernard Widrow’s and Ted Hoff’s Adaline were used for adaptive filters in the context of electrical circuits, for instance. And so, following the resurgence of research caused by backpropagation, people soon devised ways of leveraging the power of neural nets to perform reinforcement learning. One of the early examples of this was solving a simple yet classic problem: the balancing of a stick on a moving platform, known to students in control classes everywhere as the inverted pendulum problem &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 
 &lt;figure&gt;
     &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/34982?token=k1WhSbXvaWX6oxEe7C_ChtP_n-ypQHY9JsSZc1Q8gwFlTKGjUaW0wuou46Um2KbDryXEKXnZqcThjIJX2MyDXmY&quot; alt=&quot;pendulum &quot; /&gt; 
     &lt;figcaption&gt;The double pendulum control problem - a step up from the single pendulum version, which is a classic control and reinforcement learning task. &lt;a href=&quot;hhttp://www.pdx.edu/biomedical-signal-processing-lab/inverted-double-pendulum&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;    
 &lt;/figure&gt;
 
-&lt;p&gt;As with adaptive filtering, this research was strongly relevant to the field of Electrical Engineering, where the control theory had been a major subfield for many decades prior to neural nets’ arrival. Though the field had devised ways to deal with many problems through direct analysis, having a means to deal with more complex situations through learning proved useful as evidenced by the hefty 7000 (!) citations of the 1990 “Identification and control of dynamical systems using neural networks”&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. Perhaps predictably, there was another field separate from Machine Learning where neural nets were useful - robotics. A major example of early neural net use for robotics came from CMU’s NavLab with 1989’s &lt;a href=&quot;http://www.dtic.mil/dtic/tr/fulltext/u2/a218975.pdf&quot;&gt;“Alvinn: An autonomous land vehicle in a neural network”&lt;/a&gt;&lt;sup id=&quot;fnref:2b&quot;&gt;&lt;a href=&quot;#fn:2b&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+&lt;p&gt;As with adaptive filtering, this research was strongly relevant to the field of Electrical Engineering, where control theory had been a major subfield for many decades prior to neural nets’ arrival. Though the field had devised ways to deal with many problems through direct analysis, having a means to deal with more complex situations through learning proved useful as evidenced by the hefty 7000 (!) citations of the 1990 “Identification and control of dynamical systems using neural networks”&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. Perhaps predictably, there was another field separate from Machine Learning where neural nets were useful - robotics. A major example of early neural net use for robotics came from CMU’s NavLab with 1989’s &lt;a href=&quot;http://www.dtic.mil/dtic/tr/fulltext/u2/a218975.pdf&quot;&gt;“Alvinn: An autonomous land vehicle in a neural network”&lt;/a&gt;&lt;sup id=&quot;fnref:2b&quot;&gt;&lt;a href=&quot;#fn:2b&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
 
 &lt;figure&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/5-acCtyKf7E&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
@@ -701,20 +925,20 @@ took a hefty amount of time:&lt;/p&gt;
 
 &lt;p&gt;As discussed in the paper, the neural net in this system learned to control the vehicle through plain supervised learning using sensor and steering data recorded while a human drove. There was also research into teaching robots using reinforcement learning specifically, as exemplified by the 1993 PhD thesis &lt;a href=&quot;http://www.dtic.mil/dtic/tr/fulltext/u2/a261434.pdf&quot;&gt;“Reinforcement learning for robots using neural networks”&lt;/a&gt;&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;. The thesis showed that robots could be taught behaviors such as wall following and door passing in reasonable amounts of time, which was a good thing considering the prior inverted pendulum work requires impractical lengths of training.&lt;/p&gt;
 
-&lt;p&gt;These disparate applications in other fields are certainly cool, but of course the most research on reinforcement learning and neural nets was happening within AI and Machine Learning. And here, one of the most significant results in the history of reinforcement learning was achieved: a neural net that learned to be a world class backgammon player.  Dubbed &lt;a href=&quot;http://courses.cs.washington.edu/courses/cse590hk/01sp/Readings/tesauro95cacm.pdf&quot;&gt;TD-Gammon&lt;/a&gt;, the neural net was trained using a standard reinforcement learning algorithm and was one of the first demonstrations of reinforcement learning being able to outperform humans on relatively complicated tasks &lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;. And it was specifically a reinforcement learning approach that worked here, as the same research showed&lt;/p&gt;
+&lt;p&gt;These disparate applications in other fields are certainly cool, but of course the most research on reinforcement learning and neural nets was happening within AI and Machine Learning. And here, one of the most significant results in the history of reinforcement learning was achieved: a neural net that learned to be a world class backgammon player.  Dubbed &lt;a href=&quot;http://courses.cs.washington.edu/courses/cse590hk/01sp/Readings/tesauro95cacm.pdf&quot;&gt;TD-Gammon&lt;/a&gt;, the neural net was trained using a standard reinforcement learning algorithm and was one of the first demonstrations of reinforcement learning being able to outperform humans on relatively complicated tasks &lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;. And it was specifically a reinforcement learning approach that worked here, as the same research showed just using a neural net without reinforcement learning did not work nearly as well.&lt;/p&gt;
 
 &lt;figure&gt;
     &lt;img class=&quot;postimagesmall&quot; src=&quot;https://draftin.com:443/images/34983?token=iTl1pbpNKoeqgLWOC7YNBJYTYokPCrYeH8WhMh6Pn7a2Ie9y3zigQjMDiD55r_ZQLzmxgaf_NxWmls9cNMkAw50&quot; alt=&quot;TDGammon&quot; /&gt; 
     &lt;figcaption&gt;The neural net that learned to play expert-level Backgammon. &lt;a href=&quot;https://webdocs.cs.ualberta.ca/~sutton/book/ebook/node108.html&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;    
 &lt;/figure&gt;
 
-&lt;p&gt;But, as we have seen happen before and will see happen again in AI, research hit a dead end. The predictable next problem to tackle using the TD-Gammon approach was investigated by Sebastian Thrun in the 1995 &lt;a href=&quot;http://www-preview.ri.cmu.edu/pub_files/pub1/thrun_sebastian_1995_8/thrun_sebastian_1995_8.pdf&quot;&gt;“Learning To Play the Game of Chess”&lt;/a&gt;, and the results were not good &lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;. Though the neural net learned decent play, certainly better than a complete novice at the game, it was still far worse than a standard computer program (GNU-Chess) implemented long before. The same was true for the other perennial challenge of AI, Go &lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;. See, TD-Gammon sort of cheated - it learned to evaluate positions quite well, and so could get away with not doing any ‘search’ over multiple future moves and instead just picking what the one that led to the best next position. But the same is simply not possible in chess or Go, games which are a challenge to AI precisely because of needing to look many moves ahead and having so many possible move combinations. Besides, even if the algorithm was smarter, the hardware of the time just was not up to the task - Thrun reported that “NeuroChess does a poor job, because it spends most of its time computing board evaluations. Computing a large neural network function takes two orders of magnitude longer than evaluating an optimized linear evaluation function (like that of GNU-Chess).” The weakness of computers of the time relative to the needs of the neural nets was a very real issue, and as we shall see not the only one…&lt;/p&gt;
+&lt;p&gt;But, as we have seen happen before and will see happen again in AI, research hit a dead end. The predictable next problem to tackle using the TD-Gammon approach was investigated by Sebastian Thrun in the 1995 &lt;a href=&quot;http://www-preview.ri.cmu.edu/pub_files/pub1/thrun_sebastian_1995_8/thrun_sebastian_1995_8.pdf&quot;&gt;“Learning To Play the Game of Chess”&lt;/a&gt;, and the results were not good &lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;. Though the neural net learned decent play, certainly better than a complete novice at the game, it was still far worse than a standard computer program (GNU-Chess) implemented long before. The same was true for the other perennial challenge of AI, Go &lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;. See, TD-Gammon sort of cheated - it learned to evaluate positions quite well, and so could get away with not doing any ‘search’ over multiple future moves and instead just picking the one that led to the best next position. But the same is simply not possible in chess or Go, games which are a challenge to AI precisely because of needing to look many moves ahead and having so many possible move combinations. Besides, even if the algorithm were smarter, the hardware of the time just was not up to the task - Thrun reported that “NeuroChess does a poor job, because it spends most of its time computing board evaluations. Computing a large neural network function takes two orders of magnitude longer than evaluating an optimized linear evaluation function (like that of GNU-Chess).” The weakness of computers of the time relative to the needs of the neural nets was a very real issue, and as we shall see not the only one…&lt;/p&gt;
 
 &lt;h1 id=&quot;neural-nets-get-loopy&quot;&gt;Neural Nets Get Loopy&lt;/h1&gt;
 
 &lt;p&gt;As neat as unsupervised and reinforcement learning are, I think supervised learning is still my favorite use case for neural nets. Sure, learning probabilistic models of data is cool, but it’s simply much easier to get excited for the sorts of concrete problems solved by backpropagation. We already saw how Yann Lecun achieved quite good recognition of handwritten text (a technology which went on to be nationally deployed for check-reading, and much more a while later…), but there was another obvious and greatly important task being worked on at the same time: understanding human speech.&lt;/p&gt;
 
-&lt;p&gt;As with writing, understanding human speech is quite difficult due to the practically infinite variation in how the same word can be spoken. But, here there is an extra challenge: long sequences of input. See, for images it’s fairly simple to crop out a single letter from an image and have a neural net tell you what letter that is, input-&amp;gt;output style. But with audio it’s not so simple - separating out speech into characters is completely impractical, and even  finding individual words within speech is less simple. Plus, if you think about human speech, generally hearing words in context makes them easier to understand than being separated. While this structure works quite well for processing things such as images one at a time, input-&amp;gt;output style, it is not at all well suited to long streams of information such as audio or text. The neural net has no ‘memory’ with which an input can affect another input processed afterward, but this is precisely how we humans process audio or text - a string of word or sound inputs, rather than a single large input. Point being: to tackle the problem of understanding speech, researchers sought to modify neural nets to process input as a stream of input as in speech rather than one batch as with an image.&lt;/p&gt;
+&lt;p&gt;As with writing, understanding human speech is quite difficult due to the practically infinite variation in how the same word can be spoken. But, here there is an extra challenge: long sequences of input. See, for images it’s fairly simple to crop out a single letter from an image and have a neural net tell you which letter that is, input-&amp;gt;output style. But with audio it’s not so simple - separating out speech into characters is completely impractical, and even  finding individual words within speech is less simple. Plus, if you think about human speech, generally hearing words in context makes them easier to understand than being separated. While this structure works quite well for processing things such as images one at a time, input-&amp;gt;output style, it is not at all well suited to long streams of information such as audio or text. The neural net has no ‘memory’ with which an input can affect another input processed afterward, but this is precisely how we humans process audio or text - a string of word or sound inputs, rather than a single large input. Point being: to tackle the problem of understanding speech, researchers sought to modify neural nets to process input as a stream of input as in speech rather than one batch as with an image.&lt;/p&gt;
 
 &lt;p&gt;One approach to this, by Alexander Waibel et. al  (including Hinton), was introduced in the 1989 &lt;a href=&quot;http://www.cs.toronto.edu/~fritz/absps/waibelTDNN.pdf&quot;&gt;“Phoneme recognition using &lt;strong&gt;time-delay neural networks&lt;/strong&gt;”&lt;/a&gt;&lt;sup id=&quot;fnref:7&quot;&gt;&lt;a href=&quot;#fn:7&quot; class=&quot;footnote&quot;&gt;8&lt;/a&gt;&lt;/sup&gt;. These time-delay neural networks (TDNN) were very similar to normal neural networks, except each neuron processed only a subset of the input and had several sets of weights for different delays of the input data. In other words, for a sequence of audio input, a ‘moving window’ of the audio is input into the network and as the window moves the same bits of audio are processed by each neuron with different sets of weights based on where in the window the bit of audio is. This is best understood with a quick illustration:&lt;/p&gt;
 
@@ -723,7 +947,7 @@ took a hefty amount of time:&lt;/p&gt;
     &lt;figcaption&gt;Time delay neural networks. &lt;a href=&quot;https://electroviees.wordpress.com/tag/chacha/&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;    
 &lt;/figure&gt;
 
-&lt;p&gt;In a sense, this is quite similar to what CNNs do - instead of looking at the whole input at once, each unit looks at just a subset of the input at a time and does the same computation for each small subset. The main difference here is that there is no idea of time in a CNN, and the ‘window’ of input for each neuron is always moved across the whole input image to compute a result, whereas in a TDNN there actually is sequential input and output of data. Fun fact: &lt;a href=&quot;https://youtu.be/vShMxxqtDDs?t=26m4s&quot;&gt;according to Hinton&lt;/a&gt;, the idea of TDNNs is what inspired LeCun to develop convolutional neural nets. But, funnily enough CNNs became essential for image processing, whereas in speech recognition TDNNs have been surpassed to another approach - &lt;strong&gt;recurrent neural nets&lt;/strong&gt; (RNNs). See, all the networks that have been discussed so far have been &lt;strong&gt;feedforward&lt;/strong&gt; networks, meaning that the output of neurons in a given layer acts as input to only neuron in a next layer. But, it does not have to be so - there is nothing prohibiting us brave computer scientists from connecting output of the last layer act as an input to the first layer, or just connecting the output of a neuron to itself. By having the output of the network ‘loop’ back into the network, the problem of giving the network memory as to past inputs is solved so elegantly!&lt;/p&gt;
+&lt;p&gt;In a sense, this is quite similar to what CNNs do - instead of looking at the whole input at once, each unit looks at just a subset of the input at a time and does the same computation for each small subset. The main difference here is that there is no idea of time in a CNN, and the ‘window’ of input for each neuron is always moved across the whole input image to compute a result, whereas in a TDNN there actually is sequential input and output of data. Fun fact: &lt;a href=&quot;https://youtu.be/vShMxxqtDDs?t=26m4s&quot;&gt;according to Hinton&lt;/a&gt;, the idea of TDNNs is what inspired LeCun to develop convolutional neural nets. But, funnily enough CNNs became essential for image processing, whereas in speech recognition TDNNs have been surpassed to another approach - &lt;strong&gt;recurrent neural nets&lt;/strong&gt; (RNNs). See, all the networks that have been discussed so far have been &lt;strong&gt;feedforward&lt;/strong&gt; networks, meaning that the output of neurons in a given layer acts as input to only neurons in a next layer. But, it does not have to be so - there is nothing prohibiting us brave computer scientists from connecting output of the last layer act as an input to the first layer, or just connecting the output of a neuron to itself. By having the output of the network ‘loop’ back into the network, the problem of giving the network memory as to past inputs is solved so elegantly!&lt;/p&gt;
 
 &lt;div&gt;&lt;button class=&quot;btn&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#rnnvs&quot;&gt;
 Aside: more on RNNs vs TDNNs &amp;raquo;
@@ -731,9 +955,8 @@ Aside: more on RNNs vs TDNNs &amp;raquo;
 &lt;blockquote class=&quot;aside&quot;&gt;&lt;p id=&quot;rnnvs&quot; class=&quot;boltzmann&quot; style=&quot;height: 0px;&quot;&gt;
 Again, those seeking greater insight into the distinctions between different neural nets would do well to just go back to the actual papers. Here is a nice summation of why RNNs are cooler than TDNNs for sequential data:
 &quot;A recurrent network has cycles in its graph that allow it to store
-information about past inputs for an amount of time that is not fixed a priori but rather depends on its weights and on the input data. The type of recurrent networks considered here can be used either for sequence recognition production or prediction units are not clamped and we are not interested in convergence to a fixed point. Instead the recurrent network
-is used to transform an input sequence eg speech spectra into an output sequence eg degrees of evidence for phonemes. The main advantage of such recurrent networks is that the relevant past context can be represented in the activity of the hidden units and then used to produce to compute the output at each time step. In theory the network can learn how
-to extract the relevant context information from the input sequence In contrast in network with time delays such as TDNNs the designer of the network must decide a priori by the choice of delay connections which part of the past input sequence should be used to predict the next output. According to the terminology introduced in the memory is static in the case of TDNNs but it is adaptive in the case of recurrent networks.&quot;
+information about past inputs for an amount of time that is not fixed a priori but rather depends on its weights and on the input data. The type of recurrent networks considered here can be used either for sequence recognition production or prediction. Units are not clamped and we are not interested in convergence to a fixed point. Instead the recurrent network
+is used to transform an input sequence eg speech spectra into an output sequence, eg degrees, of evidence for phonemes. The main advantage of such recurrent networks is that the relevant past context can be represented in the activity of the hidden units and then used to compute the output at each time step. In theory the network can learn how to extract the relevant context information from the input sequence. In contrast, in network with time delays such as TDNNs the designer of the network must decide a priori by the choice of delay connections which part of the past input sequence should be used to predict the next output. According to the terminology introduced in [] the memory is static in the case of TDNNs but it is adaptive in the case of recurrent networks.&quot;
 &lt;/p&gt;&lt;/blockquote&gt;
 
 &lt;figure&gt;
@@ -751,7 +974,7 @@ to extract the relevant context information from the input sequence In contrast 
 &lt;p&gt;This fairly simple idea actually worked - it was possible to train recurrent neural nets. And indeed, multiple people explored the application of RNNs to speech recognition. But, here is a twist you should now be able to predict: this approach did not work very well. To find out why, let’s meet another modern giant of Deep Learning: Yoshua Bengio. Starting work on speech recognition with neural nets around 1986, he co-wrote many papers on using ANNs and RNNs for speech recognition, and ended up working at the AT&amp;amp;T Bell Labs on the problem just as Yann LeCun was working with CNNs there. In fact, in 1995 they co-wrote the summary paper &lt;a href=&quot;http://yann.lecun.com/exdb/publis/pdf/lecun-bengio-95a.pdf&quot;&gt;“Convolutional Networks for Images, Speech, and Time-Series”&lt;/a&gt;&lt;sup id=&quot;fnref:8&quot;&gt;&lt;a href=&quot;#fn:8&quot; class=&quot;footnote&quot;&gt;9&lt;/a&gt;&lt;/sup&gt;, the first of many collaborations among them. But, before then Bengio wrote the 1993 &lt;a href=&quot;http://www.iro.umontreal.ca/~lisa/publications2/index.php/attachments/single/161&quot;&gt;“A Connectionist Approach to Speech Recognition”&lt;/a&gt;&lt;sup id=&quot;fnref:9&quot;&gt;&lt;a href=&quot;#fn:9&quot; class=&quot;footnote&quot;&gt;10&lt;/a&gt;&lt;/sup&gt;.  Here, he summarized the general failure of effectively teaching RNNs:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;“Although recurrent networks can in many instances outperform static networks, they appear more difficult to train optimally. Our experiments tended to indicate that their parameters settle in a suboptimal solution which takes into account short term dependencies but not long term dependencies. For example in experiments described in we found that simple duration constraints on phonemes had not at all been captured by the recurrent network. 
+  &lt;p&gt;“Although recurrent networks can in many instances outperform static networks, they appear more difficult to train optimally. Our experiments tended to indicate that their parameters settle in a suboptimal solution which takes into account short term dependencies but not long term dependencies. For example in experiments described in (ctation) we found that simple duration constraints on phonemes had not at all been captured by the recurrent network. 
 …
 Although this is a negative result, a better understanding of this problem could help in designing alternative systems for learning to map input sequences to output sequences with
 long term dependencies eg for learning finite state machines, grammars, and other language related tasks. Since gradient based methods appear inadequate for this kind of problem we want to consider alternative optimization methods that give acceptable results even when the criterion function is not smooth.”&lt;/p&gt;
@@ -759,13 +982,13 @@ long term dependencies eg for learning finite state machines, grammars, and othe
 
 &lt;h1 id=&quot;a-new-winter-dawns&quot;&gt;A New Winter Dawns&lt;/h1&gt;
 
-&lt;p&gt;So, there was a problem. A big problem. And the problem, basically, was what so recently was a huge advance: backpropagation. See, convolutional neural nets were important in part because backpropagation just did not work well normal neural nets with many layers. And that’s the real key to deep-learning - having many layers, in today’s systems as many as 20 or more. But already by the late 1980’s, it was known that deep neural nets trained with backpropagation just did not work very well, and particularly did not work as well as nets with fewer layers. The reason, in basic terms, is that backpropagation relies on finding the error at the output layer and successively splitting up blame for it for prior layers. Well, with many layers this calculus-based splitting of blame ends up with either huge or tiny numbers and the resulting neural net just does not work very well - the ‘vanishing or exploding gradient problem’. Jurgen Schmidhuber, another Deep Learning luminary, summarizes the more formal explanation well&lt;sup id=&quot;fnref:10&quot;&gt;&lt;a href=&quot;#fn:10&quot; class=&quot;footnote&quot;&gt;11&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+&lt;p&gt;So, there was a problem. A big problem. And the problem, basically, was what so recently was a huge advance: backpropagation. See, convolutional neural nets were important in part because backpropagation just did not work well for normal neural nets with many layers. And that’s the real key to deep-learning - having many layers, in today’s systems as many as 20 or more. But already by the late 1980’s, it was known that deep neural nets trained with backpropagation just did not work very well, and particularly did not work as well as nets with fewer layers. The reason, in basic terms, is that backpropagation relies on finding the error at the output layer and successively splitting up blame for it for prior layers. Well, with many layers this calculus-based splitting of blame ends up with either huge or tiny numbers and the resulting neural net just does not work very well - the ‘vanishing or exploding gradient problem’. Jurgen Schmidhuber, another Deep Learning luminary, summarizes the more formal explanation well&lt;sup id=&quot;fnref:10&quot;&gt;&lt;a href=&quot;#fn:10&quot; class=&quot;footnote&quot;&gt;11&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;“A diploma thesis (Hochreiter, 1991) represented a milestone of explicit DL research. As mentioned in Sec. 5.6, by the late 1980s, experiments had indicated that traditional deep feedforward or recurrent networks are hard to train by backpropagation (BP) (Sec. 5.5). Hochreiter’s work formally identified a major reason: Typical deep NNs suffer from the now famous problem of vanishing or exploding gradients. With standard activation functions (Sec. 1), cumulative backpropagated error signals (Sec. 5.5.1) either shrink rapidly, or grow out of bounds. In fact, they decay exponentially in the number of layers or CAP depth (Sec. 3), or they explode. “&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Backpropagation through time is essentially equivalent to a neural net with a whole lot of layers, so RNNs were particularly difficult to train with Backpropagation. Both Sepp Hochreiter, advised by Schmidhuber, and Yoshua Bengio published papers on the inability of learning long-term information due to limitations of backpropagation &lt;sup id=&quot;fnref:11&quot;&gt;&lt;a href=&quot;#fn:11&quot; class=&quot;footnote&quot;&gt;12&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&quot;fnref:12&quot;&gt;&lt;a href=&quot;#fn:12&quot; class=&quot;footnote&quot;&gt;13&lt;/a&gt;&lt;/sup&gt;. The analysis of the problem did reveal a solution - Schmidhuber and Hochreiter introduced a very important concept in 1997 that essentially solved the problem of how to train recurrent neural nets, much as CNNs did for feedforward neural nets - &lt;a href=&quot;http://deeplearning.cs.cmu.edu/pdfs/Hochreiter97_lstm.pdf&quot;&gt;&lt;strong&gt;Long Short Term Memory&lt;/strong&gt;&lt;/a&gt; (LTSM)&lt;sup id=&quot;fnref:13&quot;&gt;&lt;a href=&quot;#fn:13&quot; class=&quot;footnote&quot;&gt;14&lt;/a&gt;&lt;/sup&gt;. In simple terms, as with CNNs the LTSM breakthrough ended up being a small alteration to the normal neural net model &lt;sup id=&quot;fnref:10:1&quot;&gt;&lt;a href=&quot;#fn:10&quot; class=&quot;footnote&quot;&gt;11&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+&lt;p&gt;Backpropagation through time is essentially equivalent to a neural net with a whole lot of layers, so RNNs were particularly difficult to train with Backpropagation. Both Sepp Hochreiter, advised by Schmidhuber, and Yoshua Bengio published papers on the inability of learning long-term information due to limitations of backpropagation &lt;sup id=&quot;fnref:11&quot;&gt;&lt;a href=&quot;#fn:11&quot; class=&quot;footnote&quot;&gt;12&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&quot;fnref:12&quot;&gt;&lt;a href=&quot;#fn:12&quot; class=&quot;footnote&quot;&gt;13&lt;/a&gt;&lt;/sup&gt;. The analysis of the problem did reveal a solution - Schmidhuber and Hochreiter introduced a very important concept in 1997 that essentially solved the problem of how to train recurrent neural nets, much as CNNs did for feedforward neural nets - &lt;a href=&quot;http://deeplearning.cs.cmu.edu/pdfs/Hochreiter97_lstm.pdf&quot;&gt;&lt;strong&gt;Long Short Term Memory&lt;/strong&gt;&lt;/a&gt; (LSTM)&lt;sup id=&quot;fnref:13&quot;&gt;&lt;a href=&quot;#fn:13&quot; class=&quot;footnote&quot;&gt;14&lt;/a&gt;&lt;/sup&gt;. In simple terms, as with CNNs the LTSM breakthrough ended up being a small alteration to the normal neural net model &lt;sup id=&quot;fnref:10:1&quot;&gt;&lt;a href=&quot;#fn:10&quot; class=&quot;footnote&quot;&gt;11&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;“The basic LSTM idea is very simple. Some of the units are called Constant Error Carousels (CECs). Each CEC uses as an activation function f, the identity function, and has a connection to itself with ﬁxed weight of 1.0. Due to f’s constant derivative of 1.0, errors backpropagated through a CEC cannot vanish or explode (Sec. 5.9) but stay as they are (unless they “ﬂow out” of the CEC to other, typically adaptive parts of the NN). CECs are connected to several nonlinear adaptive units (some with multiplicative activation functions) needed for learning nonlinear behavior. Weight changes of these units often proﬁt from error signals propagated far back in time through CECs. CECs are the main reason why LSTM nets can learn to discover the importance of (and memorize) events that happened thousands of discrete time steps ago, while previous RNNs already failed in case of minimal time lags of 10 steps.”&lt;/p&gt;
@@ -2036,27 +2259,6 @@ So just do it.&lt;/p&gt;
 &lt;p&gt;My work on this project counted both for completing the Research Option at Georgia Tech and for my CS Senior Research project, and correctly so - deciding on a research direction, implementing the vast majority of the necessary software, and (most of all) running a study and completing the paper all pushed me to work extremely hard despite at times being unsure the project could be completed on time and most definitely being unsure it could lead to a publication. It must be admitted that conceptually, or in terms of algorithms, the paper is not that impressive. Still, I still think it touched on several important topics that could be exploerd to a much deeper depth. And, it got published, so it seems I am not entirely wrong!&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;/projects/research/teaching-constrained-skills/&quot;&gt;Teaching Robots Skill Constraints&lt;/a&gt; was originally published by Andrey Kurenkov at &lt;a href=&quot;&quot;&gt;Andrey Kurenkov's Web World&lt;/a&gt; on May 01, 2015.&lt;/p&gt;
-  </content>
-</entry>
-
-
-  
-
-<entry>
-  <title type="html"><![CDATA[GT Solar Racing]]></title>
-  <link rel="alternate" type="text/html" href="http://www.andreykurenkov.com/projects/team_projects/solarracing/" />
-  <id>/projects/team_projects/solarracing</id>
-  <published>2015-05-01T00:00:00-07:00</published>
-  <updated>2015-05-01T00:00:00-07:00</updated>
-  <author>
-    <name></name>
-    <uri>www.andreykurenkov.com</uri>
-    <email>andreyvkurenkov@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;To work on the same team for four years, all during school, can you imagine? So many late nights, team dinners, missed deadlines. My involvement went up and down, and was varied - helping out the MechE people, debugging circuits, discussing design - but for the most part I did embedded programming, and ended up being software lead for two years (more or less). No one on the team can claim to have been great at meeting deadlines or not overcomplicating things, but in the end we did built a (very suboptimal) solar racing car. How did we get there? Very messily, and having made many mistakes. But, there is no doubt some of the most valuable experience I got at Tech was from working on the team - how do engineers learn to actually do anything if they don’t participate in such things in schools? Who knows.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/projects/team_projects/solarracing/&quot;&gt;GT Solar Racing&lt;/a&gt; was originally published by Andrey Kurenkov at &lt;a href=&quot;&quot;&gt;Andrey Kurenkov's Web World&lt;/a&gt; on May 01, 2015.&lt;/p&gt;
   </content>
 </entry>
 
