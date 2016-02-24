@@ -19,7 +19,7 @@ excerpt: "What for, where, and how do software developers work?"
 
 # What?
 
-What will follow are a selection of what I think are cool visualizations of data from the [StackOverflow 2015 Developer Survey](http://stackoverflow.com/research/developer-survey-2015). The survey asked software developers a bunch of questions concerning their background and work, and got an impressive 26086 responses. Due o there being multiple 'Select up to' questions, the data contains 222 observations for every response - lots of data to play with and visualize! The visualizations were made with R, as part of a project for the [Data Analysis with R](https://www.udacity.com/courses/ud651) class. 
+What will follow are a selection of what I think are cool visualizations of data from the [StackOverflow 2015 Developer Survey](http://stackoverflow.com/research/developer-survey-2015). The survey asked software developers a bunch of questions concerning their background and work, and got an impressive 26086 responses. Due to there being multiple 'Select up to' questions, the data contains 222 observations for every response - lots of data to play with and visualize! The visualizations were made with R, as part of a project for the [Data Analysis with R](https://www.udacity.com/courses/ud651) class. 
 
 # Fun With Developers' Personal+Professional Metrics
 Having loaded and cleaned up the data, the natural place to start is looking at who responded to the survey: 
