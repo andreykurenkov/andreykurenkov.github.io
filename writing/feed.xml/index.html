@@ -4,13 +4,717 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://www.andreykurenkov.com/feed.xml" />
 <link rel="alternate" type="text/html" href="http://www.andreykurenkov.com" />
-<updated>2016-02-11T18:15:58-08:00</updated>
+<updated>2016-04-18T01:11:27-07:00</updated>
 <id>/</id>
 <author>
   <name>Andrey Kurenkov</name>
   <uri>/</uri>
   <email>andreyvkurenkov@gmail.com</email>
 </author>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[A 'Brief' History of Game AI Up To AlphaGo, Part 3]]></title>
+  <link rel="alternate" type="text/html" href="http://www.andreykurenkov.com/writing/a-brief-history-of-game-ai-part-3/" />
+  <id>/writing/a-brief-history-of-game-ai-part-3</id>
+  <published>2016-04-18T19:19:34-07:00</published>
+  <updated>2016-04-18T19:19:34-07:00</updated>
+  <author>
+    <name></name>
+    <uri>www.andreykurenkov.com</uri>
+    <email>andreyvkurenkov@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;This is the third part of ‘A Brief History of Game AI Up to AlphaGo’. Part 1 is &lt;a href=&quot;http://www.andreykurenkov.com/writing/a-brief-history-of-game-ai-up-to-alphago&quot;&gt;here&lt;/a&gt; and part 2 is &lt;a href=&quot;http://www.andreykurenkov.com/writing/a-brief-history-of-game-ai-up-to-alphago-2&quot;&gt;here&lt;/a&gt;. In this part, we shall cover the intellectual innovations necessary to finally achieve strong Go programs, and the final steps beyond those that get us all the way to the present and to AlphaGo.&lt;/p&gt;
+
+&lt;h1 id=&quot;and-then-there-was-go&quot;&gt;And Then There Was Go&lt;/h1&gt;
+&lt;p&gt;Although Go playing programs by the late 90s were still far from impressive, this was not due to a lack of people trying. Following Bruce Wilcox’s 70s work on Go programs (mentioned in the &lt;a href=&quot;http://www.andreykurenkov.com/writing/a-brief-history-of-game-ai-up-to-alphago-2&quot;&gt;part 2 of this&lt;/a&gt;), numerous people continued to dedicate their time and CPU cycles to implementing better Go programs throughout the 80s and 90s. One of the best programs of the 90s, The Many Faces of Go, achieved 13-kyu (good non-professional) performance. It took 30 thousand lines of code written over a decade by its developer, David Fotland, to implement the many Go-specific components it used on top of traditional alpha-beta search&lt;sup id=&quot;fnref:ManyFaces&quot;&gt;&lt;a href=&quot;#fn:ManyFaces&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. The combination of a larger branching factor, longer games, and trickier-to-evaluate board positions rendered Go resistant to the techniques that by this time were achieving master-level Chess play. The so-called “knowledge-based” approach of Many Faces of Go (encoding many human-designed strategies into the program) worked, but by the 2000s hit a point of diminishing returns. Traditional techniques were simply not enough.&lt;/p&gt;
+
+&lt;figure&gt;
+   &lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/16-go90s.png&quot; alt=&quot;Go90s&quot; /&gt; 
+   &lt;figcaption&gt;Go AIs in the 90s were at the level of good non-professionals; the 'master' ranks are actually obtained by relatively few people who typically play in tournaments, and the 'professional' rank is reserved for incredibly good players. &lt;a href=&quot;http://www0.cs.ucl.ac.uk/staff/D.Silver/web/Applications_files/grand-challenge.pdf&quot;&gt;&lt;b&gt;(Source)&lt;/b&gt;&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Fortunately, another family of techniques did exist - &lt;a href=&quot;https://simple.wikipedia.org/wiki/Monte_Carlo_algorithm&quot;&gt;Monte Carlo algorithms&lt;/a&gt;. The general idea of Monte Carlo algorithms is to simulate a process, usually with some randomness thrown in, in order to statistically get a good approximation of some value that is very hard to calculate directly. For instance, &lt;a href=&quot;https://en.wikipedia.org/wiki/Simulated_annealing&quot;&gt;simulated annealing&lt;/a&gt; is a classic optimization technique for finding the optimal parameters for some function. It boils down to starting with some random values and semi-randomly changing them to gradually get more optimal values, as shown in the graphic below. If this is done for long enough, it turns out a solution close to the optimal one can most likely be found with much less computation than the actually optimal one would have taken to find.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/17-simulated_annealing.gif&quot; alt=&quot;SA&quot; /&gt; 
+    &lt;figcaption&gt; An example of simulated annealing. Just 'hill climbing' in one direction from any starting point does not work to find the optimal value since locally many places look like a peak, so at first big random jumps in location are allowed. Over time, less randomness is allowed as the algorithm converges on the globally highest peak. &lt;a href=&quot;https://en.wikipedia.org/wiki/File:Hill_Climbing_with_Simulated_Annealing.gif&quot;&gt;&lt;b&gt;(Source)&lt;/b&gt;&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p class=&quot;sidenoteleftlarge&quot;&gt;1993&lt;/p&gt;
+&lt;p&gt;Monte Carlo techniques had been applied to games of chance such as Blackjack since the 70s, but they were not suggested for Go until 1993 with Bernd Brügmann’s &lt;a href=&quot;http://www.ideanest.com/vegos/MonteCarloGo.pdf&quot;&gt;“Monte Carlo Go”&lt;/a&gt; &lt;sup id=&quot;fnref:MonteCarloGo&quot;&gt;&lt;a href=&quot;#fn:MonteCarloGo&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. The idea he presented was suspiciously simple: instead of implementing a complex evaluation function and executing typical tree search, have a program just simulate playing many random games (using a version of simulated annealing) and pick the move that leads to the best outcome on average. Remember, the whole reason for evaluation functions is to search only a few moves ahead and not until the end of the game, since the number of possible ways to get to the end is far too immense to thoroughly explore. But, this does not work well for Go since evaluation functions for it are harder to write and typically take much longer to compute than for Chess. So, it turns out that a great alternative is to instead use that computation time to randomly play out only a subset of possible games (typically described as doing many &lt;strong&gt;rollouts&lt;/strong&gt;), and then evaluate moves based on just counting victories and losses. Despite being radically simple (having little more than the rules of Go), Brügmann’s implementation of the idea showed decent beginner-level play not too far from the vastly more complex Many Faces of Go.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/18-hugetrees.png&quot; /&gt; 
+    &lt;figcaption&gt;Monte Carlo approach compared to classical tree search. &lt;a href=&quot;http://www.remi-coulom.fr/JFFoS/JFFoS.pdf&quot;&gt;&lt;b&gt;(Source)&lt;/b&gt;&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Although it was a novel approach that showed promise for overcoming the problems that stumped traditional Go AI, Brügmann’s work was initially not taken seriously. It was not until the 2000s that a group in Paris made up of Bruno Bouzy, Tristan Cazenave, and Bernard Helmstetter started seriously exploring the potential of Monte Carlo techniques for Go through multiple papers and programs&lt;sup id=&quot;fnref:ParisSchool1&quot;&gt;&lt;a href=&quot;#fn:ParisSchool1&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&quot;fnref:ParisSchool2&quot;&gt;&lt;a href=&quot;#fn:ParisSchool2&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&quot;fnref:ParisSchool3&quot;&gt;&lt;a href=&quot;#fn:ParisSchool3&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&quot;fnref:MonteCarloRevolution&quot;&gt;&lt;a href=&quot;#fn:MonteCarloRevolution&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;. Though they simplified and expanded upon the Brügmann approach (stripping out simulated annealing and adding some heuristics and pruning), their programs were still inferior to the strongest standard tree search ones such as GNU Go. However this lasted only a few years, until several milestone achievements in 2006:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Rémi Coulom further improved on the use of Monte Carlo evaluation with tree search, and coined the term &lt;strong&gt;Monte-Carlo Tree Search&lt;/strong&gt; (MCTS)&lt;sup id=&quot;fnref:MCTS&quot;&gt;&lt;a href=&quot;#fn:MCTS&quot; class=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;. His program CrazyStone won that year’s KGS computer-Go tournament for the small 9x9 variant of Go, beating other programs such as NeuroGo and GNU Go and thus proving the potential of MCTS.&lt;/li&gt;
+  &lt;li&gt;Levente Kocsis and Csaba Szepesvári developed the &lt;strong&gt;UCT&lt;/strong&gt; (Upper Confidence Bounds for Trees) algorithm &lt;sup id=&quot;fnref:BanditMonte&quot;&gt;&lt;a href=&quot;#fn:BanditMonte&quot; class=&quot;footnote&quot;&gt;8&lt;/a&gt;&lt;/sup&gt;. This algorithm solves the choice between exploitation (simulating already good-looking moves to get a better estimate of how good they are) and exploration (trying new or bad-looking moves to try to get something better) in MCTS. The same tradeoff has long been studied in Computer Science in the form of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Multi-armed_bandit&quot;&gt;multi-arm bandit problem&lt;/a&gt;, and UCT was a modification of a theoretically-sound Upper Confidence Bounds formula developed for that problem a few years prior.&lt;/li&gt;
+  &lt;li&gt;Lastly, Sylvain Gelly et al. combined MCTS with UCT as well as the older ideas of local pattern matching and tree pruning&lt;sup id=&quot;fnref:MoGo&quot;&gt;&lt;a href=&quot;#fn:MoGo&quot; class=&quot;footnote&quot;&gt;9&lt;/a&gt;&lt;/sup&gt;. Their program, MoGo, quickly surpassed CrazyStone and became the best computer Go AI.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;sidenoteleftlarge&quot;&gt;2006&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/19-monte_carlo.png&quot; /&gt; 
+    &lt;figcaption&gt;A nice visualization of (basic) Monte Carlo Tree Search. &lt;a href=&quot;https://commons.wikimedia.org/w/index.php?curid=25382061&quot;&gt;&lt;b&gt;(Source)&lt;/b&gt;&lt;/a&gt;, By &lt;a href=&quot;//commons.wikimedia.org/w/index.php?title=User:Mciura&amp;amp;action=edit&amp;amp;redlink=1&quot; class=&quot;new&quot;&gt;Mciura&lt;/a&gt; - &lt;span class=&quot;int-own-work&quot; lang=&quot;en&quot;&gt;Own work&lt;/span&gt;, &lt;a title=&quot;Creative Commons Attribution-Share Alike 3.0&quot; href=&quot;http://creativecommons.org/licenses/by-sa/3.0&quot;&gt;CC BY-SA 3.0&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The rapid success of CrazyStone and MoGo was impressive enough, but what happened next was truly groundbreaking. In 2008, MoGo beat professional 8 dan player Kim Myungwan in 19x19 Go. Granted, Myungwan was playing with a large handicap and MoGo was running on an 800-node supercomputer, but the feat was nevertheless historic, given that previous Go programs could at best beat highly-ranked amateurs with large handicaps. In the same year, CrazyStone defeated professional Japanese 4 dan player Kaori Aoba with a smaller handicap while running on a normal PC&lt;sup id=&quot;fnref:GoHistory&quot;&gt;&lt;a href=&quot;#fn:GoHistory&quot; class=&quot;footnote&quot;&gt;10&lt;/a&gt;&lt;/sup&gt;. And so on it went, with faster computers and various tweaks to MCTS making Go programs rapidly become much, much better.&lt;/p&gt;
+
+&lt;p class=&quot;sidenoteleftlarge&quot;&gt;2012&lt;/p&gt;
+&lt;p&gt;By 2012, Go programs got good enough for an amateur player to write a post titled &lt;a href=&quot;http://blog.printf.net/articles/2012/02/23/computers-are-very-good-at-the-game-of-go/&quot;&gt;“Computers are very good at the game of Go”&lt;/a&gt;. The post highlighted the fact that the standout program at the time, Zen19, had improved from a 1 dan ranking (entry-level master) to 5 dan (higher-level master) in the span of 4 years. This is a big deal:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“To put the 5-dan rank in perspective: amongst the players who played American Go Association rated games in 2011, there were only 105 players that are 6-dan and above. This suggests that there are only around 100 active tournament players in the US who are significantly stronger than Zen19. I’m sure I’ll never become that strong myself.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure class=&quot;sidefigureright&quot;&gt;
+    &lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/20-go_ratings.png&quot; /&gt; 
+    &lt;figcaption&gt;The pace of betterment for Go programs after the introduction of MCTS &lt;a href=&quot;https://www.usgo.org/files/bh_library/Supercomputer%20Go.pdf&quot;&gt;&lt;b&gt;(Source)&lt;/b&gt;&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure class=&quot;sidefigureleft&quot;&gt;
+    &lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/21-crazystone.jpeg&quot; /&gt; 
+ &lt;figcaption&gt;Progress of Go AIs compared to Chess - despite being better than that vast majority of Go players, the best Go AIs were still nowhere near the best humans by this point. But they were getting better and better, very fast. From 2014's &lt;a href=&quot;http://spectrum.ieee.org/robotics/artificial-intelligence/ais-have-mastered-chess-will-go-be-next&quot;&gt;&lt;b&gt;&quot;AIs Have Mastered Chess. Will Go Be Next?&quot; by Jonathan Schaeffer, Martin Müller &amp;amp; Akihiro Kishimoto&lt;/b&gt;&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/22.5-go2012.png&quot; /&gt; 
+    &lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/22-progress.jpeg&quot; /&gt; 
+    &lt;figcaption&gt;An image from 2013 of Rémi Coulom (left) placing stones for Crazy Stone, against professional player Ishida Yoshio. Crazy Stone won. &lt;b&gt;&lt;a src=&quot;https://gogameguru.com/crazy-stone-computer-go-ishida-yoshio-4-stones/&quot;&gt;(Source)&lt;/a&gt;&lt;/b&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Still, Go programs were only beating lower-level professionals, and only with significant handicaps. A revolutionary idea - Monte Carlo Tree Search - enabled the ability to brute-force good Go play, and solved the ‘type A’ (smart use of brute-force) strategy part of the problem. It accomplished roughly the same feat as alpha-beta search for Chess programs, but worked better for Go because it replaced the human-implemented evaluation functions component with many random rollouts of the game that were easy to do fast and parallelize to multiple processing cores. But in order to go up against the best humans at Go, ‘type B’ (emulation of human-like learned instincts) intelligence would also be needed. That would soon be developed, but it would require a second and wholly different revolution - deep learning.&lt;/p&gt;
+
+&lt;h1 id=&quot;go-ais-ascend-to-divinity-with-deep-learning&quot;&gt;Go AIs Ascend to Divinity with Deep Learning&lt;/h1&gt;
+&lt;p class=&quot;sidenoteleftlarge&quot;&gt;1994&lt;/p&gt;
+&lt;p&gt;To understand the revolution of deep learning, we must revisit the 90s. We previously covered the success of Neurogammon, a backgammon program powered by neural nets and supervised learning, as well as TD-Gammon, its successor that was also powered by neural nets but based on reinforcement learning. These programs demonstrated that machine learning was a viable alternative to the knowledge-based approach of hand-coding complex strategies. Indeed, there was an attempt to to apply the approach behind TD-Gammon to Go with 1994’s &lt;a href=&quot;http://www.gatsby.ucl.ac.uk/~dayan/papers/sds94.pdf&quot;&gt;“Temporal difference learning of position evaluation in the game of Go”&lt;/a&gt;&lt;sup id=&quot;fnref:TDGo&quot;&gt;&lt;a href=&quot;#fn:TDGo&quot; class=&quot;footnote&quot;&gt;11&lt;/a&gt;&lt;/sup&gt; by Nicol N. Schraudolph, Peter Dayan, and Terrence J. Sejnowski.&lt;/p&gt;
+
+&lt;p&gt;Schraudolph et al noted that efforts to make Go AI with supervised learning (like Neurogammon) were hindered by the difficulty of generating enough examples of scored Go boards. So they suggested an approach similar to TD-Gammon - training a neural net to evaluate a given board position though playing itself and other programs. However, the team found that using a plain neural net as in TD-Gammon was inefficient, since it did not capture the fact that many patterns on Go boards can be rotated or moved around and still hold the same significance. So they used a &lt;strong&gt;convolutional neural net&lt;/strong&gt; (CNN), a type of neural net constrained to perform the same computation for different parts of the input. Typically, the constraint is to apply the same processing to small patches all over the input, and then have some number of additional &lt;strong&gt;layers&lt;/strong&gt; of looking for specific combinations of patterns, and then eventually use those combinations to compute the overall output. The CNN in Schraudolph et al’s work was simpler, but helped their result by exploiting rotational, reflectional, and color inversion symmetries in Go.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/23-CNN.jpg&quot; alt=&quot;CNN&quot; /&gt; 
+    &lt;figcaption&gt;A nice visualization of how multi-layer CNNs work. They are typically much better than plain neural nets for computer vision tasks such as number recognition, since it helps to find small features such as circles first and then use those to compute the output. A Go board is somewhat like an image, in that it is a grid of 'pixels' (Go stones) that are not in themselves significant but the combination of which forms the 'image' (game position). &lt;a href=&quot;http://image.slidesharecdn.com/bp2slides-090922011749-phpapp02/95/the-back-propagation-learning-algorithm-10-728.jpg?cb=1253582278&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Though this approach could potentially learn to intuitively ‘see’ the value of a Go position (as Zobrist sought to achieve in the 60s), neither the computer power nor the understanding of neural nets were sufficient to make this effective in 1994. In fact, a large wave of hype for neural nets in general died out in the mid 90s as limited computing power and missing algorithmic insights led to underwhelming results. So, the CCN-based program could only beat Many Faces of Go at a low level, and was therefore not even close to good human players.&lt;/p&gt;
+
+&lt;p class=&quot;sidenoteleftlarge&quot;&gt;2006&lt;/p&gt;
+&lt;p&gt;Neural nets were viewed unfavorably well into the 2000s, while other machine learning methods gained favor and Go programs failed to get much better. The history here is not exact, but a paper titled &lt;a href=&quot;https://www.cs.toronto.edu/~hinton/absps/fastnc.pdf&quot;&gt;“A fast learning algorithm for deep belief nets”&lt;/a&gt;&lt;sup id=&quot;fnref:DBN&quot;&gt;&lt;a href=&quot;#fn:DBN&quot; class=&quot;footnote&quot;&gt;12&lt;/a&gt;&lt;/sup&gt; is often credited with rekindling interest in neural nets by suggesting an approach for successfully training “deep” neural nets with many layers of computing units. This was the start of what would become the huge phenomenon of deep learning (which is just a term for large neural nets with many layers). In a wonderful historic coincidence, this paper was published in 2006 - the same year as all those MCTS papers!&lt;/p&gt;
+
+&lt;p&gt;Deep neural nets continued to gain attention in the following years, and by 2009 achieved record-setting results in speech recognition. Besides algorithmic improvements, their resurgence was in large part due to the availability of large amounts of training data and the use of the massively parallel computational capabilities of GPUs - both things that did not really exist in the 90s. Larger neural nets were trained with more data and more layers, more quickly than before thanks to modern hardware, and benchmark after broken benchmark showed this to be a powerful methodology. But the event that really set off a huge wave of research and investment in deep learning was the ILSVRC (ImageNet Large Scale Visual Recognition Challenge) 2012 computer vision competition. A CNN-based submission performed far, far better than the next best entry, surpassing the record on that competition’s ImageNet benchmark problem. This, the first and only CNN entry in that competition, was an undisputed sign that deep learning was a big deal. Now, almost all entries to the competition use CNNs.&lt;/p&gt;
+&lt;p class=&quot;sidenoteleftlarge&quot;&gt;2012&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/24-cnn2.png&quot; alt=&quot;CNN2&quot; /&gt; 
+    &lt;figcaption&gt;Another good visualization of a basic deep CNN. The Imagenet benchmark is precisely this, a set of images with thousands of categories of objects. &lt;a href=&quot;https://www.clarifai.com/technology&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;      
+&lt;/figure&gt;
+
+&lt;p&gt;Up to this point, deep learning was largely applied to supervised learning tasks unrelated to game-playing, such as outputting the right category for a given image or recognizing human speech. But in 2013, a company called DeepMind made a big splash with the publication of &lt;a href=&quot;http://arxiv.org/abs/1312.5602&quot;&gt;“Playing atari with deep reinforcement learning”&lt;/a&gt;&lt;sup id=&quot;fnref:Atari&quot;&gt;&lt;a href=&quot;#fn:Atari&quot; class=&quot;footnote&quot;&gt;13&lt;/a&gt;&lt;/sup&gt;. Yep, they trained a neural net to play Atari games. More specifically, they presented a new approach to doing reinforcement learning with deep neural nets, which was largely abandoned as a research direction since the failure of TD-Gammon’s approach to work for other games. With just the input of the pixels you or I would see on screen, and the game’s score, their Deep Q-Networks (named after Q-learning, the basis for their algorithm) learned to play Breakout, Pong, and more. It bested all other reinforcement learning schemes, and in some cases humans as well!&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/25-breakout.gif&quot; alt=&quot;breakout&quot; /&gt; 
+    &lt;figcaption&gt;DeepMind's Atari player playing Breakout.  &lt;a href=&quot;https://github.com/kuz/DeepMind-Atari-Deep-Q-Learner&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;      
+&lt;/figure&gt;
+&lt;p class=&quot;sidenoteleftlarge&quot;&gt;2014&lt;/p&gt;
+&lt;p&gt;This Atari work was a great innovation in AI research, so much so that in 2014 Google payed $400 million to acquire DeepMind. But I digress - as with IBM’s 2011 win in Jeopardy with Watson, this Atari feat is not directly relevant to the history of AI for chess-like board games, so let’s get back to that. Since the 90s, there were several more papers on learning to predict moves or to evaluate positions in Go with machine learning&lt;sup id=&quot;fnref:Go2000sA&quot;&gt;&lt;a href=&quot;#fn:Go2000sA&quot; class=&quot;footnote&quot;&gt;14&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&quot;fnref:Go2000sB&quot;&gt;&lt;a href=&quot;#fn:Go2000sB&quot; class=&quot;footnote&quot;&gt;15&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&quot;fnref:Go2000sC&quot;&gt;&lt;a href=&quot;#fn:Go2000sC&quot; class=&quot;footnote&quot;&gt;16&lt;/a&gt;&lt;/sup&gt;, but up to this point none really used large and deep neural nets. That changed in 2014, when two groups independently trained large CNNs to predict, with great accuracy, what move expert Go players would make in a given position.&lt;/p&gt;
+
+&lt;p&gt;The first to publish were Christopher Clark and Amos Storkey at the University of Edinburgh, on December 10th of 2014 with &lt;a href=&quot;https://arxiv.org/abs/1412.3409&quot;&gt;“Teaching Deep Convolutional Neural Networks to Play Go”&lt;/a&gt;&lt;sup id=&quot;fnref:Go2014A&quot;&gt;&lt;a href=&quot;#fn:Go2014A&quot; class=&quot;footnote&quot;&gt;17&lt;/a&gt;&lt;/sup&gt;. Unlike the DeepMind Atari AI, here the researchers did purely supervised learning - using two datasets of 16.5 million move-position pairs from human-played games, they trained a neural net to produce the probability of a human Go player making each possible move from a given position. Their deep CNN surpassed all prior results on move prediction for both datasets, and even defeated the conventionally-implemented GNU Go 85% of the time. Prior research on move prediction with weaker accuracy could never achieve better play than GNU Go, but this research showed that it could be done by just playing the moves deemed likely to be the choice of a skilled player by a neural net trained on lots of data!&lt;/p&gt;
+
+&lt;p&gt;It’s important to understand that the neural net had no prior knowledge of Go before being trained with the data - it did not know the rules of the game and did not simulate playing Go for its move selection. So, you could say it was playing purely by ‘intuition’ for good moves, based on the data it had seen in training. Therefore it is hugely impressive that Clark et al’s neural net was able to beat a program specifically written to play Go well, but also not surprising it alone could not beat the stronger existing MCTS-based Go programs (which by that point played as well as very skilled people). The researchers concluded by suggesting the ‘intuition’ of machine-learned move prediction could be combined with brute-force MCTS move evaluation to make a much stronger Go AI than had ever existed:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Our networks are state of the art at move prediction, despite not using the previous moves as input, and can play with an impressive amount of skill even though future positions are not explicitly examined.
+…
+The most obvious next step is to integrate a DCNN into a full fledged Go playing system. For example, a DCNN could be run on a GPU in parallel with a MCTS Go program and be used to provide high quality priors for what the strongest moves to consider are. Such a system would both be the first to bring sophisticated pattern recognitions abilities to playing Go, and have a strong potential ability to surpass current computer Go programs.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Within a mere two weeks of the publication of Clark et al’s work, a second paper was released describing research with precisely the same ambitions, by Chris J. Maddison (University of Toronto), Ilya Sutskever (Google), and Aja Huang and David Silver (DeepMind, now also part of Google)&lt;sup id=&quot;fnref:Go2014B&quot;&gt;&lt;a href=&quot;#fn:Go2014B&quot; class=&quot;footnote&quot;&gt;18&lt;/a&gt;&lt;/sup&gt;. They trained a larger and deeper CNN, and achieved even more impressive prediction results and the ability to beat GNU Go a whopping 97% of the time. Still, when faced with MCTS programs operating at full brute force capacity - 100,000 rollouts per move - the deep neural net won only 10% of the time. As with the first paper, it was suggested that neural nets could be used together with MCTS - the former could serve as ‘intuition’ to quickly identify potentially good moves, and the latter could serve as ‘reasoning’ to more accurately evaluate how good those moves really are. This team went further and also implemented a prototype program that did just that, and showed it could beat their lone neural net 87% of the time. They concluded:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“We have provided a preliminary proof-of-concept that MCTS and deep neural networks may be combined effectively. It appears that we now have two core elements that scale effectively with increased computational resource: scalable planning, using Monte-Carlo search; and scalable evaluation functions, using deep neural networks. In the future, as parallel computation units such as GPUs continue to increase in performance, we believe that this trajectory of research will lead to considerably stronger programs than are currently possible.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p class=&quot;sidenoteleftlarge&quot;&gt;2016&lt;/p&gt;
+&lt;p&gt;They did not just believe in that trajectory of research - they pursued it. And just shy of a year later, their belief was proven right. In January of 2016, a &lt;a href=&quot;http://www.nature.com/nature/journal/v529/n7587/full/nature16961.html&quot;&gt;paper in the prestigious publication Nature&lt;/a&gt; by these four authors and some sixteen more (all from DeepMind or Google) announced the development of AlphaGo, the first Go AI to beat a high ranked professional player without any handicaps&lt;sup id=&quot;fnref:AlphaGo&quot;&gt;&lt;a href=&quot;#fn:AlphaGo&quot; class=&quot;footnote&quot;&gt;19&lt;/a&gt;&lt;/sup&gt;. Specifically, they reported having beaten Fan Hui, a European Go champion, in 5 out of 5 no-handicap games.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/26-fanhui.jpg&quot; alt=&quot;CNN2&quot; /&gt;  
+    &lt;figcaption&gt;An image of a game between DeepMind's AlphaGo and Fan Hui. &lt;b&gt;&lt;a href=&quot;http://gardinerchess.com.au/gm-rogers-chess-ego-boost-from-alphago/&quot;&gt;(Source)&lt;/a&gt;&lt;/b&gt;&lt;/figcaption&gt;      
+&lt;/figure&gt;
+
+&lt;p&gt;How did they build a Go AI this good? With a small battalion of incredibly intelligent people working to achieve quite a list of innovative ideas:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;First, they created a much better neural net for predicting the best move for a given position. They did this by starting with supervised learning from a dataset 30 million position-move pairs from games played by people (aided by some simple Go features), and then improving this neural net with reinforcement learning (making it play against older versions of itself to learn to get better, TD-Gammon style). This singular neural net - the &lt;strong&gt;policy network&lt;/strong&gt; - could by itself beat the best MCTS Go programs 85% of the time, a huge leap from the 10% that was achieved before. But they did not stop there.&lt;/li&gt;
+  &lt;li&gt;A natural next step to get even better performance was to add MCTS into the mix, but the policy neural net is far too slow to be evaluated continually for each move of the tens of thousands of game rollouts typically done with MCTS. So, the supervised learning data was also used to train a second network that is much faster to evaluate - the &lt;strong&gt;rollout network&lt;/strong&gt;. The full policy network is only ever used once to get an initial estimate on how good a move is, and then the much faster rollout policy is used in choosing the many more moves needed to get to an end of the game in an MCTS rollout. This makes the move selections in simulation better than random but fast enough to have the benefits of MCTS. These two components together with MCTS already made for a far better Go AI than has every been achieved, but there was a third trick that really pushed AlphaGo into the highest ranks of human skill.&lt;/li&gt;
+  &lt;li&gt;A huge part of why MCTS works so well for Go is that it removes the need to write evaluation functions for positions in Go, which is hard. Well, if we can train a neural net to predict what good moves are, it’s not hard to imagine we could also train a neural net to evaluate a Go position. And that is precisely why this group did - they used the already trained high quality policy network to generate a dataset of positions and final outcomes in that game, and trained a &lt;strong&gt;value network&lt;/strong&gt; that evaluated a position based on the overall probability of winning the game from that position. So the policy net suggests promising moves to evaluate, which is then done through a combination of MCTS rollouts (using the rollout net) and the value network prediction, which turns out to work significantly better than either by itself.&lt;/li&gt;
+  &lt;li&gt;To top everything off, all of this was implemented in a hugely scalable manner that can and did leverage hardware that easily surpassed anything that was used for Go play in the past. AlphaGo used 40 search threads running on 48 CPUs and with 8 GPUs for neural net computations being done in parallel. And that’s just one one computer! AlphaGo was also implemented in a distributed version which could run on multiple machines, and scale to more than a thousand CPUs and close to 200 GPUs.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/27-alphagonets.jpg&quot; alt=&quot;AlphaGoA&quot; /&gt; 
+    &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/28-alphagosearch.jpg&quot; alt=&quot;AlphaGoB&quot; /&gt; 
+    &lt;figcaption&gt;(A) A great visual breakdown of all the neural nets involved &lt;a href=&quot;http://www.nature.com/nature/journal/v529/n7587/fig_tab/nature16961_F1.html&quot;&gt;&lt;b&gt;(From the AlphaGo Nature Paper)&lt;/b&gt;&lt;/a&gt;&lt;br /&gt;
+                (B) And a breakdown of how these networks are used in conjunction with MCTS. I recommend &lt;a href=&quot;https://xcorr.net/2016/02/03/5-easy-pieces-how-deepmind-mastered-go/&quot;&gt;&lt;b&gt;this technical summary&lt;/b&gt;&lt;/a&gt; for more detail. &lt;b&gt;(Source: also from the Nature Paper, with modified annotations by &lt;a href=&quot;http://www.slideshare.net/ShaneSeungwhanMoon/how-alphago-works&quot;&gt;Shane (Seungwhan) Moon)&lt;/a&gt;&lt;/b&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Besides training a state-of-the-art move predictor through a combination of supervised and reinforcement learning, probably the most novel aspect of AlphaGo is the strong integration of machine-learned intelligence with MCTS. Whereas the 2014 paper only contained a very preliminary combination of MCTS with a CNN, and before that MCTS programs contained at most modest integrations with supervised learning, AlphaGo gets its strength from being a well designed hybrid AI approach that is run on modern-day supercomputer hardware. Put simply, AlphaGo is a huge successful synthesis of multiple prior effective approaches that is far better than any of those individual elements alone. At least one other team, Yuandong Tian and Yan Zhu from Facebook, explored the same MCTS+deep learning idea in the same timeframe and likewise achieved impressive results &lt;sup id=&quot;fnref:DarkForest&quot;&gt;&lt;a href=&quot;#fn:DarkForest&quot; class=&quot;footnote&quot;&gt;20&lt;/a&gt;&lt;/sup&gt;. But the Google team definitely invested much more effort and resources into AlphaGo, and that ultimately paid off when it achieved a historic milestone for AI.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;AlphaGo    =      Deep Supervised Learning (with domain-specific features) +
+                    Deep Reinforcement Learning +
+                    Monte Carlo Tree Search + 
+                    Hugely parallel processing&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure&gt;
+  &lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/29-go2016.png&quot; alt=&quot;AlphaGoRankA&quot; /&gt; 
+  &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/30-alphagoranking.jpg&quot; alt=&quot;AlphaGoRankB&quot; /&gt; 
+  &lt;figcaption&gt;AlphaGo, now at the 'divine' top rank of Go play. &lt;b&gt;(From the AlphaGo Nature Paper)&lt;/b&gt;
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;And now, finally, we are back to where we began - just a few months after the announcement of AlphaGo’s existence, it faced off against one of the best living Go players and decidedly won. This will perhaps go down as a historic moment not just for the field of AI, but for the whole history of human invention and ingenuity. I think it is fascinating to see how we can trace the intellectual efforts to accomplish this decades back, with every idea used to build AlphaGo being a refinement on one that came before it, and see that (as always in science and engineering) credit here is due to both a large team at Google and dozens of people that made their work possible. Now, what of the future?&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;a href=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/0-history.png&quot;&gt;
+    &lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/0-history.png&quot; alt=&quot;History&quot; /&gt;
+  &lt;/a&gt;  
+  &lt;figcaption&gt;The past - just about the scope of this series of posts, as promised. Created with &lt;a src=&quot;http://www.readwritethink.org/classroom-resources/student-interactives/timeline-30007.html&quot;&gt;Timeline&lt;/a&gt;.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h1 id=&quot;epilogue-ai-after-alphago&quot;&gt;Epilogue: AI After AlphaGo&lt;/h1&gt;
+
+&lt;figure&gt;
+   &lt;a href=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/31-venn.png&quot;&gt;
+     &lt;img class=&quot;postimagesmall&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/31-venn.png&quot; alt=&quot;Games&quot; /&gt;
+   &lt;/a&gt;
+ &lt;figcaption&gt;Go and Chess in the spheres of AI problems. I recommend &lt;a href=&quot;https://xcorr.net/2016/02/03/5-easy-pieces-how-deepmind-mastered-go/&quot;&gt;&lt;b&gt;this for more quality discussion how significant AlphaGo is for AI as a research field.&lt;/b&gt;&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Congratulations, dear reader, you made it. I am impressed and appreciative that you got to this point. With this full history well trodden through, I hope that my secret motivation in writing this clear - to show that AlphaGo is not some scary incomprehensible AI program, but really a quite reasonable feat of human research and engineering. And also to note that Go, ultimately, is still a strategic board game. Yes, it is a game for which it is hugely challenging to make good computer programs. But in being a game it also possesses multiple nice properties that make AlphaGo possible, as shown in the above Venn Diagram.&lt;/p&gt;
+
+&lt;p&gt;There are many, many problems still in the realms of AI that are outside the intersection of those nice properties. To name just a few: playing Starcraft or Soccer, human-like conversation, (fully) autonomous driving. This is an incredible time for AI research, as we are starting to see these problems being tackled by well funded researchers like the ones at Google. In fact, I think it is appropriate to end with this quote &lt;a href=&quot;https://googleblog.blogspot.com/2016/03/what-we-learned-in-seoul-with-alphago.html?m=1&quot;&gt;from the AlphaGo team itself&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“But as they say about Go in Korean: “Don’t be arrogant when you win or you’ll lose your luck.” This is just one small, albeit significant, step along the way to making machines smart. We’ve demonstrated that our cutting edge deep reinforcement learning techniques can be used to make strong Go and Atari players. Deep neural networks are already used at Google for specific tasks — like image recognition, speech recognition, and Search ranking. However, we’re still a long way from a machine that can learn to flexibly perform the full range of intellectual tasks a human can — the hallmark of true artificial general intelligence.&lt;br /&gt;&lt;br /&gt;
+With this tournament, we wanted to test the limits of AlphaGo. The genius of Lee Sedol did that brilliantly — and we’ll spend the next few weeks studying the games he and AlphaGo played in detail. And because the machine learning methods we’ve used in AlphaGo are general purpose, we hope to apply some of these techniques to other challenges in the future. Game on!”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/32-leesedol.jpg&quot; alt=&quot;LeeSedol&quot; /&gt;  
+	&lt;figcaption&gt;&quot;Demis and Lee Sedol hold up the signed Go board from the Google DeepMind Challenge Match&quot; &lt;a href=&quot;https://googleblog.blogspot.com/2016/03/what-we-learned-in-seoul-with-alphago.html?m=1&quot;&gt;&lt;b&gt;(From the AlphaGo team's post quoted)&lt;/b&gt;&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;acknowledgements&quot;&gt;Acknowledgements&lt;/h2&gt;
+&lt;p&gt;Big thanks to &lt;a href=&quot;http://cs.stanford.edu/people/abisee/&quot;&gt;Abi See&lt;/a&gt; for helping to edit this.&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:ManyFaces&quot;&gt;
+      &lt;p&gt;David Fotland (1993). Knowledge representation in the Many Faces of Go. &lt;a href=&quot;#fnref:ManyFaces&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:MonteCarloGo&quot;&gt;
+      &lt;p&gt;Brügmann, B. (1993). Monte carlo go (Vol. 44). Syracuse, NY: Technical report, Physics Department, Syracuse University. &lt;a href=&quot;#fnref:MonteCarloGo&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:ParisSchool1&quot;&gt;
+      &lt;p&gt;Bouzy, B., &amp;amp; Helmstetter, B. (2004). &lt;a href=&quot;http://www.ai.univ-paris8.fr/~bh/articles/acg10-mcgo.pdf&quot;&gt;Monte-carlo go developments&lt;/a&gt;. In Advances in computer games (pp. 159-174). Springer US. &lt;a href=&quot;#fnref:ParisSchool1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:ParisSchool2&quot;&gt;
+      &lt;p&gt;Cazenave, T., &amp;amp; Helmstetter, B. (2005). &lt;a href=&quot;http://www.ai.univ-paris8.fr/~bh/articles/searchmcgo.pdf&quot;&gt;Combining Tactical Search and Monte-Carlo in the Game of Go&lt;/a&gt;. CIG, 5, 171-175. &lt;a href=&quot;#fnref:ParisSchool2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:ParisSchool3&quot;&gt;
+      &lt;p&gt;Bouzy, B. (2005). &lt;a href=&quot;http://web.mi.parisdescartes.fr/~bouzy/publications/Bouzy-JCIS03.pdf&quot;&gt;Associating domain-dependent knowledge and Monte Carlo approaches within a Go program&lt;/a&gt;. Information Sciences, 175(4), 247-257. &lt;a href=&quot;#fnref:ParisSchool3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:MonteCarloRevolution&quot;&gt;
+      &lt;p&gt;Coulom, R. (2009, January). &lt;a href=&quot;http://www.remi-coulom.fr/JFFoS/JFFoS.pdf&quot;&gt;The Monte-Carlo Revolution in Go&lt;/a&gt;. In The Japanese-French Frontiers of Science Symposium (JFFoS 2008), Roscoff, France. &lt;a href=&quot;#fnref:MonteCarloRevolution&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:MCTS&quot;&gt;
+      &lt;p&gt;Coulom, R. (2006). Efficient selectivity and backup operators in Monte-Carlo tree search. In Computers and games (pp. 72-83). Springer Berlin Heidelberg. &lt;a href=&quot;#fnref:MCTS&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:BanditMonte&quot;&gt;
+      &lt;p&gt;Kocsis, L., &amp;amp; Szepesvári, C. (2006). &lt;a href=&quot;http://www.sztaki.hu/~szcsaba/papers/ecml06.pdf&quot;&gt;Bandit based monte-carlo planning&lt;/a&gt;. In Machine Learning: ECML 2006 (pp. 282-293). Springer Berlin Heidelberg. &lt;a href=&quot;#fnref:BanditMonte&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:MoGo&quot;&gt;
+      &lt;p&gt;Gelly, S., Wang, Y., Teytaud, O., Patterns, M. U., &amp;amp; Tao, P. (2006). &lt;a href=&quot;https://hal.inria.fr/inria-00117266/document&quot;&gt;Modification of UCT with patterns in Monte-Carlo Go&lt;/a&gt;. Technical Report RR-6062, 32, 30-56. &lt;a href=&quot;#fnref:MoGo&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:GoHistory&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;http://www.britgo.org/computergo/history&quot;&gt;History of Go-playing programs.&lt;/a&gt; http://www.britgo.org/computergo/history &lt;a href=&quot;#fnref:GoHistory&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:TDGo&quot;&gt;
+      &lt;p&gt;Schraudolph, N. N., Dayan, P., &amp;amp; Sejnowski, T. J. (1994). &lt;a href=&quot;http://www.gatsby.ucl.ac.uk/~dayan/papers/sds94.pdf&quot;&gt;Temporal difference learning of position evaluation in the game of Go&lt;/a&gt;. Advances in Neural Information Processing Systems, 817-817. &lt;a href=&quot;#fnref:TDGo&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:DBN&quot;&gt;
+      &lt;p&gt;Hinton, G. E., Osindero, S., &amp;amp; Teh, Y. W. (2006). A fast learning algorithm for deep belief nets. Neural computation, 18(7), 1527-1554. &lt;a href=&quot;#fnref:DBN&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:Atari&quot;&gt;
+      &lt;p&gt;Mnih, V., Kavukcuoglu, K., Silver, D., Graves, A., Antonoglou, I., Wierstra, D., &amp;amp; Riedmiller, M. (2013). &lt;a href=&quot;http://arxiv.org/abs/1312.5602&quot;&gt;Playing atari with deep reinforcement learning&lt;/a&gt;. arXiv preprint arXiv:1312.5602. &lt;a href=&quot;#fnref:Atari&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:Go2000sA&quot;&gt;
+      &lt;p&gt;Sutskever, I., &amp;amp; Nair, V. (2008). &lt;a href=&quot;http://www.cs.utoronto.ca/~ilya/pubs/2008/go_paper.pdf&quot;&gt;Mimicking Go experts with convolutional neural networks&lt;/a&gt;. In Artificial Neural Networks-ICANN 2008 (pp. 101-110). Springer Berlin Heidelberg. &lt;a href=&quot;#fnref:Go2000sA&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:Go2000sB&quot;&gt;
+      &lt;p&gt;Stern, D., Herbrich, R., &amp;amp; Graepel, T. (2006, June). &lt;a href=&quot;http://www.autonlab.org/icml_documents/camera-ready/110_Bayesian_Pattern_Ran.pdf&quot;&gt;Bayesian pattern ranking for move prediction in the game of Go&lt;/a&gt;. In Proceedings of the 23rd international conference on Machine learning (pp. 873-880). ACM. &lt;a href=&quot;#fnref:Go2000sB&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:Go2000sC&quot;&gt;
+      &lt;p&gt;Wu, L., &amp;amp; Baldi, P. F. (2006). &lt;a href=&quot;https://papers.nips.cc/paper/3094-a-scalable-machine-learning-approach-to-go.pdf&quot;&gt;A scalable machine learning approach to go&lt;/a&gt;. In Advances in Neural Information Processing Systems (pp. 1521-1528). &lt;a href=&quot;#fnref:Go2000sC&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:Go2014A&quot;&gt;
+      &lt;p&gt;Clark, C., &amp;amp; Storkey, A. (2014). &lt;a href=&quot;https://arxiv.org/abs/1412.3409&quot;&gt;Teaching deep convolutional neural networks to play go&lt;/a&gt;. arXiv preprint arXiv:1412.3409. &lt;a href=&quot;#fnref:Go2014A&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:Go2014B&quot;&gt;
+      &lt;p&gt;Maddison, C. J., Huang, A., Sutskever, I., &amp;amp; Silver, D. (2014). &lt;a href=&quot;https://arxiv.org/abs/1412.6564&quot;&gt;Move evaluation in go using deep convolutional neural networks&lt;/a&gt;. arXiv preprint arXiv:1412.6564. &lt;a href=&quot;#fnref:Go2014B&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:AlphaGo&quot;&gt;
+      &lt;p&gt;David Silver, Aja Huang, Christopher J. Maddison, Arthur Guez, Laurent Sifre, George van den Driessche, Julian Schrittwieser, Ioannis Antonoglou, Veda Panneershelvam, Marc Lanctot, Sander Dieleman, Dominik Grewe, John Nham, Nal Kalchbrenner, Ilya Sutskever, Timothy Lillicrap, Madeleine Leach, Koray Kavukcuoglu, Thore Graepel &amp;amp; Demis Hassabis (2016). Mastering the game of Go with deep neural networks and tree search. Nature, 529, 484-503. &lt;a href=&quot;#fnref:AlphaGo&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:DarkForest&quot;&gt;
+      &lt;p&gt;Tian, Y., &amp;amp; Zhu, Y. (2015). Better Computer Go Player with Neural Network and Long-term Prediction. arXiv preprint arXiv:1511.06410. &lt;a href=&quot;#fnref:DarkForest&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/writing/a-brief-history-of-game-ai-part-3/&quot;&gt;A 'Brief' History of Game AI Up To AlphaGo, Part 3&lt;/a&gt; was originally published by Andrey Kurenkov at &lt;a href=&quot;&quot;&gt;Andrey Kurenkov's Web World&lt;/a&gt; on April 18, 2016.&lt;/p&gt;
+  </content>
+</entry>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[A 'Brief' History of Game AI Up To AlphaGo, Part 2]]></title>
+  <link rel="alternate" type="text/html" href="http://www.andreykurenkov.com/writing/a-brief-history-of-game-ai-part-2/" />
+  <id>/writing/a-brief-history-of-game-ai-part-2</id>
+  <published>2016-04-18T19:19:34-07:00</published>
+  <updated>2016-04-18T19:19:34-07:00</updated>
+  <author>
+    <name></name>
+    <uri>www.andreykurenkov.com</uri>
+    <email>andreyvkurenkov@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;This is the second part of ‘A Brief History of Game AI Up to AlphaGo’. Part 1 is &lt;a href=&quot;http://www.andreykurenkov.com/writing/a-brief-history-of-game-ai-up-to-alphago&quot;&gt;here&lt;/a&gt; and part 3 is &lt;a href=&quot;http://www.andreykurenkov.com/writing/a-brief-history-of-game-ai-up-to-alphago-3&quot;&gt;here&lt;/a&gt;. In this part, we shall cover just about four decades of progress, from the first victories of computers against people at Checkers and Chess all the way up to DeepBlue’s victory against humanity’s then-best living Chess player.&lt;/p&gt;
+
+&lt;h1 id=&quot;computers-start-to-win&quot;&gt;Computers Start To Win&lt;/h1&gt;
+&lt;p class=&quot;sidenoteleftlarge&quot;&gt;1958&lt;/p&gt;
+&lt;p&gt;By the late 1950s, the industrious engineers at IBM were far from the only ones working on AI — excitement for the new field filled research groups in universities from the US to the Soviet Union. One such group was made up of Allen Newell and Herbert Simon (both attendants of the Dartmouth Conference) from Carnegie Mellon University, and Cliff Shaw from RAND Corporation. They collaborated on Chess AI from 1955 to 1958, culminating in &lt;a href=&quot;http://aitopics.org/sites/default/files/classic/Feigenbaum_Feldman/C&amp;amp;T-Newll-Shaw-Simon.pdf&quot;&gt;“Chess Playing Programs and the Problem of Complexity”&lt;/a&gt;&lt;sup id=&quot;fnref:NSS&quot;&gt;&lt;a href=&quot;#fn:NSS&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; which both summarized existing Chess AI research and contributed new ideas that they tested with the NSS (Newell, Shaw, and Simon) Chess program.&lt;/p&gt;
+
+&lt;figure&gt;
+      &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/7-NSS.png&quot; alt=&quot;bernstein_chess&quot; /&gt;
+     &lt;figcaption&gt; A summary of 50s work on Chess AI from the NSS group. &lt;a href=&quot;http://aitopics.org/sites/default/files/classic/Feigenbaum_Feldman/C&amp;amp;T-Newll-Shaw-Simon.pdf&quot;&gt;&lt;b&gt;(Source)&lt;/b&gt;&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Just as Shannon noted that master players use intuition to think selectively about moves, Newell, Shaw and Simon considered heuristics to be an important aspect of human Chess-playing. Like Bernstein’s program, the NSS algorithm used a type of simple “intelligence” to choose which moves to explore. The group’s most significant addition to Minimax was an approximation of something that became an essential part of future Chess playing programs: &lt;strong&gt;alpha-beta pruning&lt;/strong&gt;. This is a small modification to Minimax that makes the algorithm avoid simulating moves that are clearly bad (‘pruning’ branches of the tree that need not be simulated), thus saving those precious computing resources for more promising moves. The efficiency gains can be huge, and alpha-beta pruning became as standard for future Chess programs as Minimax itself.&lt;/p&gt;
+
+&lt;figure&gt;
+      &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/8A-alphabeta.jpg&quot; /&gt;
+     &lt;figcaption&gt;A tiny example of alpha-beta pruning. You are currently at position A and have three move options: B, C and D. You want to maximize your end-game score. For any move you make, the opponent will choose a move so as to minimize your score. The worst score you might get with option B is 3, so as soon as you see your opponent has a response in option C that only nets you a score of 2, you can cease to explore option C because option B is already definitely better. 
+&lt;a href=&quot;http://cs.stackexchange.com/questions/1069/what-use-are-the-minimum-values-on-minimax-trees&quot;&gt;&lt;b&gt;(Source)&lt;/b&gt;&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;In emphasizing the need for such heuristics, the NSS group also argued that implementing them would be much easier with higher-level “interpreted” programming languages — again, this is in 1958! Back then programmers worked in the binary language of the computer, and another notable aspect of the NSS group’s work is the use of a symbolic compiled programming language in order to be able to implement its more complex program. As with Bernstein’s program, the limitations of the hardware and of the code resulted in a rather shoddy Chess player. Still, it &lt;a href=&quot;https://chessprogramming.wikispaces.com/NSS&quot;&gt;has been said&lt;/a&gt; to be the first chess program to beat (an almost humorously inexperienced) human player:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“In 1958, a chess program (NSS) beat a human player for the first time. The human player was a secretary who was taught how to play chess one hour before her game with the computer. The computer program was played on an IBM 704. The computer displayed a level of chess-playing expertise greater than an adult human could gain from one hour of chess instruction.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p class=&quot;sidenoteleftlarge&quot;&gt;1962&lt;/p&gt;
+&lt;p&gt;Meanwhile, Arthur Samuel’s Checkers program played Checkers well already, and continued to get better. In 1962, Samuel and IBM had enough faith in the program to publicly pit it against a good human player. As described in a wonderful &lt;a href=&quot;https://webdocs.cs.ualberta.ca/~chinook/project/legacy.html&quot;&gt;retrospective about the event&lt;/a&gt;, they strangely chose the human opponent to be Robert Nealy, who considered himself a master but was not ranked highly as a tournament player. Partially because of this, and partially because the program was good at Checkers, Nealy lost. Though it would soon be clear Samuel’s program was no match for the best human players at the game — it was easily beaten by two of them at the 1966 world championship — the public and media reaction to its win in 1962 was not unlike the current media frenzy around AlphaGo:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Wait! Hold the presses! A computer defeated a master checkers player! This was a major news story. Computers could solve the game of checkers. Mankind’s intellectual superiority was being challenged by electronic monsters. To the technology-illiterate public of 1962, this was a major event. It was a precursor to machines doing other intelligent things better than man. How long could it possibly be before computers would be smarter than man? After all, comput­ers have only been around for a few years, and already rapid progress was being made in the fledgling computer field of artificial intelligence. Paranoia.” &lt;a href=&quot;https://webdocs.cs.ualberta.ca/~chinook/project/legacy.html&quot;&gt;Source&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure class=&quot;sidefigureleft&quot;&gt;
+      &lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/8B-GoChess.jpg&quot; alt=&quot;Chess vs Go&quot; /&gt;
+     &lt;figcaption&gt;A comparison of Chess vs Go. Go has a much larger branching factor and a set of rules that is much harder to write an evaluation function for (and here's &lt;a href=&quot;https://en.wikipedia.org/wiki/Go_%28game%29&quot;&gt;a handy link to Wikipedia&lt;/a&gt; for those). &lt;a href=&quot;http://spectrum.ieee.org/computing/software/cracking-go/chess-vs-go&quot;&gt;&lt;b&gt;(Source)&lt;/b&gt;&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;AlphaGo’s victory is of course in a different league - Lee Sedol is unquestionably among the best players in the world and our computer-acclimated culture is less shocked by such a feat - but it is interesting to note the similarities between the two highly publicized events. Despite the fact Samuel’s program was nowhere near as good as the best humans, its win gave the lasting impression Checkers was a ‘simple’ game that computers had already conquered and that Chess was the real challenge, much as Go was seen after Deep Blue’s success with Chess. Speaking of which, 1962 was the year the first computer Go program was attempted with &lt;a href=&quot;http://www.britgo.org/files/computergo/remus.pdf&quot;&gt;“Simulation of a Learning Machine For Playing Go”&lt;/a&gt;&lt;sup id=&quot;fnref:RemusGo&quot;&gt;&lt;a href=&quot;#fn:RemusGo&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; by H. Remus (also at IBM!), though the resulting program was incomplete and never played a full game of Go. It would be half a decade more until a true Go program akin to Bernstein’s Chess program or Samuel’s Checkers program would play human players.&lt;/p&gt;
+
+&lt;p&gt;Meanwhile, yet more research teams in the Soviet Union and in the US were working on implementing Chess AIs. Notably, a group of students at MIT led by AI legend John McCarthy developed a Chess-playing program based on Minimax with alpha-beta pruning, and in 1966 faced it off against a program developed at the Moscow Institute of Theoretical and Experimental Physics (ITEP) by telegram. The Kotok-McCarthy program lost 3-1, and was in general very weak due to being limited to searching very few positions (fewer than Bernstein’s program, even). But, another student named Richard Greenblatt saw the program and, being a skilled chess player, was inspired to write his own - the &lt;a href=&quot;https://en.wikipedia.org/wiki/Mac_Hack&quot;&gt;Mac Hack&lt;/a&gt;. This program searched through many more positions and had other refinements, to the point that it could beat a ranked human player in a tournament in 1967 and win or draw multiple times more in succeeding tournaments. But it was still nowhere near as good as the best players.&lt;/p&gt;
+
+&lt;div&gt;&lt;button class=&quot;btn&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#greenblatt&quot;&gt;
+Aside: more on Richard Greenblatt's Chess Program &amp;raquo;
+&lt;/button&gt;&lt;/div&gt;
+&lt;blockquote class=&quot;aside&quot;&gt;&lt;p id=&quot;greenblatt&quot; class=&quot;collapse&quot; style=&quot;height: 0px;&quot;&gt;
+There is &lt;a href=&quot;http://archive.computerhistory.org/resources/text/Oral_History/Greenblatt_Richard/greenblatt.oral_history_transcript.2005.102657935.pdf&quot;&gt;a fun oral history of Richard Greenblatt's&lt;/a&gt; that is quite worth looking over if you are curious. Here are some choice excerpts:&lt;br /&gt;&lt;br /&gt;
+
+&quot;Anyway, I looked at this thing and I could see that the quality of the analysis was not good. And I said, gee, I can do better than that. And so I immediately set to it, and within just a few weeks, after I got back, I had the thing playing chess.&lt;br /&gt; 
+...&lt;br /&gt;
+And so then as word got around- Well, there was a guy a MIT in those days named Hubert Dreyfuss, who was a prominent critic of artificial intelligence, and made some statements of the form, you know, computers will never be any good for chess, and so forth. And, of course, he was, again, very romanticized. He was not a strong chess player. However, he thought he was, or I guess he knew was wasn’t world class, but he thought he was a lot better than he was. So anyway, I had this chess program and basically Jerry Sussman, who’s a professor at MIT now, and who was also a member of our group, had played. It was around and it was available on the machine. People played it, and so forth. And basically Sussman brought over Dreyfuss and said, well, how would you like to have a friendly game or something. Dreyfuss said, oh, sure. And sure enough, Dreyfuss sat down and got beat. So this immediately got quite a bit of publicity. &quot;
+&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;figure class=&quot;sidefigureright&quot;&gt;
+      &lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/8C-1968go.jpg&quot; /&gt;
+     &lt;figcaption&gt;A figure showing Zobrist's visual representation from  &lt;a href=&quot;http://www.computer.org/csdl/proceedings/afips/1969/5073/00/50730103.pdf&quot;&gt;the paper&lt;/a&gt;.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Then, in 1968 a Go playing program reached the milestone that was conquered for Chess a whole decade earlier: beating a wholly inexperienced amateur. The program did not rely on tree search, but was rather based on emulating the way a human player “sees” an internal representation of a game position in Go so as to recognize patterns that matter for choosing the correct move. Interestingly, much of the power of AlphaGo is based on creating powerful internal representations of the board with Machine Learning techniques commonly applied to visual tasks, so the intuition here was in a way quite right. This feat was achieved by Alfred Zobrist, as described in &lt;a href=&quot;http://www.computer.org/csdl/proceedings/afips/1969/5073/00/50730103.pdf&quot;&gt;“A novel of visual organization for the game of GO”&lt;/a&gt;&lt;sup id=&quot;fnref:ZobristGo&quot;&gt;&lt;a href=&quot;#fn:ZobristGo&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Given that a player “sees” a fairly stable and uniform internal representation, it follows that familiar and meaningful configurations may be recognized in terms of it. The result of visual organization is to classify a tremendous number of possible board situations into a much smaller number of recognizable or familiar board situations. Thus a player can respond to a board position he has never encountered, because it has been mapped into a familiar internal representation. 
+This report will describe a simulation model for visual organization. 
+…
+The program now has a record of two wins and two losses against human opponents. The opponents can best be described as intelligent adults who know how to play GO, have played from two to twenty games but have not studied the game. The program appears to have reached the bottom rung of the ladder of human GO players. “&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Because tricky ideas like this were necessary in order to cope with the huge branching factor and hard to codify heuristics of the game, progress for Go playing programs was much slower than for Chess or Checkers. It would be another decade until Bruce Wilcox developed a stronger program, again without reliance on traditional game AI techniques but with some limited tree search (as covered in &lt;a href=&quot;http://www.wired.com/2014/05/the-world-of-computer-go/&quot;&gt;this great Wired story&lt;/a&gt;). The approach there was to subdivide the bigger board into smaller regions that were easier to reason about, which would continue to be a hallmark of Go AIs. But even then, it was nowhere near even decent human play.&lt;/p&gt;
+
+&lt;p&gt;The same could not be said of Chess programs. Throughout the 70s, Chess AI progressed mostly by refining previously successful approaches. For instance, in the early 70s the Chess AI group at ITEP refined their program into a better version they named Kaissa, which went on to become the first computer Chess champion of the world in 1974 after squaring off against US programs. The program significantly benefited from faster computers and an efficient implementation that included alpha-beta pruning and some other tricks, for the first time showing the strength of the Shannon ‘type A’ AI strategy that relied more on fast search than smart heuristics or position evaluation.&lt;/p&gt;
+
+&lt;p&gt;But also by this point, it was becoming typical to use extra ‘type B’ ideas such as &lt;a href=&quot;https://chessprogramming.wikispaces.com/Quiescence+Search&quot;&gt;quiescence&lt;/a&gt; (basically searching further only after moves involving captures or checks, to not mistake trades for piece captures)  in Chess programs. It turned out to be very beneficial to selectively search further in certain tree paths than in others, so as to not miss critical turns in the game. As we’ll see, these techniques ultimately proved sufficient to write Chess AIs that can beat all of humanity - though it would take a while longer to get there…&lt;/p&gt;
+
+&lt;h1 id=&quot;humans-stop-winning-except-for-go&quot;&gt;Humans Stop Winning… except for Go&lt;/h1&gt;
+&lt;p class=&quot;sidenoteleftlarge&quot;&gt;1989&lt;/p&gt;
+&lt;p&gt;The first computer program to completely dominate humans at a complex game was not developed until about 3 decades after Samuel’s Checkers program won that one game against Robert Nealy, and it was the Checkers program CHINOOK. The program was developed by a team at the University of Alberta led by Jonathan Schaeffer, starting in 1989. By 1994 the best Checkers player on the planet only managed to play CHINOOK to a draw &lt;sup id=&quot;fnref:Chinook&quot;&gt;&lt;a href=&quot;#fn:Chinook&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;figure&gt;
+      &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/9-chinook.jpg&quot; alt=&quot;games_history&quot; /&gt;
+     &lt;figcaption&gt;Chinook being put to the test against the world champion in Checkers. &lt;a href=&quot;http://afflictor.com/2015/12/16/within-the-decade-the-computer-will-know-how-the-game-will-turn-out-even-before-it-begins/&quot;&gt;&lt;b&gt;(Source)&lt;/b&gt;&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;By the 90s computers got orders of magnitude faster, and computer memory orders of magnitude larger, compared even to the computers of the 70s. This both enabled and enhanced the several techniques that powered CHINOOK: (A) a database of opening moves from games played by grandmasters, (B) alpha-beta tree search with an evaluation function based on a linear combination of many handcrafted features, and (C) an end-game database for all positions with fewer than eight pieces. And that’s it! That’s the recipe to a world-class Checkers playing program.&lt;/p&gt;
+
+&lt;p&gt;A similar recipe also powered a world-class Chess program developed around that time - Deep Thought. Developed by a team headed by Feng-hsiung Hsu, it incorporated all these ideas and had two notable extra strengths: custom hardware and smart selective extensions. According to a &lt;a href=&quot;http://www.aaai.org/ojs/index.php/aimagazine/article/viewFile/753/671&quot;&gt;retrospective about its success&lt;/a&gt;, it was the fastest Chess program up to that point in terms of how many positions it could consider per second. This was achieved by performing move simulation and evaluation with custom circuit boards, which worked in tandem with software running on a powerful computer. In addition to being fast, Deep Thought was also smart: it had &lt;em&gt;singular extensions&lt;/em&gt;, a nice type of &lt;a href=&quot;https://chessprogramming.wikispaces.com/Extensions&quot;&gt;selective extension&lt;/a&gt; of search past the default depth at promising positions. This allowed search depth to be extended considerably: “The result is that on the average, an N ply search penetrates along the principal variation to a depth of 1.5N and reaches a depth of 3N about once in a game”&lt;sup id=&quot;fnref:DeepThoughtWins&quot;&gt;&lt;a href=&quot;#fn:DeepThoughtWins&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&quot;fnref:DeepThoughtExtensions&quot;&gt;&lt;a href=&quot;#fn:DeepThoughtExtensions&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;So, Deep Thought was successful precisely because it was a combination of ‘type A’ brute force AI (searching all positions up to a certain depth) and ‘type B’ selective search (searching past that depth in certain cases). By 1988, Deep Thought became the computer Chess champion of the world and, more impressively, beat Chess grandmaster Bent Larsen.&lt;/p&gt;
+
+&lt;figure&gt;
+      &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/10-deepthought.jpg&quot; alt=&quot;deep_thought&quot; /&gt;
+     &lt;figcaption&gt;The Deep Thought team showing off their custom hardware when they won the Fredkin Intermediate Prize: &quot;In 1988 Deep Thought and Grandmaster Tony Miles shared first place in the Software Toolworks Open in Los Angeles. Deep Thought had a 2745 performance rating, and moved its U.S. Chess Federation (USCF) rating up to 2551, and qualified for the $10,000 Fredkin Intermediate Prize as the first computer to achieve a USCF performance rating of 2500 over a set of 25 contiguous games in human tournaments.&quot; &lt;a href=&quot;https://chessprogramming.wikispaces.com/Deep+Thought&quot;&gt;&lt;b&gt;(Source)&lt;/b&gt;&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Another interesting aspect of Deep Thought is that its evaluation function was automatically tuned using a database of games between master chess players, rather than having all the function’s parameters hardcoded by its programmers. In this respect it harkened all the way back to Arthur Samuel’s Checkers program, which also had the ability to ‘learn’ by tuning its evaluation function from experience. Though Chess programs improved over the decades due to increased computer speeds and ideas such as alpha-beta pruning and selective extensions, almost all programs still had no learning component and ultimately derived all their intelligence fully from their human creators. Deep Thought was a notable break from this trend.&lt;/p&gt;
+
+&lt;p&gt;Still, the structure of Deep Thought’s evaluation function encoded a lot of human intuition and knowledge about the game of chess, as was the norm. This is problematic, because the tough part in playing a game (how to evaluate positions and select moves) is essentially still solved by the programmer and not the program itself. It should be possible to write AI programs that could just learn this stuff by themselves, right? Right, and this was soon done for the first time using an algorithm that was later essential to AlphaGo - &lt;strong&gt;neural networks&lt;/strong&gt;. Neural networks are a technique for &lt;strong&gt;supervised machine learning&lt;/strong&gt;, which is just a category of algorithms that can learn to produce a desired output for some type of input by viewing many training examples of known outputs and inputs of the same type. (For an in-depth explanation feel free to look at &lt;a href=&quot;http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning/&quot;&gt;my little neural net writeup&lt;/a&gt;). Following a major 1986 paper describing how larger neural nets can be trained for tougher problems, they were all the rage in the late 80s and were being applied to many sorts of problems. One such application is the backgammon AI dubbed Neurogammon.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/11.5-supervised.png&quot; alt=&quot;Supervised Leraning&quot; /&gt; 
+ &lt;figcaption&gt;Visualization of supervised learning. The inputs are size and domestication, and the output is a classification of 'dog' or 'cat'. The  dots already on the graph are the **training set** for learning, and the lines are the learned functions for getting an output for inputs not in the training set.  &lt;a href=&quot;https://en.wikipedia.org/wiki/Perceptron#/media/File:Perceptron_example.svgl&quot;&gt;&lt;b&gt;(Source)&lt;/b&gt;&lt;/a&gt;, By &lt;a href=&quot;//commons.wikimedia.org/w/index.php?title=User:Elizabeth_goodspeed&amp;amp;action=edit&amp;amp;redlink=1&quot; class=&quot;new&quot; title=&quot;User:Elizabeth goodspeed (page does not exist)&quot;&gt;Elizabeth Goodspeed&lt;/a&gt; - &lt;span class=&quot;int-own-work&quot; lang=&quot;en&quot;&gt;Own work&lt;/span&gt;, &lt;a title=&quot;Creative Commons Attribution-Share Alike 4.0&quot; href=&quot;http://creativecommons.org/licenses/by-sa/4.0&quot;&gt;CC BY-SA 4.0&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Like Go, Backgammon has a huge branching factor and the traditional tree-search-with-handcrafted-evalution-function approach does not work well. A large branching factor makes it impossible to search many moves ahead, and it is very difficult to write a great evaluation function to compensate. Gerald Tesauro, a researcher at the University of Illinois and later IBM (surprise!), and renowned Machine Learning researcher Terrence Sejnowski explored an approach based on learning a good evaluation function (a goal that had been abandoned since Arthur Samuel’s work). As explained in their 1989 paper &lt;a href=&quot;http://papers.cnl.salk.edu/PDFs/A%20Parallel%20Network%20That%20Learns%20to%20Play%20Backgammon%201989-2965.pdf&quot;&gt;“A parallel network that learns to play backgammon”&lt;/a&gt;, they trained a neural net to accept as input a backgammon game position and a potential move, and to output a score measuring the quality of that move &lt;sup id=&quot;fnref:NeuroGammon&quot;&gt;&lt;a href=&quot;#fn:NeuroGammon&quot; class=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;. This approach removes the need for engineers to attempt to encode human intuition when writing the program, which is ideal. However, to make the approach work well some human intuition was still encoded in the system in the form of &lt;strong&gt;features&lt;/strong&gt; - derived aspects about the game position, for example piece counts in Chess - also used as input in addition to the raw game position.&lt;/p&gt;
+
+&lt;figure class=&quot;sidefigureleft&quot;&gt;
+&lt;div&gt;&lt;button class=&quot;btn&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#features&quot;&gt;
+Aside: why use features? &amp;raquo;
+&lt;/button&gt;&lt;/div&gt;
+&lt;blockquote class=&quot;aside&quot;&gt;&lt;p id=&quot;features&quot; class=&quot;collapse&quot; style=&quot;height: 0px;&quot;&gt;
+When building machine learning systems with large 'raw data' (images, audio, or game states), it is typical to use informative &lt;b&gt;features&lt;/b&gt; extracted from the data with human-written code. These features are then used as the input instead of the raw data. Intuitively, this makes the learning program easier by giving the machine learning algorithm only the useful information from the input and not forcing it to figure that bit out by itself. So-called &lt;b&gt;feature-engineering&lt;/b&gt; used to be a standard step in building machine learning systems, and was possibly one of the most time-consuming steps since (as with evaluation functions) coming up and implementing good features is not always easy. Nowadays 'deep learning' (which we shall get to soon) has made it more typical to learn directly from the raw data. Indeed deep learning seems to derive much of its power from its ability to learn useful features better than the ones humans can implement. 
+&lt;/p&gt;&lt;/blockquote&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimagesmall&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/11-nntraining.png&quot; alt=&quot;Backprop&quot; /&gt; 
+    &lt;figcaption&gt;Supervised learning with neural nets. Basically, neural nets are made up of a bunch of units that each just output a weighted sum of their input, and the correct weights for a given application are learned from training data. Neurogammon worked exactly like this, except that the input were backgammon game positions, as well as derived features of the game positions, and the outputs were scores for the game position.  &lt;a href=&quot;http://devblogs.nvidia.com/parallelforall/inference-next-step-gpu-accelerated-deep-learning/&quot;&gt;(Source)&lt;/a&gt;&lt;/figcaption&gt;    
+&lt;/figure&gt;
+
+&lt;p class=&quot;sidenoteleftlarge&quot;&gt;1992&lt;/p&gt;
+&lt;p&gt;With further improvements, the program was dubbed Neurogammon 1.0 and went on to win against all other programs at the 1989 First Computer Olympiad &lt;sup id=&quot;fnref:NeuroGammonWins&quot;&gt;&lt;a href=&quot;#fn:NeuroGammonWins&quot; class=&quot;footnote&quot;&gt;8&lt;/a&gt;&lt;/sup&gt;. However, it was still not as strong as the best human players, a feat that would soon go to another neural net based program by Gerald Tesauro: TD-Gammon. First unveiled to the world in 1992, TD-Gammon was a hugely successful application of &lt;strong&gt;reinforcement learning&lt;/strong&gt;. Unlike supervised learning, which approximates some function with particular types of input and outputs, reinforcement learning deals with finding optimal choices in different situations. More specifically, we think in terms of states (situations), in which an agent (the program) can take actions that change the agent’s state in a known way (choices). Every transition between states results in a numeric ‘reward’, and figuring out the right action to take in a given state in order to get the highest reward in the long term, is what reinforcement learning is broadly about. Whereas supervised learning learns to approximate a function via examples of inputs and outputs, reinforcement learning generally learns from ‘experience’ of receiving rewards after trying actions in different states.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/12-rl.png&quot; alt=&quot;RL&quot; /&gt; 
+ &lt;figcaption&gt;A visualization of the general idea of reinforcement learning. Rather than learning to compute a correct output given some input, as in supervised learning, the goal is to learn to choose a correct action in any state in order to obtain the maximum reward in the long term.  &lt;a href=&quot;http://www2.hawaii.edu/~chenx/ics699rl/grid/rl.html&quot;&gt;&lt;b&gt;(Source)&lt;/b&gt;&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;So, TD-Gammon learned by just playing games of backgammon against prior versions of itself, observing which player won, and using that experience to tune a neural net to produce a probability of winning from any given position. This is fundamentally different from Neurogammon, which required compiling a dataset of hundreds of moves with human-assigned scores and was thus much more cumbersome than just letting the program play games against itself for a few hours. Note this is very similar to what Arthur Samuel was trying to do all the way back in 1957 with his Checkers program that learned from self-play. In fact, the type of reinforcement learning TD-Gammon is based on, Temporal Difference Learning, was developed in 1986 by Richard Sutton as a formalization of the learning in Samuel’s work&lt;sup id=&quot;fnref:TDSutton&quot;&gt;&lt;a href=&quot;#fn:TDSutton&quot; class=&quot;footnote&quot;&gt;9&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p class=&quot;sidenoteleftlarge&quot;&gt;1994&lt;/p&gt;
+&lt;p&gt;Besides learning through self-play, there was nothing fancy in the approach - instead of using tuned tree search the program just exhaustively looked at all positions two steps ahead and used the move that led to the largest probability of winning. With just the raw board positions as input - essentially no human intuition engineered into it - TD-Gammon achieved a level of play comparable to Neurogammon. And with the addition of Neurogammon’s features, it became comparable to the best human players in the world&lt;sup id=&quot;fnref:TDGammon&quot;&gt;&lt;a href=&quot;#fn:TDGammon&quot; class=&quot;footnote&quot;&gt;10&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/13-tdgammon.png&quot; alt=&quot;TDGammon&quot; /&gt; 
+ &lt;figcaption&gt;The TD-Gammon neural net that learned to play expert-level Backgammon. The input later included features in addition to the raw board positions. &lt;a href=&quot;https://webdocs.cs.ualberta.ca/~sutton/book/ebook/node108.html&quot;&gt;&lt;b&gt;(Source)&lt;/b&gt;&lt;/a&gt;&lt;/figcaption&gt;     
+&lt;/figure&gt;
+
+&lt;p&gt;TD-Gammon is to this day a milestone in the history of AI. But, when researchers naturally tried to use the same approach for other games, the results were not quite as impressive. Sebastian Thrun’s NeuroChess&lt;sup id=&quot;fnref:NeuroChess&quot;&gt;&lt;a href=&quot;#fn:NeuroChess&quot; class=&quot;footnote&quot;&gt;11&lt;/a&gt;&lt;/sup&gt; (1995) was only comparable to commercial Chess programs on a low difficulty setting, and Markus Enzenberger’s NeuroGo&lt;sup id=&quot;fnref:NeuroGo&quot;&gt;&lt;a href=&quot;#fn:NeuroGo&quot; class=&quot;footnote&quot;&gt;12&lt;/a&gt;&lt;/sup&gt; (1996) likewise did not match the skill of existing (poor) Go AIs. In the case of NeuroChess, the discrepancy was surmised to be in large part due to the large amount of time it took to compute the evaluation function (“Computing a large neural network function takes two orders of magnitude longer than evaluating an optimized linear evaluation function (like that of GNU-Chess)”), making NeuroChess unable to explore nearly as many moves ahead as the commercial Chess program. The benefit of a better evaluation function just did not win out over a simpler one that allowed for many more positions to be explored during search.&lt;/p&gt;
+&lt;p class=&quot;sidenoteleftlarge&quot;&gt;1997&lt;/p&gt;
+&lt;p&gt;Which brings us back to Deep Thought. After the success of that program, some of the same team were hired by IBM and set out to create Deep Thought II, which was later renamed Deep Blue (Deep Thought x Big Blue = Deep Blue). By and large, Deep Blue was conceptually the same as Deep Thought but much, much beefier in terms of computing power - it was a custom built supercomputer! Still, when it played Kasparov in 1996 Deep Blue lost with a score of 2-4. The team then spent a year making Deep Blue yet more powerful and tuning its evaluation function, and it was this version that historically beat Kasparov with a score of 3.5-2.5 on May 11th of 1997&lt;sup id=&quot;fnref:DeepBlue&quot;&gt;&lt;a href=&quot;#fn:DeepBlue&quot; class=&quot;footnote&quot;&gt;13&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;sidefigureright&quot;&gt;
+    &lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/15-deepblue.jpg&quot; alt=&quot;Kasparov&quot; /&gt; 
+ &lt;figcaption&gt;The supercomputer that powered Deep Blue &lt;a href=&quot;https://www-03.ibm.com/ibm/history/exhibits/vintage/vintage_4506VV1001.html&quot;&gt;&lt;b&gt;(Source)&lt;/b&gt;&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure class=&quot;sidefigureleft&quot;&gt;
+    &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/14-kasparov.jpg&quot; alt=&quot;Kasparov&quot; /&gt; 
+ &lt;figcaption&gt;Kasparov vs Deep Blue &lt;a href=&quot;http://stanford.edu/~cpiech/cs221/apps/deepBlue.html&quot;&gt;&lt;b&gt;(Source)&lt;/b&gt;&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+	&lt;figure&gt;
+	&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/NJarxpYyoFI&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+	&lt;/figure&gt;  
+&lt;figcaption&gt;A short documentary about Kasparov vs Deep Blue.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The team credited many things with getting Deep Blue to the point that it could score this victory&lt;sup id=&quot;fnref:DeepBlue:1&quot;&gt;&lt;a href=&quot;#fn:DeepBlue&quot; class=&quot;footnote&quot;&gt;13&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“There  were  a  number  of  factors  that  contributed  to  this success, including:&lt;br /&gt;
+1. a single-chip chess search engine,&lt;br /&gt;
+2. a massively parallel system with multiple levels of parallelism,&lt;br /&gt;
+3. a strong emphasis on search extensions,&lt;br /&gt;
+4. a complex evaluation function, and&lt;br /&gt;
+5. effective use of a Grandmaster game database”&lt;br /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So, it would be wrong to claim DeepBlue won purely through “brute-force”, since it included decades of ideas about how to tackle the AI problem of Chess. But brute-force surely was hugely important - DeepBlue was run with thirty processors inside a supercomputer working jointly with 480 single-chip chess search engines (16 per processor). When playing Kasparov it observed 126 million positions per second on average, and typically searched to a depth of between 6 and 12 plies and to a maximum of forty plies. All this allowed it to barely win, arguably due to uncharacteristic blunders on Kasparov’s part. But, all that hardly matters; since then computers have continued to become exponentially faster, and today humanity’s best Chess players are likely no match for programs you can run on your smartphone.&lt;/p&gt;
+
+&lt;p&gt;So, Checkers, Chess, and Backgammon had all been mastered by AI programs by the late 90s - what about Go? Even the best computer programs were poor matches for amateurs with some experience. The techniques we’ve seen so far - supervised learning, reinforcement learning, and well-tuned tree search - were all attempted and found insufficient to make a Go program that could challenge serious human players. To see why these approaches failed, and how their defects were addressed over the span of two decades culminating in the creation of AlphaGo, go on ahead to &lt;a href=&quot;http://www.andreykurenkov.com/writing/a-brief-history-of-game-ai-up-to-alphago-part-3&quot;&gt;the final part of this history&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;acknowledgements&quot;&gt;Acknowledgements&lt;/h2&gt;
+&lt;p&gt;Big thanks to &lt;a href=&quot;http://cs.stanford.edu/people/abisee/&quot;&gt;Abi See&lt;/a&gt; for helping to edit this.&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:NSS&quot;&gt;
+      &lt;p&gt;Allen Newell, Cliff Shaw, Herbert Simon (1958). Chess Playing Programs and the Problem of Complexity. IBM Journal of Research and Development, Vol. 4, No. 2, pp. 320-335. Reprinted (1963) in Computers and Thought (eds. Edward Feigenbaum and Julian Feldman), pp. 39-70. McGraw-Hill, New York, N.Y. pdf &lt;a href=&quot;#fnref:NSS&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:RemusGo&quot;&gt;
+      &lt;p&gt;Remus, H. (1962, January). Simulation of a learning machine for playing Go. In COMMUNICATIONS OF THE ACM (Vol. 5, No. 6, pp. 320-320). 1515 BROADWAY, NEW YORK, NY 10036: ASSOC COMPUTING MACHINERY. &lt;a href=&quot;#fnref:RemusGo&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:ZobristGo&quot;&gt;
+      &lt;p&gt;Zobrist, A. L. (1969, May). A model of visual organization for the game of Go. In Proceedings of the May 14-16, 1969, spring joint computer conference (pp. 103-112). ACM. &lt;a href=&quot;#fnref:ZobristGo&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:Chinook&quot;&gt;
+      &lt;p&gt;Schaeffer, J., Lake, R., Lu, P., &amp;amp; Bryant, M. (1996). &lt;a href=&quot;https://www.aaai.org/ojs/index.php/aimagazine/article/viewFile/1208/1109&quot;&gt;CHINOOK, The World Man-Machine Checkers Champion&lt;/a&gt;. AI Magazine, 17(1), 21. &lt;a href=&quot;#fnref:Chinook&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:DeepThoughtWins&quot;&gt;
+      &lt;p&gt;Berliner, H. J. (1989). &lt;a href=&quot;https://pdfs.semanticscholar.org/bf2d/10d4bc292762f8ca5e648a0668baafd2e551.pdf&quot;&gt;Deep Thought Wins Fredkin Intermediate Prize&lt;/a&gt;. AI Magazine, 10(2), 89. &lt;a href=&quot;#fnref:DeepThoughtWins&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:DeepThoughtExtensions&quot;&gt;
+      &lt;p&gt;Anantharaman, T., Campbell, M. S., &amp;amp; Hsu, F. H. (1990). Singular extensions: Adding selectivity to brute-force searching. Artificial Intelligence, 43(1), 99-109. &lt;a href=&quot;#fnref:DeepThoughtExtensions&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:NeuroGammon&quot;&gt;
+      &lt;p&gt;Tesauro, G., &amp;amp; Sejnowski, T. J. (1989). &lt;a href=&quot;http://papers.cnl.salk.edu/PDFs/A%20Parallel%20Network%20That%20Learns%20to%20Play%20Backgammon%201989-2965.pdf&quot;&gt;A parallel network that learns to play backgammon. Artificial Intelligence&lt;/a&gt;, 39(3), 357-390. &lt;a href=&quot;#fnref:NeuroGammon&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:NeuroGammonWins&quot;&gt;
+      &lt;p&gt;Tesauro, G. (1989). Neurogammon wins computer olympiad. Neural Computation, 1(3), 321-323. &lt;a href=&quot;#fnref:NeuroGammonWins&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:TDSutton&quot;&gt;
+      &lt;p&gt;Sutton, R. S. (1988). &lt;a href=&quot;https://webdocs.cs.ualberta.ca/~sutton/papers/sutton-88-with-erratum.pdf&quot;&gt;Learning to predict by the methods of temporal differences&lt;/a&gt;. Machine learning, 3(1), 9-44. &lt;a href=&quot;#fnref:TDSutton&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:TDGammon&quot;&gt;
+      &lt;p&gt;Tesauro, G. (1994). &lt;a href=&quot;http://www.aaai.org/Papers/Symposia/Fall/1993/FS-93-02/FS93-02-003.pdf&quot;&gt;TD-Gammon, a self-teaching backgammon program, achieves master-level play&lt;/a&gt;. Neural computation, 6(2), 215-219. &lt;a href=&quot;#fnref:TDGammon&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:NeuroChess&quot;&gt;
+      &lt;p&gt;Thrun, S. (1995). &lt;a href=&quot;http://www-preview.ri.cmu.edu/pub_files/pub1/thrun_sebastian_1995_8/thrun_sebastian_1995_8.pdf&quot;&gt;Learning to play the game of chess&lt;/a&gt;. Advances in neural information processing systems, 7. &lt;a href=&quot;#fnref:NeuroChess&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:NeuroGo&quot;&gt;
+      &lt;p&gt;Enzenberger, Markus. &lt;a href=&quot;http://www.cgl.ucsf.edu/go/Programs/neurogo-html/neurogo.html&quot;&gt;“The integration of a priori knowledge into a Go playing neural network.”&lt;/a&gt; (1996). &lt;a href=&quot;#fnref:NeuroGo&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:DeepBlue&quot;&gt;
+      &lt;p&gt;Campbell, M., Hoane, A. J., &amp;amp; Hsu, F. H. (2002). &lt;a href=&quot;http://www.mimuw.edu.pl/~ewama/zsi/deepBlue.pdf&quot;&gt;Deep blue&lt;/a&gt;. Artificial intelligence, 134(1), 57-83. &lt;a href=&quot;#fnref:DeepBlue&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:DeepBlue:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/writing/a-brief-history-of-game-ai-part-2/&quot;&gt;A 'Brief' History of Game AI Up To AlphaGo, Part 2&lt;/a&gt; was originally published by Andrey Kurenkov at &lt;a href=&quot;&quot;&gt;Andrey Kurenkov's Web World&lt;/a&gt; on April 18, 2016.&lt;/p&gt;
+  </content>
+</entry>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[A 'Brief' History of Game AI Up To AlphaGo, Part 1]]></title>
+  <link rel="alternate" type="text/html" href="http://www.andreykurenkov.com/writing/a-brief-history-of-game-ai/" />
+  <id>/writing/a-brief-history-of-game-ai</id>
+  <published>2016-04-18T19:19:34-07:00</published>
+  <updated>2016-04-18T19:19:34-07:00</updated>
+  <author>
+    <name></name>
+    <uri>www.andreykurenkov.com</uri>
+    <email>andreyvkurenkov@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;figure&gt;
+  &lt;a href=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/0-history.png&quot;&gt;
+    &lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/0-history.png&quot; alt=&quot;History&quot; /&gt;
+  &lt;/a&gt;  
+ &lt;figcaption&gt;Just about the scope of this series of posts. Created with &lt;a src=&quot;http://www.readwritethink.org/classroom-resources/student-interactives/timeline-30007.html&quot;&gt;Timeline&lt;/a&gt;.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;This is the first part of ‘A Brief History of Game AI Up to AlphaGo’. Part 2 is &lt;a href=&quot;http://www.andreykurenkov.com/writing/a-brief-history-of-game-ai-up-to-alphago-part-2&quot;&gt;here&lt;/a&gt; and part 3 is &lt;a href=&quot;http://www.andreykurenkov.com/writing/a-brief-history-of-game-ai-up-to-alphago-3&quot;&gt;here&lt;/a&gt;. In this part, we shall cover the birth of AI and the very first game-playing AI programs to run on digital computers.&lt;/p&gt;
+
+&lt;h1 id=&quot;prologue-at-long-last-algorithms-triumph-over-humans-at-go&quot;&gt;Prologue: At Long Last, Algorithms Triumph Over Humans At Go&lt;/h1&gt;
+&lt;p class=&quot;sidenoteleftlarge&quot;&gt;2016&lt;/p&gt;
+&lt;p&gt;On March 9th of 2016, a historic milestone for AI was reached when the Google-engineered program AlphaGo defeated the world-class Go champion Lee Sedol. Go is a two-player strategy board game like Chess, but the larger number of possible moves and difficulty of evaluation make Go the harder problem for AI. So it was a big deal when, a week and four more games against Lee Sedol later, AlphaGo was crowned the undisputed winner of their match having lost only one game. How big a deal? Media coverage accurately described AlphaGo as a &lt;a href=&quot;http://www.theguardian.com/technology/2016/mar/09/google-deepmind-alphago-ai-defeats-human-lee-sedol-first-game-go-contest&quot;&gt;“major breakthrough for AI”&lt;/a&gt; that achieved &lt;a href=&quot;http://www.theverge.com/2016/3/12/11210650/alphago-deepmind-go-match-3-result&quot;&gt;“one of the most sought-after milestones in the field of AI research”&lt;/a&gt;. Comment boards were less reserved, with many describing AlphaGo’s victory as scary or even a sign that superhuman AI was now imminent.&lt;/p&gt;
+
+&lt;p&gt;Months before that day, I was excitedly skimming &lt;a href=&quot;https://research.google.com/pubs/pub44806.html&quot;&gt;the paper on AlphaGo&lt;/a&gt; after Google &lt;a href=&quot;http://googleresearch.blogspot.com/2016/01/alphago-mastering-ancient-game-of-go.html&quot;&gt;first announced its development&lt;/a&gt; &lt;sup id=&quot;fnref:AlphaGo&quot;&gt;&lt;a href=&quot;#fn:AlphaGo&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. It struck me as a hugely impressive leap over state-of-the-art Go play, achieved through a cool combination of already successful techniques. So, when the media frenzy over AlphaGo broke out I thought to write a little post explaining why it is cool from an AI perspective, but also why it is not some scary baby-Skynet AI. In doing so however, I stumbled on so many noteworthy developments and details in the 60-year history of game AI that I could not stop at writing that short little blog post. So, I hope you shall enjoy this ‘brief’ summary of all those exciting ideas and historic milestones that preceded AlphaGo and led to this latest marvel of human ingenuity.&lt;/p&gt;
+
+&lt;div&gt;&lt;button class=&quot;btn&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#sources&quot;&gt;
+Disclaimer: not an expert, more in depth sources, corrections &amp;raquo;
+&lt;/button&gt;&lt;/div&gt;
+&lt;blockquote class=&quot;aside&quot;&gt;&lt;p id=&quot;sources&quot; class=&quot;collapse&quot; style=&quot;height: 0px;&quot;&gt;
+As with my previous 'brief' history, I should emphasize I am not expert on the topic and just wrote it out of personal interest. I have not covered all periods or aspects of this history, so some other good resources are &lt;a href=&quot;http://academicworks.cuny.edu/cgi/viewcontent.cgi?article=1181&amp;amp;context=gc_pubs&quot;&gt;&quot;The History of Computer Games&quot;&lt;/a&gt;, &lt;a href=&quot;https://www.chess.com/article/view/a-short-history-of-computer-chess&quot;&gt;&quot;A Short History of Computer Chess&quot;&lt;/a&gt;, and &lt;a href=&quot;http://www.britgo.org/computergo/history&quot;&gt;&quot;History of Go-playing Programs&quot;&lt;/a&gt;. I am also not a professional writer, and consulted some good pieces written on the topic by professional writers such as &lt;a href=&quot;http://www.wired.com/2014/05/the-world-of-computer-go/&quot;&gt;&quot;The Mystery of Go, the Ancient Game That Computers Still Can’t Win&quot;&lt;/a&gt; by Alan Levinovitz. I also will stay away from getting too technical here, but there is a plethora of tutorials on the internet on all the major topics covered in brief by me.
+&lt;br /&gt;
+Any corrections would be greatly appreciated, though I will note some omissions are intentional since I want to try and keep this 'brief' through a good mix of simple technical explanations and storytelling.
+&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;humble-beginnings&quot;&gt;Humble Beginnings&lt;/h1&gt;
+&lt;p class=&quot;sidenoteleftlarge&quot;&gt;1949&lt;/p&gt;
+&lt;p&gt;Since the inception of the modern computer, there were people pondering whether it could match — or supersede — human intelligence. And since measuring human intelligence is difficult, many of those people reasoned they could tackle the question by first making computers good at certain tasks that challenged the human intellect. So, strategy games. As early as 1949, no less than &lt;a href=&quot;https://en.wikipedia.org/wiki/Claude_Shannon&quot;&gt;Claude Shannon&lt;/a&gt; published &lt;a href=&quot;http://vision.unipv.it/IA1/aa2009-2010/ProgrammingaComputerforPlayingChess.pdf&quot;&gt;his thoughts&lt;/a&gt; on the topic of how a computer might be made to play Chess &lt;sup id=&quot;fnref:ShannonChess&quot;&gt;&lt;a href=&quot;#fn:ShannonChess&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. In it, he both justified the usefulness of solving such a problem and defined its scope:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“The chess machine is an ideal one to start with, since: (1) the problem is sharply defined both in allowed operations (the moves) and in the ultimate goal (checkmate); (2) it is neither so simple as to be trivial nor too difficult for satisfactory solution; (3) chess is generally considered to require “thinking” for skillful play; a solution of this problem will force us either to admit the possibility of a mechanized thinking or to further restrict our concept of “thinking”; (4) the discrete structure of chess fits well into the digital nature of modern computers.
+…
+It is clear then that the problem is not that of designing a machine to play perfect chess (which is quite impractical) nor one which merely plays legal chess (which is trivial). We would like to play a skillful game, perhaps comparable to that of a good human player.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The approach Shannon suggested is today called &lt;strong&gt;Minimax&lt;/strong&gt; (named after John Vonn Neuman’s minimax theorem, proven by him in 1928) and would be hugely influential for the future game-playing AIs. It is perhaps the most obvious approach one can take to making a game-playing AI. The idea is to assume both players will consider all future moves of the whole game, and so play optimally. In other words, you should always choose a move such that, even if the opponent chooses the absolute best response to that move and to every future move of yours, you will still get the highest score possible at the end of the game.&lt;/p&gt;
+
+&lt;p&gt;It’s easy to make a computer do this. With a representation of the positions (or &lt;strong&gt;states&lt;/strong&gt;) and the rules of the game, all one needs to do is write a program to generate all possible next game states from the current state, and the possible states for those states, and so on. By doing this, the program can simulate the game past the current point and build a &lt;strong&gt;tree&lt;/strong&gt; of possible paths toward the end of the game. Then, it just needs to follow the best case path of moves to get to the best end game. This has the flaw of not capitalizing on potential mistakes the opponent might make, but on the whole is a very safe and sensible strategy.&lt;/p&gt;
+
+&lt;figure class=&quot;sidefigureleft&quot;&gt;
+&lt;div&gt;&lt;button class=&quot;btn&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#minimax&quot;&gt;
+Aside: minimax step by step &amp;raquo;
+&lt;/button&gt;&lt;/div&gt;
+&lt;blockquote class=&quot;aside&quot;&gt;&lt;p id=&quot;minimax&quot; class=&quot;collapse&quot; style=&quot;height: 0px;&quot;&gt;
+Broken down, minimax works as follows:&lt;br /&gt;&lt;br /&gt;
+
+1. At the start of your move, consider all the possible moves you can take.&lt;br /&gt;
+2. For each of your possible moves, consider each of your opponent's response moves.&lt;br /&gt;
+3. Now consider every possible response to the opponents' response, and keep thinking into the future until you reach the end of the game in your head when you can get a score.&lt;br /&gt;
+4. Assume that just like you, the opponent can think through all the moves right through the end of the game, and so will never make a mistake — they will play optimally, and assume you will play optimally. Choose the current move to maximize your final score, assuming your opponent will always choose all future moves to minimize your score in response to whatever moves you make.
+&lt;/p&gt;&lt;/blockquote&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+      &lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/1-TicTacToe.gif&quot; alt=&quot;MinimaxTree&quot; /&gt;
+     &lt;figcaption&gt;Example minimax game tree on the simple Tic-Tac-Toe game. Each successive layer in this tree represents possible game states some number of moves ahead of the current one and is traditionally called a &lt;b&gt;ply&lt;/b&gt;.  &lt;a href=&quot;https://www.cs.cmu.edu/~adamchik/15-121/lectures/Game%20Trees/Game%20Trees.html&quot;&gt;&lt;b&gt;(Source)&lt;/b&gt;&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;One more detail: though in theory Minimax search involves finding all paths to the end of the game, in practice this is impossible due to the combinatorial explosion of game states to keep track of with each additional move simulated into the future. That is, for every move there is some number of options (known as the &lt;strong&gt;branching factor&lt;/strong&gt;) and so every additional ply (i.e. layer) in the tree roughly multiplies its size by that branching factor. If the branching factor is 10, looking one move ahead would require considering 10 game states, two moves ahead requires 10+10*10=110, three moves gets us to 1110, and so on. So, we use an &lt;strong&gt;evaluation function&lt;/strong&gt; to evaluate positions that are not yet the end of the game. An evaluation function can be as simple as counting the number of pieces each player has, or much more complicated, making it possible to only search 3 or 6 moves ahead (or, a &lt;strong&gt;depth&lt;/strong&gt; of 3 or 6 &lt;strong&gt;plies&lt;/strong&gt;) rather than the 40-ish moves involved in the average Chess game.&lt;/p&gt;
+
+&lt;figure&gt;
+      &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/2-evalfunc.png&quot; alt=&quot;chess_eval func&quot; /&gt;
+     &lt;figcaption&gt;Evaluation non-end game positions in a search tree. &lt;a href=&quot;http://stanford.edu/~cpiech/cs221/apps/deepBlue.html&quot;&gt;&lt;b&gt;(Source)&lt;/b&gt;&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Shannon’s paper defined how one could use Minimax with an evaluation function, and set the course for future work on Chess AI by proposing two possible strategies to go about it: (A) doing brute-force Minimax tree search with an evaluation function, OR (B) using a ‘plausible move generator’ rather than just the rules of the game to look at a small subset of next moves at each ply during tree search. Future Chess playing programs would often be categorized as ‘type A’ or ‘type B’ based on which strategy they were mainly based on. Shannon specifically noted the first strategy was simple but not practical since the number of states grows exponentially with each additional ply and the overall number of possible positions (the &lt;strong&gt;state-space&lt;/strong&gt;) is huge. For the second strategy, Shannon took inspiration from master Chess players, who selectively consider only promising moves. However, a good ‘plausible move generator’ is not at all trivial to write, so massive-scale search as in strategy (A) is still useful. As we shall see later, Deep Blue (the program that beat Chess world champion Gary Kasparov) was basically a combination of both approaches.&lt;/p&gt;
+
+&lt;figure&gt;
+      &lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/2-Shannon.jpg&quot; alt=&quot;shannon_machine&quot; /&gt;
+     &lt;figcaption&gt;Shannon demonstrating a machine he built to try programming rules for a limited version of Chess. &lt;a href=&quot;https://videogamehistorian.wordpress.com/tag/computer-game/&quot;&gt;&lt;b&gt;(Source)&lt;/b&gt;&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p class=&quot;sidenoteleftlarge&quot;&gt;1951&lt;/p&gt;
+&lt;p&gt;But, the supercomputer that powered Deep Blue was still decades away from existence, at most a dream in the minds of the early computer pioneers of the early 50s (in fact, the famous &lt;a href=&quot;https://en.wikipedia.org/wiki/Moore's_law&quot;&gt;Moore’s law&lt;/a&gt; would not be defined until a decade later). In fact the first Chess program was run not with silicon or vacuum tubes, nor any sort of digital computer, but rather by the gooey fleshy neurons of the human brain — that of Alan Turing, to be precise. Turing, a mathematician and pioneering AI thinker, spent years working on a Chess algorithm he completed in 1951 and called TurboChamp&lt;sup id=&quot;fnref:short_chess_history&quot;&gt;&lt;a href=&quot;#fn:short_chess_history&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;TurboChamp was not as extensive as Shannon’s proposed systems, and very basic by future standards, but still, it could play Chess. In 1952, Turing manually executed the algorithm in what must have been an excruciatingly slow game, which the program ultimately lost. Still, Turing also published his thoughts on Chess AI and posited that &lt;em&gt;in principle&lt;/em&gt; a program that could learn from experience and play at the level of humans ought to be completely possible&lt;sup id=&quot;fnref:TuringChess&quot;&gt;&lt;a href=&quot;#fn:TuringChess&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;. Just a few years later, the first ever computer Chess program would be executed…&lt;/p&gt;
+
+&lt;h1 id=&quot;theory-becomes-code&quot;&gt;Theory Becomes Code&lt;/h1&gt;
+&lt;p class=&quot;sidenoteleftlarge&quot;&gt;1956&lt;/p&gt;
+&lt;p&gt;All of this happened before AI — the field of Artificial Intelligence — was really born. This can be said to have happened at the 1956 Dartmouth Conference, a sort of month-long brainstorming session among future AI luminaries where the term “Artificial Intelligence” was coined (or so claims &lt;a href=&quot;https://en.wikipedia.org/wiki/Dartmouth_Conferences&quot;&gt;Wikipedia&lt;/a&gt;). Besides the University mathematicians and researchers in attendance (Claude Shannon among them), there were also two engineers from IBM: Nathaniel Rochester and Arthur Samuel. Nathaniel Rochester headed a small group that began a long tradition of people at IBM achieving breakthroughs in AI, with Arthur Samuel being the first.&lt;/p&gt;
+
+&lt;p&gt;Samuel had been thinking about Machine Learning (algorithms that enable computers to solve problems through learning rather than through hand-coded human solutions) since 1949, and was particularly focused on developing an AI that could learn to play the game of Checkers. Checkers, which has 10&lt;sup&gt;20&lt;/sup&gt; possible board positions, is simpler than Chess (10&lt;sup&gt;47&lt;/sup&gt;) or Go (10&lt;sup&gt;250&lt;/sup&gt; ! We’ll get to that one in a bit…) but still complicated enough that it is not easy to master. With the slow and unwieldy computers of the time, Checkers was a good first target. Working with the resources he had at IBM, and particularly their first commercial computer (the IBM 701), Samuel developed a program that could play the game of Checkers well, the first such game-playing AI to run on a computer. He summarized his accomplishments in the seminal &lt;a href=&quot;https://www.cs.virginia.edu/~evans/greatworks/samuel1959.pdf&quot;&gt;“Some studies in machine learning using the game of Checkers”&lt;/a&gt;&lt;sup id=&quot;fnref:SamulCheckers&quot;&gt;&lt;a href=&quot;#fn:SamulCheckers&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Two machine-learning procedures have been investigated in some detail using the game of checkers. Enough work has been done to verify the fact that a computer can be programmed so that it will learn to play a better game of checkers than can be played by the person who wrote the program. Furthermore, it can learn to do this in a remarkably short period of time (8 or 10 hours of machine-playing time) when given only the rules of the game, a sense of direction, and a redundant and incomplete list of parameters which are thought to have something to do with the game, but whose correct signs and relative weights are unknown and unspecified. The principles of machine learning verified by these experiments are, of course, applicable to many other situations.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure&gt;
+      &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/3-minimax.png&quot; alt=&quot;samuel_minimax&quot; /&gt;
+     &lt;figcaption&gt;A great visual from Samuel's paper explaining Minimax. &lt;a href=&quot;https://www.cs.virginia.edu/~evans/greatworks/samuel1959.pdf&quot;&gt;&lt;b&gt;(Source)&lt;/b&gt;&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Fundamentally, the program was based on Minimax, but had an additional hugely important aspect: &lt;strong&gt;learning&lt;/strong&gt;. The program became better over time without human intervention, through two novel methods: (A) “rote-learning”, meaning it could store the evaluations of certain positions gotten through Minimax and so not need to consider further moves in them, and (B) “learning-by-generalization”, i.e. modifying the multipliers for different parameters, thus modifying the evaluation function, based on previous games played by the program. The multipliers were changed so as to lower the difference between the calculated goodness of a given board position (according to the evaluation function) and the actual goodness of it (found through playing out the game to completion).&lt;/p&gt;
+
+&lt;p&gt;Rote learning was a fairly obvious way to make the program more efficient and capable over time, and it worked well. But it was learning-by-generalization that was particularly groundbreaking, as it showed that a program could learn to ‘intuitively’ know how good a game position was without tons of simulation of future moves. Not only that, but the program was made to learn by playing past versions of itself, which would one day be a key component of AlphaGo! But let’s not get ahead of ourselves…&lt;/p&gt;
+
+&lt;figure class=&quot;sidefigureright&quot;&gt;
+&lt;div&gt;&lt;button class=&quot;btn&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#samuel_learning&quot;&gt;
+Aside: Quote from Samuel about learning procedures &amp;raquo;
+&lt;/button&gt;&lt;/div&gt;
+&lt;blockquote class=&quot;aside&quot;&gt;&lt;p id=&quot;samuel_learning&quot; class=&quot;collapse&quot; style=&quot;height: 0px;&quot;&gt;
+Here is a fun excerpt from the paper about the advantages of each learning strategy:&lt;br /&gt;
+
+&quot;Some interesting comparisons can be made between the playing style developed the learning-by-generalization program and that developed by the earlier rote-learning procedure. The program with rote learning soon learned to imitate master play during the opening moves. It was always quite poor during the middle game, but it easily learned how to avoid most of the obvious traps during end-game play and could usually drive on toward a win when left with a piece advantage. The program with the generalization procedure has never learned to play in a conventional manner and its openings are apt to be weak. On the other hand, it soon learned to play a good middle game, and with a piece advantage it usually polishes off its opponent' in short order.&lt;br /&gt;
+
+Apparently, rote learning is of the greatest help, either under conditions
+when the result of any specific action are long delayed, or in those
+situations where highly specialized techniques are required. Contrasting with this, the generalization procedure is most helpful in situations in which the available permutations of conditions are large in number and when the consequences of any specific action are not long delayed.&quot;
+&lt;/p&gt;&lt;/blockquote&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+      &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/4-rote_learning.png&quot; /&gt;
+     &lt;figcaption&gt;Another great figure from Samuel's paper showing the use of rote learning. &lt;a href=&quot;https://www.cs.virginia.edu/~evans/greatworks/samuel1959.pdf&quot;&gt;&lt;b&gt;(Source)&lt;/b&gt;&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Not only were these ideas groundbreaking, but they also worked in practice — the program could play a respectable game of Checkers, which was no small feat given the limited computing power at the time. And so, as this &lt;a href=&quot;https://webdocs.cs.ualberta.ca/~chinook/project/legacy.html&quot;&gt;great retrospective&lt;/a&gt;  details, when Samuel’s program was first demonstrated in the very early days of AI (in the same year as the Dartmouth Conference, in fact) it made a strong impression:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“It didn’t take long before Samuel had a program that played a respectable game of checkers, capable of easily defeating novice players. It was first publicly demonstrated on television on February 24, 1956. Thomas Watson, President of IBM, arranged for the program to be exhibited to shareholders. He predicted that it would result in a fifteen-point rise in the price of IBM stock. It did.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure&gt;
+      &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/5-samuel.jpg&quot; alt=&quot;samuel_checkers&quot; /&gt;
+     &lt;figcaption&gt;&quot;On February 24, 1956, Arthur Samuel’s Checkers program, which was developed for play on the IBM 701, was demonstrated to the public on television.&quot; &lt;a href=&quot;http://www-03.ibm.com/ibm/history/ibm100/us/en/icons/ibm700series/impacts/&quot;&gt;&lt;b&gt;(Source)&lt;/b&gt;&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p class=&quot;sidenoteleftlarge&quot;&gt;1957&lt;/p&gt;
+&lt;p&gt;But, this is Checkers — what of the game everyone really cared about, Chess? Well, once again it was employees at IBM who pioneered the first Chess AI, and as with Samuel those employees were supervised by Nathaniel Rochester. The work was chiefly led by Alex Bernstein, a mathematician and experienced Chess player. Like Samuel, he decided to explore the problem out of personal interest and ultimately led the implementation of a fully functional Chess playing AI on the IBM 701, which was completed in 1957  &lt;sup id=&quot;fnref:BernsteinChess&quot;&gt;&lt;a href=&quot;#fn:BernsteinChess&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;. The program also used Minimax, but lacked any learning capability and was constrained to look at most 4 moves ahead, and consider only 7 options per move. Until the 70s, most Chess-playing programs would be similarly constrained, plus perhaps some extra logic to choose which moves to simulate, rather like the type (B) strategy outlined by Shannon in 1949. Bernstein’s program had some &lt;b&gt;heuristics&lt;/b&gt; (cheap to compute ‘rules of thumb’) to select the best 7 moves to simulate, which in itself was a new contribution. Still, these limitations meant the program only achieved very basic Chess play.&lt;/p&gt;
+
+&lt;figure class=&quot;sidefigureleft&quot;&gt;
+      &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/6-chessai.png&quot; alt=&quot;bernstein_chess&quot; /&gt;
+     &lt;figcaption&gt;Illustration of the limited Minimax search the Bernstein program did, from the article on it. &lt;a href=&quot;http://archive.computerhistory.org/projects/chess/related_materials/text/2-2.Computer_V_ChessPlayer.Bernstein_Roberts.Scientific_American.June-1958/Computer_V_ChessPlayer.Bernstein_Roberts.Scientific_American.June-1958.062303059.sm.pdf&quot;&gt;&lt;b&gt;(Source)&lt;/b&gt;&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure class=&quot;sidefigureright&quot;&gt;
+      &lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2016-4-15-a-brief-history-of-game-ai/6A-Bernstein.jpg&quot; alt=&quot;bernstein_chessB&quot; /&gt;
+     &lt;figcaption&gt;Bernstein playing his program. &lt;a href=&quot;https://chessprogramming.wikispaces.com/The+Bernstein+Chess+Program&quot;&gt;&lt;b&gt;(Source)&lt;/b&gt;&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+	&lt;figure&gt;
+	&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/iT_Un3xo1qE&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+	&lt;/figure&gt;  
+&lt;figcaption&gt;Bernstein's Chess program starring in its very own TV report!&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Still, it was the first fully functional Chess-playing program and demonstrated that even extremely limited Minimax search with a simple evaluation function and no learning can yield passable novice Chess play. And this was in 1957! So much more is yet to come in &lt;a href=&quot;http://www.andreykurenkov.com/writing/a-brief-history-of-game-ai-up-to-alphago-part-2&quot;&gt;the coming decades&lt;/a&gt;…&lt;/p&gt;
+
+&lt;h2 id=&quot;acknowledgements&quot;&gt;Acknowledgements&lt;/h2&gt;
+&lt;p&gt;Big thanks to &lt;a href=&quot;http://cs.stanford.edu/people/abisee/&quot;&gt;Abi See&lt;/a&gt; and Stefeno Fenu for helping to edit this.&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:AlphaGo&quot;&gt;
+      &lt;p&gt;David Silver, Aja Huang, Christopher J. Maddison, Arthur Guez, Laurent Sifre, George van den Driessche, Julian Schrittwieser, Ioannis Antonoglou, Veda Panneershelvam, Marc Lanctot, Sander Dieleman, Dominik Grewe, John Nham, Nal Kalchbrenner, Ilya Sutskever, Timothy Lillicrap, Madeleine Leach, Koray Kavukcuoglu, Thore Graepel &amp;amp; Demis Hassabis (2016). Mastering the game of Go with deep neural networks and tree search. Nature, 529, 484-503. &lt;a href=&quot;#fnref:AlphaGo&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:ShannonChess&quot;&gt;
+      &lt;p&gt;Shannon, C. E. (1988). &lt;a href=&quot;http://vision.unipv.it/IA1/aa2009-2010/ProgrammingaComputerforPlayingChess.pdf&quot;&gt;Programming a computer for playing chess&lt;/a&gt; (pp. 2-13). Springer New York. &lt;a href=&quot;#fnref:ShannonChess&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:short_chess_history&quot;&gt;
+      &lt;p&gt;A Jenery (2008). A Short History of Computer Chess. chess.com &lt;a href=&quot;https://www.chess.com/article/view/a-short-history-of-computer-chess&quot;&gt;link&lt;/a&gt; &lt;a href=&quot;#fnref:short_chess_history&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:TuringChess&quot;&gt;
+      &lt;p&gt;Alan Turing (1953). Chess. part of the collection Digital Computers Applied to Games. in Bertram Vivian Bowden (editor), Faster Than Thought, a symposium on digital computing machines, reprinted 1988 in Computer Chess Compendium &lt;a href=&quot;#fnref:TuringChess&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:SamulCheckers&quot;&gt;
+      &lt;p&gt;Samuel, A. L. (1959). Some studies in machine learning using the game of checkers. IBM Journal of research and development, 3(3), 210-229. &lt;a href=&quot;#fnref:SamulCheckers&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:BernsteinChess&quot;&gt;
+      &lt;p&gt;Bernstein, A., &amp;amp; Roberts, M. D. V. (1958). &lt;a href=&quot;http://archive.computerhistory.org/projects/chess/related_materials/text/2-2.Computer_V_ChessPlayer.Bernstein_Roberts.Scientific_American.June-1958/Computer_V_ChessPlayer.Bernstein_Roberts.Scientific_American.June-1958.062303059.sm.pdf&quot;&gt;Computer v chess-player&lt;/a&gt;. Scientific American, 198(6), 96-105. &lt;a href=&quot;#fnref:BernsteinChess&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/writing/a-brief-history-of-game-ai/&quot;&gt;A 'Brief' History of Game AI Up To AlphaGo, Part 1&lt;/a&gt; was originally published by Andrey Kurenkov at &lt;a href=&quot;&quot;&gt;Andrey Kurenkov's Web World&lt;/a&gt; on April 18, 2016.&lt;/p&gt;
+  </content>
+</entry>
 
 
   
@@ -36,7 +740,7 @@
 
 &lt;h1 id=&quot;what&quot;&gt;What?&lt;/h1&gt;
 
-&lt;p&gt;What will follow are a selection of what I think are cool visualizations of data from the &lt;a href=&quot;http://stackoverflow.com/research/developer-survey-2015&quot;&gt;StackOverflow 2015 Developer Survey&lt;/a&gt;. The survey asked software developers a bunch of questions concerning their background and work, and got an impressive 26086 responses. Due o there being multiple ‘Select up to’ questions, the data contains 222 observations for every response - lots of data to play with and visualize! The visualizations were made with R, as part of a project for the &lt;a href=&quot;https://www.udacity.com/courses/ud651&quot;&gt;Data Analysis with R&lt;/a&gt; class.&lt;/p&gt;
+&lt;p&gt;What will follow are a selection of what I think are cool visualizations of data from the &lt;a href=&quot;http://stackoverflow.com/research/developer-survey-2015&quot;&gt;StackOverflow 2015 Developer Survey&lt;/a&gt;. The survey asked software developers a bunch of questions concerning their background and work, and got an impressive 26086 responses. Due to there being multiple ‘Select up to’ questions, the data contains 222 observations for every response - lots of data to play with and visualize! The visualizations were made with R, as part of a project for the &lt;a href=&quot;https://www.udacity.com/courses/ud651&quot;&gt;Data Analysis with R&lt;/a&gt; class.&lt;/p&gt;
 
 &lt;h1 id=&quot;fun-with-developers-personalprofessional-metrics&quot;&gt;Fun With Developers’ Personal+Professional Metrics&lt;/h1&gt;
 &lt;p&gt;Having loaded and cleaned up the data, the natural place to start is looking at who responded to the survey:&lt;/p&gt;
@@ -780,7 +1484,7 @@ took a hefty amount of time:&lt;/p&gt;
 
 &lt;p&gt;Not to say all there was to figure out was figured out by this point. Far from it. What had been figured out is exactly the opposite: that peoples’ intuition was often wrong, and in particular unquestioned decisions and assumptions were often very unfounded. Asking simple questions, trying simple things - these had the power to greatly improve state of the art techniques. And precisely that has been happening, with many more ideas and approaches being explored and shared in deep learning since. An example: &lt;a href=&quot;http://arxiv.org/pdf/1207.0580.pdf&quot;&gt;“Improving neural networks by preventing co-adaptation of feature detectors”&lt;/a&gt;&lt;sup id=&quot;fnref:17&quot;&gt;&lt;a href=&quot;#fn:17&quot; class=&quot;footnote&quot;&gt;17&lt;/a&gt;&lt;/sup&gt; by G. E. Hinton et al. The idea is very simple: to prevent overfitting, randomly pretend some neurons are not there while training. This straightforward idea - called &lt;strong&gt;Dropout&lt;/strong&gt; - is a very efficient means of implementing the hugely powerful approach of ensemble learning, which just means learning in many different ways from the training data. Random Forests, a dominating technique in machine learning to this day, is chiefly effective due to being a form of ensemble learning. Training many different neural nets is possible but is far too computationally expensive, yet this simple idea in essence achieves the same thing and indeed significantly improves performance.&lt;/p&gt;
 
-&lt;p&gt;Still, having all these research discoveries since 2006 is not what made the computer vision or other research communities again respect neural nets. What did do it was something somewhat less noble: completely destroying non-deep learning methods on a modern competitive benchmark. Geoffrey Hinton enlisted two of his Dropout co-writers, Alex Krizhevsky and Ilya Sutskever, to apply the ideas discovered to create an entry to the ILSVRC-2012 computer vision competition. To me, it is very striking to now understand that their work, described in &lt;a href=&quot;&quot;&gt;“ImageNet Classification with deep convolutional neural networks”&lt;/a&gt;&lt;sup id=&quot;fnref:18&quot;&gt;&lt;a href=&quot;#fn:18&quot; class=&quot;footnote&quot;&gt;18&lt;/a&gt;&lt;/sup&gt;, is the combination of very old concepts (a CNN with pooling and convolution layers, variations on the input data) with several new key insight (very efficient GPU implementation, ReLU neurons, dropout), and that this, precisely this, is what modern deep learning is. So, how did they do? Far, far better than the next closest entry: their error rate was %15.3, whereas the second closest was %26.2. This, the first and only CNN entry in that competition, was an undisputed sign that CNNs, and deep learning in general, had to be taken seriously for computer vision. Now, almost all entries to the competition are CNNs - a neural net model Yann LeCun was working with since 1989. And, remember LSTM recurrent neural nets, devised in the 90s by Sepp Hochreiter and Jürgen Schmidhuber to solve the backpropagation problem? Those, too, are now state of the art for sequential tasks such as speech processing.&lt;/p&gt;
+&lt;p&gt;Still, having all these research discoveries since 2006 is not what made the computer vision or other research communities again respect neural nets. What did do it was something somewhat less noble: completely destroying non-deep learning methods on a modern competitive benchmark. Geoffrey Hinton enlisted two of his Dropout co-writers, Alex Krizhevsky and Ilya Sutskever, to apply the ideas discovered to create an entry to the ILSVRC-2012 computer vision competition. To me, it is very striking to now understand that their work, described in &lt;a href=&quot;http://www.cs.toronto.edu/~fritz/absps/imagenet.pdf&quot;&gt;“ImageNet Classification with deep convolutional neural networks”&lt;/a&gt;&lt;sup id=&quot;fnref:18&quot;&gt;&lt;a href=&quot;#fn:18&quot; class=&quot;footnote&quot;&gt;18&lt;/a&gt;&lt;/sup&gt;, is the combination of very old concepts (a CNN with pooling and convolution layers, variations on the input data) with several new key insight (very efficient GPU implementation, ReLU neurons, dropout), and that this, precisely this, is what modern deep learning is. So, how did they do? Far, far better than the next closest entry: their error rate was %15.3, whereas the second closest was %26.2. This, the first and only CNN entry in that competition, was an undisputed sign that CNNs, and deep learning in general, had to be taken seriously for computer vision. Now, almost all entries to the competition are CNNs - a neural net model Yann LeCun was working with since 1989. And, remember LSTM recurrent neural nets, devised in the 90s by Sepp Hochreiter and Jürgen Schmidhuber to solve the backpropagation problem? Those, too, are now state of the art for sequential tasks such as speech processing.&lt;/p&gt;
 
 &lt;p&gt;This was the turning point. A mounting wave of excitement about possible progress has culminated in undeniable achievements that far surpassed what other known techniques could manage. The tsunami metaphor that we started with in part 1, this is where it began, and it has been growing and intensifying to this day. Deep learning is here, and no winter is in sight.&lt;/p&gt;
 
@@ -810,7 +1514,7 @@ took a hefty amount of time:&lt;/p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/V1eYniJ0Rnk&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;&lt;a href=&quot;Schmidhuber&quot;&gt;Chess playing!&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://arxiv.org/abs/1509.01549&quot;&gt;Chess playing!&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;3 - Adding external memory writable and readable to by the neural net&lt;/p&gt;
 
@@ -1312,6 +2016,7 @@ I am in no capacity an expert on this topic. In depth technical overviews with l
 &lt;br /&gt;
 Any corrections would be greatly appreciated, though I will note some ommisions are intentional since I want to try and keep this 'brief' and a good mix of simple technical explanations and storytelling.
 &lt;/p&gt;&lt;/blockquote&gt;
+
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;the-centuries-old-machine-learning-algorithm&quot;&gt;The Centuries Old Machine Learning Algorithm&lt;/h1&gt;
@@ -2174,91 +2879,6 @@ So just do it.&lt;/p&gt;
 &lt;p&gt;Again, a children’s lesson - the world ain’t fair. Any and all indignation about the fact is not going to change it, and is a waste of time and energy. Instead, we must learn to appreciate it all as it is - kind of fucked up, certainly not ideal, but on the whole quite worthwhile.&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;/writing/some-more-thoughts-on-being/&quot;&gt;Some More Thoughts on Being&lt;/a&gt; was originally published by Andrey Kurenkov at &lt;a href=&quot;&quot;&gt;Andrey Kurenkov's Web World&lt;/a&gt; on June 21, 2015.&lt;/p&gt;
-  </content>
-</entry>
-
-
-  
-
-<entry>
-  <title type="html"><![CDATA[On How Utterly Fantastic "Brothers: A Tale of Two Sons" Is]]></title>
-  <link rel="alternate" type="text/html" href="http://www.andreykurenkov.com/writing/on-how-utterly-fantastic-brothers-a-tale-of-two-sons-is/" />
-  <id>/writing/on-how-utterly-fantastic-brothers-a-tale-of-two-sons-is</id>
-  <published>2015-06-08T16:05:08-07:00</published>
-  <updated>2015-06-08T16:05:08-07:00</updated>
-  <author>
-    <name></name>
-    <uri>www.andreykurenkov.com</uri>
-    <email>andreyvkurenkov@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;figure&gt;
-    &lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2015-06-08-on-how-utterly-fantastic-brothers-a-tale-of-two-sons-is/brothers_gameinformer_01_big.jpg&quot; alt=&quot;http://www.brothersthegame.com/downloads&quot; /&gt;     
-&lt;/figure&gt;
-
-&lt;p&gt;Brothers is a game made by a movie director - Josef Fares . It’s nonconformity, courage, and beauty all derive significantly in part because of this esoteric source of creativity, as &lt;a href=&quot;http://www.polygon.com/features/2013/10/27/4864230/brothers-starbreeze-josef-fares&quot;&gt;the Polygon has greatly covered&lt;/a&gt;. Go read about it - the piece is well written, interesting, and makes playing the game all the more enjoyable. Josef Fares and Starbreeze have done something truly impressive, and should be commended for realizing a vision without regard for stale video game traditions. As is said in the article, ‘“If you want to make something that stands out and is memorable, you can’t do what everyone else is doing,” Engdal says. “It may seem obvious when stated like that, but still — most companies these days do the same thing over and over again because of some perceived sense of safety.”’&lt;/p&gt;
-
-&lt;p&gt;Where to start? The game is set up early as being about the journey of two brothers across a medieval fantasy land to get a cure for their ailing father. The art direction needs to be praised, the music is appropriately elegant, and whoever handled creating the ground textures should get a raise. But what first really struck me was how the FEEL of a fairy tale Journey permeated this game. This is a Journey that stands among those of Jack (the climber and the Samurai), Frodo, and whoever had the courage to go after the fountain of life. It cannot be emphasized enough how much the sheer feeling of going on an exciting journey permeates this game. So many games feel empty in comparison, are a mechanical exercise to get through the next checkpoint or destination, with barely any soul or passion within them. Brothers had me jumping on noticeably protruding rocks on walls, shimmying on precarious ledges, handing and moving along slight fringes, and many such completely routine video game devices - but in this game as I started doing those acts I was excited, I felt like this was the start of an adventure instead of the same old typical progression towards the next level.&lt;/p&gt;
-
-&lt;p&gt;Next, immersion. This game has no HUD or health, and it does not need them. The environmental puzzles are made to be simple and natural, quite logically embedded in the environment, so progression was almost constant and frustration almost nonexistent. This game has about 15 seconds of tutorial, as long as is required. The controls are simple, and often simply do the natural thing - keep running towards a platform to jump towards, twist the stick to turn the lever, etc. There are no points. Instead of points there are people, and places, and things to do - if you see person playing with a cat you can go over and pet it, if you see a person playing the lute you can go over and listen or mess with it slightly, if you see a fountain with fish in it you can enter and freshen up. This is what being in a world is all about. Unsurprisingly the Fares has named the designer of Ico as someone he’d like to meet, and the minimalism and design clarity here are on equal grounds with that groundbreaking game.&lt;/p&gt;
-
-&lt;p&gt;Now, the mechanics. By having a single “interact” button and designing the game around that, the game fights against a strong bias of games for mechanistic design. By that I mean the “feel” of a platformer, a shooter, even a puzzle game - those all about the fine tuning of those specific mechanics, and the vast majority of games are designed to be enjoyable through mastering of the mechanics and variations on them over a long stretch of gameplay. Brothers is among recent games, like Gone Home, Dear Esther, The Stanley Parable, The Novelist, and Kentucky Route Zero that lack this emphasis on the joy of the game being primarily in the mechanics, in the raw input-output experience of it. This first struck me as I was carefully avoiding piles of bones while sneaking up on a troll facing the other way to steal a key conspicuously hung on his belt - unlike so many games where just sneaking would be made into a routine mechanic, in this game the act was done once and felt good due to the narrative and emotional meaning of it rather than its mechanical execution. These game are finally creating more balance and experimentation in the medium by having plain mechanics and emphasizing the pleasures of exploration, choice, discovery, and interaction. Considering the market is flooded with shooters, platformers, and puzzle games (even of the indie variety), I am a big fan of this trend.&lt;/p&gt;
-
-&lt;p&gt;However, Brothers does employ game mechanics in a very important way. It frustratingly requiring both brothers to be controlled simultaneously with only the player’s one rather limited brain and two analogue sticks, which of course grows to be strangely natural over the course of the game. Much as with the very successful Papers, Please, the design of Brothers embeds much of the meaning of the game directly in the gameplay. I will avoid spoiling the ending, but it is sufficient to say that when you get to it the game has a brilliant conclusion in large part due to the mechanics of the game. Furthermore, it also allows for a fairly unique sense of enjoyment with the game when you feel your control of the two character is truly synchronized. This strongly reminded me of the concept of “flow”, and how other well designed games &lt;a href=&quot;http://www.theatlantic.com/technology/archive/2012/03/a-portrait-of-the-artist-as-a-game-studio/254494/&quot;&gt;such as Flower and Journey&lt;/a&gt; elicit it strongly.&lt;/p&gt;
-
-&lt;p&gt;There are so many other things that are good in this game, and that are finally becoming more common in video games since the ongoing indie surge that has been happening at least since Braid and Limbo . Cutscenes are used sparingly, and correctly. The game as whole is short, which is to say the right length so no mechanics are tired out or pointless nonsense repetetive gamepaly is introduced. It is not sentimental, or childish, or simplistic (though whatever puzzles are in it are very intentionally simple). Forget specifics, the game as a whole is just uniquely beautiful. Play it, as soon as you can.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;a href=&quot;https://lifeofandrey.files.wordpress.com/2015/06/brothers02_06_big.jpg&quot;&gt;&lt;img class=&quot;postimage&quot; src=&quot;/writing/images/2015-06-08-on-how-utterly-fantastic-brothers-a-tale-of-two-sons-is/brothers02_06_big.jpg&quot; alt=&quot;http://www.brothersthegame.com/downloads&quot; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/writing/on-how-utterly-fantastic-brothers-a-tale-of-two-sons-is/&quot;&gt;On How Utterly Fantastic &quot;Brothers: A Tale of Two Sons&quot; Is&lt;/a&gt; was originally published by Andrey Kurenkov at &lt;a href=&quot;&quot;&gt;Andrey Kurenkov's Web World&lt;/a&gt; on June 08, 2015.&lt;/p&gt;
-  </content>
-</entry>
-
-
-  
-
-<entry>
-  <title type="html"><![CDATA[AgriBot]]></title>
-  <link rel="alternate" type="text/html" href="http://www.andreykurenkov.com/projects/team_projects/mapping-sprayer/" />
-  <id>/projects/team_projects/mapping-sprayer</id>
-  <published>2015-05-02T00:00:00-07:00</published>
-  <updated>2015-05-02T00:00:00-07:00</updated>
-  <author>
-    <name></name>
-    <uri>www.andreykurenkov.com</uri>
-    <email>andreyvkurenkov@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;Wow, what a senior design project. Getting a roughly 30k robot rover and being tasked with putting roughy 5k of electronics and sensors on top of it. And the software! To make a self driving, autonomous mapping robot that precisely sprayed plants and gathered data with the possibility of remote control and monitoring. Seriously, what a project.&lt;/p&gt;
-
-&lt;p&gt;What a project - a serious enough one to the point of not being able to finish, apparently. A lot was working on that Jetson TK1, intense ROS-based SLAM code with Kinect 2 and SLAM input, navigation of the robot, and so much more (the technical docs and presentation have all the juicy details) - but as happens so often we did not pull it all together in time. Still, we were close, and for a project of such ambition that means something.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/projects/team_projects/mapping-sprayer/&quot;&gt;AgriBot&lt;/a&gt; was originally published by Andrey Kurenkov at &lt;a href=&quot;&quot;&gt;Andrey Kurenkov's Web World&lt;/a&gt; on May 02, 2015.&lt;/p&gt;
-  </content>
-</entry>
-
-
-  
-
-<entry>
-  <title type="html"><![CDATA[Teaching Robots Skill Constraints]]></title>
-  <link rel="alternate" type="text/html" href="http://www.andreykurenkov.com/projects/research/teaching-constrained-skills/" />
-  <id>/projects/research/teaching-constrained-skills</id>
-  <published>2015-05-01T00:00:00-07:00</published>
-  <updated>2015-05-01T00:00:00-07:00</updated>
-  <author>
-    <name></name>
-    <uri>www.andreykurenkov.com</uri>
-    <email>andreyvkurenkov@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;Basically, with a lot of work, particularly leading up to the paper submission. I decided to do a year long project with the ambition of being published before leaving for my summer internship with EPFL, and tentatively planned out the next year over the summer. The fall is then much of the exploration on what the research will be and the implementation of what would be needed took place, and in the final semester at Tech I actually finished the software, ran the study, and wrote the paper.&lt;/p&gt;
-
-&lt;p&gt;My work on this project counted both for completing the Research Option at Georgia Tech and for my CS Senior Research project, and correctly so - deciding on a research direction, implementing the vast majority of the necessary software, and (most of all) running a study and completing the paper all pushed me to work extremely hard despite at times being unsure the project could be completed on time and most definitely being unsure it could lead to a publication. It must be admitted that conceptually, or in terms of algorithms, the paper is not that impressive. Still, I still think it touched on several important topics that could be exploerd to a much deeper depth. And, it got published, so it seems I am not entirely wrong!&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/projects/research/teaching-constrained-skills/&quot;&gt;Teaching Robots Skill Constraints&lt;/a&gt; was originally published by Andrey Kurenkov at &lt;a href=&quot;&quot;&gt;Andrey Kurenkov's Web World&lt;/a&gt; on May 01, 2015.&lt;/p&gt;
   </content>
 </entry>
 

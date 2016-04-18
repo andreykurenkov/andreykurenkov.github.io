@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>/writing/a-brief-history-of-game-ai-part-3/</loc>
+    <lastmod>2016-04-18T19:19:34-07:00</lastmod>
+  </url>
+  <url>
+    <loc>/writing/a-brief-history-of-game-ai-part-2/</loc>
+    <lastmod>2016-04-18T19:19:34-07:00</lastmod>
+  </url>
+  <url>
+    <loc>/writing/a-brief-history-of-game-ai/</loc>
+    <lastmod>2016-04-18T19:19:34-07:00</lastmod>
+  </url>
+  <url>
     <loc>/writing/fun-visualizations-of-stackoverflow/</loc>
     <lastmod>2016-02-12T18:19:34-08:00</lastmod>
   </url>
@@ -201,13 +213,19 @@
     <loc>/writing/</loc>
   </url>
   <url>
+    <loc>/writing/tag/writing/</loc>
+  </url>
+  <url>
+    <loc>/writing/tag/ml/</loc>
+  </url>
+  <url>
+    <loc>/writing/tag/ai/</loc>
+  </url>
+  <url>
     <loc>/writing/tag/technical/</loc>
   </url>
   <url>
     <loc>/writing/tag/data-science/</loc>
-  </url>
-  <url>
-    <loc>/writing/tag/writing/</loc>
   </url>
   <url>
     <loc>/writing/tag/life/</loc>
@@ -316,9 +334,5 @@
   </url>
   <url>
     <loc>/projects/tag/simulation/</loc>
-  </url>
-  <url>
-    <loc>/writing/fun-visualizations-of-stackoverflow/index.html</loc>
-    <lastmod>2016-02-11T18:11:07-08:00</lastmod>
   </url>
 </urlset>
