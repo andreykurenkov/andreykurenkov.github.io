@@ -18,6 +18,7 @@ This is the first part of 'A Brief History of Neural Nets and Deep Learning'. Pa
 
 This may sound hyperbolic - to say the established methods of an entire field of research are quickly being superseded by a new discovery, as if hit by a research 'tsunami'. But, this catastrophic language is appropriate for describing the meteoric rise of Deep Learning over the last several years - a rise characterized by drastic improvements over reigning approaches towards the hardest problems in AI, massive investments from industry giants such as Google, and exponential growth in research publications (and Machine Learning graduate students). Having taken several classes on Machine Learning, and even used it in undergraduate research, I could not help but wonder if this new 'Deep Learning' was anything fancy or just a scaled up version of the 'artificial neural nets' that were already developed by the late 80s. And let me tell you, the answer is quite a story - the story of not just neural nets, not just of a sequence of research breakthroughs that make Deep Learning somewhat more interesting than 'big neural nets'  (that I will attempt to explain in a way that just about anyone can understand), but most of all of how several unyielding researchers made it through dark decades of banishment to finally redeem neural nets and achieve the dream of Deep Learning. 
 
+
 <div><button class="btn" data-toggle="collapse" data-target="#sources">
 Disclaimer: not an expert, more in depth sources, corrections &raquo;
 </button></div>
@@ -26,6 +27,7 @@ I am in no capacity an expert on this topic. In depth technical overviews with l
 <br>
 Any corrections would be greatly appreciated, though I will note some ommisions are intentional since I want to try and keep this 'brief' and a good mix of simple technical explanations and storytelling.
 </p></blockquote>
+
 <br>
 
 # The Centuries Old Machine Learning Algorithm

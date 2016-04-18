@@ -5,8 +5,8 @@ date: 2016-2-22lT19:19:34-07:00
 tags: [writing,quasy-essay,film]
 status: draft
 type: draft
-published: true
-comments: true
+published: false
+comments: false
 author: andrey_kurenkov
 excerpt: "What is it like to simultaneously read two drafts of the same essay?"
 ---
