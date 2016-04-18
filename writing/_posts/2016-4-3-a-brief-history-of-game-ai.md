@@ -17,7 +17,7 @@ excerpt: "The start of the story of how humanity made computers good at Go"
  <figcaption>Just about the scope of this series of posts. Created with <a src="http://www.readwritethink.org/classroom-resources/student-interactives/timeline-30007.html">Timeline</a>.</figcaption>
 </figure>
 
-This is the first part of 'A Brief History of Game AI Up to AlphaGo'. Part 2 is [here](http://www.andreykurenkov.com/writing/a-brief-history-of-game-ai-up-to-alphago-part-2) and part 3 is [here](http://www.andreykurenkov.com/writing/a-brief-history-of-game-ai-up-to-alphago-3). In this part, we shall cover the birth of AI and the very first game-playing AI programs to run on digital computers.
+This is the first part of 'A Brief History of Game AI Up to AlphaGo'. Part 2 is [here](/writing/a-brief-history-of-game-ai-part-2) and part 3 is [here](/writing/a-brief-history-of-game-ai-part-3). In this part, we shall cover the birth of AI and the very first game-playing AI programs to run on digital computers.
 
 # Prologue: At Long Last, Algorithms Triumph Over Humans At Go  
 <p class="sidenoteleftlarge">2016</p>
@@ -36,7 +36,7 @@ Any corrections would be greatly appreciated, though I will note some omissions 
 
 # Humble Beginnings
 <p class="sidenoteleftlarge">1949</p>
-Since the inception of the modern computer, there were people pondering whether it could match — or supersede — human intelligence. And since measuring human intelligence is difficult, many of those people reasoned they could tackle the question by first making computers good at certain tasks that challenged the human intellect. So, strategy games. As early as 1949, no less than [Claude Shannon](https://en.wikipedia.org/wiki/Claude_Shannon) published [his thoughts](http://vision.unipv.it/IA1/aa2009-2010/ProgrammingaComputerforPlayingChess.pdf) on the topic of how a computer might be made to play Chess [^ShannonChess]. In it, he both justified the usefulness of solving such a problem and defined its scope:
+Since the inception of the modern computer, there were people pondering whether it could match — or supersede — human intelligence. And since measuring human intelligence is difficult, many of those people reasoned they could tackle the question by first making computers good at certain tasks that challenged the human intellect. So, strategy games. As early as 1949, no less than [Claude Shannon](https://en.wikipedia.org/wiki/Claude_Shannon) published his thoughts on the topic of how a computer might be made to play Chess [^ShannonChess]. He both justified the usefulness of solving such a problem and defined its scope:
 
 > "The chess machine is an ideal one to start with, since: (1) the problem is sharply defined both in allowed operations (the moves) and in the ultimate goal (checkmate); (2) it is neither so simple as to be trivial nor too difficult for satisfactory solution; (3) chess is generally considered to require "thinking" for skillful play; a solution of this problem will force us either to admit the possibility of a mechanized thinking or to further restrict our concept of "thinking"; (4) the discrete structure of chess fits well into the digital nature of modern computers.
 ...
@@ -149,7 +149,7 @@ But, this is Checkers — what of the game everyone really cared about, Chess? W
 <figcaption>Bernstein's Chess program starring in its very own TV report!</figcaption>
 </figure> 
 
-Still, it was the first fully functional Chess-playing program and demonstrated that even extremely limited Minimax search with a simple evaluation function and no learning can yield passable novice Chess play. And this was in 1957! So much more is yet to come in [the coming decades](http://www.andreykurenkov.com/writing/a-brief-history-of-game-ai-up-to-alphago-part-2)...
+Still, it was the first fully functional Chess-playing program and demonstrated that even extremely limited Minimax search with a simple evaluation function and no learning can yield passable novice Chess play. And this was in 1957! So much more is yet to come in [the coming decades](/writing/a-brief-history-of-game-ai-part-2)...
 
 ## Acknowledgements
 Big thanks to [Abi See](http://cs.stanford.edu/people/abisee/) and Stefeno Fenu for helping to edit this.
@@ -159,5 +159,5 @@ Big thanks to [Abi See](http://cs.stanford.edu/people/abisee/) and Stefeno Fenu 
 [^ShannonChess]: Shannon, C. E. (1988). [Programming a computer for playing chess](http://vision.unipv.it/IA1/aa2009-2010/ProgrammingaComputerforPlayingChess.pdf) (pp. 2-13). Springer New York.
 [^short_chess_history]: A Jenery (2008). A Short History of Computer Chess. chess.com [link](https://www.chess.com/article/view/a-short-history-of-computer-chess)
 [^TuringChess]: Alan Turing (1953). Chess. part of the collection Digital Computers Applied to Games. in Bertram Vivian Bowden (editor), Faster Than Thought, a symposium on digital computing machines, reprinted 1988 in Computer Chess Compendium
-[^SamulCheckers]: Samuel, A. L. (1959). Some studies in machine learning using the game of checkers. IBM Journal of research and development, 3(3), 210-229.
+[^SamulCheckers]: Samuel, A. L. (1959). [Some studies in machine learning using the game of checkers](](https://www.cs.virginia.edu/~evans/greatworks/samuel1959.pdf)). IBM Journal of research and development, 3(3), 210-229.
 [^BernsteinChess]: Bernstein, A., & Roberts, M. D. V. (1958). [Computer v chess-player](http://archive.computerhistory.org/projects/chess/related_materials/text/2-2.Computer_V_ChessPlayer.Bernstein_Roberts.Scientific_American.June-1958/Computer_V_ChessPlayer.Bernstein_Roberts.Scientific_American.June-1958.062303059.sm.pdf). Scientific American, 198(6), 96-105.
