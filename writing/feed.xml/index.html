@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://www.andreykurenkov.com/feed.xml" />
 <link rel="alternate" type="text/html" href="http://www.andreykurenkov.com" />
-<updated>2016-04-18T01:11:27-07:00</updated>
+<updated>2016-04-18T10:37:02-07:00</updated>
 <id>/</id>
 <author>
   <name>Andrey Kurenkov</name>
@@ -27,7 +27,7 @@
     <email>andreyvkurenkov@gmail.com</email>
   </author>
   <content type="html">
-    &lt;p&gt;This is the third part of ‘A Brief History of Game AI Up to AlphaGo’. Part 1 is &lt;a href=&quot;http://www.andreykurenkov.com/writing/a-brief-history-of-game-ai-up-to-alphago&quot;&gt;here&lt;/a&gt; and part 2 is &lt;a href=&quot;http://www.andreykurenkov.com/writing/a-brief-history-of-game-ai-up-to-alphago-2&quot;&gt;here&lt;/a&gt;. In this part, we shall cover the intellectual innovations necessary to finally achieve strong Go programs, and the final steps beyond those that get us all the way to the present and to AlphaGo.&lt;/p&gt;
+    &lt;p&gt;This is the third and final part of ‘A Brief History of Game AI Up to AlphaGo’. Part 1 is &lt;a href=&quot;/writing/a-brief-history-of-game-ai&quot;&gt;here&lt;/a&gt; and part 2 is &lt;a href=&quot;/writing/a-brief-history-of-game-ai-part-2&quot;&gt;here&lt;/a&gt;. In this part, we shall cover the intellectual innovations necessary to finally achieve strong Go programs, and the final steps beyond those that get us all the way to the present and to AlphaGo.&lt;/p&gt;
 
 &lt;h1 id=&quot;and-then-there-was-go&quot;&gt;And Then There Was Go&lt;/h1&gt;
 &lt;p&gt;Although Go playing programs by the late 90s were still far from impressive, this was not due to a lack of people trying. Following Bruce Wilcox’s 70s work on Go programs (mentioned in the &lt;a href=&quot;http://www.andreykurenkov.com/writing/a-brief-history-of-game-ai-up-to-alphago-2&quot;&gt;part 2 of this&lt;/a&gt;), numerous people continued to dedicate their time and CPU cycles to implementing better Go programs throughout the 80s and 90s. One of the best programs of the 90s, The Many Faces of Go, achieved 13-kyu (good non-professional) performance. It took 30 thousand lines of code written over a decade by its developer, David Fotland, to implement the many Go-specific components it used on top of traditional alpha-beta search&lt;sup id=&quot;fnref:ManyFaces&quot;&gt;&lt;a href=&quot;#fn:ManyFaces&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. The combination of a larger branching factor, longer games, and trickier-to-evaluate board positions rendered Go resistant to the techniques that by this time were achieving master-level Chess play. The so-called “knowledge-based” approach of Many Faces of Go (encoding many human-designed strategies into the program) worked, but by the 2000s hit a point of diminishing returns. Traditional techniques were simply not enough.&lt;/p&gt;
@@ -300,7 +300,7 @@ With this tournament, we wanted to test the limits of AlphaGo. The genius of Lee
     <email>andreyvkurenkov@gmail.com</email>
   </author>
   <content type="html">
-    &lt;p&gt;This is the second part of ‘A Brief History of Game AI Up to AlphaGo’. Part 1 is &lt;a href=&quot;http://www.andreykurenkov.com/writing/a-brief-history-of-game-ai-up-to-alphago&quot;&gt;here&lt;/a&gt; and part 3 is &lt;a href=&quot;http://www.andreykurenkov.com/writing/a-brief-history-of-game-ai-up-to-alphago-3&quot;&gt;here&lt;/a&gt;. In this part, we shall cover just about four decades of progress, from the first victories of computers against people at Checkers and Chess all the way up to DeepBlue’s victory against humanity’s then-best living Chess player.&lt;/p&gt;
+    &lt;p&gt;This is the second part of ‘A Brief History of Game AI Up to AlphaGo’. Part 1 is &lt;a href=&quot;/writing/a-brief-history-of-game-ai&quot;&gt;here&lt;/a&gt; and part 3 is &lt;a href=&quot;/writing/a-brief-history-of-game-ai-part-3&quot;&gt;here&lt;/a&gt;. In this part, we shall cover just about four decades of progress, from the first victories of computers against people at Checkers and Chess all the way up to DeepBlue’s victory against humanity’s then-best living Chess player.&lt;/p&gt;
 
 &lt;h1 id=&quot;computers-start-to-win&quot;&gt;Computers Start To Win&lt;/h1&gt;
 &lt;p class=&quot;sidenoteleftlarge&quot;&gt;1958&lt;/p&gt;
@@ -469,7 +469,7 @@ When building machine learning systems with large 'raw data' (images, audio, or 
 
 &lt;p&gt;So, it would be wrong to claim DeepBlue won purely through “brute-force”, since it included decades of ideas about how to tackle the AI problem of Chess. But brute-force surely was hugely important - DeepBlue was run with thirty processors inside a supercomputer working jointly with 480 single-chip chess search engines (16 per processor). When playing Kasparov it observed 126 million positions per second on average, and typically searched to a depth of between 6 and 12 plies and to a maximum of forty plies. All this allowed it to barely win, arguably due to uncharacteristic blunders on Kasparov’s part. But, all that hardly matters; since then computers have continued to become exponentially faster, and today humanity’s best Chess players are likely no match for programs you can run on your smartphone.&lt;/p&gt;
 
-&lt;p&gt;So, Checkers, Chess, and Backgammon had all been mastered by AI programs by the late 90s - what about Go? Even the best computer programs were poor matches for amateurs with some experience. The techniques we’ve seen so far - supervised learning, reinforcement learning, and well-tuned tree search - were all attempted and found insufficient to make a Go program that could challenge serious human players. To see why these approaches failed, and how their defects were addressed over the span of two decades culminating in the creation of AlphaGo, go on ahead to &lt;a href=&quot;http://www.andreykurenkov.com/writing/a-brief-history-of-game-ai-up-to-alphago-part-3&quot;&gt;the final part of this history&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;So, Checkers, Chess, and Backgammon had all been mastered by AI programs by the late 90s - what about Go? Even the best computer programs were poor matches for amateurs with some experience. The techniques we’ve seen so far - supervised learning, reinforcement learning, and well-tuned tree search - were all attempted and found insufficient to make a Go program that could challenge serious human players. To see why these approaches failed, and how their defects were addressed over the span of two decades culminating in the creation of AlphaGo, go on ahead to &lt;a href=&quot;/writing/a-brief-history-of-game-ai-part-3&quot;&gt;the final part of this history&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;acknowledgements&quot;&gt;Acknowledgements&lt;/h2&gt;
 &lt;p&gt;Big thanks to &lt;a href=&quot;http://cs.stanford.edu/people/abisee/&quot;&gt;Abi See&lt;/a&gt; for helping to edit this.&lt;/p&gt;
@@ -545,7 +545,7 @@ When building machine learning systems with large 'raw data' (images, audio, or 
  &lt;figcaption&gt;Just about the scope of this series of posts. Created with &lt;a src=&quot;http://www.readwritethink.org/classroom-resources/student-interactives/timeline-30007.html&quot;&gt;Timeline&lt;/a&gt;.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;This is the first part of ‘A Brief History of Game AI Up to AlphaGo’. Part 2 is &lt;a href=&quot;http://www.andreykurenkov.com/writing/a-brief-history-of-game-ai-up-to-alphago-part-2&quot;&gt;here&lt;/a&gt; and part 3 is &lt;a href=&quot;http://www.andreykurenkov.com/writing/a-brief-history-of-game-ai-up-to-alphago-3&quot;&gt;here&lt;/a&gt;. In this part, we shall cover the birth of AI and the very first game-playing AI programs to run on digital computers.&lt;/p&gt;
+&lt;p&gt;This is the first part of ‘A Brief History of Game AI Up to AlphaGo’. Part 2 is &lt;a href=&quot;/writing/a-brief-history-of-game-ai-part-2&quot;&gt;here&lt;/a&gt; and part 3 is &lt;a href=&quot;/writing/a-brief-history-of-game-ai-part-3&quot;&gt;here&lt;/a&gt;. In this part, we shall cover the birth of AI and the very first game-playing AI programs to run on digital computers.&lt;/p&gt;
 
 &lt;h1 id=&quot;prologue-at-long-last-algorithms-triumph-over-humans-at-go&quot;&gt;Prologue: At Long Last, Algorithms Triumph Over Humans At Go&lt;/h1&gt;
 &lt;p class=&quot;sidenoteleftlarge&quot;&gt;2016&lt;/p&gt;
@@ -565,7 +565,7 @@ Any corrections would be greatly appreciated, though I will note some omissions 
 
 &lt;h1 id=&quot;humble-beginnings&quot;&gt;Humble Beginnings&lt;/h1&gt;
 &lt;p class=&quot;sidenoteleftlarge&quot;&gt;1949&lt;/p&gt;
-&lt;p&gt;Since the inception of the modern computer, there were people pondering whether it could match — or supersede — human intelligence. And since measuring human intelligence is difficult, many of those people reasoned they could tackle the question by first making computers good at certain tasks that challenged the human intellect. So, strategy games. As early as 1949, no less than &lt;a href=&quot;https://en.wikipedia.org/wiki/Claude_Shannon&quot;&gt;Claude Shannon&lt;/a&gt; published &lt;a href=&quot;http://vision.unipv.it/IA1/aa2009-2010/ProgrammingaComputerforPlayingChess.pdf&quot;&gt;his thoughts&lt;/a&gt; on the topic of how a computer might be made to play Chess &lt;sup id=&quot;fnref:ShannonChess&quot;&gt;&lt;a href=&quot;#fn:ShannonChess&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. In it, he both justified the usefulness of solving such a problem and defined its scope:&lt;/p&gt;
+&lt;p&gt;Since the inception of the modern computer, there were people pondering whether it could match — or supersede — human intelligence. And since measuring human intelligence is difficult, many of those people reasoned they could tackle the question by first making computers good at certain tasks that challenged the human intellect. So, strategy games. As early as 1949, no less than &lt;a href=&quot;https://en.wikipedia.org/wiki/Claude_Shannon&quot;&gt;Claude Shannon&lt;/a&gt; published his thoughts on the topic of how a computer might be made to play Chess &lt;sup id=&quot;fnref:ShannonChess&quot;&gt;&lt;a href=&quot;#fn:ShannonChess&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. He both justified the usefulness of solving such a problem and defined its scope:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;“The chess machine is an ideal one to start with, since: (1) the problem is sharply defined both in allowed operations (the moves) and in the ultimate goal (checkmate); (2) it is neither so simple as to be trivial nor too difficult for satisfactory solution; (3) chess is generally considered to require “thinking” for skillful play; a solution of this problem will force us either to admit the possibility of a mechanized thinking or to further restrict our concept of “thinking”; (4) the discrete structure of chess fits well into the digital nature of modern computers.
@@ -683,7 +683,7 @@ situations where highly specialized techniques are required. Contrasting with th
 &lt;figcaption&gt;Bernstein's Chess program starring in its very own TV report!&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Still, it was the first fully functional Chess-playing program and demonstrated that even extremely limited Minimax search with a simple evaluation function and no learning can yield passable novice Chess play. And this was in 1957! So much more is yet to come in &lt;a href=&quot;http://www.andreykurenkov.com/writing/a-brief-history-of-game-ai-up-to-alphago-part-2&quot;&gt;the coming decades&lt;/a&gt;…&lt;/p&gt;
+&lt;p&gt;Still, it was the first fully functional Chess-playing program and demonstrated that even extremely limited Minimax search with a simple evaluation function and no learning can yield passable novice Chess play. And this was in 1957! So much more is yet to come in &lt;a href=&quot;/writing/a-brief-history-of-game-ai-part-2&quot;&gt;the coming decades&lt;/a&gt;…&lt;/p&gt;
 
 &lt;h2 id=&quot;acknowledgements&quot;&gt;Acknowledgements&lt;/h2&gt;
 &lt;p&gt;Big thanks to &lt;a href=&quot;http://cs.stanford.edu/people/abisee/&quot;&gt;Abi See&lt;/a&gt; and Stefeno Fenu for helping to edit this.&lt;/p&gt;
@@ -704,7 +704,7 @@ situations where highly specialized techniques are required. Contrasting with th
       &lt;p&gt;Alan Turing (1953). Chess. part of the collection Digital Computers Applied to Games. in Bertram Vivian Bowden (editor), Faster Than Thought, a symposium on digital computing machines, reprinted 1988 in Computer Chess Compendium &lt;a href=&quot;#fnref:TuringChess&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:SamulCheckers&quot;&gt;
-      &lt;p&gt;Samuel, A. L. (1959). Some studies in machine learning using the game of checkers. IBM Journal of research and development, 3(3), 210-229. &lt;a href=&quot;#fnref:SamulCheckers&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;Samuel, A. L. (1959). &lt;a href=&quot;](https://www.cs.virginia.edu/~evans/greatworks/samuel1959.pdf)&quot;&gt;Some studies in machine learning using the game of checkers&lt;/a&gt;. IBM Journal of research and development, 3(3), 210-229. &lt;a href=&quot;#fnref:SamulCheckers&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:BernsteinChess&quot;&gt;
       &lt;p&gt;Bernstein, A., &amp;amp; Roberts, M. D. V. (1958). &lt;a href=&quot;http://archive.computerhistory.org/projects/chess/related_materials/text/2-2.Computer_V_ChessPlayer.Bernstein_Roberts.Scientific_American.June-1958/Computer_V_ChessPlayer.Bernstein_Roberts.Scientific_American.June-1958.062303059.sm.pdf&quot;&gt;Computer v chess-player&lt;/a&gt;. Scientific American, 198(6), 96-105. &lt;a href=&quot;#fnref:BernsteinChess&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
