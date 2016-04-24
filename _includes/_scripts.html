@@ -2,20 +2,20 @@
 <script>window.jQuery || document.write('<script src="{{ site.url }}/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="{{ site.url }}/assets/js/scripts.min.js"></script>
-<script src="{{ site.url }}/assets/js/bigfoot.min.js"></script>
-<script type="text/javascript">
- 	var bigfoot = $.bigfoot(
+<script>
+	var bigfoot = $.bigfoot(
 
- 		{
+		{
 
- 		actionOriginalFN: "ignore",
- 		positionContent: "false",
-        useFootnoteOnlyOnce: "false"
+		actionOriginalFN: "ignore",
+		positionContent: "false",
+		useFootnoteOnlyOnce: "false"
 
- 		}
+		}
 
- 	);
+	);
 </script>
+
 {% if site.owner.google.analytics %}
 <!--Asynchronous Google Analytics snippet -->
 <script>
@@ -36,3 +36,5 @@
 {% if page.comments %}
   {% include _disqus_comments.html %}
 {% endif %}
+
+

@@ -144,7 +144,7 @@ But, this is Checkers — what of the game everyone really cared about, Chess? W
 
 <figure>
 	<figure>
-	<iframe width="420" height="315" src="https://www.youtube.com/embed/iT_Un3xo1qE" frameborder="0" allowfullscreen></iframe>
+	<iframe src="https://www.youtube.com/embed/iT_Un3xo1qE" frameborder="0" allowfullscreen></iframe>
 	</figure>  
 <figcaption>Bernstein's Chess program starring in its very own TV report!</figcaption>
 </figure> 

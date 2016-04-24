@@ -1,17 +1,14 @@
 # Site wide configuration
-
 title:            Andrey Kurenkov's Web World
 locale:           en_US
 url:                          
 
-
 # Jekyll configuration
-
 permalink:   /:categories/:title/
 markdown:    kramdown
 highlighter: pygments
 sass:
-  sass_dir: _sass
+  sass_dir: assets/_sass
   style: compressed
 gems:
   - jekyll-sitemap
@@ -41,4 +38,4 @@ owner:
 #  letterboxd: andreykurenkov
 
 include: [".htaccess",'_pages']
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md","images/instagramget.txt","jekyll_serve","assets/_main.js"]

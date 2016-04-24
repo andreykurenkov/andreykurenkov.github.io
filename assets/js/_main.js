@@ -31,17 +31,25 @@ $("a[href$='.jpg'],a[href$='.jpeg'],a[href$='.JPG'],a[href$='.png'],a[href$='.gi
 
 // Magnific-Popup options
 $(document).ready(function() {
-  $('.image-popup').magnificPopup({
+  $('.popup-gallery').magnificPopup({
+    delegate: 'a',
+    cursor: 'mfp-zoom-out-cur',
     type: 'image',
-    tLoading: 'Loading image #%curr%...',
+    tLoading: 'Loading image...',
     gallery: {
       enabled: true,
       navigateByImgClick: true,
       preload: [0,1] // Will preload 0 - before current, and 1 after the current image
     },
     image: {
-      tError: '<a href="%url%">Image #%curr%</a> could not be loaded.',
+      tError: 'Image could not be loaded.',
     },
+	  callbacks: {
+		open: function() {
+		  // Will fire when this exact popup is opened
+		  // this - is Magnific Popup object
+		},
+	  }
     removalDelay: 300, // Delay in milliseconds before popup is removed
     // Class that is added to body when popup is open. 
     // make it unique to apply your CSS animations just to this exact popup

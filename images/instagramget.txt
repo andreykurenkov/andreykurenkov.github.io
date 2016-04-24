@@ -1,0 +1,11 @@
+curl -F 'client_id=072a53c33de14bd5be0b19551a5c7856' \
+-F 'client_secret=c5921d9ffc2f475c84cb33a099a29267' \
+-F 'grant_type=authorization_code' \
+-F 'redirect_uri=http://www.andreykurenkov.com' \
+-F 'code=c2a9a45de42d4a1d98740a4f4e18d734' \
+https://api.instagram.com/oauth/access_token
+
+https://www.instagram.com/oauth/authorize/?client_id=072a53c33de14bd5be0b19551a5c7856&redirect_uri=http://www.andreykurenkov.com&response_type=code
+
+
+2544426121.072a53c.93347205860c4bc1be8e0c30988a81c5

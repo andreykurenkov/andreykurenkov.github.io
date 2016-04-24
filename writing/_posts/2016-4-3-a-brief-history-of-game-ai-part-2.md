@@ -155,7 +155,7 @@ Which brings us back to Deep Thought. After the success of that program, some of
 
 <figure>
 	<figure>
-	<iframe width="420" height="315" src="https://www.youtube.com/embed/NJarxpYyoFI" frameborder="0" allowfullscreen></iframe>
+		<iframe src="https://www.youtube.com/embed/NJarxpYyoFI" frameborder="0" allowfullscreen></iframe>
 	</figure>  
 <figcaption>A short documentary about Kasparov vs Deep Blue.</figcaption>
 </figure> 
