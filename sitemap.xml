@@ -210,7 +210,7 @@
     <loc>/</loc>
   </url>
   <url>
-    <loc>/writing/</loc>
+    <loc>/posts/</loc>
   </url>
   <url>
     <loc>/writing/tag/writing/</loc>
@@ -334,5 +334,9 @@
   </url>
   <url>
     <loc>/projects/tag/simulation/</loc>
+  </url>
+  <url>
+    <loc>/work/index.html</loc>
+    <lastmod>2016-04-24T17:12:55-07:00</lastmod>
   </url>
 </urlset>
