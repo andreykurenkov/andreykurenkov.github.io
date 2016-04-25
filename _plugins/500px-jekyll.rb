@@ -6,8 +6,8 @@ require "json"
 #   
 #	{% 500px accesstokenpath:C:\500px-access-token.txt %}
 #		<div>
-#			<h3>{{ item.caption.text }}</h3>
-#			<img src="{{ item.images.standard_resolution.url }}" />
+#			<h3>{{ item.name }}</h3>
+#			<img src="{{ item.images.large.url }}" />
 #		</div>
 #	{% end500px %}
 #
@@ -24,7 +24,7 @@ class PXLoader
 			  config.consumer_key = consumer_key.strip()
 			  config.consumer_secret = consumer_secret.strip()
 			end
-           F00px.user_photos(8390703, { "image_size" => [2,4]})
+           F00px.user_photos(8390703, { "image_size" => [2,4], "rpp" => 100})
 		end
 	end
 end

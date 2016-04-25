@@ -6,17 +6,22 @@ layout: base
     {% include _author-bio.html %}
   </div>
   <div id="index">
-    <a href="https://www.instagram.com/regalalgorithm/?hl=en"><h2 style="text-align:center; margin-top:0;">instagram</h2></a>
-	<div class="popup-gallery">
-		{% instagram accesstokenpath:/home/andreyk/Desktop/instatoken.txt %}
-			<a href="{{ item.images.standard_resolution.url }}" title="{{ item.caption.text }}"><img src="{{ item.images.thumbnail.url }}" width="24.9%"></a>
-		{% endinstagram %}
-	</div>
-    <a href="https://500px.com/andreykname"><h2 style="text-align:center">500px</h2></a>
-	<div class="popup-gallery">
+    <a href="https://500px.com/andreykname"><h2 style="text-align:center; margin-top:0;">500px</h2></a>
+	<div class="popup-gallery" id="500px_gallery">
 		{% 500px authpath:/home/andreyk/Desktop/pxtoken.txt %}
-			<a href="{{ item.images.large.url }}" title="{{ item.name }}"><img src="{{ item.images.thumbnail.url }}" width="24.9%"></a>
+			<a href="{{ item.images.large.url }}" 
+               title="{{ item.name }}">
+               <img src="{{ item.images.thumbnail.url }}" width="24.9%" style="padding-right:5px;"></a>
 		{% end500px %}
+	</div>
+
+    <a href="https://www.instagram.com/regalalgorithm/?hl=en"><h2 style="text-align:center;">instagram</h2></a>
+	<div class="popup-gallery" id="instagram_gallery">
+		{% instagram accesstokenpath:/home/andreyk/Desktop/instatoken.txt %}
+			<a href="{{ item.images.standard_resolution.url }}" 
+               title="{{ item.caption.text }}">
+               <img src="{{ item.images.thumbnail.url }}" width="24.9%"></a>
+		{% endinstagram %}
 	</div>
   </div><!-- /#index -->
 </div><!-- /#main -->
