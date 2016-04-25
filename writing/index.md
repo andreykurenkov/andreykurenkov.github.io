@@ -1,7 +1,7 @@
 ---
 layout: writing-page
 title: Writing
-permalink: "/posts/"
+permalink: "/writing/"
 tag: all
 excerpt: "Quasi-essays on an assortment of topics"
 ---
