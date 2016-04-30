@@ -24,7 +24,7 @@ class PXLoader
 			  config.consumer_key = consumer_key.strip()
 			  config.consumer_secret = consumer_secret.strip()
 			end
-           F00px.user_photos(8390703, { "image_size" => [2,4], "rpp" => 100})
+           F00px.user_photos(8390703, { "image_size" => [3,4], "rpp" => 100})
 		end
 	end
 end

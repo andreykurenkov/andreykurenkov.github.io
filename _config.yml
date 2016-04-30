@@ -38,4 +38,4 @@ owner:
 #  letterboxd: andreykurenkov
 
 include: [".htaccess",'_pages']
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md","images/instagramget.txt","jekyll_serve","assets/_main.js"]
+exclude: ["lib", "config.rb", "_deploy.yml", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md","images/instagramget.txt","serve_jekyll","assets/js/_main.js","assets/js/plugins/"]

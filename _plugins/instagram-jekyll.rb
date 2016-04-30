@@ -19,8 +19,9 @@ class InstagramLoader
 	class << self
 		def photos(accesstokenpath)
 			accesstoken = File.open(accesstokenpath).gets
-			client = Instagram.client(:access_token => accesstoken)
-			client.user_recent_media(:count => 80)
+			client = Instagram.client(:access_token => accesstoken, :no_response_wrapper => true)
+			response = client.user_recent_media(:count => 80)
+            response.data
 		end
 	end
 end
@@ -56,7 +57,7 @@ module Jekyll
       context.registers[:instagram] ||= Hash.new(0)
     
 	  collection = InstagramLoader.photos(@accesstoken)
-      
+
       length = collection.length
       result = []
               
