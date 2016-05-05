@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>/writing/the-distinct-artistry-of-trailers/</loc>
+    <lastmod>2016-05-05T19:19:34-07:00</lastmod>
+  </url>
+  <url>
     <loc>/writing/a-brief-history-of-game-ai-part-3/</loc>
     <lastmod>2016-04-18T19:19:34-07:00</lastmod>
   </url>
@@ -213,19 +217,28 @@
     <loc>/writing/</loc>
   </url>
   <url>
-    <loc>/writing/tag/writing/</loc>
+    <loc>/writing/tag/art/</loc>
   </url>
   <url>
-    <loc>/writing/tag/ml/</loc>
+    <loc>/writing/tag/film/</loc>
+  </url>
+  <url>
+    <loc>/writing/tag/ml_writing/</loc>
   </url>
   <url>
     <loc>/writing/tag/ai/</loc>
+  </url>
+  <url>
+    <loc>/writing/tag/history/</loc>
   </url>
   <url>
     <loc>/writing/tag/technical/</loc>
   </url>
   <url>
     <loc>/writing/tag/data-science/</loc>
+  </url>
+  <url>
+    <loc>/writing/tag/writing/</loc>
   </url>
   <url>
     <loc>/writing/tag/life/</loc>
@@ -241,12 +254,6 @@
   </url>
   <url>
     <loc>/writing/tag/software/</loc>
-  </url>
-  <url>
-    <loc>/writing/tag/art/</loc>
-  </url>
-  <url>
-    <loc>/writing/tag/film/</loc>
   </url>
   <url>
     <loc>/writing/tag/philosophy/</loc>
