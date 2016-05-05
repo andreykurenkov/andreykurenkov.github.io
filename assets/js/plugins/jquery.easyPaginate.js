@@ -96,13 +96,13 @@ $.fn.easyPaginate = function (options) {
                 displayPage($(this).attr('rel'));                
             });
 
-            $(elSelector + ' .easyPaginateNav a.prev', plugin).on('click', function(e) {
+            $(elSelector + ' .easyPaginateNav a.prev').on('click', function(e) {
                 e.preventDefault();
                 page = plugin.settings.currentPage > 1?parseInt(plugin.settings.currentPage) - 1:1;
                 displayPage(page);
             });
 
-            $(elSelector + ' .easyPaginateNav a.next', plugin).on('click', function(e) {
+            $(elSelector + ' .easyPaginateNav a.next').on('click', function(e) {
                 e.preventDefault();
                 page = plugin.settings.currentPage < plugin.settings.pages?parseInt(plugin.settings.currentPage) + 1:plugin.settings.pages;
                 displayPage(page);

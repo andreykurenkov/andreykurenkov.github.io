@@ -2,7 +2,7 @@
 layout: post
 title: A 'Brief' History of Game AI Up To AlphaGo, Part 1
 date: 2016-4-18lT19:19:34-07:00
-tags: [writing,ml,ai]
+tags: [ml_writing,ai,history]
 status: draft
 type: draft
 published: true

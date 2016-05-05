@@ -1,6 +1,6 @@
 ---
 layout: home
-excerpt: "The blog and soon to be portfolio and photo gallery of Andrey Kurenkov"
+excerpt: "Projects, posts, and photographs by some guy named Andrey Kurenkov"
 tags: [blog]
 image:
   feature: images/main-page.jpg

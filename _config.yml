@@ -7,6 +7,7 @@ url:
 permalink:   /:categories/:title/
 markdown:    kramdown
 highlighter: pygments
+destination: .deploy
 sass:
   sass_dir: assets/_sass
   style: compressed
@@ -38,4 +39,4 @@ owner:
 #  letterboxd: andreykurenkov
 
 include: [".htaccess",'_pages']
-exclude: ["lib", "config.rb", "_deploy.yml", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md","images/instagramget.txt","serve_jekyll","assets/js/_main.js","assets/js/plugins/"]
+exclude: ["lib", "config.rb", "_deploy.yml", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md","images/instagramget.txt","serve_jekyll","assets/js/_main.js","assets/js/plugins/",".deploy"]

@@ -46,7 +46,9 @@ work:
   name: Work
   slug: work
 
-
+ml_writing:
+  name: Machine Learning
+  slug: ml_writing
 
 ml:
   name: Machine Learning
@@ -95,4 +97,8 @@ competition:
 team:
   name: Team
   slug: team
+
+history:
+  name: History
+  slug: history
 
