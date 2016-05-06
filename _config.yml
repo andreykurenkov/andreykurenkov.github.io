@@ -7,7 +7,6 @@ url:
 permalink:   /:categories/:title/
 markdown:    kramdown
 highlighter: pygments
-destination: .deploy
 sass:
   sass_dir: assets/_sass
   style: compressed
