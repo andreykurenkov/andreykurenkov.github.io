@@ -5,6 +5,10 @@
     <lastmod>2016-05-05T19:19:34-07:00</lastmod>
   </url>
   <url>
+    <loc>/projects/major_projects/planr/</loc>
+    <lastmod>2016-05-05T02:26:22-07:00</lastmod>
+  </url>
+  <url>
     <loc>/writing/a-brief-history-of-game-ai-part-3/</loc>
     <lastmod>2016-04-18T19:19:34-07:00</lastmod>
   </url>
@@ -208,10 +212,10 @@
     <loc>/about/</loc>
   </url>
   <url>
-    <loc>/projects/</loc>
+    <loc>/</loc>
   </url>
   <url>
-    <loc>/</loc>
+    <loc>/projects/</loc>
   </url>
   <url>
     <loc>/writing/</loc>
@@ -283,25 +287,25 @@
     <loc>/writing/tag/research/</loc>
   </url>
   <url>
+    <loc>/projects/tag/android/</loc>
+  </url>
+  <url>
+    <loc>/projects/tag/web/</loc>
+  </url>
+  <url>
+    <loc>/projects/tag/competition/</loc>
+  </url>
+  <url>
+    <loc>/projects/tag/team/</loc>
+  </url>
+  <url>
     <loc>/projects/tag/open-source/</loc>
   </url>
   <url>
     <loc>/projects/tag/ble/</loc>
   </url>
   <url>
-    <loc>/projects/tag/android/</loc>
-  </url>
-  <url>
     <loc>/projects/tag/iot/</loc>
-  </url>
-  <url>
-    <loc>/projects/tag/competition/</loc>
-  </url>
-  <url>
-    <loc>/projects/tag/web/</loc>
-  </url>
-  <url>
-    <loc>/projects/tag/team/</loc>
   </url>
   <url>
     <loc>/projects/tag/robotics/</loc>
