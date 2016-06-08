@@ -19,9 +19,16 @@ class InstagramLoader
 	class << self
 		def photos(accesstokenpath)
 			accesstoken = File.open(accesstokenpath).gets
-			client = Instagram.client(:access_token => accesstoken, :no_response_wrapper => true)
-			response = client.user_recent_media(:count => 80)
-            response.data
+			client = Instagram.client(:access_token => accesstoken, 
+                                      :no_response_wrapper => true,
+ 									  :connection_options => {:request =>{:timeout => 5}})
+			begin
+            	response = client.user_recent_media(:count => 80).data
+			rescue => e
+			    puts e
+			    response = []
+			end
+            response
 		end
 	end
 end

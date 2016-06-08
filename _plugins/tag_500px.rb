@@ -23,8 +23,16 @@ class PXLoader
 			F00px.configure do |config|
 			  config.consumer_key = consumer_key.strip()
 			  config.consumer_secret = consumer_secret.strip()
+            end
+       
+			begin
+                result = F00px.user_photos(8390703, { "image_size" => [3,4], 
+                                             "rpp" => 100, 
+                                             "timeout" => 5}).body
+			rescue => e
+			    result = "{\"photos\": []}"
 			end
-           F00px.user_photos(8390703, { "image_size" => [3,4], "rpp" => 100})
+            result
 		end
 	end
 end
@@ -46,7 +54,7 @@ module Jekyll
           @attributes[key] = value
         end
       else
-        raise SyntaxError.new("Syntax Error in 'delicious' - Valid syntax: 500px authpath:x]")
+        raise SyntaxError.new("Syntax Error in '500px' - Valid syntax: 500px authpath:x]")
       end
 
       @authpath = @attributes['authpath']
@@ -57,7 +65,7 @@ module Jekyll
 
     def render(context)
 	  response = PXLoader.photos(@authpath)
-      data = JSON.parse(response.body)
+      data = JSON.parse(response)
       photos = data["photos"]
       result = []
       context.stack do

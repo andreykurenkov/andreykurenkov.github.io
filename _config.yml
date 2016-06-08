@@ -20,10 +20,6 @@ kramdown:
   toc_levels: 1..6
   use_coderay: false
 
-collections:
-  work:
-    output: true
-
 # Site owner
 owner:
   name: Andrey Kurenkov
