@@ -169,12 +169,10 @@
     </hr>
     <div class="article-wrap">
 
-      <figure>
-  <a href="/writing/images/2016-4-15-a-brief-history-of-game-ai/0-history.png">
-    <img class="postimageactual" src="/writing/images/2016-4-15-a-brief-history-of-game-ai/0-history.png" alt="History" />
-  </a>  
- <figcaption>Just about the scope of this series of posts. Created with <a src="http://www.readwritethink.org/classroom-resources/student-interactives/timeline-30007.html">Timeline</a>.</figcaption>
-</figure>
+      <figure class="figure"><div class="figure__main">
+<p><a href="/writing/images/2016-4-15-a-brief-history-of-game-ai/0-history.png"><img class="postimageactual" src="/writing/images/2016-4-15-a-brief-history-of-game-ai/0-history.png" alt="History" /></a></p>
+</div><figcaption class="figure__caption"><p>Just about the scope of this series of posts. Created with <a href="http://www.readwritethink.org/classroom-resources/student-interactives/timeline-30007.html">Timeline</a>.</p>
+</figcaption></figure>
 
 <p>This is the first part of ‘A Brief History of Game AI Up to AlphaGo’. Part 2 is <a href="/writing/a-brief-history-of-game-ai-part-2">here</a> and part 3 is <a href="/writing/a-brief-history-of-game-ai-part-3">here</a>. In this part, we shall cover the birth of AI and the very first game-playing AI programs to run on digital computers.</p>
 
@@ -182,16 +180,22 @@
 <p class="sidenoteleftlarge">2016</p>
 <p>On March 9th of 2016, a historic milestone for AI was reached when the Google-engineered program AlphaGo defeated the world-class Go champion Lee Sedol. Go is a two-player strategy board game like Chess, but the larger number of possible moves and difficulty of evaluation make Go the harder problem for AI. So it was a big deal when, a week and four more games against Lee Sedol later, AlphaGo was crowned the undisputed winner of their match having lost only one game. How big a deal? Media coverage accurately described AlphaGo as a <a href="http://www.theguardian.com/technology/2016/mar/09/google-deepmind-alphago-ai-defeats-human-lee-sedol-first-game-go-contest">“major breakthrough for AI”</a> that achieved <a href="http://www.theverge.com/2016/3/12/11210650/alphago-deepmind-go-match-3-result">“one of the most sought-after milestones in the field of AI research”</a>. Comment boards were less reserved, with many describing AlphaGo’s victory as scary or even a sign that superhuman AI was now imminent.</p>
 
-<p>Months before that day, I was excitedly skimming <a href="https://research.google.com/pubs/pub44806.html">the paper on AlphaGo</a> after Google <a href="http://googleresearch.blogspot.com/2016/01/alphago-mastering-ancient-game-of-go.html">first announced its development</a> <sup id="fnref:AlphaGo"><a href="#fn:AlphaGo" class="footnote">1</a></sup>. It struck me as a hugely impressive leap over state-of-the-art Go play, achieved through a cool combination of already successful techniques. So, when the media frenzy over AlphaGo broke out I thought to write a little post explaining why it is cool from an AI perspective, but also why it is not some scary baby-Skynet AI. In doing so however, I stumbled on so many noteworthy developments and details in the 60-year history of game AI that I could not stop at writing that short little blog post. So, I hope you shall enjoy this ‘brief’ summary of all those exciting ideas and historic milestones that preceded AlphaGo and led to this latest marvel of human ingenuity.</p>
+<p>Months before that day, I was excitedly skimming <a href="https://research.google.com/pubs/pub44806.html">the paper on AlphaGo</a> after Google <a href="http://googleresearch.blogspot.com/2016/01/alphago-mastering-ancient-game-of-go.html">first announced its development</a> <sup id="fnref:AlphaGo"><a href="#fn:AlphaGo" class="footnote">1</a></sup>. It struck me as a hugely impressive leap over state-of-the-art Go play, achieved through a cool combination of already successful techniques. So, when the media frenzy over AlphaGo broke out I thought to write a little post explaining why it is cool from an AI perspective, but also why it is not some scary baby-Skynet AI. In doing so, I stumbled on so many noteworthy developments and details in the 60-year history of game AI that I could not stop at writing that short little blog post. So, I hope you enjoy this ‘brief’ summary of all those exciting ideas and historic milestones that preceded AlphaGo and led to this latest marvel of human ingenuity.</p>
 
 <div><button class="btn" data-toggle="collapse" data-target="#sources">
-Disclaimer: not an expert, more in depth sources, corrections &raquo;
-</button></div>
-<blockquote class="aside"><p id="sources" class="collapse" style="height: 0px;">
+           Disclaimer: not an expert, more in depth sources, corrections &raquo;
+       </button></div>
+<blockquote class="aside">
+	       <p id="sources" class="collapse" style="height: 0px;">
+	           
+
 As with my previous 'brief' history, I should emphasize I am not expert on the topic and just wrote it out of personal interest. I have not covered all periods or aspects of this history, so some other good resources are <a href="http://academicworks.cuny.edu/cgi/viewcontent.cgi?article=1181&amp;context=gc_pubs">"The History of Computer Games"</a>, <a href="https://www.chess.com/article/view/a-short-history-of-computer-chess">"A Short History of Computer Chess"</a>, and <a href="http://www.britgo.org/computergo/history">"History of Go-playing Programs"</a>. I am also not a professional writer, and consulted some good pieces written on the topic by professional writers such as <a href="http://www.wired.com/2014/05/the-world-of-computer-go/">"The Mystery of Go, the Ancient Game That Computers Still Can’t Win"</a> by Alan Levinovitz. I also will stay away from getting too technical here, but there is a plethora of tutorials on the internet on all the major topics covered in brief by me.
 <br />
 Any corrections would be greatly appreciated, though I will note some omissions are intentional since I want to try and keep this 'brief' through a good mix of simple technical explanations and storytelling.
-</p></blockquote>
+
+
+	       </p>
+       </blockquote>
 <p><br /></p>
 
 <h1 id="humble-beginnings">Humble Beginnings</h1>
@@ -199,14 +203,14 @@ Any corrections would be greatly appreciated, though I will note some omissions 
 <p>Since the inception of the modern computer, there were people pondering whether it could match — or supersede — human intelligence. And since measuring human intelligence is difficult, many of those people reasoned they could tackle the question by first making computers good at certain tasks that challenged the human intellect. So, strategy games. As early as 1949, no less than <a href="https://en.wikipedia.org/wiki/Claude_Shannon">Claude Shannon</a> published his thoughts on the topic of how a computer might be made to play Chess <sup id="fnref:ShannonChess"><a href="#fn:ShannonChess" class="footnote">2</a></sup>. He both justified the usefulness of solving such a problem and defined its scope:</p>
 
 <blockquote>
-  <p>“The chess machine is an ideal one to start with, since: (1) the problem is sharply defined both in allowed operations (the moves) and in the ultimate goal (checkmate); (2) it is neither so simple as to be trivial nor too difficult for satisfactory solution; (3) chess is generally considered to require “thinking” for skillful play; a solution of this problem will force us either to admit the possibility of a mechanized thinking or to further restrict our concept of “thinking”; (4) the discrete structure of chess fits well into the digital nature of modern computers.
+  <p>“The chess machine is an ideal one to start with, since: (1) the problem is sharply defined both in allowed operations (the moves) and in the ultimate goal (checkmate); (2) it is neither so simple as to be trivial nor too difficult for satisfactory solution; (3) chess is generally considered to require ‘thinking’ for skillful play; a solution of this problem will force us either to admit the possibility of a mechanized thinking or to further restrict our concept of ‘thinking’; (4) the discrete structure of chess fits well into the digital nature of modern computers.
 …
 It is clear then that the problem is not that of designing a machine to play perfect chess (which is quite impractical) nor one which merely plays legal chess (which is trivial). We would like to play a skillful game, perhaps comparable to that of a good human player.”</p>
 </blockquote>
 
 <p>The approach Shannon suggested is today called <strong>Minimax</strong> (named after John Vonn Neuman’s minimax theorem, proven by him in 1928) and would be hugely influential for the future game-playing AIs. It is perhaps the most obvious approach one can take to making a game-playing AI. The idea is to assume both players will consider all future moves of the whole game, and so play optimally. In other words, you should always choose a move such that, even if the opponent chooses the absolute best response to that move and to every future move of yours, you will still get the highest score possible at the end of the game.</p>
 
-<p>It’s easy to make a computer do this. With a representation of the positions (or <strong>states</strong>) and the rules of the game, all one needs to do is write a program to generate all possible next game states from the current state, and the possible states for those states, and so on. By doing this, the program can simulate the game past the current point and build a <strong>tree</strong> of possible paths toward the end of the game. Then, it just needs to follow the best case path of moves to get to the best end game. This has the flaw of not capitalizing on potential mistakes the opponent might make, but on the whole is a very safe and sensible strategy.</p>
+<p>It’s easy to make a computer do this. With a representation of the positions (or <strong>states</strong>) and the rules of the game, all one needs to do is write a program to generate all possible next game states from the current state, and the possible states for those states, and so on. By doing this, the program can simulate the game past the current point and build a <strong>tree</strong> of possible paths toward the end of the game. Then, it just needs to follow the best-case path of moves to get to the best end game. This has the flaw of not capitalizing on potential mistakes the opponent might make, but on the whole is a very safe and sensible strategy.</p>
 
 <figure class="sidefigureleft">
 <div><button class="btn" data-toggle="collapse" data-target="#minimax">
@@ -241,7 +245,7 @@ Broken down, minimax works as follows:<br /><br />
      <figcaption>Shannon demonstrating a machine he built to try programming rules for a limited version of Chess. <a href="https://videogamehistorian.wordpress.com/tag/computer-game/"><b>(Source)</b></a></figcaption>
 </figure>
 <p class="sidenoteleftlarge">1951</p>
-<p>But, the supercomputer that powered Deep Blue was still decades away from existence, at most a dream in the minds of the early computer pioneers of the early 50s (in fact, the famous <a href="https://en.wikipedia.org/wiki/Moore's_law">Moore’s law</a> would not be defined until a decade later). In fact the first Chess program was run not with silicon or vacuum tubes, nor any sort of digital computer, but rather by the gooey fleshy neurons of the human brain — that of Alan Turing, to be precise. Turing, a mathematician and pioneering AI thinker, spent years working on a Chess algorithm he completed in 1951 and called TurboChamp<sup id="fnref:short_chess_history"><a href="#fn:short_chess_history" class="footnote">3</a></sup>.</p>
+<p>But, the supercomputer that powered Deep Blue was still decades away from existence, at most a dream in the minds of the early computer pioneers of the early 50s (in fact, the famous <a href="https://en.wikipedia.org/wiki/Moore's_law">Moore’s law</a> would not be defined until a decade later). In fact, the first Chess program was run not with silicon or vacuum tubes, nor any sort of digital computer, but rather by the gooey fleshy neurons of the human brain — that of Alan Turing, to be precise. Turing, a mathematician and pioneering AI thinker, spent years working on a Chess algorithm he completed in 1951 and called TurboChamp<sup id="fnref:short_chess_history"><a href="#fn:short_chess_history" class="footnote">3</a></sup>.</p>
 
 <p>TurboChamp was not as extensive as Shannon’s proposed systems, and very basic by future standards, but still, it could play Chess. In 1952, Turing manually executed the algorithm in what must have been an excruciatingly slow game, which the program ultimately lost. Still, Turing also published his thoughts on Chess AI and posited that <em>in principle</em> a program that could learn from experience and play at the level of humans ought to be completely possible<sup id="fnref:TuringChess"><a href="#fn:TuringChess" class="footnote">4</a></sup>. Just a few years later, the first ever computer Chess program would be executed…</p>
 
@@ -260,7 +264,7 @@ Broken down, minimax works as follows:<br /><br />
      <figcaption>A great visual from Samuel's paper explaining Minimax. <a href="https://www.cs.virginia.edu/~evans/greatworks/samuel1959.pdf"><b>(Source)</b></a></figcaption>
 </figure>
 
-<p>Fundamentally, the program was based on Minimax, but had an additional hugely important aspect: <strong>learning</strong>. The program became better over time without human intervention, through two novel methods: (A) “rote-learning”, meaning it could store the evaluations of certain positions gotten through Minimax and so not need to consider further moves in them, and (B) “learning-by-generalization”, i.e. modifying the multipliers for different parameters, thus modifying the evaluation function, based on previous games played by the program. The multipliers were changed so as to lower the difference between the calculated goodness of a given board position (according to the evaluation function) and the actual goodness of it (found through playing out the game to completion).</p>
+<p>Fundamentally, the program was based on Minimax, but had an additional hugely important aspect: <strong>learning</strong>. The program became better over time without human intervention, through two novel methods: (A) “rote-learning”,— meaning it could store the values of certain positions as previously evaluated with Minimax, and so not need to spend computational resources considering moves further down those branches — and (B) “learning-by-generalization”, i.e. modifying the multipliers for different parameters (thus modifying the evaluation function)  based on previous games played by the program. The multipliers were changed so as to lower the difference between the calculated goodness of a given board position (according to the evaluation function) and its actual goodness (found through playing out the game to completion).</p>
 
 <p>Rote learning was a fairly obvious way to make the program more efficient and capable over time, and it worked well. But it was learning-by-generalization that was particularly groundbreaking, as it showed that a program could learn to ‘intuitively’ know how good a game position was without tons of simulation of future moves. Not only that, but the program was made to learn by playing past versions of itself, which would one day be a key component of AlphaGo! But let’s not get ahead of ourselves…</p>
 
@@ -271,7 +275,7 @@ Aside: Quote from Samuel about learning procedures &raquo;
 <blockquote class="aside"><p id="samuel_learning" class="collapse" style="height: 0px;">
 Here is a fun excerpt from the paper about the advantages of each learning strategy:<br />
 
-"Some interesting comparisons can be made between the playing style developed the learning-by-generalization program and that developed by the earlier rote-learning procedure. The program with rote learning soon learned to imitate master play during the opening moves. It was always quite poor during the middle game, but it easily learned how to avoid most of the obvious traps during end-game play and could usually drive on toward a win when left with a piece advantage. The program with the generalization procedure has never learned to play in a conventional manner and its openings are apt to be weak. On the other hand, it soon learned to play a good middle game, and with a piece advantage it usually polishes off its opponent' in short order.<br />
+"Some interesting comparisons can be made between the playing style developed by the learning-by-generalization program and that developed by the earlier rote-learning procedure. The program with rote learning soon learned to imitate master play during the opening moves. It was always quite poor during the middle game, but it easily learned how to avoid most of the obvious traps during end-game play and could usually drive on toward a win when left with a piece advantage. The program with the generalization procedure has never learned to play in a conventional manner and its openings are apt to be weak. On the other hand, it soon learned to play a good middle game, and with a piece advantage it usually polishes off its opponent in short order.<br />
 
 Apparently, rote learning is of the greatest help, either under conditions
 when the result of any specific action are long delayed, or in those
@@ -284,7 +288,7 @@ situations where highly specialized techniques are required. Contrasting with th
      <figcaption>Another great figure from Samuel's paper showing the use of rote learning. <a href="https://www.cs.virginia.edu/~evans/greatworks/samuel1959.pdf"><b>(Source)</b></a></figcaption>
 </figure>
 
-<p>Not only were these ideas groundbreaking, but they also worked in practice — the program could play a respectable game of Checkers, which was no small feat given the limited computing power at the time. And so, as this <a href="https://webdocs.cs.ualberta.ca/~chinook/project/legacy.html">great retrospective</a>  details, when Samuel’s program was first demonstrated in the very early days of AI (in the same year as the Dartmouth Conference, in fact) it made a strong impression:</p>
+<p>Not only were these ideas groundbreaking, but they also worked in practice: The program could play a respectable game of Checkers, which was no small feat given the limited computing power at the time. And so, as this <a href="https://webdocs.cs.ualberta.ca/~chinook/project/legacy.html">great retrospective</a>  details, when Samuel’s program was first demonstrated in the very early days of AI (in the same year as the Dartmouth Conference, in fact) it made a strong impression:</p>
 
 <blockquote>
   <p>“It didn’t take long before Samuel had a program that played a respectable game of checkers, capable of easily defeating novice players. It was first publicly demonstrated on television on February 24, 1956. Thomas Watson, President of IBM, arranged for the program to be exhibited to shareholders. He predicted that it would result in a fifteen-point rise in the price of IBM stock. It did.”</p>
@@ -317,7 +321,7 @@ situations where highly specialized techniques are required. Contrasting with th
 <p>Still, it was the first fully functional Chess-playing program and demonstrated that even extremely limited Minimax search with a simple evaluation function and no learning can yield passable novice Chess play. And this was in 1957! So much more is yet to come in <a href="/writing/a-brief-history-of-game-ai-part-2">the coming decades</a>…</p>
 
 <h2 id="acknowledgements">Acknowledgements</h2>
-<p>Big thanks to <a href="http://cs.stanford.edu/people/abisee/">Abi See</a> and Stefeno Fenu for helping to edit this.</p>
+<p>Big thanks to <a href="http://cs.stanford.edu/people/abisee/">Abi See</a>, <a href="https://www.linkedin.com/in/pavel-komarov-a2834048">Pavel Komarov</a>, and Stefeno Fenu for helping to edit this.</p>
 
 <h2 id="references">References</h2>
 <div class="footnotes">

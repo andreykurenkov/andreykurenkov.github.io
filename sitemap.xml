@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>/writing/power-of-ipython-pandas-scikilearn/</loc>
+    <lastmod>2016-06-10T19:19:34-07:00</lastmod>
+  </url>
+  <url>
     <loc>/writing/the-distinct-artistry-of-trailers/</loc>
     <lastmod>2016-05-05T19:19:34-07:00</lastmod>
   </url>
@@ -91,6 +95,10 @@
   <url>
     <loc>/writing/on-how-utterly-fantastic-brothers-a-tale-of-two-sons-is/</loc>
     <lastmod>2015-06-08T16:05:08-07:00</lastmod>
+  </url>
+  <url>
+    <loc>/projects/hacks/verbosify/</loc>
+    <lastmod>2015-05-07T00:00:00-07:00</lastmod>
   </url>
   <url>
     <loc>/projects/team_projects/mapping-sprayer/</loc>
@@ -221,25 +229,25 @@
     <loc>/writing/</loc>
   </url>
   <url>
-    <loc>/writing/tag/art/</loc>
-  </url>
-  <url>
-    <loc>/writing/tag/film/</loc>
-  </url>
-  <url>
     <loc>/writing/tag/ml_writing/</loc>
   </url>
   <url>
     <loc>/writing/tag/ai/</loc>
   </url>
   <url>
-    <loc>/writing/tag/history/</loc>
-  </url>
-  <url>
     <loc>/writing/tag/technical/</loc>
   </url>
   <url>
     <loc>/writing/tag/data-science/</loc>
+  </url>
+  <url>
+    <loc>/writing/tag/art/</loc>
+  </url>
+  <url>
+    <loc>/writing/tag/film/</loc>
+  </url>
+  <url>
+    <loc>/writing/tag/history/</loc>
   </url>
   <url>
     <loc>/writing/tag/writing/</loc>
@@ -308,6 +316,9 @@
     <loc>/projects/tag/iot/</loc>
   </url>
   <url>
+    <loc>/projects/tag/hackathon/</loc>
+  </url>
+  <url>
     <loc>/projects/tag/robotics/</loc>
   </url>
   <url>
@@ -345,5 +356,9 @@
   </url>
   <url>
     <loc>/projects/tag/simulation/</loc>
+  </url>
+  <url>
+    <loc>/writing/files/2016-06-10-power-of-ipython-pandas-scikilearn/post.html</loc>
+    <lastmod>2016-06-08T16:32:09-07:00</lastmod>
   </url>
 </urlset>
