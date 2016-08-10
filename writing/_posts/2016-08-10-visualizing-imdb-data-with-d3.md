@@ -1,7 +1,7 @@
 ---
 layout: post
 title: IMDB Data Visualizations with D3 + Dimple.js
-date: 2016-08-08T16:19:34-07:00
+date: 2016-08-10T16:19:34-07:00
 tags: [technical,data-science,film]
 status: draft
 type: draft
@@ -9,10 +9,10 @@ published: true
 comments: true
 author: andrey_kurenkov
 excerpt: "A look at how many movies of each genre get released, the IMDB rating distribution, and more!"
-extra_css: ["/writing/files/2016-08-08-visualizing-imdb-data-with-d3/css/style.css"]
-extra_js: ["/writing/files/2016-08-08-visualizing-imdb-data-with-d3/js/createChartFuncs.js","http://d3js.org/d3.v3.min.js","http://dimplejs.org/dist/dimple.v2.1.6.min.js"]
+extra_css: ["/writing/files/2016-08-10-visualizing-imdb-data-with-d3/css/style.css"]
+extra_js: ["/writing/files/2016-08-10-visualizing-imdb-data-with-d3/js/createChartFuncs.js","http://d3js.org/d3.v3.min.js","http://dimplejs.org/dist/dimple.v2.1.6.min.js"]
 ---
-*Notes: not optimized for mobile (or probably for anything but my screen). Full page version **[here](/writing/files/2016-08-08-visualizing-imdb-data-with-d3/standalone_page.html)**, visualization code **[here](https://github.com/andreykurenkov/imdb-data-viz)**.*
+*Notes: not optimized for mobile (or probably for anything but my screen). Full page version **[here](/writing/files/2016-08-10-visualizing-imdb-data-with-d3/standalone_page.html)**, visualization code **[here](https://github.com/andreykurenkov/imdb-data-viz)**.*
 
 <div id="genreChartContainer" class="chartContainer">
   <script type="text/javascript">
@@ -24,7 +24,7 @@ extra_js: ["/writing/files/2016-08-08-visualizing-imdb-data-with-d3/js/createCha
     is best to remove it to avoid confusion, and then removed it.*/
     var end_year = 2013;
     //Get from localhost, perhaps change to github later
-    var data_source = "/writing/files/2016-08-08-visualizing-imdb-data-with-d3/data/yearly_data.tsv";
+    var data_source = "/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/yearly_data.tsv";
     var name = "IMDB Yearly Movie And Genre Counts (1915-2013)";
     createGenreChart("#genreChartContainer",
                     data_source,
@@ -60,7 +60,7 @@ An obvious place to start is with looking at how rating data is distributed, and
 <div id="ratingChartContainer" class="chartContainer">
   <script type="text/javascript">
     createLineChart("#ratingChartContainer",
-                    "/writing/files/2016-08-08-visualizing-imdb-data-with-d3/data/rating_data.tsv",
+                    "/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/rating_data.tsv",
                     false,
                     "IMDB Average Movie Rating Distribution (2003-2013) ",
                     "rating",
@@ -74,7 +74,7 @@ Yep, a bell curve-ish[^bell_curve] kinda shape! Not overly suprising to see that
 <div id="lengthChartContainer" class="chartContainer">
   <script type="text/javascript">
     createLineChart("#lengthChartContainer",
-                    "/writing/files/2016-08-08-visualizing-imdb-data-with-d3/data/length_data.tsv",
+                    "/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/length_data.tsv",
                     true,
                     "IMDB Movie Length Distribution (2003-2013)",
                     "length",
@@ -91,7 +91,7 @@ to clean it up by binning the data quite a bit more:
 <div id="lengthBinChartContainer" class="chartContainer">
   <script type="text/javascript">
     createHistChart("#lengthBinChartContainer",
-                    "/writing/files/2016-08-08-visualizing-imdb-data-with-d3/data/length_data_hist.tsv",
+                    "/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/length_data_hist.tsv",
                     true,
                     "IMDB Movie Length Distribution (2003-2013) ",
                     "length",
@@ -105,7 +105,7 @@ And there it is, hiding in that data was another sort-of bell curve. Except of c
 <div id="votesChartContainer" class="chartContainer">
   <script type="text/javascript">
     createLineChart("#votesChartContainer",
-                    "/writing/files/2016-08-08-visualizing-imdb-data-with-d3/data/votes_data.tsv",
+                    "/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/votes_data.tsv",
                     true,
                     "IMDB Movie Vote Count Distribution (2003-2013) ",
                     "votes",
@@ -119,7 +119,7 @@ Yes astute reader[^corny], that is indeed a log-scale on the x axis. Unsurprisin
 <div id="votesBinChartContainer" class="chartContainer">
   <script type="text/javascript">
   createHistChart("#votesBinChartContainer",
-                  "/writing/files/2016-08-08-visualizing-imdb-data-with-d3/data/votes_data_hist.tsv",
+                  "/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/votes_data_hist.tsv",
                       true,
                       "IMDB Movie Vote # Distribution (2003-2013) ",
                       "votes",
@@ -135,7 +135,7 @@ that discussed the death of mid-budget-cinema, and of course I wanted to look in
 <div id="budgetChartContainer" class="chartContainer">
   <script type="text/javascript">
     createLineChart("#budgetChartContainer",
-                    "/writing/files/2016-08-08-visualizing-imdb-data-with-d3/data/budget_data.tsv",
+                    "/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/budget_data.tsv",
                     true,
                     "IMDB Movie Budget Distribution (2003-2013) ",
                     "budget",
@@ -150,7 +150,7 @@ The data does[^plural] not seem to back the notion of mid-budget movies dying, s
 <div id="budgetBinChartContainer" class="chartContainer">
   <script type="text/javascript">
     createHistChart("#budgetBinChartContainer",
-                    "/writing/files/2016-08-08-visualizing-imdb-data-with-d3/data/budget_data_hist.tsv",
+                    "/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/budget_data_hist.tsv",
                     true,
                     "IMDB Movie Budget Distribution (2003-2013) ",
                     "budget",
@@ -170,19 +170,19 @@ And now time for everyone's favorite part of the book report. In truth I prepare
 You did not ask for them, and I delivered. Here are a couple of silly moments during the creation of this[^high_five]. Hope you enjoyed!
 
 {% figure caption:'Making small ordering mistakes unsurisingly had major glitchy implications...' %}
-[<img class="postimageactual" src="/writing/images/2016-08-08-visualizing-imdb-data-with-d3/oops.png" alt="oops"/>](/writing/images/2016-08-08-visualizing-imdb-data-with-d3/oops.png)
+[<img class="postimageactual" src="/writing/images/2016-08-10-visualizing-imdb-data-with-d3/oops.png" alt="oops"/>](/writing/images/2016-08-10-visualizing-imdb-data-with-d3/oops.png)
 {% endfigure %}
 
 {% figure caption:'... which were worse in some cases than others.' %}
-[<img class="postimageactual" src="/writing/images/2016-08-08-visualizing-imdb-data-with-d3/great.png" alt="great"/>](/writing/images/2016-08-08-visualizing-imdb-data-with-d3/great.png)
+[<img class="postimageactual" src="/writing/images/2016-08-10-visualizing-imdb-data-with-d3/great.png" alt="great"/>](/writing/images/2016-08-10-visualizing-imdb-data-with-d3/great.png)
 {% endfigure %}
 
 {% figure caption:'For a while I thought to plot the binned data with tiny little cute bins via step interpolation...' %}
-[<img class="postimageactual" src="/writing/images/2016-08-08-visualizing-imdb-data-with-d3/step1.png" alt="step1"/>](/writing/images/2016-08-08-visualizing-imdb-data-with-d3/step1.png)
+[<img class="postimageactual" src="/writing/images/2016-08-10-visualizing-imdb-data-with-d3/step1.png" alt="step1"/>](/writing/images/2016-08-10-visualizing-imdb-data-with-d3/step1.png)
 {% endfigure %}
 
 {% figure caption:'... but evidently changed my mind.' %}
-[<img class="postimageactual" src="/writing/images/2016-08-08-visualizing-imdb-data-with-d3/step2.png" alt="step2"/>](/writing/images/2016-08-08-visualizing-imdb-data-with-d3/step2.png)
+[<img class="postimageactual" src="/writing/images/2016-08-10-visualizing-imdb-data-with-d3/step2.png" alt="step2"/>](/writing/images/2016-08-10-visualizing-imdb-data-with-d3/step2.png)
 {% endfigure %}
 
 
