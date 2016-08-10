@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="/writing/files/2016-08-08-visualizing-imdb-data-with-d3/css/standalone_style.css">
+    <link rel="stylesheet" href="/writing/files/2016-08-10-visualizing-imdb-data-with-d3/css/standalone_style.css">
 	  <!-- Bootstrap for some additional components (toggle swtich) -->
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <script src="http://d3js.org/d3.v3.min.js"></script>
@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="http://fonts.googleapis.com/css?family=Acme">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>-->
-    <script src="/writing/files/2016-08-08-visualizing-imdb-data-with-d3/js/createChartFuncs.js"></script>
+    <script src="/writing/files/2016-08-10-visualizing-imdb-data-with-d3/js/createChartFuncs.js"></script>
     <meta charset="UTF-8">
   </head>
   <body>
@@ -27,7 +27,7 @@
         is best to remove it to avoid confusion, and then removed it.*/
         var end_year = 2013;
         //Get from localhost, perhaps change to github later
-        var data_source = "/writing/files/2016-08-08-visualizing-imdb-data-with-d3/data/yearly_data.tsv";
+        var data_source = "/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/yearly_data.tsv";
         var name = "IMDB Yearly Movie And Genre Counts (1915-2013)";
         createGenreChart("#genreChartContainer",
                         data_source,
@@ -68,7 +68,7 @@ An obvious place to start is with looking at how rating data is distributed, and
     <div id="ratingChartContainer" class="chartContainer">
       <script type="text/javascript">
         createLineChart("#ratingChartContainer",
-                        "/writing/files/2016-08-08-visualizing-imdb-data-with-d3/data/rating_data.tsv",
+                        "/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/rating_data.tsv",
                         false,
                         "IMDB Average Movie Rating Distribution (2003-2013) ",
                         "rating",
@@ -107,7 +107,7 @@ Yep, a bell curve-ish kinda shape! Not overly suprising to see that most movies 
     <div id="lengthChartContainer" class="chartContainer">
       <script type="text/javascript">
         createLineChart("#lengthChartContainer",
-                        "/writing/files/2016-08-08-visualizing-imdb-data-with-d3/data/length_data.tsv",
+                        "/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/length_data.tsv",
                         true,
                         "IMDB Movie Length Distribution (2003-2013)",
                         "length",
@@ -126,7 +126,7 @@ to clean it up by binning the data quite a bit more:
     <div id="lengthBinChartContainer" class="chartContainer">
       <script type="text/javascript">
         createHistChart("#lengthBinChartContainer",
-                        "/writing/files/2016-08-08-visualizing-imdb-data-with-d3/data/length_data_hist.tsv",
+                        "/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/length_data_hist.tsv",
                         true,
                         "IMDB Movie Length Distribution (2003-2013) ",
                         "length",
@@ -142,7 +142,7 @@ And there it is, hiding in that data was another sort-of bell curve. Except of c
     <div id="votesChartContainer" class="chartContainer">
       <script type="text/javascript">
         createLineChart("#votesChartContainer",
-                        "/writing/files/2016-08-08-visualizing-imdb-data-with-d3/data/votes_data.tsv",
+                        "/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/votes_data.tsv",
                         true,
                         "IMDB Movie Vote Count Distribution (2003-2013) ",
                         "votes",
@@ -159,7 +159,7 @@ Yes astute reader, that is indeed a log-scale on the x axis. Unsurprisingly, the
     <div id="votesBinChartContainer" class="chartContainer">
       <script type="text/javascript">
       createHistChart("#votesBinChartContainer",
-                      "/writing/files/2016-08-08-visualizing-imdb-data-with-d3/data/votes_data_hist.tsv",
+                      "/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/votes_data_hist.tsv",
                       true,
                       "IMDB Movie Vote # Distribution (2003-2013) ",
                       "votes",
@@ -175,7 +175,7 @@ Lastly, I explored the distribution of budgets within the data. I was originally
     <div id="budgetChartContainer" class="chartContainer">
       <script type="text/javascript">
         createLineChart("#budgetChartContainer",
-                        "/writing/files/2016-08-08-visualizing-imdb-data-with-d3/data/budget_data.tsv",
+                        "/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/budget_data.tsv",
                         true,
                         "IMDB Movie Budget Distribution (2003-2013) ",
                         "budget",
@@ -192,7 +192,7 @@ The data does not seem to back the notion of mid-budget movies dying, since one 
     <div id="budgetBinChartContainer" class="chartContainer">
       <script type="text/javascript">
         createHistChart("#budgetBinChartContainer",
-                        "/writing/files/2016-08-08-visualizing-imdb-data-with-d3/data/budget_data_hist.tsv",
+                        "/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/budget_data_hist.tsv",
                         true,
                         "IMDB Movie Budget Distribution (2003-2013) ",
                         "budget",
