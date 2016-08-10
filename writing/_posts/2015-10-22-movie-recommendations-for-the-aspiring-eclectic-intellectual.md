@@ -2,7 +2,7 @@
 layout: post
 title: Movie Recommendations For The Aspiring Eclectic Intellectual
 date: 2015-10-22T16:19:34-07:00
-tags: [art,film]
+tags: [art,film,highlights]
 status: published
 type: post
 published: true

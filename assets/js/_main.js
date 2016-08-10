@@ -32,6 +32,13 @@ $('#500px_gallery').easyPaginate({
 	effect: 'fade'
 });
 
+$('#instagram_gallery').easyPaginate({
+	paginateElement: 'a',
+	elementsPerPage: 16,
+	effect: 'fade'
+});
+
+
 // Add lightbox class to all image links
 $("a[href$='.jpg'],a[href$='.jpeg'],a[href$='.JPG'],a[href$='.png'],a[href$='.gif']").addClass("image-popup");
 
