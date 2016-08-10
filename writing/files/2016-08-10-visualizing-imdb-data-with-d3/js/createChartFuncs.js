@@ -14,11 +14,11 @@ var createCountsChart = function(container, //html div to put this in
                            is_data_binned, //whether data is in pandas binned-form
                            chart_name, //what to name the chart
                            data_name, //what the x field is called (y is assumed to be 'count')
-                           x_log=false, //whether x axis should
-                           x_name=null,//name for x_axis
-                           chart_type='line', //type of chart. Can be line, step, or hist,
-                           bin_handling=null, //if line chart what to do with bin bounds
-                           interpolate_line=false) //whether to smooth out line data
+                           x_log, //whether x axis should
+                           x_name,//name for x_axis
+                           chart_type, //type of chart. Can be line, step, or hist,
+                           bin_handling, //if line chart what to do with bin bounds
+                           interpolate_line) //whether to smooth out line data
                             {
   var svg = dimple.newSvg(container, "100%", "100%");
   d3.tsv(data_source, function (data) {
@@ -203,17 +203,17 @@ var createCountsChart = function(container, //html div to put this in
 };
 
 var createLineChart = function(container,data_source,is_data_binned,chart_name,data_name,
-                              x_log=false, x_name=null, bin_handling='average', interpolate_line=true){
+                              x_log, x_name, bin_handling, interpolate_line){
     createCountsChart(container,data_source,is_data_binned,chart_name,data_name,x_log,x_name,'line',bin_handling,interpolate_line);
 };
 
 var createStepChart = function(container,data_source,is_data_binned,chart_name,data_name,
-                              x_log=false,x_name=null){
+                              x_log,x_name){
     createCountsChart(container,data_source,is_data_binnedchart_name,data_name,x_log,x_name,'step');
 };
 
 var createHistChart = function(container,data_source,is_data_binned,chart_name,data_name,
-                              x_log=false,x_name=null){
+                              x_log,x_name){
     createCountsChart(container,data_source,is_data_binned,chart_name,data_name,x_log,x_name,'hist');
 };
 
