@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>/writing/visualizing-imdb-data-with-d3/</loc>
+    <lastmod>2016-08-08T16:19:34-07:00</lastmod>
+  </url>
+  <url>
     <loc>/writing/power-of-ipython-pandas-scikilearn/</loc>
     <lastmod>2016-06-10T19:19:34-07:00</lastmod>
   </url>
@@ -229,25 +233,28 @@
     <loc>/writing/</loc>
   </url>
   <url>
-    <loc>/writing/tag/ml_writing/</loc>
-  </url>
-  <url>
-    <loc>/writing/tag/ai/</loc>
-  </url>
-  <url>
     <loc>/writing/tag/technical/</loc>
   </url>
   <url>
     <loc>/writing/tag/data-science/</loc>
   </url>
   <url>
-    <loc>/writing/tag/art/</loc>
-  </url>
-  <url>
     <loc>/writing/tag/film/</loc>
   </url>
   <url>
+    <loc>/writing/tag/ml_writing/</loc>
+  </url>
+  <url>
+    <loc>/writing/tag/ai/</loc>
+  </url>
+  <url>
+    <loc>/writing/tag/art/</loc>
+  </url>
+  <url>
     <loc>/writing/tag/history/</loc>
+  </url>
+  <url>
+    <loc>/writing/tag/highlights/</loc>
   </url>
   <url>
     <loc>/writing/tag/writing/</loc>
@@ -360,5 +367,13 @@
   <url>
     <loc>/writing/files/2016-06-10-power-of-ipython-pandas-scikilearn/post.html</loc>
     <lastmod>2016-06-08T16:32:09-07:00</lastmod>
+  </url>
+  <url>
+    <loc>/writing/files/2016-08-08-visualizing-imdb-data-with-d3/standalone_page.html</loc>
+    <lastmod>2016-08-10T00:18:48-07:00</lastmod>
+  </url>
+  <url>
+    <loc>/writing/files/2016-08-08-visualizing-imdb-data-with-d3/html/standalone_page.html</loc>
+    <lastmod>2016-08-10T00:17:18-07:00</lastmod>
   </url>
 </urlset>
