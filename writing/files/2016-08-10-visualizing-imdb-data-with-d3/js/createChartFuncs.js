@@ -203,8 +203,8 @@ var createCountsChart = function(container, //html div to put this in
 };
 
 var createLineChart = function(container,data_source,is_data_binned,chart_name,data_name,
-                              x_log, x_name, bin_handling, interpolate_line){
-    createCountsChart(container,data_source,is_data_binned,chart_name,data_name,x_log,x_name,'line',bin_handling,interpolate_line);
+                              x_log, x_name, bin_handling){
+    createCountsChart(container,data_source,is_data_binned,chart_name,data_name,x_log,x_name,'line',bin_handling,true);
 };
 
 var createStepChart = function(container,data_source,is_data_binned,chart_name,data_name,
