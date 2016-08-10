@@ -1,6 +1,6 @@
 ---
 layout: post
-title: IMDB Data Visualizations
+title: IMDB Data Visualizations with D3 + Dimple.js
 date: 2016-08-08T16:19:34-07:00
 tags: [technical,data-science,film]
 status: draft
