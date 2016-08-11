@@ -279,8 +279,8 @@ var createGenreChart = function(container,data_source,chart_name, start_year,end
       countSeries.lineWeight = 6;
 
       //Add legend to the right using negative values
-      var legend = genre_chart.addLegend("-12%", "25%", "10%", "50%", "Right");
-      legend.verticalPadding = 20;
+      var legend = genre_chart.addLegend("87.5%", "25%", "10%", "50%", "Right");
+      legend.verticalPadding = 15;
       //Reverse legend listing to match chart order
       legend._getEntries_old = legend._getEntries;
       legend._getEntries = function()
@@ -312,8 +312,8 @@ var createGenreChart = function(container,data_source,chart_name, start_year,end
         .data([legend_title])
         .enter()
         .append("text")
-          .attr("x", "88%")
-          .attr("y", "25%")
+          .attr("x", "90.5%")
+          .attr("y", "23.5%")
           .style("font-family", "sans-serif")
           .style("color", "Black")
           .text(function (d) { return d; });
