@@ -12,7 +12,7 @@ excerpt: "A look at how many movies of each genre get released, the IMDB rating 
 extra_css: ["/writing/files/2016-08-10-visualizing-imdb-data-with-d3/css/style.css"]
 extra_js: ["/writing/files/2016-08-10-visualizing-imdb-data-with-d3/js/createChartFuncs.js","http://d3js.org/d3.v3.min.js","http://dimplejs.org/dist/dimple.v2.1.6.min.js"]
 ---
-*Notes: not optimized for mobile (or probably for anything but my screen). Full page version **[here](/writing/files/2016-08-10-visualizing-imdb-data-with-d3/standalone_page.html)**, visualization code **[here](https://github.com/andreykurenkov/imdb-data-viz)**.*
+*Notes: not optimized for mobile (or much else). Full page version **[here](/writing/files/2016-08-10-visualizing-imdb-data-with-d3/standalone_page.html)**, visualization code **[here](https://github.com/andreykurenkov/imdb-data-viz)**. I don't get into the technical aspects here, but feel free to take a look.*
 
 <div id="genreChartContainer" class="chartContainer">
   <script type="text/javascript">
