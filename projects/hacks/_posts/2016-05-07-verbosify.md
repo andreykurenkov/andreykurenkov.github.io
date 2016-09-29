@@ -1,7 +1,7 @@
 ---
 layout: project-post
 title: Verbosify
-date: 2015-05-07 
+date: 2016-05-07 
 tags: [hackathon]
 status: publish
 type: post
@@ -18,7 +18,7 @@ what: An intentionally useless program to make text more verbose
 who: Me and Stefano Fenu
 why: We were part of the 2016 Stupid Shit Nobody Needs and Terrible Ideas hackathon, and wanted to make the opposite of a summarizer
 where: San Francisco
-when: May 7th 2015 
+when: May 7th 2016
 links:  
   - name: app
     url: https://chrome.google.com/webstore/detail/verbosifier/pagiogmacenjmjgjnipejojmahehfbeg?hl=en
