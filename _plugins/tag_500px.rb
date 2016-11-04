@@ -18,8 +18,8 @@ class PXLoader
 	class << self
 		def photos(authpath)
 			lines = File.open(authpath).read.lines
-            consumer_key = lines.next
-            consumer_secret = lines.next
+            consumer_key = lines[0]
+            consumer_secret = lines[1]
 			F00px.configure do |config|
 			  config.consumer_key = consumer_key.strip()
 			  config.consumer_secret = consumer_secret.strip()

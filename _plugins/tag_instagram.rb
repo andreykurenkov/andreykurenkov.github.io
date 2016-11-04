@@ -18,7 +18,7 @@ require 'instagram'
 class InstagramLoader
 	class << self
 		def photos(accesstokenpath)
-			accesstoken = File.open(accesstokenpath).gets
+			accesstoken = File.open(accesstokenpath).gets.strip()
 			client = Instagram.client(:access_token => accesstoken, 
                                       :no_response_wrapper => true,
  									  :connection_options => {:request =>{:timeout => 5}})

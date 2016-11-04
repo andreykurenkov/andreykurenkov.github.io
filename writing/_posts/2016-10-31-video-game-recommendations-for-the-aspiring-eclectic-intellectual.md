@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Video Game Recommendations For The Aspiring Eclectic Intellectual
-date: 2016-07-22T16:19:34-07:00
+date: 2016-08-10T16:19:34-07:00
 tags: [art]
 status: draft
 type: draft
@@ -10,11 +10,54 @@ comments: true
 author: andrey_kurenkov
 excerpt: "A trip through the lands of Tarkovsky, Bergman, and so many others"
 ---
-Video games get a bad rep. 
+Video games get a bad rep. That rep being that they are still mostly flashy dopamine drips or immature Michael Bay-inspired toys for teenage boys,
+and not interesting works of art of like made by, say, Kubrick or Hemingway.  And to be fair the preponderance of shallow uninspired shooters,
+uninspired shallow smartphone games, and nineteenth-in-the-franchise game releases does mean the rep still has some merit - but not much. Like
+many at my age I started playing when I was young, and like many I still play them. At first 
 
-Any conversation with me about quality art movies has got to start with Andrei Tarkovsky, the poetically melancholic depths of any Russian's soul incarnate. Very slow. Very poetic. Beautiful, disturbing, strange, spiritual. An acquired taste, and to some a complete nonsensical bore. **Solaris**, a trippy 3-hour sci fi meditation on love and human consciousness, is a good starting point as the most accessible of his films. But I prefer his latter yet more poetically inclined works, such as **The Sacrifice** - a tale of a man averting a nuclear war through a spiritual journey. Better yet is **Stalker**, a 3-hour meditation on faith and the struggles inside our souls, and one of my favorite films. These movies have characters and stories, but describing them is almost beside the point - Tarkovsky's work is visual poetry, and can only really be understood as such.
+Few of my art-cinema-or-literature-loving-friends are into playing them, and few of my
+video-game-playing-friends are into the so called high arts. But here I am, a guy with similar portions of my brain devoted to   
 
-{% figure caption:'The RStuid IDE' %}
-[<img class="postimageactual" src="/writing/images/2016-4-15-a-brief-history-of-game-ai/0-history.png" alt="History"/>](/writing/images/22016-06-10-power-of-ipython-pandas-scikilearn/rsdtudio.png)
-{% endfigure %}
-
+Ico (video) 
+Shadow of the Collosus 
+Silent Hill 
+ 
+Bioshock 
+Bioware 
+Half Life 2 
+ 
+Flower 
+Journey  
+Limbo 
+Brain 
+Fez 
+Gone Home 
+Stanley Parable, Beginners Guide 
+Brothers  
+ 
+Spec Ops 
+The Last of Us 
+The Witcher 
+ 
+Cow Clicker 
+ 
+ 
+Shattered Memories (http://shshatteredmemories.com/blog-10_15_09/) 
+ 
+ 
+https://www.youtube.com/watch?v=RBK5Jheu0To 
+http://grantland.com/features/line-explores-reasons-why-play-shooter-games/ 
+http://boingboing.net/2015/07/30/the-other-side-of-braid.html 
+anyway, gone home is still like a million times better than yet another game about dudes shooting other dudes in the face. 
+ 
+http://auntiepixelante.com/?p=2127 
+http://kukkurovaca.tumblr.com/post/58452502084/gone-home-finally-a-story-about-an 
+ 
+I hope some people who do not play video games, but read books or watch 'cinema', read this. 
+ 
+High School 
+ 
+Story 
+ 
+College 
+ 

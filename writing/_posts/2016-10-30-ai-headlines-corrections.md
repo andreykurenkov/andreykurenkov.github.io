@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AI Headlines These Days Are Wildly Innacurate - So I Corrected Some
-date: 2016-19-30T16:19:34-07:00
+date: 2016-10-30T16:19:34-07:00
 tags: [ml,ai,quasi-essay]
 status: draft
 type: draft
