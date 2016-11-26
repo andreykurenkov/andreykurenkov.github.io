@@ -17,7 +17,7 @@ require "json"
 class PXLoader
 	class << self
 		def photos(authpath)
-			lines = File.open(authpath).read.lines
+			lines = File.open(authpath).read.lines.to_a
             consumer_key = lines[0]
             consumer_secret = lines[1]
 			F00px.configure do |config|
