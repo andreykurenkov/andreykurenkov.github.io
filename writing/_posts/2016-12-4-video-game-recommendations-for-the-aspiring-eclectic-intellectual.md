@@ -5,7 +5,7 @@ date: 2016-12-04T16:19:34-07:00
 tags: [art,videogames]
 status: draft
 type: draft
-published: true
+published: false
 comments: true
 author: andrey_kurenkov
 excerpt: "A recollection of my favorite video game works of art"
