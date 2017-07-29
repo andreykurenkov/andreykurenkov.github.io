@@ -8,10 +8,10 @@ module Jekyll
 					next_in_category = nil
 					previous_in_category = nil
 					if index
-						if index < posts.length - 1
+						if index > 0
 							next_in_category = posts[index - 1]
 						end
-						if index > 0
+						if index < posts.length
 							previous_in_category = posts[index + 1]
 						end
 					end

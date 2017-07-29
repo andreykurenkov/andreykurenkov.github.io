@@ -50,9 +50,9 @@ ml_writing:
   name: Machine Learning
   slug: ml_writing
 
-ml:
+ml_project:
   name: Machine Learning
-  slug: ml
+  slug: ml_project
 
 cv:
   name: Computer Vision
