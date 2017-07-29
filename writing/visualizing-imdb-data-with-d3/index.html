@@ -1,0 +1,511 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>IMDB Data Visualizations with D3 + Dimple.js &#8211; Andrey Kurenkov's Web World</title>
+<meta name="description" content="A look at how many movies of each genre get released, the IMDB rating distribution, and more!">
+<meta name="keywords" content="technical, data-science, film">
+
+  
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="IMDB Data Visualizations with D3 + Dimple.js">
+<meta name="twitter:description" content="A look at how many movies of each genre get released, the IMDB rating distribution, and more!">
+
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IMDB Data Visualizations with D3 + Dimple.js">
+<meta property="og:description" content="A look at how many movies of each genre get released, the IMDB rating distribution, and more!">
+<meta property="og:url" content="/writing/visualizing-imdb-data-with-d3/">
+<meta property="og:site_name" content="Andrey Kurenkov's Web World">
+
+<meta property="og:image" content="/images/thumb.png">
+
+
+
+
+
+
+<link rel="canonical" href="/writing/visualizing-imdb-data-with-d3/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Andrey Kurenkov's Web World Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="/assets/js/vendor/respond.min.js"></script>
+<meta http-equiv="Cache-control" content="public" max-age="3600">
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+<link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+
+
+    
+	    
+		<link rel="stylesheet" href="/writing/files/2016-08-10-visualizing-imdb-data-with-d3/css/style.css">
+	
+
+
+    
+	    
+    <script src="/writing/files/2016-08-10-visualizing-imdb-data-with-d3/js/createChartFuncs.js"></script>
+	    
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+	    
+    <script src="http://dimplejs.org/dist/dimple.v2.1.6.min.js"></script>
+	
+
+</head>
+
+<body class="home">
+  <div id="wrap">
+    <!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+    <div class="navigation-wrapper">
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+        <a href="/"><img id="logo" src="/images/logo.png" alt="Me" /></a>
+		    <ul>
+		        
+				    
+				        
+				    
+				    <li><a href="/about/"  class="navlink">About</a></li>
+				
+				    
+				        
+				    
+				    <li><a href="/projects/"  class="navlink">Projects</a></li>
+				
+				    
+				        
+				    
+				    <li><a href="/writing/"  class="navlink">Posts</a></li>
+				
+				    
+				        
+				    
+				    <li><a href="/photography/"  class="navlink">Photos</a></li>
+				
+		    </ul>
+		</nav>
+	</div>
+</div>
+
+     
+    
+
+
+
+
+    
+    
+        
+            
+            
+        
+    
+        
+            
+            
+        
+    
+        
+            
+            
+        
+    
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+  
+
+<div itemscope itemtype="http://schema.org/Person">
+
+
+	<img src="/images/Andrey.jpg" class="bio-photo" alt=" bio photo">
+
+
+  <!--<h3 itemprop="name"></h3>-->
+  <p>An eclectic researcher and engineer endlessly interested in AI, art, side-projects, philosophy, and many more things.</p>
+
+  <a href="mailto:contact@andreykurenkov.com" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
+  
+  <a href="http://linkedin.com/in/andreykurenkov" class="author-social" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i> LinkedIn</a>
+  <a href="http://github.com/andreykurenkov" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i> Github</a>
+  <a href="/files/resume.pdf" class="author-social" target="_blank"><i class="fa fa-fw fa-file"></i> Resume</a>
+  <a href="/writing/feed.xml/" class="author-social" target="_blank"><i class="fa fa-fw fa-rss"></i> RSS</a>
+
+</div>
+
+  </div>
+  <article class="post">
+    <div class="headline-wrap">
+      
+        <h1><a href="/writing/visualizing-imdb-data-with-d3/" rel="bookmark" title="IMDB Data Visualizations with D3 + Dimple.js">IMDB Data Visualizations with D3 + Dimple.js</a></h1><h5>A look at how many movies of each genre get released, the IMDB rating distribution, and more!		|		<time datetime="2016-08-10T16:19:34-07:00">August 10, 2016</time></h5>
+      
+    </div><!--/ .headline-wrap -->
+    </hr>
+    <div class="article-wrap">
+
+      <p><em>Notes: not optimized for mobile (or much else). Full page version <strong><a href="/writing/files/2016-08-10-visualizing-imdb-data-with-d3/standalone_page.html">here</a></strong>, visualization code <strong><a href="https://github.com/andreykurenkov/imdb-data-viz">here</a></strong>. I don’t get into the technical aspects here, but feel free to take a look.</em></p>
+
+<div id="genreChartContainer" class="chartContainer">
+  <script type="text/javascript">
+    /*Start on 1915 because prior too few movies are listed to make them a fair
+    comparison to modern times*/
+    var start_year = 1915;
+    /*End on 2013 due to a strange dive towards zero in 2014 and 2015 I cannot explain or
+    guarantee is not due to flawed data. At first I included the dip but received feedback it
+    is best to remove it to avoid confusion, and then removed it.*/
+    var end_year = 2013;
+    //Get from localhost, perhaps change to github later
+    var data_source = "/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/yearly_data.tsv";
+    var name = "IMDB Yearly Movie And Genre Counts (1915-2013)";
+    createGenreChart("#genreChartContainer",
+                    data_source,
+                    name,
+                    start_year,
+                    end_year);
+  </script>
+</div>
+
+<form class="form" id="genreToggleForm">
+  <div class="switch-field">
+    <!--   <div class="switch-title">Display Type</div> -->
+    <input type="radio" id="switch_left" name="switch" value="yes" checked="" />
+    <label for="switch_left">Counts</label>
+    <input type="radio" id="switch_right" name="switch" value="no" />
+    <label for="switch_right">Percents</label>
+  </div>
+</form>
+
+<p>And there it is! IMDB data<sup id="fnref:gotten_with"><a href="#fn:gotten_with" class="footnote">1</a></sup> visualized with <a href="https://d3js.org/">D3</a>, or more precisely with the D3-powered <a href="http://dimplejs.org/">Dimple.js</a>. The data is minimally cleaned up by filtering for movies that have at least one vote and associated length information, and info on TV episodes or shows is also not included, but the data is otherwise directly (after parsing) from IMDB. The legend is interactive (try clicking the rectangles!).</p>
+
+<p>As you can see this chart visualizes the number of genre movie releases between 1915 and 2013<sup id="fnref:why_years"><a href="#fn:why_years" class="footnote">2</a></sup>, as well as the total number of movies in those years. 
+A single movie may be associated with zero, one, or multiple genres and so the ‘Total Movies’ line corresponds to actual
+movie counts and every colored-in area represents the number of movies tagged with that genre for that year. 
+The clear conclusion is that there has been an explosion in film production from the 90s onward, for which I have some theories<sup id="fnref:theories"><a href="#fn:theories" class="footnote">3</a></sup> but no definitive explanation. Beyond the big takeaway there are a multitude of possible smaller conclusions regarding the relative popularity of genres and movies overall, which was really my intent in making such an open-ended visualization.</p>
+
+<p>There is a ton more that can be done with the data. The direction I decided to
+go with it was to explore various aspects of more recent data rather than
+more aspects related to change over time. I would love to eventually add controls to view any year range for all the following charts<sup id="fnref:nontrivial"><a href="#fn:nontrivial" class="footnote">4</a></sup>, but they still reveal some interesting aspects about modern movie production and IMDB metrics.</p>
+
+<p>An obvious place to start is with looking at how rating data is distributed, and the answer is delightfully normal:</p>
+
+<div id="ratingChartContainer" class="chartContainer">
+  <script type="text/javascript">
+    createLineChart("#ratingChartContainer",
+                    "/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/rating_data.tsv",
+                    false,
+                    "IMDB Average Movie Rating Distribution (2003-2013) ",
+                    "rating",
+                    false,
+                    "Average IMDB User Rating");
+  </script>
+</div>
+
+<p>Yep, a bell curve-ish<sup id="fnref:bell_curve"><a href="#fn:bell_curve" class="footnote">5</a></sup> kinda shape! Not overly suprising to see that most movies are rated as mediocre/good and the frequency flattens out at either extreme. Next, a slightly more fun shape from the length distribution:</p>
+
+<div id="lengthChartContainer" class="chartContainer">
+  <script type="text/javascript">
+    createLineChart("#lengthChartContainer",
+                    "/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/length_data.tsv",
+                    true,
+                    "IMDB Movie Length Distribution (2003-2013)",
+                    "length",
+                    false,
+                    "Length (minutes)",
+                    "max");
+  </script>
+</div>
+
+<p>Ah, what a nice regularly spiky shape<sup id="fnref:fourier"><a href="#fn:fourier" class="footnote">6</a></sup>. It’s logical that most movies hit the 90-minute mark, though it seems likely
+that simplified data entry also brings about the periodicity here. The chart is a bit of a mess as a line graph, so it makes sense
+to clean it up by binning the data quite a bit more:</p>
+
+<div id="lengthBinChartContainer" class="chartContainer">
+  <script type="text/javascript">
+    createHistChart("#lengthBinChartContainer",
+                    "/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/length_data_hist.tsv",
+                    true,
+                    "IMDB Movie Length Distribution (2003-2013) ",
+                    "length",
+                    false,
+                    "Length (minutes)");
+  </script>
+</div>
+
+<p>And there it is, hiding in that data was another sort-of bell curve. Except of course for that first bar - IMDB apparently has a large amount of shorter 0-20 minute film entries as well. No doubt short films are part of this, though it’s unclear why there are quite so many. As with many aspects of the data, it could be explored more deeply and filtered more thouroughly to focus on a specific subset of films. But, that’s for another day. For now I continued my visualization quest by looking into the vote distribution:</p>
+
+<div id="votesChartContainer" class="chartContainer">
+  <script type="text/javascript">
+    createLineChart("#votesChartContainer",
+                    "/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/votes_data.tsv",
+                    true,
+                    "IMDB Movie Vote Count Distribution (2003-2013) ",
+                    "votes",
+                    true,
+                    "IMDB User Vote Count");
+  </script>
+</div>
+
+<p>Yes astute reader<sup id="fnref:corny"><a href="#fn:corny" class="footnote">7</a></sup>, that is indeed a log-scale on the x axis. Unsurprisingly, the number of votes for any given film declines exponentially - very few of those thousands of movies in the first graph are blockbusters<sup id="fnref:again"><a href="#fn:again" class="footnote">8</a></sup>. As with the histogram above the continuous data is in fact binned for counting, but in this case there are enough bins that it makes sense to smooth out into a line. Once again the data can also be shown via a histogram with fewer bins:</p>
+
+<div id="votesBinChartContainer" class="chartContainer">
+  <script type="text/javascript">
+  createHistChart("#votesBinChartContainer",
+                  "/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/votes_data_hist.tsv",
+                      true,
+                      "IMDB Movie Vote # Distribution (2003-2013) ",
+                      "votes",
+                      true,
+                      "IMDB User Vote Count");
+  </script>
+</div>
+
+<p>Lastly, I explored the distribution of budgets within the data <sup id="fnref:budgets"><a href="#fn:budgets" class="footnote">9</a></sup>. I was originally inspired to look into 
+movie data based on <a href="http://flavorwire.com/492985/how-the-death-of-mid-budget-cinema-left-a-generation-of-iconic-filmmakers-mia">an article</a> 
+that discussed the death of mid-budget-cinema, and of course I wanted to look into the data and see the phenomenon myself. The result once again demands a log-scale and reveals a certain periodicity:</p>
+
+<div id="budgetChartContainer" class="chartContainer">
+  <script type="text/javascript">
+    createLineChart("#budgetChartContainer",
+                    "/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/budget_data.tsv",
+                    true,
+                    "IMDB Movie Budget Distribution (2003-2013) ",
+                    "budget",
+                    true,
+                    "Budget (USD)",
+                    "average");
+  </script>
+</div>
+
+<p>The data does<sup id="fnref:plural"><a href="#fn:plural" class="footnote">10</a></sup> not seem to back the notion of mid-budget movies dying, since one peak is at about 1m, but then again as said before the data is not particularly carefully filtered. There being a ton of less-than one million budget movies certainly explains how such an explosion in movie production might have been possible in the past twenty years. That guess shall hopefully be further explored in future posts, but for now I will finish with a final simplified histogram:</p>
+
+<div id="budgetBinChartContainer" class="chartContainer">
+  <script type="text/javascript">
+    createHistChart("#budgetBinChartContainer",
+                    "/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/budget_data_hist.tsv",
+                    true,
+                    "IMDB Movie Budget Distribution (2003-2013) ",
+                    "budget",
+                    true,
+                    "Budget (USD)");
+  </script>
+</div>
+
+<h2 id="what-i-learned">What I Learned</h2>
+<p>And now time for everyone’s favorite part of the book report. In truth I prepared the genre chart for Udacity’s an online class, <a href="https://www.udacity.com/course/data-visualization-and-d3js--ud507">Data Visualization with D3.JS</a>. I completed the class as part of Udacity’s Data Analyst Nanodegree, and as with my <a href="http://www.andreykurenkov.com/writing/fun-visualizations-of-stackoverflow/">previous</a> <a href="http://www.andreykurenkov.com/writing/power-of-ipython-pandas-scikilearn/">posts</a> based off projects for the nanodegree I felt that I learned<sup id="fnref:learned"><a href="#fn:learned" class="footnote">11</a></sup> a useful technology and got the chance to complete a fun project with it worthy of cataloguing. I have a few key takeaways from having now completed the project:</p>
+
+<ul>
+  <li>It’s way easier to do data exploration and visualization via RStudio or IPython than D3. Perhaps this is not true for others, but I was surprised by how high level and unstreamlined D3 is for typical visualization tasks. Of course this is part of its power and the reason that higher-abstraction libraries like Dimple.js got built, but on balance I still felt that using JavaScript, HTML, and a browser was not nearly as elegant as RStudio. As someone only mildly experienced with web-dev, the prior classes on R and Pandas+IPython made me feel much more empowered to play with data easily.</li>
+  <li>D3 allows for interactivity, but interactvity is not always needed. This one is rather obvious but why not still spell it out. All but the genre chart here could have comfortably been PNGs files (as in my previous visualization posts), and not lost much. Still, allowing for interactivity does open up a considerable amount of possibilies and in particular is good for open ended data visualization without a single particularly concrete point.</li>
+  <li>Aggregation over hundreds of thousands of data points in JS is probably a bad idea. The year-grouped data for the genre graph was originally completely computed in JS when I submitted my project to Udacity. This took painful seconds, which was not helped by my meek laptop. Again unsurprising, but I did feel a tinge of annoyance at realizing I would be best off writing a python script to pre-process my data into multiple CSV files ready for charting without much manipulation.</li>
+</ul>
+
+<h2 id="bloopers">Bloopers</h2>
+<p>You did not ask for them, and I delivered. Here are a couple of silly moments during the creation of this<sup id="fnref:high_five"><a href="#fn:high_five" class="footnote">12</a></sup>. Hope you enjoyed!</p>
+
+<figure class="figure"><div class="figure__main">
+<p><a href="/writing/images/2016-08-10-visualizing-imdb-data-with-d3/oops.png"><img class="postimageactual" src="/writing/images/2016-08-10-visualizing-imdb-data-with-d3/oops.png" alt="oops" /></a></p>
+</div><figcaption class="figure__caption"><p>Making small ordering mistakes unsurisingly had major glitchy implications…</p>
+</figcaption></figure>
+
+<figure class="figure"><div class="figure__main">
+<p><a href="/writing/images/2016-08-10-visualizing-imdb-data-with-d3/great.png"><img class="postimageactual" src="/writing/images/2016-08-10-visualizing-imdb-data-with-d3/great.png" alt="great" /></a></p>
+</div><figcaption class="figure__caption"><p>… which were worse in some cases than others.</p>
+</figcaption></figure>
+
+<figure class="figure"><div class="figure__main">
+<p><a href="/writing/images/2016-08-10-visualizing-imdb-data-with-d3/step1.png"><img class="postimageactual" src="/writing/images/2016-08-10-visualizing-imdb-data-with-d3/step1.png" alt="step1" /></a></p>
+</div><figcaption class="figure__caption"><p>For a while I thought to plot the binned data with tiny little cute bins via step interpolation…</p>
+</figcaption></figure>
+
+<figure class="figure"><div class="figure__main">
+<p><a href="/writing/images/2016-08-10-visualizing-imdb-data-with-d3/step2.png"><img class="postimageactual" src="/writing/images/2016-08-10-visualizing-imdb-data-with-d3/step2.png" alt="step2" /></a></p>
+</div><figcaption class="figure__caption"><p>… but evidently changed my mind.</p>
+</figcaption></figure>
+
+<h2 id="notes">Notes</h2>
+<div class="footnotes">
+  <ol>
+    <li id="fn:gotten_with">
+      <p>(gotten with <a href="https://github.com/andreykurenkov/data-movies">this code</a>) <a href="#fnref:gotten_with" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:why_years">
+      <p>The cutoff years are chosen due to there being very few movies comparable to modern films prior to 1915, and the data possibly being incomplete post 2013 <a href="#fnref:why_years" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:theories">
+      <p>Primarily that films are cheaper to make due to digital technology and that IMDB tacks more modern movies better <a href="#fnref:theories" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:nontrivial">
+      <p>This is nontrivial for various boring reasons and I have too many side-projects as it is… <a href="#fnref:nontrivial" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:bell_curve">
+      <p>Fine, a somewhat offset and wobbly bell curve, but still looks pretty good. <a href="#fnref:bell_curve" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:fourier">
+      <p>Don’t you just want to take the fourier transform of it? <a href="#fnref:fourier" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:corny">
+      <p>Too corny? I shan’t apologize, this is my site! <a href="#fnref:corny" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:again">
+      <p>Again, something warranting a deeper dive someday. <a href="#fnref:again" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:budgets">
+      <p>Many movies did not have associated budget data, but that still left thousands that did <a href="#fnref:budgets" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:plural">
+      <p>I know, ‘do’ is grammatically correct here, but then natural speech is largely nonsensical so who cares <a href="#fnref:plural" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:learned">
+      <p>Well, learned a little… <a href="#fnref:learned" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:high_five">
+      <p>Wow, did you actually read all the text and are still reading it? High five. <a href="#fnref:high_five" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+
+      <div class="contentinfo">           
+        <h4 id="postnav"><a href="/writing/power-of-ipython-pandas-scikilearn/">Previous Post</a> 
+                        | <a href="/writing/moving-on-looking-back/">Next Post</a></h4>
+        <div id="mc_embed_signup">
+  <form action="//andreykurenkov.us12.list-manage.com/subscribe/post?u=4fd9f0f18da6483fe39140533&amp;id=ef01796314" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <div id="mc_embed_signup_scroll">
+
+    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      <div style="position: absolute; left: -5000px;"><input type="text" name="b_4fd9f0f18da6483fe39140533_ef01796314" tabindex="-1" value=""></div>
+      <div class="clear"><input type="submit" value="send me your writing" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
+    </div>
+
+  </form>
+</div>
+<!--End mc_embed_signup-->
+
+        <p id="post-meta">Posted with <i class="fa fa-tags"></i>: <a href="/writing/tag/technical/">technical</a>, <a href="/writing/tag/data-science/">data-science</a>, <a href="/writing/tag/film/">film</a></p>
+        <div class="social-share">
+  <h4>Share on</h4>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=/writing/visualizing-imdb-data-with-d3/" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=/writing/visualizing-imdb-data-with-d3/" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=/writing/visualizing-imdb-data-with-d3/" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+  </ul>
+</div><!-- /.social-share -->
+        
+          <section id="disqus_thread"></section><!-- /#disqus_thread -->
+        
+         <span><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</span>
+      </div>
+    </div><!-- /.article-wrap -->
+  </article>
+</div><!-- /#main -->
+</br>
+
+    
+    </div><!-- /#main -->
+  </div>
+
+<footer>
+  <span>&copy; 2017 Andrey Kurenkov. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://github.com/mmistakes/minimal-mistakes" rel="nofollow">Minimal Mistakes</a> and <a href="https://github.com/mmistakes/skinny-bones-jekyll">Skinny Bones</a> themes.</span>
+
+</footer>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/assets/js/scripts.min.js"></script>
+
+
+<!--Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl = 
+ '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-54402578-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'eclecticcreations'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+  
+</body>
+</html>
