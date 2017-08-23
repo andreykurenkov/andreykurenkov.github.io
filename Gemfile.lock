@@ -24,8 +24,8 @@ GEM
     ffi (1.9.10-x64-mingw32)
     ffi (1.9.10-x86-mingw32)
     hashie (3.4.3)
-    hitimes (1.2.3)
-    hitimes (1.2.3-x86-mingw32)
+    hitimes (1.2.6)
+    hitimes (1.2.6-x86-mingw32)
     instagram (1.1.6)
       faraday (>= 0.7, < 0.10)
       faraday_middleware (>= 0.8, < 0.10)
@@ -111,4 +111,4 @@ DEPENDENCIES
   octopress (~> 3.0.0.rc.12)
 
 BUNDLED WITH
-   1.10.6
+   1.15.4
