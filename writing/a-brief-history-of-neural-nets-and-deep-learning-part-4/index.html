@@ -1,0 +1,527 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>A 'Brief' History of Neural Nets and Deep Learning, Part 4 &#8211; Andrey Kurenkov's Web World</title>
+<meta name="description" content="About the mid-2000s neural net comeback, and how deep learning ascended to the tsunami it is today">
+<meta name="keywords" content="ml_writing, ai, technical, history">
+
+  
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="A 'Brief' History of Neural Nets and Deep Learning, Part 4">
+<meta name="twitter:description" content="About the mid-2000s neural net comeback, and how deep learning ascended to the tsunami it is today">
+
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A 'Brief' History of Neural Nets and Deep Learning, Part 4">
+<meta property="og:description" content="About the mid-2000s neural net comeback, and how deep learning ascended to the tsunami it is today">
+<meta property="og:url" content="/writing/a-brief-history-of-neural-nets-and-deep-learning-part-4/">
+<meta property="og:site_name" content="Andrey Kurenkov's Web World">
+
+<meta property="og:image" content="/images/thumb.png">
+
+
+
+
+
+
+<link rel="canonical" href="/writing/a-brief-history-of-neural-nets-and-deep-learning-part-4/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Andrey Kurenkov's Web World Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="/assets/js/vendor/respond.min.js"></script>
+<meta http-equiv="Cache-control" content="public" max-age="3600">
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+<link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+
+
+
+
+
+</head>
+
+<body class="home">
+  <div id="wrap">
+    <!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+    <div class="navigation-wrapper">
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+        <a href="/"><img id="logo" src="/images/logo.png" alt="Me" /></a>
+		    <ul>
+		        
+				    
+				        
+				    
+				    <li><a href="/"  class="navlink">About</a></li>
+				
+				    
+				        
+				    
+				    <li><a href="/projects/"  class="navlink">Projects</a></li>
+				
+				    
+				        
+				    
+				    <li><a href="/writing/"  class="navlink">Posts</a></li>
+				
+				    
+				        
+				    
+				    <li><a href="/photography/"  class="navlink">Photos</a></li>
+				
+		    </ul>
+		</nav>
+	</div>
+</div>
+
+     
+    
+
+
+
+
+    
+    
+        
+            
+            
+        
+    
+        
+            
+            
+        
+    
+        
+            
+            
+        
+    
+        
+            
+            
+        
+    
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+  
+
+<div itemscope itemtype="http://schema.org/Person">
+
+
+	<img src="/images/Andrey.jpg" class="bio-photo" alt=" bio photo">
+
+
+  <!--<h3 itemprop="name"></h3>-->
+  <p>An eclectic researcher and engineer endlessly interested in AI, art, side-projects, philosophy, and many more things.</p>
+
+  <a href="mailto:contact@andreykurenkov.com" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
+  
+  <a href="http://linkedin.com/in/andreykurenkov" class="author-social" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i> LinkedIn</a>
+  <a href="http://github.com/andreykurenkov" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i> Github</a>
+  <a href="/files/resume.pdf" class="author-social" target="_blank"><i class="fa fa-fw fa-file"></i> Resume</a>
+  <a href="/writing/feed.xml/" class="author-social" target="_blank"><i class="fa fa-fw fa-rss"></i> RSS</a>
+
+</div>
+
+  </div>
+  <article class="post">
+    <div class="headline-wrap">
+      
+        <h1><a href="/writing/a-brief-history-of-neural-nets-and-deep-learning-part-4/" rel="bookmark" title="A 'Brief' History of Neural Nets and Deep Learning, Part 4">A 'Brief' History of Neural Nets and Deep Learning, Part 4</a></h1><h5>About the mid-2000s neural net comeback, and how deep learning ascended to the tsunami it is today		|		<time datetime="2015-12-24T21:19:34-05:00">December 24, 2015</time></h5>
+      
+    </div><!--/ .headline-wrap -->
+    </hr>
+    <div class="article-wrap">
+
+      <p>This is the fourth part in ‘A Brief History of Neural Nets and Deep Learning’. Parts 1-3 <a href="http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning">here</a>, <a href="http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning-part-2">here</a>, and <a href="http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning-part-3">here</a>. In this part, we will get to the end of our story and see how deep learning emerged from the slump neural nets found themselves in by the late 90s, and the amazing state of the art results it has achieved since.</p>
+
+<blockquote>
+  <p>“Ask anyone in machine learning what kept neural network research alive and they will probably mention one or all of these three names: Geoffrey Hinton, fellow Canadian Yoshua Bengio and Yann LeCun, of Facebook and New York University.”<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></p>
+</blockquote>
+
+<h1 id="the-deep-learning-conspiracy">The Deep Learning Conspiracy</h1>
+
+<p>When you want a revolution, start with a conspiracy. With the ascent of Support Vector Machines and the failure of backpropagation, the early 2000s were a dark time for neural net research. LeCun and Hinton variously mention how in this period their papers or the papers of their students were routinely rejected from being published due to their subject being Neural Nets. The above quote is probably an exaggeration - certainly research in Machine Learning and AI was still very active, and other people were also still working with neural nets - but citation counts from the time make it clear that the excitement had leveled off, even if it did not completely evaporate. Still, they persevered. And they found a strong ally outside the research realm: The Canadian government. Funding from the Canadian Institute for Advanced Research (CIFAR), which encourages basic research without direct application, was what motivated Hinton to move to Canada in 1987, and funded his work afterward. But, the funding was ended in the mid 90s just as sentiment towards neural nets was becoming negative again. Rather than relenting and switching his focus, Hinton fought to continue work on neural nets, and managed to secure more funding from CIFAR as told well in <a href="http://www.thestar.com/news/world/2015/04/17/how-a-toronto-professors-research-revolutionized-artificial-intelligence.html">this exemplary piece</a><sup id="fnref:1:1"><a href="#fn:1" class="footnote">1</a></sup>:</p>
+
+<blockquote>
+  <p>“But in 2004, Hinton asked to lead a new program on neural computation. The mainstream machine learning community could not have been less interested in neural nets.</p>
+</blockquote>
+
+<blockquote>
+  <p>“It was the worst possible time,” says Bengio, a professor at the Université de Montréal and co-director of the CIFAR program since it was renewed last year. “Everyone else was doing something different. Somehow, Geoff convinced them.”</p>
+</blockquote>
+
+<blockquote>
+  <p>“We should give (CIFAR) a lot of credit for making that gamble.”</p>
+</blockquote>
+
+<blockquote>
+  <p>CIFAR “had a huge impact in forming a community around deep learning,” adds LeCun, the CIFAR program’s other co-director. “We were outcast a little bit in the broader machine learning community: we couldn’t get our papers published. This gave us a place where we could exchange ideas.””</p>
+</blockquote>
+
+<p>The funding was modest, but sufficient to enable a small group of researchers to keep working on the topic. As Hinton tells it, they hatched a conspiracy: “rebrand” the frowned-upon field of neural nets with the moniker “Deep Learning” <sup id="fnref:1:2"><a href="#fn:1" class="footnote">1</a></sup>. Then, what every researcher must dream of actually happened: Hinton, Simon Osindero, and Yee-Whye Teh published a paper in 2006 that was seen as a breakthrough, a breakthrough significant enough to rekindle interest in neural nets: <a href="https://www.cs.toronto.edu/~hinton/absps/fastnc.pdf"><strong>A fast learning algorithm for deep belief nets</strong></a><sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>. Though, as we’ll see, the approaches used in the paper have been superceded by newer work, the movement that is ‘Deep Learning’ can very persuasively be said to have started precisely with this paper. But, more important than the name was the idea - that neural networks with many layers really could be trained well, if the weights are initialized in a clever way rather than randomly. Hinton <a href="https://youtu.be/vShMxxqtDDs?t=6m59s">once expressed</a> the need for such an advance at the time:</p>
+
+<blockquote>
+  <p>“Historically, this was very important in overcoming the belief that these deep neural networks were no good and could never be trained. And that was a very strong belief. A friend of mine sent a paper to ICML [International Conference on Machine Learning], not that long ago, and the referee said it should not accepted by ICML, because it was about neural networks and it was not appropriate for ICML. In fact if you look at ICML last year, there were no papers with ‘neural’ in the title accepted, so ICML should not accept papers about neural networks. That was only a few years ago. And one of the IEEE journals actually had an official policy of [not accepting your papers]. So, it was a strong belief.”</p>
+</blockquote>
+
+<figure>
+    <img class="postimagesmall" src="https://draftin.com:443/images/34953?token=zHc69el3bU7qKD0PwPBDHVLSVQsc0nyufUrpCEm9164_1Alk9kBBHkl5ymeS-6xNRoN3bPMo-J1VV5llJxc5k3M" alt="RBM" /> 
+    <figcaption>A Restricted Boltzmann Machine. <a href="http://deeplearning.net/tutorial/rbm.html">(Source)</a></figcaption>    
+</figure>
+
+<p>So what was the clever way of initializing weights? The basic idea is to train each layer one by one with unsupervised training, which starts off the weights much better than just giving them random values, and then finishing with a round of supervised learning just as is normal for neural nets. Each layer starts out as a Restricted Boltzmann Machine (RBM), which is just a Boltzmann Machine without connections between hidden and visible units as illustrated above, and is taught a generative model of data in an unsupervised fashion. It turns out that this form of Boltzmann machine can be trained in an efficient manner introduced by Hinton in the 2002 <a href="http://www.cs.toronto.edu/~fritz/absps/tr00-004.pdf">“Training Products of Experts by Minimizing Contrastive Divergence”</a><sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>. Basically, this algorithm maximizes something other than the probability of the units generating the training data, which allows for a nice approximation and turns out to still work well. So, using this method, the algorithm is as such:</p>
+
+<ol>
+  <li>Train an RBM on the training data using contrastive-divergence. This is the first layer of the belief net.</li>
+  <li>Generate the hidden values of the trained RBM for the data, and train another RBM using those hidden values. This is the second layer - ‘stack’ it on top of the first and keep weights in just one direction to form a belief net.</li>
+  <li>Keep doing step 2 for as many layers as are desired for the belief net.</li>
+  <li>If classification is desired, add a small set of hidden units that correspond to the classification labels and do a variation on the wake-sleep algorithm to ‘fine-tune’ the weights. Such combinations of unsupervised and supervised learning are often called <strong>semi-supervised</strong> learning.</li>
+</ol>
+
+<figure>
+    <img class="postimagesmall" src="https://draftin.com:443/images/34836?token=eme-iIQe7-0La4-L2TE4ho9Fmj3Hlx4z8dP0khGimjihi31RDYtsPPjHTB5TpCYPlH-I8xFqce5jrbln-lMwokE" alt="From http://www.iro.umontreal.ca/~lisa/twiki/bin/view.cgi/Public/DeepVsShallowComparisonICML2007" /> 
+    <figcaption>The layerwise pre-training that Hinton introduced. <a href="http://deeplearning.net/tutorial/rbm.html">(Source)</a></figcaption>    
+</figure>
+
+<p>The paper concluded by showing that deep belief networks (DBNs) had state of the art performance on the standard MNIST character recognition dataset, significantly outperforming normal neural nets with only a few layers. Yoshua Bengio et al. followed up on this work in 2007 with <a href="http://papers.nips.cc/paper/3048-greedy-layer-wise-training-of-deep-networks.pdf">“Greedy Layer-Wise Training of Deep Networks”</a><sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>, in which they present a strong argument that deep machine learning methods (that is, methods with many processing steps, or equivalently with hierarchical feature representations of the data) are more efficient for difficult problems than shallow methods (which two-layer ANNs or support vector machines are examples of).</p>
+
+<figure>
+    <img class="postimagesmall" src="https://draftin.com:443/images/34966?token=ylFbLB-4cILErX48_1I24s32Oz1uTA-Kr0HzMcF4MKvfhfTS-IG4ybsb8PGouGYxE5uZvVRoHjG_3W2AHs6xMWI" alt="Autoencoder pre-supverised traning" /> 
+    <figcaption>Another view of unsupervised pre-training, using autoencoders instead of RBMs. <a href="https://commons.wikimedia.org/wiki/File:Stacked_Autoencoders.png?uselang=ru">(Source)</a></figcaption>    
+</figure>
+
+<p>They also present reasons for why the addition of unsupervised pre-training works, and conclude that this not only initializes the weights in a more optimal way, but perhaps more importantly leads to more useful learned representations of the data. In fact, using RBMs is not that important - unsupervised pre-training of normal neural net layers using backpropagation with plain Autoencoders layers proved to also work well. Likewise, at the same time another approach called Sparse Coding also showed that unsupervised feature learning was a powerful approach for improving supervised learning performance.</p>
+
+<p>So, the key really was having many layers of computing units so that good high-level representation of data could be learned - in complete disagreement with the traditional approach of hand-designing some nice feature extraction steps and only then doing learning using those features. Hinton and Bengio’s work had empirically demonstrated that fact, but more importantly, showed the premise that deep neural nets could not be trained well to be false. This, LeCun had already demonstrated with CNNs throughout the 90s, but neural nets still went out of favor. Bengio, in collaboration with Yann LeCun, reiterated this on <a href="http://yann.lecun.com/exdb/publis/pdf/bengio-lecun-07.pdf">“Scaling Algorithms Towards AI”</a><sup id="fnref:5"><a href="#fn:5" class="footnote">5</a></sup>:</p>
+
+<blockquote>
+  <p>“Until recently, many believed that training deep architectures was too difficult an optimization problem. However, at least two different approaches have worked well in training such architectures: simple gradient descent applied to convolutional networks [LeCun et al., 1989, LeCun et al., 1998] (for signals and images), and more recently, layer-by-layer unsupervised learning followed by gradient descent [Hinton et al., 2006, Bengio et al., 2007, Ranzato et al., 2006]. Research on deep architectures is in its infancy, and better learning algorithms for deep architectures remain to be discovered. Taking a larger perspective on the objective of discovering learning principles that can lead to AI has been a guiding perspective of this work. We hope to have helped inspire others to seek a solution to the problem of scaling machine learning towards AI.”</p>
+</blockquote>
+
+<p>And inspire they did. Or at least, they started; though deep learning had not yet gained the tsumani momentum that it has today, the wave had unmistakably begun. Still, the results at that point were not that impressive - most of the demonstrated performance in the papers up to this point was for the MNIST dataset, a classic machine learning task that had been the standard benchmark for algorithms for about a decade. Hinton’s 2006 publication demonstrated a very impressive error rate of only 1.25% on the test set, but SVMs had already gotten an error rate of 1.4%, and even simple algorithms could get error rates in the low single digits. And, as was pointed out in the paper, Yann LeCun already demonstrated error rates of 0.95% in 1998 using CNNs.</p>
+
+<p>So, doing well on MNIST was not necessarily that big a deal. Aware of this and confident that it was time for deep learning to take the stage, Hinton and two of his graduate students, Abdel-rahman Mohamed and George Dahl, demonstrated their effectiveness at a far more challenging AI task: <a href="http://www.cs.toronto.edu/~gdahl/papers/dbnPhoneRec.pdf">Speech Recognition</a><sup id="fnref:6"><a href="#fn:6" class="footnote">6</a></sup>. Using DBNs, the two students and Hinton managed to improve on a decade-old performance record on a standard speech recognition dataset. This was an impressive achievement, but in retrospect seems like only a hint at what was coming - in short, many more broken records.</p>
+
+<h1 id="the-importance-of-brute-force">The Importance of Brute Force</h1>
+
+<p>The algorithmic advances described above were undoubtedly important to the emergence of deep learning, but there was another essential component that had emerged in the decade since the 1990s: pure computational power. Following Moore’s law, computers got dozens of times faster since the slow days of the 90s, making learning with large datasets and many layers much more tractable. But even this was not enough - CPUs were starting to hit a ceiling in terms of speed growth, and computer power was starting to increase mainly through  weakly parallel computations with several CPUs. To learn the millions of weights typical in deep models, the limitations of weak CPU parallelism had to be left behind and replaced with the massively parallel computing powers of GPUs. Realizing this is, in part, how Abdel-rahman Mohamed, George Dahl, and Geoff Hinton accomplished their record breaking speech recognition performance<sup id="fnref:7"><a href="#fn:7" class="footnote">7</a></sup>:</p>
+
+<blockquote>
+  <p>“Inspired by one of Hinton’s lectures on deep neural networks, Mohamed began applying them to speech - but deep neural networks required too much computing power for conventional computers – so Hinton and Mohamed enlisted Dahl. A student in Hinton’s lab, Dahl had discovered how to train and simulate neural networks efficiently using the same high-end graphics cards which make vivid computer games feasible on personal computers.</p>
+</blockquote>
+
+<blockquote>
+  <p>They applied the same method to the problem of recognizing fragments of phonemes in very short windows of speech,” said Hinton. “They got significantly better results than previous methods on a standard three-hour benchmark.””</p>
+</blockquote>
+
+<p>It’s hard to say just how much faster using GPUs over CPUs was in this case, but the paper <a href="http://www.machinelearning.org/archive/icml2009/papers/218.pdf">“Large-scale Deep Unsupervised Learning using Graphics Processors”</a><sup id="fnref:8"><a href="#fn:8" class="footnote">8</a></sup> of the same year suggests a number: 70 times faster. Yes, 70 times - reducing weeks of work into days, even a single day. The authors, who had previously developed Sparse Coding, included the prolific Machine Learning researcher Andrew Ng, who increasingly realized that making use of lots of training data and of fast computation had been greatly undervalued by researchers in favor of incremental changes in learning algorithms. This idea was strongly supported by 2010’s <a href="http://arxiv.org/pdf/1003.0358.pdf">“Deep Big Simple Neural Nets Excel on Handwritten Digit Recognition”</a><sup id="fnref:9"><a href="#fn:9" class="footnote">9</a></sup> (notably co-written by J. Schmidhuber, one of the inventors of the recurrent LTSM networks), which showed a whopping %0.35 error rate could be achieved on the MNIST dataset without anything more special than really big neural nets, a lot of variations on the input, and efficient GPU implementations of backpropagation. These ideas had existed for decades, so although it could not be said that algorithmic advancements did not matter, this result did strongly support the notion that the brute force approach of big training sets and fast parallelized computations were also crucial.</p>
+
+<p>Dahl and Mohamed’s use of a GPU to get record breaking results was an early and relatively modest success, but it was sufficient to incite excitement and for the two to be invited to intern at Microsoft Research<sup id="fnref:1:3"><a href="#fn:1" class="footnote">1</a></sup>. Here, they would have the benefit from another trend in computing that had emerged by then: Big Data. That loosest of terms, which in the context of machine learning is easy to understand - lots of training data. And lots of training data is important, because without it neural nets still did not do great - they tended to overfit (perfectly work on the training data, but not generalize to new test data). This makes sense - the complexity of what large neural nets can compute is such that a lot of data is needed to avoid them learning every little unimportant aspect of the training set - but was a major challenge for researchers in the past. So now, the computing and data gathering powers of large companies proved invaluable. The two students handily proved the power of deep learning during their three month internship, and Microsoft Research has been at the forefront of deep learning speech recognition ever since.</p>
+
+<p>Microsoft was not the only BigCompany to recognize the power of deep learning (though it was handily the first). Navdeep Jaitly, another student of Hinton’s, went off to a summer internship at Google in 2011. There, he worked on Google’s speech recognition, and showed their existing setup could be much improved by incorporating deep learning. The revised approach soon powered Android’s speech recognition, replacing much of Google’s carefully crafted prior solution <sup id="fnref:1:4"><a href="#fn:1" class="footnote">1</a></sup>.</p>
+
+<p>Besides the impressive effects of humble PhD interns on these gigantic companies’ products, what is notable here is that both companies were making use of the same ideas - ideas that were out in the open for anyone to work with. And in fact, the work by Microsoft and Google, as well as IBM and Hinton’s lab, resulted in the impressively titled <a href="http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/38131.pdf">“Deep Neural Networks for Acoustic Modeling in Speech Recognition: The Shared Views of Four Research Groups”</a><sup id="fnref:10"><a href="#fn:10" class="footnote">10</a></sup> in 2012. Four research groups - three from companies that could certainly benefit from a briefcase full of patents on the emerging wonder technology of deep learning, and the university research group that popularized that technology - working together and publishing their results to the broader research community. If there was ever an ideal scenario for industry adopting an idea from research, this seems like it.</p>
+
+<p>Not to say the companies were doing this for charity. This was the beginning of all of them exploring how to commercialize the technology, and most of all Google. But it was perhaps not Hinton, but Andrew Ng who incited the company to become likely the world’s biggest commercial adopter and proponent of the technology. In 2011, Ng <a href="https://medium.com/backchannel/google-search-will-be-your-next-brain-5207c26e4523#.b3x9b7ods">incidentally met</a> with the legendary Googler Jeff Dean while visiting the company, and chatted about his efforts to train neural nets with Google’s fantastic computational resources. This intrigued Dean, and together with Ng they formed Google Brain - an effort to build truly giant neural nets and explore what they could do. The work resulted in unsupervised neural net learning of an unprecedented scale - 16,000 CPU cores powering the learning of a whopping 1 billion weights (for comparison, Hinton’s breakthrough 2006 DBN had about 1 million weights). The neural net was trained on Youtube videos, entirely without labels, and learned to recognize the most common objects in those videos - leading of course to the internet’s collective glee over the net’s discovery of cats:</p>
+
+<figure>
+    <img class="postimagesmall" src="https://draftin.com:443/images/34978?token=5YYsfXB4l7NfgnQSV-PHB3ctZ5NVQU0oc5W8MnG1LIDiO6wBW_f9C_hUixutvqV7N4fRH_P0W3ALuOdZbIGf_L4" alt="cat" /> 
+    <figcaption>Google's famous neural-net learned cat. This is the optimal input to one of the neurons. <a href="https://googleblog.blogspot.com/2012/06/using-large-scale-brain-simulations-for.html">(Source)</a></figcaption>    
+</figure>
+
+<p>Cute as that was, it was also useful. As they reported in a regularly published paper, the features learned by the model could be used for record setting performance on a standard computer vision benchmark<sup id="fnref:11"><a href="#fn:11" class="footnote">11</a></sup>. With that, Google’s internal tools for training massive neural nets were born, and they have only continued to evolve since. The wave of deep learning research that began in 2006 had now undeniably made it into industry.</p>
+
+<h1 id="the-ascendance-of-deep-learning">The Ascendance of Deep Learning</h1>
+
+<p>While deep learning was making it into industry, the research community was hardly keeping still. The discovery that efficient use of GPUs and computing power in general was so important made people examine long-held assumptions and ask questions that should have perhaps been asked long ago - namely, why exactly does backpropagation not work well? The insight to ask why the old approaches did not work, rather than why the new approaches did, led Xavier Glort and Yoshua Bengio to write <a href="http://jmlr.org/proceedings/papers/v9/glorot10a/glorot10a.pdf">“Understanding the difficulty of training deep feedforward neural networks”</a> in 2010<sup id="fnref:12"><a href="#fn:12" class="footnote">12</a></sup>. In it, they discussed two very meaningful findings:</p>
+
+<ol>
+  <li>The particular non-linear activation function chosen for neurons in a neural net makes a big impact on performance, and the one often used by default is not a good choice.</li>
+  <li>It was not so much choosing random weights that was problematic, as choosing random weights without consideration for which layer the weights are for. The old vanishing gradient problem happens, basically, because backpropagation involves a sequence of multiplications that invariably result in smaller derivatives for earlier layers. That is, unless weights are chosen with difference scales according to the layer they are in - making this simple change results in significant improvements.</li>
+</ol>
+
+<figure>
+    <img class="postimagesmall" src="https://draftin.com:443/images/34990?token=EsjkMeAXQXbIbaniAeVd0nqCOnwpl2PLo2SLnmkePeWbCSSBB0CG1lTOu_JDP2aDIqCWbB_rfGPuUm_A7MXj2wg" alt="ReLU" /> 
+    <figcaption>Different activation functions. The ReLU is the **rectified linear unit**. <a href="https://imiloainf.wordpress.com/2013/11/06/rectifier-nonlinearities/">(Source)</a></figcaption>    
+</figure>
+
+<p>The second point is quite clear, but the first opens the question: ‘what, then, is the best activation function’? Three different groups explored the question (a group with LeCun, with <a href="http://yann.lecun.com/exdb/publis/pdf/jarrett-iccv-09.pdf">“What is the best multi-stage architecture for object recognition?”</a><sup id="fnref:13"><a href="#fn:13" class="footnote">13</a></sup>, a group with Hinton, in <a href="http://www.cs.toronto.edu/~fritz/absps/reluICML.pdf">“Rectified linear units improve restricted boltzmann machines”</a><sup id="fnref:14"><a href="#fn:14" class="footnote">14</a></sup>, and a group with Bengio -<a href="https://www.utc.fr/~bordesan/dokuwiki/_media/en/glorot10nipsworkshop.pdf">“Deep Sparse Rectifier Neural Networks”</a><sup id="fnref:15"><a href="#fn:15" class="footnote">15</a></sup>), and they all found the same surprising answer: the very much non-differentiable and very simple function f(x)=max(0,x) tends to be the best. Surprising, because the function is kind of weird - it is not strictly differentiable, or rather is not differentiable precisely at zero, so on paper as far as math goes it looks pretty ugly. But, clearly the zero case is a pretty small mathematical quibble - a bigger question is why such a simple function, with constant derivatives on either side of 0, is so good. The answer is not precisely known, but a few ideas seem pretty well established:</p>
+
+<ol>
+  <li>Rectified activation leads to <strong>sparse</strong> representations, meaning not many neurons actually end up needing to output non-zero values for any given input. In the years leading up to this point sparsity was shown to be beneficial for deep learning, both because it represents information in a more robust manner and because it leads to significant computational efficiency (if most of your neurons are outputting zero, you can in effect ignore most of them and compute things much faster). Incidentally, researchers in computational neuroscience first introduced the importance of sparse computation in the context of the brain’s visual system, a decade before it was explored in the context of machine learning.</li>
+  <li>The simplicity of the function, and its derivatives, makes it much faster to work with than the exponential sigmoid or the trigonometric tanh. As with the use of GPUs, this turns out to not just be a small boost but really important for being able to scale neural nets to the point where they perform well on challenging problems.</li>
+  <li>A later analysis titled <a href="http://ai.stanford.edu/~amaas/papers/relu_hybrid_icml2013_final.pdf">“Rectifier Nonlinearities Improve Neural Network Acoustic Models”</a><sup id="fnref:16"><a href="#fn:16" class="footnote">16</a></sup>, co-written by Andrew Ng, also showed the constant 0 or 1 derivative of the ReLU not too detrimental to learning. In fact, it helps avoid the vanishing gradient problem that was the bane of backpropagation. Furthermore, beside producing more sparse representations, it also produces more distributed representations - meaning is derived from the combination of multiple values of different neurons, rather than being localized to individual neurons.</li>
+</ol>
+
+<p>At this point, with all these discoveries since 2006, it had become clear that unsupervised pre-training is not essential to deep learning. It was helpful, no doubt, but it was also shown that in some cases well-done, purely supervised training (with the correct starting weight scales and activation function) could outperform training that included the unsupervised step. So, why indeed, did purely supervised learning with backpropagation not work well in the past? Geoffrey Hinton <a href="https://youtu.be/IcOMKXAw5VA?t=21m29s">summarized the findings up to today in these four points</a>:</p>
+
+<ol>
+  <li>Our labeled datasets were thousands of times too small.</li>
+  <li>Our computers were millions of times too slow.</li>
+  <li>We initialized the weights in a stupid way.</li>
+  <li>We used the wrong type of non-linearity.</li>
+</ol>
+
+<p>So here we are. Deep learning. The culmination of decades of research, all leading to this:</p>
+
+<blockquote>
+  <p><strong>Deep Learning =<br />
+        Lots of training data + Parallel Computation + Scalable, smart algorithms</strong></p>
+</blockquote>
+
+<figure>
+    <img class="postimagesmall" src="https://draftin.com:443/images/34968?token=mNMoQEOZRbbIXdXVDFZry4exMhFX-S9L8PH5MM1ADWxHdSgOcgwn-zp89AaoIoAT3_BqeE4V2XiXD7haXwqklP8" alt="Equation" /> 
+    <figcaption>I wish I was first to come up with this delightful equation, but it seems others came up with it before me. <a href="http://www.computervisionblog.com/2015/05/deep-learning-vs-big-data-who-owns-what.html">(Source)</a></figcaption>    
+</figure>
+
+<p>Not to say all there was to figure out was figured out by this point. Far from it. What had been figured out is exactly the opposite: that peoples’ intuition was often wrong, and in particular unquestioned decisions and assumptions were often very unfounded. Asking simple questions, trying simple things - these had the power to greatly improve state of the art techniques. And precisely that has been happening, with many more ideas and approaches being explored and shared in deep learning since. An example: <a href="http://arxiv.org/pdf/1207.0580.pdf">“Improving neural networks by preventing co-adaptation of feature detectors”</a><sup id="fnref:17"><a href="#fn:17" class="footnote">17</a></sup> by G. E. Hinton et al. The idea is very simple: to prevent overfitting, randomly pretend some neurons are not there while training. This straightforward idea - called <strong>Dropout</strong> - is a very efficient means of implementing the hugely powerful approach of ensemble learning, which just means learning in many different ways from the training data. Random Forests, a dominating technique in machine learning to this day, is chiefly effective due to being a form of ensemble learning. Training many different neural nets is possible but is far too computationally expensive, yet this simple idea in essence achieves the same thing and indeed significantly improves performance.</p>
+
+<p>Still, having all these research discoveries since 2006 is not what made the computer vision or other research communities again respect neural nets. What did do it was something somewhat less noble: completely destroying non-deep learning methods on a modern competitive benchmark. Geoffrey Hinton enlisted two of his Dropout co-writers, Alex Krizhevsky and Ilya Sutskever, to apply the ideas discovered to create an entry to the ILSVRC-2012 computer vision competition. To me, it is very striking to now understand that their work, described in <a href="http://www.cs.toronto.edu/~fritz/absps/imagenet.pdf">“ImageNet Classification with deep convolutional neural networks”</a><sup id="fnref:18"><a href="#fn:18" class="footnote">18</a></sup>, is the combination of very old concepts (a CNN with pooling and convolution layers, variations on the input data) with several new key insight (very efficient GPU implementation, ReLU neurons, dropout), and that this, precisely this, is what modern deep learning is. So, how did they do? Far, far better than the next closest entry: their error rate was %15.3, whereas the second closest was %26.2. This, the first and only CNN entry in that competition, was an undisputed sign that CNNs, and deep learning in general, had to be taken seriously for computer vision. Now, almost all entries to the competition are CNNs - a neural net model Yann LeCun was working with since 1989. And, remember LSTM recurrent neural nets, devised in the 90s by Sepp Hochreiter and Jürgen Schmidhuber to solve the backpropagation problem? Those, too, are now state of the art for sequential tasks such as speech processing.</p>
+
+<p>This was the turning point. A mounting wave of excitement about possible progress has culminated in undeniable achievements that far surpassed what other known techniques could manage. The tsunami metaphor that we started with in part 1, this is where it began, and it has been growing and intensifying to this day. Deep learning is here, and no winter is in sight.</p>
+
+<figure>
+    <img class="postimagesmall" src="https://draftin.com:443/images/34991?token=qzrUAAJqtenu9pNK9CtttT7LRBHwKlOr7udYaUSBRoKNhJjnTJJhUYBGmkUcZVqVvm_D3UwK23d-yTj1ni-clhU" alt="From Google Scholar" /> 
+    <figcaption>The citation counts for some of the key people we have seen develop deep learning. I believe I don't need to point out the exponential trends since 2012. From Google Scholar. </figcaption>    
+</figure>
+
+<h1 id="epilogue-state-of-the-art">Epilogue: state of the art</h1>
+
+<p>If this were a movie, the 2012 ImageNet competition would likely have been the climax, and now we would have a progression of text describing ‘where are they now’. Yann LeCun - Facebook. Geoffrey Hinton - Google. Andrew Ng - Coursera, Google, Baidu. Bengio, Schmidhuber, and Hochreiter actually still in academia - but presumably with many more citations and/or grad students<sup id="fnref:19"><a href="#fn:19" class="footnote">19</a></sup>.  Though the ideas and achievements of deep learning are definitely exciting, while writing this I was inevitably also moved that these people, who worked in this field for decades (even as most abandoned it), are now rich, successful, and most of all better situated to do research than ever. All these peoples’ ideas are still very much out in the open, and in fact basically all these companies are open sourcing their deep learning frameworks, like some sort of utopian vision of industry-led research. What a story.</p>
+
+<p>I was foolish enough to hope I could fit a summary of the most impressive results of the past several years in this part, but at this point it is clear I will not have the space to do so. Perhaps one day there will be a part five of this that can finish out the tale by describing these things, but for now let me provide a brief list:</p>
+
+<p>1 - The resurgence of LTSM RNNs + representing ‘ideas’ with <a href="http://machinelearning.wustl.edu/mlpapers/paper_files/BengioDVJ03.pdf">distributed representations</a></p>
+
+<figure>
+    <img class="postimagesmall" src="https://draftin.com:443/images/34992?token=BfZWKt2mBMH5H3j82QmADSH7i1sKJemavojs6daR5fbgqsxTIpTXn47ji7ChiCqCrkp8jJS7nPpRZhRKlNh9L2E" alt="From Google, taken at https://gigaom.com/2014/11/18/google-stanford-build-hybrid-neural-networks-that-can-explain-photos/" /> 
+    <figcaption>A result from last year. Just look at that! <a href="https://gigaom.com/2014/11/18/google-stanford-build-hybrid-neural-networks-that-can-explain-photos/">(Source)</a></figcaption>    
+</figure>
+
+<p><a href="http://blogs.microsoft.com/blog/2014/05/27/microsoft-demos-breakthrough-in-real-time-translated-conversations/">Skype real time translation</a></p>
+
+<p>2 - Using deep learning for reinforcement learning (again, but better)</p>
+
+<figure>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/V1eYniJ0Rnk" frameborder="0" allowfullscreen=""></iframe>
+</figure>
+
+<p><a href="http://arxiv.org/abs/1509.01549">Chess playing!</a></p>
+
+<p>3 - Adding external memory writable and readable to by the neural net</p>
+
+<figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/U_Wgc1JOsBk" frameborder="0" allowfullscreen=""></iframe>
+</figure>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Kate Allen. How a Toronto professor’s research revolutionized artificial intelligence Science and Technology reporter, Apr 17 2015 http://www.thestar.com/news/world/2015/04/17/how-a-toronto-professors-research-revolutionized-artificial-intelligence.html <a href="#fnref:1" class="reversefootnote">&#8617;</a> <a href="#fnref:1:1" class="reversefootnote">&#8617;<sup>2</sup></a> <a href="#fnref:1:2" class="reversefootnote">&#8617;<sup>3</sup></a> <a href="#fnref:1:3" class="reversefootnote">&#8617;<sup>4</sup></a> <a href="#fnref:1:4" class="reversefootnote">&#8617;<sup>5</sup></a></p>
+    </li>
+    <li id="fn:2">
+      <p>Hinton, G. E., Osindero, S., &amp; Teh, Y. W. (2006). A fast learning algorithm for deep belief nets. Neural computation, 18(7), 1527-1554. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>Hinton, G. E. (2002). Training products of experts by minimizing contrastive divergence. Neural computation, 14(8), 1771-1800. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>Bengio, Y., Lamblin, P., Popovici, D., &amp; Larochelle, H. (2007). Greedy layer-wise training of deep networks. Advances in neural information processing systems, 19, 153. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:5">
+      <p>Bengio, Y., &amp; LeCun, Y. (2007). Scaling learning algorithms towards AI. Large-scale kernel machines, 34(5). <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:6">
+      <p>Mohamed, A. R., Sainath, T. N., Dahl, G., Ramabhadran, B., Hinton, G. E., &amp; Picheny, M. (2011, May). Deep belief networks using discriminative features for phone recognition. In Acoustics, Speech and Signal Processing (ICASSP), 2011 IEEE International Conference on (pp. 5060-5063). IEEE. <a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:7">
+      <p>November 26, 2012. Leading breakthroughs in speech recognition software at Microsoft, Google, IBM  Source: http://news.utoronto.ca/leading-breakthroughs-speech-recognition-software-microsoft-google-ibm <a href="#fnref:7" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:8">
+      <p>Raina, R., Madhavan, A., &amp; Ng, A. Y. (2009, June). Large-scale deep unsupervised learning using graphics processors. In Proceedings of the 26th annual international conference on machine learning (pp. 873-880). ACM. <a href="#fnref:8" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:9">
+      <p>Claudiu Ciresan, D., Meier, U., Gambardella, L. M., &amp; Schmidhuber, J. (2010). Deep big simple neural nets excel on handwritten digit recognition. arXiv preprint arXiv:1003.0358. <a href="#fnref:9" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:10">
+      <p>Hinton, G., Deng, L., Yu, D., Dahl, G. E., Mohamed, A. R., Jaitly, N., … &amp; Kingsbury, B. (2012). Deep neural networks for acoustic modeling in speech recognition: The shared views of four research groups. Signal Processing Magazine, IEEE, 29(6), 82-97. <a href="#fnref:10" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:11">
+      <p>Le, Q. V. (2013, May). Building high-level features using large scale unsupervised learning. In Acoustics, Speech and Signal Processing (ICASSP), 2013 IEEE International Conference on (pp. 8595-8598). IEEE. <a href="#fnref:11" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:12">
+      <p>Glorot, X., &amp; Bengio, Y. (2010). Understanding the difficulty of training deep feedforward neural networks. In International conference on artificial intelligence and statistics (pp. 249-256). <a href="#fnref:12" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:13">
+      <p>Jarrett, K., Kavukcuoglu, K., Ranzato, M. A., &amp; LeCun, Y. (2009, September). What is the best multi-stage architecture for object recognition?. In Computer Vision, 2009 IEEE 12th International Conference on (pp. 2146-2153). IEEE. <a href="#fnref:13" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:14">
+      <p>Nair, V., &amp; Hinton, G. E. (2010). Rectified linear units improve restricted boltzmann machines. In Proceedings of the 27th International Conference on Machine Learning (ICML-10) (pp. 807-814). <a href="#fnref:14" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:15">
+      <p>Glorot, X., Bordes, A., &amp; Bengio, Y. (2011). Deep sparse rectifier neural networks. In International Conference on Artificial Intelligence and Statistics (pp. 315-323). <a href="#fnref:15" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:16">
+      <p>Maas, A. L., Hannun, A. Y., &amp; Ng, A. Y. (2013, June). Rectifier nonlinearities improve neural network acoustic models. In Proc. ICML (Vol. 30). <a href="#fnref:16" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:17">
+      <p>Hinton, G. E., Srivastava, N., Krizhevsky, A., Sutskever, I., &amp; Salakhutdinov, R. R. (2012). Improving neural networks by preventing co-adaptation of feature detectors. arXiv preprint arXiv:1207.0580. <a href="#fnref:17" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:18">
+      <p>Krizhevsky, A., Sutskever, I., &amp; Hinton, G. E. (2012). Imagenet classification with deep convolutional neural networks. In Advances in neural information processing systems (pp. 1097-1105). <a href="#fnref:18" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:19">
+      <p>http://www.technologyreview.com/news/524026/is-google-cornering-the-market-on-deep-learning/ <a href="#fnref:19" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+
+      <div class="contentinfo">           
+        <h4 id="postnav"><a href="/writing/a-brief-history-of-neural-nets-and-deep-learning-part-3/">Previous Post</a> 
+                        | <a href="/writing/organizing-my-emails-with-a-neural-net/">Next Post</a></h4>
+        <div id="mc_embed_signup">
+  <form action="//andreykurenkov.us12.list-manage.com/subscribe/post?u=4fd9f0f18da6483fe39140533&amp;id=ef01796314" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <div id="mc_embed_signup_scroll">
+
+    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      <div style="position: absolute; left: -5000px;"><input type="text" name="b_4fd9f0f18da6483fe39140533_ef01796314" tabindex="-1" value=""></div>
+      <div class="clear"><input type="submit" value="send me your writing" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
+    </div>
+
+  </form>
+</div>
+<!--End mc_embed_signup-->
+
+        <p id="post-meta">Posted with <i class="fa fa-tags"></i>: <a href="/writing/tag/ml_writing/">ml_writing</a>, <a href="/writing/tag/ai/">ai</a>, <a href="/writing/tag/technical/">technical</a>, <a href="/writing/tag/history/">history</a></p>
+        <div class="social-share">
+  <h4>Share on</h4>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=/writing/a-brief-history-of-neural-nets-and-deep-learning-part-4/" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=/writing/a-brief-history-of-neural-nets-and-deep-learning-part-4/" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=/writing/a-brief-history-of-neural-nets-and-deep-learning-part-4/" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+  </ul>
+</div><!-- /.social-share -->
+        
+          <section id="disqus_thread"></section><!-- /#disqus_thread -->
+        
+         <span><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</span>
+      </div>
+    </div><!-- /.article-wrap -->
+  </article>
+</div><!-- /#main -->
+</br>
+
+    
+    </div><!-- /#main -->
+  </div>
+
+<footer>
+  <span>&copy; 2017 Andrey Kurenkov. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://github.com/mmistakes/minimal-mistakes" rel="nofollow">Minimal Mistakes</a> and <a href="https://github.com/mmistakes/skinny-bones-jekyll">Skinny Bones</a> themes.</span>
+
+</footer>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/assets/js/scripts.min.js"></script>
+
+
+<!--Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl = 
+ '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-54402578-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'eclecticcreations'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+  
+</body>
+</html>
