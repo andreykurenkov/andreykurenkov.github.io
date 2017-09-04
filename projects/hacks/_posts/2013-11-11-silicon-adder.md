@@ -17,7 +17,7 @@ image:
 what: A silicon-level VLSP implementation of a 32-bit adder
 who: Me
 why: Done for a class, no real choice here
-where: Georgia Tech - done for ECE 3060 class project
+where: Georgia Tech, ECE 3060
 when: Nov 2013 
 images:
   loop: true

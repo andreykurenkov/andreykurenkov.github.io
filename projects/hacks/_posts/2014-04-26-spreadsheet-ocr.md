@@ -17,7 +17,7 @@ image:
 what: Entirely custom implementation of OCR to extract spreadsheets
 who: Me, Pavel Komarov, Ricky Liou, Hank McCord, Miguel Serrano
 why: I had to write many tables in lab and manually transfer those to my computer, which struck me as silly
-where: Georgia Tech - done for ECE 4580 class project
+where: Georgia Tech, ECE 4580
 when: March-April 2014 
 links:
   - name: SVN Repo

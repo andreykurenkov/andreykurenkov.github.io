@@ -17,7 +17,7 @@ image:
 what: A little project to evaluate ROS SLAM packages with a Kinect
 who: Me with a couple of guys
 why: Because getting to play with a Kinect for a final project is awesome
-where: Georgia Tech - done for CS 3630 class project
+where: Georgia Tech, CS 3630
 when: April 2013 
 images:
   loop: true

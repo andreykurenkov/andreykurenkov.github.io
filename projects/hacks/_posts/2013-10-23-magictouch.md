@@ -17,7 +17,7 @@ image:
 what: A library for hand tracking on Android
 who: Me and Stefano Fenu
 why: Why sleep when one can try, and fail, to implement full hand tracking on Android to run on top of any app?
-where: Georgia Tech - done for ECE 4580 class project
+where: Georgia Tech, hackathon
 when: Oct 23, 2013 
 links:
   - name: GitHub Repo

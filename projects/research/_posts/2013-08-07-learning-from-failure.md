@@ -21,7 +21,7 @@ links:
 what: Improved robot planning by learning from prior mistakes
 who: Me, worked with direction from Pras Velagapudi and Sidd Srinivasa
 why: Roboticists spend a lot of time tweaking things after robots mess up, and the idea was to try and find a way to automate that with learning
-where: CMU, at the Personal Robotics Lab
+where: CMU, Personal Robotics Lab
 when: June-August 2013
 images:
   loop: true

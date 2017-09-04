@@ -17,14 +17,24 @@
     color: lighten($text-color,25);
     line-height: 1.5;
     text-align: center;
+    margin-top: 5px;
   }
   .post-title {
     @include fancy-font-size(18,no);
     line-height: 1;
     text-align: center;
+    margin-top: 5px;
+  }
+  .post-when {
+    @include fancy-font-size(14,no);
+    color: lighten($text-color,15);
+    line-height: 1;
+    text-align: center;
+    margin-top: 5px;
   }
   .post-excerpt {
     @include fancy-font-size(16);
+    margin-top: 5px;
   }
   .post-teaser {
     position: relative;

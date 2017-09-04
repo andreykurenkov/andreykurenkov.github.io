@@ -9,7 +9,7 @@ image:
   feature: main-page.jpg
 ---
 
-Hi there. I am Andrey Kurenkov, a 24 year old grad student at Stanford that likes do research about AI and robotics, write code, appreciate art, and ponder about life. Currently, I am working towards a Masters in CS at Stanford, and am a research assitant at the Stanford Vision Lab with Animesh Garg and Silvio Savarase. This side documents my various projects, my blog writing (technical and not), and just for fun my photography.
+Hi there. I am Andrey Kurenkov, a 24 year old grad student at Stanford that likes do research about AI and robotics, write code, appreciate art, and ponder about life. Currently, I am working towards a Masters in CS at Stanford, and am a research assitant at the Stanford Vision Lab with Animesh Garg and Silvio Savarase. This site documents my various projects, my blog writing (technical and not), and just for fun my photography.
 
 > "I love writing. I get a kick out of sharing my thoughts with others. The act of transforming ideas into words is an amazingly efficient way to solidify and refine your thoughts about a given topic. " -Tom Preston (creator of Jekyll), [Blogging Like a Hacker](http://tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html)
 

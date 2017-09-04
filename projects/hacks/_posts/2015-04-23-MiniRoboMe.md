@@ -16,7 +16,7 @@ image:
 what: A little teleoperated robot based on Android
 who: Me
 why: I had to choose a project for CS 3651, Intelligent Devices, and this struck me as a fun project
-where: Georgia Tech - done for ECE CS 3651 class project
+where: Georgia Tech, CS 3651
 when: March-April 2015 
 links:
   - name: Report

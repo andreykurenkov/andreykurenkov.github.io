@@ -1,6 +1,6 @@
 ---
 layout: project-post
-title: Oracle Systems Manager
+title: OSM
 date: 2017-07-14
 tags: [team]
 status: publish

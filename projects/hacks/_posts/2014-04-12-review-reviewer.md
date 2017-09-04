@@ -17,7 +17,7 @@ image:
 what: Machine-learned prediction of review helpfulness score
 who: Me, Stefano Fenu, Charles Wang
 why: We were told to do an NLP-based project, and predicting review helpfulness with a massive dataset was an awesome idea for that
-where: Georgia Tech - done for CS 4650 class project
+where: Georgia Tech, CS 4650
 when: April 2014
 links:
   - name: Project Report

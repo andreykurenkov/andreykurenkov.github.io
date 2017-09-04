@@ -17,7 +17,7 @@ image:
 what: A project to categorize emails into categories based on my gmail archives
 who: Me
 why: We got the option to work with a custom dataset for our ML project, and I did not hesitate to do this awesome project
-where: Georgia Tech - for CS 4650, Machine Learning
+where: Georgia Tech, CS 4650
 when: January 2014
 links:
   - name: GitHub Repo

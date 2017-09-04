@@ -24,7 +24,7 @@ links:
 what: Exploring the feasibility of implementing hardware neural nets using memristors
 who: Me and Nicolas Merlinge, supervised by Davide Sachetto and the professor
 why: The microelectronic circuit world is super excited by memristors
-where: EPFL, as part of an international research internship program
+where: EPFL, Microelectronic Systems Lab
 when: August 2012-May 2013
 images:
   loop: true

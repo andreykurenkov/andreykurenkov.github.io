@@ -18,7 +18,7 @@ when: August 2014-May 2015
 what: Research on the representation, teaching methods, and optimization of robust skills that are defined by constraints 
 who: Me, with much help from Baris Akgun and directed by Prof. Andrea Thomaz
 why: Constraint-defined skills can be used in varied environments, but it is not obvious how non-roboticists can teach such skills to robots
-where: Georgia Tech, at the Socially Intelligent Machines (SIM) lab
+where: Georgia Tech, Socially Intelligent Machines lab
 links:
   - name: Proof of publication
     url: https://ras.papercept.net/conferences/scripts/abstract.pl?ConfID=103&Number=2030

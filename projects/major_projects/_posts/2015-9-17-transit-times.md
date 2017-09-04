@@ -16,7 +16,7 @@ image:
   teaser: logo.png
 what: Beacon-based instant info about when the bus or train will get to your stop via an app, smartwatch, or website
 why: I ride the VTA, and this seemed like something that should exist - the competition gave us a good excuse to make it
-where: Bay Area - done for the hackmyride2 DevPost challenge sponsored by the VTA
+where: Bay Area, hackmyride2 challenge
 when: Fall 2015
 who: Me and Alex Bettadapur
 links:

@@ -18,7 +18,7 @@ when: January 2017-May 2017
 what: A novel idea of incorporating 3D deformation of point cloud in a deep learned model, applied to 3D reconstruction
 who: Andrey Kurenkov, Jingwei Ji, Animesh Garg, Viraj Mehta, JunYoung Gwak, Christopher Choy, Silvio Savarese
 why: Deformations from similar objets based on shape retrieval is an intuitively reasonable approach to 3D reconstruction, and so this was a good idea.
-where: Stanford, at the Stanford Vision Lab (SVL)
+where: Stanford Vision Lab
 links:
   - name: Arxiv Post
     url: https://arxiv.org/abs/1708.04672
