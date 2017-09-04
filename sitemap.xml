@@ -2,35 +2,39 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>/projects/major_projects/KerasJS3D/</loc>
-    <lastmod>2017-08-18T00:00:00-04:00</lastmod>
+    <lastmod>2017-08-18T00:00:00-07:00</lastmod>
   </url>
   <url>
     <loc>/projects/research/deformnet/</loc>
-    <lastmod>2017-08-11T00:00:00-04:00</lastmod>
+    <lastmod>2017-08-11T00:00:00-07:00</lastmod>
   </url>
   <url>
     <loc>/writing/moving-on-looking-back/</loc>
-    <lastmod>2017-07-28T19:19:34-04:00</lastmod>
+    <lastmod>2017-07-28T16:19:34-07:00</lastmod>
   </url>
   <url>
     <loc>/projects/team_projects/oracle-systems-manager/</loc>
-    <lastmod>2017-07-14T00:00:00-04:00</lastmod>
+    <lastmod>2017-07-14T00:00:00-07:00</lastmod>
   </url>
   <url>
     <loc>/projects/hacks/objectcropbot/</loc>
-    <lastmod>2017-02-18T00:00:00-05:00</lastmod>
+    <lastmod>2017-02-18T00:00:00-08:00</lastmod>
+  </url>
+  <url>
+    <loc>/projects/hacks/imdb-data-viz/</loc>
+    <lastmod>2017-02-18T00:00:00-08:00</lastmod>
   </url>
   <url>
     <loc>/projects/major_projects/deepcrop/</loc>
-    <lastmod>2016-12-16T04:26:22-05:00</lastmod>
+    <lastmod>2016-12-16T01:26:22-08:00</lastmod>
   </url>
   <url>
     <loc>/writing/visualizing-imdb-data-with-d3/</loc>
-    <lastmod>2016-08-10T19:19:34-04:00</lastmod>
+    <lastmod>2016-08-10T16:19:34-07:00</lastmod>
   </url>
   <url>
     <loc>/projects/hacks/vividvr/</loc>
-    <lastmod>2016-06-17T00:00:00-04:00</lastmod>
+    <lastmod>2016-06-17T00:00:00-07:00</lastmod>
   </url>
   <url>
     <loc>/writing/power-of-ipython-pandas-scikilearn/</loc>
@@ -38,7 +42,7 @@
   </url>
   <url>
     <loc>/projects/hacks/verbosify/</loc>
-    <lastmod>2016-05-07T00:00:00-04:00</lastmod>
+    <lastmod>2016-05-07T00:00:00-07:00</lastmod>
   </url>
   <url>
     <loc>/writing/the-distinct-artistry-of-trailers/</loc>
@@ -46,7 +50,7 @@
   </url>
   <url>
     <loc>/projects/major_projects/planr/</loc>
-    <lastmod>2016-05-05T05:26:22-04:00</lastmod>
+    <lastmod>2016-05-05T02:26:22-07:00</lastmod>
   </url>
   <url>
     <loc>/writing/a-brief-history-of-game-ai-part-3/</loc>
@@ -74,179 +78,179 @@
   </url>
   <url>
     <loc>/writing/a-brief-history-of-neural-nets-and-deep-learning-part-4/</loc>
-    <lastmod>2015-12-24T21:19:34-05:00</lastmod>
+    <lastmod>2015-12-24T18:19:34-08:00</lastmod>
   </url>
   <url>
     <loc>/writing/a-brief-history-of-neural-nets-and-deep-learning-part-3/</loc>
-    <lastmod>2015-12-24T20:19:34-05:00</lastmod>
+    <lastmod>2015-12-24T17:19:34-08:00</lastmod>
   </url>
   <url>
     <loc>/writing/a-brief-history-of-neural-nets-and-deep-learning-part-2/</loc>
-    <lastmod>2015-12-24T19:19:34-05:00</lastmod>
+    <lastmod>2015-12-24T16:19:34-08:00</lastmod>
   </url>
   <url>
     <loc>/writing/a-brief-history-of-neural-nets-and-deep-learning/</loc>
-    <lastmod>2015-12-24T18:19:34-05:00</lastmod>
+    <lastmod>2015-12-24T15:19:34-08:00</lastmod>
   </url>
   <url>
     <loc>/writing/movie-recommendations-for-the-aspiring-eclectic-intellectual/</loc>
-    <lastmod>2015-10-22T19:19:34-04:00</lastmod>
+    <lastmod>2015-10-22T16:19:34-07:00</lastmod>
   </url>
   <url>
     <loc>/writing/exceptional-people/</loc>
-    <lastmod>2015-10-11T19:19:34-04:00</lastmod>
+    <lastmod>2015-10-11T16:19:34-07:00</lastmod>
   </url>
   <url>
     <loc>/writing/on-employment/</loc>
-    <lastmod>2015-09-24T23:00:00-04:00</lastmod>
+    <lastmod>2015-09-24T20:00:00-07:00</lastmod>
   </url>
   <url>
     <loc>/projects/major_projects/transit-times/</loc>
-    <lastmod>2015-09-17T05:26:22-04:00</lastmod>
+    <lastmod>2015-09-17T02:26:22-07:00</lastmod>
   </url>
   <url>
     <loc>/projects/major_projects/personal-site/</loc>
-    <lastmod>2015-08-10T00:00:00-04:00</lastmod>
+    <lastmod>2015-08-10T00:00:00-07:00</lastmod>
   </url>
   <url>
     <loc>/writing/hello-to-andreykurenkov-com/</loc>
-    <lastmod>2015-08-07T21:39:03-04:00</lastmod>
+    <lastmod>2015-08-07T18:39:03-07:00</lastmod>
   </url>
   <url>
     <loc>/writing/on-work/</loc>
-    <lastmod>2015-07-24T05:26:22-04:00</lastmod>
+    <lastmod>2015-07-24T02:26:22-07:00</lastmod>
   </url>
   <url>
     <loc>/writing/why-i-consume-soylent/</loc>
-    <lastmod>2015-07-12T04:02:07-04:00</lastmod>
+    <lastmod>2015-07-12T01:02:07-07:00</lastmod>
   </url>
   <url>
     <loc>/writing/on-the-successes-of-the-last-of-us-and-the-failures-of-bioshock-infinite/</loc>
-    <lastmod>2015-06-23T04:37:52-04:00</lastmod>
+    <lastmod>2015-06-23T01:37:52-07:00</lastmod>
   </url>
   <url>
     <loc>/writing/some-more-thoughts-on-being/</loc>
-    <lastmod>2015-06-21T04:04:48-04:00</lastmod>
+    <lastmod>2015-06-21T01:04:48-07:00</lastmod>
   </url>
   <url>
     <loc>/writing/on-how-utterly-fantastic-brothers-a-tale-of-two-sons-is/</loc>
-    <lastmod>2015-06-08T19:05:08-04:00</lastmod>
+    <lastmod>2015-06-08T16:05:08-07:00</lastmod>
   </url>
   <url>
     <loc>/projects/team_projects/mapping-sprayer/</loc>
-    <lastmod>2015-05-02T00:00:00-04:00</lastmod>
+    <lastmod>2015-05-02T00:00:00-07:00</lastmod>
   </url>
   <url>
     <loc>/projects/research/teaching-constrained-skills/</loc>
-    <lastmod>2015-05-01T00:00:00-04:00</lastmod>
+    <lastmod>2015-05-01T00:00:00-07:00</lastmod>
   </url>
   <url>
     <loc>/projects/team_projects/solarracing/</loc>
-    <lastmod>2015-05-01T00:00:00-04:00</lastmod>
+    <lastmod>2015-05-01T00:00:00-07:00</lastmod>
   </url>
   <url>
     <loc>/projects/hacks/MiniRoboMe/</loc>
-    <lastmod>2015-04-23T00:00:00-04:00</lastmod>
+    <lastmod>2015-04-23T00:00:00-07:00</lastmod>
   </url>
   <url>
     <loc>/projects/team_projects/ai-ta/</loc>
-    <lastmod>2015-04-01T00:00:00-04:00</lastmod>
+    <lastmod>2015-04-01T00:00:00-07:00</lastmod>
   </url>
   <url>
     <loc>/projects/major_projects/flipswitch/</loc>
-    <lastmod>2015-03-26T00:00:00-04:00</lastmod>
+    <lastmod>2015-03-26T00:00:00-07:00</lastmod>
   </url>
   <url>
     <loc>/writing/in-my-head-music-videos-i-dont-forget/</loc>
-    <lastmod>2015-03-10T11:01:01-04:00</lastmod>
+    <lastmod>2015-03-10T08:01:01-07:00</lastmod>
   </url>
   <url>
     <loc>/writing/some-thoughts-on-being/</loc>
-    <lastmod>2015-02-15T04:39:50-05:00</lastmod>
+    <lastmod>2015-02-15T01:39:50-08:00</lastmod>
   </url>
   <url>
     <loc>/writing/on-the-walking-dead-and-artistic-coherence/</loc>
-    <lastmod>2014-11-18T04:18:13-05:00</lastmod>
+    <lastmod>2014-11-18T01:18:13-08:00</lastmod>
   </url>
   <url>
     <loc>/projects/research/memristor-neuromorphic-circuits/</loc>
-    <lastmod>2014-08-08T00:00:00-04:00</lastmod>
+    <lastmod>2014-08-08T00:00:00-07:00</lastmod>
   </url>
   <url>
     <loc>/writing/reflections-on-magie-du-paysage-russe/</loc>
-    <lastmod>2014-07-21T22:56:40-04:00</lastmod>
+    <lastmod>2014-07-21T19:56:40-07:00</lastmod>
   </url>
   <url>
     <loc>/writing/ethical-problems-on-my-daily-commute/</loc>
-    <lastmod>2014-06-28T21:38:35-04:00</lastmod>
+    <lastmod>2014-06-28T18:38:35-07:00</lastmod>
   </url>
   <url>
     <loc>/writing/on-memristors-or-what-am-i-being-paid-to-do-in-switzerland/</loc>
-    <lastmod>2014-06-11T20:11:43-04:00</lastmod>
+    <lastmod>2014-06-11T17:11:43-07:00</lastmod>
   </url>
   <url>
     <loc>/writing/why-does-this-blog-exist/</loc>
-    <lastmod>2014-06-05T19:06:51-04:00</lastmod>
+    <lastmod>2014-06-05T16:06:51-07:00</lastmod>
   </url>
   <url>
     <loc>/projects/major_projects/grade-seer/</loc>
-    <lastmod>2014-05-01T05:26:22-04:00</lastmod>
+    <lastmod>2014-05-01T02:26:22-07:00</lastmod>
   </url>
   <url>
     <loc>/projects/hacks/spreadsheet-ocr/</loc>
-    <lastmod>2014-04-26T00:00:00-04:00</lastmod>
+    <lastmod>2014-04-26T00:00:00-07:00</lastmod>
   </url>
   <url>
     <loc>/projects/hacks/review-reviewer/</loc>
-    <lastmod>2014-04-12T00:00:00-04:00</lastmod>
+    <lastmod>2014-04-12T00:00:00-07:00</lastmod>
   </url>
   <url>
     <loc>/projects/hacks/circuit-scan/</loc>
-    <lastmod>2014-04-12T00:00:00-04:00</lastmod>
+    <lastmod>2014-04-12T00:00:00-07:00</lastmod>
   </url>
   <url>
     <loc>/projects/hacks/email-filer/</loc>
-    <lastmod>2014-01-23T00:00:00-05:00</lastmod>
+    <lastmod>2014-01-23T00:00:00-08:00</lastmod>
   </url>
   <url>
     <loc>/projects/hacks/silicon-adder/</loc>
-    <lastmod>2013-11-11T00:00:00-05:00</lastmod>
+    <lastmod>2013-11-11T00:00:00-08:00</lastmod>
   </url>
   <url>
     <loc>/projects/hacks/magictouch/</loc>
-    <lastmod>2013-10-23T00:00:00-04:00</lastmod>
+    <lastmod>2013-10-23T00:00:00-07:00</lastmod>
   </url>
   <url>
     <loc>/projects/hacks/3-sketch3d/</loc>
-    <lastmod>2013-09-23T00:00:00-04:00</lastmod>
+    <lastmod>2013-09-23T00:00:00-07:00</lastmod>
   </url>
   <url>
     <loc>/projects/research/learning-from-failure/</loc>
-    <lastmod>2013-08-07T00:00:00-04:00</lastmod>
+    <lastmod>2013-08-07T00:00:00-07:00</lastmod>
   </url>
   <url>
     <loc>/projects/team_projects/first/</loc>
-    <lastmod>2013-08-07T00:00:00-04:00</lastmod>
+    <lastmod>2013-08-07T00:00:00-07:00</lastmod>
   </url>
   <url>
     <loc>/projects/major_projects/meta-music/</loc>
-    <lastmod>2013-05-03T00:00:00-04:00</lastmod>
+    <lastmod>2013-05-03T00:00:00-07:00</lastmod>
   </url>
   <url>
     <loc>/projects/research/mrsim/</loc>
-    <lastmod>2013-04-28T00:00:00-04:00</lastmod>
+    <lastmod>2013-04-28T00:00:00-07:00</lastmod>
   </url>
   <url>
     <loc>/projects/hacks/ros-slam-eval/</loc>
-    <lastmod>2013-04-25T00:00:00-04:00</lastmod>
+    <lastmod>2013-04-25T00:00:00-07:00</lastmod>
   </url>
   <url>
     <loc>/projects/hacks/musicpie/</loc>
-    <lastmod>2012-08-01T00:00:00-04:00</lastmod>
+    <lastmod>2012-08-01T00:00:00-07:00</lastmod>
   </url>
   <url>
     <loc>/projects/hacks/on-sleep-track/</loc>
-    <lastmod>2012-06-22T00:00:00-04:00</lastmod>
+    <lastmod>2012-06-22T00:00:00-07:00</lastmod>
   </url>
   <url>
     <loc>/about/</loc>
@@ -345,6 +349,9 @@
     <loc>/projects/tag/hackathon/</loc>
   </url>
   <url>
+    <loc>/projects/tag/data/</loc>
+  </url>
+  <url>
     <loc>/projects/tag/android/</loc>
   </url>
   <url>
@@ -390,21 +397,18 @@
     <loc>/projects/tag/nlp/</loc>
   </url>
   <url>
-    <loc>/projects/tag/data/</loc>
-  </url>
-  <url>
     <loc>/projects/tag/simulation/</loc>
   </url>
   <url>
-    <loc>/writing/files/2016-08-10-visualizing-imdb-data-with-d3/standalone_page.html</loc>
-    <lastmod>2017-08-14T19:51:13-04:00</lastmod>
+    <loc>/writing/files/2016-08-10-visualizing-imdb-data-with-d3/html/standalone_page.html</loc>
+    <lastmod>2017-07-22T10:26:34-07:00</lastmod>
   </url>
   <url>
-    <loc>/writing/files/2016-08-10-visualizing-imdb-data-with-d3/html/standalone_page.html</loc>
-    <lastmod>2017-08-14T19:51:13-04:00</lastmod>
+    <loc>/writing/files/2016-08-10-visualizing-imdb-data-with-d3/standalone_page.html</loc>
+    <lastmod>2017-07-22T10:26:34-07:00</lastmod>
   </url>
   <url>
     <loc>/writing/files/2016-06-10-power-of-ipython-pandas-scikilearn/post.html</loc>
-    <lastmod>2017-08-14T19:51:13-04:00</lastmod>
+    <lastmod>2017-07-22T10:26:34-07:00</lastmod>
   </url>
 </urlset>

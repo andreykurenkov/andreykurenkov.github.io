@@ -5,37 +5,37 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Learning from Failure &#8211; Andrey Kurenkov's Web World</title>
-<meta name="description" content="Improved robot planning by learning from prior mistakes">
-<meta name="keywords" content="robotics, ml">
+<title>IMDB Data Viz &#8211; Andrey Kurenkov's Web World</title>
+<meta name="description" content="Some fun visualizing movie statistics from IMDB">
+<meta name="keywords" content="data">
 
   
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="Learning from Failure">
-<meta name="twitter:description" content="Improved robot planning by learning from prior mistakes">
+<meta name="twitter:title" content="IMDB Data Viz">
+<meta name="twitter:description" content="Some fun visualizing movie statistics from IMDB">
 
 
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="/images/poster.png">
+<meta name="twitter:image" content="/images/viz.png">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Learning from Failure">
-<meta property="og:description" content="Improved robot planning by learning from prior mistakes">
-<meta property="og:url" content="/projects/research/learning-from-failure/">
+<meta property="og:title" content="IMDB Data Viz">
+<meta property="og:description" content="Some fun visualizing movie statistics from IMDB">
+<meta property="og:url" content="/projects/hacks/imdb-data-viz/">
 <meta property="og:site_name" content="Andrey Kurenkov's Web World">
 
-<meta property="og:image" content="/images/poster.png">
+<meta property="og:image" content="/images/viz.png">
 
 
 
 
 
 
-<link rel="canonical" href="/projects/research/learning-from-failure/">
+<link rel="canonical" href="/projects/hacks/imdb-data-viz/">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Andrey Kurenkov's Web World Feed">
 
 <!-- http://t.co/dKP3o1e -->
@@ -118,8 +118,8 @@
     
   
   <div class="image-wrap" id="project-image">
-     <a href="/projects/research/images/prl/poster.png" target="_blank"> 
-     <img src="/projects/research/images/prl/poster.png">
+     <a href="/projects/hacks/images/imdbviz/viz.png" target="_blank"> 
+     <img src="/projects/hacks/images/imdbviz/viz.png">
      </a>
   </div><!-- /.image-wrap -->
   
@@ -149,7 +149,7 @@
   </div>
   <article class="project-post">
     <div class="headline-wrap">
-        <h1 id="project-title"><a href="/projects/research/learning-from-failure/" rel="bookmark" title="Learning from Failure">Learning from Failure</a></h1>
+        <h1 id="project-title"><a href="/projects/hacks/imdb-data-viz/" rel="bookmark" title="IMDB Data Viz">IMDB Data Viz</a></h1>
     </div><!--/ .headline-wrap -->
     </hr>
     <div class="article-wrap">
@@ -157,41 +157,27 @@
 		      <col/>
 		      <tr>
 			      <td valign="top"><h3>WHAT</h3></td>
-			      <td><h4>Improved robot planning by learning from prior mistakes</h4></td>
+			      <td><h4>A little D3 visualization of historical movie data</h4></td>
 		      </tr>
 		      <tr>
 			      <td valign="top"><h3>WHEN</h3></td>
-			      <td><h4>June-August 2013</h4></td>
+			      <td><h4>July-August 2017</h4></td>
 		      </tr>
 		      <tr>
 			      <td valign="top"><h3>WHO</h3></td>
-			      <td><h4>Me, worked with direction from Pras Velagapudi and Sidd Srinivasa</h4></td>
+			      <td><h4>Me</h4></td>
 		      </tr>
 		      <tr>
 			      <td valign="top"><h3>WHERE</h3></td>
-			      <td><h4>CMU, Personal Robotics Lab</h2></td>
+			      <td><h4>Home</h2></td>
 		      </tr>
 		      <tr>
 			      <td valign="top"><h3>WHY</h3></td>
-			      <td><h4>Roboticists spend a lot of time tweaking things after robots mess up, and the idea was to try and find a way to automate that with learning</h4></td>
+			      <td><h4>A project for a Udacity class</h4></td>
 		      </tr>
 		      <tr>
 			      <td valign="top"><h3>HOW</h3></td>
-			      <td><h4><p>What a fantastic internship. I spent the first half getting set up and essentially making symbolic planning and plan execution work on the robot. But the second half 
-is when it got serious - having gotten things to run, the question of how to make the robot learn from experience was asked. And that was it, really - the proposed approach,
-data to record, experiments to run, all of that was largely left to me to figure out.</p>
-
-<p>And figure it out I did. The idea was not complex:
-1. Have the robot execute tasks defined as goals (‘get me the book’), using symbolic planning (PDDL) to find the sequence of actions to achieve the goal
-2. Decompose each symbolic action into each movement (‘subaction’) the robot executes to finish it, and record the positions of objects at the start and end of each subaction
-3. As the robot does actions, record the results of each symbolic action as either succesful or failed
-4. Use the stored object locations and failure/success label to train a decision tree to find which positional aspects lead to actions failing
-5. Incorporate the results of the decision tree back into the motion planning done to execute the subactions in the form of constraints.
-A simple solution, for sure, but one that on paper seemed to be a viable approach to try (have a look at the poster and talk if you somehow want more detail on this). And, no one had really done any work on learning to modify the <em>geometric</em> rather than symbolic planning based on action success, so it was intriguing. With such a fun idea in mind, what was not there took only about a month to implement and get to the point of testing using the Orange python package and the lab’s existing infrastructure.</p>
-
-<p>But, sadly, as with most projects the end was not ideal. I finished with insufficient time to run enough experiments to finish my very-much-in-progress draft for a paper, and
-the questionable applicability of the approach combined with my not being there led to the project to be forgotten soon enough. Still, I hold up this internship as an ideal model
-of how to mix supervision with independence and challenge, and am still fairly proud of what I managed to get done while there.</p>
+			      <td><h4><p>See the linked writeup. A fun little project - gotta love classes that let the student decide on what to work on for their project.</p>
 </h4></td>
 		      </tr>
 
@@ -202,8 +188,22 @@ of how to mix supervision with independence and challenge, and am still fairly p
 				       
 		               
                       <h4>
-                         <a href="/projects/research/files/prl/talk.pdf" target="_blank">Presentation</a>
-                         <a href="/projects/research/files/prl/talk.pdf" target="_blank" title=""><i class="fa fa-link"></i></a>
+                         <a href="http://www.andreykurenkov.com/writing/files/2016-08-10-visualizing-imdb-data-with-d3/standalone_page.html" title="" target="_blank">Live version!</a>
+                         <a href="http://www.andreykurenkov.com/writing/files/2016-08-10-visualizing-imdb-data-with-d3/standalone_page.html" target="_blank" title=""><i class="fa fa-link"></i></a>
+                      </h4>
+		      		     
+							  
+		               
+                      <h4>
+                         <a href="http://www.andreykurenkov.com/writing/visualizing-imdb-data-with-d3/" title="" target="_blank">Writeup</a>
+                         <a href="http://www.andreykurenkov.com/writing/visualizing-imdb-data-with-d3/" target="_blank" title=""><i class="fa fa-link"></i></a>
+                      </h4>
+		      		     
+							  
+		               
+                      <h4>
+                         <a href="https://github.com/andreykurenkov/imdb-data-viz" title="" target="_blank">repo</a>
+                         <a href="https://github.com/andreykurenkov/imdb-data-viz" target="_blank" title=""><i class="fa fa-link"></i></a>
                       </h4>
 		      		     
 							  
@@ -212,63 +212,7 @@ of how to mix supervision with independence and challenge, and am still fairly p
 		      
 
 		      
-		      <tr>
-			      <td valign="top"><h3>PICS</h3></td>
-			      <td><ul class="imageslist" id="projectimages">
-               
-                  
-				             <li><figure>
-                            <a href="/projects/research/images/prl/prl1.png" target="_blank">  
-                               <img src="/projects/research/images/prl/prl1.png" alt="">
-                            </a>
-							       </figure></li>
-							    
-				             <li><figure>
-                            <a href="/projects/research/images/prl/prl2.png" target="_blank">  
-                               <img src="/projects/research/images/prl/prl2.png" alt="">
-                            </a>
-							       </figure></li>
-							    
-				             <li><figure>
-                            <a href="/projects/research/images/prl/prl3.png" target="_blank">  
-                               <img src="/projects/research/images/prl/prl3.png" alt="">
-                            </a>
-							       </figure></li>
-							    
-				             <li><figure>
-                            <a href="/projects/research/images/prl/prl4.png" target="_blank">  
-                               <img src="/projects/research/images/prl/prl4.png" alt="">
-                            </a>
-							       </figure></li>
-							    
-				             <li><figure>
-                            <a href="/projects/research/images/prl/prl5.png" target="_blank">  
-                               <img src="/projects/research/images/prl/prl5.png" alt="">
-                            </a>
-							       </figure></li>
-							    
-				             <li><figure>
-                            <a href="/projects/research/images/prl/prl6.png" target="_blank">  
-                               <img src="/projects/research/images/prl/prl6.png" alt="">
-                            </a>
-							       </figure></li>
-							    
-		           
-						</ul></td>
-		      </tr>
-		      
 
-		      
-		      <tr>
-			      <td valign="top"><h3>VIDS</h3></td>
-			      <td><ul class="videolist" id="projectvideos">
-				       
-				         <li><iframe src="https://www.youtube.com/watch?v=iq4DzPFGHpM"  width="560" height="315" frameborder="0" allowfullscreen></iframe>
-    				          <figcaption>My project was to make the robot better at this</figcaption>
-                         </figure></li>
-					   
-						 </ul></td>
-		      </tr>
 		      
 
 
@@ -283,13 +227,13 @@ of how to mix supervision with independence and challenge, and am still fairly p
   <h4>Share on</h4>
   <ul>
     <li>
-      <a href="https://twitter.com/intent/tweet?text=/projects/research/learning-from-failure/" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+      <a href="https://twitter.com/intent/tweet?text=/projects/hacks/imdb-data-viz/" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
     </li>
     <li>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=/projects/research/learning-from-failure/" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=/projects/hacks/imdb-data-viz/" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
     </li>
     <li>
-      <a href="https://plus.google.com/share?url=/projects/research/learning-from-failure/" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+      <a href="https://plus.google.com/share?url=/projects/hacks/imdb-data-viz/" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
     </li>
   </ul>
 </div><!-- /.social-share -->
