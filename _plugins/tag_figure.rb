@@ -16,22 +16,23 @@ module Jekyll
       figure_classes = @attributes['class'].to_s
       figure_main = converter.convert(super(context))
       figure_caption = converter.convert(@attributes['caption'].to_s)
-
+      figure_topcaption = converter.convert(@attributes['topcaption'].to_s)
       # Render <figure>
       if @attributes['class']
-        source = "<figure class=\"figure #{figure_classes}\">"
+        source = "<figure class=\"#{figure_classes}\">"
       else
         source = "<figure class=\"figure\">"
       end
 
+      if @attributes['topcaption']
+        source += "<figcaption class=\"figure__caption\">#{figure_topcaption}</figcaption>"
+      end
       source += "<div class=\"figure__main\">#{figure_main}</div>"
 
       if @attributes['caption']
         source += "<figcaption class=\"figure__caption\">#{figure_caption}</figcaption>"
-        source += "</figure>"
-      else
-        source += "</figure>"
       end
+      source += "</figure>"
     end
   end
 end
