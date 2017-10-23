@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>/writing/some-thoughts-on-meditation/</loc>
+    <lastmod>2017-10-22T19:19:34-04:00</lastmod>
+  </url>
+  <url>
     <loc>/writing/deformnet-or-a-tale-broken-chairs/</loc>
     <lastmod>2017-10-18T19:19:34-04:00</lastmod>
   </url>
@@ -269,6 +273,9 @@
     <loc>/</loc>
   </url>
   <url>
+    <loc>/writing/tag/life/</loc>
+  </url>
+  <url>
     <loc>/writing/tag/research/</loc>
   </url>
   <url>
@@ -279,9 +286,6 @@
   </url>
   <url>
     <loc>/writing/tag/art/</loc>
-  </url>
-  <url>
-    <loc>/writing/tag/life/</loc>
   </url>
   <url>
     <loc>/writing/tag/technical/</loc>
