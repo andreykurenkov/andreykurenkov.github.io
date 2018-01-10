@@ -3,6 +3,7 @@ layout: post
 title: Moving On, Looking Back
 date: 2017-7-28T16:19:34-07:00
 tags: [life,research]
+category: life
 status: post
 type: post
 published: true

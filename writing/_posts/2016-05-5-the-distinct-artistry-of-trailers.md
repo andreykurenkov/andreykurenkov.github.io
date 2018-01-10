@@ -3,6 +3,7 @@ layout: post
 title: The Distinct Artistry of Trailers
 date: 2016-5-05lT19:19:34-07:00
 tags: [art,film]
+category: art
 status: publish
 type: post
 published: true

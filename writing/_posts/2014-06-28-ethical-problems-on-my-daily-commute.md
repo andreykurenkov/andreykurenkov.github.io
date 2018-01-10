@@ -3,6 +3,7 @@ layout: post
 title: Ethical Problems On My Daily Commute
 date: 2014-06-28 18:38:35.000000000 -07:00
 tags: [philosophy,quasi-essay,life]
+category: life
 status: publish
 type: post
 published: true

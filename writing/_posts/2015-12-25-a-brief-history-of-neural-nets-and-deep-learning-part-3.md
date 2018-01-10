@@ -3,6 +3,7 @@ layout: post
 title: A 'Brief' History of Neural Nets and Deep Learning, Part 3 
 date: 2015-12-24T18:19:34-07:00
 tags: [ml_writing,ai,technical,history]
+category: ai
 status: published
 type: post
 published: true

@@ -3,6 +3,7 @@ layout: post
 title: Reflections on Magie Du Paysage Russe
 date: 2014-07-21 19:56:40.000000000 -07:00
 tags: [art,life,culture,quasi-essay]
+category: art
 status: publish
 type: post
 published: true

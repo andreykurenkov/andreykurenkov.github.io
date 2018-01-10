@@ -3,6 +3,7 @@ layout: post
 title: What Brief Hacker News Fame Looks Like
 date: 2016-1-22lT19:19:34-07:00
 tags: [writing,life,meta]
+category: projects
 status: published
 type: post
 published: true

@@ -3,6 +3,7 @@ layout: post
 title: On Memristors, Or, What Am I Being Paid To Do In Switzerland?
 date: 2014-06-11 17:11:43.000000000 -07:00
 tags: [work,research]
+category: life
 status: publish
 type: post
 published: true

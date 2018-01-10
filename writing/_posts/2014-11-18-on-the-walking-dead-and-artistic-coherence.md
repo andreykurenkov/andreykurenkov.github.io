@@ -3,6 +3,7 @@ layout: post
 title: On The Walking Dead and Artistic Coherence
 date: 2014-11-18 01:18:13.000000000 -08:00
 tags: [videogames,quasi-essay,life,criticism]
+category: art
 status: publish
 type: post
 published: true

@@ -3,6 +3,7 @@ layout: post
 title: DeformNet, Or A Tale of Broken Chairs
 date: 2017-10-18T16:19:34-07:00
 tags: [research,ml,ai,art]
+category: projects
 status: post
 type: post
 published: true

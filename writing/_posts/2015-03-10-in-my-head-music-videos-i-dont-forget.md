@@ -3,6 +3,7 @@ layout: post
 title: ! 'In My Head: Music Videos'
 date: 2015-03-10 08:01:01.000000000 -07:00
 tags: [art]
+category: art
 status: publish
 type: post
 published: true

@@ -3,6 +3,7 @@ layout: post
 title: On The Successes of The Last of Us, and The Failures of Bioshock Infinite
 date: 2015-06-23 01:37:52.000000000 -07:00
 tags: [videogames,quasi-essay,art,criticism]
+category: art
 status: publish
 type: post
 published: true

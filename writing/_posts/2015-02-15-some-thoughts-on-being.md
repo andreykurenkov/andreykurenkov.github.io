@@ -3,6 +3,7 @@ layout: post
 title: Some Thoughts on Being
 date: 2015-02-15 01:39:50.000000000 -08:00
 tags: [quasi-essay,thoughts,life]
+category: life
 status: publish
 type: post
 published: true

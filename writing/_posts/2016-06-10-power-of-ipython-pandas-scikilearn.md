@@ -3,6 +3,7 @@ layout: post
 title: The Power of IPython Notebook + Pandas + and Scikit-learn
 date: 2016-6-10lT19:19:34-07:00
 tags: [ml_writing,ai,technical,data-science]
+category: projects
 status: publish
 type: post
 published: true

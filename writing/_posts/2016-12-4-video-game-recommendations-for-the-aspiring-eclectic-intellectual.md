@@ -3,6 +3,7 @@ layout: post
 title: Video Game Recommendations For The Aspiring Eclectic Intellectual
 date: 2016-12-04T16:19:34-07:00
 tags: [art,videogames]
+category: art
 status: draft
 type: draft
 published: false

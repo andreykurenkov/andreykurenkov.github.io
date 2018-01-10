@@ -3,6 +3,7 @@ layout: post
 title: Some Thoughts on Meditation
 date: 2017-10-22T16:19:34-07:00
 tags: [life]
+category: life
 status: post
 type: post
 published: true

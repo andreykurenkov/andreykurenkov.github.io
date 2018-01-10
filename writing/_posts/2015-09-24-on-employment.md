@@ -6,6 +6,7 @@ tags:
   - work
   - "quasi-essay"
   - philosophy
+category: life
 status: published
 type: post
 published: true

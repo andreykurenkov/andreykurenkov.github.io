@@ -3,6 +3,7 @@ layout: post
 title: Why Does This Blog Exist?
 date: 2014-06-05 16:06:51.000000000 -07:00
 tags: [meta]
+category: life
 status: publish
 type: post
 published: true

@@ -3,6 +3,7 @@ layout: post
 title: Organizing My Emails With A Neural Net
 date: 2016-1-13lT19:19:34-07:00
 tags: [ML,NN,technical,software]
+category: ai
 status: published
 type: post
 published: true
