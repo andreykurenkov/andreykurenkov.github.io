@@ -1,0 +1,437 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>A 'Brief' History of Neural Nets and Deep Learning, Part 3 &#8211; Andrey Kurenkov's Web World</title>
+<meta name="description" content="About neural nets' flaws in the 90s, and how a new AI Winter dawned">
+<meta name="keywords" content="ml_writing, ai, technical, history">
+
+  
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="A 'Brief' History of Neural Nets and Deep Learning, Part 3">
+<meta name="twitter:description" content="About neural nets' flaws in the 90s, and how a new AI Winter dawned">
+
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A 'Brief' History of Neural Nets and Deep Learning, Part 3">
+<meta property="og:description" content="About neural nets' flaws in the 90s, and how a new AI Winter dawned">
+<meta property="og:url" content="/writing/ai/a-brief-history-of-neural-nets-and-deep-learning-part-3/">
+<meta property="og:site_name" content="Andrey Kurenkov's Web World">
+
+<meta property="og:image" content="/images/thumb.png">
+
+
+
+
+
+
+<link rel="canonical" href="/writing/ai/a-brief-history-of-neural-nets-and-deep-learning-part-3/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Andrey Kurenkov's Web World Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="/assets/js/vendor/respond.min.js"></script>
+<meta http-equiv="Cache-control" content="public" max-age="3600">
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+<link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+</head>
+
+<body class="home">
+  <div id="wrap">
+    <!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+    <div class="navigation-wrapper">
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+        <a href="/"><img id="logo" src="/images/logo.png" alt="Me" /></a>
+		    <ul>
+		        
+				    
+				        
+				    
+				    <li><a href="/"  class="navlink">About</a></li>
+				
+				    
+				        
+				    
+				    <li><a href="/projects/"  class="navlink">Projects</a></li>
+				
+				    
+				        
+				    
+				    <li><a href="/writing/"  class="navlink">Posts</a></li>
+				
+				    
+				        
+				    
+				    <li><a href="/photography/"  class="navlink">Photos</a></li>
+				
+		    </ul>
+		</nav>
+	</div>
+</div>
+
+     
+    
+
+
+
+
+    
+    
+        
+            
+            
+        
+    
+        
+            
+            
+        
+    
+        
+            
+            
+        
+    
+        
+            
+            
+        
+    
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+  
+
+<div itemscope itemtype="http://schema.org/Person">
+
+
+	<img src="/images/Andrey.jpg" class="bio-photo" alt=" bio photo">
+
+
+  <!--<h3 itemprop="name"></h3>-->
+  <p>An eclectic researcher and engineer endlessly interested in AI, art, side-projects, philosophy, and many more things.</p>
+
+  <a href="mailto:contact@andreykurenkov.com" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
+  
+  <a href="http://linkedin.com/in/andreykurenkov" class="author-social" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i> LinkedIn</a>
+  <a href="http://github.com/andreykurenkov" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i> Github</a>
+  <a href="/files/resume.pdf" class="author-social" target="_blank"><i class="fa fa-fw fa-file"></i> Resume</a>
+  <a href="/writing/feed.xml/" class="author-social" target="_blank"><i class="fa fa-fw fa-rss"></i> RSS</a>
+
+</div>
+
+  </div>
+  <article class="post">
+    <div class="headline-wrap">
+      
+        <h1><a href="/writing/ai/a-brief-history-of-neural-nets-and-deep-learning-part-3/" rel="bookmark" title="A 'Brief' History of Neural Nets and Deep Learning, Part 3">A 'Brief' History of Neural Nets and Deep Learning, Part 3</a></h1><h5>About neural nets' flaws in the 90s, and how a new AI Winter dawned		|		<time datetime="2015-12-24T17:19:34-08:00">December 24, 2015</time></h5>
+      
+    </div><!--/ .headline-wrap -->
+    </hr>
+    <div class="article-wrap">
+
+      <p>This is the third part of ‘A Brief History of Neural Nets and Deep Learning’. Parts 1 and 2 are <a href="http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning">here</a> and <a href="http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning-part-2">here</a>, and part 4 is <a href="http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning-part-4">here</a>. In this part, we will continue to see the swift pace of research in the 90s, and see why neural nets ultimately lost favor much as they did in the late 60s.</p>
+
+<h1 id="neural-nets-make-decisions">Neural Nets Make Decisions</h1>
+
+<p>Having discovered the application of neural nets to unsupervised learning, let us also quickly see how they were used in the third branch of machine learning: <strong>reinforcement learning</strong>. This one requires the most mathy notation to explain formally, but also has a goal that is very easy to describe informally: learn to make good decisions. Given some theoretical agent (a little software program, for instance), the idea is to make that agent able to decide on an <strong>action</strong> based on its current <strong>state</strong>, with the reception of some <strong>reward</strong> for each action and the intent of getting the maximum <strong>utility</strong> in the long term. So, whereas supervised learning tells the learning algorithm exactly what it should learn to output, reinforcement learning provides ‘rewards’ as a by-product of making good decisions over time, and does not directly tell the algorithm the correct decisions to choose.  From the outset it was a very abstracted decision making model - there were a finite number of states, and a known set of actions with known rewards for each state. This made it easy to write very elegant equations for finding the optimal set of actions, but hard to apply to real problems -  problems with continuous states or hard-to-define rewards.</p>
+
+<figure>
+    <img class="postimagesmall" src="https://draftin.com:443/images/34985?token=8S98i7brY2iTusq7B68-OHsvSS-ND9Kc5F_-XnppdoNFt6hyAbhhxRZ5W4ipFEaF-N4XX9yjAMyDdKx0QKL4--Q" alt="RL" /> 
+    <figcaption>Reinforcement learning. <a href="http://www2.hawaii.edu/~chenx/ics699rl/grid/rl.html">(Source)</a></figcaption>    
+</figure>
+
+<p>This is where neural nets come in. Machine learning in general, and neural nets in particular, are good at dealing with messy continuous data or dealing with hard to define functions by learning them from examples. Although classification is the bread and butter of neural nets, they are general enough to be useful for many types of problems - the descendants of Bernard Widrow’s and Ted Hoff’s Adaline were used for adaptive filters in the context of electrical circuits, for instance. And so, following the resurgence of research caused by backpropagation, people soon devised ways of leveraging the power of neural nets to perform reinforcement learning. One of the early examples of this was solving a simple yet classic problem: the balancing of a stick on a moving platform, known to students in control classes everywhere as the inverted pendulum problem <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>.</p>
+
+<figure>
+    <img class="postimagesmall" src="https://draftin.com:443/images/34982?token=k1WhSbXvaWX6oxEe7C_ChtP_n-ypQHY9JsSZc1Q8gwFlTKGjUaW0wuou46Um2KbDryXEKXnZqcThjIJX2MyDXmY" alt="pendulum " /> 
+    <figcaption>The double pendulum control problem - a step up from the single pendulum version, which is a classic control and reinforcement learning task. <a href="hhttp://www.pdx.edu/biomedical-signal-processing-lab/inverted-double-pendulum">(Source)</a></figcaption>    
+</figure>
+
+<p>As with adaptive filtering, this research was strongly relevant to the field of Electrical Engineering, where control theory had been a major subfield for many decades prior to neural nets’ arrival. Though the field had devised ways to deal with many problems through direct analysis, having a means to deal with more complex situations through learning proved useful as evidenced by the hefty 7000 (!) citations of the 1990 “Identification and control of dynamical systems using neural networks”<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>. Perhaps predictably, there was another field separate from Machine Learning where neural nets were useful - robotics. A major example of early neural net use for robotics came from CMU’s NavLab with 1989’s <a href="http://www.dtic.mil/dtic/tr/fulltext/u2/a218975.pdf">“Alvinn: An autonomous land vehicle in a neural network”</a><sup id="fnref:2b"><a href="#fn:2b" class="footnote">3</a></sup>:</p>
+
+<figure>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/5-acCtyKf7E" frameborder="0" allowfullscreen=""></iframe>
+</figure>
+
+<p>As discussed in the paper, the neural net in this system learned to control the vehicle through plain supervised learning using sensor and steering data recorded while a human drove. There was also research into teaching robots using reinforcement learning specifically, as exemplified by the 1993 PhD thesis <a href="http://www.dtic.mil/dtic/tr/fulltext/u2/a261434.pdf">“Reinforcement learning for robots using neural networks”</a><sup id="fnref:3"><a href="#fn:3" class="footnote">4</a></sup>. The thesis showed that robots could be taught behaviors such as wall following and door passing in reasonable amounts of time, which was a good thing considering the prior inverted pendulum work requires impractical lengths of training.</p>
+
+<p>These disparate applications in other fields are certainly cool, but of course the most research on reinforcement learning and neural nets was happening within AI and Machine Learning. And here, one of the most significant results in the history of reinforcement learning was achieved: a neural net that learned to be a world class backgammon player.  Dubbed <a href="http://courses.cs.washington.edu/courses/cse590hk/01sp/Readings/tesauro95cacm.pdf">TD-Gammon</a>, the neural net was trained using a standard reinforcement learning algorithm and was one of the first demonstrations of reinforcement learning being able to outperform humans on relatively complicated tasks <sup id="fnref:4"><a href="#fn:4" class="footnote">5</a></sup>. And it was specifically a reinforcement learning approach that worked here, as the same research showed just using a neural net without reinforcement learning did not work nearly as well.</p>
+
+<figure>
+    <img class="postimagesmall" src="https://draftin.com:443/images/34983?token=iTl1pbpNKoeqgLWOC7YNBJYTYokPCrYeH8WhMh6Pn7a2Ie9y3zigQjMDiD55r_ZQLzmxgaf_NxWmls9cNMkAw50" alt="TDGammon" /> 
+    <figcaption>The neural net that learned to play expert-level Backgammon. <a href="https://webdocs.cs.ualberta.ca/~sutton/book/ebook/node108.html">(Source)</a></figcaption>    
+</figure>
+
+<p>But, as we have seen happen before and will see happen again in AI, research hit a dead end. The predictable next problem to tackle using the TD-Gammon approach was investigated by Sebastian Thrun in the 1995 <a href="http://www-preview.ri.cmu.edu/pub_files/pub1/thrun_sebastian_1995_8/thrun_sebastian_1995_8.pdf">“Learning To Play the Game of Chess”</a>, and the results were not good <sup id="fnref:5"><a href="#fn:5" class="footnote">6</a></sup>. Though the neural net learned decent play, certainly better than a complete novice at the game, it was still far worse than a standard computer program (GNU-Chess) implemented long before. The same was true for the other perennial challenge of AI, Go <sup id="fnref:6"><a href="#fn:6" class="footnote">7</a></sup>. See, TD-Gammon sort of cheated - it learned to evaluate positions quite well, and so could get away with not doing any ‘search’ over multiple future moves and instead just picking the one that led to the best next position. But the same is simply not possible in chess or Go, games which are a challenge to AI precisely because of needing to look many moves ahead and having so many possible move combinations. Besides, even if the algorithm were smarter, the hardware of the time just was not up to the task - Thrun reported that “NeuroChess does a poor job, because it spends most of its time computing board evaluations. Computing a large neural network function takes two orders of magnitude longer than evaluating an optimized linear evaluation function (like that of GNU-Chess).” The weakness of computers of the time relative to the needs of the neural nets was a very real issue, and as we shall see not the only one…</p>
+
+<h1 id="neural-nets-get-loopy">Neural Nets Get Loopy</h1>
+
+<p>As neat as unsupervised and reinforcement learning are, I think supervised learning is still my favorite use case for neural nets. Sure, learning probabilistic models of data is cool, but it’s simply much easier to get excited for the sorts of concrete problems solved by backpropagation. We already saw how Yann Lecun achieved quite good recognition of handwritten text (a technology which went on to be nationally deployed for check-reading, and much more a while later…), but there was another obvious and greatly important task being worked on at the same time: understanding human speech.</p>
+
+<p>As with writing, understanding human speech is quite difficult due to the practically infinite variation in how the same word can be spoken. But, here there is an extra challenge: long sequences of input. See, for images it’s fairly simple to crop out a single letter from an image and have a neural net tell you which letter that is, input-&gt;output style. But with audio it’s not so simple - separating out speech into characters is completely impractical, and even  finding individual words within speech is less simple. Plus, if you think about human speech, generally hearing words in context makes them easier to understand than being separated. While this structure works quite well for processing things such as images one at a time, input-&gt;output style, it is not at all well suited to long streams of information such as audio or text. The neural net has no ‘memory’ with which an input can affect another input processed afterward, but this is precisely how we humans process audio or text - a string of word or sound inputs, rather than a single large input. Point being: to tackle the problem of understanding speech, researchers sought to modify neural nets to process input as a stream of input as in speech rather than one batch as with an image.</p>
+
+<p>One approach to this, by Alexander Waibel et. al  (including Hinton), was introduced in the 1989 <a href="http://www.cs.toronto.edu/~fritz/absps/waibelTDNN.pdf">“Phoneme recognition using <strong>time-delay neural networks</strong>”</a><sup id="fnref:7"><a href="#fn:7" class="footnote">8</a></sup>. These time-delay neural networks (TDNN) were very similar to normal neural networks, except each neuron processed only a subset of the input and had several sets of weights for different delays of the input data. In other words, for a sequence of audio input, a ‘moving window’ of the audio is input into the network and as the window moves the same bits of audio are processed by each neuron with different sets of weights based on where in the window the bit of audio is. This is best understood with a quick illustration:</p>
+
+<figure>
+    <img class="postimagesmall" src="https://draftin.com:443/images/34902?token=I-gRSza-SJchfi0jbeWtZxR7YaGXvDHCdJ7YyQx6h_hFxJotY8-jgChVwcwbP9hGCl-YKm36PUgvsCtS9pDhDZI" alt="TDNN" /> 
+    <figcaption>Time delay neural networks. <a href="https://electroviees.wordpress.com/tag/chacha/">(Source)</a></figcaption>    
+</figure>
+
+<p>In a sense, this is quite similar to what CNNs do - instead of looking at the whole input at once, each unit looks at just a subset of the input at a time and does the same computation for each small subset. The main difference here is that there is no idea of time in a CNN, and the ‘window’ of input for each neuron is always moved across the whole input image to compute a result, whereas in a TDNN there actually is sequential input and output of data. Fun fact: <a href="https://youtu.be/vShMxxqtDDs?t=26m4s">according to Hinton</a>, the idea of TDNNs is what inspired LeCun to develop convolutional neural nets. But, funnily enough CNNs became essential for image processing, whereas in speech recognition TDNNs have been surpassed to another approach - <strong>recurrent neural nets</strong> (RNNs). See, all the networks that have been discussed so far have been <strong>feedforward</strong> networks, meaning that the output of neurons in a given layer acts as input to only neurons in a next layer. But, it does not have to be so - there is nothing prohibiting us brave computer scientists from connecting output of the last layer act as an input to the first layer, or just connecting the output of a neuron to itself. By having the output of the network ‘loop’ back into the network, the problem of giving the network memory as to past inputs is solved so elegantly!</p>
+
+<div><button class="btn" data-toggle="collapse" data-target="#rnnvs">
+Aside: more on RNNs vs TDNNs &raquo;
+</button></div>
+<blockquote class="aside"><p id="rnnvs" class="boltzmann" style="height: 0px;">
+Again, those seeking greater insight into the distinctions between different neural nets would do well to just go back to the actual papers. Here is a nice summation of why RNNs are cooler than TDNNs for sequential data:
+"A recurrent network has cycles in its graph that allow it to store
+information about past inputs for an amount of time that is not fixed a priori but rather depends on its weights and on the input data. The type of recurrent networks considered here can be used either for sequence recognition production or prediction. Units are not clamped and we are not interested in convergence to a fixed point. Instead the recurrent network
+is used to transform an input sequence eg speech spectra into an output sequence, eg degrees, of evidence for phonemes. The main advantage of such recurrent networks is that the relevant past context can be represented in the activity of the hidden units and then used to compute the output at each time step. In theory the network can learn how to extract the relevant context information from the input sequence. In contrast, in network with time delays such as TDNNs the designer of the network must decide a priori by the choice of delay connections which part of the past input sequence should be used to predict the next output. According to the terminology introduced in [] the memory is static in the case of TDNNs but it is adaptive in the case of recurrent networks."
+</p></blockquote>
+
+<figure>
+    <img class="postimagesmall" src="https://draftin.com:443/images/34568?token=osHGQ5vZmlKI8wvUQDodyNnTzHvIIucFK6U0Z1ynSkEKrMZy1FEdoBrizZ7fujKpEWiYaC1-1fm8lMLh7GKKVuc" alt="RNN" /> 
+    <figcaption>Diagram of a Recurrent Neural Net. Recall Boltzmann Machines from before? Surprise! Those were recurrent neural nets. <a href="http://www.wolframalpha.com/docs/timeline/computable-knowledge-history-6.html">(Source)</a></figcaption>    
+</figure>
+
+<p>Well, it’s not quite so simple. Notice the problem - if backpropagation relies on ‘propagating’ the error from the output layer backward, how do things work if the first layer connects back to the output layer? The error would go ahead and propagate from the first layer back to the output layer, and could just keep looping through the network, infinitely. The solution, independently derived by multiple groups, is <strong>backpropagation through time</strong>. Basically, the idea is to ‘unroll’ the recurrent neural network by treating each loop through the neural network as an input to another neural network, and looping only a limited number of times.</p>
+
+<figure>
+    <img class="postimagesmall" src="https://draftin.com:443/images/35004?token=GxHCevxXTmakxvF9U8WazhEAPyVJK-uWNzaDfqra756dhTkvCVM2ElBUQNhmf6pL7U4_9boMOFGQ58mZRmm_jCo" alt="The wonders of public domain images from Wikipedia!" /> 
+    <figcaption>The wonderfully intuitive backpropagation through time concept. <a href="https://upload.wikimedia.org/wikipedia/en/e/ee/Unfold_through_time.png">(Source)</a></figcaption>    
+</figure>
+
+<p>This fairly simple idea actually worked - it was possible to train recurrent neural nets. And indeed, multiple people explored the application of RNNs to speech recognition. But, here is a twist you should now be able to predict: this approach did not work very well. To find out why, let’s meet another modern giant of Deep Learning: Yoshua Bengio. Starting work on speech recognition with neural nets around 1986, he co-wrote many papers on using ANNs and RNNs for speech recognition, and ended up working at the AT&amp;T Bell Labs on the problem just as Yann LeCun was working with CNNs there. In fact, in 1995 they co-wrote the summary paper <a href="http://yann.lecun.com/exdb/publis/pdf/lecun-bengio-95a.pdf">“Convolutional Networks for Images, Speech, and Time-Series”</a><sup id="fnref:8"><a href="#fn:8" class="footnote">9</a></sup>, the first of many collaborations among them. But, before then Bengio wrote the 1993 <a href="http://www.iro.umontreal.ca/~lisa/publications2/index.php/attachments/single/161">“A Connectionist Approach to Speech Recognition”</a><sup id="fnref:9"><a href="#fn:9" class="footnote">10</a></sup>.  Here, he summarized the general failure of effectively teaching RNNs:</p>
+
+<blockquote>
+  <p>“Although recurrent networks can in many instances outperform static networks, they appear more difficult to train optimally. Our experiments tended to indicate that their parameters settle in a suboptimal solution which takes into account short term dependencies but not long term dependencies. For example in experiments described in (ctation) we found that simple duration constraints on phonemes had not at all been captured by the recurrent network. 
+…
+Although this is a negative result, a better understanding of this problem could help in designing alternative systems for learning to map input sequences to output sequences with
+long term dependencies eg for learning finite state machines, grammars, and other language related tasks. Since gradient based methods appear inadequate for this kind of problem we want to consider alternative optimization methods that give acceptable results even when the criterion function is not smooth.”</p>
+</blockquote>
+
+<h1 id="a-new-winter-dawns">A New Winter Dawns</h1>
+
+<p>So, there was a problem. A big problem. And the problem, basically, was what so recently was a huge advance: backpropagation. See, convolutional neural nets were important in part because backpropagation just did not work well for normal neural nets with many layers. And that’s the real key to deep-learning - having many layers, in today’s systems as many as 20 or more. But already by the late 1980’s, it was known that deep neural nets trained with backpropagation just did not work very well, and particularly did not work as well as nets with fewer layers. The reason, in basic terms, is that backpropagation relies on finding the error at the output layer and successively splitting up blame for it for prior layers. Well, with many layers this calculus-based splitting of blame ends up with either huge or tiny numbers and the resulting neural net just does not work very well - the ‘vanishing or exploding gradient problem’. Jurgen Schmidhuber, another Deep Learning luminary, summarizes the more formal explanation well<sup id="fnref:10"><a href="#fn:10" class="footnote">11</a></sup>:</p>
+
+<blockquote>
+  <p>“A diploma thesis (Hochreiter, 1991) represented a milestone of explicit DL research. As mentioned in Sec. 5.6, by the late 1980s, experiments had indicated that traditional deep feedforward or recurrent networks are hard to train by backpropagation (BP) (Sec. 5.5). Hochreiter’s work formally identified a major reason: Typical deep NNs suffer from the now famous problem of vanishing or exploding gradients. With standard activation functions (Sec. 1), cumulative backpropagated error signals (Sec. 5.5.1) either shrink rapidly, or grow out of bounds. In fact, they decay exponentially in the number of layers or CAP depth (Sec. 3), or they explode. “</p>
+</blockquote>
+
+<p>Backpropagation through time is essentially equivalent to a neural net with a whole lot of layers, so RNNs were particularly difficult to train with Backpropagation. Both Sepp Hochreiter, advised by Schmidhuber, and Yoshua Bengio published papers on the inability of learning long-term information due to limitations of backpropagation <sup id="fnref:11"><a href="#fn:11" class="footnote">12</a></sup><sup id="fnref:12"><a href="#fn:12" class="footnote">13</a></sup>. The analysis of the problem did reveal a solution - Schmidhuber and Hochreiter introduced a very important concept in 1997 that essentially solved the problem of how to train recurrent neural nets, much as CNNs did for feedforward neural nets - <a href="http://deeplearning.cs.cmu.edu/pdfs/Hochreiter97_lstm.pdf"><strong>Long Short Term Memory</strong></a> (LSTM)<sup id="fnref:13"><a href="#fn:13" class="footnote">14</a></sup>. In simple terms, as with CNNs the LTSM breakthrough ended up being a small alteration to the normal neural net model <sup id="fnref:10:1"><a href="#fn:10" class="footnote">11</a></sup>:</p>
+
+<blockquote>
+  <p>“The basic LSTM idea is very simple. Some of the units are called Constant Error Carousels (CECs). Each CEC uses as an activation function f, the identity function, and has a connection to itself with ﬁxed weight of 1.0. Due to f’s constant derivative of 1.0, errors backpropagated through a CEC cannot vanish or explode (Sec. 5.9) but stay as they are (unless they “ﬂow out” of the CEC to other, typically adaptive parts of the NN). CECs are connected to several nonlinear adaptive units (some with multiplicative activation functions) needed for learning nonlinear behavior. Weight changes of these units often proﬁt from error signals propagated far back in time through CECs. CECs are the main reason why LSTM nets can learn to discover the importance of (and memorize) events that happened thousands of discrete time steps ago, while previous RNNs already failed in case of minimal time lags of 10 steps.”</p>
+</blockquote>
+
+<p>But, this did little to fix the larger perception problem that neural nets were janky and did not work very well. They were seen as a hassle to work with - the computers were not fast enough, the algorithms were not smart enough, and people were not happy. So, around the mid 90s, a new AI Winter for neural nets began to emerge - the community once again lost faith in them. A new method called Support Vector Machines, which in the very simplest terms could be described as a mathematically optimal way of training an equivalent to a two layer neural net, was developed and started to be seen as superior to the difficult to work with neural nets. In fact, the 1995 <a href="http://yann.lecun.com/exdb/publis/pdf/lecun-95b.pdf">“Comparison of Learning Algorithms For Handwritten Digit Recognition”</a><sup id="fnref:14"><a href="#fn:14" class="footnote">15</a></sup> by LeCun et al. found that this new approach worked better or the same as all but the best designed neural nets:</p>
+
+<blockquote>
+  <p>“The [support vector machine] classifier has excellent accuracy, which is most remarkable, because unlike the other high performance classifiers, it does not include <em>a priori</em> knowledge about the problem. In fact, this classifier would do just as well if the image pixels were permuted with a fixed mapping. It is still much slower and memory hungry than the convolutional nets. However, improvements are expected as the technique is relatively new.”</p>
+</blockquote>
+
+<p>Other new methods, notably Random Forests, also proved to be very effective and with lovely mathematical theory behind them. So, despite the fact that CNNs consistently had state of the art performance, enthusiasm for neural nets dissipated and the machine learning community at large once again disavowed them. Winter was back. In <a href="http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning-part-4">part 4</a>, we shall see how a small group of researchers persevered in this research climate and ultimately made Deep Learning what it is today.</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Anderson, C. W. (1989). Learning to control an inverted pendulum using neural networks. Control Systems Magazine, IEEE, 9(3), 31-37. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Narendra, K. S., &amp; Parthasarathy, K. (1990). Identification and control of dynamical systems using neural networks. Neural Networks, IEEE Transactions on, 1(1), 4-27. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2b">
+      <p>Pomerleau, D. A. (1989). Alvinn: An autonomous land vehicle in a neural network (No. AIP-77). Carnegie-Mellon Univ Pittsburgh Pa Artificial Intelligence And Psychology Project. <a href="#fnref:2b" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>Lin, L. J. (1993). Reinforcement learning for robots using neural networks (No. CMU-CS-93-103). Carnegie-Mellon Univ Pittsburgh PA School of Computer Science. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>Tesauro, G. (1995). Temporal difference learning and TD-Gammon. Communications of the ACM, 38(3), 58-68. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:5">
+      <p>Thrun, S. (1995). Learning to play the game of chess. Advances in neural information processing systems, 7. <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:6">
+      <p>Schraudolph, N. N., Dayan, P., &amp; Sejnowski, T. J. (1994). Temporal difference learning of position evaluation in the game of Go. Advances in Neural Information Processing Systems, 817-817. <a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:7">
+      <p>Waibel, A., Hanazawa, T., Hinton, G., Shikano, K., &amp; Lang, K. J. (1989). Phoneme recognition using time-delay neural networks. Acoustics, Speech and Signal Processing, IEEE Transactions on, 37(3), 328-339. <a href="#fnref:7" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:8">
+      <p>Yann LeCun and Yoshua Bengio. 1998. Convolutional networks for images, speech, and time series. In The handbook of brain theory and neural networks, Michael A. Arbib (E()d.). MIT Press, Cambridge, MA, USA 255-258. <a href="#fnref:8" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:9">
+      <p>Yoshua Bengio, A Connectionist Approach To Speech Recognition Int. J. Patt. Recogn. Artif. Intell., 07, 647 (1993). <a href="#fnref:9" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:10">
+      <p>J. Schmidhuber. “Deep Learning in Neural Networks: An Overview”. “Neural Networks”, “61”, “85-117”. http://arxiv.org/abs/1404.7828 <a href="#fnref:10" class="reversefootnote">&#8617;</a> <a href="#fnref:10:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:11">
+      <p>Hochreiter, S. (1991).  Untersuchungen zu dynamischen neuronalen Netzen. Diploma thesis, Institutfur Informatik, Lehrstuhl Prof. Brauer, Technische Universitat Munchen. Advisor: J. Schmidhuber. <a href="#fnref:11" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:12">
+      <p>Bengio, Y.; Simard, P.; Frasconi, P., “Learning long-term dependencies with gradient descent is difficult,” in Neural Networks, IEEE Transactions on , vol.5, no.2, pp.157-166, Mar 1994 <a href="#fnref:12" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:13">
+      <p>Sepp Hochreiter and Jürgen Schmidhuber. 1997. Long Short-Term Memory. Neural Comput. 9, 8 (November 1997), 1735-1780. DOI=http://dx.doi.org/10.1162/neco.1997.9.8.1735. <a href="#fnref:13" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:14">
+      <p>Y. LeCun, L. D. Jackel, L. Bottou, A. Brunot, C. Cortes, J. S. Denker, H. Drucker, I. Guyon, U. A. Muller, E. Sackinger, P. Simard and V. Vapnik: Comparison of learning algorithms for handwritten digit recognition, in Fogelman, F. and Gallinari, P. (Eds), International Conference on Artificial Neural Networks, 53-60, EC2 &amp; Cie, Paris, 1995 <a href="#fnref:14" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+
+      <div class="contentinfo">           
+        <h4 id="postnav"><a href="/writing/ai/a-brief-history-of-neural-nets-and-deep-learning-part-2/">Previous Post</a> 
+                        | <a href="/writing/ai/a-brief-history-of-neural-nets-and-deep-learning-part-4/">Next Post</a></h4>
+        <div id="mc_embed_signup">
+  <form action="//andreykurenkov.us12.list-manage.com/subscribe/post?u=4fd9f0f18da6483fe39140533&amp;id=ef01796314" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <div id="mc_embed_signup_scroll">
+
+    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      <div style="position: absolute; left: -5000px;"><input type="text" name="b_4fd9f0f18da6483fe39140533_ef01796314" tabindex="-1" value=""></div>
+      <div class="clear"><input type="submit" value="send me your writing" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
+    </div>
+
+  </form>
+</div>
+<!--End mc_embed_signup-->
+
+        <p id="post-meta">Posted with <i class="fa fa-tags"></i>: <a href="/writing/tag/ml_writing/">ml_writing</a>, <a href="/writing/tag/ai/">ai</a>, <a href="/writing/tag/technical/">technical</a>, <a href="/writing/tag/history/">history</a></p>
+        <div class="social-share">
+  <h4>Share on</h4>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=/writing/ai/a-brief-history-of-neural-nets-and-deep-learning-part-3/" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=/writing/ai/a-brief-history-of-neural-nets-and-deep-learning-part-3/" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=/writing/ai/a-brief-history-of-neural-nets-and-deep-learning-part-3/" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+  </ul>
+</div><!-- /.social-share -->
+        
+          <section id="disqus_thread"></section><!-- /#disqus_thread -->
+        
+         <span><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</span>
+      </div>
+    </div><!-- /.article-wrap -->
+  </article>
+</div><!-- /#main -->
+</br>
+
+    
+    </div><!-- /#main -->
+  </div>
+
+<footer>
+
+<span>&copy; 2018 Andrey Kurenkov. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://github.com/mmistakes/minimal-mistakes" rel="nofollow">Minimal Mistakes</a> and <a href="https://github.com/mmistakes/skinny-bones-jekyll">Skinny Bones</a> themes.</span>
+
+</footer>
+  
+
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/assets/js/scripts.min.js"></script>
+
+
+<!--Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl = 
+ '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-54402578-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+  
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'eclecticcreations'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+</body>
+</html>

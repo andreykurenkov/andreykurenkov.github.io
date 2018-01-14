@@ -1,0 +1,426 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>DeformNet, Or A Tale of Broken Chairs &#8211; Andrey Kurenkov's Web World</title>
+<meta name="description" content="Some bonkers stuff conjured up in the process of doing research">
+<meta name="keywords" content="research, ml, ai, art">
+
+  
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="DeformNet, Or A Tale of Broken Chairs">
+<meta name="twitter:description" content="Some bonkers stuff conjured up in the process of doing research">
+
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DeformNet, Or A Tale of Broken Chairs">
+<meta property="og:description" content="Some bonkers stuff conjured up in the process of doing research">
+<meta property="og:url" content="/writing/projects/deformnet-or-a-tale-broken-chairs/">
+<meta property="og:site_name" content="Andrey Kurenkov's Web World">
+
+<meta property="og:image" content="/images/thumb.png">
+
+
+
+
+
+
+<link rel="canonical" href="/writing/projects/deformnet-or-a-tale-broken-chairs/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Andrey Kurenkov's Web World Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="/assets/js/vendor/respond.min.js"></script>
+<meta http-equiv="Cache-control" content="public" max-age="3600">
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+<link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+</head>
+
+<body class="home">
+  <div id="wrap">
+    <!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+    <div class="navigation-wrapper">
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+        <a href="/"><img id="logo" src="/images/logo.png" alt="Me" /></a>
+		    <ul>
+		        
+				    
+				        
+				    
+				    <li><a href="/"  class="navlink">About</a></li>
+				
+				    
+				        
+				    
+				    <li><a href="/projects/"  class="navlink">Projects</a></li>
+				
+				    
+				        
+				    
+				    <li><a href="/writing/"  class="navlink">Posts</a></li>
+				
+				    
+				        
+				    
+				    <li><a href="/photography/"  class="navlink">Photos</a></li>
+				
+		    </ul>
+		</nav>
+	</div>
+</div>
+
+     
+    
+
+
+
+
+    
+    
+        
+            
+            
+        
+    
+        
+            
+            
+        
+    
+        
+            
+            
+        
+    
+        
+            
+            
+        
+    
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+  
+
+<div itemscope itemtype="http://schema.org/Person">
+
+
+	<img src="/images/Andrey.jpg" class="bio-photo" alt=" bio photo">
+
+
+  <!--<h3 itemprop="name"></h3>-->
+  <p>An eclectic researcher and engineer endlessly interested in AI, art, side-projects, philosophy, and many more things.</p>
+
+  <a href="mailto:contact@andreykurenkov.com" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
+  
+  <a href="http://linkedin.com/in/andreykurenkov" class="author-social" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i> LinkedIn</a>
+  <a href="http://github.com/andreykurenkov" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i> Github</a>
+  <a href="/files/resume.pdf" class="author-social" target="_blank"><i class="fa fa-fw fa-file"></i> Resume</a>
+  <a href="/writing/feed.xml/" class="author-social" target="_blank"><i class="fa fa-fw fa-rss"></i> RSS</a>
+
+</div>
+
+  </div>
+  <article class="post">
+    <div class="headline-wrap">
+      
+        <h1><a href="/writing/projects/deformnet-or-a-tale-broken-chairs/" rel="bookmark" title="DeformNet, Or A Tale of Broken Chairs">DeformNet, Or A Tale of Broken Chairs</a></h1><h5>Some bonkers stuff conjured up in the process of doing research		|		<time datetime="2017-10-18T16:19:34-07:00">October 18, 2017</time></h5>
+      
+    </div><!--/ .headline-wrap -->
+    </hr>
+    <div class="article-wrap">
+
+      <p>I spent about half of his year so far devoted to my first major research project at Stanford - DeformNet. The gist of the project was to create 3D models of objects based on a single 2D image of the object, by deforming the 3D model of a similar object. It took months to get working properly, but all that work eventually led to a paper - “DeformNet: Free-Form Deformation Network for 3D Shape Reconstruction from a Single Image” - with its very own <a href="https://arxiv.org/abs/1708.04672">Arxiv post</a> and <a href="https://deformnet-site.github.io/DeformNet-website/">project page</a>. But, it also led to much more. It led to horrific, bizzare, and delightful failures.</p>
+
+<p>All research projects, and projects in general, face a sequence of failures before their eventual success (or demise). Unlike the eventual success, the failures are typically barely catalogued, and certainly not freely shared with the world. But not DeformNet! Due to its nature as computer vision research, and in particular research on deforming 3D models of objects, DeformNet generated uniquelly broken and surreal imagery in its many months of development. So much so, that I was inspired to capture and share said imagery with my Friends on facebook. And now, dear reader, I shall share it with you! Without further ado, or any further context or explanation, please enjoy:</p>
+
+<figure class="figure"><figcaption class="figure__caption"><p>Beautiful Arrows</p>
+</figcaption><div class="figure__main">
+<p><a href="/writing/images/2016-4-15-a-brief-history-of-game-ai/16797445_1438988406114168_9212772470262986498_o.jpg"><img class="postimageactual" src="/writing/images/2017-10-15-deformnet-or-a-tale-broken-chairs/16797445_1438988406114168_9212772470262986498_o.jpg" alt="History" /></a></p>
+</div></figure>
+
+<figure class="figure"><figcaption class="figure__caption"><p>Spread 1</p>
+</figcaption><div class="figure__main">
+<p><a href="/writing/images/2016-4-15-a-brief-history-of-game-ai/16807616_1442442285768780_7897771771545166109_n.jpg"><img class="postimageactual" src="/writing/images/2017-10-15-deformnet-or-a-tale-broken-chairs/16807616_1442442285768780_7897771771545166109_n.jpg" alt="History" /></a></p>
+</div></figure>
+
+<figure class="figure"><figcaption class="figure__caption"><p>Spread 2</p>
+</figcaption><div class="figure__main">
+<p><a href="/writing/images/2016-4-15-a-brief-history-of-game-ai/16830718_1442442282435447_7909518336960080635_n.jpg"><img class="postimageactual" src="/writing/images/2017-10-15-deformnet-or-a-tale-broken-chairs/16830718_1442442282435447_7909518336960080635_n.jpg" alt="History" /></a></p>
+</div></figure>
+
+<figure class="figure"><figcaption class="figure__caption"><p>Spread 3</p>
+</figcaption><div class="figure__main">
+<p><a href="/writing/images/16831179_1442442279102114_4063186804650971445_n.jpg"><img class="postimageactual" src="/writing/images/2017-10-15-deformnet-or-a-tale-broken-chairs/16831179_1442442279102114_4063186804650971445_n.jpg" alt="History" /></a></p>
+</div></figure>
+
+<figure class="figure"><figcaption class="figure__caption"><p>Spread 4</p>
+</figcaption><div class="figure__main">
+<p><a href="/writing/images/16832243_1442442312435444_2730660855479305093_n.jpg"><img class="postimageactual" src="/writing/images/2017-10-15-deformnet-or-a-tale-broken-chairs/16832243_1442442312435444_2730660855479305093_n.jpg" alt="History" /></a></p>
+</div></figure>
+
+<figure class="figure"><figcaption class="figure__caption"><p>Bent Out of Shape</p>
+</figcaption><div class="figure__main">
+<p><a href="/writing/images/2016-4-15-a-brief-history-of-game-ai/16716040_1442443249102017_6471384390721714604_o.jpg"><img class="postimageactual" src="/writing/images/2017-10-15-deformnet-or-a-tale-broken-chairs/16716040_1442443249102017_6471384390721714604_o.jpg" alt="History" /></a></p>
+</div></figure>
+
+<figure class="figure"><figcaption class="figure__caption"><p>Split</p>
+</figcaption><div class="figure__main">
+<p><a href="/writing/images/16864203_1447351921944483_8878398950718576730_n.jpg"><img class="postimageactual" src="/writing/images/2017-10-15-deformnet-or-a-tale-broken-chairs/16864203_1447351921944483_8878398950718576730_n.jpg" alt="History" /></a></p>
+</div></figure>
+
+<figure class="figure"><figcaption class="figure__caption"><p>Modernist Chair</p>
+</figcaption><div class="figure__main">
+<p><a href="/writing/images/16806900_1452334068112935_5140427923114788905_n.jpg"><img class="postimageactual" src="/writing/images/2017-10-15-deformnet-or-a-tale-broken-chairs/16806900_1452334068112935_5140427923114788905_n.jpg" alt="History" /></a></p>
+</div></figure>
+
+<figure class="figure"><figcaption class="figure__caption"><p>The First</p>
+</figcaption><div class="figure__main">
+<p><a href="/writing/images/17021757_1455820011097674_3621251967274797044_n.jpg"><img class="postimageactual" src="/writing/images/2017-10-15-deformnet-or-a-tale-broken-chairs/17021757_1455820011097674_3621251967274797044_n.jpg" alt="History" /></a></p>
+</div></figure>
+
+<figure class="figure"><figcaption class="figure__caption"><p>Perfect Correspondence</p>
+</figcaption><div class="figure__main">
+<p><a href="/writing/images/17202800_1459767327369609_4492442434375103005_n.jpg"><img class="postimageactual" src="/writing/images/2017-10-15-deformnet-or-a-tale-broken-chairs/17202800_1459767327369609_4492442434375103005_n.jpg" alt="History" /></a></p>
+</div></figure>
+
+<figure class="figure"><figcaption class="figure__caption"><p>Color Spiral</p>
+</figcaption><div class="figure__main">
+<p><a href="/writing/images/16939623_1459767330702942_4073595802082156353_n.jpg"><img class="postimageactual" src="/writing/images/2017-10-15-deformnet-or-a-tale-broken-chairs/16939623_1459767330702942_4073595802082156353_n.jpg" alt="History" /></a></p>
+</div></figure>
+
+<figure class="figure"><figcaption class="figure__caption"><p>Strech</p>
+</figcaption><div class="figure__main">
+<p><a href="/writing/images/17309979_1467615326584809_4257681561614777357_o.jpg"><img class="postimageactual" src="/writing/images/2017-10-15-deformnet-or-a-tale-broken-chairs/17309979_1467615326584809_4257681561614777357_o.jpg" alt="History" /></a></p>
+</div></figure>
+
+<figure class="figure"><figcaption class="figure__caption"><p>Chair Growths</p>
+</figcaption><div class="figure__main">
+<p><a href="/writing/images/17621968_1483241391688869_9139772162230816003_o.jpg"><img class="postimageactual" src="/writing/images/2017-10-15-deformnet-or-a-tale-broken-chairs/17621968_1483241391688869_9139772162230816003_o.jpg" alt="History" /></a></p>
+</div></figure>
+
+<figure class="figure"><figcaption class="figure__caption"><p>Chair Growths 2</p>
+</figcaption><div class="figure__main">
+<p><a href="/writing/images/17622114_1483241395022202_135454706992583524_o.jpg"><img class="postimageactual" src="/writing/images/2017-10-15-deformnet-or-a-tale-broken-chairs/17622114_1483241395022202_135454706992583524_o.jpg" alt="History" /></a></p>
+</div></figure>
+
+<figure class="figure"><figcaption class="figure__caption"><p>Chair  Hallucinations 1</p>
+</figcaption><div class="figure__main">
+<p><a href="/writing/images/17435863_1483241398355535_2328838522499450722_o.jpg"><img class="postimageactual" src="/writing/images/2017-10-15-deformnet-or-a-tale-broken-chairs/17435863_1483241398355535_2328838522499450722_o.jpg" alt="History" /></a></p>
+</div></figure>
+
+<figure class="figure"><figcaption class="figure__caption"><p>Chair  Hallucinations 1</p>
+</figcaption><div class="figure__main">
+<p><a href="/writing/images/17621744_1483241425022199_7862745114641406764_o.jpg"><img class="postimageactual" src="/writing/images/2017-10-15-deformnet-or-a-tale-broken-chairs/17621744_1483241425022199_7862745114641406764_o.jpg" alt="History" /></a></p>
+</div></figure>
+
+<figure class="figure"><figcaption class="figure__caption"><p>Foreshortening</p>
+</figcaption><div class="figure__main">
+<p><a href="/writing/images/18058151_1518098891536452_6182864029848832977_n.jpg"><img class="postimageactual" src="/writing/images/2017-10-15-deformnet-or-a-tale-broken-chairs/18058151_1518098891536452_6182864029848832977_n.jpg" alt="History" /></a></p>
+</div></figure>
+
+<figure class="figure"><figcaption class="figure__caption"><p>Relaxing Beach Chair</p>
+</figcaption><div class="figure__main">
+<p><a href="/writing/images/17992160_1518098894869785_3643613128276992654_n.jpg"><img class="postimageactual" src="/writing/images/2017-10-15-deformnet-or-a-tale-broken-chairs/17992160_1518098894869785_3643613128276992654_n.jpg" alt="History" /></a></p>
+</div></figure>
+
+<figure class="figure"><figcaption class="figure__caption"><p>Unfriendly Chair</p>
+</figcaption><div class="figure__main">
+<p><a href="/writing/images/18118890_1518098898203118_7556374425933627554_n.jpg"><img class="postimageactual" src="/writing/images/2017-10-15-deformnet-or-a-tale-broken-chairs/18118890_1518098898203118_7556374425933627554_n.jpg" alt="History" /></a></p>
+</div></figure>
+
+<figure class="figure"><figcaption class="figure__caption"><p>Elephant Chair</p>
+</figcaption><div class="figure__main">
+<p><a href="/writing/images/17992348_151809
+8921536449_8297748936321495132_n.jpg"><img class="postimageactual" src="/writing/images/2017-10-15-deformnet-or-a-tale-broken-chairs/17992348_1518098921536449_8297748936321495132_n.jpg" alt="History" /></a></p>
+</div></figure>
+
+<figure class="figure"><figcaption class="figure__caption"><p>Perfect Correspondence 2</p>
+</figcaption><div class="figure__main">
+<p><a href="/writing/images/18194139_1521245274555147_6387873167953340635_n.jpg"><img class="postimageactual" src="/writing/images/2017-10-15-deformnet-or-a-tale-broken-chairs/18194139_1521245274555147_6387873167953340635_n.jpg" alt="History" /></a></p>
+</div></figure>
+
+<figure class="figure"><figcaption class="figure__caption"><p>Uncomfortable Chair</p>
+</figcaption><div class="figure__main">
+<p><a href="/writing/images/18423960_1536082143071460_5562000232042538980_n.jpg"><img class="postimageactual" src="/writing/images/2017-10-15-deformnet-or-a-tale-broken-chairs/18423960_1536082143071460_5562000232042538980_n.jpg" alt="History" /></a></p>
+</div></figure>
+
+<figure class="figure"><figcaption class="figure__caption"><p>Chill Plane</p>
+</figcaption><div class="figure__main">
+<p><a href="/writing/images/18519900_1542003065812701_69998419652910827_n.jpg"><img class="postimageactual" src="/writing/images/2017-10-15-deformnet-or-a-tale-broken-chairs/18519900_1542003065812701_69998419652910827_n.jpg" alt="History" /></a></p>
+</div></figure>
+
+<figure class="figure"><figcaption class="figure__caption"><p>Alien Counch</p>
+</figcaption><div class="figure__main">
+<p><a href="/writing/images/18486356_1542003069146034_8832229143760253451_n.jpg"><img class="postimageactual" src="/writing/images/2017-10-15-deformnet-or-a-tale-broken-chairs/18486356_1542003069146034_8832229143760253451_n.jpg" alt="History" /></a></p>
+</div></figure>
+
+<figure class="figure"><figcaption class="figure__caption"><p>Melted Car</p>
+</figcaption><div class="figure__main">
+<p><a href="/writing/images/18527562_1542003072479367_757465147288662663_n.jpg"><img class="postimageactual" src="/writing/images/2017-10-15-deformnet-or-a-tale-broken-chairs/18527562_1542003072479367_757465147288662663_n.jpg" alt="History" /></a></p>
+</div></figure>
+
+<figure class="figure"><figcaption class="figure__caption"><p>Old Counch</p>
+</figcaption><div class="figure__main">
+<p><a href="/writing/images/
+18581869_1542003169146024_415512911450005262_n.jpg"><img class="postimageactual" src="/writing/images/2017-10-15-deformnet-or-a-tale-broken-chairs/18581869_1542003169146024_415512911450005262_n.jpg" alt="History" /></a></p>
+</div></figure>
+
+<figure class="figure"><figcaption class="figure__caption"><p>Success!</p>
+</figcaption><div class="figure__main">
+<p><a href="/writing/images/
+18556281_1542003282479346_5657773445370981127_n.jpg"><img class="postimageactual" src="/writing/images/2017-10-15-deformnet-or-a-tale-broken-chairs/18556281_1542003282479346_5657773445370981127_n.jpg" alt="History" /></a></p>
+</div></figure>
+
+
+      <div class="contentinfo">           
+        <h4 id="postnav"><a href="/writing/life/moving-on-looking-back/">Previous Post</a> 
+                        | <a href="/writing/life/some-thoughts-on-meditation/">Next Post</a></h4>
+        <div id="mc_embed_signup">
+  <form action="//andreykurenkov.us12.list-manage.com/subscribe/post?u=4fd9f0f18da6483fe39140533&amp;id=ef01796314" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <div id="mc_embed_signup_scroll">
+
+    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      <div style="position: absolute; left: -5000px;"><input type="text" name="b_4fd9f0f18da6483fe39140533_ef01796314" tabindex="-1" value=""></div>
+      <div class="clear"><input type="submit" value="send me your writing" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
+    </div>
+
+  </form>
+</div>
+<!--End mc_embed_signup-->
+
+        <p id="post-meta">Posted with <i class="fa fa-tags"></i>: <a href="/writing/tag/research/">research</a>, <a href="/writing/tag/ml/">ml</a>, <a href="/writing/tag/ai/">ai</a>, <a href="/writing/tag/art/">art</a></p>
+        <div class="social-share">
+  <h4>Share on</h4>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=/writing/projects/deformnet-or-a-tale-broken-chairs/" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=/writing/projects/deformnet-or-a-tale-broken-chairs/" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=/writing/projects/deformnet-or-a-tale-broken-chairs/" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+  </ul>
+</div><!-- /.social-share -->
+        
+          <section id="disqus_thread"></section><!-- /#disqus_thread -->
+        
+         <span><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</span>
+      </div>
+    </div><!-- /.article-wrap -->
+  </article>
+</div><!-- /#main -->
+</br>
+
+    
+    </div><!-- /#main -->
+  </div>
+
+<footer>
+
+<span>&copy; 2018 Andrey Kurenkov. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://github.com/mmistakes/minimal-mistakes" rel="nofollow">Minimal Mistakes</a> and <a href="https://github.com/mmistakes/skinny-bones-jekyll">Skinny Bones</a> themes.</span>
+
+</footer>
+  
+
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/assets/js/scripts.min.js"></script>
+
+
+<!--Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl = 
+ '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-54402578-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+  
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'eclecticcreations'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+</body>
+</html>
