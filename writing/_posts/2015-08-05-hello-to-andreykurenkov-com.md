@@ -3,7 +3,7 @@ layout: post
 title: Hello to andreykurenkov.com!
 date: 2015-08-07T18:39:03-07:00
 tags: [philosophy,life,quasi-essay]
-category: projects
+category: project
 status: published
 type: post
 published: true

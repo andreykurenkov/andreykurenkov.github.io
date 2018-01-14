@@ -3,7 +3,7 @@ layout: post
 title: Fun Visualizations of the 2015 StackOverflow Developer Survey 
 date: 2016-2-12lT19:19:34-07:00
 tags: [technical,data-science]
-category: projects
+category: project
 status: published
 type: post
 published: true

@@ -3,9 +3,9 @@ layout: post
 title: IMDB Data Visualizations with D3 + Dimple.js
 date: 2016-08-10T16:19:34-07:00
 tags: [technical,data-science,film]
-category: projects
-status: draft
-type: draft
+category: project
+status: post
+type: post
 published: true
 comments: true
 author: andrey_kurenkov
