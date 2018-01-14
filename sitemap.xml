@@ -5,7 +5,7 @@
     <lastmod>2017-10-22T16:19:34-07:00</lastmod>
   </url>
   <url>
-    <loc>/writing/projects/deformnet-or-a-tale-broken-chairs/</loc>
+    <loc>/writing/project/deformnet-or-a-tale-broken-chairs/</loc>
     <lastmod>2017-10-18T16:19:34-07:00</lastmod>
   </url>
   <url>
@@ -37,7 +37,7 @@
     <lastmod>2016-12-16T01:26:22-08:00</lastmod>
   </url>
   <url>
-    <loc>/writing/projects/visualizing-imdb-data-with-d3/</loc>
+    <loc>/writing/project/visualizing-imdb-data-with-d3/</loc>
     <lastmod>2016-08-10T16:19:34-07:00</lastmod>
   </url>
   <url>
@@ -45,7 +45,7 @@
     <lastmod>2016-06-17T00:00:00-07:00</lastmod>
   </url>
   <url>
-    <loc>/writing/projects/power-of-ipython-pandas-scikilearn/</loc>
+    <loc>/writing/project/power-of-ipython-pandas-scikilearn/</loc>
     <lastmod>2016-06-10T19:19:34-07:00</lastmod>
   </url>
   <url>
@@ -73,11 +73,11 @@
     <lastmod>2016-04-18T19:19:34-07:00</lastmod>
   </url>
   <url>
-    <loc>/writing/projects/fun-visualizations-of-stackoverflow/</loc>
+    <loc>/writing/project/fun-visualizations-of-stackoverflow/</loc>
     <lastmod>2016-02-12T19:19:34-07:00</lastmod>
   </url>
   <url>
-    <loc>/writing/projects/what-brief-hacker-news-fame-looks-like/</loc>
+    <loc>/writing/project/what-brief-hacker-news-fame-looks-like/</loc>
     <lastmod>2016-01-22T19:19:34-07:00</lastmod>
   </url>
   <url>
@@ -121,7 +121,7 @@
     <lastmod>2015-08-10T00:00:00-07:00</lastmod>
   </url>
   <url>
-    <loc>/writing/projects/hello-to-andreykurenkov-com/</loc>
+    <loc>/writing/project/hello-to-andreykurenkov-com/</loc>
     <lastmod>2015-08-07T18:39:03-07:00</lastmod>
   </url>
   <url>
@@ -345,19 +345,13 @@
     <loc>/writing/tag/culture/</loc>
   </url>
   <url>
-    <loc>/projects/tag/research/</loc>
+    <loc>/projects/tag/class/</loc>
   </url>
   <url>
     <loc>/projects/tag/ml/</loc>
   </url>
   <url>
     <loc>/projects/tag/ai/</loc>
-  </url>
-  <url>
-    <loc>/projects/tag/art/</loc>
-  </url>
-  <url>
-    <loc>/projects/tag/class/</loc>
   </url>
   <url>
     <loc>/projects/tag/team/</loc>
@@ -369,18 +363,6 @@
     <loc>/projects/tag/data/</loc>
   </url>
   <url>
-    <loc>/projects/tag/technical/</loc>
-  </url>
-  <url>
-    <loc>/projects/tag/data-science/</loc>
-  </url>
-  <url>
-    <loc>/projects/tag/film/</loc>
-  </url>
-  <url>
-    <loc>/projects/tag/ml_writing/</loc>
-  </url>
-  <url>
     <loc>/projects/tag/android/</loc>
   </url>
   <url>
@@ -390,15 +372,6 @@
     <loc>/projects/tag/competition/</loc>
   </url>
   <url>
-    <loc>/projects/tag/writing/</loc>
-  </url>
-  <url>
-    <loc>/projects/tag/life/</loc>
-  </url>
-  <url>
-    <loc>/projects/tag/meta/</loc>
-  </url>
-  <url>
     <loc>/projects/tag/open-source/</loc>
   </url>
   <url>
@@ -406,12 +379,6 @@
   </url>
   <url>
     <loc>/projects/tag/iot/</loc>
-  </url>
-  <url>
-    <loc>/projects/tag/philosophy/</loc>
-  </url>
-  <url>
-    <loc>/projects/tag/quasi-essay/</loc>
   </url>
   <url>
     <loc>/projects/tag/robotics/</loc>
