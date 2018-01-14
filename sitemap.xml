@@ -443,4 +443,16 @@
   <url>
     <loc>/projects/tag/simulation/</loc>
   </url>
+  <url>
+    <loc>/writing/files/2016-08-10-visualizing-imdb-data-with-d3/standalone_page.html</loc>
+    <lastmod>2018-01-14T01:30:04-08:00</lastmod>
+  </url>
+  <url>
+    <loc>/writing/files/2016-08-10-visualizing-imdb-data-with-d3/html/standalone_page.html</loc>
+    <lastmod>2018-01-14T01:30:04-08:00</lastmod>
+  </url>
+  <url>
+    <loc>/writing/files/2016-06-10-power-of-ipython-pandas-scikilearn/post.html</loc>
+    <lastmod>2018-01-14T01:30:04-08:00</lastmod>
+  </url>
 </urlset>
