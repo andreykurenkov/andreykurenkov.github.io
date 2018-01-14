@@ -11,6 +11,7 @@
 		<link rel="stylesheet" href="{{extraCSS}}">
 	{% endfor %}
 {% endif %}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 {% if page.extra_js %}    
 	{% for extraJS in page.extra_js %}    
@@ -31,9 +32,14 @@
   </div>
 
 <footer>
-  {% include _footer.html %}
+
+{% include _footer.html %}
 </footer>
-{% include _scripts.html %}
   
+{% include _scripts.html %}
+{% if page.comments %}
+  {% include _disqus_comments.html %}
+{% endif %}
+
 </body>
 </html>

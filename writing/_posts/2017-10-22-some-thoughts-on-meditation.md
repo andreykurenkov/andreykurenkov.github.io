@@ -9,7 +9,7 @@ type: post
 published: true
 comments: true
 author: andrey_kurenkov
-excerpt: "A short post about my experience with meditation"
+excerpt: "A short reflection about my experience with meditation"
 ---
 I've had a rough few months. Work, work, work, a failed research project, broken laptops, moving, PhD applications, financial mishaps... it's been a stressful time. Bummer. But, it's not big deal, this too shall pass, etc - the bummerness of the situation is not the point. The point is that as has happened before and will happen again, this current tired predicament has given me motivation to take up something I have been meaning to do for a while: writing about meditation. 
 
