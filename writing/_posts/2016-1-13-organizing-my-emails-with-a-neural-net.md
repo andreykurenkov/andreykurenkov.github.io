@@ -9,7 +9,7 @@ type: post
 published: true
 comments: true
 author: andrey_kurenkov
-excerpt: "Organizing emails into folders is a worthy effort, but quickly gets old - why not get some help from AI?"
+excerpt: "Organizing emails into folders quickly gets old - why not get some help from AI?"
 ---
 <figure>
     <img class="postimagesmaller" src="{{ site.url }}/writing/images/2016-1-13-neural-net-categorize-my-email/18-conf_normalized2.png" alt="Conf mat 0"/> 
