@@ -11,7 +11,7 @@ comments: true
 author: andrey_kurenkov
 excerpt: "About how we got from the crummy Chess programs of the late 50s all the way to DeepBlue"
 ---
-This is the second part of 'A Brief History of Game AI Up to AlphaGo'. Part 1 is [here](/writing/a-brief-history-of-game-ai) and part 3 is [here](/writing/a-brief-history-of-game-ai-part-3). In this part, we shall cover just about four decades of progress, from the first victories of computers against people at Checkers and Chess all the way up to DeepBlue's victory against humanity's then-best living Chess player.
+This is the second part of 'A Brief History of Game AI Up to AlphaGo'. Part 1 is [here](/writing/ai/a-brief-history-of-game-ai) and part 3 is [here](/writing/ai/a-brief-history-of-game-ai-part-3). In this part, we shall cover just about four decades of progress, from the first victories of computers against people at Checkers and Chess all the way up to DeepBlue's victory against humanity's then-best living Chess player.
 
 # Computers Start To Win
 <p class="sidenoteleftlarge">1958</p>
@@ -172,7 +172,7 @@ The team credited many things with getting Deep Blue to the point that it could 
 
 So, it would be wrong to claim DeepBlue won purely through "brute-force", since it included decades of ideas about how to tackle the AI problem of Chess. But brute-force surely was hugely important - DeepBlue was run with thirty processors inside a supercomputer working jointly with 480 single-chip chess search engines (16 per processor). When playing Kasparov it observed 126 million positions per second on average, and typically searched to a depth of between 6 and 12 plies and to a maximum of forty plies. All this allowed it to barely win, arguably due to uncharacteristic blunders on Kasparov's part. But, all that hardly matters; since then computers have continued to become exponentially faster, and today humanity's best Chess players are likely no match for programs you can run on your smartphone.
 
-So, Checkers, Chess, and Backgammon had all been mastered by AI programs by the late 90s - what about Go? Even the best computer programs were poor matches for amateurs with some experience. The techniques we've seen so far — supervised learning, reinforcement learning, and well-tuned tree search — were all attempted and found insufficient to make a Go program that could challenge serious human players. To see why these approaches failed, and how their defects were addressed over the span of two decades culminating in the creation of AlphaGo, go on ahead to [the final part of this history](/writing/a-brief-history-of-game-ai-part-3).
+So, Checkers, Chess, and Backgammon had all been mastered by AI programs by the late 90s - what about Go? Even the best computer programs were poor matches for amateurs with some experience. The techniques we've seen so far — supervised learning, reinforcement learning, and well-tuned tree search — were all attempted and found insufficient to make a Go program that could challenge serious human players. To see why these approaches failed, and how their defects were addressed over the span of two decades culminating in the creation of AlphaGo, go on ahead to [the final part of this history](/writing/ai/a-brief-history-of-game-ai-part-3).
 
 ## Acknowledgements
 Big thanks to [Abi See](http://cs.stanford.edu/people/abisee/) and [Pavel Komarov](https://www.linkedin.com/in/pavel-komarov-a2834048)  for helping to edit this.

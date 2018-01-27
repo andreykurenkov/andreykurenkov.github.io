@@ -178,6 +178,24 @@ figure figcaption {
   height: auto;
 }
 
+.postimage_50 {
+  width: 50%;
+  display:block;
+  height: auto;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+
+.postimage_25 {
+  width: 25%;
+  display:block;
+  height: auto;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+
 
 .postimagehalf {
   width: 49%;
@@ -185,6 +203,14 @@ figure figcaption {
   margin-left:auto;
   margin-right:auto;
 }
+
+.postimagequarter {
+  width: 24%;
+  height: auto;
+  margin-left:auto;
+  margin-right:auto;
+}
+
 
 iframe {
   display:block;

@@ -11,7 +11,7 @@ comments: true
 author: andrey_kurenkov
 excerpt: "About neural nets' flaws in the 90s, and how a new AI Winter dawned"
 ---
-This is the third part of 'A Brief History of Neural Nets and Deep Learning'. Parts 1 and 2 are [here](http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning) and [here](http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning-part-2), and part 4 is [here](http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning-part-4). In this part, we will continue to see the swift pace of research in the 90s, and see why neural nets ultimately lost favor much as they did in the late 60s.
+This is the third part of 'A Brief History of Neural Nets and Deep Learning'. Parts 1 and 2 are [here](http://www.andreykurenkov.com/writing/ai/a-brief-history-of-neural-nets-and-deep-learning) and [here](http://www.andreykurenkov.com/writing/ai/a-brief-history-of-neural-nets-and-deep-learning-part-2), and part 4 is [here](http://www.andreykurenkov.com/writing/ai/a-brief-history-of-neural-nets-and-deep-learning-part-4). In this part, we will continue to see the swift pace of research in the 90s, and see why neural nets ultimately lost favor much as they did in the late 60s.
 
 # Neural Nets Make Decisions
 
@@ -105,7 +105,7 @@ But, this did little to fix the larger perception problem that neural nets were 
 
 > "The [support vector machine] classifier has excellent accuracy, which is most remarkable, because unlike the other high performance classifiers, it does not include *a priori* knowledge about the problem. In fact, this classifier would do just as well if the image pixels were permuted with a fixed mapping. It is still much slower and memory hungry than the convolutional nets. However, improvements are expected as the technique is relatively new."
 
-Other new methods, notably Random Forests, also proved to be very effective and with lovely mathematical theory behind them. So, despite the fact that CNNs consistently had state of the art performance, enthusiasm for neural nets dissipated and the machine learning community at large once again disavowed them. Winter was back. In [part 4](http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning-part-4), we shall see how a small group of researchers persevered in this research climate and ultimately made Deep Learning what it is today.
+Other new methods, notably Random Forests, also proved to be very effective and with lovely mathematical theory behind them. So, despite the fact that CNNs consistently had state of the art performance, enthusiasm for neural nets dissipated and the machine learning community at large once again disavowed them. Winter was back. In [part 4](http://www.andreykurenkov.com/writing/ai/a-brief-history-of-neural-nets-and-deep-learning-part-4), we shall see how a small group of researchers persevered in this research climate and ultimately made Deep Learning what it is today.
 
 [^1]: Anderson, C. W. (1989). Learning to control an inverted pendulum using neural networks. Control Systems Magazine, IEEE, 9(3), 31-37.
 [^2]: Narendra, K. S., & Parthasarathy, K. (1990). Identification and control of dynamical systems using neural networks. Neural Networks, IEEE Transactions on, 1(1), 4-27. 

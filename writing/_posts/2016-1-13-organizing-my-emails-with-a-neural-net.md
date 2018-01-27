@@ -48,7 +48,7 @@ Why the disappointing result? Well, as we saw the features created for the datas
 
 #If At First You Don't Succeed...
 
-So, why am I writing this, if I did this years ago and got fairly lame results (albeit a good grade) then? In short, to try again. With a couple more years of experience, and having just completed a [giant 4-part history of neural networks and Deep Learning](http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning/), it seemed only appropriate to dive into a modern machine learning framework and see what I could do. 
+So, why am I writing this, if I did this years ago and got fairly lame results (albeit a good grade) then? In short, to try again. With a couple more years of experience, and having just completed a [giant 4-part history of neural networks and Deep Learning](http://www.andreykurenkov.com/writing/ai/a-brief-history-of-neural-nets-and-deep-learning/), it seemed only appropriate to dive into a modern machine learning framework and see what I could do. 
 
 But, where to start? By picking the tools, of course! The framework I decided to try is [Keras](http://keras.io/), both because it is in Python (which seems to be a favorite for data science and machine learning nowdays, and plays nice with the wonderful [numpy](http://www.numpy.org/), [pandas](http://pandas.pydata.org/), and [scikit-learn](http://www.numpy.org/)) and because it is backed by the well regarded Theano library. 
 

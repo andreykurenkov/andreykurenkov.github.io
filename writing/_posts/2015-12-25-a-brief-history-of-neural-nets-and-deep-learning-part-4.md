@@ -11,7 +11,7 @@ comments: true
 author: andrey_kurenkov
 excerpt: "About the mid-2000s neural net comeback, and how deep learning ascended to the tsunami it is today"
 ---
-This is the fourth part in 'A Brief History of Neural Nets and Deep Learning'. Parts 1-3 [here](http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning), [here](http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning-part-2), and [here](http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning-part-3). In this part, we will get to the end of our story and see how deep learning emerged from the slump neural nets found themselves in by the late 90s, and the amazing state of the art results it has achieved since.
+This is the fourth part in 'A Brief History of Neural Nets and Deep Learning'. Parts 1-3 [here](http://www.andreykurenkov.com/writing/ai/a-brief-history-of-neural-nets-and-deep-learning), [here](http://www.andreykurenkov.com/writing/ai/a-brief-history-of-neural-nets-and-deep-learning-part-2), and [here](http://www.andreykurenkov.com/writing/ai/a-brief-history-of-neural-nets-and-deep-learning-part-3). In this part, we will get to the end of our story and see how deep learning emerged from the slump neural nets found themselves in by the late 90s, and the amazing state of the art results it has achieved since.
 
 > "Ask anyone in machine learning what kept neural network research alive and they will probably mention one or all of these three names: Geoffrey Hinton, fellow Canadian Yoshua Bengio and Yann LeCun, of Facebook and New York University."[^1]
 

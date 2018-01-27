@@ -15,7 +15,7 @@ excerpt: "The start of the story of how humanity made computers good at Go"
 [<img class="postimageactual" src="/writing/images/2016-4-15-a-brief-history-of-game-ai/0-history.png" alt="History"/>](/writing/images/2016-4-15-a-brief-history-of-game-ai/0-history.png)
 {% endfigure %}
 
-This is the first part of 'A Brief History of Game AI Up to AlphaGo'. Part 2 is [here](/writing/a-brief-history-of-game-ai-part-2) and part 3 is [here](/writing/a-brief-history-of-game-ai-part-3). In this part, we shall cover the birth of AI and the very first game-playing AI programs to run on digital computers.
+This is the first part of 'A Brief History of Game AI Up to AlphaGo'. Part 2 is [here](/writing/ai/a-brief-history-of-game-ai-part-2) and part 3 is [here](/writing/ai/a-brief-history-of-game-ai-part-3). In this part, we shall cover the birth of AI and the very first game-playing AI programs to run on digital computers.
 
 # Prologue: At Long Last, Algorithms Triumph Over Humans At Go  
 <p class="sidenoteleftlarge">2016</p>
@@ -147,7 +147,7 @@ But, this is Checkers — what of the game everyone really cared about, Chess? W
 <figcaption>Bernstein's Chess program starring in its very own TV report!</figcaption>
 </figure> 
 
-Still, it was the first fully functional Chess-playing program and demonstrated that even extremely limited Minimax search with a simple evaluation function and no learning can yield passable novice Chess play. And this was in 1957! So much more is yet to come in [the coming decades](/writing/a-brief-history-of-game-ai-part-2)...
+Still, it was the first fully functional Chess-playing program and demonstrated that even extremely limited Minimax search with a simple evaluation function and no learning can yield passable novice Chess play. And this was in 1957! So much more is yet to come in [the coming decades](/writing/ai/a-brief-history-of-game-ai-part-2)...
 
 ## Acknowledgements
 Big thanks to [Abi See](http://cs.stanford.edu/people/abisee/), [Pavel Komarov](https://www.linkedin.com/in/pavel-komarov-a2834048), and Stefeno Fenu for helping to edit this.
