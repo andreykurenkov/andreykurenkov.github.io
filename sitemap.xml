@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>/writing/life/habits/</loc>
+    <lastmod>2018-01-26T15:19:34-08:00</lastmod>
+  </url>
+  <url>
     <loc>/writing/life/some-thoughts-on-meditation/</loc>
     <lastmod>2017-10-22T16:19:34-07:00</lastmod>
   </url>
@@ -11,6 +15,10 @@
   <url>
     <loc>/projects/major_projects/KerasJS3D/</loc>
     <lastmod>2017-08-18T00:00:00-07:00</lastmod>
+  </url>
+  <url>
+    <loc>/projects/research/deformnet-grasp-transfer/</loc>
+    <lastmod>2017-08-11T00:00:00-07:00</lastmod>
   </url>
   <url>
     <loc>/projects/research/deformnet/</loc>
