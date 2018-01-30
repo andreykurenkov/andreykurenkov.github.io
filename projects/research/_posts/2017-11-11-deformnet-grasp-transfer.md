@@ -1,28 +1,30 @@
 ---
 layout: project-post
 title: DeformNet Grasp Transfer
-date: 2017-08-11
+date: 2017-11-11
 tags: [ml,ai]
 status: publish
 type: post
-published: false
+published: true
 comments: true
 author: andrey_kurenkov
 projcategory: research
-projname: deformnet
-excerpt: Free-Form Deformation Network for 3D Shape Reconstruction from a Single Image
+projname: deformnet-grasp-transfer
+excerpt: Robotic Grasp Transfer Done Via Deep-Learning Powered Deformation
 image:
-  teaser: teaser.gif
-  feature: model.png
-when: January 2017-May 2017
-what: A novel idea of incorporating 3D deformation of point cloud in a deep learned model, applied to 3D reconstruction
-who: Andrey Kurenkov, Jingwei Ji, Animesh Garg, Viraj Mehta, JunYoung Gwak, Christopher Choy, Silvio Savarese
-why: Deformations from similar objets based on shape retrieval is an intuitively reasonable approach to 3D reconstruction, and so this was a good idea.
+  teaser: icon.png
+  feature: poster.png
+when: May 2017-Nov 2017
+what: An intuitive extension of the prior DeformNet work to do grasp transfer.
+who: Andrey Kurenkov, Animesh Garg, Viraj Mehta
+why: Transfer has a lot more benefits over grasp planning, and doing so via deformation with the powerful DeformNet model just made sense.
 where: Stanford Vision Lab
 links:
-  - name: Arxiv Post
-    url: https://arxiv.org/abs/1708.04672
-  - name: Project Site
-    url: https://deformnet-site.github.io/DeformNet-website/
+  - name: Poster
+    isfile: true
+    file: corl_poster.pdf
+  - name: CORL Non-Archival Paper
+    isfile: true
+    file: 2017_Deformnet_CORL.pdf
 ---
-I was not the one to have the original idea, but mostly the one to grind out and iterate a lot to get it working. See the Arxiv post and website for more details.
+A project that did not ultimately pan out quite as succesfully as one might have hoped - but that's research! Getting to present the work at CoRL was still great, though.
