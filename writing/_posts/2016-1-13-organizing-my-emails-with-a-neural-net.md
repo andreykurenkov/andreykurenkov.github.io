@@ -6,6 +6,7 @@ tags: [ML,NN,technical,software,highlights]
 category: ai
 status: published
 type: post
+redirect_from: /writing/organizing-my-emails-with-a-neural-net/
 published: true
 comments: true
 author: andrey_kurenkov
