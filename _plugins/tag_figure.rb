@@ -30,7 +30,7 @@ module Jekyll
       source += "<div class=\"figure__main\">#{figure_main}</div>"
 
       if @attributes['caption']
-        source += "<figcaption class=\"figure__caption\">#{figure_caption}</figcaption>"
+        source += "<figcaption class=\"figure__caption\" style=\"padding-top:0;\">#{figure_caption}</figcaption>"
       end
       source += "</figure>"
     end

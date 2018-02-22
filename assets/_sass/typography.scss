@@ -78,7 +78,7 @@ figcaption {
   }
   @media #{$x-large} {
 		@include grid(12,3);
-		@include prefix(12,5);
+		@include prefix(12,5.25);
 		position: absolute;
   }
 }
