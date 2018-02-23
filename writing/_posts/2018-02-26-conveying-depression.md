@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Conveying Depression
+title: The Sickness that is Depression
 date: 2018-02-26 23:37:09.000000000 -07:00
 category: life
 tags: [highlights,quasi-essay,life,poem]
@@ -28,7 +28,7 @@ And, turns out, I do feel like publicly disclosing having gone through depressio
 <br><br>
 So, I want to show that state dissected, spread out, annotated. To point out that this is a profoundly strange and terrible illness that you may not really understand if you've not been through it. And in particular to promote the perspective that it is precisely an illness; easy to recognize if hard to understand, and reliably treatable. I most definitely <b>do not</b> want to [glorify or romanticize](https://www.theodysseyonline.com/tumblr-stop-romanticizing-mental-illnesses) my experience.
 <br><br>
-When I became healthy again, it took me a few weeks to stop finding the experience of just feeling normal weirdly fascinating. Now, looking back, I find the experience of having been depressed fascinating. You cannot understand it without having gone through it, just as I cannot understand what it is to take acid having not done it. But, perhaps this little essay-poem can give you a bit of insight into that.
+When I became healthy again, it took me a few weeks to stop finding the experience of just feeling normal weirdly fascinating. Now, looking back, I find the experience of having been depressed fascinating. You cannot understand it without having gone through it, just as I cannot understand what it is to take acid having not done it. But, perhaps this little essay-poem can give you a bit of insight into that. Plus, I think I am often seen as more competent/together than I really am, so this could serve as a good reminder everyone around you is frankly also dealing with the same being-alive difficulties you are.
 <br><br>
 And lastly, honestly, the biggest reason this is being posted on my site and you are now reading it is: this thing just sort of started spilling out of me one morning. I spent two hours straight going back and forth between what was initially an empty page until it was many pages, subsequently cried, and could not fall asleep on many days afterward spontaneously thinking of things to add to this. If that's not the sort of writing that deserves to be shared, I don't know what is.
 <br><br>
@@ -88,7 +88,7 @@ You know how nice it is to warm up by a fire after being frozen, and how painful
 <br>Spending time with friends or family felt like being warmed next to a fire, whose heat soon went away to be replaced by the familiar cold. 
 
 You know the difference between being heartbroken, slogging through life listless and gray, and being normal? 
-<br>The first time I felt normal, listening to some pop song in front of a urinal, really truly normal - my old self - I was struck as if I just realized some secret. I suspect the medication fully kicked in. 
+<br>The first time I felt normal, listening to some pop song in front of a urinal, really truly normal - my old self - I was struck as if I just realized some secret. I suspect the medication fully kicked in[^Medication]. 
 
 You know the difference between feeling dead tired, despondent, ambivalent for all except sleep and the feeling of having just awoken on the first day of a vacation? 
 <br>One day I awoke and felt that I really was healed of depression, and it was like that.  
@@ -96,9 +96,13 @@ You know the difference between feeling dead tired, despondent, ambivalent for a
 You know the difference between waking up with a killer hangover and having to go to work, and going off home having just exercised? 
 <br>Being depressed was like a perpetual hangover, and being healthy again was like having a perpetual dopamine high. 
 
-You know that feeling of being in a conversation with someone droning on about a topic you could not care less about, just wanting it to end? 
-<br>Being alive felt like that. I had supportive family, friends, security, prospects. 
-<br>But it did not matter. I still had suicidal thoughts[^SideEffect].
+You know that feeling of doing work you could not care less about, just wanting it to be done with? 
+<br>Being alive felt like that. 
+
+I had supportive family, friends, security, prospects. 
+<br>I excercised, meditated, slept well, took on a lighter workload, had a healthy diet. 
+<br>But it did not matter. It still took me months, and medication, to improve. 
+<br>I still had suicidal thoughts[^SideEffect].
 
 That's depression. Except, here's the thing: it was not a feeling. It was a state, a condition, a sickness. <br>A sickness I was stuck with.  
 <figure class="sidefigureleft">
@@ -273,6 +277,6 @@ If during reading this you felt you related and may be going through depression,
 [^Common]: [common](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2169519/): "Major Depressive Disorder is one of the most common forms of psychopathology, one that will affect approximately one in six men and one in four women in their lifetimes. 
 [^Recurrence]: [Recurrence](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2169519/): "[Major depressive disorder] is usually highly recurrent, with at least 50% of those who recover from first episode of depression having one or more additional episodes in their lifetime, and approximately 80% of those with a history of two episodes having another recurrence."
 [^FirstWorld]: Which, by the way, [is inaccurate](https://www.washingtonpost.com/news/worldviews/wp/2013/11/07/a-stunning-map-of-depression-rates-around-the-world/?utm_term=.0a6535d7a636)
-[^Stigma]: And it's not just a hunch either - from ["The Impact of Mental Illness Stigma on Seeking and Participating in Mental Health Care
-"](http://journals.sagepub.com/stoken/rbtfl/dDpyhM2zRi.Fg/full): "Mental health literacy seems to have a promising effect on care seeking. Individuals who better recognize their mental illness and its manifestations, as well as treatment options to address its varied impressions, might better avail themselves of those options (Jorm, 2012)."
+[^Stigma]: And it's not just a hunch either - from ["The Impact of Mental Illness Stigma on Seeking and Participating in Mental Health Care"](http://journals.sagepub.com/stoken/rbtfl/dDpyhM2zRi.Fg/full): "Mental health literacy seems to have a promising effect on care seeking. Individuals who better recognize their mental illness and its manifestations, as well as treatment options to address its varied impressions, might better avail themselves of those options (Jorm, 2012)."
+[^Medication]: Antidepressants often get a bad rep, but they (Cymbalta in my case) seem to have been truly effective for me. Still, [they are not the solution for everyone](https://www.webmd.com/depression/features/are-antidepressants-effective#1): "But a report recently published in The Journal of the American Medical Association showed that the drugs work best for very severe cases of depression and have little or no benefit over placebo (inactive pills) in less serious cases." <br>They are also seemingly [increasingly abused](http://www.medicaldaily.com/antidepressants-arent-taken-depressed-majority-users-have-no-disorder-327940): "A new study published in The Journal of Clinical Psychiatry reports some 69 percent of people taking selective serotonin reuptake inhibitors (SSRIs), the primary type of antidepressants, have never suffered from major depressive disorder (MDD). Perhaps worse, 38 percent have never in their lifetime met the criteria for MDD, obsessive compulsive disorder, panic disorder, social phobia, or generalized anxiety disorder, yet still take the pills that accompany them.".
 
