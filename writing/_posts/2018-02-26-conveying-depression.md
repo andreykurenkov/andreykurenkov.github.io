@@ -6,7 +6,7 @@ category: life
 tags: [highlights,quasi-essay,life,poem]
 status: draft
 type: post
-published: true
+published: false
 author: andrey_kurenkov
 comments: true
 excerpt: A poem-essay about my experience with depression

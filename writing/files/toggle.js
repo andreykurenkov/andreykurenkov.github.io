@@ -3,17 +3,16 @@ $(function() {
     var form = document.querySelector("#writingToggleForm");
     form.addEventListener("change", function(event) {
         console.log("Toggling writing display!");
-        if(displayingCategorical){
-            $("#categorical").fadeOut();
-            $("#chronological").css("visibility", "visible");
-            $("#chronological").css("position", "static");
-            $("#categorical").css("position", "absolute");
-            $("#chronological").fadeIn();
+        if(displayingNews){
+          $('#categorical').fadeToggle(function() {
+              $('#chronological').fadeToggle(function() {
+              });
+          });
         }else{
-            $("#chronological").fadeOut();
-            $("#chronological").css("position", "absolute");
-            $("#categorical").css("position", "static");
-            $("#categorical").fadeIn();
+          $('#chronological').fadeToggle(function() {
+              $('#categorical').fadeToggle(function() {
+              });
+          });
         }
         displayingCategorical = !displayingCategorical;
     });
