@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Sickness that is Depression
+title: The Sickness That Is Depression
 date: 2018-02-26 23:37:09.000000000 -07:00
 category: life
 tags: [highlights,quasi-essay,life,poem]
@@ -157,11 +157,11 @@ That's depression. Except, here's the thing: it was not a feeling. It was a stat
      <figcaption>Francis Bacon, Figure In Sea</figcaption>
 </figure> 
 
-It was as if I was not longer really myself. 
+It was like I was not longer really myself. 
 <br>I did not have interests, energy, drive - all that was left was a dull miserable husk of who I knew myself to be. 
 
-It was as if I was just play-acting as Andrey. 
-<br>The play-acting came pretty naturally, though. 
+It was like I was just play-acting as Andrey. 
+<br>To get somewhere you need above all to want to get there. I wanted nothing. 
 
 It was like I could no longer see a future. 
 <br>I wanted nothing, was incapable of wanting to strive for anything, dreamed only of spending months in the darkness of my parent's basement. The past haunted me, every single misstep real or imaginary.
@@ -190,7 +190,7 @@ It was like I was in Purgatory. Not Hell you see, this was not pain or punishmen
 It was like a dream where you walk around in a snow storm wearing only your t-shirt and shorts, in a big cold city surrounded by towering gray skyscrapers. 
 <br>And somehow this is supposed to make sense.  
 
-That's depression. A surreal, absurd sickness. One of the most common forms of sickness there is[^Common]. 
+That's depression. Except here's the thing: it did make sense. I was sick. Sick with a surreal, absurd sickness [^Common]. 
 <figure class="sidefigureleft">
       <br>
       <img class="postimagesmaller" src="/writing/images/2018-02-26-depression/oswaldo_el_grito_1.jpeg" style="width:73%;" alt="Bacon"/>
@@ -219,28 +219,22 @@ That's depression. A surreal, absurd sickness. One of the most common forms of s
      <figcaption>Pablo Picasso, Woman with Folded Arms</figcaption>
 </figure> 
 
-Except it did make sense, just not to my sick mind. I was sick. I needed treatment. I got it, and got better. Most dont[^Treatment]. 
+It did make sense, just not to my sick mind. 
 
-It did make sense. I had stress, burnout, family history [^Family], prior episodes [^Recurrence], failures, mistakes, changes; so much to explain it. I knew it was a sickness, involuntary, not my fault. I still felt ashamed, felt like I had allowed myself to fall to a stupid first world 'illness' [^FirstWorld].  
+It did make sense that I needed treatment and when I got it I got better. Most dont[^Treatment]. 
 
-It was like the world had become overesaturated, loud, grotesque. Really, I tried Friends and found it so unimaginably grating, loud, grotesque.
+It did make sense that I got sick. I had stress, burnout, family history [^Family], prior episodes [^Recurrence], failures, mistakes, changes; so much to explain it. 
 
-Given my privilge and my positive position, I truly believe this can happen to anyone whetther unfortunate or unwise.  [anumbers]
+It did make sense that I spoke of it infrequently. I knew it was a sickness, involuntary, yet I still felt ashamed, like I had allowed myself to fall to a stupid first world 'illness' [^FirstWorld].  
 
-The melancholy of depression is not melancholy, is not beautiful, it is annoying, it is sick, it is stupid, it is something I hate and fear like few other things. 
+It did make sense that regardless of my privilged and largely easy life,   [anumbers]
 
-To get somewhere you need above all to want to get there. I wanted nothing.
+It did make sense that I could not think clearly, and had to rely on other to get treatment and not to give up on my aspirations, 
 
-And you know, actually, honestly, trying to seem normal was part of the agony. 
+It did make sense that depression took away mt love of life, ability to relish  relish being myself. Depression took that way from me. 
 
-I should have gone to the psychotherapist earlier, at least a month earlier. But I was wary of medication, and there there the fleeting times I felt I was dealing with it well enough. Not really like a broken arm. 
-
-I am still taking antidepressants. It's next taper off. 
- 
-I am still seeing a therapist. Clearly I was not infected by this sickness by someone else. 
-
-I used to love life, I used to relish being myself. Depression took that way from me. 
-<br>But now I have it back. Now I am no longer depressed. 
+That's depression. That was my depression.
+<br> Except, here's the thing: I got treatment, rest, support, and am no longer sick. 
 
 {% figure caption:'Andrei Tarkovsky, Nostalghia (frame)' %}
 [<img class="postimage" src="/writing/images/2018-02-26-depression/tarkovsky_candle.png" alt="History"/>](/writing/images/2018-02-26-depression/tarkovsky_candle.png)
@@ -249,6 +243,8 @@ I used to love life, I used to relish being myself. Depression took that way fro
 Having healed, my nightames mostly revolve around variations on not having truly healed.
 
 Having healed, I wonder
+
+Having healed, I see depression has zero melancholy beuaty, it is annoying, it is sick, it is stupid, it is something I hate and fear like few other things. 
 
 Having healed, music sounds as sweet as wine - it's indescribable.
 
@@ -262,6 +258,8 @@ Having healed, what I remember most vividly is not the suicidal thoughts, the in
 
 Having healed, I see the need to de-stigamatize, and to share my knowledge far more than I did before[^Stigma]. 
 
+Having healed, I am still taking antidepressants, still seeing a therapist; clearly I am not blameless in becoming sick. 
+
 Don't feel bad for me. I seriously feel superhuman, healed of this sickness. Just, try to understand.  
 
 <hr>
@@ -274,7 +272,7 @@ If during reading this you felt you related and may be going through depression,
 [^Absurd]: I had been prone to existential dread in the past, but the sheer nauseating sense of [The Absurd](https://en.wikipedia.org/wiki/Absurdism) was abhorrent; I felt exactly like [Sisyphus](https://en.wikipedia.org/wiki/The_Myth_of_Sisyphus): "life is meaningless and nonsensical, but humans strive constantly for meaning and sense in it... Once stripped of its common romanticism, the world is a foreign, strange and inhuman place."
 [^Treatment]: [Most who really need treatment don't get it](http://time.com/3615353/depression-seeking-treatment/): <br>But what was most concerning to study co-author Laura Pratt, an epidemiologist at the NCHS, was that 65% of people with severe symptoms of depression were not getting help from a mental health professional.“The fact that people aren’t getting treatment is disturbing,” she says. “People with severe depression should be getting therapy from a mental health professional, and they should also in a lot of cases be on a more complicated medication regimen that requires a psychiatrist to treat them. The fact that only 35% have seen a mental health professional in the last year was pretty alarming.”
 [^Family]: [Family history](https://www.healthline.com/health/depression/genetic#genetics): "Research has also shown that people with parents or siblings who have depression are up to three times more likely to have the condition."
-[^Common]: [common](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2169519/): "Major Depressive Disorder is one of the most common forms of psychopathology, one that will affect approximately one in six men and one in four women in their lifetimes. 
+[^Common]: [And one of the most common forms of sickness there is](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2169519/): "Major Depressive Disorder is one of the most common forms of psychopathology, one that will affect approximately one in six men and one in four women in their lifetimes. 
 [^Recurrence]: [Recurrence](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2169519/): "[Major depressive disorder] is usually highly recurrent, with at least 50% of those who recover from first episode of depression having one or more additional episodes in their lifetime, and approximately 80% of those with a history of two episodes having another recurrence."
 [^FirstWorld]: Which, by the way, [is inaccurate](https://www.washingtonpost.com/news/worldviews/wp/2013/11/07/a-stunning-map-of-depression-rates-around-the-world/?utm_term=.0a6535d7a636)
 [^Stigma]: And it's not just a hunch either - from ["The Impact of Mental Illness Stigma on Seeking and Participating in Mental Health Care"](http://journals.sagepub.com/stoken/rbtfl/dDpyhM2zRi.Fg/full): "Mental health literacy seems to have a promising effect on care seeking. Individuals who better recognize their mental illness and its manifestations, as well as treatment options to address its varied impressions, might better avail themselves of those options (Jorm, 2012)."

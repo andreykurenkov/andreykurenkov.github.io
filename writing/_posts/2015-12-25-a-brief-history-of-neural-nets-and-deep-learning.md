@@ -8,7 +8,8 @@ status: published
 type: post
 published: true
 comments: true
-redirect_from: /writing/a-brief-history-of-neural-nets-and-deep-learning/
+redirect_from: 
+  - /writing/a-brief-history-of-neural-nets-and-deep-learning/
 author: andrey_kurenkov
 excerpt: "The beginning of a story spanning half a century, about how we learned to make computers learn"
 ---
