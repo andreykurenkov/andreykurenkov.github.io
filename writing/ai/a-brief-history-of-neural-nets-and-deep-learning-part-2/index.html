@@ -256,7 +256,7 @@
 
 <h1 id="neural-nets-gain-beliefs">Neural Nets Gain Beliefs</h1>
 
-<p>In fact, before being co-author of the seminal 1986 paper on backpropagation learning algorithm, Hinton worked on a neural net approach for learning probability distributions in the 1985 <a href="http://www.cs.toronto.edu/~fritz/absps/cogscibm.pdf">“A Learning Algorithm for Boltzmann Machines”</a> <sup id="fnref:11"><a href="#fn:11" class="footnote">11</a></sup>. Boltzmann Machines are networks just like neural nets and have units that are very similar to Perceptrons, but instead of computing an output based on inputs and weights, each unit in the network can compute a probability of it having a value of 1 or 0 given the values of connected units and weights. The units are therefore <strong>stochastic</strong> - they behave according to a probability distribution, rather than in a known deterministic way. The Boltzmann part refers <a href="https://en.wikipedia.org/wiki/Boltzmann_distribution">to a probability distribution</a> that has to do with the states of particles in a system based the particles’ energy and on the thermodynamic temperature of that system. This distribution defines not only the mathematics of the Boltzmann machines, but also the interpretation - the units in the network themselves have energies and states, and learning is done by minimizing the energy of the system and with direct inspirartion from thermodynamics. Though a bit unintuitive, this energy-based interpretation is actually just one example of an <strong>energy-based model</strong>, and fits in the <strong>energy-based learning</strong> theoretical framework with which many learning algorithms can be expressed<sup id="fnref:ebm"><a href="#fn:ebm" class="footnote">12</a></sup>.</p>
+<p>In fact, before being co-author of the seminal 1986 paper on backpropagation learning algorithm, Hinton worked on a neural net approach for learning probability distributions in the 1985 <a href="http://www.cs.toronto.edu/~fritz/absps/cogscibm.pdf">“A Learning Algorithm for Boltzmann Machines”</a> <sup id="fnref:11"><a href="#fn:11" class="footnote">11</a></sup>. Boltzmann Machines are networks just like neural nets and have units that are very similar to Perceptrons, but instead of computing an output based on inputs and weights, each unit in the network can compute a probability of it having a value of 1 or 0 given the values of connected units and weights. The units are therefore <strong>stochastic</strong> - they behave according to a probability distribution, rather than in a known deterministic way. The Boltzmann part refers <a href="https://en.wikipedia.org/wiki/Boltzmann_distribution">to a probability distribution</a> that has to do with the states of particles in a system based the particles’ energy and on the thermodynamic temperature of that system. This distribution defines not only the mathematics of the Boltzmann machines, but also the interpretation - the units in the network themselves have energies and states, and learning is done by minimizing the energy of the system - a direct inspiration from thermodynamics. Though a bit unintuitive, this energy-based interpretation is actually just one example of an <strong>energy-based model</strong>, and fits in the <strong>energy-based learning</strong> theoretical framework with which many learning algorithms can be expressed<sup id="fnref:ebm"><a href="#fn:ebm" class="footnote">12</a></sup>.</p>
 
 <div><button class="btn" data-toggle="collapse" data-target="#ebm">
 Aside: a bit more Energy Based Models &raquo;
@@ -335,49 +335,49 @@ Note the Neal's belief nets also implicitly made the probabilities factorize by 
 <div class="footnotes">
   <ol>
     <li id="fn:1">
-      <p>Kurt Hornik, Maxwell Stinchcombe, Halbert White, Multilayer feedforward networks are universal approximators, Neural Networks, Volume 2, Issue 5, 1989, Pages 359-366, ISSN 0893-6080, http://dx.doi.org/10.1016/0893-6080(89)90020-8. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+      <p>Kurt Hornik, Maxwell Stinchcombe, Halbert White, Multilayer feedforward networks are universal approximators, Neural Networks, Volume 2, Issue 5, 1989, Pages 359-366, ISSN 0893-6080, http://dx.doi.org/10.1016/0893-6080(89)90020-8. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:2">
-      <p>LeCun, Y; Boser, B; Denker, J; Henderson, D; Howard, R; Hubbard, W; Jackel, L, “Backpropagation Applied to Handwritten Zip Code Recognition,” in Neural Computation , vol.1, no.4, pp.541-551, Dec. 1989 89 <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+      <p>LeCun, Y; Boser, B; Denker, J; Henderson, D; Howard, R; Hubbard, W; Jackel, L, “Backpropagation Applied to Handwritten Zip Code Recognition,” in Neural Computation , vol.1, no.4, pp.541-551, Dec. 1989 89 <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:3">
-      <p>D. E. Rumelhart, G. E. Hinton, and R. J. Williams. 1986. Learning internal representations by error propagation. In Parallel distributed processing: explorations in the microstructure of cognition, vol. 1, David E. Rumelhart, James L. McClelland, and CORPORATE PDP Research Group (Eds.). MIT Press, Cambridge, MA, USA 318-362 <a href="#fnref:3" class="reversefootnote">&#8617;</a> <a href="#fnref:3:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
+      <p>D. E. Rumelhart, G. E. Hinton, and R. J. Williams. 1986. Learning internal representations by error propagation. In Parallel distributed processing: explorations in the microstructure of cognition, vol. 1, David E. Rumelhart, James L. McClelland, and CORPORATE PDP Research Group (Eds.). MIT Press, Cambridge, MA, USA 318-362 <a href="#fnref:3" class="reversefootnote">&#8617;</a> <a href="#fnref:3:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
     </li>
     <li id="fn:4">
-      <p>Fukushima, K. (1980), ‘Neocognitron: A Self-Organizing Neural Network Model for a Mechanism of Pattern Recognition Unaffected by Shift in Position’, Biological Cybernetics 36 , 193–202 . <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+      <p>Fukushima, K. (1980), ‘Neocognitron: A Self-Organizing Neural Network Model for a Mechanism of Pattern Recognition Unaffected by Shift in Position’, Biological Cybernetics 36 , 193–202 . <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:5">
-      <p>Gregory Piatetsky, ‘KDnuggets Exclusive: Interview with Yann LeCun, Deep Learning Expert, Director of Facebook AI Lab’ Feb 20, 2014. http://www.kdnuggets.com/2014/02/exclusive-yann-lecun-deep-learning-facebook-ai-lab.html <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+      <p>Gregory Piatetsky, ‘KDnuggets Exclusive: Interview with Yann LeCun, Deep Learning Expert, Director of Facebook AI Lab’ Feb 20, 2014. http://www.kdnuggets.com/2014/02/exclusive-yann-lecun-deep-learning-facebook-ai-lab.html <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:6">
-      <p>Teuvo Kohonen. 1988. Self-organized formation of topologically correct feature maps. In Neurocomputing: foundations of research, James A. Anderson and Edward Rosenfeld (Eds.). MIT Press, Cambridge, MA, USA 509-521. <a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
+      <p>Teuvo Kohonen. 1988. Self-organized formation of topologically correct feature maps. In Neurocomputing: foundations of research, James A. Anderson and Edward Rosenfeld (Eds.). MIT Press, Cambridge, MA, USA 509-521. <a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:7">
-      <p>Gail A. Carpenter and Stephen Grossberg. 1988. The ART of Adaptive Pattern Recognition by a Self-Organizing Neural Network. Computer 21, 3 (March 1988), 77-88. <a href="#fnref:7" class="reversefootnote">&#8617;</a></p>
+      <p>Gail A. Carpenter and Stephen Grossberg. 1988. The ART of Adaptive Pattern Recognition by a Self-Organizing Neural Network. Computer 21, 3 (March 1988), 77-88. <a href="#fnref:7" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:8">
-      <p>H. Bourlard and Y. Kamp. 1988. Auto-association by multilayer perceptrons and singular value decomposition. Biol. Cybern. 59, 4-5 (September 1988), 291-294. <a href="#fnref:8" class="reversefootnote">&#8617;</a></p>
+      <p>H. Bourlard and Y. Kamp. 1988. Auto-association by multilayer perceptrons and singular value decomposition. Biol. Cybern. 59, 4-5 (September 1988), 291-294. <a href="#fnref:8" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:9">
-      <p>P. Baldi and K. Hornik. 1989. Neural networks and principal component analysis: learning from examples without local minima. Neural Netw. 2, 1 (January 1989), 53-58. <a href="#fnref:9" class="reversefootnote">&#8617;</a></p>
+      <p>P. Baldi and K. Hornik. 1989. Neural networks and principal component analysis: learning from examples without local minima. Neural Netw. 2, 1 (January 1989), 53-58. <a href="#fnref:9" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:10">
-      <p>Hinton, G. E. &amp; Zemel, R. S. (1993), Autoencoders, Minimum Description Length and Helmholtz Free Energy., in Jack D. Cowan; Gerald Tesauro &amp; Joshua Alspector, ed., ‘NIPS’ , Morgan Kaufmann, , pp. 3-10 . <a href="#fnref:10" class="reversefootnote">&#8617;</a></p>
+      <p>Hinton, G. E. &amp; Zemel, R. S. (1993), Autoencoders, Minimum Description Length and Helmholtz Free Energy., in Jack D. Cowan; Gerald Tesauro &amp; Joshua Alspector, ed., ‘NIPS’ , Morgan Kaufmann, , pp. 3-10 . <a href="#fnref:10" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:11">
-      <p>Ackley, D. H., Hinton, G. E., &amp; Sejnowski, T. J. (1985). A learning algorithm for boltzmann machines*. Cognitive science, 9(1), 147-169. <a href="#fnref:11" class="reversefootnote">&#8617;</a></p>
+      <p>Ackley, D. H., Hinton, G. E., &amp; Sejnowski, T. J. (1985). A learning algorithm for boltzmann machines*. Cognitive science, 9(1), 147-169. <a href="#fnref:11" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:ebm">
-      <p>LeCun, Y., Chopra, S., Hadsell, R., Ranzato, M., &amp; Huang, F. (2006). A tutorial on energy-based learning. Predicting structured data, 1, 0. <a href="#fnref:ebm" class="reversefootnote">&#8617;</a></p>
+      <p>LeCun, Y., Chopra, S., Hadsell, R., Ranzato, M., &amp; Huang, F. (2006). A tutorial on energy-based learning. Predicting structured data, 1, 0. <a href="#fnref:ebm" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:12">
-      <p>Neal, R. M. (1992). Connectionist learning of belief networks. Artificial intelligence, 56(1), 71-113. <a href="#fnref:12" class="reversefootnote">&#8617;</a></p>
+      <p>Neal, R. M. (1992). Connectionist learning of belief networks. Artificial intelligence, 56(1), 71-113. <a href="#fnref:12" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:13">
-      <p>Hinton, G. E., Dayan, P., Frey, B. J., &amp; Neal, R. M. (1995). The” wake-sleep” algorithm for unsupervised neural networks. Science, 268(5214), 1158-1161. <a href="#fnref:13" class="reversefootnote">&#8617;</a></p>
+      <p>Hinton, G. E., Dayan, P., Frey, B. J., &amp; Neal, R. M. (1995). The” wake-sleep” algorithm for unsupervised neural networks. Science, 268(5214), 1158-1161. <a href="#fnref:13" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:14">
-      <p>Dayan, P., Hinton, G. E., Neal, R. M., &amp; Zemel, R. S. (1995). The helmholtz machine. Neural computation, 7(5), 889-904. <a href="#fnref:14" class="reversefootnote">&#8617;</a></p>
+      <p>Dayan, P., Hinton, G. E., Neal, R. M., &amp; Zemel, R. S. (1995). The helmholtz machine. Neural computation, 7(5), 889-904. <a href="#fnref:14" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>

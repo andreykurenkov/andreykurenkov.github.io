@@ -215,7 +215,7 @@ load = new SwingWorker() {
 @Override
 protected Object doInBackground() throws Exception {
 api.login(“andrey.sendme@gmail.com”,”secretdonttelltoyou”);
-Collection<song> songs = api.getAllSongs();
+Collection<Song> songs = api.getAllSongs();
 DefaultPieDataset data = new DefaultPieDataset();
 for (Song s : songs) {
 try {
@@ -231,7 +231,7 @@ return null;
 }
 };
 load.execute();
-}</song></p>
+}</Song></p>
 
 <p>public void paint(Graphics g) {
 super.paint(g);
