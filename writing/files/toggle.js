@@ -3,7 +3,7 @@ $(function() {
     var form = document.querySelector("#writingToggleForm");
     form.addEventListener("change", function(event) {
         console.log("Toggling writing display!");
-        if(displayingNews){
+        if(displayingCategorical){
           $('#categorical').fadeToggle(function() {
               $('#chronological').fadeToggle(function() {
               });
@@ -16,8 +16,10 @@ $(function() {
         }
         displayingCategorical = !displayingCategorical;
     });
-    $("#chronological").fadeOut();
-
+    $("#chronological").fadeToggle(function() {
+         $("#chronological").css("visibility", "visible");
+         $("#chronological").css("position", "static");
+    });
     /*Reset selection*/
     form.reset();
 });

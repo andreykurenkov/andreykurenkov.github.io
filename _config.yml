@@ -12,7 +12,6 @@ sass:
   style: compressed
 gems:
   - jekyll-sitemap
-  - jekyll-seo
   - jekyll-redirect-from
   
 kramdown:
