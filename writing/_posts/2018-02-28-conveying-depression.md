@@ -38,7 +38,7 @@ But I hope to do more that just be open and honest about depression; I hope to p
 </figure> 
 
 <figure class="sidefigureleft">
-      <img class="postimagesmall" src="/writing/images/2018-02-26-depression/rothko_brown.jpg" alt="Mark Rothko, Untitled "/>
+      <img class="postimagesmall" style="width:70%;" src="/writing/images/2018-02-26-depression/rothko_brown.jpg" alt="Mark Rothko, Untitled "/>
      <figcaption>Mark Rothko, Untitled <a href="http://www.artnet.com/artists/mark-rothko/untitled-j7Y_lpV8AsioM5amWt1tjQ2"><b>(Source)</b></a></figcaption>
 </figure> 
 
@@ -57,13 +57,13 @@ You know the difference between dragging yourself to work after waking up with a
 <br>Being depressed was like a perpetual hangover, and being healthy again was like having a perpetual dopamine high. 
 
 <figure class="sidefigureleft">
-      <img class="postimagesmall" src="/writing/images/2018-02-26-depression/honaker_lost.jpeg" alt="Honaker"/>
+      <img class="postimagesmaller" src="/writing/images/2018-02-26-depression/honaker_lost.jpeg" alt="Honaker"/>
      <figcaption>Mark Honaker, II <a href="http://www.edwardhonaker.com/booktwo/"><b>(Source)</b></a></figcaption>
 </figure> 
 
 
 <figure class="sidefigureright">
-      <img class="postimagesmall" src="/writing/images/2018-02-26-depression/honaker_headshake.jpg" alt="Honaker"/>
+      <img class="postimagesmaller" src="/writing/images/2018-02-26-depression/honaker_headshake.jpg" alt="Honaker"/>
      <figcaption>Mark Honaker, II <a href="http://www.edwardhonaker.com/booktwo/"><b>(Source)</b></a></figcaption>
 </figure> 
 
