@@ -257,7 +257,8 @@ Having healed, what I remember most vividly is not the suicidal thoughts, the in
 Having healed, I write this, reflecting on that period of surreal sickness and memories like that.
 <br> I see the need to de-stigmatize and explain my experience far more than I did before[^Stigma]. 
 
-So, don't feel bad for me. I seriously feel superhuman, healed of this sickness. Just, try to understand.  
+So, don't feel bad for me. I seriously feel superhuman, healed of this sickness. 
+<br> Just, try to understand.  
 
 <hr>
 While reading this, if you felt you related and may be going through depression, **please** seek consulation with a mental health professional and talk to your friends and family, or at least complete a short [self-test](https://depression.org.nz/is-it-depression-anxiety/self-test/) to evaluate whether talking to others is likely warranted. If you are currently struggling with depression, [this is a list of resources that might help](https://www.everydayhealth.com/depression/guide/resources/) and if you are in a truly bad place please be aware of the [suicide prevention lifeline](https://suicidepreventionlifeline.org/). When I was depressed it felt like it was never going to end, but it did, and I fully attribute seeking treatment and support as the cause for my recovery. Trust me, it may feel like it will never end, but it will.
