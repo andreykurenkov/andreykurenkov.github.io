@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>/writing/life/conveying-depression/</loc>
+<lastmod>2018-02-28T00:00:00-08:00</lastmod>
+</url>
+<url>
 <loc>/writing/life/habits/</loc>
 <lastmod>2018-01-26T15:19:34-08:00</lastmod>
 </url>
@@ -278,7 +282,16 @@
 <loc>/</loc>
 </url>
 <url>
+<loc>/writing/tag/highlights/</loc>
+</url>
+<url>
+<loc>/writing/tag/quasi-essay/</loc>
+</url>
+<url>
 <loc>/writing/tag/life/</loc>
+</url>
+<url>
+<loc>/writing/tag/poem/</loc>
 </url>
 <url>
 <loc>/writing/tag/research/</loc>
@@ -308,12 +321,6 @@
 <loc>/writing/tag/history/</loc>
 </url>
 <url>
-<loc>/writing/tag/highlights/</loc>
-</url>
-<url>
-<loc>/writing/tag/poem/</loc>
-</url>
-<url>
 <loc>/writing/tag/writing/</loc>
 </url>
 <url>
@@ -330,9 +337,6 @@
 </url>
 <url>
 <loc>/writing/tag/philosophy/</loc>
-</url>
-<url>
-<loc>/writing/tag/quasi-essay/</loc>
 </url>
 <url>
 <loc>/writing/tag/work/</loc>
