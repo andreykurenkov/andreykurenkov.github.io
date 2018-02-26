@@ -1,16 +1,10 @@
-{% if page.image.feature %}
+{% if page.feature %}
   <div class="image-wrap" {% if page.image.featureid %} id="{{ page.image.featureid }}" {% endif %}>
-     {% if page.image.featurelink %}<a href="{{ site.url }}/{{ page.image.feature }}" target="_blank">  {% endif %}
-     <img src=
-     {% if page.image.feature contains 'http' %}
-        "{{ page.image.feature }}"
-     {% else %}
-        "{{ site.url }}/{{ page.image.feature }}"
-     {% endif %}
-        alt="{{ page.title }} feature image">
-     {% if page.image.featurelink %}</a>  {% endif %}
-  {% if page.image.credit %}
-    <span class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>
+     {% if page.featurelink %}<a href="{{ site.url }}/{{ page.image.feature }}" target="_blank">  {% endif %}
+     <img src="{{ page.feature }}" alt="{{ page.title }} feature image">
+     {% if page.featurelink %}</a>  {% endif %}
+  {% if page.feature_credit %}
+    <span class="image-credit">Credit: <a href="{{ page.image.creditlink }}">{{ page.feature_credit }}</a></span>
   {% endif %}
   </div><!-- /.image-wrap -->
 {% endif %}
