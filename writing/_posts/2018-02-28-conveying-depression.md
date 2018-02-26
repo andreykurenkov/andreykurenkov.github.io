@@ -93,7 +93,6 @@ You know that feeling of getting in a cold shower and having your body revolt, t
 </figure> 
 
 
-
 You know how it feels when you are at a social event, and just can't seem to get along with anyone - alienated ? 
 <br>Depression makes you feel like that, even among friends.  
 
@@ -111,7 +110,6 @@ I had supportive family, friends, security, and prospects.
 <br>But it did not matter. It still took me months, and medication, to improve[^Medication]. 
 <br>I still had suicidal thoughts[^SideEffect].
 
-</figure> 
 That's depression. 
 <br>Except, it was not a feeling. 
 <br>It was a state, a condition, a sickness. A sickness I was stuck with.  
@@ -165,7 +163,7 @@ It was like being up high and struggling for breath, or underwater running out o
 It was like I could no longer see a future, hated the present, was haunted by the past. 
 <br>I wanted nothing, was incapable of wanting to strive for anything.
 
-[It was like life was just a thing that I did.](https://youtu.be/IHnHpX77oKs). 
+[It was like life was just a thing that I did](https://youtu.be/IHnHpX77oKs). 
 <br> And that thing had lost its appeal. 
 
 It was like there was some horrible droning static always there.
