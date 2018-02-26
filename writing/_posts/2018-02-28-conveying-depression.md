@@ -60,19 +60,18 @@ That's depression.
 [<img class="postimage" src="/writing/images/2018-02-26-depression/matta_black_idea.jpg" alt="Roberto Matta, The Black Idea"/>](/writing/images/2018-02-26-depression/matta_black_idea.jpg)
 {% endfigure %}
 
-You know how being in a bad mood is like a filter that squeezes out the joy from otherwise pleasant things? 
-<br>Imagine being in the worst mood of your life, for months[^Months].  
-
 <figure class="sidefigureleft">
-      <img class="postimagesmaller" src="/writing/images/2018-02-26-depression/honaker_lost.jpeg" alt="Honaker"/>
-     <figcaption>Mark Honaker, II <a href="http://www.edwardhonaker.com/booktwo/"><b>(Source)</b></a></figcaption>
+     <img class="postimagesmaller" src="/writing/images/2018-02-26-depression/honaker_lost.jpeg" alt="Honaker"/>
+     <figcaption>Edward Honaker, II <a href="http://www.edwardhonaker.com/booktwo/"><b>(Source)</b></a></figcaption>
 </figure> 
-
 
 <figure class="sidefigureright">
-      <img class="postimagesmaller" src="/writing/images/2018-02-26-depression/honaker_headshake.jpg" alt="Honaker"/>
-     <figcaption>Mark Honaker, II <a href="http://www.edwardhonaker.com/booktwo/"><b>(Source)</b></a></figcaption>
+     <img class="postimagesmaller" src="/writing/images/2018-02-26-depression/honaker_headshake.jpg" alt="Honaker"/>
+     <figcaption>Edward Honaker, II <a href="http://www.edwardhonaker.com/booktwo/"><b>(Source)</b></a></figcaption>
 </figure> 
+
+You know how being in a bad mood is like a filter that squeezes out the joy from otherwise pleasant things? 
+<br>Imagine being in the worst mood of your life, for months[^Months].  
 
 You know the difference between dragging yourself to work after waking up with a killer hangover, and heading home having just exercised? 
 <br>Being depressed was like a perpetual hangover, and being healthy again was like having a perpetual dopamine high[^BrainStuff]. 
@@ -82,6 +81,18 @@ You know how when you are drunk, or high, you think thoughts that seem absurd in
 
 You know that feeling of getting in a cold shower and having your body revolt, the feeling of '**make this stop**'? 
 <br>It was like that, every morning, being hit with a wave of formless misery moments after waking up, like 'oh, right, **this**'. 
+
+<figure class="sidefigureleft">
+     <img class="postimagesmaller" src="/writing/images/2018-02-26-depression/honaker_milk.jpeg" alt="Honaker"/>
+     <figcaption>Edward Honaker, II <a href="http://www.edwardhonaker.com/booktwo/"><b>(Source)</b></a></figcaption>
+</figure> 
+
+<figure class="sidefigureright">
+     <img class="postimagesmaller" src="/writing/images/2018-02-26-depression/honaker_drown.jpeg" alt="Honaker"/>
+     <figcaption>Edward Honaker, II <a href="http://www.edwardhonaker.com/booktwo/"><b>(Source)</b></a></figcaption>
+</figure> 
+
+
 
 You know how it feels when you are at a social event, and just can't seem to get along with anyone - alienated ? 
 <br>Depression makes you feel like that, even among friends.  
@@ -100,9 +111,11 @@ I had supportive family, friends, security, and prospects.
 <br>But it did not matter. It still took me months, and medication, to improve[^Medication]. 
 <br>I still had suicidal thoughts[^SideEffect].
 
+</figure> 
 That's depression. 
 <br>Except, it was not a feeling. 
 <br>It was a state, a condition, a sickness. A sickness I was stuck with.  
+
 <figure class="sidefigureleft">
       <img class="postimagesmaller" src="/writing/images/2018-02-26-depression/depression_comics_normal.jpg"  alt="Depression Comix"/>
      <figcaption><a href="https://www.depressioncomix.com/?"><b>Depression Comix, Being</b></a></figcaption>
@@ -111,45 +124,13 @@ That's depression.
 <figure class="sidefigureright">
       <img class="postimagesmaller" src="/writing/images/2018-02-26-depression/depression_comics_future.jpg" alt="Depression Comix"/>
      <figcaption><a href="https://www.depressioncomix.com/?"><b>Depression Comix, To See A Future</b></a></figcaption>
-</figure> 
+</figure>
+
 <br>
-{% figure caption:'Mark Honaker, II' %}
-[<img class="postimagesmaller" src="/writing/images/2018-02-26-depression/honaker_white.jpeg" alt="Mark Honaker, II"/>](/writing/images/2018-02-26-depression/honaker_white.jpg)
+{% figure caption:'Edward Honaker, II' %}
+[<img class="postimage" src="/writing/images/2018-02-26-depression/honaker_white.jpeg" alt="Edward Honaker, II"/>](/writing/images/2018-02-26-depression/honaker_white.jpg)
 {% endfigure %}
 <br><br>
-
-<!--
-<figure class="sidefigureleft">
-      <img class="postimage" src="/writing/images/2018-02-26-depression/honaker_milk.jpeg" alt="Honaker"/>
-     <figcaption>Mark Honaker, II <a href="http://www.edwardhonaker.com/booktwo/"><b>(Source)</b></a></figcaption>
-</figure> 
-
-<figure class="sidefigureright">
-      <img class="postimage" src="/writing/images/2018-02-26-depression/honaker_drown.jpeg" alt="Honaker"/>
-     <figcaption>Mark Honaker, II <a href="http://www.edwardhonaker.com/booktwo/"><b>(Source)</b></a></figcaption>
-</figure> 
--->
-<!--
-
--->
-<figure class="sidefigureleft">
-      <br>
-      <img class="postimagesmall" src="/writing/images/2018-02-26-depression/bacon_untitled_crouching_figures.jpg"  alt="Bacon"/>
-     <figcaption>Francis Bacon, Two Figures At a Window</figcaption>
-</figure> 
-
-<!--
-<figure class="sidefigureright">
-      <img class="postimagesmaller" src="/writing/images/2018-02-26-depression/semushin_van_gogh.jpg" alt="Mark Rothko, Untitled "/>
-     <figcaption>Mark Rothko, Untitled <a href="http://www.artnet.com/artists/mark-rothko/untitled-j7Y_lpV8AsioM5amWt1tjQ2"><b>(Source)</b></a></figcaption>
-</figure> 
--->
-
-<figure class="sidefigureright">
-      <br>
-      <img class="postimagesmall" src="/writing/images/2018-02-26-depression/bacon_figure_in_sea.jpg" style="width:80%;" alt="Bacon"/>
-     <figcaption>Francis Bacon, Figure In Sea</figcaption>
-</figure> 
 
 It was like I was no longer really myself. 
 <br>I did not have interests, energy, drive - all that was left was a dull miserable husk of myself.
@@ -159,6 +140,21 @@ It was like I was just play-acting as Andrey.
 
 It was like a temporary state of insanity.
 <br> If you have ever been in love, the feeling of temporary insanity was like that.
+
+
+<figure class="sidefigureleft">
+      <br>
+      <img class="postimagesmall" src="/writing/images/2018-02-26-depression/bacon_untitled_crouching_figures.jpg"  alt="Bacon"/>
+     <figcaption>Francis Bacon, Two Figures At a Window</figcaption>
+</figure> 
+
+
+<figure class="sidefigureright">
+      <br>
+      <img class="postimagesmall" src="/writing/images/2018-02-26-depression/bacon_figure_in_sea.jpg" style="width:80%;" alt="Bacon"/>
+     <figcaption>Francis Bacon, Figure In Sea</figcaption>
+</figure> 
+
 
 It was like sleep was my only goal, my only escape, every day. 
 <br>I just wanted to close my eyes. I just wanted to lie down still in a dark silent room.  
