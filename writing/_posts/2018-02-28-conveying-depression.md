@@ -36,7 +36,7 @@ But I hope to do more that just be open and honest about depression; I hope to p
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vWGsVfxvB3E?autoplay=0&loop=1&rel=0&amp;controls=0&playlist=vWGsVfxvB3E" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
 
 <figure class="sidefigureright">
-      <img class="postimagesmall" src="/writing/images/2018-02-26-depression/rothko.jpg" alt="Mark Rothko, Untitled "/>
+      <img class="postimagesmaller" src="/writing/images/2018-02-26-depression/rothko.jpg" alt="Mark Rothko, Untitled "/>
      <figcaption>Mark Rothko, Untitled <a href="http://www.artnet.com/artists/mark-rothko/untitled-j7Y_lpV8AsioM5amWt1tjQ2"><b>(Source)</b></a></figcaption>
 </figure> 
 
@@ -81,17 +81,6 @@ You know how when you are drunk, or high, you think thoughts that seem absurd in
 
 You know that feeling of getting in a cold shower and having your body revolt, the feeling of '**make this stop**'? 
 <br>It was like that, every morning, being hit with a wave of formless misery moments after waking up, like 'oh, right, **this**'. 
-
-<figure class="sidefigureleft">
-     <img class="postimagesmaller" src="/writing/images/2018-02-26-depression/honaker_milk.jpeg" alt="Honaker"/>
-     <figcaption>Edward Honaker, II <a href="http://www.edwardhonaker.com/booktwo/"><b>(Source)</b></a></figcaption>
-</figure> 
-
-<figure class="sidefigureright">
-     <img class="postimagesmaller" src="/writing/images/2018-02-26-depression/honaker_drown.jpeg" alt="Honaker"/>
-     <figcaption>Edward Honaker, II <a href="http://www.edwardhonaker.com/booktwo/"><b>(Source)</b></a></figcaption>
-</figure> 
-
 
 You know how it feels when you are at a social event, and just can't seem to get along with anyone - alienated ? 
 <br>Depression makes you feel like that, even among friends.  
