@@ -10,7 +10,7 @@ author: andrey_kurenkov
 comments: true
 feature: /writing/images/2018-02-26-depression/optipess_dress_up.png
 feature_credit: Kristian Nygård, Optipess - Dressing Up
-excerpt: An attempt to convey what it was like to have severe depression and de-stigmatize the topic.
+excerpt: An attempt to convey what it was like to have depression and de-stigmatize the topic.
 extra_js: ["/writing/files/bigfoot_black.js"]
 ---
 
