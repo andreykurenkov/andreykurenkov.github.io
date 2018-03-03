@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>/writing/art/oscar-noms-reviewed/</loc>
+<lastmod>2018-03-03T00:00:00-08:00</lastmod>
+</url>
+<url>
 <loc>/writing/life/conveying-depression/</loc>
 <lastmod>2018-02-28T00:00:00-08:00</lastmod>
 </url>
@@ -282,6 +286,12 @@
 <loc>/</loc>
 </url>
 <url>
+<loc>/writing/tag/art/</loc>
+</url>
+<url>
+<loc>/writing/tag/film/</loc>
+</url>
+<url>
 <loc>/writing/tag/highlights/</loc>
 </url>
 <url>
@@ -303,16 +313,10 @@
 <loc>/writing/tag/ai/</loc>
 </url>
 <url>
-<loc>/writing/tag/art/</loc>
-</url>
-<url>
 <loc>/writing/tag/technical/</loc>
 </url>
 <url>
 <loc>/writing/tag/data-science/</loc>
-</url>
-<url>
-<loc>/writing/tag/film/</loc>
 </url>
 <url>
 <loc>/writing/tag/ml_writing/</loc>
