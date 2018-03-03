@@ -23,6 +23,9 @@ If you are so curious, I am more specifically interested in:
 * books (hard science fiction, modernist, some post-modernist, some pre-modernist)
 * programming (especially embedded programming, but also scripting and hackathon types things as well)
 * photography (doing it, as you can see on this site, but also browsing on Instagram and 500px)
+* Oh, and is all of that is not enough, how about all of that in visual form:
+
+![starter_pack](/images/starter-pack.jpg)
 
 As you can see by all that, I have a habit for overlong self-indulgent writing heavy on parenthesis, so I decided to start writing down some of my thoughts in this site with intention of becoming a better and faster writer. And for fun, too.
 

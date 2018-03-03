@@ -3,10 +3,9 @@ layout: post
 title: The Sickness That Is Depression
 category: life
 tags: [highlights,quasi-essay,life,poem]
-status: draft
+status: post
 type: post
 published: true
-author: andrey_kurenkov
 comments: true
 feature: /writing/images/2018-02-26-depression/optipess_dress_up.png
 feature_credit: Kristian Nygård, Optipess - Dressing Up
