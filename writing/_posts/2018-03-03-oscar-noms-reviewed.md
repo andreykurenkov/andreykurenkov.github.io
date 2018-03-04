@@ -1,13 +1,13 @@
 ---
 layout: post
-title: The 2018 Best Picture Nominees Ranked and Reviewed
+title: The 2018 Best Picture Nominees Ranked, Reviewed, and Reflected Upon
 category: art
 tags: [art,film]
 status: post
 type: post
 published: true
 comments: true
-excerpt: I happened to watch all of the 2018 Best Picture Nominees, and share my thoughts
+excerpt: The nominees are all great, but which are best? And why they are they so great? My take.
 extra_js: ["/writing/files/center_headlines.js"]
 ---
 
@@ -24,20 +24,19 @@ When the 2018 Oscar best picture nominees were released, I realized I had alread
 #### Original Score: 3.5/5
 
 #### Original Review: 
-A showy movie of romance and splendor - too much of romance and splendor, in fact. Especially in its first half, the loud soundtrack, fancy panning/zooming/flying shots, and weird bouts of humor all add up to annoy and exhaust rather than highlight the excellent silent performance. This improves in the second half, with show-off shots that are quite nice and serve to highlight the peril Churchill stands in. But, then the romantic bit cuts in and ruins in with a bastardized version of history that does not seem realistic and indeed is utterly false. Still, the movie looks great, Oldman crafts a compelling portrayal, and overindulgence combined with a liberal interpretation of history are at least a far lesser sin than merely being boring or shallow.
+A showy movie of romance and splendor - too much romance and splendor, in fact. Especially in its first half, the loud soundtrack, fancy panning/zooming/flying shots, and weird bouts of humor all add up to annoy and exhaust rather than highlight the excellent central performance. This improves in the second half, with show-off shots that are quite nice and serve to highlight the peril Churchill stands in. But, then the romantic bit cuts in and ruins that improvement with a bastardized version of history that does not seem realistic and [indeed is utterly false](http://time.com/5183140/gary-oldman-winston-churchill-true-history/). Still, the movie looks great, Oldman crafts a compelling portrayal, and overindulgence combined with a liberal interpretation of history are at least a far lesser sin than being boring or shallow.
 
 #### Current Score: 3.5/5
 
 #### Thoughts: 
-The only movie among all of these I would not call great. This is an unusual case of a movie on which I am split, as I can find both great and not so great elements within it. Sadly, the combination of great and not so great makes for a not great movie. 
+The only movie among all of these I would not call great. This is an unusual case of a movie on which I am split, as I can find both great and not so great elements within it. Sadly, great plus not so great equals not so great. 
 
-As with the rest of these, my perspective on it has also been affected by external listening and reading, in this case [The Q&A with Jeff Goldsmith](http://www.theqandapodcast.com/2017/12/darkest-hour-anthony-mccarten-q.html
-):
+As with the rest of these, my perspective on it has been affected a good deal by external listening and reading, in this case [The Q&A with Jeff Goldsmith](http://www.theqandapodcast.com/2017/12/darkest-hour-anthony-mccarten-q.html) which reveals many interesting tidbits such as:
 
-* The podcast has an interview with the screenwriter Anthony McCarten, who has previously written The Theory of Everything. My impression of the critical response to that one was that a sort-of schmaltzy Oscar bait flick, which is a broadly correct characterization of this movie as well. 
+* The linked interview is with the screenwriter Anthony McCarten, who has previously written The Theory of Everything. My impression of the critical response to that one was that a sort-of schmaltzy Oscar bait flick, which is a broadly correct characterization of this movie as well. 
 * The movie's chief theme is the power of words, but the case of Churchill hardly seems like a good case for that; many figures (MLK Jr. comes to mind) have made far far more impactful speeches than the ones shown the film. 
 * There is also a focus on the wisdom of having uncertainty as a leader, but once more I don't think Churchill and Dunkirk are the best possible frames to tell that story. 
-* Gary Oldman, who gives a memorable performance despite looking nothing like Churchill, had to go through 3 and a half hours of makeup each day to portray the part. Though it certainly is a good portrayal, it seems a bit overkill given that the movie's showy direction ultimately overshadows the acting and plenty of fine actors who look more like Churchill could have likely done a fine job as well...
+* Gary Oldman, who gives a memorable performance despite looking nothing like Churchill, had to go through three and a half hours of makeup each day to be able to look like the portly old Winston. Though it certainly is a good portrayal, it seems a bit overkill given that the movie's showy direction ultimately overshadows the acting and plenty of fine actors who look more like Churchill could have done a fine job as well...
 
 ## The Post
 {% figure %}
@@ -49,12 +48,14 @@ As with the rest of these, my perspective on it has also been affected by extern
 #### Original Score: 4.5/5
 
 #### Original Review: 
-A timely and smart allegory for the importance of a free press and the pervasiveness of sexism in the 1970s (and rather obviously, in the present). Strikes just the right balance of gripping-character-driven story and not-at-all-subtle social critique movie, and Spielberg is as good as ever at the basic craft of cinema here. Hanks is a little predictable if solid, but Meryl Streep absolutely owns the role and makes the character come alive. Plenty of critics will just dismiss this as forgettable awards fluff, but when watched without cynicism it's clear this is an excellently made, thoroughly enjoyable, and unusually intelligent film.
+A timely and smart allegory for the importance of a free press and the pervasiveness of sexism in the 1970s (and rather obviously, in the present). Strikes just the right balance of gripping-character-driven story and not-at-all-subtle social critique, and Spielberg is as good as ever at the basic craft of cinema. Hanks is a little predictable if solid, but Meryl Streep absolutely owns the role and makes the character come alive. Plenty of critics will just dismiss this as forgettable awards fluff, but when watched without cynicism it's clear this is an excellently made, thoroughly enjoyable, and unusually intelligent film.
 
 #### Current Score: 4.5/5
 
 #### Thoughts: 
-I have seen this one recently, and unlike Darkest Hour I don't think it is schmaltzy Oscat-bait at all despite looking like it might be. Spielberg smartly made it a lean and direct message-movie, and its direct address of the importance of the press and the reality of sexism in society is still as relevant as it was in the 1970s. 
+I have seen this one recently, and unlike Darkest Hour I don't think it is schmaltzy Oscat-bait at all despite looking like it might be. Spielberg smartly made it a lean and direct message-movie, and its direct address of the importance of the press and [the reality of sexism in society](https://youtu.be/45r_klAYPbw?t=2m7s) is still as relevant as it was in the 1970s. And again, Meryl Streep is just so sublime, the movie is worth seeing for that alone. I leave you with a fantastic interview that delves into the impressive real life figure Streep portrayed so well:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/M56VRfUSqkA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Get Out 
 {% figure %}
@@ -81,7 +82,7 @@ One of the multiple movies among these for which my esteem has only grown. As wi
 Additionally, others have done an excellent job aspousing how smart the movie actually is: 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Jdd0JF79q4I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
+<br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/AJLHsXw-LFI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Lady Bird
@@ -98,7 +99,9 @@ Additionally, others have done an excellent job aspousing how smart the movie ac
 #### Current Score: 4/5
 
 #### Thoughts: 
-A rare film for which my esteem has somewhat dropped. Some of the writing just feels too clever for its own good (like the 'my mother made one mistake' scene notably highlighted in the trailer), and like its protagonist the movie feels like its trying hard to be cool and smart but is not being vulnerable and honest in the process. Still, a fantastic growing of age movie. 
+A rare film for which my esteem has somewhat dropped. Some of the writing just feels too clever for its own good (like the 'my mother made one mistake' scene notably highlighted in the trailer), and like its protagonist the movie feels like its trying hard to be cool and smart but is not being vulnerable and honest in the process. Still, a fantastic growing of age movie, in particular because of the brilliance of lead actress Saoirse Ronan and writer/director Greta Gerwig - definitely some of the most exciting young talents in film today.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iODwgFDvdC0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Phantom Thread
 {% figure %}
@@ -240,4 +243,4 @@ The very simple and clear setup of this conflict - the titular three billboards 
 
 There was some controversy and negative takes about this film, with regard to whether it ultimately redeemed the racist and violent police officer played by Sam Rockwell. I am sure this controversy will likely make this movie not receive the best picture, but I also just don't agree with it at all. Like the non-perfection of the central character, the 'redemption' of Rockwell's character is actually completely subverted in opposition to what would typically be done in Hollywood. The morally ambiguous and subversive ending is actually one of my favorite things about the movie, and I recommend it to anyone who is a fan of black comedy, complicated explorations of morality, and just great cinema. 
 
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NbNNNCjm32M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
