@@ -30,7 +30,5 @@ Oh, and is all of that is not enough, how about all of that in visual form:
 
 ![starter_pack](/images/starter-pack.jpg)
 
-As you can see by all that, I have a habit for overlong self-indulgent writing heavy on parenthesis, so I decided to start writing down some of my thoughts in this site with intention of becoming a better and faster writer. And for fun, too.
-
 
 
