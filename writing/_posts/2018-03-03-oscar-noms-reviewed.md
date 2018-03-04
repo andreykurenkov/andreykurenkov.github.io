@@ -75,6 +75,7 @@ A clever, effective, and timely satire horror comedy.
 #### Thoughts: 
 One of the multiple movies among these for which my esteem has only grown. As with others, listening to conversations with its makers played an important role in evolving my view of it. In particular, the [Q&A with Jeff Goldsmith interview with the writer and director Jordan Peele](http://www.theqandapodcast.com/2017/02/jordan-peele-get-out-q.html
 ) revealed many suble and smart aspects:
+
 * Grounding the film's horror in a universal experience (meeting a significant other's parents) made it relatable for all viewers.
 * Peele has had the idea for many years, and he decided to collaborate with Blumhouse Productions because they encouraged him to have full creative control and craft it in accordance with his vision. This has resulted in one of the most original and timely movies of the year. 
 * There is more subtle symbolism and implied detail than I realized while watching the film, which not typically true of such audience pleasers/crowd favorites.
@@ -94,7 +95,8 @@ Additionally, others have done an excellent job aspousing how smart the movie ac
 
 #### Original Score: 4.5/5
 
-#### Original Review: A great coming-of-age movie with fantastic acting, editing, writing, and... just about everything. A few bits of dialogue feel a bit too clever for their own good, and having a few scenes go slower might've been good, but the strength of the central performance and so many individual memorable moments alone make this utterly worth watching.
+#### Original Review: 
+A great coming-of-age movie with fantastic acting, editing, writing, and... just about everything. A few bits of dialogue feel a bit too clever for their own good, and having a few scenes go slower might've been good, but the strength of the central performance and so many individual memorable moments alone make this utterly worth watching.
 
 #### Current Score: 4/5
 
@@ -167,6 +169,7 @@ This all is great and for the most part executed beautifully, except that  I am 
 #### Thoughts: 
 So many thoughts... as indicated in the review I was unsure of Nolan's layered fancy structure was actually warranted, but I have since grown to appreciate it more. Once, much insight comes from an interview on the [BBC Film Programme](http://www.bbc.co.uk/programmes/b08y26qr
 ):  
+
 * The movie is discussed as 'The most expensive experimental film in cinema history', which feels quite right. Just the audacity to do something so intricate and out there in a big budget movie earns a lot of respect from me. 
 * The idea of the structure came before writing the script, which makes sense; the script is utterly 
 * Nolan describes the movie as being 'Intensively subjective', and justifies the structure by its ability to get across the bigger picture of the Dunkirk event while also staying extremely close to the boots-on-the-ground soldiers. He has a nice line of not having wanted to cut to a room of general discussing the situation, and indeed he does not, and the movie is far far stronger for it. 
@@ -205,10 +208,11 @@ So, the movie is joy, happiness, love. And the final shot! Watch this film, if o
 #### Thoughts: 
 Well, my appreciation of this movie has certainly not lessened - everything that I said in that original review, I still feel. But as with Three Billboards, hearing interviews and watching videos has also deepened my appreciation of the movie. In particular, the lengthy and detailed interview of the director and co-author by Luca Guadagnino on the 
 [The Q&A with Jeff Goldsmith](http://www.theqandapodcast.com/2017/12/call-me-by-your-name-q.html) highlights many great elements: 
-- The protagonist is very well portrayed as what he is - a 17 year old kid, a "mini bomb of different contradictions". He has not come to think of himself as belonging to any group or characterization, and is appropriately excited and afraid of the desires he feels.
-- The interview frankly discusses the issue of the age difference between the 17-year old protagonist and his 24-year old lover. For one the age of consent in Italy is 16, and for another this has been done before with such classics as  Dirty Dancing. But far more importantly, the movie does something many romantic movies without such an age difference do not: show direct and clear disclosure of one's feeling, portray explicit and enthusiastic consent during the beginning of sexual interactions, and highlight direct discussions over each person's concerns and desires. And it does so while not losing any sense of romance, passion, or beauty - what a feat!
-- The director would not change anything about the movie if here to do it over. Personally, I 
-- Sufjan Stevens came into collaboration on the movie's soundtrack after a large amount of narration was cut out from the original screenplay. Stevens' songs are meant to act as a sort of third person narrator communicating the universality of the love story we are seeing, and I think that was done perfectly. 
+
+* The protagonist is very well portrayed as what he is - a 17 year old kid, a "mini bomb of different contradictions". He has not come to think of himself as belonging to any group or label, and is appropriately excited and afraid of the desires he feels.
+* The interview frankly discusses the issue of the age difference between the 17-year old protagonist and his 24-year old lover. For one the age of consent in Italy is 16, and for another this has been done before with such classics as  Dirty Dancing. But far more importantly, the movie does something many romantic movies without such an age difference do not: show direct and clear disclosure of one's feelings, portray explicit and enthusiastic consent during sex, and linger on direct discussions over each person's concerns and desires. And it does so while not losing any sense of romance, passion, or beauty - what a feat!
+* The director would not change anything about the movie if here to do it over. And he is right! I would not want him to.
+* Sufjan Stevens came into collaboration on the movie's soundtrack after a large amount of narration was cut out from the original screenplay. Stevens' songs are meant to act as a sort of third person narrator communicating the universality of the love story we are seeing, and I think that was done perfectly. 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/KQT32vW61eI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 

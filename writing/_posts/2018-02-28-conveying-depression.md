@@ -209,6 +209,7 @@ It did make sense, just not to my sick mind.
 
 It did make sense that I needed treatment and when I got it I got better. 
 <br> Most dont[^Treatment]. 
+
 It did make sense that I spoke of it infrequently. 
 <br> I knew it was a sickness, yet I still felt ashamed, like I had allowed myself to fall to a stupid first world 'illness' [^FirstWorld].  
 
@@ -245,11 +246,11 @@ Having healed, the anxieties and uncertainties and insecurities that so haunted 
 
 Having healed, what I remember most vividly is not the suicidal thoughts, the inability to focus, the anxiety, the shame; what I remember most is lying in my room at 8PM, and feeling like there was nothing else at all that could make me feel better - that sensation of nothing else but this quiet, this stillness, this darkness.
 
-Having healed, I write this, reflecting on that period of surreal sickness and memories like that.
+Having healed, I write this, reflecting on that period of surreal sickness.
 <br> I see the need to de-stigmatize and explain my experience far more than I did before[^Stigma]. 
 
-So, don't feel bad for me. 
-<br> I seriously feel superhuman, healed of this sickness. 
+So don't feel bad for me. 
+<br> I seriously feel superhuman, having healed of this sickness. 
 <br> Just, try to understand.
 
 <hr>
