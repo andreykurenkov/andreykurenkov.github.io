@@ -220,6 +220,8 @@ Lastly, what I've grown to appreciate even more than I did after just watching t
 
 > "Both the novel and film do one thing that is so essential - there is no accident, there is no death, there is no banning of any sexual proclivity - these are two individuals who have a relationship, and I think it should serve as a model for essentially happy romance." 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eE01rqDJ13A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 # Three Billboards Outside Ebbing, Missouri
 {% figure %}
 [<img class="postimageactual"  src="/writing/images/2018-03-03-oscar-noms-reviewed/three_billboards.jpg" alt="Poster"/>](/writing/images/2018-03-03-oscar-noms-reviewed/three_billboards.jpg)
