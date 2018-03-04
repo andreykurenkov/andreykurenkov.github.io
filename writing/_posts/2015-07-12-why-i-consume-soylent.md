@@ -3,7 +3,7 @@ layout: post
 title: Why I Consume Soylent
 date: 2015-07-12 01:02:07.000000000 -07:00
 tags: [food,philosophy,quasi-essay]
-category: art
+category: life
 status: publish
 type: post
 published: true

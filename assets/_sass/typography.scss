@@ -62,27 +62,6 @@ figcaption {
 	color: lighten($text-color, 10);
 }
 
-.sidefigureleft{
-	@media #{$large} {
-		@include grid(12,3);
-		@include prefix(12,-3.25);
-		position: absolute;
-	}
-}
-
-.sidefigureright{
-  @media #{$large} {
-		@include grid(12,3);
-		@include prefix(12,5.75);
-		position: absolute;
-  }
-  @media #{$x-large} {
-		@include grid(12,3);
-		@include prefix(12,5.25);
-		position: absolute;
-  }
-}
-
 /* 
    Feature image captions
    ========================================================================== */
