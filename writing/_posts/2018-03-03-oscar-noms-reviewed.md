@@ -14,21 +14,21 @@ extra_js: ["/writing/files/center_headlines.js"]
 ## Intro
 When the 2018 Oscar best picture nominees were released, I realized I had already seen most of them purely due to being excited for them as works of art. Then, just for fun, I endeavored to watch the rest and cataloged my personal [preferences](https://letterboxd.com/andreykurenkov/list/oscars-best-picture-2018-my-faves/). But then I realized I could do more! I had reviews and further thoughts on most of these films, and could write up a whole big summary - what you are reading now! So then, without further ado, (ordered from least to most liked, for the sake of ending on the most positive note) reviews and thoughts on all the best pictures nominees:
 
-## Darkest Hour
+# Darkest Hour
 {% figure %}
 [<img class="postimageactual"  src="/writing/images/2018-03-03-oscar-noms-reviewed/darkest.jpg" alt="Poster"/>](/writing/images/2018-03-03-oscar-noms-reviewed/darkest.jpg)
 {% endfigure %}
 
-#### Viewing Date: 02/03/18
+## Viewing Date: 02/03/18
 
-#### Original Score: 3.5/5
+## Original Score: 3.5/5
 
-#### Original Review: 
+## Original Review: 
 A showy movie of romance and splendor - too much romance and splendor, in fact. Especially in its first half, the loud soundtrack, fancy panning/zooming/flying shots, and weird bouts of humor all add up to annoy and exhaust rather than highlight the excellent central performance. This improves in the second half, with show-off shots that are quite nice and serve to highlight the peril Churchill stands in. But, then the romantic bit cuts in and ruins that improvement with a bastardized version of history that does not seem realistic and [indeed is utterly false](http://time.com/5183140/gary-oldman-winston-churchill-true-history/). Still, the movie looks great, Oldman crafts a compelling portrayal, and overindulgence combined with a liberal interpretation of history are at least a far lesser sin than being boring or shallow.
 
-#### Current Score: 3.5/5
+## Current Score: 3.5/5
 
-#### Thoughts: 
+## Thoughts: 
 The only movie among all of these I would not call great. This is an unusual case of a movie on which I am split, as I can find both great and not so great elements within it. Sadly, great plus not so great equals not so great. 
 
 As with the rest of these, my perspective on it has been affected a good deal by external listening and reading, in this case [The Q&A with Jeff Goldsmith](http://www.theqandapodcast.com/2017/12/darkest-hour-anthony-mccarten-q.html) which reveals many interesting tidbits such as:
@@ -38,41 +38,41 @@ As with the rest of these, my perspective on it has been affected a good deal by
 * There is also a focus on the wisdom of having uncertainty as a leader, but once more I don't think Churchill and Dunkirk are the best possible frames to tell that story. 
 * Gary Oldman, who gives a memorable performance despite looking nothing like Churchill, had to go through three and a half hours of makeup each day to be able to look like the portly old Winston. Though it certainly is a good portrayal, it seems a bit overkill given that the movie's showy direction ultimately overshadows the acting and plenty of fine actors who look more like Churchill could have done a fine job as well...
 
-## The Post
+# The Post
 {% figure %}
 [<img class="postimageactual"  src="/writing/images/2018-03-03-oscar-noms-reviewed/post.jpg" alt="Poster"/>](/writing/images/2018-03-03-oscar-noms-reviewed/post.jpg)
 {% endfigure %}
 
-#### Viewing Date: 25/02/18
+## Viewing Date: 25/02/18
 
-#### Original Score: 4.5/5
+## Original Score: 4.5/5
 
-#### Original Review: 
+## Original Review: 
 A timely and smart allegory for the importance of a free press and the pervasiveness of sexism in the 1970s (and rather obviously, in the present). Strikes just the right balance of gripping-character-driven story and not-at-all-subtle social critique, and Spielberg is as good as ever at the basic craft of cinema. Hanks is a little predictable if solid, but Meryl Streep absolutely owns the role and makes the character come alive. Plenty of critics will just dismiss this as forgettable awards fluff, but when watched without cynicism it's clear this is an excellently made, thoroughly enjoyable, and unusually intelligent film.
 
-#### Current Score: 4.5/5
+## Current Score: 4.5/5
 
-#### Thoughts: 
+## Thoughts: 
 I have seen this one recently, and unlike Darkest Hour I don't think it is schmaltzy Oscat-bait at all despite looking like it might be. Spielberg smartly made it a lean and direct message-movie, and its direct address of the importance of the press and [the reality of sexism in society](https://youtu.be/45r_klAYPbw?t=2m7s) is still as relevant as it was in the 1970s. And again, Meryl Streep is just so sublime, the movie is worth seeing for that alone. I leave you with a fantastic interview that delves into the impressive real life figure Streep portrayed so well:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/M56VRfUSqkA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-## Get Out 
+# Get Out 
 {% figure %}
 [<img class="postimageactual"  src="/writing/images/2018-03-03-oscar-noms-reviewed/get_out.jpg" alt="Poster"/>](/writing/images/2018-03-03-oscar-noms-reviewed/get_out.jpg)
 {% endfigure %}
 
 
-#### Viewing Date: 21/01/18
+## Viewing Date: 21/01/18
 
-#### Original Score: 4/5
+## Original Score: 4/5
 
-#### Original Review: 
+## Original Review: 
 A clever, effective, and timely satire horror comedy.
 
-#### Current Score: 4.5/5
+## Current Score: 4.5/5
 
-#### Thoughts: 
+## Thoughts: 
 One of the multiple movies among these for which my esteem has only grown. As with others, listening to conversations with its makers played an important role in evolving my view of it. In particular, the [Q&A with Jeff Goldsmith interview with the writer and director Jordan Peele](http://www.theqandapodcast.com/2017/02/jordan-peele-get-out-q.html
 ) revealed many suble and smart aspects:
 
@@ -86,41 +86,41 @@ Additionally, others have done an excellent job aspousing how smart the movie ac
 <br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/AJLHsXw-LFI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-## Lady Bird
+# Lady Bird
 {% figure %}
 [<img class="postimageactual"  src="/writing/images/2018-03-03-oscar-noms-reviewed/lady_bird.jpg" alt="Poster"/>](/writing/images/2018-03-03-oscar-noms-reviewed/lady_bird.jpg)
 {% endfigure %}
 
-#### Viewing Date: 18/11/17
+## Viewing Date: 18/11/17
 
-#### Original Score: 4.5/5
+## Original Score: 4.5/5
 
-#### Original Review: 
+## Original Review: 
 A great coming-of-age movie with fantastic acting, editing, writing, and... just about everything. A few bits of dialogue feel a bit too clever for their own good, and having a few scenes go slower might've been good, but the strength of the central performance and so many individual memorable moments alone make this utterly worth watching.
 
-#### Current Score: 4/5
+## Current Score: 4/5
 
-#### Thoughts: 
+## Thoughts: 
 A rare film for which my esteem has somewhat dropped. Some of the writing just feels too clever for its own good (like the 'my mother made one mistake' scene notably highlighted in the trailer), and like its protagonist the movie feels like its trying hard to be cool and smart but is not being vulnerable and honest in the process. Still, a fantastic growing of age movie, in particular because of the brilliance of lead actress Saoirse Ronan and writer/director Greta Gerwig - definitely some of the most exciting young talents in film today.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/iODwgFDvdC0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-## Phantom Thread
+# Phantom Thread
 {% figure %}
 [<img class="postimageactual"  src="/writing/images/2018-03-03-oscar-noms-reviewed/phantom_thread.jpg" alt="Poster"/>](/writing/images/2018-03-03-oscar-noms-reviewed/phantom_thread.jpg)
 {% endfigure %}
 
 
-#### Viewing Date: 03/02/18
+## Viewing Date: 03/02/18
 
-#### Original Score: 4.5/5
+## Original Score: 4.5/5
 
-#### Original Review: 
+## Original Review: 
 A surprisingly sly, perverse, and darkly funny period romance. Exquisitely staged, exquisitely acted, exquisitely directed... exquisite.
 
-#### Current Score: 5/5
+## Current Score: 5/5
 
-#### Thoughts: 
+## Thoughts: 
 And now we get to the set of movies I unabashedly love! Once again my appreciation has grown due to [BBC Film Programme](http://www.bbc.co.uk/programmes/b09pn8pl) interview: 
 * The key inspiration for the movie, the writer director Paul Thomas Anderson
 being sick and taken care of by his wife, is unusual and unexpected. He gets at aspects of romance and relationships not often explored, which is impressive
@@ -129,44 +129,44 @@ being sick and taken care of by his wife, is unusual and unexpected. He gets at 
 
 > "Daniel is front and center because he is Daniel... I think Audiences go in with expectation this is Daniel's film, but in fact he is support for the girls who are our protags."
 
-## Shape of Water
+# Shape of Water
 {% figure %}
 [<img class="postimageactual"  src="/writing/images/2018-03-03-oscar-noms-reviewed/shape_of_water.jpg" alt="Poster"/>](/writing/images/2018-03-03-oscar-noms-reviewed/shape_of_water.jpg)
 {% endfigure %}
 
-#### Viewing Date: 09/12/17
+## Viewing Date: 09/12/17
 
-#### Original Score: 4.5/5
+## Original Score: 4.5/5
 
-#### Original Review: 
+## Original Review: 
 Like the fantastical creature at its core, The Shape of Water is beautiful, strange, and exquisitely crafted.
 
-#### Current Score: 4/5
+## Current Score: 4/5
 
-#### Thoughts: 
+## Thoughts: 
 While watching the movie, I was struck by how unabashedly and unreservedly beautiful it was. So I was glad to hear that was Guillermo del Toro's intent; as stated on the [BBC Film Programme](http://www.bbc.co.uk/programmes/b09qhbt8)
 
 > "The overwhelming reaction is the same overwhelming reason why I wanted to make it, which is, can you please show me something beautiful, can you please show me something life affirming, can you please take me out of the news, right now..."
 
 That being said, it is also one of the few movies I consider great for which my esteem. A big part of the reason is the lengthy discussion on [the Next Picture Show podcast](https://megaphone.link/PPY7532927140), in which most of the participants felt tepid about the film. I agree with their perspective that the movie feels a little artificial in all its beauty, and that going as far as it does in portraying the romance explicitly undercuts it somewhat. Still, this is a rare simple allegory of sensual delights that is definitely worth seeing.
 
-## Dunkirk 
+# Dunkirk 
 {% figure %}
 [<img class="postimageactual"  src="/writing/images/2018-03-03-oscar-noms-reviewed/dunkirk.jpg" alt="Poster"/>](/writing/images/2018-03-03-oscar-noms-reviewed/dunkirk.jpg)
 {% endfigure %}
 
-#### Viewing Date: 23/07/17
+## Viewing Date: 23/07/17
 
-#### Original Score: 4/5
+## Original Score: 4/5
 
-#### Original Review: 
+## Original Review: 
 Visceral. Unlike Nolan's many other neat-idea or plot-puzzle movies, this one is made with the obvious intent of making you feel an experience to your bones. But, some of Nolan's fondness for fancy intellectually fun structure is here - there is no conventional 3 act structure or protagonist with an arc and instead an ensemble cast going through overlapping but temporally offset narratives that come together by the end. Yet more daringly, the ensemble story has minimalist character development and plot, which leaves it free to almost entirely avoid exposition and fully immerse you in the characters' dreaded pulse-pounding experiences. And does it ever do that - especially in the perfect-for-this-film IMAX, it's great big stark melancholy colored images, seemingly never stopping soundtrack, and clearly big budget production all work to grab you and not let you go til the movie is over and you can cry along with the soldiers at the plane sight of English greenery.
 
 This all is great and for the most part executed beautifully, except that  I am not sure if the 3 narrative threads really work well together, and by the end the cross-cutting between narrative threads gets overdone and lessens the impact of the ending a good deal. And, after that ending there is just not a whole lot to think back on or relate to; it's a hell of a ride, but not much more. It made me think back to Gravity, which is likewise a non-stop visceral tale of survival, but one that I think managed to still have a resonant theme and message. But damn, is this one of a hell of a ride.
 
-#### Current Score: 4.5/5
+## Current Score: 4.5/5
 
-#### Thoughts: 
+## Thoughts: 
 So many thoughts... as indicated in the review I was unsure of Nolan's layered fancy structure was actually warranted, but I have since grown to appreciate it more. Once, much insight comes from an interview on the [BBC Film Programme](http://www.bbc.co.uk/programmes/b08y26qr
 ):  
 
@@ -179,16 +179,16 @@ So many thoughts... as indicated in the review I was unsure of Nolan's layered f
 * A last interesting tidbit is that early in the music composition, Nolan sent the composer a recording of a pocket watch. Unlike most movies, which add music after the movie is made, composition was done from very early on so that the 'score could be fused with picture and sound effects early on'. This worked fantastically well - as Nolan says, there is a 'physical fusion of picture and music and sound effects unlike anything else'. The music is 'objective'; just the screenplay is stripped of all unnecessary dialogue (all conversation except that which is needed to survive), the music is stripped of all unnecessary emotion and is meant to convey the experience of the preset moment.  But the intelligence and the brilliance of the score goes even beyond that, as highlighted in this video:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LVWTQcZbLgY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-## Call Me By Your Name
+# Call Me By Your Name
 {% figure %}
 [<img class="postimageactual"  src="/writing/images/2018-03-03-oscar-noms-reviewed/name.jpg" alt="Poster"/>](/writing/images/2018-03-03-oscar-noms-reviewed/name.jpg)
 {% endfigure %}
 
-#### Viewing Date: 21/01/18
+## Viewing Date: 21/01/18
 
-#### Original Score: 5/5
+## Original Score: 5/5
 
-#### Original Review: 
+## Original Review: 
 Luscious, sensual, rapturous - perfectly captures the feeling of being young during a care free summer of discovery that is equal parts exciting and nerve wrecking. And it does so beautifully, artistically; there are so many close ups and frames in this movie that convey an endless depth of emotion and thought without a word being spoken. And it does so intelligently, thematically tying back to the greeks' views on sensuality and love; unlike so much of recent 80-set media, this does not feel nostalgic - it feels timeless. 
 
 And the music! Sufjan Stevens is such a perfect fit for this, singing in his soft voice of the 'Mystery of Love'. And the writing! Adapted by now 89-year old James Ivory, it feels wise and fully aware of the subtle unspeakable eternal truths of life. I credit Ivory too, with the unusual lack of tension over being found out as gay and the character's fully supportive parts; as discussed <a href="https://www.dailyemerald.com/2018/02/05/call-name-screenwriter-james-ivory-returns-uo-screening-qa/"> in an interview </a>, this felt like a welcome change from more conventional cinema: 
@@ -203,9 +203,9 @@ So, the movie is joy, happiness, love. And the final shot! Watch this film, if o
 
 "I remember everything"
 
-#### Current Score: 5/5
+## Current Score: 5/5
 
-#### Thoughts: 
+## Thoughts: 
 Well, my appreciation of this movie has certainly not lessened - everything that I said in that original review, I still feel. But as with Three Billboards, hearing interviews and watching videos has also deepened my appreciation of the movie. In particular, the lengthy and detailed interview of the director and co-author by Luca Guadagnino on the 
 [The Q&A with Jeff Goldsmith](http://www.theqandapodcast.com/2017/12/call-me-by-your-name-q.html) highlights many great elements: 
 
@@ -220,21 +220,21 @@ Lastly, what I've grown to appreciate even more than I did after just watching t
 
 > "Both the novel and film do one thing that is so essential - there is no accident, there is no death, there is no banning of any sexual proclivity - these are two individuals who have a relationship, and I think it should serve as a model for essentially happy romance." 
 
-## Three Billboards Outside Ebbing, Missouri
+# Three Billboards Outside Ebbing, Missouri
 {% figure %}
 [<img class="postimageactual"  src="/writing/images/2018-03-03-oscar-noms-reviewed/three_billboards.jpg" alt="Poster"/>](/writing/images/2018-03-03-oscar-noms-reviewed/three_billboards.jpg)
 {% endfigure %}
 
-#### Viewing Date: 21/01/18
+## Viewing Date: 21/01/18
 
-#### Original Score: 4.5/5
+## Original Score: 4.5/5
 
-#### Original Review: 
+## Original Review: 
 Challenging, unexpected, dark, funny - a rare treat. Definitely worth seeing.
 
-#### Current Score: 5/5
+## Current Score: 5/5
 
-#### Thoughts: 
+## Thoughts: 
 A rare movie for which my esteem has only grown, and in just one month. 
 
 I think what I appreciate so much about this film (and why I think it deserves to win best picture) is that it is far more challenging that any of the other films on here. As eloquently stated by the writer and director Martin McDonagh on [the BBC Film Programme](https://www.bbc.co.uk/programmes/b09l203n), the core of the film is two characters going to war in which neither one is really the bad guy. It would be so easy to make the grieving mother the one to clearly root for and to portray the authorities as incapable and uncaring. But as [McDonah says](http://www.denofgeek.com/uk/movies/martin-mcdonagh/54436/martin-mcdonagh-interview-three-billboards-outside-ebbing-missouri):

@@ -1,3 +1,3 @@
 $(function() {
-  $('h2').css( "text-align", "center" );
+  $('h1:not(:first)').css( "text-align", "center" );
 });
