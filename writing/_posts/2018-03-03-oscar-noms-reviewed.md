@@ -12,7 +12,7 @@ extra_js: ["/writing/files/center_headlines.js"]
 ---
 
 ## Intro
-When the 2018 Oscar best picture nominees were released, I realized I had already seen most of them purely due to being excited for them as works of art. Then, just for fun, I endeavored to watch the rest and cataloged my personal [preferences](https://letterboxd.com/andreykurenkov/list/oscars-best-picture-2018-my-faves/). But then I realized I could do more! I had reviews and further thoughts on most of these films, and could write up a whole big summary - what you are reading now! So then, without further ado, (ordered from least to most liked, for the sake of ending on the most positive note) reviews and thoughts on all the best pictures nominees:
+When the 2018 Oscar best picture nominees were released, I realized I had already seen most of them before they were known to be the nominees purely because I was excited for them as works of art. Then, just for fun, I endeavored to watch the rest and cataloged my personal [preferences](https://letterboxd.com/andreykurenkov/list/oscars-best-picture-2018-my-faves/). But then I realized I could do more. I had reviews and further thoughts on most of these films, and could write up a whole big summary - what you are reading now! So without further ado, ordered from least to most liked for the sake of ending on the most positive note, reviews and thoughts on all the best pictures nominees:
 
 # Darkest Hour
 {% figure %}
@@ -56,6 +56,7 @@ A timely and smart allegory for the importance of a free press and the pervasive
 I have seen this one recently, and unlike Darkest Hour I don't think it is schmaltzy Oscat-bait at all despite looking like it might be. Spielberg smartly made it a lean and direct message-movie, and its direct address of the importance of the press and [the reality of sexism in society](https://youtu.be/45r_klAYPbw?t=2m7s) is still as relevant as it was in the 1970s. And again, Meryl Streep is just so sublime, the movie is worth seeing for that alone. I leave you with a fantastic interview that delves into the impressive real life figure Streep portrayed so well:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/M56VRfUSqkA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<br>
 
 # Get Out 
 {% figure %}
@@ -85,6 +86,7 @@ Additionally, others have done an excellent job aspousing how smart the movie ac
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Jdd0JF79q4I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 <br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/AJLHsXw-LFI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<br>
 
 # Lady Bird
 {% figure %}
@@ -104,6 +106,7 @@ A great coming-of-age movie with fantastic acting, editing, writing, and... just
 A rare film for which my esteem has somewhat dropped. Some of the writing just feels too clever for its own good (like the 'my mother made one mistake' scene notably highlighted in the trailer), and like its protagonist the movie feels like its trying hard to be cool and smart but is not being vulnerable and honest in the process. Still, a fantastic growing of age movie, in particular because of the brilliance of lead actress Saoirse Ronan and writer/director Greta Gerwig - definitely some of the most exciting young talents in film today.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/iODwgFDvdC0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<br>
 
 # Phantom Thread
 {% figure %}
@@ -122,8 +125,9 @@ A surprisingly sly, perverse, and darkly funny period romance. Exquisitely stage
 
 ## Thoughts: 
 And now we get to the set of movies I unabashedly love! Once again my appreciation has grown due to [BBC Film Programme](http://www.bbc.co.uk/programmes/b09pn8pl) interview: 
+
 * The key inspiration for the movie, the writer director Paul Thomas Anderson
-being sick and taken care of by his wife, is unusual and unexpected. He gets at aspects of romance and relationships not often explored, which is impressive
+being sick and taken care of by his wife, is unusual and unexpected. He gets at aspects of romance and relationships not often explored, which is impressive.
 * As the interviewer notes, on a second viewing it's much easier to see the film as being utterly comedic rather than serious and dramatic like the director's other work. I have been describing this as a 'sly, intelligent, dark romantic comedy' to friends, and it is refreshing to see such a non-formulatic romantic comedy.
 * Another unexpected aspect is the richness of the female characters, who may be more fully three dimensional than Daniel Day Lewsis's excellently portrayed male character. As Anderson says in his interview:
 
@@ -148,7 +152,7 @@ While watching the movie, I was struck by how unabashedly and unreservedly beaut
 
 > "The overwhelming reaction is the same overwhelming reason why I wanted to make it, which is, can you please show me something beautiful, can you please show me something life affirming, can you please take me out of the news, right now..."
 
-That being said, it is also one of the few movies I consider great for which my esteem. A big part of the reason is the lengthy discussion on [the Next Picture Show podcast](https://megaphone.link/PPY7532927140), in which most of the participants felt tepid about the film. I agree with their perspective that the movie feels a little artificial in all its beauty, and that going as far as it does in portraying the romance explicitly undercuts it somewhat. Still, this is a rare simple allegory of sensual delights that is definitely worth seeing.
+That being said, it is also one of the few movies I consider great for which my esteem has lessened. A big part of the reason is the lengthy discussion on [the Next Picture Show podcast](https://megaphone.link/PPY7532927140), in which most of the participants felt tepid about the film. I agree with their perspective that the movie feels a little artificial in all its beauty, and that going as far as it does in portraying the romance explicitly undercuts it somewhat. Still, this is a rare simple allegory of sensual delights that is definitely worth seeing.
 
 # Dunkirk 
 {% figure %}
@@ -177,7 +181,10 @@ So many thoughts... as indicated in the review I was unsure of Nolan's layered f
 * Nolan commented that cinema has unique ability to manipulate perception of time, and that his intent pull with this film was to 'pull that part of machinery out' and have an 'explicit discussion with the audience' rather letting it be subliminal as in most movies. 
 * What I appreciated most, and still appreciate most, about the film is its ability to make me feel like I was there. It was evident this was not accidental * Nolan discusses at length of how he wanted to make it feel as real as possible  by setting things in real physical spaces, and by leveraging the grammar of suspense 'present tense narrative'. That is, he focused on just showing the character in a given situation without extra dramatization or characterization; such daring minimalism is rare and was incredibly successful here. 
 * A last interesting tidbit is that early in the music composition, Nolan sent the composer a recording of a pocket watch. Unlike most movies, which add music after the movie is made, composition was done from very early on so that the 'score could be fused with picture and sound effects early on'. This worked fantastically well - as Nolan says, there is a 'physical fusion of picture and music and sound effects unlike anything else'. The music is 'objective'; just the screenplay is stripped of all unnecessary dialogue (all conversation except that which is needed to survive), the music is stripped of all unnecessary emotion and is meant to convey the experience of the preset moment.  But the intelligence and the brilliance of the score goes even beyond that, as highlighted in this video:
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LVWTQcZbLgY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<br>
 
 # Call Me By Your Name
 {% figure %}
@@ -221,6 +228,8 @@ Lastly, what I've grown to appreciate even more than I did after just watching t
 > "Both the novel and film do one thing that is so essential - there is no accident, there is no death, there is no banning of any sexual proclivity - these are two individuals who have a relationship, and I think it should serve as a model for essentially happy romance." 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/eE01rqDJ13A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<br>
 
 # Three Billboards Outside Ebbing, Missouri
 {% figure %}
