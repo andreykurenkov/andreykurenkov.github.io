@@ -9,7 +9,7 @@ image:
   feature: main-page.jpg
 ---
 
-Hi there. I am Andrey Kurenkov, a 24 year old grad student at Stanford that likes do research about AI and robotics, write code, appreciate art, and ponder about life. 
+Hi there. I am Andrey Kurenkov, a grad student at Stanford that likes do research about AI and robotics, write code, appreciate art, and ponder about life. 
 
 Currently, I am working towards a Masters in CS at Stanford, and am a research assitant at the Stanford Vision Lab with Animesh Garg and Silvio Savarase. This site documents my various projects, my writing (technical and not), and my photography.
 
