@@ -22,3 +22,4 @@ So below is a one-page summary of all the lessons I have learned having done the
    <p><b>Effective Teamework</b>: This browser does not support PDFs. Please download the PDF to view it: <a href="/pdf/sample-3pp.pdf">Download PDF</a>.</p>
 </object>
 
+Feel free to leave comments [on the Google Doc](https://docs.google.com/document/d/1-dMVVf5Y0FaCXSW4P4V-vX5TF2yCmgT65S2Xxr2nlVo/edit?usp=sharing)! (pls dont spam thx).
