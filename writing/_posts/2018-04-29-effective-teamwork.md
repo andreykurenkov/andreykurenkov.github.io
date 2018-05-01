@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Effective Teamwork - a Brief Guide
-category: projects
+category: project
 tags: [project,highlights]
 status: post
 type: post
@@ -10,8 +10,9 @@ comments: true
 excerpt: Condensing years of frustration and learning into a one-page guide on how to get it right
 ---
 How this happened: I was helping out a team of undergrads and finding myself frustrated with their workflow.
-Then it occured to me my years of research of software engineering and research have led me to some pretty 
-strong beliefs about how effective teamwork ought to be done. So below is a one-page summary of all that. Enjoy!
+Then it occured to me my years big team projets, professional software engineering, and grad-level research have 
+led me to some pretty strong beliefs about how effective teamwork ought to be done. 
+So below is a one-page summary of all that. Enjoy!
 
 <object data="/writing/files/effective-teamwork/EffectiveTeamwork.pdf" type="application/pdf" width="100%" height="100%">
    <p><b>Effective Teamework</b>: This browser does not support PDFs. Please download the PDF to view it: <a href="/pdf/sample-3pp.pdf">Download PDF</a>.</p>
