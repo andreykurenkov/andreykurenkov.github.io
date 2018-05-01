@@ -10,8 +10,8 @@ comments: true
 excerpt: Condensing years of frustration and learning into a one-page guide on how to get it right
 ---
 How this happened: I was helping out a team of undergrads and finding myself frustrated with their workflow.
-Then it occured to me my years big team projets, professional software engineering, and grad-level research have 
-led me to some pretty strong beliefs about how effective teamwork ought to be done. 
+Then it occured to me my many years of experience with big team projets, professional software engineering, and grad-level research have 
+led me to have some pretty strong beliefs about how effective teamwork ought to be done. 
 So below is a one-page summary of all that. Enjoy!
 
 <object data="/writing/files/effective-teamwork/EffectiveTeamwork.pdf" type="application/pdf" width="100%" height="100%">
