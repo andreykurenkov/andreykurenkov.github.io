@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Effective Teamwork - a Brief Guide
+title: Effective Teamwork - a One Page Guide
 category: project
 tags: [project,highlights]
 status: post
