@@ -48,7 +48,14 @@ footer {
 #logo{
 	  margin: 0; 
     height: auto;
-    width: 400px;
+    max-width: 100%;
+    
+    @media #{$mobile} {
+        width: 100%;
+    }
+    @media #{$small} {
+        width: 375px;
+    }
     display: block;
     margin-left: auto;
     margin-right: auto;
