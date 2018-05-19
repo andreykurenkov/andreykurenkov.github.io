@@ -6,12 +6,14 @@ modified: 2018-08-17
 comments: false
 share: false
 image:
-  feature: main-page.jpg
+  feature: starter-pack.jpg
 ---
 
 Hi there. I am Andrey Kurenkov, a grad student at Stanford that likes do research about AI and robotics, write code, appreciate art, and ponder about life. 
 
-Currently, I am working towards a Masters in CS at Stanford, and am a research assitant at the Stanford Vision Lab with Animesh Garg and Silvio Savarase. This site documents my various projects, my writing (technical and not), and my photography.
+Currently, I am finishing my MS and transitioning to being a PhD student at Stanford. I do research in the [Stanford Vision and Learning Lab](http://svl.stanford.edu/home) at the intersection of robotics and computer vision, and am co-advised by Silvio Savarese and Ken Goldberg. 
+
+This site documents my various projects, my writing (technical and not), and my photography. I am also quite active on [Twitter](https://twitter.com/andrey_kurenkov).
 
 > "I love writing. I get a kick out of sharing my thoughts with others. The act of transforming ideas into words is an amazingly efficient way to solidify and refine your thoughts about a given topic. " -Tom Preston (creator of Jekyll), [Blogging Like a Hacker](http://tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html)
 
@@ -26,9 +28,6 @@ If you are so curious, I am more specifically interested in:
 * programming (especially embedded programming, but also scripting and hackathon types things as well)
 * photography (doing it, as you can see on this site, but also appreciating)
 
-Oh, and is all of that is not enough, how about all of that in visual form:
-
-![starter_pack](/images/starter-pack.jpg)
 
 
 
