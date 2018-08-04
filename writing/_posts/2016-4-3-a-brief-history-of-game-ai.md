@@ -2,7 +2,7 @@
 layout: post
 title: A 'Brief' History of Game AI Up To AlphaGo
 date: 2016-4-18lT19:19:34-07:00
-tags: [ai,history,highlights,poem]
+tags: [ai,history,highlights]
 category: ai
 status: draft
 type: draft

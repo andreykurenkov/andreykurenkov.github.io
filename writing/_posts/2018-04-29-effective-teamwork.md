@@ -7,7 +7,7 @@ status: post
 type: post
 published: true
 comments: true
-excerpt: Condensing years of frustration and learning into a one-page guide on how to get it right
+excerpt: Condensing years of frustration into a one-page guide on how to get it right
 ---
 > “Fools learn from experience. I prefer to learn from the experience of others.” <br>
 > -Otto von Bismarck
