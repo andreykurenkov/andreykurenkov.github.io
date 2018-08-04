@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>/writing/ai/how-to-fix-rl/</loc>
+<lastmod>2018-07-08T00:00:00-07:00</lastmod>
+</url>
+<url>
+<loc>/writing/ai/why-rl-is-flawed/</loc>
+<lastmod>2018-07-01T00:00:00-07:00</lastmod>
+</url>
+<url>
 <loc>/projects/research/task-aware-grasping/</loc>
 <lastmod>2018-04-29T00:00:00-07:00</lastmod>
 </url>
@@ -13,7 +21,7 @@
 <lastmod>2018-04-02T00:00:00-07:00</lastmod>
 </url>
 <url>
-<loc>/writing/is-alphago-zero-overrated/</loc>
+<loc>/writing/ai/is-alphago-zero-overrated/</loc>
 <lastmod>2018-03-30T00:00:00-07:00</lastmod>
 </url>
 <url>
@@ -302,22 +310,16 @@
 <loc>/</loc>
 </url>
 <url>
-<loc>/writing/tag/project/</loc>
+<loc>/writing/tag/ai/</loc>
 </url>
 <url>
 <loc>/writing/tag/highlights/</loc>
 </url>
 <url>
-<loc>/writing/tag/hype/</loc>
+<loc>/writing/tag/project/</loc>
 </url>
 <url>
-<loc>/writing/tag/BigBiz/</loc>
-</url>
-<url>
-<loc>/writing/tag/game/</loc>
-</url>
-<url>
-<loc>/writing/tag/Google/</loc>
+<loc>/writing/tag/history/</loc>
 </url>
 <url>
 <loc>/writing/tag/art/</loc>
@@ -341,9 +343,6 @@
 <loc>/writing/tag/ml/</loc>
 </url>
 <url>
-<loc>/writing/tag/ai/</loc>
-</url>
-<url>
 <loc>/writing/tag/technical/</loc>
 </url>
 <url>
@@ -351,9 +350,6 @@
 </url>
 <url>
 <loc>/writing/tag/ml_writing/</loc>
-</url>
-<url>
-<loc>/writing/tag/history/</loc>
 </url>
 <url>
 <loc>/writing/tag/writing/</loc>
