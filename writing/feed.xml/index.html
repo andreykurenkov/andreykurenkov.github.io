@@ -4,13 +4,34 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://www.andreykurenkov.com/feed.xml" />
 <link rel="alternate" type="text/html" href="http://www.andreykurenkov.com" />
-<updated>2018-08-03T20:40:03-07:00</updated>
+<updated>2018-08-03T22:45:16-07:00</updated>
 <id>/</id>
 <author>
   <name>Andrey Kurenkov</name>
   <uri>/</uri>
   <email>contact@andreykurenkov.com</email>
 </author>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[Bringing Learning to Robotics - Highlights from RSS 2018]]></title>
+  <link rel="alternate" type="text/html" href="http://www.andreykurenkov.com/writing/ai/rss-conference/" />
+  <id>/writing/ai/rss-conference</id>
+  <published>2018-08-03T00:00:00-07:00</published>
+  <updated>2018-08-03T00:00:00-07:00</updated>
+  <author>
+    <name></name>
+    <uri>www.andreykurenkov.com</uri>
+    <email>contact@andreykurenkov.com</email>
+  </author>
+  <content type="html">
+    
+
+    &lt;p&gt;&lt;a href=&quot;/writing/ai/rss-conference/&quot;&gt;Bringing Learning to Robotics - Highlights from RSS 2018&lt;/a&gt; was originally published by Andrey Kurenkov at &lt;a href=&quot;&quot;&gt;Andrey Kurenkov's Web World&lt;/a&gt; on August 03, 2018.&lt;/p&gt;
+  </content>
+</entry>
 
 
   
@@ -1279,246 +1300,6 @@ But I hope to do more that just be open and honest about depression; I hope to p
     &lt;p&gt;See the quite in-depth attached documents. In the end the outcome was not that impresive, but it was quite fun to do and a good chance to play with Deep Learning.&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;/projects/major_projects/deepcrop/&quot;&gt;DeepCrop&lt;/a&gt; was originally published by Andrey Kurenkov at &lt;a href=&quot;&quot;&gt;Andrey Kurenkov's Web World&lt;/a&gt; on December 16, 2016.&lt;/p&gt;
-  </content>
-</entry>
-
-
-  
-
-<entry>
-  <title type="html"><![CDATA[IMDB Data Visualizations with D3 + Dimple.js]]></title>
-  <link rel="alternate" type="text/html" href="http://www.andreykurenkov.com/writing/project/visualizing-imdb-data-with-d3/" />
-  <id>/writing/project/visualizing-imdb-data-with-d3</id>
-  <published>2016-08-10T16:19:34-07:00</published>
-  <updated>2016-08-10T16:19:34-07:00</updated>
-  <author>
-    <name></name>
-    <uri>www.andreykurenkov.com</uri>
-    <email>contact@andreykurenkov.com</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;&lt;em&gt;Notes: not optimized for mobile (or much else). Full page version &lt;strong&gt;&lt;a href=&quot;/writing/files/2016-08-10-visualizing-imdb-data-with-d3/standalone_page.html&quot;&gt;here&lt;/a&gt;&lt;/strong&gt;, visualization code &lt;strong&gt;&lt;a href=&quot;https://github.com/andreykurenkov/imdb-data-viz&quot;&gt;here&lt;/a&gt;&lt;/strong&gt;. I don’t get into the technical aspects here, but feel free to take a look.&lt;/em&gt;&lt;/p&gt;
-
-&lt;div id=&quot;genreChartContainer&quot; class=&quot;chartContainer&quot;&gt;
-  &lt;script type=&quot;text/javascript&quot;&gt;
-    /*Start on 1915 because prior too few movies are listed to make them a fair
-    comparison to modern times*/
-    var start_year = 1915;
-    /*End on 2013 due to a strange dive towards zero in 2014 and 2015 I cannot explain or
-    guarantee is not due to flawed data. At first I included the dip but received feedback it
-    is best to remove it to avoid confusion, and then removed it.*/
-    var end_year = 2013;
-    //Get from localhost, perhaps change to github later
-    var data_source = &quot;/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/yearly_data.tsv&quot;;
-    var name = &quot;IMDB Yearly Movie And Genre Counts (1915-2013)&quot;;
-    createGenreChart(&quot;#genreChartContainer&quot;,
-                    data_source,
-                    name,
-                    start_year,
-                    end_year);
-  &lt;/script&gt;
-&lt;/div&gt;
-
-&lt;form class=&quot;form&quot; id=&quot;genreToggleForm&quot;&gt;
-  &lt;div class=&quot;switch-field&quot;&gt;
-    &lt;!--   &lt;div class=&quot;switch-title&quot;&gt;Display Type&lt;/div&gt; --&gt;
-    &lt;input type=&quot;radio&quot; id=&quot;switch_left&quot; name=&quot;switch&quot; value=&quot;yes&quot; checked=&quot;&quot; /&gt;
-    &lt;label for=&quot;switch_left&quot;&gt;Counts&lt;/label&gt;
-    &lt;input type=&quot;radio&quot; id=&quot;switch_right&quot; name=&quot;switch&quot; value=&quot;no&quot; /&gt;
-    &lt;label for=&quot;switch_right&quot;&gt;Percents&lt;/label&gt;
-  &lt;/div&gt;
-&lt;/form&gt;
-
-&lt;p&gt;And there it is! IMDB data&lt;sup id=&quot;fnref:gotten_with&quot;&gt;&lt;a href=&quot;#fn:gotten_with&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; visualized with &lt;a href=&quot;https://d3js.org/&quot;&gt;D3&lt;/a&gt;, or more precisely with the D3-powered &lt;a href=&quot;http://dimplejs.org/&quot;&gt;Dimple.js&lt;/a&gt;. The data is minimally cleaned up by filtering for movies that have at least one vote and associated length information, and info on TV episodes or shows is also not included, but the data is otherwise directly (after parsing) from IMDB. The legend is interactive (try clicking the rectangles!).&lt;/p&gt;
-
-&lt;p&gt;As you can see this chart visualizes the number of genre movie releases between 1915 and 2013&lt;sup id=&quot;fnref:why_years&quot;&gt;&lt;a href=&quot;#fn:why_years&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;, as well as the total number of movies in those years. 
-A single movie may be associated with zero, one, or multiple genres and so the ‘Total Movies’ line corresponds to actual
-movie counts and every colored-in area represents the number of movies tagged with that genre for that year. 
-The clear conclusion is that there has been an explosion in film production from the 90s onward, for which I have some theories&lt;sup id=&quot;fnref:theories&quot;&gt;&lt;a href=&quot;#fn:theories&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; but no definitive explanation. Beyond the big takeaway there are a multitude of possible smaller conclusions regarding the relative popularity of genres and movies overall, which was really my intent in making such an open-ended visualization.&lt;/p&gt;
-
-&lt;p&gt;There is a ton more that can be done with the data. The direction I decided to
-go with it was to explore various aspects of more recent data rather than
-more aspects related to change over time. I would love to eventually add controls to view any year range for all the following charts&lt;sup id=&quot;fnref:nontrivial&quot;&gt;&lt;a href=&quot;#fn:nontrivial&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;, but they still reveal some interesting aspects about modern movie production and IMDB metrics.&lt;/p&gt;
-
-&lt;p&gt;An obvious place to start is with looking at how rating data is distributed, and the answer is delightfully normal:&lt;/p&gt;
-
-&lt;div id=&quot;ratingChartContainer&quot; class=&quot;chartContainer&quot;&gt;
-  &lt;script type=&quot;text/javascript&quot;&gt;
-    createLineChart(&quot;#ratingChartContainer&quot;,
-                    &quot;/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/rating_data.tsv&quot;,
-                    false,
-                    &quot;IMDB Average Movie Rating Distribution (2003-2013) &quot;,
-                    &quot;rating&quot;,
-                    false,
-                    &quot;Average IMDB User Rating&quot;);
-  &lt;/script&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Yep, a bell curve-ish&lt;sup id=&quot;fnref:bell_curve&quot;&gt;&lt;a href=&quot;#fn:bell_curve&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt; kinda shape! Not overly suprising to see that most movies are rated as mediocre/good and the frequency flattens out at either extreme. Next, a slightly more fun shape from the length distribution:&lt;/p&gt;
-
-&lt;div id=&quot;lengthChartContainer&quot; class=&quot;chartContainer&quot;&gt;
-  &lt;script type=&quot;text/javascript&quot;&gt;
-    createLineChart(&quot;#lengthChartContainer&quot;,
-                    &quot;/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/length_data.tsv&quot;,
-                    true,
-                    &quot;IMDB Movie Length Distribution (2003-2013)&quot;,
-                    &quot;length&quot;,
-                    false,
-                    &quot;Length (minutes)&quot;,
-                    &quot;max&quot;);
-  &lt;/script&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Ah, what a nice regularly spiky shape&lt;sup id=&quot;fnref:fourier&quot;&gt;&lt;a href=&quot;#fn:fourier&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;. It’s logical that most movies hit the 90-minute mark, though it seems likely
-that simplified data entry also brings about the periodicity here. The chart is a bit of a mess as a line graph, so it makes sense
-to clean it up by binning the data quite a bit more:&lt;/p&gt;
-
-&lt;div id=&quot;lengthBinChartContainer&quot; class=&quot;chartContainer&quot;&gt;
-  &lt;script type=&quot;text/javascript&quot;&gt;
-    createHistChart(&quot;#lengthBinChartContainer&quot;,
-                    &quot;/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/length_data_hist.tsv&quot;,
-                    true,
-                    &quot;IMDB Movie Length Distribution (2003-2013) &quot;,
-                    &quot;length&quot;,
-                    false,
-                    &quot;Length (minutes)&quot;);
-  &lt;/script&gt;
-&lt;/div&gt;
-
-&lt;p&gt;And there it is, hiding in that data was another sort-of bell curve. Except of course for that first bar - IMDB apparently has a large amount of shorter 0-20 minute film entries as well. No doubt short films are part of this, though it’s unclear why there are quite so many. As with many aspects of the data, it could be explored more deeply and filtered more thouroughly to focus on a specific subset of films. But, that’s for another day. For now I continued my visualization quest by looking into the vote distribution:&lt;/p&gt;
-
-&lt;div id=&quot;votesChartContainer&quot; class=&quot;chartContainer&quot;&gt;
-  &lt;script type=&quot;text/javascript&quot;&gt;
-    createLineChart(&quot;#votesChartContainer&quot;,
-                    &quot;/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/votes_data.tsv&quot;,
-                    true,
-                    &quot;IMDB Movie Vote Count Distribution (2003-2013) &quot;,
-                    &quot;votes&quot;,
-                    true,
-                    &quot;IMDB User Vote Count&quot;);
-  &lt;/script&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Yes astute reader&lt;sup id=&quot;fnref:corny&quot;&gt;&lt;a href=&quot;#fn:corny&quot; class=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;, that is indeed a log-scale on the x axis. Unsurprisingly, the number of votes for any given film declines exponentially - very few of those thousands of movies in the first graph are blockbusters&lt;sup id=&quot;fnref:again&quot;&gt;&lt;a href=&quot;#fn:again&quot; class=&quot;footnote&quot;&gt;8&lt;/a&gt;&lt;/sup&gt;. As with the histogram above the continuous data is in fact binned for counting, but in this case there are enough bins that it makes sense to smooth out into a line. Once again the data can also be shown via a histogram with fewer bins:&lt;/p&gt;
-
-&lt;div id=&quot;votesBinChartContainer&quot; class=&quot;chartContainer&quot;&gt;
-  &lt;script type=&quot;text/javascript&quot;&gt;
-  createHistChart(&quot;#votesBinChartContainer&quot;,
-                  &quot;/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/votes_data_hist.tsv&quot;,
-                      true,
-                      &quot;IMDB Movie Vote # Distribution (2003-2013) &quot;,
-                      &quot;votes&quot;,
-                      true,
-                      &quot;IMDB User Vote Count&quot;);
-  &lt;/script&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Lastly, I explored the distribution of budgets within the data &lt;sup id=&quot;fnref:budgets&quot;&gt;&lt;a href=&quot;#fn:budgets&quot; class=&quot;footnote&quot;&gt;9&lt;/a&gt;&lt;/sup&gt;. I was originally inspired to look into 
-movie data based on &lt;a href=&quot;http://flavorwire.com/492985/how-the-death-of-mid-budget-cinema-left-a-generation-of-iconic-filmmakers-mia&quot;&gt;an article&lt;/a&gt; 
-that discussed the death of mid-budget-cinema, and of course I wanted to look into the data and see the phenomenon myself. The result once again demands a log-scale and reveals a certain periodicity:&lt;/p&gt;
-
-&lt;div id=&quot;budgetChartContainer&quot; class=&quot;chartContainer&quot;&gt;
-  &lt;script type=&quot;text/javascript&quot;&gt;
-    createLineChart(&quot;#budgetChartContainer&quot;,
-                    &quot;/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/budget_data.tsv&quot;,
-                    true,
-                    &quot;IMDB Movie Budget Distribution (2003-2013) &quot;,
-                    &quot;budget&quot;,
-                    true,
-                    &quot;Budget (USD)&quot;,
-                    &quot;average&quot;);
-  &lt;/script&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The data does&lt;sup id=&quot;fnref:plural&quot;&gt;&lt;a href=&quot;#fn:plural&quot; class=&quot;footnote&quot;&gt;10&lt;/a&gt;&lt;/sup&gt; not seem to back the notion of mid-budget movies dying, since one peak is at about 1m, but then again as said before the data is not particularly carefully filtered. There being a ton of less-than one million budget movies certainly explains how such an explosion in movie production might have been possible in the past twenty years. That guess shall hopefully be further explored in future posts, but for now I will finish with a final simplified histogram:&lt;/p&gt;
-
-&lt;div id=&quot;budgetBinChartContainer&quot; class=&quot;chartContainer&quot;&gt;
-  &lt;script type=&quot;text/javascript&quot;&gt;
-    createHistChart(&quot;#budgetBinChartContainer&quot;,
-                    &quot;/writing/files/2016-08-10-visualizing-imdb-data-with-d3/data/budget_data_hist.tsv&quot;,
-                    true,
-                    &quot;IMDB Movie Budget Distribution (2003-2013) &quot;,
-                    &quot;budget&quot;,
-                    true,
-                    &quot;Budget (USD)&quot;);
-  &lt;/script&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;what-i-learned&quot;&gt;What I Learned&lt;/h2&gt;
-&lt;p&gt;And now time for everyone’s favorite part of the book report. In truth I prepared the genre chart for Udacity’s an online class, &lt;a href=&quot;https://www.udacity.com/course/data-visualization-and-d3js--ud507&quot;&gt;Data Visualization with D3.JS&lt;/a&gt;. I completed the class as part of Udacity’s Data Analyst Nanodegree, and as with my &lt;a href=&quot;http://www.andreykurenkov.com/writing/fun-visualizations-of-stackoverflow/&quot;&gt;previous&lt;/a&gt; &lt;a href=&quot;http://www.andreykurenkov.com/writing/power-of-ipython-pandas-scikilearn/&quot;&gt;posts&lt;/a&gt; based off projects for the nanodegree I felt that I learned&lt;sup id=&quot;fnref:learned&quot;&gt;&lt;a href=&quot;#fn:learned&quot; class=&quot;footnote&quot;&gt;11&lt;/a&gt;&lt;/sup&gt; a useful technology and got the chance to complete a fun project with it worthy of cataloguing. I have a few key takeaways from having now completed the project:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;It’s way easier to do data exploration and visualization via RStudio or IPython than D3. Perhaps this is not true for others, but I was surprised by how high level and unstreamlined D3 is for typical visualization tasks. Of course this is part of its power and the reason that higher-abstraction libraries like Dimple.js got built, but on balance I still felt that using JavaScript, HTML, and a browser was not nearly as elegant as RStudio. As someone only mildly experienced with web-dev, the prior classes on R and Pandas+IPython made me feel much more empowered to play with data easily.&lt;/li&gt;
-  &lt;li&gt;D3 allows for interactivity, but interactvity is not always needed. This one is rather obvious but why not still spell it out. All but the genre chart here could have comfortably been PNGs files (as in my previous visualization posts), and not lost much. Still, allowing for interactivity does open up a considerable amount of possibilies and in particular is good for open ended data visualization without a single particularly concrete point.&lt;/li&gt;
-  &lt;li&gt;Aggregation over hundreds of thousands of data points in JS is probably a bad idea. The year-grouped data for the genre graph was originally completely computed in JS when I submitted my project to Udacity. This took painful seconds, which was not helped by my meek laptop. Again unsurprising, but I did feel a tinge of annoyance at realizing I would be best off writing a python script to pre-process my data into multiple CSV files ready for charting without much manipulation.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;bloopers&quot;&gt;Bloopers&lt;/h2&gt;
-&lt;p&gt;You did not ask for them, and I delivered. Here are a couple of silly moments during the creation of this&lt;sup id=&quot;fnref:high_five&quot;&gt;&lt;a href=&quot;#fn:high_five&quot; class=&quot;footnote&quot;&gt;12&lt;/a&gt;&lt;/sup&gt;. Hope you enjoyed!&lt;/p&gt;
-
-&lt;figure class=&quot;figure&quot;&gt;&lt;div class=&quot;figure__main&quot;&gt;
-&lt;p&gt;&lt;a href=&quot;/writing/images/2016-08-10-visualizing-imdb-data-with-d3/oops.png&quot;&gt;&lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2016-08-10-visualizing-imdb-data-with-d3/oops.png&quot; alt=&quot;oops&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;figcaption class=&quot;figure__caption&quot; style=&quot;padding-top:0;&quot;&gt;&lt;p&gt;Making small ordering mistakes unsurisingly had major glitchy implications…&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;figure class=&quot;figure&quot;&gt;&lt;div class=&quot;figure__main&quot;&gt;
-&lt;p&gt;&lt;a href=&quot;/writing/images/2016-08-10-visualizing-imdb-data-with-d3/great.png&quot;&gt;&lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2016-08-10-visualizing-imdb-data-with-d3/great.png&quot; alt=&quot;great&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;figcaption class=&quot;figure__caption&quot; style=&quot;padding-top:0;&quot;&gt;&lt;p&gt;… which were worse in some cases than others.&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;figure class=&quot;figure&quot;&gt;&lt;div class=&quot;figure__main&quot;&gt;
-&lt;p&gt;&lt;a href=&quot;/writing/images/2016-08-10-visualizing-imdb-data-with-d3/step1.png&quot;&gt;&lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2016-08-10-visualizing-imdb-data-with-d3/step1.png&quot; alt=&quot;step1&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;figcaption class=&quot;figure__caption&quot; style=&quot;padding-top:0;&quot;&gt;&lt;p&gt;For a while I thought to plot the binned data with tiny little cute bins via step interpolation…&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;figure class=&quot;figure&quot;&gt;&lt;div class=&quot;figure__main&quot;&gt;
-&lt;p&gt;&lt;a href=&quot;/writing/images/2016-08-10-visualizing-imdb-data-with-d3/step2.png&quot;&gt;&lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2016-08-10-visualizing-imdb-data-with-d3/step2.png&quot; alt=&quot;step2&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;figcaption class=&quot;figure__caption&quot; style=&quot;padding-top:0;&quot;&gt;&lt;p&gt;… but evidently changed my mind.&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;notes&quot;&gt;Notes&lt;/h2&gt;
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:gotten_with&quot;&gt;
-      &lt;p&gt;(gotten with &lt;a href=&quot;https://github.com/andreykurenkov/data-movies&quot;&gt;this code&lt;/a&gt;) &lt;a href=&quot;#fnref:gotten_with&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:why_years&quot;&gt;
-      &lt;p&gt;The cutoff years are chosen due to there being very few movies comparable to modern films prior to 1915, and the data possibly being incomplete post 2013 &lt;a href=&quot;#fnref:why_years&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:theories&quot;&gt;
-      &lt;p&gt;Primarily that films are cheaper to make due to digital technology and that IMDB tacks more modern movies better &lt;a href=&quot;#fnref:theories&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:nontrivial&quot;&gt;
-      &lt;p&gt;This is nontrivial for various boring reasons and I have too many side-projects as it is… &lt;a href=&quot;#fnref:nontrivial&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:bell_curve&quot;&gt;
-      &lt;p&gt;Fine, a somewhat offset and wobbly bell curve, but still looks pretty good. &lt;a href=&quot;#fnref:bell_curve&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:fourier&quot;&gt;
-      &lt;p&gt;Don’t you just want to take the fourier transform of it? &lt;a href=&quot;#fnref:fourier&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:corny&quot;&gt;
-      &lt;p&gt;Too corny? I shan’t apologize, this is my site! &lt;a href=&quot;#fnref:corny&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:again&quot;&gt;
-      &lt;p&gt;Again, something warranting a deeper dive someday. &lt;a href=&quot;#fnref:again&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:budgets&quot;&gt;
-      &lt;p&gt;Many movies did not have associated budget data, but that still left thousands that did &lt;a href=&quot;#fnref:budgets&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:plural&quot;&gt;
-      &lt;p&gt;I know, ‘do’ is grammatically correct here, but then natural speech is largely nonsensical so who cares &lt;a href=&quot;#fnref:plural&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:learned&quot;&gt;
-      &lt;p&gt;Well, learned a little… &lt;a href=&quot;#fnref:learned&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:high_five&quot;&gt;
-      &lt;p&gt;Wow, did you actually read all the text and are still reading it? High five. &lt;a href=&quot;#fnref:high_five&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/writing/project/visualizing-imdb-data-with-d3/&quot;&gt;IMDB Data Visualizations with D3 + Dimple.js&lt;/a&gt; was originally published by Andrey Kurenkov at &lt;a href=&quot;&quot;&gt;Andrey Kurenkov's Web World&lt;/a&gt; on August 10, 2016.&lt;/p&gt;
   </content>
 </entry>
 
