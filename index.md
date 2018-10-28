@@ -5,13 +5,11 @@ tags: [about]
 modified: 2018-08-17
 comments: false
 share: false
-image:
-  feature: starter-pack.jpg
 ---
 
 Hi there. I am Andrey Kurenkov, a grad student at Stanford that likes do research about AI and robotics, write code, appreciate art, and ponder about life. 
 
-Currently, I am finishing my MS and transitioning to being a PhD student at Stanford. I do research in the [Stanford Vision and Learning Lab](http://svl.stanford.edu/home) at the intersection of robotics and computer vision, and am co-advised by Silvio Savarese and Ken Goldberg. 
+Currently, I am a PhD student with the [Stanford Vision and Learning Lab](http://svl.stanford.edu/home) working at the intersection of robotics and computer vision, and am co-advised by Silvio Savarese and Ken Goldberg. 
 
 This site documents my various projects, my writing (technical and not), and my photography. I am also quite active on [Twitter](https://twitter.com/andrey_kurenkov).
 
@@ -27,6 +25,10 @@ If you are so curious, I am more specifically interested in:
 * books (hard science fiction, modernist, some post-modernist, some pre-modernist)
 * programming (especially embedded programming, but also scripting and hackathon types things as well)
 * photography (doing it, as you can see on this site, but also appreciating)
+
+Or, in visual terms:
+
+![about](images/starter-pack.jpg)
 
 
 
