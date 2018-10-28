@@ -6,7 +6,7 @@ layout: base
     {% include _author-bio.html %}
   </div>
   <div id="index">
-    <a href="https://500px.com/andreykname"><h2 style="text-align:center; margin-top:0;">500px</h2></a>
+  <a href="https://500px.com/andreykname"><h2 style="text-align:center; margin-top:0;">Flickr</h2></a>
 	<div class="popup-gallery" id="500px_gallery">
 		{% 500px authpath:files/photo_tokens/pxtoken.txt %}
 		<a href="{{ item.images.large.url }}" title="{{ item.name }}">
@@ -16,12 +16,12 @@ layout: base
 	</div>
 
     <a href="https://www.instagram.com/regalalgorithm/?hl=en"><h2 style="text-align:center;">instagram</h2></a>
-	<div class="popup-gallery" id="instagram_gallery">
+	<!--<div class="popup-gallery" id="instagram_gallery">
 		{% instagram accesstokenpath:files/photo_tokens/instatoken.txt %}
 		<a href="{{ item.images.standard_resolution.url }}" title="{{ item.caption.text }}">
                     <img src="{{ item.images.thumbnail.url }}" width="24.5%">
                 </a>
 		{% endinstagram %}
-	</div>
+	</div>-->
   </div><!-- /#index -->
 </div><!-- /#main -->

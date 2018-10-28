@@ -20,6 +20,13 @@ kramdown:
   entity_output: as_char
   toc_levels: 1..6
   use_coderay: false
+  
+flickr:
+  screen_name: You
+  api_key: 292871327f3933bc71655853f191d2f5
+  api_secret: 77d5fed0798c2fa3
+  cache_dir: _flickr
+  cache_dir: _flickr
 
 # Site owner
 owner:

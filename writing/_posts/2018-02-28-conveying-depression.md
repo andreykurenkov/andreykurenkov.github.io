@@ -81,6 +81,12 @@ You know how when you are drunk, or high, you think thoughts that seem absurd in
 You know that feeling of getting in a cold shower and having your body revolt, the feeling of '**make this stop**'? 
 <br>It was like that, every morning, being hit with a wave of formless misery moments after waking up, like 'oh, right, **this**'. 
 
+<br>
+{% figure caption:'Kiki Shouldice, Discord' %}
+[<img class="postimage" src="/writing/images/2018-02-26-depression/kikshouldice_discord.jpg" alt="Kiki Shouldice, Discord"/>](/writing/images/2018-02-26-depression/kikshouldice_discord.jpg)
+{% endfigure %}
+<br><br>
+
 You know how it feels when you are at a social event, and just can't seem to get along with anyone - alienated ? 
 <br>Depression makes you feel like that, even among friends.  
 
