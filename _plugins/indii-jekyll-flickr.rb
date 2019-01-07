@@ -301,7 +301,6 @@ class FlickrPhotosetTag < Liquid::Tag
         site = context.registers[:site]
         Jekyll::flickr_setup(site)
         file_photoset = File.join(site.config['flickr']['cache_dir'], "#{@slug}.yml")
-        puts file_photoset
         photoset = Photoset.new(site, file_photoset)
         return photoset.gen_html
     end
