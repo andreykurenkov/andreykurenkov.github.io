@@ -202,7 +202,7 @@ class Photo
     def gen_thumb_html
         content = ''
         if self.url_full and self.url_thumb
-            content = "<a href=\"#{self.url_full}\" title=\"#{self.title}\"><img src=\"#{self.url_thumb}\" width=\"24.5%\"></a>"
+            content = "<a href=\"#{self.url_full}\" title=\"#{self.title}\"><img src=\"#{self.url_thumb}\" alt=\"#{self.title}\"  width=\"24.5%\"></a>"
         end
         return content
     end
