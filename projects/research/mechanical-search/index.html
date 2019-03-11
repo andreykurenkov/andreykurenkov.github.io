@@ -5,37 +5,37 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Bringing Learning to Robotics - Highlights from RSS 2018 &#8211; Andrey Kurenkov's Web World</title>
-<meta name="description" content="What do robotics researchers even do? This.">
-<meta name="keywords" content="ai">
+<title>Mechanical Search &#8211; Andrey Kurenkov's Web World</title>
+<meta name="description" content="Finding objects via interactive physical search">
+<meta name="keywords" content="ml, ai, robotics">
 
   
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="Bringing Learning to Robotics - Highlights from RSS 2018">
-<meta name="twitter:description" content="What do robotics researchers even do? This.">
+<meta name="twitter:title" content="Mechanical Search">
+<meta name="twitter:description" content="Finding objects via interactive physical search">
 
 
 
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="/images/thumb.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="/images/algorithm_flow_chart.png">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Bringing Learning to Robotics - Highlights from RSS 2018">
-<meta property="og:description" content="What do robotics researchers even do? This.">
-<meta property="og:url" content="/writing/ai/rss-conference/">
+<meta property="og:title" content="Mechanical Search">
+<meta property="og:description" content="Finding objects via interactive physical search">
+<meta property="og:url" content="/projects/research/mechanical-search/">
 <meta property="og:site_name" content="Andrey Kurenkov's Web World">
 
-<meta property="og:image" content="/images/thumb.png">
+<meta property="og:image" content="/images/algorithm_flow_chart.png">
 
 
 
 
 
 
-<link rel="canonical" href="/writing/ai/rss-conference/">
+<link rel="canonical" href="/projects/research/mechanical-search/">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Andrey Kurenkov's Web World Feed">
 
 <!-- http://t.co/dKP3o1e -->
@@ -122,21 +122,15 @@
 
      
     
-
-
-
-
-    
-    
-        
-            
-            
-        
-    
-
-
+  
+  <div class="image-wrap" id="project-image">
+     <a href="/projects/research/images/mechsearch/algorithm_flow_chart.png" target="_blank"> 
+     <img src="/projects/research/images/mechsearch/algorithm_flow_chart.png">
+     </a>
+  </div><!-- /.image-wrap -->
+  
 <div id="main" role="main">
-  <div class="article-author-side">
+  <div class="article-author-side" id="article-author-side-projects">
     
   
 
@@ -158,40 +152,94 @@
 
 </div>
 
-    <hr>
-    <p id="post-meta">Tags <i class="fa fa-tag"></i>: <a href="/writing/tag/ai/">ai</a></p>
   </div>
-  <article class="post">
+  <article class="project-post">
     <div class="headline-wrap">
-      
-        <h1><a href="https://thegradient.pub/2018-rss-conference/">Bringing Learning to Robotics - Highlights from RSS 2018</a></h1><h5><time datetime="2018-08-03T00:00:00-07:00">August 03, 2018</time></h5>
-      
+        <h1 id="project-title"><a href="/projects/research/mechanical-search/" rel="bookmark" title="Mechanical Search">Mechanical Search</a></h1>
     </div><!--/ .headline-wrap -->
     </hr>
     <div class="article-wrap">
+      <table class="classytable">
+		      <col/>
+		      <tr>
+			      <td valign="top"><h3>WHAT</h3></td>
+			      <td><h4>When operating in unstructured environments such as warehouses, homes, and retail centers, robots are frequently required to interactively search for and retrieve specific objects from cluttered bins, shelves, or tables. Mechanical Search describes the class of tasks where the goal is to locate and extract a known target object.</h4></td>
+		      </tr>
+		      <tr>
+			      <td valign="top"><h3>WHEN</h3></td>
+			      <td><h4>May 2018 - February 2019</h4></td>
+		      </tr>
+		      <tr>
+			      <td valign="top"><h3>WHO</h3></td>
+			      <td><h4>Michael Danielczuk, Andrey Kurenkov, Ashwin Balakrishna, Matthew Matl, David Wang, Roberto Martin-Martin, Animesh Garg, Silvio Savarese, Ken Goldberg</h4></td>
+		      </tr>
+		      <tr>
+			      <td valign="top"><h3>WHERE</h3></td>
+			      <td><h4>Stanford Vision Lab</h2></td>
+		      </tr>
+		      <tr>
+			      <td valign="top"><h3>WHY</h3></td>
+			      <td><h4>It's a useful class of problem to tackle</h4></td>
+		      </tr>
+		      <tr>
+			      <td valign="top"><h3>HOW</h3></td>
+			      <td><h4><p>In this paper, we formalize Mechanical Search and study a version where distractor objects are heaped over the target object in a bin. The robot uses an RGBD perception system and control policies to iteratively select, parameterize, and perform one of 3 actions – push, suction, grasp – until the target object is extracted, or either a time limit is exceeded, or no high confidence push or grasp is available. We present a study of 5 algorithmic policies for mechanical search, with 15,000 simulated trials and 300 physical trials for heaps ranging from 10 to 20 objects. Results suggest that success can be achieved in this long-horizon task with algorithmic policies in over 95% of instances and that the number of actions required scales approximately linearly with the size of the heap.</p>
+</h4></td>
+		      </tr>
 
-      
+		      
+		      <tr>
+			      <td valign="top"><h3>LINKS</h3></td>
+			      <td><ul class="linkslist">
+				       
+		               
+                      <h4>
+                         <a href="https://ai.stanford.edu/mech-search/" title="" target="_blank">Project Site</a>
+                         <a href="https://ai.stanford.edu/mech-search/" target="_blank" title=""><i class="fa fa-link"></i></a>
+                      </h4>
+		      		     
+							  
+		               
+                      <h4>
+                         <a href="https://arxiv.org/abs/1903.01588" title="" target="_blank">Arxiv</a>
+                         <a href="https://arxiv.org/abs/1903.01588" target="_blank" title=""><i class="fa fa-link"></i></a>
+                      </h4>
+		      		     
+							  
+						 </ul></div></td>
+		      </tr>
+		      
 
+		      
+
+		      
+
+
+
+      </table>
 
       <div class="contentinfo">           
-        <h4 id="postnav"><a href="/writing/ai/how-to-fix-rl/">Previous Post</a> 
-                        | <a href="/writing/ai/ai-future-work/">Next Post</a></h4>
+        <h4 id="postnav"> 
+                       </h4>
+
         <div class="social-share">
   <h4>Share on</h4>
   <ul>
     <li>
-      <a href="https://twitter.com/intent/tweet?text=/writing/ai/rss-conference/" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+      <a href="https://twitter.com/intent/tweet?text=/projects/research/mechanical-search/" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
     </li>
     <li>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=/writing/ai/rss-conference/" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=/projects/research/mechanical-search/" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
     </li>
     <li>
-      <a href="https://plus.google.com/share?url=/writing/ai/rss-conference/" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+      <a href="https://plus.google.com/share?url=/projects/research/mechanical-search/" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
     </li>
   </ul>
 </div><!-- /.social-share -->
+        <p id="post-meta"></p>
         
-         <span><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</span>
+          <section id="disqus_thread"></section><!-- /#disqus_thread -->
+        
       </div>
     </div><!-- /.article-wrap -->
   </article>
@@ -230,6 +278,30 @@
 </script>
 
 
+
+
+  
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'eclecticcreations'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
 

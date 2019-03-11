@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>/writing/ai/ethical-ai/</loc>
+<lastmod>2019-09-21T00:00:00-07:00</lastmod>
+</url>
+<url>
+<loc>/writing/ai/ai-job-loss/</loc>
+<lastmod>2019-09-04T00:00:00-07:00</lastmod>
+</url>
+<url>
+<loc>/writing/ai/ai-future-work/</loc>
+<lastmod>2018-12-18T00:00:00-08:00</lastmod>
+</url>
+<url>
+<loc>/projects/research/mechanical-search/</loc>
+<lastmod>2018-09-15T00:00:00-07:00</lastmod>
+</url>
+<url>
 <loc>/writing/ai/rss-conference/</loc>
 <lastmod>2018-08-03T00:00:00-07:00</lastmod>
 </url>
@@ -27,6 +43,10 @@
 <url>
 <loc>/writing/ai/is-alphago-zero-overrated/</loc>
 <lastmod>2018-03-30T00:00:00-07:00</lastmod>
+</url>
+<url>
+<loc>/projects/major_projects/aiwiki/</loc>
+<lastmod>2018-03-15T00:00:00-07:00</lastmod>
 </url>
 <url>
 <loc>/writing/art/oscar-noms-reviewed/</loc>
@@ -407,6 +427,9 @@
 <loc>/projects/tag/robotics/</loc>
 </url>
 <url>
+<loc>/projects/tag/web/</loc>
+</url>
+<url>
 <loc>/projects/tag/class/</loc>
 </url>
 <url>
@@ -420,9 +443,6 @@
 </url>
 <url>
 <loc>/projects/tag/android/</loc>
-</url>
-<url>
-<loc>/projects/tag/web/</loc>
 </url>
 <url>
 <loc>/projects/tag/competition/</loc>
