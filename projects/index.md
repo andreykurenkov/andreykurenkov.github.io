@@ -24,7 +24,7 @@ excerpt: "Projects by Andrey Kurenkov - AI, ML, robotics, embedded, apps, etc.!"
     {% if page.tag == "all" %}
 
     <h1 style="display: block;">Research</h1>
-
+    <h3 style="padding-top: .5em"> All publications listed <a href="/publications">here.</a></h3>
     <div class="tiles">
       {% for post in site.categories.research %}
         {% include _project-grid.html %}
