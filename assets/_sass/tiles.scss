@@ -13,7 +13,7 @@
     @include omega(4n);
   }
   .entry-date {
-    @include fancy-font-size(16,no);
+    @include fancy-font-size(18,no);
     color: lighten($text-color,25);
     line-height: 1.5;
     text-align: center;
@@ -26,14 +26,14 @@
     margin-top: 5px;
   }
   .post-when {
-    @include fancy-font-size(14,no);
+    @include fancy-font-size(24,no);
     color: lighten($text-color,15);
     line-height: 1;
     text-align: center;
     margin-top: 5px;
   }
   .post-excerpt {
-    @include fancy-font-size(16);
+    @include fancy-font-size(32);
     margin-top: 5px;
   }
   .post-teaser {

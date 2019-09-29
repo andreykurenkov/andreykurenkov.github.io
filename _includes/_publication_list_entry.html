@@ -1,0 +1,43 @@
+<div class="row mar-bot-30">
+  <div class="col-md-3">
+  <img class="img-responsive" src="{{ site.url }}/publications/images/{{ publication.images.thumb }}">
+  </div>
+  <div class="col-md-9">
+    <p class="pub-title">{{ publication.title }}</p>
+    <p class="pub-authors">{{ publication.authors }}</p>
+    <p class="pub-info">
+      <strong>{{ publication.pub_info_name }}</strong>. {{ publication.pub_info_date }}
+    </p>
+    <p class="pub-description">
+      {% if publication.paper_link %}
+      <a class="btn btn-default btn-xs" href="{{ publication.paper_link }}" target="_blank" role="button">
+        <i class="fa fa-book" aria-hidden="true"></i> Paper
+      </a>
+      {% endif %}
+
+      {% if publication.webpage_link %}
+      <a class="btn btn-default btn-xs" href="{{ publication.webpage_link }}" target="_blank" role="button">
+        <i class="fa fa-users" aria-hidden="true"></i> Project
+      </a>
+      {% endif %}
+
+      {% if publication.blog_link %}
+      <a class="btn btn-default btn-xs" href="{{ publication.blog_link }}" target="_blank" role="button">
+        <i class="fa fa-users" aria-hidden="true"></i> Blog
+      </a>
+      {% endif %}
+
+      {% if publication.video_link %}
+      <a class="btn btn-default btn-xs" href="{{ publication.video_link }}" target="_blank" role="button">
+        <i class="fa fa-video-camera" aria-hidden="true"></i> Video
+      </a>
+      {% endif %}
+
+      {% if publication.code_link %}
+      <a class="btn btn-default btn-xs" href="{{ publication.code_link }}" target="_blank" role="button">
+        <i class="fa fa-code" aria-hidden="true"></i> Code
+      </a>
+      {% endif %}
+    </p>
+  </div>
+</div>

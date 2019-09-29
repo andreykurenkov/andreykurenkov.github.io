@@ -114,7 +114,7 @@ nav ul li a {
 	margin-top: 2em;
 	h1 {
     padding-bottom: .5em;
-    @include font-rem(28);
+    @include font-rem(42);
     border-bottom: 2px solid lighten($black,10);
 		margin-top: 0;
 		margin-bottom: 0;
@@ -264,20 +264,20 @@ iframe {
 	h3 {
 		margin: 0;
 		padding-bottom: .5em;
-		@include font-rem(28);
+		@include font-rem(32);
 		border-bottom: 1px solid lighten($black,70);
 	}
 	article {
 		h2 {
 			margin-bottom: 4px;
-			@include font-rem(20);
+			@include font-rem(28);
 			&.link-post {
 				margin-bottom: 0px + $doc-line-height;
 				margin-bottom: 0rem + ($doc-line-height / $doc-font-size);
 			}
 		}
 		p {
-			@include font-rem(14);
+			@include font-rem(18);
 		}
 		p+p {
 			text-indent: 0;
@@ -318,7 +318,7 @@ iframe {
 /* Post byline */
 .byline {
 	clear: both;
-	font-size: 80%;
+	font-size: 100%;
 }
 .article-author-side,
 .article-author-bottom {
@@ -326,7 +326,7 @@ iframe {
 		margin-bottom: 0;
 	}
 	p {
-		font-size: 80%;
+		font-size: 100%;
 		font-style: italic;
 	}
 	a, a:hover {
@@ -338,7 +338,7 @@ iframe {
 .author-social {
   display: block;
   margin-bottom: 5px;
-  @include font-rem(14);
+  @include font-rem(24);
   color: $black;
   &:visited {
     color: $black;
@@ -611,7 +611,7 @@ iframe {
 	h5,
 	h6,
 	span { 
-		@include font-rem(14);
+		@include font-rem(22);
 	}
 	footer {
 		@include grid(12,10);
@@ -635,7 +635,7 @@ iframe {
     display: inline block;
 	text-align: center;
 	color: #666;
-	font-size:14px;
+	font-size:18px;
 	line-height:24px;
 	font-weight: normal;
 	border: 1px solid #BBB;
@@ -665,6 +665,25 @@ iframe {
 	border-color: #444;
 	box-shadow: 0 1px 0 rgba(255,255,255,1), 0 0 2px rgba(0, 0, 0, 0.3) inset;
 	cursor: default;
+}
+
+
+.pub-title {
+    font-size: 22px;
+    font-weight: 600;
+}
+.pub-authors {
+    font-size: 16px;
+    font-weight: 400;
+}
+.pub-info {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.pub-description {
+    font-size: 14px;
+    font-weight: 400;
 }
 
 /* 
