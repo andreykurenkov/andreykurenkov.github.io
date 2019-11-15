@@ -9,9 +9,9 @@ share: false
 
 Hi there. I am Andrey Kurenkov, a grad student at Stanford that likes do research about AI and robotics, write code, appreciate art, and ponder about life. 
 
-Currently, I am a PhD student with the [Stanford Vision and Learning Lab](http://svl.stanford.edu/home) working at the intersection of robotics and computer vision, and am co-advised by Silvio Savarese and Ken Goldberg. 
+Currently, I am a PhD student with the [Stanford Vision and Learning Lab](http://svl.stanford.edu/home) working at the intersection of robotics and computer vision, and am advised by Silvio Savarese. 
 
-This site documents my various projects, my writing (technical and not), and my photography. I am also quite active on [Twitter](https://twitter.com/andrey_kurenkov).
+This site documents my various projects, my writing (technical and not), my photography, and my YouTube videos. I am also quite active on [Twitter](https://twitter.com/andrey_kurenkov).
 
 > "I love writing. I get a kick out of sharing my thoughts with others. The act of transforming ideas into words is an amazingly efficient way to solidify and refine your thoughts about a given topic. " -Tom Preston (creator of Jekyll), [Blogging Like a Hacker](http://tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html)
 
