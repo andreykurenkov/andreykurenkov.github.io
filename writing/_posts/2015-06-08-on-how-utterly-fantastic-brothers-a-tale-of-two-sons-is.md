@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! 'On How Utterly Fantastic "Brothers: A Tale of Two Sons" Is'
+title: "On How Utterly Fantastic 'Brothers: A Tale of Two Sons' Is"
 date: 2015-06-08 16:05:08.000000000 -07:00
 tags: [videogames,criticism,art,quasi-essay]
 category: art
