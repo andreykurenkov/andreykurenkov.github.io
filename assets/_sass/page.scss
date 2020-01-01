@@ -267,6 +267,9 @@ iframe {
 		@include font-rem(32);
 		border-bottom: 1px solid lighten($black,70);
 	}
+	.writing_subsection {
+	  padding-top: 1em;
+	}
 	article {
 		h2 {
 			margin-bottom: 4px;

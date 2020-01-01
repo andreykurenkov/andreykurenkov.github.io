@@ -10,7 +10,11 @@ tags:
 - lake
 - lightning
 - mountain
-url_full: https://farm1.staticflickr.com/974/26907584477_6453f13a1c_b.jpg
-url_thumb: https://farm1.staticflickr.com/974/26907584477_6453f13a1c_q.jpg
+- nature
+- storm
+- clouds
+- vivid
+url_full: https://live.staticflickr.com/65535/26907584477_7017d671fb_b.jpg
+url_thumb: https://live.staticflickr.com/65535/26907584477_7017d671fb_q.jpg
 cache_file: _flickr/all/26907584477.yml
-position: 163
+position: 161

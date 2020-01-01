@@ -4,5 +4,6 @@ _site/
 .DS_Store/
 .sass-cache/
 .jekyll-metadata
+_flickr/
 node_modules/
 images/instagramget.txt

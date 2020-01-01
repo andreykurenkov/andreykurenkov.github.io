@@ -2,7 +2,7 @@
 layout: project-post
 title: Skynet Today
 date: 2018-04-02
-tags: [ai]
+tags: [ai, writing]
 status: publish
 type: post
 published: true
@@ -16,7 +16,7 @@ image:
   teaser: logo.jpg
 what: An independent online publication that aims to cover AI coverage
 why: Because 
-where: The internetz
+where: The internet
 when: August 2017-Today
 who: Me and a lot of collaborators
 links:

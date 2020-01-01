@@ -38,25 +38,25 @@ excerpt: "Quasi-essays on an assortment of topics"
           </div>
         </form>
         <div id='categorical'>
-           <h3>Highlights</h3>
+           <h3 class="writing_subsection">Highlights</h3>
             {% for post in site.categories.writing %}  
               {% if post.tags contains 'highlights' %}
                 {% include _post_title.html %}
               {% endif %}
             {% endfor %}
-            <h3>AI</h3>
+            <h3 class="writing_subsection">AI</h3>
             {% for post in site.categories.ai %}  
                 {% include _post_title.html %}
             {% endfor %}
-            <h3>Projects</h3>
+            <h3 class="writing_subsection">Projects</h3>
             {% for post in site.categories.project %}  
                 {% include _post_title.html %}
             {% endfor %}
-            <h3>Art</h3>
+            <h3class="writing_subsection">Art</h3>
             {% for post in site.categories.art %}  
                 {% include _post_title.html %}
             {% endfor %}
-            <h3>Life</h3>
+            <h3 class="writing_subsection">Life</h3>
             {% for post in site.categories.life %}  
                 {% include _post_title.html %}
             {% endfor %}
@@ -65,7 +65,7 @@ excerpt: "Quasi-essays on an assortment of topics"
             {% for post in site.categories.writing %}  
                 {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
                 {% if year != written_year %}
-                    <h3>{{ year }}</h3>
+                    <h3 class="writing_subsection">{{ year }}</h3>
                 {% endif %}
                 {% capture written_year %}{{ year }}{% endcapture %}
                 {% include _post_title.html %}
