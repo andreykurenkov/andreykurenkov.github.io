@@ -23,8 +23,8 @@ kramdown:
   
 flickr:
   screen_name: You
-  api_key: 292871327f3933bc71655853f191d2f5
-  api_secret: 77d5fed0798c2fa3
+  api_key: 0bf2bfeccdaa58f2e650dabd190d9c1a
+  api_secret: 53949e12d158e9e6
   cache_dir: _flickr
   use_cache: true
 
