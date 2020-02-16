@@ -4,7 +4,7 @@ title: Lessons Learned from my Struggles in Grad School (so far)
 tags: [life]
 category: life
 author: andrey_kurenkov
-excerpt: "Things learned the hard way, conveyed here so hopefully you can learn it the easy way."
+excerpt: "Things learned the hard way, conveyed here so hopefully you can learn them the easy way."
 ---
 {% figure %}
 [<img class="postimageactual"  src="/writing/images/2020-02-16-lessons-learned-from-failures/failures.png" alt="Timeline"/>](/writing/images/2020-02-16-lessons-learned-from-failures/failures.png)
