@@ -4,13 +4,105 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://www.andreykurenkov.com/feed.xml" />
 <link rel="alternate" type="text/html" href="http://www.andreykurenkov.com" />
-<updated>2020-01-19T02:20:17-08:00</updated>
+<updated>2020-02-16T12:05:16-08:00</updated>
 <id>/</id>
 <author>
   <name>Andrey Kurenkov</name>
   <uri>/</uri>
   <email>contact@andreykurenkov.com</email>
 </author>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[Lessons Learned from my Struggles in Grad School (so far)]]></title>
+  <link rel="alternate" type="text/html" href="http://www.andreykurenkov.com/writing/life/lessons-learned-from-failures/" />
+  <id>/writing/life/lessons-learned-from-failures</id>
+  <published>2020-02-16T00:00:00-08:00</published>
+  <updated>2020-02-16T00:00:00-08:00</updated>
+  <author>
+    <name></name>
+    <uri>www.andreykurenkov.com</uri>
+    <email>contact@andreykurenkov.com</email>
+  </author>
+  <content type="html">
+    &lt;figure class=&quot;figure&quot;&gt;&lt;div class=&quot;figure__main&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;/writing/images/2020-02-16-lessons-learned-from-failures/failures.png&quot;&gt;&lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2020-02-16-lessons-learned-from-failures/failures.png&quot; alt=&quot;Timeline&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Success is the ability to go from failure to failure without losing your enthusiasm.” —Winston Churchill&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Failure is only the opportunity to begin again, only this time more wisely.” —Henry Ford&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“If we knew what we were doing, we wouldn’t call it research.” —Albert Einstein&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Struggle, failure, and sometimes feeling out of your depth are all inherently part of the PhD experience. These are often also accompanied by &lt;a href=&quot;https://www.ascb.org/careers/frauds-managing-imposter-syndrome-grad-school/&quot;&gt;impostor syndrome&lt;/a&gt;, or the feeling of being inferior to those around you and a ‘fraud’. Something I find odd is that the existence of impostor syndrome is common knowledge by now, and yet just knowing of it is not enough to avoid succumbing to it. Likewise, knowing that facing failure is a universal trait of succesful people (as indicated by the quotes above) does not automatically make doing so yourself easy.&lt;/p&gt;
+
+&lt;p&gt;So, with a few years of grad school and many failures now behind me, I decided it would be nice to try and help some of my fellow students with these things. But given reiterating things we already know seems ineffective, I decided to take a different tact: just put my record of failures out there, so others facing similar struggles can objectively know they are at least no more an impostor than I am. And so I did, with the following video:&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/uxYpJ5mMKx0&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;
+This post is an addendum to that, summarizing the main non-obvious lessons I took away from these failures:&lt;/p&gt;
+
+&lt;h2 id=&quot;test-your-ideas-as-quickly-and-simply-as-possible&quot;&gt;1. Test your ideas as quickly and simply as possible&lt;/h2&gt;
+
+&lt;p&gt;Research involves a lot of debugging and trying to pinpoint why things are working (is your code buggy, or is the idea itself wrong). One  easy to agree with but hard to internalize practice is to construct contrived scenarios in which you know your idea should work, so that you can ensure the code is not a problem. In other words, construct &lt;a href=&quot;https://en.wikipedia.org/wiki/Sanity_check&quot;&gt;sanity checks&lt;/a&gt;, such as for instance if you are working on object recognition, start with a synthetic dataset of simple geometric shapes that simply has to work.&lt;/p&gt;
+
+&lt;p&gt;With my first project at Stanford, I did not realize to do this until after testing my code on the real task, and starting with the sanity check instead might have saved a good deal of time. This has been an essential go-to practice for me in every project since.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot; style=&quot;margin:auto;&quot;&gt;Neat thing from a while back: visualization of an RL agent&amp;#39;s policy globally (in many states) while doing rollout.&lt;br /&gt;&lt;br /&gt;Would be cool to see more like it, since shows if the agent is optimal or not and how much it generalized.&lt;br /&gt;&lt;br /&gt;Should be fairly doable in Atari or 3D robotics envs... &lt;a href=&quot;https://t.co/sD70b6ydJJ&quot;&gt;pic.twitter.com/sD70b6ydJJ&lt;/a&gt;&lt;/p&gt;&amp;mdash; Andrey Kurenkov 🤖 (@andrey_kurenkov) &lt;a href=&quot;https://twitter.com/andrey_kurenkov/status/1227099590131716098?ref_src=twsrc%5Etfw&quot;&gt;February 11, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt; 
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;if-things-arent-working-for-a-while-pivot&quot;&gt;2. If things aren’t working (for a while), pivot&lt;/h2&gt;
+
+&lt;p&gt;One of the basic frustrating things with research is that perseverance is essential, but so is recognizing that something is not going to work and rethinking your approach. So, which should you do when you idea is not working, persevere or pivot? Both – persevere for a while, try to see more clearly why things are not working and whether they might work, and move on if they don’t.&lt;/p&gt;
+
+&lt;p&gt;But moving on need not result in losing all the wrong you’ve just done. Hopefully, you had good reason to believe your idea was good in the first place, and it not working can yield a different but related direction to explore. This was the case for me with my second scrapped project; the next major research project I did was directly inspired from the struggles of that scrapped project. Likewise, the project I am currently focused on acquired its focus only after months of things not working.&lt;/p&gt;
+
+&lt;p&gt;So, keep an eye out for the insights to be found in failure.&lt;/p&gt;
+
+&lt;h2 id=&quot;focus-on-one-or-two-big-things-at-a-time&quot;&gt;3. Focus on one or two big things at a time&lt;/h2&gt;
+
+&lt;p&gt;One of my weaknesses as a grad student is a tendency to want to multi task and take on many side projects (as evidenced by the above youtube video and the text you are reading now). Some amount of exploration and side projects are of course not bad – personally I think more AI researchers should engage in science communication – but it’s easy to overdo it. In particular, at least as a junior PhD student having more than two research projects going at a time (importantly, with one in the implementation phase and one more in the ideation phase) is a good recipe for at least one of those projects dying off.&lt;/p&gt;
+
+&lt;p&gt;A related notion is ‘ideas are cheap, execution is everything’. That is to say, ideas are not worth much without execution to hone and actuate them (of course, advisors not directly writing code but suggesting ideas and being in the loop of execution is still invaluable). This is important to remember when you have a cool new idea and are tempted to get efforts on it going despite already having some projects in flight; if you don’t have the bandwidth to execute the idea the best thing is to wait.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Legitimately one of the best insights I&amp;#39;ve internalized after years of doing research is the old classic - &amp;quot;ideas are cheap, execution is everything&amp;quot; [not quite everything, we still need cool ideas, but y&amp;#39;know] &lt;a href=&quot;https://t.co/9JK5tDhCKw&quot;&gt;https://t.co/9JK5tDhCKw&lt;/a&gt;&lt;/p&gt;&amp;mdash; Andrey Kurenkov 🤖 (@andrey_kurenkov) &lt;a href=&quot;https://twitter.com/andrey_kurenkov/status/1222930287111233536?ref_src=twsrc%5Etfw&quot;&gt;January 30, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;My suggestion to people who like side projects and multi tasking, like me: learn and embrace patience. The ideas that really excite will stick with you, and if you are patient there will come a time when it is strategically smart to go ahead and execute them.&lt;/p&gt;
+
+&lt;h2 id=&quot;find-a-good-team-and-be-a-good-team-player&quot;&gt;4. Find a good team, and be a good team player&lt;/h2&gt;
+
+&lt;p&gt;I intentionally avoided focusing on my successes in grad school in the above video, but thankfully I have had a few of those too. And every time I have succeeded, it was because I had great mentors and fellow PhD students working with me on whatever we were doing, and the success was really not my own but the team’s.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, such a team dynamic does not necessarily come about by itself; research can sometimes be a lonely endeavour, with you toiling away primarily by yourself with occasional feedback. For a largely applied discipline with a lot of implementation effort (such as AI), I really don’t think working in such a mode is ideal. So, if you do find yourself in such a spot, proactively trying to find people to work with might be a good idea. Personally, I’ve found working with both post-docs (who can be more hands-on than most advisors) and one or two fellow grad students (who can get their hands dirty alongside you) to be very helpful.&lt;/p&gt;
+
+&lt;p&gt;But even if you find people to work with, that does not mean things will be easier automatically. Effective teamwork is a tricky thing (so much so that I wrote up &lt;a href=&quot;http://www.andreykurenkov.com/writing/project/effective-teamwork/&quot;&gt;a little summary&lt;/a&gt; of the main things to do and not do), and it’s up to you to be mindful of how things are in terms of team dynamics. For the last few times that I put significant amounts of work into efforts that were in the end scrapped, I would say the main cause was me going at it too much by myself and not getting enough of a team consensus around one direction. So, remember to not be too much of a lone wolf and to be an effective communicator.&lt;/p&gt;
+
+&lt;h2 id=&quot;cultivate-relaxing-hobbies&quot;&gt;5. Cultivate relaxing hobbies&lt;/h2&gt;
+
+&lt;p&gt;No matter how much of a tough skin you have, research is not meant to be easy and sometimes things will get tough. Unfortunately, in grad school it’s all too easy to let yourself completely give up on work-life balance at such times and go full on tunnel vision mode. Sometimes going all in on research leading up to a deadline is not a bad idea, but you have to be cognizant of whether you have enough physical and emotional energy for it and at all costs avoid burn out. And the fact is, burn out, anxiety, and even depression are things you may have to face at some point.&lt;/p&gt;
+
+&lt;p&gt;So, it is all the more important to practice and get good at relaxing (weird as that may sound). Seriously, knowing yourself well enough to have good healthy ways of dealing with stress is &lt;strong&gt;essential&lt;/strong&gt; and often not praised enough. Personally, when I was dealing with clinical depression I leaned on a whole set of activities that kept me going: reading on my porch most evenings, watching a ton of fun anime, going to kickboxing classes, cooking, and where I was really down playing some really absorbing video games (Civ 5, I’m looking at you).&lt;/p&gt;
+
+&lt;p&gt;These days I am really big on napping, but i’m also a big believer in &lt;a href=&quot;https://youtu.be/7QyObECIZAE&quot;&gt;meditation&lt;/a&gt; and of course the benefits of excercise and a good support network cannot be overstated.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;So there you have it, my main lessons gathered so far. This is not all the advice I think is useful for taking on grad school, but it is the advice I had to learn the hard way and that I think is at least somewhat interesting. Feel free to comment with your own thoughts on this topic!&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;/writing/life/lessons-learned-from-failures/&quot;&gt;Lessons Learned from my Struggles in Grad School (so far)&lt;/a&gt; was originally published by Andrey Kurenkov at &lt;a href=&quot;&quot;&gt;Andrey Kurenkov's Web World&lt;/a&gt; on February 16, 2020.&lt;/p&gt;
+  </content>
+</entry>
 
 
   
@@ -51,27 +143,6 @@
     
 
     &lt;p&gt;&lt;a href=&quot;/writing/ai/best-practices/&quot;&gt;AI Coverage Best Practices, According to AI Researchers&lt;/a&gt; was originally published by Andrey Kurenkov at &lt;a href=&quot;&quot;&gt;Andrey Kurenkov's Web World&lt;/a&gt; on November 11, 2019.&lt;/p&gt;
-  </content>
-</entry>
-
-
-  
-
-<entry>
-  <title type="html"><![CDATA[AC-Teach: A Bayesian Actor-Critic Method for Policy Learning with an Ensemble of Suboptimal Teachers]]></title>
-  <link rel="alternate" type="text/html" href="http://www.andreykurenkov.com/publications/kurenkov-corl19-acteach/" />
-  <id>/publications/kurenkov-corl19-acteach</id>
-  <published>2019-10-30T00:00:00-07:00</published>
-  <updated>2019-10-30T00:00:00-07:00</updated>
-  <author>
-    <name>Andrey Kurenkov</name>
-    <uri>www.andreykurenkov.com</uri>
-    <email>contact@andreykurenkov.com</email>
-  </author>
-  <content type="html">
-    
-
-    &lt;p&gt;&lt;a href=&quot;/publications/kurenkov-corl19-acteach/&quot;&gt;AC-Teach: A Bayesian Actor-Critic Method for Policy Learning with an Ensemble of Suboptimal Teachers&lt;/a&gt; was originally published by Andrey Kurenkov at &lt;a href=&quot;&quot;&gt;Andrey Kurenkov's Web World&lt;/a&gt; on October 30, 2019.&lt;/p&gt;
   </content>
 </entry>
 
@@ -135,27 +206,6 @@
     
 
     &lt;p&gt;&lt;a href=&quot;/writing/ai/ai-job-loss/&quot;&gt;Job loss due to AI — How bad is it going to be?&lt;/a&gt; was originally published by Andrey Kurenkov at &lt;a href=&quot;&quot;&gt;Andrey Kurenkov's Web World&lt;/a&gt; on September 04, 2019.&lt;/p&gt;
-  </content>
-</entry>
-
-
-  
-
-<entry>
-  <title type="html"><![CDATA[Mechanical Search: Multi-Step Retrieval of a Target Object Occluded by Clutter]]></title>
-  <link rel="alternate" type="text/html" href="http://www.andreykurenkov.com/publications/kurenkov-icra19-mechsearch/" />
-  <id>/publications/kurenkov-icra19-mechsearch</id>
-  <published>2019-05-15T00:00:00-07:00</published>
-  <updated>2019-05-15T00:00:00-07:00</updated>
-  <author>
-    <name>Andrey Kurenkov</name>
-    <uri>www.andreykurenkov.com</uri>
-    <email>contact@andreykurenkov.com</email>
-  </author>
-  <content type="html">
-    
-
-    &lt;p&gt;&lt;a href=&quot;/publications/kurenkov-icra19-mechsearch/&quot;&gt;Mechanical Search: Multi-Step Retrieval of a Target Object Occluded by Clutter&lt;/a&gt; was originally published by Andrey Kurenkov at &lt;a href=&quot;&quot;&gt;Andrey Kurenkov's Web World&lt;/a&gt; on May 15, 2019.&lt;/p&gt;
   </content>
 </entry>
 
@@ -310,27 +360,6 @@
   
 
 <entry>
-  <title type="html"><![CDATA[Learning Task-Oriented Grasping for Tool Manipulation with Simulated Self-Supervision]]></title>
-  <link rel="alternate" type="text/html" href="http://www.andreykurenkov.com/publications/fang-rss18-tog/" />
-  <id>/publications/fang-rss18-tog</id>
-  <published>2018-06-26T00:00:00-07:00</published>
-  <updated>2018-06-26T00:00:00-07:00</updated>
-  <author>
-    <name>Andrey Kurenkov</name>
-    <uri>www.andreykurenkov.com</uri>
-    <email>contact@andreykurenkov.com</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;Tool manipulation is vital for facilitating robots to complete challenging task goals. It requires reasoning about the desired effect of the task and thus properly grasping and manipulating the tool to achieve the task. Task-agnostic grasping optimizes for grasp robustness while ignoring crucial task-specific constraints. In this paper, we propose the Task-Oriented Grasping Network (TOG-Net) to jointly optimize both task-oriented grasping of a tool and the manipulation policy for that tool. The training process of the model is based on large-scale simulated self-supervision with procedurally generated tool objects. We perform both simulated and real-world experiments on two tool-based manipulation tasks: sweeping and hammering. Our model achieves overall 71.1% task success rate for sweeping and 80.0% task success rate for hammering. Supplementary material is available at: bit.ly/task-oriented-grasp&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/publications/fang-rss18-tog/&quot;&gt;Learning Task-Oriented Grasping for Tool Manipulation with Simulated Self-Supervision&lt;/a&gt; was originally published by Andrey Kurenkov at &lt;a href=&quot;&quot;&gt;Andrey Kurenkov's Web World&lt;/a&gt; on June 26, 2018.&lt;/p&gt;
-  </content>
-</entry>
-
-
-  
-
-<entry>
   <title type="html"><![CDATA[The Gradient]]></title>
   <link rel="alternate" type="text/html" href="http://www.andreykurenkov.com/projects/team_projects/gradient/" />
   <id>/projects/team_projects/gradient</id>
@@ -444,6 +473,311 @@ led me to have some pretty strong beliefs about how effective teamwork ought to 
     
 
     &lt;p&gt;&lt;a href=&quot;/writing/ai/is-alphago-zero-overrated/&quot;&gt;AlphaGo Zero Is Not A Sign of Imminent Human-Level AI&lt;/a&gt; was originally published by Andrey Kurenkov at &lt;a href=&quot;&quot;&gt;Andrey Kurenkov's Web World&lt;/a&gt; on March 30, 2018.&lt;/p&gt;
+  </content>
+</entry>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[AI Wiki]]></title>
+  <link rel="alternate" type="text/html" href="http://www.andreykurenkov.com/projects/major_projects/aiwiki/" />
+  <id>/projects/major_projects/aiwiki</id>
+  <published>2018-03-15T00:00:00-07:00</published>
+  <updated>2018-03-15T00:00:00-07:00</updated>
+  <author>
+    <name></name>
+    <uri>www.andreykurenkov.com</uri>
+    <email>contact@andreykurenkov.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;I had it live on aiwiki.com for a while , as you can see on the screenshots. Used AWS for it.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/projects/major_projects/aiwiki/&quot;&gt;AI Wiki&lt;/a&gt; was originally published by Andrey Kurenkov at &lt;a href=&quot;&quot;&gt;Andrey Kurenkov's Web World&lt;/a&gt; on March 15, 2018.&lt;/p&gt;
+  </content>
+</entry>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[The 2018 Best Picture Nominees Ranked, Reviewed, and Reflected Upon]]></title>
+  <link rel="alternate" type="text/html" href="http://www.andreykurenkov.com/writing/art/oscar-noms-reviewed/" />
+  <id>/writing/art/oscar-noms-reviewed</id>
+  <published>2018-03-03T00:00:00-08:00</published>
+  <updated>2018-03-03T00:00:00-08:00</updated>
+  <author>
+    <name>Andrey Kurenkov</name>
+    <uri>www.andreykurenkov.com</uri>
+    <email>contact@andreykurenkov.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
+&lt;p&gt;When the 2018 Oscar best picture nominees were released, I realized I had already seen most of them before they were known to be the nominees purely because I was excited for them as works of art. Then, just for fun, I endeavored to watch the rest and cataloged my personal &lt;a href=&quot;https://letterboxd.com/andreykurenkov/list/oscars-best-picture-2018-my-faves/&quot;&gt;preferences&lt;/a&gt;. But then I realized I could do more. I had reviews and further thoughts on most of these films, and could write up a whole big summary - what you are reading now! So without further ado, ordered from least to most liked for the sake of ending on the most positive note, reviews and thoughts on all the best pictures nominees:&lt;/p&gt;
+
+&lt;h1 id=&quot;darkest-hour&quot;&gt;Darkest Hour&lt;/h1&gt;
+&lt;figure class=&quot;figure&quot;&gt;&lt;div class=&quot;figure__main&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;/writing/images/2018-03-03-oscar-noms-reviewed/darkest.jpg&quot;&gt;&lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2018-03-03-oscar-noms-reviewed/darkest.jpg&quot; alt=&quot;Poster&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;viewing-date-020318&quot;&gt;Viewing Date: 02/03/18&lt;/h2&gt;
+
+&lt;h2 id=&quot;original-score-355&quot;&gt;Original Score: 3.5/5&lt;/h2&gt;
+
+&lt;h2 id=&quot;original-review&quot;&gt;Original Review:&lt;/h2&gt;
+&lt;p&gt;A showy movie of romance and splendor - too much romance and splendor, in fact. Especially in its first half, the loud soundtrack, fancy panning/zooming/flying shots, and weird bouts of humor all add up to annoy and exhaust rather than highlight the excellent central performance. This improves in the second half, with show-off shots that are quite nice and serve to highlight the peril Churchill stands in. But, then the romantic bit cuts in and ruins that improvement with a bastardized version of history that does not seem realistic and &lt;a href=&quot;http://time.com/5183140/gary-oldman-winston-churchill-true-history/&quot;&gt;indeed is utterly false&lt;/a&gt;. Still, the movie looks great, Oldman crafts a compelling portrayal, and overindulgence combined with a liberal interpretation of history are at least a far lesser sin than being boring or shallow.&lt;/p&gt;
+
+&lt;h2 id=&quot;current-score-355&quot;&gt;Current Score: 3.5/5&lt;/h2&gt;
+
+&lt;h2 id=&quot;thoughts&quot;&gt;Thoughts:&lt;/h2&gt;
+&lt;p&gt;The only movie among all of these I would not call great. This is an unusual case of a movie on which I am split, as I can find both great and not so great elements within it. Sadly, great plus not so great equals not so great.&lt;/p&gt;
+
+&lt;p&gt;As with the rest of these, my perspective on it has been affected a good deal by external listening and reading, in this case &lt;a href=&quot;http://www.theqandapodcast.com/2017/12/darkest-hour-anthony-mccarten-q.html&quot;&gt;The Q&amp;amp;A with Jeff Goldsmith&lt;/a&gt; which reveals many interesting tidbits such as:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The linked interview is with the screenwriter Anthony McCarten, who has previously written The Theory of Everything. My impression of the critical response to that one was that a sort-of schmaltzy Oscar bait flick, which is a broadly correct characterization of this movie as well.&lt;/li&gt;
+  &lt;li&gt;The movie’s chief theme is the power of words, but the case of Churchill hardly seems like a good case for that; many figures (MLK Jr. comes to mind) have made far far more impactful speeches than the ones shown the film.&lt;/li&gt;
+  &lt;li&gt;There is also a focus on the wisdom of having uncertainty as a leader, but once more I don’t think Churchill and Dunkirk are the best possible frames to tell that story.&lt;/li&gt;
+  &lt;li&gt;Gary Oldman, who gives a memorable performance despite looking nothing like Churchill, had to go through three and a half hours of makeup each day to be able to look like the portly old Winston. Though it certainly is a good portrayal, it seems a bit overkill given that the movie’s showy direction ultimately overshadows the acting and plenty of fine actors who look more like Churchill could have done a fine job as well…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;the-post&quot;&gt;The Post&lt;/h1&gt;
+&lt;figure class=&quot;figure&quot;&gt;&lt;div class=&quot;figure__main&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;/writing/images/2018-03-03-oscar-noms-reviewed/post.jpg&quot;&gt;&lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2018-03-03-oscar-noms-reviewed/post.jpg&quot; alt=&quot;Poster&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;viewing-date-250218&quot;&gt;Viewing Date: 25/02/18&lt;/h2&gt;
+
+&lt;h2 id=&quot;original-score-455&quot;&gt;Original Score: 4.5/5&lt;/h2&gt;
+
+&lt;h2 id=&quot;original-review-1&quot;&gt;Original Review:&lt;/h2&gt;
+&lt;p&gt;A timely and smart allegory for the importance of a free press and the pervasiveness of sexism in the 1970s (and rather obviously, in the present). Strikes just the right balance of gripping-character-driven story and not-at-all-subtle social critique, and Spielberg is as good as ever at the basic craft of cinema. Hanks is a little predictable if solid, but Meryl Streep absolutely owns the role and makes the character come alive. Plenty of critics will just dismiss this as forgettable awards fluff, but when watched without cynicism it’s clear this is an excellently made, thoroughly enjoyable, and unusually intelligent film.&lt;/p&gt;
+
+&lt;h2 id=&quot;current-score-455&quot;&gt;Current Score: 4.5/5&lt;/h2&gt;
+
+&lt;h2 id=&quot;thoughts-1&quot;&gt;Thoughts:&lt;/h2&gt;
+&lt;p&gt;I have seen this one recently, and unlike Darkest Hour I don’t think it is schmaltzy Oscat-bait at all despite looking like it might be. Spielberg smartly made it a lean and direct message-movie, and its direct address of the importance of the press and &lt;a href=&quot;https://youtu.be/45r_klAYPbw?t=2m7s&quot;&gt;the reality of sexism in society&lt;/a&gt; is still as relevant as it was in the 1970s. And again, Meryl Streep is just so sublime, the movie is worth seeing for that alone. I leave you with a fantastic interview that delves into the impressive real life figure Streep portrayed so well:&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/M56VRfUSqkA&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;get-out&quot;&gt;Get Out&lt;/h1&gt;
+&lt;figure class=&quot;figure&quot;&gt;&lt;div class=&quot;figure__main&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;/writing/images/2018-03-03-oscar-noms-reviewed/get_out.jpg&quot;&gt;&lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2018-03-03-oscar-noms-reviewed/get_out.jpg&quot; alt=&quot;Poster&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;viewing-date-210118&quot;&gt;Viewing Date: 21/01/18&lt;/h2&gt;
+
+&lt;h2 id=&quot;original-score-45&quot;&gt;Original Score: 4/5&lt;/h2&gt;
+
+&lt;h2 id=&quot;original-review-2&quot;&gt;Original Review:&lt;/h2&gt;
+&lt;p&gt;A clever, effective, and timely satire horror comedy.&lt;/p&gt;
+
+&lt;h2 id=&quot;current-score-455-1&quot;&gt;Current Score: 4.5/5&lt;/h2&gt;
+
+&lt;h2 id=&quot;thoughts-2&quot;&gt;Thoughts:&lt;/h2&gt;
+&lt;p&gt;One of the multiple movies among these for which my esteem has only grown. As with others, listening to conversations with its makers played an important role in evolving my view of it. In particular, the &lt;a href=&quot;http://www.theqandapodcast.com/2017/02/jordan-peele-get-out-q.html&quot;&gt;Q&amp;amp;A with Jeff Goldsmith interview with the writer and director Jordan Peele&lt;/a&gt; revealed many suble and smart aspects:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Grounding the film’s horror in a universal experience (meeting a significant other’s parents) made it relatable for all viewers.&lt;/li&gt;
+  &lt;li&gt;Peele has had the idea for many years, and he decided to collaborate with Blumhouse Productions because they encouraged him to have full creative control and craft it in accordance with his vision. This has resulted in one of the most original and timely movies of the year.&lt;/li&gt;
+  &lt;li&gt;There is more subtle symbolism and implied detail than I realized while watching the film, which not typically true of such audience pleasers/crowd favorites.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Additionally, others have done an excellent job aspousing how smart the movie actually is:&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Jdd0JF79q4I&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/AJLHsXw-LFI&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;lady-bird&quot;&gt;Lady Bird&lt;/h1&gt;
+&lt;figure class=&quot;figure&quot;&gt;&lt;div class=&quot;figure__main&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;/writing/images/2018-03-03-oscar-noms-reviewed/lady_bird.jpg&quot;&gt;&lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2018-03-03-oscar-noms-reviewed/lady_bird.jpg&quot; alt=&quot;Poster&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;viewing-date-181117&quot;&gt;Viewing Date: 18/11/17&lt;/h2&gt;
+
+&lt;h2 id=&quot;original-score-455-1&quot;&gt;Original Score: 4.5/5&lt;/h2&gt;
+
+&lt;h2 id=&quot;original-review-3&quot;&gt;Original Review:&lt;/h2&gt;
+&lt;p&gt;A great coming-of-age movie with fantastic acting, editing, writing, and… just about everything. A few bits of dialogue feel a bit too clever for their own good, and having a few scenes go slower might’ve been good, but the strength of the central performance and so many individual memorable moments alone make this utterly worth watching.&lt;/p&gt;
+
+&lt;h2 id=&quot;current-score-45&quot;&gt;Current Score: 4/5&lt;/h2&gt;
+
+&lt;h2 id=&quot;thoughts-3&quot;&gt;Thoughts:&lt;/h2&gt;
+&lt;p&gt;A rare film for which my esteem has somewhat dropped. Some of the writing just feels too clever for its own good (like the ‘my mother made one mistake’ scene notably highlighted in the trailer), and like its protagonist the movie feels like its trying hard to be cool and smart but is not being vulnerable and honest in the process. Still, a fantastic growing of age movie, in particular because of the brilliance of lead actress Saoirse Ronan and writer/director Greta Gerwig - definitely some of the most exciting young talents in film today.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/iODwgFDvdC0&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;phantom-thread&quot;&gt;Phantom Thread&lt;/h1&gt;
+&lt;figure class=&quot;figure&quot;&gt;&lt;div class=&quot;figure__main&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;/writing/images/2018-03-03-oscar-noms-reviewed/phantom_thread.jpg&quot;&gt;&lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2018-03-03-oscar-noms-reviewed/phantom_thread.jpg&quot; alt=&quot;Poster&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;viewing-date-030218&quot;&gt;Viewing Date: 03/02/18&lt;/h2&gt;
+
+&lt;h2 id=&quot;original-score-455-2&quot;&gt;Original Score: 4.5/5&lt;/h2&gt;
+
+&lt;h2 id=&quot;original-review-4&quot;&gt;Original Review:&lt;/h2&gt;
+&lt;p&gt;A surprisingly sly, perverse, and darkly funny period romance. Exquisitely staged, exquisitely acted, exquisitely directed… exquisite.&lt;/p&gt;
+
+&lt;h2 id=&quot;current-score-55&quot;&gt;Current Score: 5/5&lt;/h2&gt;
+
+&lt;h2 id=&quot;thoughts-4&quot;&gt;Thoughts:&lt;/h2&gt;
+&lt;p&gt;And now we get to the set of movies I unabashedly love! Once again my appreciation has grown due to &lt;a href=&quot;http://www.bbc.co.uk/programmes/b09pn8pl&quot;&gt;BBC Film Programme&lt;/a&gt; interview:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The key inspiration for the movie, the writer director Paul Thomas Anderson
+being sick and taken care of by his wife, is unusual and unexpected. He gets at aspects of romance and relationships not often explored, which is impressive.&lt;/li&gt;
+  &lt;li&gt;As the interviewer notes, on a second viewing it’s much easier to see the film as being utterly comedic rather than serious and dramatic like the director’s other work. I have been describing this as a ‘sly, intelligent, dark romantic comedy’ to friends, and it is refreshing to see such a non-formulatic romantic comedy.&lt;/li&gt;
+  &lt;li&gt;Another unexpected aspect is the richness of the female characters, who may be more fully three dimensional than Daniel Day Lewsis’s excellently portrayed male character. As Anderson says in his interview:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Daniel is front and center because he is Daniel… I think Audiences go in with expectation this is Daniel’s film, but in fact he is support for the girls who are our protags.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;shape-of-water&quot;&gt;Shape of Water&lt;/h1&gt;
+&lt;figure class=&quot;figure&quot;&gt;&lt;div class=&quot;figure__main&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;/writing/images/2018-03-03-oscar-noms-reviewed/shape_of_water.jpg&quot;&gt;&lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2018-03-03-oscar-noms-reviewed/shape_of_water.jpg&quot; alt=&quot;Poster&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;viewing-date-091217&quot;&gt;Viewing Date: 09/12/17&lt;/h2&gt;
+
+&lt;h2 id=&quot;original-score-455-3&quot;&gt;Original Score: 4.5/5&lt;/h2&gt;
+
+&lt;h2 id=&quot;original-review-5&quot;&gt;Original Review:&lt;/h2&gt;
+&lt;p&gt;Like the fantastical creature at its core, The Shape of Water is beautiful, strange, and exquisitely crafted.&lt;/p&gt;
+
+&lt;h2 id=&quot;current-score-45-1&quot;&gt;Current Score: 4/5&lt;/h2&gt;
+
+&lt;h2 id=&quot;thoughts-5&quot;&gt;Thoughts:&lt;/h2&gt;
+&lt;p&gt;While watching the movie, I was struck by how unabashedly and unreservedly beautiful it was. So I was glad to hear that was Guillermo del Toro’s intent; as stated on the &lt;a href=&quot;http://www.bbc.co.uk/programmes/b09qhbt8&quot;&gt;BBC Film Programme&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“The overwhelming reaction is the same overwhelming reason why I wanted to make it, which is, can you please show me something beautiful, can you please show me something life affirming, can you please take me out of the news, right now…”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;That being said, it is also one of the few movies I consider great for which my esteem has lessened. A big part of the reason is the lengthy discussion on &lt;a href=&quot;https://megaphone.link/PPY7532927140&quot;&gt;the Next Picture Show podcast&lt;/a&gt;, in which most of the participants felt tepid about the film. I agree with their perspective that the movie feels a little artificial in all its beauty, and that going as far as it does in portraying the romance explicitly undercuts it somewhat. Still, this is a rare simple allegory of sensual delights that is definitely worth seeing.&lt;/p&gt;
+
+&lt;h1 id=&quot;dunkirk&quot;&gt;Dunkirk&lt;/h1&gt;
+&lt;figure class=&quot;figure&quot;&gt;&lt;div class=&quot;figure__main&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;/writing/images/2018-03-03-oscar-noms-reviewed/dunkirk.jpg&quot;&gt;&lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2018-03-03-oscar-noms-reviewed/dunkirk.jpg&quot; alt=&quot;Poster&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;viewing-date-230717&quot;&gt;Viewing Date: 23/07/17&lt;/h2&gt;
+
+&lt;h2 id=&quot;original-score-45-1&quot;&gt;Original Score: 4/5&lt;/h2&gt;
+
+&lt;h2 id=&quot;original-review-6&quot;&gt;Original Review:&lt;/h2&gt;
+&lt;p&gt;Visceral. Unlike Nolan’s many other neat-idea or plot-puzzle movies, this one is made with the obvious intent of making you feel an experience to your bones. But, some of Nolan’s fondness for fancy intellectually fun structure is here - there is no conventional 3 act structure or protagonist with an arc and instead an ensemble cast going through overlapping but temporally offset narratives that come together by the end. Yet more daringly, the ensemble story has minimalist character development and plot, which leaves it free to almost entirely avoid exposition and fully immerse you in the characters’ dreaded pulse-pounding experiences. And does it ever do that - especially in the perfect-for-this-film IMAX, it’s great big stark melancholy colored images, seemingly never stopping soundtrack, and clearly big budget production all work to grab you and not let you go til the movie is over and you can cry along with the soldiers at the plane sight of English greenery.&lt;/p&gt;
+
+&lt;p&gt;This all is great and for the most part executed beautifully, except that  I am not sure if the 3 narrative threads really work well together, and by the end the cross-cutting between narrative threads gets overdone and lessens the impact of the ending a good deal. And, after that ending there is just not a whole lot to think back on or relate to; it’s a hell of a ride, but not much more. It made me think back to Gravity, which is likewise a non-stop visceral tale of survival, but one that I think managed to still have a resonant theme and message. But damn, is this one of a hell of a ride.&lt;/p&gt;
+
+&lt;h2 id=&quot;current-score-455-2&quot;&gt;Current Score: 4.5/5&lt;/h2&gt;
+
+&lt;h2 id=&quot;thoughts-6&quot;&gt;Thoughts:&lt;/h2&gt;
+&lt;p&gt;So many thoughts… as indicated in the review I was unsure of Nolan’s layered fancy structure was actually warranted, but I have since grown to appreciate it more. Once, much insight comes from an interview on the &lt;a href=&quot;http://www.bbc.co.uk/programmes/b08y26qr&quot;&gt;BBC Film Programme&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The movie is discussed as ‘The most expensive experimental film in cinema history’, which feels quite right. Just the audacity to do something so intricate and out there in a big budget movie earns a lot of respect from me.&lt;/li&gt;
+  &lt;li&gt;The idea of the structure came before writing the script, which makes sense; the script is utterly&lt;/li&gt;
+  &lt;li&gt;Nolan describes the movie as being ‘Intensively subjective’, and justifies the structure by its ability to get across the bigger picture of the Dunkirk event while also staying extremely close to the boots-on-the-ground soldiers. He has a nice line of not having wanted to cut to a room of general discussing the situation, and indeed he does not, and the movie is far far stronger for it.&lt;/li&gt;
+  &lt;li&gt;With regard to the experimentation of the film, Nolan says that he wants to work at the ‘Edge of what mainstream audience can get enlivened by’ and feels that audiences that don’t treat movies like puzzles but rather just let ‘the experience of the movie wash over them’ will enjoy them most. I feel that Nolan’s movies are far too often treated as puzzles, and liked his perspective on this a lot.&lt;/li&gt;
+  &lt;li&gt;Nolan commented that cinema has unique ability to manipulate perception of time, and that his intent pull with this film was to ‘pull that part of machinery out’ and have an ‘explicit discussion with the audience’ rather letting it be subliminal as in most movies.&lt;/li&gt;
+  &lt;li&gt;What I appreciated most, and still appreciate most, about the film is its ability to make me feel like I was there. It was evident this was not accidental * Nolan discusses at length of how he wanted to make it feel as real as possible  by setting things in real physical spaces, and by leveraging the grammar of suspense ‘present tense narrative’. That is, he focused on just showing the character in a given situation without extra dramatization or characterization; such daring minimalism is rare and was incredibly successful here.&lt;/li&gt;
+  &lt;li&gt;A last interesting tidbit is that early in the music composition, Nolan sent the composer a recording of a pocket watch. Unlike most movies, which add music after the movie is made, composition was done from very early on so that the ‘score could be fused with picture and sound effects early on’. This worked fantastically well - as Nolan says, there is a ‘physical fusion of picture and music and sound effects unlike anything else’. The music is ‘objective’; just the screenplay is stripped of all unnecessary dialogue (all conversation except that which is needed to survive), the music is stripped of all unnecessary emotion and is meant to convey the experience of the preset moment.  But the intelligence and the brilliance of the score goes even beyond that, as highlighted in this video:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/LVWTQcZbLgY&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;call-me-by-your-name&quot;&gt;Call Me By Your Name&lt;/h1&gt;
+&lt;figure class=&quot;figure&quot;&gt;&lt;div class=&quot;figure__main&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;/writing/images/2018-03-03-oscar-noms-reviewed/name.jpg&quot;&gt;&lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2018-03-03-oscar-noms-reviewed/name.jpg&quot; alt=&quot;Poster&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;viewing-date-210118-1&quot;&gt;Viewing Date: 21/01/18&lt;/h2&gt;
+
+&lt;h2 id=&quot;original-score-55&quot;&gt;Original Score: 5/5&lt;/h2&gt;
+
+&lt;h2 id=&quot;original-review-7&quot;&gt;Original Review:&lt;/h2&gt;
+&lt;p&gt;Luscious, sensual, rapturous - perfectly captures the feeling of being young during a care free summer of discovery that is equal parts exciting and nerve wrecking. And it does so beautifully, artistically; there are so many close ups and frames in this movie that convey an endless depth of emotion and thought without a word being spoken. And it does so intelligently, thematically tying back to the greeks’ views on sensuality and love; unlike so much of recent 80-set media, this does not feel nostalgic - it feels timeless.&lt;/p&gt;
+
+&lt;p&gt;And the music! Sufjan Stevens is such a perfect fit for this, singing in his soft voice of the ‘Mystery of Love’. And the writing! Adapted by now 89-year old James Ivory, it feels wise and fully aware of the subtle unspeakable eternal truths of life. I credit Ivory too, with the unusual lack of tension over being found out as gay and the character’s fully supportive parts; as discussed &lt;a href=&quot;https://www.dailyemerald.com/2018/02/05/call-name-screenwriter-james-ivory-returns-uo-screening-qa/&quot;&gt; in an interview &lt;/a&gt;, this felt like a welcome change from more conventional cinema:&lt;/p&gt;
+
+&lt;blockquote cite=&quot;https://www.dailyemerald.com/2018/02/05/call-name-screenwriter-james-ivory-returns-uo-screening-qa/&quot;&gt;
+... it’s been very hard to find a gay film which was about happiness and joy and love,” Ivory said during the Q&amp;amp;A after the film.
+...
+The moderator of the event, cinema studies instructor Sergio Rigoletto, said that one of the revolutionary things about “Call Me By Your Name” is that it allows its gay characters to be in love without the impending threat of punishment. Sure, the fear of being found does live in the back of their minds, but their main reasons for not being able to be together are their age differences and the fact that Elio and Oliver only have six weeks of their summer together.
+&lt;/blockquote&gt;
+
+&lt;p&gt;So, the movie is joy, happiness, love. And the final shot! Watch this film, if only for the final conversation, and the final shot.&lt;/p&gt;
+
+&lt;p&gt;“I remember everything”&lt;/p&gt;
+
+&lt;h2 id=&quot;current-score-55-1&quot;&gt;Current Score: 5/5&lt;/h2&gt;
+
+&lt;h2 id=&quot;thoughts-7&quot;&gt;Thoughts:&lt;/h2&gt;
+&lt;p&gt;Well, my appreciation of this movie has certainly not lessened - everything that I said in that original review, I still feel. But as with Three Billboards, hearing interviews and watching videos has also deepened my appreciation of the movie. In particular, the lengthy and detailed interview of the director and co-author by Luca Guadagnino on the 
+&lt;a href=&quot;http://www.theqandapodcast.com/2017/12/call-me-by-your-name-q.html&quot;&gt;The Q&amp;amp;A with Jeff Goldsmith&lt;/a&gt; highlights many great elements:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The protagonist is very well portrayed as what he is - a 17 year old kid, a “mini bomb of different contradictions”. He has not come to think of himself as belonging to any group or label, and is appropriately excited and afraid of the desires he feels.&lt;/li&gt;
+  &lt;li&gt;The interview frankly discusses the issue of the age difference between the 17-year old protagonist and his 24-year old lover. For one the age of consent in Italy is 16, and for another this has been done before with such classics as  Dirty Dancing. But far more importantly, the movie does something many romantic movies without such an age difference do not: show direct and clear disclosure of one’s feelings, portray explicit and enthusiastic consent during sex, and linger on direct discussions over each person’s concerns and desires. And it does so while not losing any sense of romance, passion, or beauty - what a feat!&lt;/li&gt;
+  &lt;li&gt;The director would not change anything about the movie if here to do it over. And he is right! I would not want him to.&lt;/li&gt;
+  &lt;li&gt;Sufjan Stevens came into collaboration on the movie’s soundtrack after a large amount of narration was cut out from the original screenplay. Stevens’ songs are meant to act as a sort of third person narrator communicating the universality of the love story we are seeing, and I think that was done perfectly.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/KQT32vW61eI&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Lastly, what I’ve grown to appreciate even more than I did after just watching the movie is this element of portraying an utterly happy love story (even if it ends with separation, rather than marriage). As &lt;a href=&quot;https://youtu.be/5u2MAUPbFxo?t=2m45s&quot;&gt;stated perfectly by the book’s author in an interview of both him and the movie’s director&lt;/a&gt;,&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Both the novel and film do one thing that is so essential - there is no accident, there is no death, there is no banning of any sexual proclivity - these are two individuals who have a relationship, and I think it should serve as a model for essentially happy romance.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/eE01rqDJ13A&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;three-billboards-outside-ebbing-missouri&quot;&gt;Three Billboards Outside Ebbing, Missouri&lt;/h1&gt;
+&lt;figure class=&quot;figure&quot;&gt;&lt;div class=&quot;figure__main&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;/writing/images/2018-03-03-oscar-noms-reviewed/three_billboards.jpg&quot;&gt;&lt;img class=&quot;postimageactual&quot; src=&quot;/writing/images/2018-03-03-oscar-noms-reviewed/three_billboards.jpg&quot; alt=&quot;Poster&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;viewing-date-210118-2&quot;&gt;Viewing Date: 21/01/18&lt;/h2&gt;
+
+&lt;h2 id=&quot;original-score-455-4&quot;&gt;Original Score: 4.5/5&lt;/h2&gt;
+
+&lt;h2 id=&quot;original-review-8&quot;&gt;Original Review:&lt;/h2&gt;
+&lt;p&gt;Challenging, unexpected, dark, funny - a rare treat. Definitely worth seeing.&lt;/p&gt;
+
+&lt;h2 id=&quot;current-score-55-2&quot;&gt;Current Score: 5/5&lt;/h2&gt;
+
+&lt;h2 id=&quot;thoughts-8&quot;&gt;Thoughts:&lt;/h2&gt;
+&lt;p&gt;A rare movie for which my esteem has only grown, and in just one month.&lt;/p&gt;
+
+&lt;p&gt;I think what I appreciate so much about this film (and why I think it deserves to win best picture) is that it is far more challenging that any of the other films on here. As eloquently stated by the writer and director Martin McDonagh on &lt;a href=&quot;https://www.bbc.co.uk/programmes/b09l203n&quot;&gt;the BBC Film Programme&lt;/a&gt;, the core of the film is two characters going to war in which neither one is really the bad guy. It would be so easy to make the grieving mother the one to clearly root for and to portray the authorities as incapable and uncaring. But as &lt;a href=&quot;http://www.denofgeek.com/uk/movies/martin-mcdonagh/54436/martin-mcdonagh-interview-three-billboards-outside-ebbing-missouri&quot;&gt;McDonah says&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Even though she’s technically the hero of the piece she does things that are way out of order, indefensible. That’s part of why I really like her, the character and Frances’ playing of her, she’s really three dimensional and not somebody you could say is the perfect person at all. That’s good characterisation, I think, and makes it hopefully a film you can see more than once. It’s not a simple heroes against villains story.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The very simple and clear setup of this conflict - the titular three billboards - is also utterly inspired and immediately interesting. So it’s unsurprising that such a striking moment &lt;a href=&quot;http://www.denofgeek.com/uk/movies/martin-mcdonagh/54436/martin-mcdonagh-interview-three-billboards-outside-ebbing-missouri&quot;&gt;is actually drawn from the real world&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“I saw something on a bunch of billboards about twenty years ago which is almost identical to what we see on the first two billboards, they’re literally verbatim.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;There was some controversy and negative takes about this film, with regard to whether it ultimately redeemed the racist and violent police officer played by Sam Rockwell. I am sure this controversy will likely make this movie not receive the best picture, but I also just don’t agree with it at all. Like the non-perfection of the central character, the ‘redemption’ of Rockwell’s character is actually completely subverted in opposition to what would typically be done in Hollywood. The morally ambiguous and subversive ending is actually one of my favorite things about the movie, and I recommend it to anyone who is a fan of black comedy, complicated explorations of morality, and just great cinema.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/NbNNNCjm32M&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/writing/art/oscar-noms-reviewed/&quot;&gt;The 2018 Best Picture Nominees Ranked, Reviewed, and Reflected Upon&lt;/a&gt; was originally published by Andrey Kurenkov at &lt;a href=&quot;&quot;&gt;Andrey Kurenkov's Web World&lt;/a&gt; on March 03, 2018.&lt;/p&gt;
   </content>
 </entry>
 
