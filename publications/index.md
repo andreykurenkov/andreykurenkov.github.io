@@ -16,9 +16,9 @@ share: false
   {% capture written_year %}'None'{% endcapture %}
 
   {% for publication in site.data.publications %}  
-    {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+    {% capture year %}{{ publication.year }}{% endcapture %}
     {% if year != written_year %}
-      <h3>{{ year }}</h3>
+      <h3 style="padding-bottom:.1em">{{ year }}</h3>
     {% endif %}
     {% capture written_year %}{{ year }}{% endcapture %}
     {% include _publication_list_entry.html %}
