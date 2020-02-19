@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Lessons Learned from my Struggles in Grad School (so far)
+title: My Failures as a Grad Student at the Stanford AI Lab, and Lessons Learned (so far)
 tags: [life]
 category: life
 author: andrey_kurenkov
