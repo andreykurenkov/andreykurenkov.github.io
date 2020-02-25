@@ -2,7 +2,7 @@
 layout: post
 title: Exceptional People
 date: 2015-10-11T16:19:34-07:00
-tags: [philosophy,quasi-essay,life]
+tags: [philosophy,quasi-essay,life,poem]
 category: life
 status: published
 type: post
