@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>/writing/life/endings/</loc>
+<lastmod>2020-02-25T00:00:00-08:00</lastmod>
+</url>
+<url>
 <loc>/writing/life/lessons-learned-from-failures/</loc>
 <lastmod>2020-02-16T00:00:00-08:00</lastmod>
 </url>
@@ -374,6 +378,9 @@
 <loc>/writing/tag/life/</loc>
 </url>
 <url>
+<loc>/writing/tag/poem/</loc>
+</url>
+<url>
 <loc>/writing/tag/ai/</loc>
 </url>
 <url>
@@ -393,9 +400,6 @@
 </url>
 <url>
 <loc>/writing/tag/quasi-essay/</loc>
-</url>
-<url>
-<loc>/writing/tag/poem/</loc>
 </url>
 <url>
 <loc>/writing/tag/research/</loc>
