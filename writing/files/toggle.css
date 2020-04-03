@@ -1,15 +1,6 @@
 .form {
   margin: auto;
-  width: 150%;
-  margin-left:-20%;
-}
-
-#categorical {
-}
-
-#chronological {
-    position: absolute;
-    visibility: hidden;
+  text-align: center;
 }
 
 /*Setup look of toggle button*/
@@ -19,7 +10,7 @@
   margin: auto;
   width: 25%;
   padding: 1px;
-  margin-right: 41%;
+  min-width: 250px;
 }
 
 .switch-title {

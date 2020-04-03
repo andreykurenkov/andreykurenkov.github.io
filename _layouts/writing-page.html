@@ -25,15 +25,15 @@ extra_js: ["/writing/files/toggle.js"]
     {% capture written_year %}'None'{% endcapture %}
     {% if page.tag == "all" %}
         <form class="form" id="writingToggleForm">
-          <div class="switch-field" style="min-width: 250px;">
+          <div class="switch-field">
             <!--   <div class="switch-title">Display Type</div> -->
-            <input type="radio" id="switch_left" name="switch" value="yes" checked/>
+            <input type="radio" id="switch_left" name="switch" value="yes" data-st-contentid="#categorical" checked/>
             <label for="switch_left">Categorical</label>
-            <input type="radio" id="switch_right" name="switch" value="no" />
+            <input type="radio" id="switch_right" name="switch" value="no" data-st-contentid="#chronological"/>
             <label for="switch_right">Chronological</label>
           </div>
         </form>
-        <div id='categorical' style="display:none">
+        <div id='categorical'>
            <h3 class="writing_subsection">Highlights</h3>
             {% for post in site.categories.writing %}  
               {% if post.tags contains 'highlights' %}
