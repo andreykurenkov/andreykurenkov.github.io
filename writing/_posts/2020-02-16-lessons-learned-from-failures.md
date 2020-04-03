@@ -1,7 +1,7 @@
 ---
 layout: post
-title: My Failures as a Grad Student, and Lessons Learned (so far)
-tags: [life]
+title: Lessons Learned the Hard Way in Grad School (so far)
+tags: [life,highlights]
 category: life
 author: andrey_kurenkov
 excerpt: "Things learned the hard way, conveyed here so hopefully you can learn them the easy way."
@@ -16,13 +16,19 @@ excerpt: "Things learned the hard way, conveyed here so hopefully you can learn 
 
 > "If we knew what we were doing, we wouldn't call it research." —Albert Einstein 
 
+# Why I Wrote This
 Struggle, failure, and sometimes feeling out of your depth are all inherently part of the PhD experience. These are often also accompanied by [impostor syndrome](https://www.ascb.org/careers/frauds-managing-imposter-syndrome-grad-school/), or the feeling of being inferior to those around you and a 'fraud'. Something I find odd is that the existence of impostor syndrome is common knowledge by now, and yet just knowing of it is not enough to avoid succumbing to it. Likewise, knowing that facing failure is a universal trait of succesful people (as indicated by the quotes above) does not automatically make doing so yourself easy.
 
 So, with a few years of grad school and many failures now behind me, I decided it would be nice to try and help some of my fellow students with these things. But given reiterating things we already know seems ineffective, I decided to take a different tact: just put my record of failures out there, so others facing similar struggles can objectively know they are at least no more an impostor than I am. And so I did, with the following video:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uxYpJ5mMKx0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br/>
-This post is an addendum to that, summarizing the main non-obvious lessons I took away from these failures:
+This post is an addendum to that, summarizing the main non-obvious lessons I took away from these failures. You can either read the below text, or watch this follow up video in which I convey what is written in the text, or both:
+<br/>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YQC74cSgM1Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br/>
+
+# The Lessons
 
 ## 1. Test your ideas as quickly and simply as possible
 
@@ -34,7 +40,7 @@ With my first project at Stanford, I did not realize to do this until after test
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr" style="margin:auto;">Neat thing from a while back: visualization of an RL agent&#39;s policy globally (in many states) while doing rollout.<br><br>Would be cool to see more like it, since shows if the agent is optimal or not and how much it generalized.<br><br>Should be fairly doable in Atari or 3D robotics envs... <a href="https://t.co/sD70b6ydJJ">pic.twitter.com/sD70b6ydJJ</a></p>&mdash; Andrey Kurenkov 🤖 (@andrey_kurenkov) <a href="https://twitter.com/andrey_kurenkov/status/1227099590131716098?ref_src=twsrc%5Etfw">February 11, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 </figure>
 
-## 2. If things aren't working (for a while), pivot
+## 2. Persevere, but also pivot
 
 One of the basic frustrating things with research is that perseverance is essential, but so is recognizing that something is not going to work and rethinking your approach. So, which should you do when you idea is not working, persevere or pivot? Both -- persevere for a while, try to see more clearly why things are not working and whether they might work, and move on if they don't. 
 
@@ -60,7 +66,7 @@ Unfortunately, such a team dynamic does not necessarily come about by itself; re
 
 But even if you find people to work with, that does not mean things will be easier automatically. Effective teamwork is a tricky thing (so much so that I wrote up [a little summary](http://www.andreykurenkov.com/writing/project/effective-teamwork/) of the main things to do and not do), and it's up to you to be mindful of how things are in terms of team dynamics. For the last few times that I put significant amounts of work into efforts that were in the end scrapped, I would say the main cause was me going at it too much by myself and not getting enough of a team consensus around one direction. So, remember to not be too much of a lone wolf and to be an effective communicator.
 
-## 5. Cultivate relaxing hobbies
+## 5. Maintain Your Health
 
 No matter how much of a tough skin you have, research is not meant to be easy and sometimes things will get tough. Unfortunately, in grad school it's all too easy to let yourself completely give up on work-life balance at such times and go full on tunnel vision mode. Sometimes going all in on research leading up to a deadline is not a bad idea, but you have to be cognizant of whether you have enough physical and emotional energy for it and at all costs avoid burn out. And the fact is, burn out, anxiety, and even depression are things you may have to face at some point.
 

@@ -49,9 +49,10 @@ textarea {
 }
 label {
 	display: block;
-	margin-bottom: 10px / 8;
+	margin-bottom: 15px;
 	font-weight: bold;
 	color: $textcolor;
+	width: 50%;
 	cursor: pointer; 
 	input,
 	textarea,
@@ -163,6 +164,10 @@ input[type="hidden"] {
 	margin-left : 10px; 
 }
 
+#writingToggleForm {
+  margin-top: 15px;
+   min-width: 275px;
+}
 /* 
    Disabled state
    ========================================================================== */

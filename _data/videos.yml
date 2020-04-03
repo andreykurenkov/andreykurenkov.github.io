@@ -2,6 +2,10 @@ failures:
   name: All my Failures in Grad School (so far)
   id: uxYpJ5mMKx0
 
+lessons:
+  name: Lessons Learned the Hard Way in Grad School (so far)
+  id: YQC74cSgM1Q
+
 calm:
   name: Calm - the why & how of meditation
   id: 7QyObECIZAE
@@ -13,7 +17,3 @@ rss:
 lynch:
   name: David Lynch's Advice for Art and Life
   id: klcNZpiiXM8
-  
-231n:
-  name: A Stanford AI Class Poster Session
-  id: LKvEHsSNI0A

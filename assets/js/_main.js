@@ -1,17 +1,15 @@
 /*! Responsive Menu */
-// http://tympanus.net/codrops/2013/05/08/responsive-retina-ready-menu/
-//  The function to change the class
-var changeClass = function (r,className1,className2) {
-  var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
-  if( regex.test(r.className) ) {
-    r.className = r.className.replace(regex,' '+className2+' ');
-    }
-    else{
-    r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"),' '+className1+' ');
-    }
-    return r.className;
-};  
-
+// For categorical and chronological writing
+$(function() {
+    var currentDisplay = $(".page-content > div:visible");
+    document.querySelector("#writingToggleForm").addEventListener("change", function(event) {
+        console.log("Toggling writing display!");
+        currentDisplay.fadeToggle(function() {
+            currentDisplay = $(event.target.getAttribute("data-st-contentid"));
+            currentDisplay.fadeToggle();
+        });
+    });
+})
 /*! Plugin options and other jQuery stuff */
 
 // FitVids options
