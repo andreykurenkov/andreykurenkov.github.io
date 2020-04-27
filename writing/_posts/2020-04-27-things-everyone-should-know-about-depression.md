@@ -4,7 +4,7 @@ title: Things Everyone Should Know About Depression
 tags: [life]
 category: life
 author: andrey_kurenkov
-excerpt: "Facts About Depression Everyone Should be Aware Of, and Some Recommendations"
+excerpt: "Facts about depression everyone should be aware of, and some recommendations"
 ---
 
 Foreword -- this post is a lot to take in, so if you choose to not read it right now, I would recommend you at least watch this 4 minute video:
@@ -137,7 +137,9 @@ Third, try to reach out for help. First and foremost, try and confide in your cl
 
 Fourth, if there are external/environmental causes for your depression, do your best to remove them. For instance, if you are stressed by work, try and put it on pause. This too is likely not easy, but if it is doable it is definitely beneficial. At the very least, it's a good idea to have things to look forward to, such as a vacation or a trip to be with family. 
 
-Fifth, if things are getting really bad and seem to just be getting worse, try and make certain decisions ahead of time. As described above, your thinking and by extension your decisions 
+Fifth, if things are getting really bad and seem to just be getting worse, be cautious with making life altering decisions at this time. As described above, your thinking and by extension your decision making becomes distorted and therefore unreliable. I personally almost called of applying for PhD programs while depressed, and am very glad in hindsight that I did not. One thing that helps is to try and remember this notion of the "healthy you", and what that version of you would think of this course of action. Consulting with others is a great idea, as well. 
+
+Needless to say, this especially applies to any thoughts of self harm; if things are getting to the point of getting concerning, try and make ahead of time what you'll do when in a really tough place to survive it, such as calling the [National Suicide Prevention Lifeline](https://suicidepreventionlifeline.org/). One thing I found helpful was to just promise to myself that no matter how things got, no matter how many thoughts about it I had, I would not really consider or attempt suicide; to be honest, you may think about it a lot, but knowing that these are just thoughts and you don't truly consider that an option makes them more bearable.
 
 ## **How To Help Someone Who Has Depression**
 This one is tough, but boils down to the same one always needs to do to help someone: have compassion, care for them, and just be there. Beyond that, [many](https://www.healthline.com/health/how-to-help-a-depressed-friend#take-care-of-yourself) [lists](https://www.helpguide.org/articles/depression/helping-someone-with-depression.htm) out there provide good further recommendations. One thing I will personally emphasize is that you should try and be direct about asking if someone is doing well. If they seem to be having many of the symptoms of depression, don't hesitate to follow up a simple "how are you doing lately" with "are you sure things are alright? it's just that you seem more down than usual lately", or the like. 

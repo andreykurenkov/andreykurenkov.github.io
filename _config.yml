@@ -26,7 +26,7 @@ flickr:
   api_key: 0bf2bfeccdaa58f2e650dabd190d9c1a
   api_secret: 53949e12d158e9e6
   cache_dir: _flickr
-  use_cache: false
+  use_cache: true
 
 # Site owner
 owner:
