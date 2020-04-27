@@ -18,10 +18,13 @@ Foreword -- this post is a lot to take in, so if you choose to not read it right
 > "Overall, male university students exhibited low overall mental health, limited mental health knowledge, weak mental health beliefs, poor mental health attitudes, high self-stigma to seek help, significant impacts of help-seeking on self-confidence, and low intention to seek professional help. "  
 —[Mental health literacy, stigma, and help-seeking behaviors among male college students](https://www-tandfonline-com.stanford.idm.oclc.org/doi/full/10.1080/07448481.2018.1434780?journalCode=vach20)
 
+Help starts with understanding. Though false stereotypes about people with depression[^1] certainly persist, another important issue is that many people just don't know much about it. If your knowledge about depression amounts to "it's a mental health thing where you feel terrible, sometimes to the point of being suicidal, and there are a lot pills for it", you are not equipped to help yourself or others when faced with this disease. And yet, based on the above statistics it's clear that just about everyone needs to be ready to do just that.
+
 > "Based on data collected by the Centers for Disease Control and Prevention in 2007, approximately 25% of adults with mental illness believed that others are sympathetic toward patients diagnosed with these conditions."  
 —[Evaluation of perceptions and knowledge of mental illness in the United States through crowdsourcing](https://mhc.cpnp.org/doi/full/10.9740/mhc.2018.09.227?journalCode=mhcl)
 
-Help starts with understanding. Though false stereotypes about people with depression[^1] certainly persist, another important issue is that many people just don't know much about it. If your knowledge about depression amounts to "it's a mental health thing where you feel terrible, sometimes to the point of being suicidal, and there are a lot pills for it", you are not equipped to help yourself or others when faced with this disease. And yet, based on the above statistics it's clear that just about everyone needs to be ready to do just that.
+> "Mental health literacy seems to have a promising effect on care seeking. Individuals who better recognize their mental illness and its manifestations, as well as treatment options to address its varied impressions, might better avail themselves of those options (Jorm, 2012)."  
+—["The Impact of Mental Illness Stigma on Seeking and Participating in Mental Health Care"](http://journals.sagepub.com/stoken/rbtfl/dDpyhM2zRi.Fg/full)
 
 There are already many resources aimed at assisting with that, such as ["What People With Depression Wish You Knew"](https://www.webmd.com/depression/features/people-depression-wish-you-knew#1), ["7 Facts You Should Know About Depression"](https://www.verywellmind.com/depression-facts-you-should-know-1067617), and many more. Much of their content is focused on explaning what depression **is not** with statements such as "Depression Is More Than Ordinary Sadness" and "It’s a real disease", which is commendable but also results in them not discussing many aspects of what depression **is**. This is going to be the aim of this piece; more specifically, the intent is to make it easier for anyone to empathize and help others dealing with depression or to face it yourself[^3]. More concretly, I will address the following:
 
@@ -123,7 +126,7 @@ The obvious answer is that you should consult a mental health professional, if y
       <img class="postimagesmaller" src="/writing/images/2020-04-27-depression/depression_comics_future.jpg" alt="Depression Comix"/>
      <figcaption><a href="https://www.depressioncomix.com/posts/264"><b>Depression Comix, "To See A Future"</b></a></figcaption>
 </figure>
-
+ 
 ## **What To Do If You Think You Have Depression**
 These are my **personal and subjective** recommendations on things to keep in mind and do if you think you may be dealing with depression.
 
@@ -140,6 +143,25 @@ Fourth, if there are external/environmental causes for your depression, do your 
 Fifth, if things are getting really bad and seem to just be getting worse, be cautious with making life altering decisions at this time. As described above, your thinking and by extension your decision making becomes distorted and therefore unreliable. I personally almost called of applying for PhD programs while depressed, and am very glad in hindsight that I did not. One thing that helps is to try and remember this notion of the "healthy you", and what that version of you would think of this course of action. Consulting with others is a great idea, as well. 
 
 Needless to say, this especially applies to any thoughts of self harm; if things are getting to the point of getting concerning, try and make ahead of time what you'll do when in a really tough place to survive it, such as calling the [National Suicide Prevention Lifeline](https://suicidepreventionlifeline.org/). One thing I found helpful was to just promise to myself that no matter how things got, no matter how many thoughts about it I had, I would not really consider or attempt suicide; to be honest, you may think about it a lot, but knowing that these are just thoughts and you don't truly consider that an option makes them more bearable.
+
+
+## **Are Antidepressants Necessary to Heal Depression**
+It's easy to feel uncomfortable about the idea of antidepressants, but the fact is that they are often an effective treatment for depression:
+
+> "The various antidepressants have been compared in many studies. Overall, the commonly used tricyclic antidepressants SSRIs and SSNRIs performed equally well. Studies of adults with moderate or severe depression showed:  
+Without antidepressants: About 20 to 40 out of 100 people who took a placebo noticed an improvement in their symptoms within six to eight weeks.  
+With antidepressants: About 40 to 60 out of 100 people who took an antidepressant noticed an improvement in their symptoms within six to eight weeks."  
+—[Depression: How effective are antidepressants?](https://www.ncbi.nlm.nih.gov/books/NBK361016/)
+
+> "All antidepressants were more efficacious than placebo in adults with major depressive disorder. ... Our literature search was as comprehensive as possible, including the largest amount of unpublished data to date, which are associated with less favourable effect sizes for antidepressants."  
+—[Comparative efficacy and acceptability of 21 antidepressant drugs for the acute treatment of adults with major depressive disorder: a systematic review and network meta-analysis](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(17)32802-7/fulltext)
+
+However, [they are not the solution for everyone](https://www.webmd.com/depression/features/are-antidepressants-effective#1): "But a report recently published in The Journal of the American Medical Association showed that the drugs work best for very severe cases of depression and have little or no benefit over placebo (inactive pills) in less serious cases."  Certainly [mild to moderate depression can be healed without medication](https://www.goodtherapy.org/blog/can-depression-be-cured-without-medication-1117144), and in fact that has worked for me in the past, but in a severe case such as mine it should really be considered. This is really a case where talking to a therapist or psychiatrist is ideal, to understand your needs.
+
+[Antidepressants do have side effects](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2719451/), and some people struggle with finding the right medication for them. In my case, my psychiatrist asked me to ask my relatives what worked for them, and that indeed proved very effective for me (after months of excercise, therapy, talking to friends, and other measures did not improve my condition). So to conclude, while they are not necessary, antidepressants are an important option that should be considered with the consultation of a mental health professional for serious cases of depression.
+
+## **Are Antidepressants 'Happy Pills'**
+Antidepressants are not meant to make you happy, so much as to heal you of depression and just make you normal. In my case, I did have a brief period of time after starting on them in which I was unusually cheerful and energetic, but this soon subsided and I just started to feel like my regular self. One thing to know is that you will need to continue taking them for some time after your depression improves, and it may take a process of gradual reduction to be able to stop. In my case this slight lack of freedom has certainly been worth it, but it is something you should be aware of.
 
 ## **How To Help Someone Who Has Depression**
 This one is tough, but boils down to the same one always needs to do to help someone: have compassion, care for them, and just be there. Beyond that, [many](https://www.healthline.com/health/how-to-help-a-depressed-friend#take-care-of-yourself) [lists](https://www.helpguide.org/articles/depression/helping-someone-with-depression.htm) out there provide good further recommendations. One thing I will personally emphasize is that you should try and be direct about asking if someone is doing well. If they seem to be having many of the symptoms of depression, don't hesitate to follow up a simple "how are you doing lately" with "are you sure things are alright? it's just that you seem more down than usual lately", or the like. 
