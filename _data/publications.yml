@@ -1,3 +1,16 @@
+- title: "Visuomotor Mechanical Search: Learning to Retrieve Target Objects in Clutter"
+  authors: "Andrey Kurenkov*, Joseph Taglic*, Rohun Kulkarni, Marcus Dominguez-Kuhne, Animesh Garg, Roberto Martín-Martín, Silvio Savarese"
+  pub_info_name: "Conference on Robot Learning (CoRL)"
+  pub_info_date: October 2020
+  excerpt: text text text
+  images:
+    thumb: visuomotor_mech_search.png
+    main: visuomotor_mech_search.png
+  paper_link: "https://arxiv.org/abs/2008.06073"
+  webpage_link: "https://ai.stanford.edu/mech-search/iros/"
+  year: 2020
+
+
 - title: "AC-Teach: A Bayesian Actor-Critic Method for Policy Learning with an Ensemble of Suboptimal Teachers"
   authors: "Andrey Kurenkov*, Ajay Mandlekar*, Roberto Martin-Martin, Silvio Savarese, Animesh Garg"
   pub_info_name: "Conference on Robot Learning (CoRL)"

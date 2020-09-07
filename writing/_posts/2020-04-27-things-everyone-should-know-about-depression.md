@@ -7,10 +7,17 @@ author: andrey_kurenkov
 excerpt: "Facts about depression everyone should be aware of, and some recommendations"
 ---
 
-Foreword -- this post is a lot to take in, so if you choose to not read it right now, I would recommend you at least watch this 4 minute video:
+## Foreword 
+
+This post is a lot to take in, so if you choose to not read it right now, I would recommend you at least watch this 4 minute video:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/z-IR48Mb3W0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+You can also choose to watch this video version instead of reading:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TYWbUmSzSYU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<hr>
 
 > "In 2017, an estimated 11 million U.S. adults aged 18 or older had at least one major depressive episode with severe impairment. This number represented 4.5% of all U.S. adults. ... Approximately 35% of adults with major depressive episode did not receive treatment."  
 —[National Institude of Mental Health](https://www.nimh.nih.gov/health/statistics/major-depression.shtml)
@@ -141,13 +148,13 @@ First, try to understand that however bad things may seem, your perception of ho
 
 Second, do your best to continue living your life as before. Keep waking up, showering, going outside, seeing friends, excercising, etc (to the extent that you can; do not feel guilty about things you cannot do). The more you keep moving, keep believing if you put in the work things will get better, the less painful it will all be. It may not be easy, but the important thing is to not give up, and to keep making the effort. One thing that helped me is an unwavering belief in "this too shall pass"; if you truly believe the above facts about depression, you should also believe that it **will** pass with treatment, so it's only a matter of time and perseverance. 
 
-Third, try to reach out for help. First and foremost, try and confide in your close friends and family, who can help you in this difficulty time. If it is an option, a therapist, or at least a support group, is an ideal first option to help you cope with this. Depending on their recommendation, you may also want to see a psychiatrist and consier taking antidepressants. Although you may be uncomfortable with this course of action, [you really ought to go through with it](http://www.dbsalliance.org/site/PageServer?pagename=education_statistics_depression): 
+Third, try to reach out for help. First and foremost, try and confide in your close friends and family, who can help you in this difficulty time. If it is an option, a therapist, or at least a support group, is an ideal first option to help you cope with this. Depending on their recommendation, you may also want to see a psychiatrist and consider taking antidepressants. Although you may be uncomfortable with this course of action, [you really ought to go through with it](http://www.dbsalliance.org/site/PageServer?pagename=education_statistics_depression): 
 
 > "Up to 80% of those treated for depression show an improvement in their symptoms generally within four to six weeks of beginning medication, psychotherapy, attending support groups or a combination of these treatments. (National Institute of Health, 1998). Despite its high treatment success rate, nearly two out of three people suffering with depression do not actively seek nor receive proper treatment. (DBSA, 1996)".
 
 Fourth, if there are external/environmental causes for your depression, do your best to remove them. For instance, if you are stressed by work, try and put it on pause. This too is likely not easy, but if it is doable it is definitely beneficial. At the very least, it's a good idea to have things to look forward to, such as a vacation or a trip to be with family. 
 
-Fifth, if things are getting really bad and seem to just be getting worse, be cautious with making life altering decisions at this time. As described above, your thinking and by extension your decision making becomes distorted and therefore unreliable. I personally almost called of applying for PhD programs while depressed, and am very glad in hindsight that I did not. One thing that helps is to try and remember this notion of the "healthy you", and what that version of you would think of this course of action. Consulting with others is a great idea, as well. 
+Fifth, if things are getting really bad and seem to just be getting worse, be cautious with making life altering decisions at this time. As described above, your thinking and by extension your decision making becomes distorted and therefore unreliable. I personally almost called off applying for PhD programs while depressed, and am very glad in hindsight that I did not. One thing that helps is to try and remember this notion of the "healthy you", and what that version of you would think of this course of action. Consulting with others is a great idea, as well. 
 
 Needless to say, this especially applies to any thoughts of self harm; if things are getting to the point of getting concerning, try and make ahead of time what you'll do when in a really tough place to survive it, such as calling the [National Suicide Prevention Lifeline](https://suicidepreventionlifeline.org/). One thing I found helpful was to just promise to myself that no matter how things got, no matter how many thoughts about it I had, I would not really consider or attempt suicide; to be honest, you may think about it a lot, but knowing that these are just thoughts and you don't truly consider that an option makes them more bearable.
 
