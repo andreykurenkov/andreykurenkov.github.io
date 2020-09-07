@@ -11,8 +11,8 @@ projcategory: research
 projname: vismechsearch
 excerpt: AC-Teach for mech-search
 image:
-  teaser: visuomotor_mech_search.png.png
-  feature: visuomotor_mech_search.png.png
+  teaser: visuomotor_mech_search.png
+  feature: visuomotor_mech_search.png
 when: July 2019 - July 2020
 what: A new combination of techniques that makes learning for this challenging problem doable very efficiently.
 who: Andrey Kurenkov\*, Joseph Taglic\*, Rohun Kulkarni, Marcus Dominguez-Kuhne, Animesh Garg, Roberto Martín-Martín, Silvio Savarese
