@@ -12,6 +12,8 @@ redirect_from:
   - /writing/a-brief-history-of-neural-nets-and-deep-learning/
 author: andrey_kurenkov
 excerpt: "The beginning of a story spanning half a century, about how we learned to make computers learn"
+link: https://www.skynettoday.com/overviews/neural-net-history
+redirect_to: https://www.skynettoday.com/overviews/neural-net-history
 ---
 This is the first part of 'A Brief History of Neural Nets and Deep Learning'. Part 2 is [here](http://www.andreykurenkov.com/writing/ai/a-brief-history-of-neural-nets-and-deep-learning-part-2), and parts 3 and 4 are [here](http://www.andreykurenkov.com/writing/ai/a-brief-history-of-neural-nets-and-deep-learning-part-3) and [here](http://www.andreykurenkov.com/writing/ai/a-brief-history-of-neural-nets-and-deep-learning-part-4). In this part, we shall cover the birth of neural nets with the Perceptron in 1958, the AI Winter of the 70s, and neural nets' return to popularity with backpropagation in 1986.
 

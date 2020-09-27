@@ -10,6 +10,8 @@ published: true
 comments: true
 author: andrey_kurenkov
 excerpt: "How the foundations of deep learning were developed in the 90s"
+link: https://www.skynettoday.com/overviews/neural-net-history
+redirect_to: https://www.skynettoday.com/overviews/neural-net-history
 ---
 This is the second part of 'A Brief History of Neural Nets and Deep Learning'. Part 1 is [here](http://www.andreykurenkov.com/writing/ai/a-brief-history-of-neural-nets-and-deep-learning), and Parts 3 and 4 are [here](http://www.andreykurenkov.com/writing/ai/a-brief-history-of-neural-nets-and-deep-learning-part-3) and [here](http://www.andreykurenkov.com/writing/ai/a-brief-history-of-neural-nets-and-deep-learning-part-4). In this part, we will look into several strains of research that made rapid progress following the development of backpropagation and until the late 90s, which we shall see later are the essential foundations of Deep Learning.
 

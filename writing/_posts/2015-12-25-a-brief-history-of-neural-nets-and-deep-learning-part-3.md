@@ -10,6 +10,8 @@ published: true
 comments: true
 author: andrey_kurenkov
 excerpt: "About neural nets' flaws in the 90s, and how a new AI Winter dawned"
+link: https://www.skynettoday.com/overviews/neural-net-history
+redirect_to: https://www.skynettoday.com/overviews/neural-net-history
 ---
 This is the third part of 'A Brief History of Neural Nets and Deep Learning'. Parts 1 and 2 are [here](http://www.andreykurenkov.com/writing/ai/a-brief-history-of-neural-nets-and-deep-learning) and [here](http://www.andreykurenkov.com/writing/ai/a-brief-history-of-neural-nets-and-deep-learning-part-2), and part 4 is [here](http://www.andreykurenkov.com/writing/ai/a-brief-history-of-neural-nets-and-deep-learning-part-4). In this part, we will continue to see the swift pace of research in the 90s, and see why neural nets ultimately lost favor much as they did in the late 60s.
 
