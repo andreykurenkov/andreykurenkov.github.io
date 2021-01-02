@@ -1,3 +1,16 @@
+- title: "Multi-Layer Semantic and Geometric Modeling with Neural Message Passing in 3D Scene Graphs for Hierarchical Mechanical Search"
+  authors: "Andrey Kurenkov, Roberto Martín-Martín, Jeff Ichnowski, Ken Goldberg, Silvio Savarese"
+  pub_info_name: "IEEE International Conference on Robotics and Automation (ICRA)"
+  pub_info_date: In Submission
+  excerpt: text text text
+  images:
+    thumb: hms.jpeg
+    main: hms.jpeg
+  paper_link: "https://arxiv.org/abs/2008.06073"
+  video_link: "https://youtu.be/caXsrTM2YYQ"
+  webpage_link: "https://ai.stanford.edu/mech-search/hms/"
+  year: 2020
+
 - title: "Visuomotor Mechanical Search: Learning to Retrieve Target Objects in Clutter"
   authors: "Andrey Kurenkov*, Joseph Taglic*, Rohun Kulkarni, Marcus Dominguez-Kuhne, Animesh Garg, Roberto Martín-Martín, Silvio Savarese"
   pub_info_name: "Conference on Robot Learning (CoRL)"
@@ -6,8 +19,9 @@
   images:
     thumb: visuomotor_mech_search.png
     main: visuomotor_mech_search.png
-  paper_link: "https://arxiv.org/abs/2008.06073"
-  webpage_link: "https://ai.stanford.edu/mech-search/iros/"
+  paper_link: "https://arxiv.org/abs/2012.04060"
+  video_link: "https://youtu.be/0Oa9S0fVqiQ"
+  webpage_link: "https://ai.stanford.edu/mech-search/visuomotor/"
   year: 2020
 
 
@@ -22,6 +36,7 @@
   paper_link: "https://arxiv.org/abs/1909.04121"
   webpage_link: "https://sites.google.com/view/acteach/"
   blog_link: "http://ai.stanford.edu/blog/acteach/"
+  video_link: "https://youtu.be/1QMPpYGrVCo"
   year: 2019
 
 - title: "Mechanical Search: Multi-Step Retrieval of a Target Object Occluded by Clutter"
@@ -34,7 +49,7 @@
     main: kurenkov-icra18-mechsearch.png
   paper_link: "https://arxiv.org/abs/1903.01588"
   video_link: "https://youtu.be/lCwdGSDkbG4"
-  webpage_link: "https://ai.stanford.edu/mech-search/"
+  webpage_link: "https://ai.stanford.edu/mech-search/multistep/"
   year: 2019
 
 - title: "Learning Task-Oriented Grasping for Tool Manipulation with Simulated Self-Supervision"
