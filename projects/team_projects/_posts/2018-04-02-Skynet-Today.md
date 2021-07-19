@@ -1,7 +1,7 @@
 ---
 layout: project-post
 title: Skynet Today
-date: 2018-04-02
+date: 2021-04-02
 tags: [ai, writing]
 status: publish
 type: post
@@ -10,7 +10,7 @@ comments: true
 author: andrey_kurenkov
 projcategory: team_projects
 projname: skynet-today
-excerpt: Accessible and informed coverage of the latest AI hype and panic
+excerpt: A platform for AI experts to explain AI concepts and news to the general public 
 image:
   feature: banner.png
   teaser: logo.jpg

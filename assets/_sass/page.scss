@@ -144,6 +144,10 @@ nav ul li a {
 	}
 }
 
+.big-text {
+		@include font-rem(28);
+}
+
 figure {
     display:block;
     margin: 20px; /* adjust as needed */
@@ -263,9 +267,7 @@ iframe {
 	}
 	h3 {
 		margin: 0;
-		padding-bottom: .5em;
-		@include font-rem(32);
-		border-bottom: 1px solid lighten($black,70);
+		@include font-rem(38);
 	}
 	.writing_subsection {
 	  padding-top: 1em;
