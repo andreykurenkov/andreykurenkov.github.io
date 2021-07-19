@@ -16,7 +16,7 @@ h2 {
 	@include font-size(28);
 }
 h3 {
-	@include font-size(24);
+	@include font-size(28);
 }
 h4 {
 	@include font-size(18);
@@ -57,7 +57,7 @@ a {
 
 figcaption {
 	padding-top: 10px;
-	@include font(14);
+	@include font(20);
 	line-height: 1.3;
 	color: lighten($text-color, 10);
 }
