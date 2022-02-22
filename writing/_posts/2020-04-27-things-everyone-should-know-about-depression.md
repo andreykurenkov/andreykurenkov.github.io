@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Things Everyone Should Know About Depression
-tags: [life]
+tags: [life,highlights]
 category: life
 author: andrey_kurenkov
 excerpt: "Facts about depression everyone should be aware of, and some recommendations"

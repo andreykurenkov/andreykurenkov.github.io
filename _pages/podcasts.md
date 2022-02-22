@@ -9,7 +9,7 @@ permalink: /podcasts/
 <p class="big-text">
 As part of my side projects <a href="https://www.skynettoday.com/">Skynet Today</a> and <a href="https://thegradient.pub/">The Gradient</a>, I am a host and producer for two podcasts. Take a listen!
 </p>
-<h2><b>Let's Talk AI Podcast</b></h2>
+<h2><b><a href="https://www.lastweekinai.com/">Last Week in AI Podcast</a></b></h2>
 
 <p>A podcast with weekly coverage of AI news and interviews!</p>
 Subscribe: <a href="https://feed.podbean.com/aitalk/feed.xml">RSS</a> |
@@ -23,8 +23,14 @@ Subscribe: <a href="https://feed.podbean.com/aitalk/feed.xml">RSS</a> |
  scrolling="yes" allowfullscreen="" width="100%" height="400px" frameborder="0"></iframe>
  
  
-<h2><b>The Gradient Podcast</b></h2>
+<h2><b><a href="https://thegradientpub.substack.com/s/podcast">The Gradient Podcast</a></b></h2>
 <p>Accessible and informed interviews with cool people in AI</p>
+
+<p>A podcast with weekly coverage of AI news and interviews, as well as some articles from The Gradient</p>
+Subscribe [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-gradient-podcast/id1569777340)  | 
+[Spotify](https://open.spotify.com/show/6onNcSqsP6hEEqmZ6TU2g8) | 
+[Pocket Casts](https://pca.st/itunes/1569777340) | 
+[RSS](https://api.substack.com/feed/podcast/265424/s/1354/private/3bbc085c-7aa9-4037-8784-1575653a0438.rss) 
  <!-- start sw-rss-feed code --> 
 <script type="text/javascript"> 
 <!-- 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AI Coverage Best Practices, According to AI Researchers
-tags: [ai,highlights]
+tags: [ai]
 category: ai
 link: https://www.skynettoday.com/editorials/ai-coverage-best-practices
 author: andrey_kurenkov

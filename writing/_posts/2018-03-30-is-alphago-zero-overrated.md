@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AlphaGo Zero Is Not A Sign of Imminent Human-Level AI
-tags: [ai,history,highlights]
+tags: [ai,history]
 category: ai
 link: https://www.skynettoday.com/editorials/is-alphago-zero-overrated
 author: andrey_kurenkov
