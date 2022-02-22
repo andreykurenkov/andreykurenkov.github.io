@@ -3,7 +3,7 @@ layout: base
 title: Writings
 permalink: "/writing/"
 extra_css: ["/writing/files/toggle.css"]
-extra_js: ["/writing/files/toggle.js"]
+#extra_js: ["/writing/files/toggle.js"]
 tag: all
 excerpt: "Writing on an assortment of topics"
 ---
@@ -34,6 +34,7 @@ excerpt: "Writing on an assortment of topics"
         educational articles, and even a few poems. Enjoy!
         </p>
         
+        
         <form class="form" id="writingToggleForm">
           <div class="switch-field">
             <input type="radio" id="switch_left" name="switch" value="yes" data-st-contentid="#categorical" checked/>
@@ -42,6 +43,7 @@ excerpt: "Writing on an assortment of topics"
             <label for="switch_right">Chronological</label>
           </div>
         </form>
+        
         <div id='categorical'>
            <h3 class="writing_subsection">Highlights</h3>
             {% for post in site.categories.writing %}  
