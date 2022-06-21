@@ -1,3 +1,29 @@
+- title: "Error-Aware Imitation Learning from Teleoperation Data for Mobile Manipulation"
+  authors: "Josiah Wong, Albert Tung, Andrey Kurenkov, Ajay Mandlekar, Li Fei-Fei, Silvio Savarese, Roberto Martín-Martín"
+  pub_info_name: "5th Annual Conference on Robot Learning "
+  pub_info_date: November 2021
+  excerpt: text text text
+  images:
+    thumb: error_detector_fig.png
+    main: error_detector_fig.png
+  paper_link: "https://arxiv.org/abs/2108.03272"
+  video_link: "https://youtu.be/Nlwj6FGypq8"
+  webpage_link: "https://sites.google.com/view/il-for-mm/home"
+  year: 2021
+
+- title: "iGibson 2.0: Object-Centric Simulation for Robot Learning of Everyday Household Tasks"
+  authors: " Chengshu Li, Fei Xia, Roberto Martín-Martín, Michael Lingelbach, Sanjana Srivastava, Bokui Shen, Kent Vainio, Cem Gokmen, Gokul Dharan, Tanish Jain, Andrey Kurenkov, C. Karen Liu, Hyowon Gweon, Jiajun Wu, Li Fei-Fei, Silvio Savarese"
+  pub_info_name: "5th Annual Conference on Robot Learning "
+  pub_info_date: November 2021
+  excerpt: text text text
+  images:
+    thumb: ig.png
+    main: ig.png
+  paper_link: "https://arxiv.org/abs/2108.03272"
+  video_link: "https://youtu.be/Df25Ps9M88o"
+  webpage_link: "https://svl.stanford.edu/igibson/"
+  year: 2021
+
 - title: "Multi-Layer Semantic and Geometric Modeling with Neural Message Passing in 3D Scene Graphs for Hierarchical Mechanical Search"
   authors: "Andrey Kurenkov, Roberto Martín-Martín, Jeff Ichnowski, Ken Goldberg, Silvio Savarese"
   pub_info_name: "IEEE International Conference on Robotics and Automation (ICRA)"
