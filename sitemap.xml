@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>/projects/team_projects/astrocade/</loc>
+<lastmod>2023-09-15T00:00:00-02:30</lastmod>
+</url>
+<url>
+<loc>/projects/team_projects/phd-thesis/</loc>
+<lastmod>2023-06-03T00:00:00-02:30</lastmod>
+</url>
+<url>
+<loc>/projects/research/scene-graph-memory/</loc>
+<lastmod>2023-05-01T00:00:00-02:30</lastmod>
+</url>
+<url>
 <loc>/writing/life/habits-2021/</loc>
 <lastmod>2021-07-18T00:00:00-02:30</lastmod>
+</url>
+<url>
+<loc>/projects/research/mobilemanip/</loc>
+<lastmod>2021-07-01T00:00:00-02:30</lastmod>
 </url>
 <url>
 <loc>/projects/team_projects/gradient/</loc>
@@ -484,10 +500,10 @@
 <loc>/projects/tag/ai/</loc>
 </url>
 <url>
-<loc>/projects/tag/writing/</loc>
+<loc>/projects/tag/ml/</loc>
 </url>
 <url>
-<loc>/projects/tag/ml/</loc>
+<loc>/projects/tag/writing/</loc>
 </url>
 <url>
 <loc>/projects/tag/rl/</loc>

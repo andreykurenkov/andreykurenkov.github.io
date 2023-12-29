@@ -1,0 +1,331 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Learning of Mobile Manipulation &#8211; Andrey Kurenkov's Web World</title>
+<meta name="description" content="Via  imitation learning from teleoperation data">
+<meta name="keywords" content="ml, ai">
+
+  
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Learning of Mobile Manipulation">
+<meta name="twitter:description" content="Via  imitation learning from teleoperation data">
+
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="/images/mm.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Learning of Mobile Manipulation">
+<meta property="og:description" content="Via  imitation learning from teleoperation data">
+<meta property="og:url" content="/projects/research/mobilemanip/">
+<meta property="og:site_name" content="Andrey Kurenkov's Web World">
+
+<meta property="og:image" content="/images/mm.png">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		
+
+
+
+
+<link rel="canonical" href="/projects/research/mobilemanip/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Andrey Kurenkov's Web World Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="/assets/js/vendor/respond.min.js"></script>
+<meta http-equiv="Cache-control" content="public" max-age="3600">
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+<link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+
+
+
+
+
+</head>
+
+<body class="home">
+  <div id="wrap">
+    <!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+    <div class="navigation-wrapper">
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+        <a href="/"><img id="logo" src="/images/Logo.png" alt="Me" /></a>
+		    <ul>
+		        
+				    
+				        
+				    
+				    <li><a href="/"  class="navlink">About</a></li>
+				
+				    
+				        
+				    
+				    <li><a href="/projects/"  class="navlink">Projects</a></li>
+				
+				    
+				        
+				    
+				    <li><a href="/publications/"  class="navlink">Publications</a></li>
+				
+				    
+				        
+				    
+				    <li><a href="/writing/"  class="navlink">Writings</a></li>
+				
+				    
+				        
+				    
+				    <li><a href="/photography/"  class="navlink">Photographs</a></li>
+				
+				    
+				        
+				    
+				    <li><a href="/videos/"  class="navlink">Videos</a></li>
+				
+				    
+				        
+				    
+				    <li><a href="/podcasts/"  class="navlink">Podcasts</a></li>
+				
+				    
+				        
+				    
+				    <li><a href="/art/"  class="navlink">Images</a></li>
+				
+		    </ul>
+		</nav>
+	</div>
+</div>
+
+     
+    
+  
+  <div class="image-wrap" id="project-image">
+     <a href="/projects/research/images/mobilemanip/mm.png" target="_blank"> 
+     <img src="/projects/research/images/mobilemanip/mm.png">
+     </a>
+  </div><!-- /.image-wrap -->
+  
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+  
+
+<div itemscope itemtype="http://schema.org/Person">
+
+
+	<img src="/images/andrey_art.jpeg" class="bio-photo" alt=" bio photo">
+
+
+  <!--<h3 itemprop="name"></h3>-->
+  <p>An eclectic researcher and engineer endlessly interested in AI, art, side-projects, philosophy, and many more things.</p>
+
+  <a href="mailto:contact@andreykurenkov.com" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
+  
+  <a href="http://linkedin.com/in/andreykurenkov" class="author-social" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i> LinkedIn</a>
+  <a href="http://github.com/andreykurenkov" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i> Github</a>
+  <a href="/files/resume.pdf" class="author-social" target="_blank"><i class="fa fa-fw fa-file"></i> Resume</a>
+  <a href="/writing/feed.xml/" class="author-social" target="_blank"><i class="fa fa-fw fa-rss"></i> RSS</a>
+
+</div>
+
+  </div>
+  <article class="project-post">
+    <div class="headline-wrap">
+        <h1 id="project-title"><a href="/projects/research/mobilemanip/" rel="bookmark" title="Learning of Mobile Manipulation">Learning of Mobile Manipulation</a></h1>
+    </div><!--/ .headline-wrap -->
+    </hr>
+    <div class="article-wrap">
+      <table class="classytable">
+		      <col/>
+		      <tr>
+			      <td valign="top"><h3>WHAT</h3></td>
+			      <td><h4>Error-Aware Imitation Learning from Teleoperation Data for Mobile Manipulation</h4></td>
+		      </tr>
+		      <tr>
+			      <td valign="top"><h3>WHEN</h3></td>
+			      <td><h4>March 2021 - December 2021</h4></td>
+		      </tr>
+		      <tr>
+			      <td valign="top"><h3>WHO</h3></td>
+			      <td><h4>Josiah Wong, Albert Tung, Andrey Kurenkov, Ajay Mandlekar, Li Fei-Fei, Silvio Savarese, Roberto Martín-Martín</h4></td>
+		      </tr>
+		      <tr>
+			      <td valign="top"><h3>WHERE</h3></td>
+			      <td><h4>Stanford Vision Lab</h2></td>
+		      </tr>
+		      <tr>
+			      <td valign="top"><h3>WHY</h3></td>
+			      <td><h4>Teaching robots how to do stuff via remote control and in simulation</h4></td>
+		      </tr>
+		      <tr>
+			      <td valign="top"><h3>HOW</h3></td>
+			      <td><h4>
+</h4></td>
+		      </tr>
+
+		      
+		      <tr>
+			      <td valign="top"><h3>LINKS</h3></td>
+			      <td><ul class="linkslist">
+				       
+		               
+                      <h4>
+                         <a href="https://sites.google.com/view/il-for-mm/home" title="" target="_blank">Project Site</a>
+                         <a href="https://sites.google.com/view/il-for-mm/home" target="_blank" title=""><i class="fa fa-link"></i></a>
+                      </h4>
+		      		     
+							  
+		               
+                      <h4>
+                         <a href="https://arxiv.org/abs/2108.03272" title="" target="_blank">Arxiv</a>
+                         <a href="https://arxiv.org/abs/2108.03272" target="_blank" title=""><i class="fa fa-link"></i></a>
+                      </h4>
+		      		     
+							  
+						 </ul></div></td>
+		      </tr>
+		      
+
+		      
+
+		      
+
+
+
+      </table>
+
+      <div class="contentinfo">           
+        <h4 id="postnav"> 
+                       </h4>
+
+        <div class="social-share">
+  <h4>Share on</h4>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=/projects/research/mobilemanip/" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=/projects/research/mobilemanip/" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=/projects/research/mobilemanip/" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+  </ul>
+</div><!-- /.social-share -->
+        <p id="post-meta"></p>
+        
+          <section id="disqus_thread"></section><!-- /#disqus_thread -->
+        
+      </div>
+    </div><!-- /.article-wrap -->
+  </article>
+</div><!-- /#main -->
+</br>
+
+    
+    </div><!-- /#main -->
+  </div>
+
+<footer>
+
+<span>&copy; 2023 Andrey Kurenkov. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://github.com/mmistakes/minimal-mistakes" rel="nofollow">Minimal Mistakes</a> and <a href="https://github.com/mmistakes/skinny-bones-jekyll">Skinny Bones</a> themes.</span>
+
+</footer>
+  
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/assets/js/scripts.min.js"></script>
+<script type="text/javascript" src="https://pixel-v0.wl.r.appspot.com/static/pixel.js"></script>
+<script type="text/javascript">
+    let ccid = "www.andreykurenkov.com";
+    cc(ccid);
+</script>
+
+
+<!--Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl = 
+ '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-54402578-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+  
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'eclecticcreations'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+</body>
+</html>
